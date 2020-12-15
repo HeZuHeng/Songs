@@ -71,6 +71,7 @@ public class SelectPlotWnd : UIBase
         {
             SongsDataMng.GetInstance().SetSceneTaskData(plotItemUI.sceneTaskData);
         }
+        UIMng.Instance.OpenUI(UIType.LoadingWnd);
     }
 
     void OnLast()
