@@ -451,8 +451,8 @@ namespace Songs
                 case UIType.HTMWnd:
                     openList.Add(string.Format("Prefabs/UI/HTMWnd", path));
                     return openList;
-                case UIType.SettingWnd:
-                    openList.Add(string.Format("Prefabs/UI/SettingWnd", path));
+                case UIType.SelectPlotWnd:
+                    openList.Add(string.Format("Prefabs/UI/SelectPlotWnd", path));
                     return openList;
                 default:
                     return openList;

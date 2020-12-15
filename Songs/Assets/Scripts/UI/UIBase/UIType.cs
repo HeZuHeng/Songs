@@ -15,8 +15,9 @@ namespace Songs{
         HTMWnd = 5,
         SettingWnd = 6,
         LoadingWnd = 8,
+		SelectPlotWnd = 9,
 
-    }
+	}
 	/// <summary>
 	/// 二级界面枚举
 	/// </summary>
