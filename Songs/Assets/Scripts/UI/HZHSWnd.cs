@@ -11,4 +11,9 @@ public class HZHSWnd : UIBase
         Type = UIType.HZHSWnd;
         MutexInterface = true;
     }
+
+    public void OnClose()
+    {
+        UIMng.Instance.OpenUI(UIType.NONE);
+    }
 }

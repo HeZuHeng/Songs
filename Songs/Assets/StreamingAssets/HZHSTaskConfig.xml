@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <TasksConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SceneTasks 场景任务名="中英诗歌精神比较" 图标="矩形 8" 场景数据="华兹华斯书房">
-    <TaskDatas ID="0" 任务名="张三" 下一个="12" 类型="None" />
-    <TaskDatas ID="0" 任务名="李四" 下一个="14" 类型="None" />
-    <TaskDatas ID="0" 任务名="吴亦凡" 下一个="18" 类型="None" />
+    <TaskDatas ID="1" 任务名="张三" 下一个="2" 类型="None" />
+    <TaskDatas ID="2" 任务名="李四" 下一个="14" 类型="None" />
+    <TaskDatas ID="3" 任务名="吴亦凡" 下一个="18" 类型="None" />
   </SceneTasks>
   <SceneTasks 场景任务名="《我好似一朵孤独的流云》意境" 图标="矩形 8" 场景数据="华兹华斯赏花">
     <TaskDatas ID="0" 任务名="张三" 下一个="12" 类型="None" />
@@ -11,9 +11,9 @@
     <TaskDatas ID="0" 任务名="吴亦凡" 下一个="18" 类型="None" />
   </SceneTasks>
   <SceneTasks 场景任务名="诗人华兹华斯介绍" 图标="矩形 8" 场景数据="华兹华斯书房">
-    <TaskDatas ID="0" 任务名="张三" 下一个="12" 类型="None" />
-    <TaskDatas ID="0" 任务名="李四" 下一个="14" 类型="None" />
-    <TaskDatas ID="0" 任务名="吴亦凡" 下一个="18" 类型="None" />
+    <TaskDatas ID="1" 任务名="华兹华斯背景介绍" 下一个="2" 类型="OpenWnd" 值 = "HZHSWnd"/>
+    <TaskDatas ID="2" 任务名="漫游华兹华斯书房" 下一个="3" 类型="Move" />
+    <TaskDatas ID="3" 任务名="吴亦凡" 下一个="18" 类型="None" />
   </SceneTasks>
   <SceneTasks 场景任务名="阅读三本诗集文本" 图标="矩形 8" 场景数据="华兹华斯书房">
     <TaskDatas ID="0" 任务名="张三" 下一个="12" 类型="None" />
