@@ -16,7 +16,8 @@ public class DataLoader
 
 public class SongsDataMng 
 {
-    public static string TaskPath = Application.streamingAssetsPath + "/TaskConfig.xml";
+    public static string HZHSTaskPath = Application.streamingAssetsPath + "/HZHSTaskConfig.xml";
+    public static string HTMTaskPath = Application.streamingAssetsPath + "/HTMTaskConfig.xml";
     public static string ModelPath = Application.streamingAssetsPath + "/ModelConfig.xml";
 
     static SongsDataMng instance;
@@ -29,9 +30,21 @@ public class SongsDataMng
         return instance;
     }
     public MainPlayer Player { get; private set; }
-    public TasksConfig GetTasksConfig { get; private set; }
-    public ModelConfig GetModelConfig { get; private set; }
+    private TasksConfig GetHZHSTasks { get;  set; }
+    private TasksConfig GetHTMTasks { get;  set; }
+    private ModelConfig GetModelConfig { get; set; }
+    /// <summary>
+    /// 当前场景模型数据
+    /// </summary>
     public SceneData GetSceneData { get; private set; }
+    /// <summary>
+    /// 当前分支数据
+    /// </summary>
+    public TasksConfig GetTasksConfig { get; private set; }
+    /// <summary>
+    /// 当前场景任务数据
+    /// </summary>
+    public SceneTaskData GetSceneTaskData { get; private set; }
 
     private List<DataLoader> dataLoaders = new List<DataLoader>();
 
@@ -39,9 +52,13 @@ public class SongsDataMng
     {
         Player = new MainPlayer();
 
-        AddLoad(TaskPath, delegate (string text)
+        AddLoad(HZHSTaskPath, delegate (string text)
         {
-            GetTasksConfig = (TasksConfig) XmlDeserialize(text,typeof(TasksConfig));
+            GetHZHSTasks = (TasksConfig) XmlDeserialize(text,typeof(TasksConfig));
+        });
+        AddLoad(HTMTaskPath, delegate (string text)
+        {
+            GetHTMTasks = (TasksConfig)XmlDeserialize(text, typeof(TasksConfig));
         });
         AddLoad(ModelPath, delegate (string text)
         {
@@ -50,15 +67,28 @@ public class SongsDataMng
         });
     }
 
-    int index = 0;
-    public void NextSceneData()
+    public void SetTaskData(int val)
     {
-        index++;
-        if(index >= GetModelConfig.datas.Count)
+        if(val == 1)
         {
-            index = 0;
+            GetTasksConfig = GetHZHSTasks;
         }
-        GetSceneData = GetModelConfig.datas[index];
+        else
+        {
+            GetTasksConfig = GetHTMTasks;
+        }
+    }
+
+    public void SetSceneTaskData(SceneTaskData val)
+    {
+        GetSceneTaskData = val;
+        for (int i = 0; i < GetModelConfig.datas.Count; i++)
+        {
+            if (GetModelConfig.datas[i].name.Equals(val.sceneDataName))
+            {
+                GetSceneData = GetModelConfig.datas[i];
+            }
+        }
     }
 
     public void LoadUpdate()

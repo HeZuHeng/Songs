@@ -95,9 +95,7 @@ public class UI_Control_ScrollFlow : MonoBehaviour, IBeginDragHandler, IDragHand
         for (int i = 0; i < Items.Count; i++)
         {
             Items[i].Drag(v);
-
         }
-       
         Check(v);
     }
     
@@ -177,10 +175,10 @@ public class UI_Control_ScrollFlow : MonoBehaviour, IBeginDragHandler, IDragHand
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        Debug.Log("OnPointerClick:" + eventData.pointerPressRaycast.gameObject);
+        //Debug.Log("OnPointerClick:" + eventData.pointerPressRaycast.gameObject);
         if (add_vect.sqrMagnitude <= 1)
         {
-            Debug.Log("============OnPointerClickOK============");
+            //Debug.Log("============OnPointerClickOK============");
             UI_Control_ScrollFlow_Item script = eventData.pointerPressRaycast.gameObject.GetComponent<UI_Control_ScrollFlow_Item>();
             if(script!=null)
             {
@@ -199,11 +197,10 @@ public class UI_Control_ScrollFlow : MonoBehaviour, IBeginDragHandler, IDragHand
     }
     public float GetPosition(float v)
     {
-        return PositionCurve.Evaluate(v) * Width;
+        return PositionCurve.Evaluate(v) * Width - Width/2f;
     }
     public float GetScale(float v)
     {
-
         return ScaleCurve.Evaluate(v) * MaxScale;
     }
 
@@ -269,7 +266,6 @@ public class UI_Control_ScrollFlow : MonoBehaviour, IBeginDragHandler, IDragHand
 
     void Update()
     {
-       
         if (_anim)
         {
             CurrentV = Time.deltaTime * _anim_speed * Vk;

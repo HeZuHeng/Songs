@@ -23,9 +23,8 @@ public class UI_Control_ScrollFlow_Item : MonoBehaviour
     public void Init(UI_Control_ScrollFlow _parent)
     {
         rect =this. GetComponent<RectTransform>();
-        img = this.GetComponent<Image>();
         parent = _parent;
-        //color = img.color;
+        color = img.color;
     }
 
     public void Drag(float value)
@@ -44,8 +43,11 @@ public class UI_Control_ScrollFlow_Item : MonoBehaviour
         rect.localScale = s;
         if (rect.localScale.x > 0.98f)
         {
-            Debug.Log(parent.isRight+"---"+this.gameObject.name);
+            img.enabled = true;
         }
-
+        else
+        {
+            img.enabled = false;
+        }
     }
 }

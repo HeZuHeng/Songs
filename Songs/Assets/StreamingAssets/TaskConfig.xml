@@ -1,6 +1,0 @@
-<?xml version="1.0"?>
-<TasksConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <TaskDatas ID="0" 任务="张三" 下一个="12" 类型="None" />
-  <TaskDatas ID="0" 任务="李四" 下一个="14" 类型="None" />
-  <TaskDatas ID="0" 任务="吴亦凡" 下一个="18" 类型="None" />
-</TasksConfig>

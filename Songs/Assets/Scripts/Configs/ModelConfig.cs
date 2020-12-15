@@ -15,8 +15,10 @@ public class ModelConfig
 [System.Serializable]
 public class SceneData
 {
-    [XmlAttribute("场景名")]
+    [XmlAttribute("场景")]
     public string name;
+    [XmlAttribute("场景资源名")]
+    public string sceneName;
     [XmlElement("ModelDatas")]
     public List<ModelData> datas;
 

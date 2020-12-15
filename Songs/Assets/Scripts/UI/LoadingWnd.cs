@@ -24,7 +24,7 @@ public class LoadingWnd : UIBase
 
     protected override void OnEnable()
     {
-        if(SongsDataMng.GetInstance().GetSceneData != null) LoadScene(SongsDataMng.GetInstance().GetSceneData.name);
+        if(SongsDataMng.GetInstance().GetSceneData != null) LoadScene(SongsDataMng.GetInstance().GetSceneData.sceneName);
 	}
 
     private void Update()

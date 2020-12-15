@@ -14,10 +14,26 @@ public enum TaskType
 [System.Serializable]
 public class TasksConfig
 {
+    
+    [XmlElement("SceneTasks")]
+    public List<SceneTaskData> datas;
+
+    public TasksConfig() { datas = new List<SceneTaskData>(); }
+}
+
+[System.Serializable]
+public class SceneTaskData
+{
+    [XmlAttribute("场景任务名")]
+    public string name;
+    [XmlAttribute("图标")]
+    public string icon;
+    [XmlAttribute("场景数据")]
+    public string sceneDataName;
     [XmlElement("TaskDatas")]
     public List<TaskData> datas;
 
-    public TasksConfig() { datas = new List<TaskData>(); }
+    public SceneTaskData() { datas = new List<TaskData>(); }
 }
 
 [System.Serializable]
@@ -25,7 +41,7 @@ public class TaskData
 {
     [XmlAttribute("ID")]
     public int Id;
-    [XmlAttribute("任务")]
+    [XmlAttribute("任务名")]
     public string name;
     [XmlAttribute("下一个")]
     public int next;
@@ -35,7 +51,6 @@ public class TaskData
     public string val;
     [XmlAttribute("描述")]
     public string des;
-    
     public TaskData() { }
 #if SONGS_DEBUG
     public TaskData(string name, int next)
