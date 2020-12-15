@@ -436,9 +436,9 @@ namespace Songs
                 case UIType.LoadingWnd:
                     openList.Add(string.Format("Prefabs/UI/LoadingWnd", path));
                     return openList;
-                case UIType.MainWnd:
-                    openList.Add(string.Format("Prefabs/UI/MainWnd", path));
-                    return openList;
+                //case UIType.MainWnd:
+                //    openList.Add(string.Format("Prefabs/UI/MainWnd", path));
+                //    return openList;
                 case UIType.StartWnd:
                     openList.Add(string.Format("Prefabs/UI/StartWnd", path));
                     return openList;
@@ -453,6 +453,12 @@ namespace Songs
                     return openList;
                 case UIType.SelectPlotWnd:
                     openList.Add(string.Format("Prefabs/UI/SelectPlotWnd", path));
+                    return openList;
+                case UIType.SettingWnd:
+                    openList.Add(string.Format("Prefabs/UI/SettingWnd", path));
+                    return openList;
+                case UIType.MainDialogueWnd:
+                    openList.Add(string.Format("Prefabs/UI/MainDialogueWnd", path));
                     return openList;
                 default:
                     return openList;

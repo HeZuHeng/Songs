@@ -13,6 +13,8 @@ public class SelectPlotWnd : UIBase
     public Button lastBtn;
     public Button nextBtn;
 
+    public Button returnBtn;
+
     protected override void Awake()
     {
         base.Awake();
@@ -25,12 +27,13 @@ public class SelectPlotWnd : UIBase
         confirmBtn.onClick.AddListener(OnConfirm);
         lastBtn.onClick.AddListener(OnLast);
         nextBtn.onClick.AddListener(OnNext);
+        returnBtn.onClick.AddListener(OnReturn);
     }
 
     protected override void OnEnable()
     {
         base.OnEnable();
-
+        returnBtn.gameObject.SetActive(SongsDataMng.GetInstance().GetSceneTaskData != null);
         Show();
     }
 
@@ -82,5 +85,10 @@ public class SelectPlotWnd : UIBase
     void OnNext()
     {
 
+    }
+
+    void OnReturn()
+    {
+        UIMng.Instance.OpenUI(UIType.NONE);
     }
 }

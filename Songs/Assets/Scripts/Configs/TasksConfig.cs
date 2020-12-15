@@ -9,6 +9,7 @@ public enum TaskType
     Move = 1,
     Click = 2,
     OpenWnd =3,
+    Talk = 4,
 }
 
 [System.Serializable]

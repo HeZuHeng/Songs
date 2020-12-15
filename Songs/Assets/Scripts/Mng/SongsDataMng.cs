@@ -46,6 +46,11 @@ public class SongsDataMng
     /// </summary>
     public SceneTaskData GetSceneTaskData { get; private set; }
 
+    /// <summary>
+    /// 当前任务数据
+    /// </summary>
+    public TaskData GetTaskData { get; private set; }
+
     private List<DataLoader> dataLoaders = new List<DataLoader>();
 
     public void Init()
@@ -89,6 +94,30 @@ public class SongsDataMng
                 GetSceneData = GetModelConfig.datas[i];
             }
         }
+        if (GetSceneTaskData.datas.Count > 0) GetTaskData = GetSceneTaskData.datas[0];
+    }
+
+    public void SetNextTaskData(TaskData val)
+    {
+        for (int i = 0; i < GetSceneTaskData.datas.Count; i++)
+        {
+            if (GetSceneTaskData.datas[i].Id == val.next)
+            {
+                GetTaskData = GetSceneTaskData.datas[i];
+            }
+        }
+    }
+
+    public ModelData GetModelData(string modelName)
+    {
+        for (int i = 0; i < GetSceneData.datas.Count; i++)
+        {
+            if (GetSceneData.datas[i].name.Equals(modelName))
+            {
+                return GetSceneData.datas[i];
+            }
+        }
+        return null;
     }
 
     public void LoadUpdate()

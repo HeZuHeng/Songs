@@ -8,7 +8,7 @@ namespace Songs{
 	/// </summary>
 	public enum UIType : byte{
 		NONE = 0,
-        MainWnd = 1,
+        //MainWnd = 1,
         StartWnd = 2,
         IntroductionWnd  = 3,
         HZHSWnd = 4,
@@ -16,7 +16,7 @@ namespace Songs{
         SettingWnd = 6,
         LoadingWnd = 8,
 		SelectPlotWnd = 9,
-
+		MainDialogueWnd = 10,
 	}
 	/// <summary>
 	/// 二级界面枚举

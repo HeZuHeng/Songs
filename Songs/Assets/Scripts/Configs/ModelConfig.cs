@@ -32,7 +32,8 @@ public class ModelData
     public string name;
     [XmlAttribute("资源名")]
     public string assetName;
-
+    [XmlAttribute("图标")]
+    public string icon;
     public ModelData() { }
 #if SONGS_DEBUG
     public ModelData(string name, string assetName)
