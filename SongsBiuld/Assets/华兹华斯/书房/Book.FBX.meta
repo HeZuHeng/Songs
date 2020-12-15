@@ -1,0 +1,306 @@
+fileFormatVersion: 2
+guid: 434c780ab2de68b40871653f0ab1939b
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: 294
+    100002: 298
+    100004: 300
+    100006: 332
+    100008: //RootNode
+    100010: book_01
+    100012: book_02
+    100014: Shu_01
+    100016: Shu_02
+    100018: Shu_03
+    100020: Shu_04
+    100022: Shu_05
+    100024: Shu_06
+    100026: Shu_07
+    100028: Shu_08
+    100030: Shu_09
+    100032: Shu_10
+    100034: Shu_11
+    100036: Shu_book
+    100038: Shu_top
+    100040: Shu_ye
+    100042: w-cg.taobao.com          330
+    100044: "\u4E66\u67B6\u6446\u4EF6"
+    100046: "\u5BF9\u8C61024"
+    100048: "\u5BF9\u8C61026"
+    400000: 294
+    400002: 298
+    400004: 300
+    400006: 332
+    400008: //RootNode
+    400010: book_01
+    400012: book_02
+    400014: Shu_01
+    400016: Shu_02
+    400018: Shu_03
+    400020: Shu_04
+    400022: Shu_05
+    400024: Shu_06
+    400026: Shu_07
+    400028: Shu_08
+    400030: Shu_09
+    400032: Shu_10
+    400034: Shu_11
+    400036: Shu_book
+    400038: Shu_top
+    400040: Shu_ye
+    400042: w-cg.taobao.com          330
+    400044: "\u4E66\u67B6\u6446\u4EF6"
+    400046: "\u5BF9\u8C61024"
+    400048: "\u5BF9\u8C61026"
+    2100000: Shu_03
+    2100002: Shu_01
+    2100004: Shu_top
+    2100006: book
+    2100008: Shu_11
+    2100010: Shu04
+    2100012: Shu_06
+    2100014: 'Material #2125640479'
+    2100016: Shu_02
+    2100018: 'Material #2125640478'
+    2100020: Shu_05
+    2100022: Shu_08
+    2100024: Shu_07
+    2100026: Shu_ye
+    2100028: "\u6446\u8BBE004"
+    2100030: "\u6446\u8BBE003"
+    2100032: "\u6446\u8BBE002"
+    2300000: 294
+    2300002: 298
+    2300004: 300
+    2300006: 332
+    2300008: Shu_01
+    2300010: Shu_02
+    2300012: Shu_03
+    2300014: Shu_04
+    2300016: Shu_05
+    2300018: Shu_06
+    2300020: Shu_07
+    2300022: Shu_08
+    2300024: Shu_09
+    2300026: Shu_10
+    2300028: Shu_11
+    2300030: Shu_book
+    2300032: Shu_top
+    2300034: Shu_ye
+    2300036: w-cg.taobao.com          330
+    2300038: "\u5BF9\u8C61024"
+    2300040: "\u5BF9\u8C61026"
+    3300000: 294
+    3300002: 298
+    3300004: 300
+    3300006: 332
+    3300008: Shu_01
+    3300010: Shu_02
+    3300012: Shu_03
+    3300014: Shu_04
+    3300016: Shu_05
+    3300018: Shu_06
+    3300020: Shu_07
+    3300022: Shu_08
+    3300024: Shu_09
+    3300026: Shu_10
+    3300028: Shu_11
+    3300030: Shu_book
+    3300032: Shu_top
+    3300034: Shu_ye
+    3300036: w-cg.taobao.com          330
+    3300038: "\u5BF9\u8C61024"
+    3300040: "\u5BF9\u8C61026"
+    4300000: Shu_03
+    4300002: Shu_01
+    4300004: Shu_top
+    4300006: Shu_book
+    4300008: Shu_11
+    4300010: Shu_04
+    4300012: Shu_06
+    4300014: Shu_10
+    4300016: Shu_02
+    4300018: Shu_09
+    4300020: Shu_05
+    4300022: Shu_08
+    4300024: Shu_07
+    4300026: Shu_ye
+    4300028: 298
+    4300030: 300
+    4300032: 294
+    4300034: "\u5BF9\u8C61026"
+    4300036: "\u5BF9\u8C61024"
+    4300038: 332
+    4300040: w-cg.taobao.com          330
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #2125640478'
+    second: {fileID: 2100000, guid: 94b69e9a9c4eee642924a4b005d9009d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #2125640479'
+    second: {fileID: 2100000, guid: 20f8cfee5ab38f941b3f5cb8ecca1cd1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shu04
+    second: {fileID: 2100000, guid: 561b10fd5b737e54d9f595ac1290cc78, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shu_01
+    second: {fileID: 2100000, guid: ebf6bfb7e1c448e4eb37c7f9cf9cc999, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shu_02
+    second: {fileID: 2100000, guid: e83b480be1a225f4888bf4201ddab772, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shu_03
+    second: {fileID: 2100000, guid: 327279f3f6c779f43ae622549e03b581, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shu_05
+    second: {fileID: 2100000, guid: bdd89d392a0b6444bbb0c9eba0847eae, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shu_06
+    second: {fileID: 2100000, guid: 109282095e26cc5429c1fb11c1949315, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shu_07
+    second: {fileID: 2100000, guid: 30cbf6b9990dffa48a77e27172553b92, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shu_08
+    second: {fileID: 2100000, guid: 39ddca3f2bc648347a6fbe8096aab6b3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shu_11
+    second: {fileID: 2100000, guid: f017709eb9701ca45a8249a59eb74be3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shu_top
+    second: {fileID: 2100000, guid: ce187d0ec8052f143b533a7fcbf3543c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shu_ye
+    second: {fileID: 2100000, guid: b0e6a3353a3cf344abbf4d9a8b76610b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: book
+    second: {fileID: 2100000, guid: a54c06ef810fffa469159d14a25767db, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u6446\u8BBE002"
+    second: {fileID: 2100000, guid: 95f0873606bc0594384188fc2fae8b7b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u6446\u8BBE003"
+    second: {fileID: 2100000, guid: 083c67021f6ccf34894b9982a2f0fb31, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u6446\u8BBE004"
+    second: {fileID: 2100000, guid: 36dd6b5b4031c804a876790308d44d97, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

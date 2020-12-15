@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<ModelConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <SceneDatas 场景名="陶渊明赏花">
+    <ModelDatas 模型名="张三" 资源名="12" />
+    <ModelDatas 模型名="李四" 资源名="14" />
+    <ModelDatas 模型名="吴亦凡" 资源名="18" />
+  </SceneDatas> 
+ <SceneDatas 场景名="华兹华斯书房">
+    <ModelDatas 模型名="张三" 资源名="12" />
+    <ModelDatas 模型名="李四" 资源名="14" />
+    <ModelDatas 模型名="吴亦凡" 资源名="18" />
+  </SceneDatas>
+  <SceneDatas 场景名="华兹华斯赏花">
+    <ModelDatas 模型名="张三" 资源名="12" />
+    <ModelDatas 模型名="李四" 资源名="14" />
+    <ModelDatas 模型名="吴亦凡" 资源名="18" />
+  </SceneDatas>
+ 
+  
+  
+</ModelConfig>

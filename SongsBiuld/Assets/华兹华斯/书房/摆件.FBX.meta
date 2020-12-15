@@ -1,0 +1,330 @@
+fileFormatVersion: 2
+guid: eb5218d56c3bd604bbe40ee297f946cf
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: 004
+    100002: 185
+    100004: 186
+    100006: 63
+    100008: 64
+    100010: 65
+    100012: candle
+    100014: candle 1
+    100016: candle 2
+    100018: candle002
+    100020: candlestick
+    100022: candlestick 1
+    100024: candlestick 2
+    100026: candlestick 3
+    100028: Firewood
+    100030: lz_01
+    100032: lz_02
+    100034: lz_03
+    100036: lz_04
+    100038: lz_05
+    100040: QC
+    100042: Sphere012
+    100044: "\u5BF9\u8C61001"
+    100046: "\u5BF9\u8C61002"
+    100048: "\u5BF9\u8C61011"
+    100050: "\u5BF9\u8C61017"
+    100052: "\u5BF9\u8C61018"
+    100054: "\u5BF9\u8C61019"
+    100056: "\u5BF9\u8C61020"
+    100058: "\u62A4\u680F"
+    100060: //RootNode
+    100062: "\u6446\u4EF6_01"
+    400000: 004
+    400002: 185
+    400004: 186
+    400006: 63
+    400008: 64
+    400010: 65
+    400012: candle
+    400014: candle 1
+    400016: candle 2
+    400018: candle002
+    400020: candlestick
+    400022: candlestick 1
+    400024: candlestick 2
+    400026: candlestick 3
+    400028: Firewood
+    400030: lz_01
+    400032: lz_02
+    400034: lz_03
+    400036: lz_04
+    400038: lz_05
+    400040: QC
+    400042: Sphere012
+    400044: "\u5BF9\u8C61001"
+    400046: "\u5BF9\u8C61002"
+    400048: "\u5BF9\u8C61011"
+    400050: "\u5BF9\u8C61017"
+    400052: "\u5BF9\u8C61018"
+    400054: "\u5BF9\u8C61019"
+    400056: "\u5BF9\u8C61020"
+    400058: "\u62A4\u680F"
+    400060: //RootNode
+    400062: "\u6446\u4EF6_01"
+    2100000: 'Material #2125640447'
+    2100002: 'Material #2125640446'
+    2100004: baishe01
+    2100006: baishe002
+    2100008: 'Material #2125640445'
+    2100010: baishi001
+    2100012: "\u8336\u676F"
+    2100014: zhutai001
+    2100016: lazhu001
+    2100018: "\u706F\u82AF"
+    2100020: "\u8721\u70DB002"
+    2100022: 'Material #2097628415'
+    2100024: 'Material #2125640448'
+    2100026: "\u62C9\u624B"
+    2100028: "\u6805\u680F\u58C1\u7089"
+    2100030: 'Material #2125640449'
+    2300000: 004
+    2300002: 185
+    2300004: 186
+    2300006: 63
+    2300008: 64
+    2300010: 65
+    2300012: candle
+    2300014: candle 1
+    2300016: candle 2
+    2300018: candle002
+    2300020: candlestick
+    2300022: candlestick 1
+    2300024: candlestick 2
+    2300026: candlestick 3
+    2300028: Firewood
+    2300030: lz_03
+    2300032: QC
+    2300034: Sphere012
+    2300036: "\u5BF9\u8C61001"
+    2300038: "\u5BF9\u8C61002"
+    2300040: "\u5BF9\u8C61011"
+    2300042: "\u5BF9\u8C61017"
+    2300044: "\u5BF9\u8C61018"
+    2300046: "\u5BF9\u8C61019"
+    2300048: "\u5BF9\u8C61020"
+    2300050: "\u62A4\u680F"
+    3300000: 004
+    3300002: 185
+    3300004: 186
+    3300006: 63
+    3300008: 64
+    3300010: 65
+    3300012: candle
+    3300014: candle 1
+    3300016: candle 2
+    3300018: candle002
+    3300020: candlestick
+    3300022: candlestick 1
+    3300024: candlestick 2
+    3300026: candlestick 3
+    3300028: Firewood
+    3300030: lz_03
+    3300032: QC
+    3300034: Sphere012
+    3300036: "\u5BF9\u8C61001"
+    3300038: "\u5BF9\u8C61002"
+    3300040: "\u5BF9\u8C61011"
+    3300042: "\u5BF9\u8C61017"
+    3300044: "\u5BF9\u8C61018"
+    3300046: "\u5BF9\u8C61019"
+    3300048: "\u5BF9\u8C61020"
+    3300050: "\u62A4\u680F"
+    4300000: "\u5BF9\u8C61001"
+    4300002: "\u5BF9\u8C61002"
+    4300004: 186
+    4300006: 185
+    4300008: QC
+    4300010: "\u5BF9\u8C61011"
+    4300012: 004
+    4300014: lz_03
+    4300016: candle
+    4300018: candlestick
+    4300020: "\u5BF9\u8C61018"
+    4300022: candle
+    4300024: "\u5BF9\u8C61019"
+    4300026: candlestick
+    4300028: candlestick
+    4300030: "\u5BF9\u8C61020"
+    4300032: candle
+    4300034: 64
+    4300036: 63
+    4300038: 65
+    4300040: "\u5BF9\u8C61017"
+    4300042: candle002
+    4300044: candlestick
+    4300046: Sphere012
+    4300048: "\u62A4\u680F"
+    4300050: Firewood
+    2186277476908879412: ImportLogs
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #2097628415'
+    second: {fileID: 2100000, guid: a144d620e537a3847b35232074949184, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #2125640445'
+    second: {fileID: 2100000, guid: 42983d6df1b445b40a255f6cd3b1ec09, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #2125640446'
+    second: {fileID: 2100000, guid: d8b122a5f04e9c2489557a60cd63120d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #2125640447'
+    second: {fileID: 2100000, guid: 66e21201949d8584baeac6a6b126e1eb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #2125640448'
+    second: {fileID: 2100000, guid: a85405391144a3b4bbd7204ec2c27942, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #2125640449'
+    second: {fileID: 2100000, guid: e702c0ad83b73b549b122d97a6dc66c5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: baishe002
+    second: {fileID: 2100000, guid: 90ff927ea4f16b640a73500f41ec9c1e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: baishe01
+    second: {fileID: 2100000, guid: a85405391144a3b4bbd7204ec2c27942, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: baishi001
+    second: {fileID: 2100000, guid: 2d3fa8ddf4394364ead69095bed750f0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lazhu001
+    second: {fileID: 2100000, guid: 4b012c6dbc25d43499ae22e8b468134e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: zhutai001
+    second: {fileID: 2100000, guid: 09ef986f9af763a4899719178e34d177, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u62C9\u624B"
+    second: {fileID: 2100000, guid: ccaa663cb43bc4742bec1d28f2764c14, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u6805\u680F\u58C1\u7089"
+    second: {fileID: 2100000, guid: ef480389aa45d0848ab42162dba4fb18, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u706F\u82AF"
+    second: {fileID: 2100000, guid: 327bc54d83ffe184d8889e23614457d5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u8336\u676F"
+    second: {fileID: 2100000, guid: 60071ef3fba11854b9a12e6701e82bf3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u8721\u70DB002"
+    second: {fileID: 2100000, guid: f71c18f172ce44a418cc3372b86436fa, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
