@@ -335,7 +335,7 @@ namespace Songs
         /// </summary>
         public void OpenUI(UIType _type, UIType _OnBaseType = UIType.NONE)
         {
-
+            //Debug.Log("_type = "+ _type);
             List<string> onBasePath = _OnBaseType != UIType.NONE ? GetUIPath(_OnBaseType) : new List<string>();
 
             using (var data = uiList.GetEnumerator())
@@ -373,6 +373,7 @@ namespace Songs
 
             for (int i = 0; i < needPath.Count; i++)
             {
+               
                 if (uiList.ContainsKey(needPath[i]))
                 {
                     ui = uiList[needPath[i]];

@@ -37,6 +37,9 @@ public class SettingWnd : UIBase
     {
         base.Start();
         music.isOn = true;
+        task.isOn = true;
+
+        UIMng.Instance.ActivationUI(UIType.MainDialogueWnd);
     }
 
     protected override void OnEnable()
@@ -54,6 +57,7 @@ public class SettingWnd : UIBase
     protected override void OnDisable()
     {
         base.OnDisable();
+        task.isOn = false;
         CancelInvoke("HideHelp");
     }
 

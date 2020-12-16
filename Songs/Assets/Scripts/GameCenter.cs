@@ -24,20 +24,16 @@ namespace SpaceSimulation
             Application.targetFrameRate = 120;
 #endif
             if (!enabled) return;
-            UIMng.Instance.OpenUI(UIType.StartWnd);
             SongsDataMng.GetInstance().Init();
             CameraMng.GetInstance().UserControl = ThirdPerson;
             GameDataManager.GetInstance().Startup(transform,delegate() {
             });
-
-
         }
 
         // Use this for initialization
         void Start() {
-
+            UIMng.Instance.OpenUI(UIType.StartWnd);
             GameDataLoader.GetInstance().Startup();
-
         }
 
         // Update is called once per frame
@@ -45,6 +41,16 @@ namespace SpaceSimulation
             GameDataLoader.GetInstance().FrameUpdate();
             GameDataManager.GetInstance().FrameUpdate();
             SongsDataMng.GetInstance().LoadUpdate();
+
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                UIMng.Instance.OpenUI(UIType.StartWnd);
+            }
+
+            if (Input.GetKeyDown(KeyCode.L))
+            {
+                UIMng.Instance.OpenUI(UIType.LoadingWnd);
+            }
         }
 
         public void OnApplicationQuit()

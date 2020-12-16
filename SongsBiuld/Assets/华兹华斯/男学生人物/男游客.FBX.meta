@@ -1,0 +1,161 @@
+fileFormatVersion: 2
+guid: 55ef8af6223ddcb4b89fe83a644c8f32
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Blazer
+    100002: eyes
+    100004: j
+    100006: kisaragi2
+    100008: Male_body
+    100010: Pants
+    100012: Shirt
+    100014: Shoes
+    100016: Tie_
+    100018: "\u3000\uE813\uE811"
+    100020: //RootNode
+    100022: "\uE814\uE812"
+    400000: Blazer
+    400002: eyes
+    400004: j
+    400006: kisaragi2
+    400008: Male_body
+    400010: Pants
+    400012: Shirt
+    400014: Shoes
+    400016: Tie_
+    400018: "\u3000\uE813\uE811"
+    400020: //RootNode
+    400022: "\uE814\uE812"
+    2100000: Main1_ai
+    2100002: Eyelets
+    2100004: Leather_ai
+    2100006: Metal_ai
+    2100008: Main_ai
+    2100010: Badge_ai
+    2100012: Badge1_ai
+    2100014: Tie_ai
+    2100016: main_ai
+    2100018: Arms_ai
+    2100020: Face_ai
+    2100022: Teeth_ai
+    2100024: Torso_ai
+    2100026: Eyelashes
+    2100028: EyeMoisture
+    2100030: Sclera_ai
+    2100032: kisaragi2
+    2300000: Blazer
+    2300002: eyes
+    2300004: j
+    2300006: kisaragi2
+    2300008: Male_body
+    2300010: Pants
+    2300012: Shirt
+    2300014: Shoes
+    2300016: Tie_
+    3300000: Blazer
+    3300002: eyes
+    3300004: j
+    3300006: kisaragi2
+    3300008: Male_body
+    3300010: Pants
+    3300012: Shirt
+    3300014: Shoes
+    3300016: Tie_
+    4300000: Shoes
+    4300002: Pants
+    4300004: Blazer
+    4300006: Tie_
+    4300008: Shirt
+    4300010: Male_body
+    4300012: j
+    4300014: eyes
+    4300016: kisaragi2
+    7400000: Take 001
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.001
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

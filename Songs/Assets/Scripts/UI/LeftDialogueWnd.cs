@@ -25,6 +25,7 @@ public class LeftDialogueWnd : UIBase
     protected override void OnEnable()
     {
         base.OnEnable();
+        StopAllCoroutines();
         StartCoroutine(GetSongFileText(SongsDataMng.GetInstance().GetSongFilePath));
     }
 

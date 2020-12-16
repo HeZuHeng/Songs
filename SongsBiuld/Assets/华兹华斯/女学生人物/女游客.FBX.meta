@@ -1,0 +1,245 @@
+fileFormatVersion: 2
+guid: bcb575ffbdd99004ea0a5bcaa9a31b9a
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: eyes
+    100002: Genesis3Female
+    100004: j
+    100006: sky108
+    100008: TFS_Blazer_Open_23095
+    100010: TFS_Flats_19448
+    100012: TFS_Hose_35109
+    100014: TFS_Long_Shirt_Prop_23917
+    100016: TFS_Skirt_21152
+    100018: TFS_Tie_3593
+    100020: //RootNode
+    100022: "\u3000\uE813\uE811"
+    100024: "\uE814\uE812"
+    400000: eyes
+    400002: Genesis3Female
+    400004: j
+    400006: sky108
+    400008: TFS_Blazer_Open_23095
+    400010: TFS_Flats_19448
+    400012: TFS_Hose_35109
+    400014: TFS_Long_Shirt_Prop_23917
+    400016: TFS_Skirt_21152
+    400018: TFS_Tie_3593
+    400020: //RootNode
+    400022: "\u3000\uE813\uE811"
+    400024: "\uE814\uE812"
+    2100000: Eyelashes
+    2100002: EyeMoisture
+    2100004: Sclera_ai
+    2100006: Main1_ai
+    2100008: Badge_ai
+    2100010: Badge1_ai
+    2100012: Tie_ai
+    2100014: main_ai
+    2100016: Main2_ai
+    2100018: Main_ai
+    2100020: Sole_ai
+    2100022: Arms_ai
+    2100024: Face_ai
+    2100026: Teeth_ai
+    2100028: Torso_ai
+    2100030: sky108
+    2300000: eyes
+    2300002: Genesis3Female
+    2300004: j
+    2300006: sky108
+    2300008: TFS_Blazer_Open_23095
+    2300010: TFS_Flats_19448
+    2300012: TFS_Hose_35109
+    2300014: TFS_Long_Shirt_Prop_23917
+    2300016: TFS_Skirt_21152
+    2300018: TFS_Tie_3593
+    3300000: eyes
+    3300002: Genesis3Female
+    3300004: j
+    3300006: sky108
+    3300008: TFS_Blazer_Open_23095
+    3300010: TFS_Flats_19448
+    3300012: TFS_Hose_35109
+    3300014: TFS_Long_Shirt_Prop_23917
+    3300016: TFS_Skirt_21152
+    3300018: TFS_Tie_3593
+    4300000: j
+    4300002: eyes
+    4300004: TFS_Blazer_Open_23095
+    4300006: TFS_Tie_3593
+    4300008: TFS_Long_Shirt_Prop_23917
+    4300010: TFS_Skirt_21152
+    4300012: TFS_Hose_35109
+    4300014: TFS_Flats_19448
+    4300016: Genesis3Female
+    4300018: sky108
+    7400000: Take 001
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Arms_ai
+    second: {fileID: 2100000, guid: 01e8c763e7b38394c9e9b361e33c2942, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Badge1_ai
+    second: {fileID: 2100000, guid: 266b9d40eaac4374a9acf45c6f28e292, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Badge_ai
+    second: {fileID: 2100000, guid: 266b9d40eaac4374a9acf45c6f28e292, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EyeMoisture
+    second: {fileID: 2100000, guid: 569b8e9c4bb8beb4c85282e8b4f1ff5d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eyelashes
+    second: {fileID: 2100000, guid: f25fd18227429a140a61b75be290e130, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Face_ai
+    second: {fileID: 2100000, guid: 1efb57ea6abe1d4459775bc61861b883, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Main1_ai
+    second: {fileID: 2100000, guid: 81cdb90b95df26a44b677bcb31a638e0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Main2_ai
+    second: {fileID: 2100000, guid: ffac65fca35f8444ab9eaa961af71aec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Main_ai
+    second: {fileID: 2100000, guid: a7c463ea8947f3340a1ee34f3924e6d0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sclera_ai
+    second: {fileID: 2100000, guid: cde70d160caec764d84e92e9064d1e92, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sole_ai
+    second: {fileID: 2100000, guid: 77d2c2290803aad4e9362693bfa9f66a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Teeth_ai
+    second: {fileID: 2100000, guid: 5c4a2105178b4684b96ae238bdf1c931, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tie_ai
+    second: {fileID: 2100000, guid: cafbaf630b36b084db485b9945d90480, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Torso_ai
+    second: {fileID: 2100000, guid: 5ebf69a78f67bee41aa4b554817593a5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: main_ai
+    second: {fileID: 2100000, guid: 77471556ba4413046af0a541b6af682a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: sky108
+    second: {fileID: 2100000, guid: 15bdcdb9b9d94c84d94cd3f382d065be, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.001
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

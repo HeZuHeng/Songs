@@ -24,6 +24,10 @@ namespace Songs
 
         public static string GetPlatformPath()
         {
+            if (Application.platform == RuntimePlatform.WebGLPlayer)
+            {
+                return string.Empty;
+            }
             if (Application.platform == RuntimePlatform.WindowsPlayer || Application.platform == RuntimePlatform.WindowsEditor || Application.platform == RuntimePlatform.OSXEditor)
             {
                 return "PC";

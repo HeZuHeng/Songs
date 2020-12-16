@@ -19,6 +19,7 @@ public class SelectPlotWnd : UIBase
     {
         base.Awake();
         Type = UIType.SelectPlotWnd;
+        MutexInterface = true;
     }
 
     protected override void Start()

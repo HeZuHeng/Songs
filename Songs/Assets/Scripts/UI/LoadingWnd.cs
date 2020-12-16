@@ -17,12 +17,11 @@ public class LoadingWnd : UIBase
         Type = UIType.LoadingWnd;
         MutexInterface = true;
         progressBar.value = 0;
-        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     protected override void OnEnable()
     {
-        if(SongsDataMng.GetInstance().GetSceneData != null) LoadScene(SongsDataMng.GetInstance().GetSceneData.sceneName);
+        if (SongsDataMng.GetInstance().GetSceneData != null) LoadScene(SongsDataMng.GetInstance().GetSceneData.sceneName);
 	}
 
     protected override void OnDisable()
@@ -32,6 +31,8 @@ public class LoadingWnd : UIBase
 
     void OnSceneLoaded(Scene scene,LoadSceneMode loadSceneMode)
     {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+
         progressBar.value = 1;
         lblStatus.text = "100%";
 
@@ -68,7 +69,6 @@ public class LoadingWnd : UIBase
 
     void LoadScene(string url)
     {
-        UIMng.Instance.OpenUI(UIType.NONE);
         UIMng.Instance.ConcealUI(UIType.SettingWnd);
         UIMng.Instance.ConcealUI(UIType.MainDialogueWnd);
 
@@ -80,6 +80,7 @@ public class LoadingWnd : UIBase
             {
                 string path = loadTask.MainData.GetSceneName(url);
                 Debug.Log(path);
+                SceneManager.sceneLoaded += OnSceneLoaded;
                 if (!string.IsNullOrEmpty(path))SceneManager.LoadSceneAsync(path);
             }
             else
