@@ -94,7 +94,11 @@ public class SongsDataMng
                 GetSceneData = GetModelConfig.datas[i];
             }
         }
-        if (GetSceneTaskData.datas.Count > 0) GetTaskData = GetSceneTaskData.datas[0];
+        if (GetSceneTaskData.datas.Count > 0)
+        {
+            GetTaskData = GetSceneTaskData.datas[0];
+            GetTaskData.TaskState = TaskState.Start;
+        }
     }
 
     public void SetNextTaskData(TaskData val)
@@ -104,6 +108,7 @@ public class SongsDataMng
             if (GetSceneTaskData.datas[i].Id == val.next)
             {
                 GetTaskData = GetSceneTaskData.datas[i];
+                GetTaskData.TaskState = TaskState.Start;
             }
         }
     }

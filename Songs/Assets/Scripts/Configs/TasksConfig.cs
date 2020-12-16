@@ -1,18 +1,56 @@
 ﻿//using System;
+using System;
 using System.Collections.Generic;
 using System.Xml.Serialization;
 using UnityEngine;
+using UnityEngine.Events;
 
 public enum TaskType
 {
     None =0,
+    /// <summary>
+    /// 模型移动
+    /// </summary>
     Move = 1,
+    /// <summary>
+    /// 点击模型
+    /// </summary>
     Click = 2,
+    /// <summary>
+    /// 打开UI界面
+    /// </summary>
     OpenWnd =3,
+    /// <summary>
+    /// 人物对话
+    /// </summary>
     Talk = 4,
+    /// <summary>
+    /// 场景进入动画
+    /// </summary>
+    DOTween = 5,
+    /// <summary>
+    /// 上帝视角漫游，摄像机不动
+    /// </summary>
+    GodRoams,
+    /// <summary>
+    /// 第三人称漫游，摄像机跟随人物移动
+    /// </summary>
+    ThirdPerson,
+    /// <summary>
+    /// 第一人称漫游，摄像机移动
+    /// </summary>
+    FirstPerson
 }
 
-[System.Serializable]
+public enum TaskState
+{
+    None = 0,
+    Start,
+    Run,
+    End,
+}
+
+[Serializable]
 public class TasksConfig
 {
     
@@ -22,7 +60,7 @@ public class TasksConfig
     public TasksConfig() { datas = new List<SceneTaskData>(); }
 }
 
-[System.Serializable]
+[Serializable]
 public class SceneTaskData
 {
     [XmlAttribute("场景任务名")]
@@ -37,7 +75,7 @@ public class SceneTaskData
     public SceneTaskData() { datas = new List<TaskData>(); }
 }
 
-[System.Serializable]
+[Serializable]
 public class TaskData
 {
     [XmlAttribute("ID")]
@@ -52,18 +90,31 @@ public class TaskData
     public string val;
     [XmlAttribute("描述")]
     public string des;
-    public TaskData() { }
-#if SONGS_DEBUG
-    public TaskData(string name, int next)
+
+    [NonSerialized]
+    public TaskStateEvent onStateChange = new TaskStateEvent();
+
+    [NonSerialized]
+    TaskState taskState;
+    public TaskState TaskState
     {
-        this.name = name;
-        this.next = next;
+        get { return taskState; }
+        set
+        {
+            if (taskState != value)
+            {
+                taskState = value;
+                if(onStateChange != null) onStateChange.Invoke(taskState);
+            }
+        }
+    }
+    public TaskData()
+    {
     }
 
-    public TaskData(string name, int next, string des, TaskType type) : this(name, next)
-    {
-        this.des = des;
-        this.type = type;
-    }
-#endif
+}
+
+public class TaskStateEvent : UnityEvent<TaskState>
+{
+    public TaskStateEvent() { }
 }

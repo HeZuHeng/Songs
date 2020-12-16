@@ -39,14 +39,24 @@ public class MainDialogueWnd : UIBase
         Show();
     }
 
+    protected override void OnDisable()
+    {
+        base.OnDisable();
+       if(taskData != null) taskData.onStateChange.RemoveListener(OnStateChange);
+    }
+
     void Show()
     {
         taskData = SongsDataMng.GetInstance().GetTaskData;
-        if(taskData == null)
+        if (taskData == null)
         {
             UIMng.Instance.ConcealUI(this.Type);
             return;
         }
+        taskData.onStateChange.RemoveListener(OnStateChange);
+        taskData.onStateChange.AddListener(OnStateChange);
+        if (taskData.TaskState == TaskState.Start) taskData.TaskState = TaskState.Run;
+
         bool talking = false;
         taskName.text = taskData.name;
         switch (taskData.type)
@@ -58,6 +68,21 @@ public class MainDialogueWnd : UIBase
             case TaskType.Click:
                 break;
             case TaskType.Move:
+                break;
+            case TaskType.DOTween:
+                CameraMng.GetInstance().DOTweenPaly(delegate()
+                {
+                    taskData.TaskState = TaskState.End;
+                });
+                break;
+            case TaskType.GodRoams:
+                CameraMng.GetInstance().SetGodRoamsMove();
+                break;
+            case TaskType.ThirdPerson:
+                CameraMng.GetInstance().SetThirdPersonMove();
+                break;
+            case TaskType.FirstPerson:
+                CameraMng.GetInstance().SetFirstPersonMove();
                 break;
             case TaskType.Talk:
                 ModelData modelData = SongsDataMng.GetInstance().GetModelData(taskData.val);
@@ -82,9 +107,19 @@ public class MainDialogueWnd : UIBase
 
     void OnNext()
     {
-        if(taskData.next != 0)
+        if (taskData != null && taskData.next != 0)
         {
+            taskData.onStateChange.RemoveListener(OnStateChange);
             SongsDataMng.GetInstance().SetNextTaskData(taskData);
+            Show();
+        }
+    }
+
+    void OnStateChange(TaskState taskState)
+    {
+        if(taskState == TaskState.End)
+        {
+            OnNext();
         }
     }
 }

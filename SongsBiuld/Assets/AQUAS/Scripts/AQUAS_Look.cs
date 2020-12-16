@@ -30,8 +30,14 @@ namespace AQUAS
         [Tooltip("Object to be rotated when mouse moves up/down.")]
         public Transform _cameraT;
 
-
         private Transform parent;
+
+        private void Awake()
+        {
+            _playerRootT = transform;
+            _cameraT = transform;
+            if (parent == null) parent = transform.parent;
+        }
 
         void Update()
         {
@@ -95,20 +101,18 @@ namespace AQUAS
             rotAverageY /= _rotArrayY.Count;
 
             // Apply
-            //_playerRootT.Rotate(0f, rotAverageX, 0f, Space.World);
-            //_cameraT.Rotate(-rotAverageY, 0f, 0f, Space.Self);
-            if (transform.parent != null)
+            if (parent != null)
             {
-                if (parent == null) parent = transform.parent;
                 parent.Rotate(0f, rotAverageX, 0f, Space.World);
                 float x = parent.localEulerAngles.x > 180 ? parent.localEulerAngles.x - 360 : parent.localEulerAngles.x;
                 if (rotAverageY > 0 && x < 0) return;
                 if (rotAverageY < 0 && x > 70) return;
                 parent.Rotate(-rotAverageY, 0f, 0f, Space.Self);
-
-                //_playerRootT.RotateAround(parent.position, parent.up, rotAverageX);
-
-                //_cameraT.RotateAround(parent.position, _cameraT.right, -rotAverageY);
+            }
+            else
+            {
+                _playerRootT.Rotate(0f, rotAverageX, 0f, Space.World);
+                _cameraT.Rotate(-rotAverageY, 0f, 0f, Space.Self);
             }
         }
     }

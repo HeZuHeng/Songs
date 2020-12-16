@@ -13,7 +13,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         private bool m_Jump;                      // the world-relative desired move direction, calculated from the camForward and user input.
 
         private Vector3 off;
-        
+        private bool _isLocked = false;
+
         private void Start()
         {
             // get the transform of the main camera
@@ -32,9 +33,15 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             m_Character = GetComponent<ThirdPersonCharacter>();
         }
 
-        public void SetMainCamera(Transform tran)
+        private void OnDisable()
+        {
+            _isLocked = false;
+        }
+
+        public void SetMainCamera(Transform tran, bool isLocked = false)
         {
             m_Cam = tran;
+            _isLocked = isLocked;
         }
 
         private void Update()
@@ -48,7 +55,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
         private void LateUpdate()
         {
-           if(m_Cam != null) m_Cam.position = transform.position;
+           if(!_isLocked && m_Cam != null) m_Cam.position = transform.position;
         }
 
         // Fixed update is called in sync with physics

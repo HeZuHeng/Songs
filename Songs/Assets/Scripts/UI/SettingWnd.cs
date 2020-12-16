@@ -91,7 +91,7 @@ public class SettingWnd : UIBase
         }
         else
         {
-            UIMng.Instance.ConcealUI(UIType.MainDialogueWnd);
+            if(SongsDataMng.GetInstance().GetTaskData.TaskState == TaskState.Start) UIMng.Instance.ConcealUI(UIType.MainDialogueWnd);
         }
     }
 

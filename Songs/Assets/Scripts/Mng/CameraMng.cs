@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityStandardAssets.Characters.ThirdPerson;
 using DG.Tweening;
 using AQUAS;
+using UnityEngine.Events;
 
 public class CameraMng
 {
@@ -34,6 +35,9 @@ public class CameraMng
             mainCamera = value;
         }
     }
+
+    public static Vector3 InitPosition = Vector3.zero;
+    public static Vector3 InitRotation = Vector3.zero;
     public ThirdPersonUserControl  UserControl{ get; set; }
 
     /// <summary>
@@ -42,38 +46,82 @@ public class CameraMng
     /// <param name="position">相机位置</param>
     /// <param name="size">大小</param>
     /// <param name="onfinish">完成事件</param>
-    public void InitScene(Camera camera)
+    public void InitScene(Camera camera, Vector3 pos, Vector3 rota)
     {
-        if(camera != null)
+        InitPosition = pos;
+        InitRotation = rota;
+        if (camera != null)
         {
             camera.tag = "MainCamera";
-            mainCamera = camera;
-            DOTweenPath tweenPath = camera.GetComponent<DOTweenPath>();
-            if(tweenPath != null)
-            {
-                tweenPath.onComplete = new UnityEngine.Events.UnityEvent();
-                tweenPath.onComplete.AddListener(SetUserControlTran);
-            }
-            else
-            {
-                SetUserControlTran();
-            }
+            MainCamera = camera;
+            ResetMove();
         }
     }
 
-    public void SetUserControlTran()
+    public void ResetMove()
+    {
+        UserControl.gameObject.SetActive(false);
+        if (MainCamera == null) return;
+        UserControl.transform.position = InitPosition;
+        UserControl.transform.eulerAngles = InitRotation;
+        AQUAS_Look look = MainCamera.gameObject.GetComponent<AQUAS_Look>();
+        if(look != null) GameObject.DestroyImmediate(look);
+        AQUAS_Walk walk = MainCamera.gameObject.GetComponent<AQUAS_Walk>();
+        if (walk != null) GameObject.DestroyImmediate(walk);
+        CharacterController controller = MainCamera.gameObject.GetComponent<CharacterController>();
+        if (walk != null) GameObject.DestroyImmediate(controller);
+    }
+
+    public void DOTweenPaly(UnityAction action)
+    {
+        ResetMove();
+        DOTweenPath tweenPath = MainCamera.GetComponent<DOTweenPath>();
+        if (tweenPath != null)
+        {
+            if (tweenPath.onComplete == null) tweenPath.onComplete = new UnityEngine.Events.UnityEvent();
+            tweenPath.onComplete.AddListener(action);
+            tweenPath.DOPlay();
+        }
+        else
+        {
+           if(action != null) action();
+        }
+    }
+
+    public void SetThirdPersonMove()
     {
         GameObject go = new GameObject("Parent");
-        go.transform.position = mainCamera.transform.position + mainCamera.transform.forward * 3;
-        go.transform.rotation = mainCamera.transform.rotation;
-        UserControl.transform.position = go.transform.position + Vector3.up;
+        go.transform.position = MainCamera.transform.position + MainCamera.transform.forward * 3;
+        go.transform.rotation = MainCamera.transform.rotation;
 
-        mainCamera.transform.SetParent(go.transform);
-        mainCamera.transform.localPosition = -Vector3.forward * 3f + Vector3.up * 1.6f;
-        mainCamera.transform.localRotation = Quaternion.identity;
+        MainCamera.transform.SetParent(go.transform);
+        MainCamera.transform.localPosition = -Vector3.forward * 3f + Vector3.up * 1.6f;
+        MainCamera.transform.localRotation = Quaternion.identity;
 
+        UserControl.transform.position = InitPosition;
+        UserControl.transform.eulerAngles = InitRotation;
         UserControl.SetMainCamera(go.transform);
         UserControl.gameObject.SetActive(true);
-        mainCamera.gameObject.AddComponent<AQUAS_Look>();
+        MainCamera.gameObject.AddComponent<AQUAS_Look>();
+    }
+
+    public void SetGodRoamsMove()
+    {
+        UserControl.transform.position = InitPosition;
+        UserControl.transform.eulerAngles = InitRotation;
+        UserControl.gameObject.SetActive(true);
+        UserControl.SetMainCamera(MainCamera.transform, true);
+        MainCamera.gameObject.AddComponent<AQUAS_Look>()._isLocked = true;
+    }
+
+    public void SetFirstPersonMove()
+    {
+        UserControl.transform.position = InitPosition;
+        UserControl.transform.eulerAngles = InitRotation;
+        UserControl.gameObject.SetActive(false);
+        MainCamera.gameObject.AddComponent<CharacterController>();
+        MainCamera.gameObject.AddComponent<AQUAS_Look>();
+        MainCamera.gameObject.AddComponent<AQUAS_Walk>();
+
     }
 }

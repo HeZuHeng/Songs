@@ -8,7 +8,7 @@ using Songs;
 
 public class SelectPlotWnd : UIBase
 {
-    public UI_Control_ScrollFlow scrollFlow;
+    public EnhanceScrollView scrollFlow;
     public Button confirmBtn;
     public Button lastBtn;
     public Button nextBtn;
@@ -33,16 +33,23 @@ public class SelectPlotWnd : UIBase
     protected override void OnEnable()
     {
         base.OnEnable();
-        returnBtn.gameObject.SetActive(SongsDataMng.GetInstance().GetSceneTaskData != null);
+        //returnBtn.gameObject.SetActive(SongsDataMng.GetInstance().GetSceneTaskData != null);
         Show();
     }
 
     void Show()
     {
-        Transform parent = scrollFlow.transform;
-        for (int i = 0; i < parent.childCount; i++)
+        Transform parent = scrollFlow.transform.GetChild(0);
+        for (int i = 0; i < parent.childCount; )
         {
-            parent.GetChild(i).gameObject.SetActive(false);
+            if(i == 0){
+                parent.GetChild(i).gameObject.SetActive(false);
+                i++;
+            }
+            else
+            {
+                DestroyImmediate(parent.GetChild(i).gameObject);
+            }
         }
 
         TasksConfig tasksConfig = SongsDataMng.GetInstance().GetTasksConfig;
@@ -57,6 +64,7 @@ public class SelectPlotWnd : UIBase
             else
             {
                 tran = Instantiate(tran);
+                tran.name = "Item"+ i;
                 tran.SetParent(parent);
                 tran.localPosition = Vector3.zero;
                 tran.localScale = Vector3.one;
@@ -64,12 +72,12 @@ public class SelectPlotWnd : UIBase
             tran.GetComponent<PlotItemUI>().Show(tasksConfig.datas[i]);
             tran.gameObject.SetActive(true);
         }
-        scrollFlow.Refresh();
+        scrollFlow.Refrshed();
     }
 
     void OnConfirm()
     {
-        PlotItemUI plotItemUI = scrollFlow.Current.GetComponent<PlotItemUI>();
+        PlotItemUI plotItemUI = scrollFlow.curCenterItem.GetComponent<PlotItemUI>();
         if(plotItemUI != null)
         {
             SongsDataMng.GetInstance().SetSceneTaskData(plotItemUI.sceneTaskData);
@@ -79,16 +87,23 @@ public class SelectPlotWnd : UIBase
 
     void OnLast()
     {
-
+        scrollFlow.OnBtnLeftClick();
     }
 
     void OnNext()
     {
-
+        scrollFlow.OnBtnRightClick();
     }
 
     void OnReturn()
     {
-        UIMng.Instance.OpenUI(UIType.NONE);
+        if(SongsDataMng.GetInstance().GetSceneTaskData != null)
+        {
+            UIMng.Instance.OpenUI(UIType.NONE);
+        }
+        else
+        {
+            UIMng.Instance.OpenUI(UIType.IntroductionWnd);
+        }
     }
 }
