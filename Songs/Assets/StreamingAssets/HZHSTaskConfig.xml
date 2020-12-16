@@ -5,7 +5,7 @@
     <TaskDatas ID="2" 任务名="李四" 下一个="14" 类型="None" />
     <TaskDatas ID="3" 任务名="吴亦凡" 下一个="18" 类型="None" />
   </SceneTasks>
-  <SceneTasks 场景任务名="《我好似一朵孤独的流云》意境" 图标="矩形 8" 场景数据="华兹华斯赏花">
+  <SceneTasks 场景任务名="《我好似一朵孤独的流云》意境" 图标="矩形 8" 场景数据="华兹华斯书房">
     <TaskDatas ID="0" 任务名="张三" 下一个="12" 类型="None" />
     <TaskDatas ID="0" 任务名="李四" 下一个="14" 类型="None" />
     <TaskDatas ID="0" 任务名="吴亦凡" 下一个="18" 类型="None" />
@@ -20,9 +20,9 @@
     <TaskDatas ID="0" 任务名="李四" 下一个="14" 类型="None" />
     <TaskDatas ID="0" 任务名="吴亦凡" 下一个="18" 类型="None" />
   </SceneTasks>
-  <SceneTasks 场景任务名="《我好似一朵孤独的流云》解析" 图标="矩形 8" 场景数据="华兹华斯书房">
-    <TaskDatas ID="0" 任务名="张三" 下一个="12" 类型="None" />
-    <TaskDatas ID="0" 任务名="李四" 下一个="14" 类型="None" />
-    <TaskDatas ID="0" 任务名="吴亦凡" 下一个="18" 类型="None" />
+  <SceneTasks 场景任务名="《我好似一朵孤独的流云》解析" 图标="矩形 8" 场景数据="华兹华斯赏花">
+    <TaskDatas ID="1" 任务名="预览水仙花场景" 下一个="2" 类型="DOTween" 值 = "5"/>
+    <TaskDatas ID="2" 任务名="阅读《我好似一朵孤独的流云》诗歌" 下一个="3" 类型="LookSong" 值 = "/我好似一朵孤独的流云.txt"/>
+    <TaskDatas ID="3" 任务名="水仙花场景自由漫游" 下一个="0" 类型="ThirdPerson"  值 = "0"/>
   </SceneTasks>
 </TasksConfig>

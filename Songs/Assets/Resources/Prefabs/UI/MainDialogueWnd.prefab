@@ -136,7 +136,7 @@ MonoBehaviour:
   taskNameParent: {fileID: 7293740765389356864}
   talkIcon: {fileID: 4143074067627591803}
   talkName: {fileID: 9096750509225581165}
-  talkContent: {fileID: 2267551007375287939}
+  talkContent: {fileID: 8003012270222701323}
   taskName: {fileID: 1125207088115670080}
   next: {fileID: 9058504830786249543}
 --- !u!1 &2158542068385619105
@@ -265,6 +265,7 @@ GameObject:
   - component: {fileID: 2345088462927302171}
   - component: {fileID: 2469045787412865944}
   - component: {fileID: 2267551007375287939}
+  - component: {fileID: 8003012270222701323}
   m_Layer: 5
   m_Name: Text_dialogue
   m_TagString: Untagged
@@ -335,6 +336,29 @@ MonoBehaviour:
   m_Text: "Ladies and gentlemen, welcome to Wordsworth\u2019s residence. I\u2019m
     Lucy. Today, I\u2019m honored to serve you as a tour guide, and show you around
     Wordsworth\u2019s Dove Cottage."
+--- !u!114 &8003012270222701323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3221808496146426182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 044b3d3629309c546ad609517f5c1d50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TextIndent: 2
+  m_Text: 
+  m_Enable: 0
+  m_ShowSpeed: 30
+  m_AudioClip: {fileID: 0}
+  m_CallBack:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: TrendsText+CallBack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  m_ScrollRect: {fileID: 0}
 --- !u!1 &3463010836679524390
 GameObject:
   m_ObjectHideFlags: 0

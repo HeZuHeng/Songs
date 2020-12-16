@@ -13,7 +13,7 @@ public class MainDialogueWnd : UIBase
 
     public Image talkIcon;
     public Text talkName;
-    public Text talkContent;
+    public TrendsText talkContent;
 
     public Text taskName;
     public Button next;
@@ -69,6 +69,10 @@ public class MainDialogueWnd : UIBase
                 break;
             case TaskType.Move:
                 break;
+            case TaskType.LookSong:
+                SongsDataMng.GetInstance().GetSongFilePath = taskData.val;
+                UIMng.Instance.OpenUI(UIType.LeftDialogueWnd);
+                break;
             case TaskType.DOTween:
                 CameraMng.GetInstance().DOTweenPaly(delegate()
                 {
@@ -92,17 +96,19 @@ public class MainDialogueWnd : UIBase
                 {
                     talkIcon.sprite = obj;
                 }
+                Show(taskData.des);
                 talking = true;
                 break;
         }
-        Show(taskData.des);
         talkParent.gameObject.SetActive(talking);
         taskNameParent.gameObject.SetActive(!talking);
     }
 
     void Show(string content)
     {
-        talkContent.text = content;
+        talkContent.m_CallBack.RemoveListener(OnNext);
+        talkContent.m_CallBack.AddListener(OnNext);
+        talkContent.Play(content);
     }
 
     void OnNext()

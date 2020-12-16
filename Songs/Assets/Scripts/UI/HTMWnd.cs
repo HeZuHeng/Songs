@@ -11,4 +11,21 @@ public class HTMWnd : UIBase
         Type = UIType.HTMWnd;
         MutexInterface = true;
     }
+
+    public void OnClose()
+    {
+        TaskData taskData = SongsDataMng.GetInstance().GetTaskData;
+        if (taskData != null)
+        {
+            if (taskData.type == TaskType.OpenWnd)
+            {
+                UIType type = (UIType)System.Enum.Parse(typeof(UIType), taskData.val);
+                if (type == Type)
+                {
+                    taskData.TaskState = TaskState.End;
+                }
+            }
+        }
+        UIMng.Instance.OpenUI(UIType.NONE);
+    }
 }

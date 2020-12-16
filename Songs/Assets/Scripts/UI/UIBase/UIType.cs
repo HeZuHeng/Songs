@@ -17,6 +17,7 @@ namespace Songs{
         LoadingWnd = 8,
 		SelectPlotWnd = 9,
 		MainDialogueWnd = 10,
+		LeftDialogueWnd = 11,
 	}
 	/// <summary>
 	/// 二级界面枚举

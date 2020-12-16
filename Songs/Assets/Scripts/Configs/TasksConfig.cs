@@ -39,7 +39,11 @@ public enum TaskType
     /// <summary>
     /// 第一人称漫游，摄像机移动
     /// </summary>
-    FirstPerson
+    FirstPerson,
+    /// <summary>
+    /// 阅读诗歌
+    /// </summary>
+    LookSong,
 }
 
 public enum TaskState

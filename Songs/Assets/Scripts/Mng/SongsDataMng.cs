@@ -50,9 +50,12 @@ public class SongsDataMng
     /// 当前任务数据
     /// </summary>
     public TaskData GetTaskData { get; private set; }
+    /// <summary>
+    /// 阅读的诗歌文件路径
+    /// </summary>
+    public string GetSongFilePath { get; set; }
 
     private List<DataLoader> dataLoaders = new List<DataLoader>();
-
     public void Init()
     {
         Player = new MainPlayer();
@@ -71,7 +74,6 @@ public class SongsDataMng
             GetSceneData = GetModelConfig.datas[0];
         });
     }
-
     public void SetTaskData(int val)
     {
         if(val == 1)
@@ -83,7 +85,6 @@ public class SongsDataMng
             GetTasksConfig = GetHTMTasks;
         }
     }
-
     public void SetSceneTaskData(SceneTaskData val)
     {
         GetSceneTaskData = val;
@@ -100,7 +101,6 @@ public class SongsDataMng
             GetTaskData.TaskState = TaskState.Start;
         }
     }
-
     public void SetNextTaskData(TaskData val)
     {
         for (int i = 0; i < GetSceneTaskData.datas.Count; i++)
@@ -112,7 +112,6 @@ public class SongsDataMng
             }
         }
     }
-
     public ModelData GetModelData(string modelName)
     {
         for (int i = 0; i < GetSceneData.datas.Count; i++)
@@ -124,7 +123,6 @@ public class SongsDataMng
         }
         return null;
     }
-
     public void LoadUpdate()
     {
         for (int i = 0; i < dataLoaders.Count; )
@@ -146,7 +144,6 @@ public class SongsDataMng
             }
         }
     }
-
     public DataLoader AddLoad(string url, OnDataLoaded onDataLoaded)
     {
         DataLoader loader = new DataLoader();
@@ -156,7 +153,6 @@ public class SongsDataMng
         dataLoaders.Add(loader);
         return loader;
     }
-
     public static object XmlDeserialize(string text,Type type)
     {
         StringReader reader = new StringReader(text);
