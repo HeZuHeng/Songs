@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Xml.Serialization;
@@ -19,6 +18,7 @@ public class SongsDataMng
     public static string HZHSTaskPath = Application.streamingAssetsPath + "/HZHSTaskConfig.xml";
     public static string HTMTaskPath = Application.streamingAssetsPath + "/HTMTaskConfig.xml";
     public static string ModelPath = Application.streamingAssetsPath + "/ModelConfig.xml";
+    public static string QuestionBankPath = Application.streamingAssetsPath + "/QuestionBankConfig.xml";
 
     static SongsDataMng instance;
     public static SongsDataMng GetInstance()
@@ -33,6 +33,7 @@ public class SongsDataMng
     private TasksConfig GetHZHSTasks { get;  set; }
     private TasksConfig GetHTMTasks { get;  set; }
     private ModelConfig GetModelConfig { get; set; }
+    private QuestionBankConfig GetQuestionBankConfig { get; set; }
     /// <summary>
     /// 当前场景模型数据
     /// </summary>
@@ -55,6 +56,8 @@ public class SongsDataMng
     /// </summary>
     public string GetSongFilePath { get; set; }
 
+    public QuestionBankData GetQuestionBankData { get; private set; }
+
     private List<DataLoader> dataLoaders = new List<DataLoader>();
     public void Init()
     {
@@ -73,8 +76,12 @@ public class SongsDataMng
             GetModelConfig = (ModelConfig)XmlDeserialize(text, typeof(ModelConfig));
             GetSceneData = GetModelConfig.datas[0];
         });
+        AddLoad(QuestionBankPath, delegate (string text)
+        {
+            GetQuestionBankConfig = (QuestionBankConfig)XmlDeserialize(text, typeof(QuestionBankConfig));
+        });
     }
-    public void SetTaskData(int val)
+    public void SetTaskConfigData(int val)
     {
         if(val == 1)
         {
@@ -112,6 +119,18 @@ public class SongsDataMng
             }
         }
     }
+    public void SetNextTaskData(string val)
+    {
+        for (int i = 0; i < GetSceneTaskData.datas.Count; i++)
+        {
+            if (GetSceneTaskData.datas[i].name.Equals(val))
+            {
+                GetTaskData = GetSceneTaskData.datas[i];
+                GetTaskData.TaskState = TaskState.Start;
+            }
+        }
+    }
+
     public ModelData GetModelData(string modelName)
     {
         for (int i = 0; i < GetSceneData.datas.Count; i++)
@@ -122,6 +141,17 @@ public class SongsDataMng
             }
         }
         return null;
+    }
+
+    public void SetQuestion(int questionId)
+    {
+        for (int i = 0; i < GetQuestionBankConfig.datas.Count; i++)
+        {
+            if (GetQuestionBankConfig.datas[i].Id == questionId)
+            {
+                GetQuestionBankData = GetQuestionBankConfig.datas[i];
+            }
+        }
     }
     public void LoadUpdate()
     {

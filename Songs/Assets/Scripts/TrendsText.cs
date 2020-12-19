@@ -36,11 +36,20 @@ public class TrendsText : MonoBehaviour
         if (m_Enable)
             Play();
     }
+    private void OnDisable()
+    {
+        StopAllCoroutines();
+    }
+
     /// <summary>
     /// 重新播放
     /// </summary>
     public void Play()
     {
+        if(Application.platform == RuntimePlatform.WindowsEditor)
+        {
+            m_ShowSpeed = 1000;
+        }
         suspend = false;
         //\u3000为中文空格英文空格会引起unity中Text的自动换行因此将内容中的英文空格换成中文空格
         string str = m_Text.Replace(" ", "\u3000");
@@ -68,6 +77,7 @@ public class TrendsText : MonoBehaviour
             //读写速度根据音频长度平均计算
             m_ShowSpeed = str.Length / m_AudioClip.length;
         }
+        StopCoroutine("Player");
         StartCoroutine("Player");
     }
     /// <summary>
@@ -78,6 +88,12 @@ public class TrendsText : MonoBehaviour
     {
         m_Text = varCentent;
         m_AudioClip = null;
+        if (m_Conetnt == null) m_Conetnt = this.GetComponent<Text>();
+        if (!enabled || !this.gameObject.activeSelf)
+        {
+            m_Enable = true;
+            return;
+        }
         Play();
     }
     /// <summary>
@@ -89,7 +105,12 @@ public class TrendsText : MonoBehaviour
     {
         m_Text = varCentent;
         m_AudioClip = audio;
-
+        if(m_Conetnt == null) m_Conetnt = this.GetComponent<Text>();
+        if (!enabled || !this.gameObject.activeSelf)
+        {
+            m_Enable = true;
+            return;
+        }
         Play();
     }
 

@@ -43,6 +43,8 @@ public class MainDialogueWnd : UIBase
     {
         base.OnDisable();
        if(taskData != null) taskData.onStateChange.RemoveListener(OnStateChange);
+        talkContent.gameObject.SetActive(false);
+        talkContent.m_Enable = false;
     }
 
     void Show()
@@ -57,7 +59,7 @@ public class MainDialogueWnd : UIBase
         taskData.onStateChange.AddListener(OnStateChange);
         if (taskData.TaskState == TaskState.Start) taskData.TaskState = TaskState.Run;
 
-        bool talking = false;
+        int talking = 0;
         taskName.text = taskData.name;
         switch (taskData.type)
         {
@@ -66,6 +68,12 @@ public class MainDialogueWnd : UIBase
                 UIMng.Instance.OpenUI(type);
                 break;
             case TaskType.Click:
+                break;
+            case TaskType.Question:
+                int qId = 0;
+                int.TryParse(taskData.val,out qId);
+                SongsDataMng.GetInstance().SetQuestion(qId);
+                UIMng.Instance.ActivationUI(UIType.AnswerWnd);
                 break;
             case TaskType.Move:
                 break;
@@ -90,25 +98,34 @@ public class MainDialogueWnd : UIBase
                 break;
             case TaskType.Talk:
                 ModelData modelData = SongsDataMng.GetInstance().GetModelData(taskData.val);
-                talkName.text = modelData.name;
-                Sprite obj = Resources.Load<Sprite>("Sprites/" + modelData.icon);
-                if (obj != null)
+                if(modelData != null)
                 {
-                    talkIcon.sprite = obj;
+                    talkName.text = modelData.name;
+                    Sprite obj = Resources.Load<Sprite>("Sprites/" + modelData.icon);
+                    if (obj != null)
+                    {
+                        talkIcon.sprite = obj;
+                    }
+                }
+                else
+                {
+                    talkName.text = "系统";
                 }
                 Show(taskData.des);
-                talking = true;
+                talking = 1;
                 break;
         }
-        talkParent.gameObject.SetActive(talking);
-        taskNameParent.gameObject.SetActive(!talking);
+        talkParent.gameObject.SetActive(talking == 1);
+        taskNameParent.gameObject.SetActive(talking == 0);
     }
 
     void Show(string content)
     {
+        if (string.IsNullOrEmpty(content)) return;
         talkContent.m_CallBack.RemoveListener(OnNext);
         talkContent.m_CallBack.AddListener(OnNext);
         talkContent.Play(content);
+        talkContent.gameObject.SetActive(true);
     }
 
     void OnNext()

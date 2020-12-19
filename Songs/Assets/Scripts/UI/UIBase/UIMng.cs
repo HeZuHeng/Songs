@@ -464,6 +464,12 @@ namespace Songs
                 case UIType.LeftDialogueWnd:
                     openList.Add(string.Format("Prefabs/UI/LeftDialogueWnd", path));
                     return openList;
+                case UIType.AnswerWnd:
+                    openList.Add(string.Format("Prefabs/UI/AnswerWnd", path));
+                    return openList;
+                case UIType.FantasyWnd:
+                    openList.Add(string.Format("Prefabs/UI/FantasyWnd", path));
+                    return openList;
                 default:
                     return openList;
             }

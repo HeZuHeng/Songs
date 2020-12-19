@@ -58,6 +58,18 @@ public class CameraMng
         }
     }
 
+    public void InitPlayer(Transform tran)
+    {
+        CapsuleCollider capsuleCollider = tran.gameObject.AddComponent<CapsuleCollider>();
+        capsuleCollider.height = 1.6f;
+        capsuleCollider.radius = 0.25f;
+        capsuleCollider.center = new Vector3(0, 0.8f, 0);
+        Rigidbody rigidbody = tran.gameObject.AddComponent<Rigidbody>();
+        rigidbody.constraints = RigidbodyConstraints.None;
+        tran.gameObject.AddComponent<ThirdPersonCharacter>();
+        UserControl = tran.gameObject.AddComponent<ThirdPersonUserControl>();
+    }
+
     public void ResetMove()
     {
         UserControl.gameObject.SetActive(false);

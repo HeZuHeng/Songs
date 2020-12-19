@@ -42,10 +42,10 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			m_OrigGroundCheckDistance = m_GroundCheckDistance;
 		}
 
-
+		private Vector3 move;
 		public void Move(Vector3 move, bool crouch, bool jump)
 		{
-
+			this.move = move;
 			// convert the world relative moveInput vector into a local-relative
 			// turn amount and forward amount required to head in the desired
 			// direction.
@@ -117,14 +117,22 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 		void UpdateAnimator(Vector3 move)
 		{
+			if(move == Vector3.zero)
+            {
+				m_Animator.SetFloat("Forward", 0, 0, Time.deltaTime);
+			}
+			else
+            {
+				m_Animator.SetFloat("Forward", m_ForwardAmount, 0.1f, Time.deltaTime);
+				//Debug.Log(m_ForwardAmount);
+			}
 			// update the animator parameters
-			m_Animator.SetFloat("Forward", m_ForwardAmount, 0.1f, Time.deltaTime);
-			m_Animator.SetFloat("Turn", m_TurnAmount, 0.1f, Time.deltaTime);
-			m_Animator.SetBool("Crouch", m_Crouching);
-			m_Animator.SetBool("OnGround", m_IsGrounded);
+			//m_Animator.SetFloat("Turn", m_TurnAmount, 0.1f, Time.deltaTime);
+			//m_Animator.SetBool("Crouch", m_Crouching);
+			//m_Animator.SetBool("OnGround", m_IsGrounded);
 			if (!m_IsGrounded)
 			{
-				m_Animator.SetFloat("Jump", m_Rigidbody.velocity.y);
+				//m_Animator.SetFloat("Jump", m_Rigidbody.velocity.y);
 			}
 
 			// calculate which leg is behind, so as to leave that leg trailing in the jump animation
@@ -136,7 +144,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			float jumpLeg = (runCycle < k_Half ? 1 : -1) * m_ForwardAmount;
 			if (m_IsGrounded)
 			{
-				m_Animator.SetFloat("JumpLeg", jumpLeg);
+				//m_Animator.SetFloat("JumpLeg", jumpLeg);
 			}
 
 			// the anim speed multiplier allows the overall speed of walking/running to be tweaked in the inspector,
@@ -150,6 +158,10 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				// don't use that while airborne
 				m_Animator.speed = 1;
 			}
+			//if(move == Vector3.zero)
+   //         {
+			//	m_Animator.speed = 0;
+			//}
 		}
 
 
@@ -188,13 +200,14 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		{
 			// we implement this function to override the default root motion.
 			// this allows us to modify the positional speed before it's applied.
-			if (m_IsGrounded && Time.deltaTime > 0)
+			if (m_IsGrounded && Time.deltaTime > 0 && m_ForwardAmount > 0.1f)
 			{
-				Vector3 v = (m_Animator.deltaPosition * m_MoveSpeedMultiplier) / Time.deltaTime;
+				Vector3 v = (move * 0.0125f * m_MoveSpeedMultiplier) / Time.deltaTime;
 
 				// we preserve the existing y part of the current velocity.
 				v.y = m_Rigidbody.velocity.y;
 				m_Rigidbody.velocity = v;
+				//Debug.Log(m_ForwardAmount + " : " + move.magnitude);
 			}
 		}
 

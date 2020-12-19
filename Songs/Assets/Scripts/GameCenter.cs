@@ -13,8 +13,8 @@ using UnityStandardAssets.Characters.ThirdPerson;
 namespace SpaceSimulation
 {
     public class GameCenter : MonoBehaviour {
-        [SerializeField]
-        ThirdPersonUserControl ThirdPerson = null;
+        //[SerializeField]
+        //ThirdPersonUserControl ThirdPerson = null;
         private void Awake()
         {
             DontDestroyOnLoad(this);
@@ -23,11 +23,21 @@ namespace SpaceSimulation
 #else
             Application.targetFrameRate = 120;
 #endif
+            //Xml();
             if (!enabled) return;
             SongsDataMng.GetInstance().Init();
-            CameraMng.GetInstance().UserControl = ThirdPerson;
+            //CameraMng.GetInstance().UserControl = ThirdPerson;
             GameDataManager.GetInstance().Startup(transform,delegate() {
+                SceneAssetObject assetObject = SceneMng.GetInstance().AddSpaceAsset(1, "nvyk", "女游客",delegate(float pro) { 
+                    if(pro >= 1)
+                    {
+                        SceneAssetObject sceneAsset = SceneMng.GetInstance().GetSceneAssetObject(1);
+                        sceneAsset.Tran.SetParent(transform);
+                        CameraMng.GetInstance().InitPlayer(sceneAsset.Tran);
+                    }
+                });
             });
+
         }
 
         // Use this for initialization
@@ -58,5 +68,23 @@ namespace SpaceSimulation
             GameDataLoader.GetInstance().Terminate();
             GameDataManager.GetInstance().Terminate();
         }
+
+//        void Xml()
+//        {
+//            QuestionBankConfig questionBankConfig = new QuestionBankConfig();
+//            QuestionBankData question = new QuestionBankData();
+//            question.Id = 1;
+//            question.icon = "111";
+//            question.errorTip = "111";
+//            question.questions = "1"
+//;            question.answers.Add(0);
+//            questionBankConfig.datas.Add(question);
+
+//            using (FileStream fileStream = new FileStream(SongsDataMng.QuestionBankPath, FileMode.Create))
+//            {
+//                XmlSerializer xmlSerializer = new XmlSerializer(typeof(QuestionBankConfig));
+//                xmlSerializer.Serialize(fileStream, questionBankConfig);
+//            }
+//        }
     }
 }

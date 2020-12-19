@@ -55,7 +55,8 @@ namespace AQUAS
             mouseDeltaX = 0f;
             mouseDeltaY = 0f;
 
-            if (Input.GetMouseButton(0))
+
+            if (Input.GetMouseButton(0) && !UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject())
             {
                 mouseDeltaX += Input.GetAxis("Mouse X") * _sensitivityX;
                 mouseDeltaY += Input.GetAxis("Mouse Y") * _sensitivityY;

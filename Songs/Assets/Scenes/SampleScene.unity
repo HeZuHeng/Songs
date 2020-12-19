@@ -179,6 +179,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8933262821770293691, guid: 5ddf7438a90002c4cad608063deab05c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5138143236767656779, guid: 5ddf7438a90002c4cad608063deab05c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 330423710286306335, guid: 5ddf7438a90002c4cad608063deab05c,
         type: 3}
       propertyPath: m_ReferenceResolution.x
@@ -188,6 +198,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ReferenceResolution.y
       value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 330423710286306335, guid: 5ddf7438a90002c4cad608063deab05c,
+        type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 330423710286306335, guid: 5ddf7438a90002c4cad608063deab05c,
+        type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 330423710286306335, guid: 5ddf7438a90002c4cad608063deab05c,
+        type: 3}
+      propertyPath: m_PhysicalUnit
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 330423710286306335, guid: 5ddf7438a90002c4cad608063deab05c,
+        type: 3}
+      propertyPath: m_FallbackScreenDPI
+      value: 96
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ddf7438a90002c4cad608063deab05c, type: 3}

@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<QuestionBankConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <QuestionBankDatas ID="1" 图标="" 
+	题头="Please choose the romantic features of the first stanza.（multiple choices）" 
+	阅读="I wandered lonely as a cloud \n That floats on high o’er vales and hills \n When all at once I saw a crowd,\n host, of golden daffodils; \n Besides the lake, beneath the trees, \n Fluttering and dancing in the breeze." 
+	解析="Natural scenery is often an important theme of romantic poetry. The poet compares the daffodils with himself, and contrasts them with lonely clouds to reflect the vivid scene of the daffodils. It inspires poets to create, and embodies the natural scenery with human being’s “life, emotion and expression”.
+\n 诗人将水仙与自己对比，用孤云反衬出水仙花盎然生机的景象。自然景物往往是浪漫主义诗歌的重要主题, 它激发了人们创作的灵感, 而同时诗人也赋予自然景物以人的“生命、情感和表现力”。" 
+	选择="浪漫主义色彩1: Subjectivism: the description of natural objects is modified by the poet’s feelings. 
+		|浪漫主义色彩2: Spontaneity: the role of instinct, intuition, and the feeling of “the heart” is stressed. 
+		|浪漫主义色彩3: Singularity: it has a strong love for the remote, the supernatural, the mysterious, the splendid and the picturesque. 
+		|浪漫主义色彩4: Worship of nature: the poet reads in nature some mysterious force. 
+		|浪漫主义色彩5：There is a dominating note of solitude and melancholy." 
+	答案="0 4" 
+	答案解析="" 
+	提示="浪漫主义色彩1, 5" />
+	<QuestionBankDatas ID="2" 图标="" 
+	题头="Please choose the romantic features of the second stanza. （multiple choices）" 
+	阅读="Continuous as the stars that shine \n And twinkle on the Milky Way, \n They stretched in never-ending line \n Along the margin of a bay: \n Ten thousand saw I at a glance, \n Tossing their heads in sprightly dance." 
+	解析=" In the heart of poet, daffodils are no longer just a plant. It has become a messenger of God and a spiritual embodiment. It is this kind of spirit that rejoices the original melancholy heart. Here “continuous”and “never-ending” may suggest that the flowers leave an everlasting impact on Wordsworth.
+\n 在诗人的心中, 水仙已不再是单单一种植物, 它成了神的使者，一种精神的化身。正是这种精神令原来本低沉忧郁的心灵变得欢欣鼓舞。 在这里“continuous”和“never-ending”暗示水仙花给他留下了永恒的影响。" 
+	选择="浪漫主义色彩1: Subjectivism: the description of natural objects is modified by the poet’s feelings. 
+		|浪漫主义色彩2: Spontaneity: the role of instinct, intuition, and the feeling of “the heart” is stressed. 
+		|浪漫主义色彩3: Singularity: it has a strong love for the remote, the supernatural, the mysterious, the splendid and the picturesque. 
+		|浪漫主义色彩4: Worship of nature: the poet reads in nature some mysterious force. 
+		|浪漫主义色彩5：There is a dominating note of solitude and melancholy." 
+	答案="2 3" 
+	答案解析="" 
+	提示="浪漫主义色彩3, 4" />
+	<QuestionBankDatas ID="3" 图标="" 
+	题头="Please choose the romantic feature of the third stanza." 
+	阅读="The waves beside them danced; but they \n Outdid the sparking waves in glee: \n A poet could not but be gay, \n In such a jocund company! \n I gazed – and gazed – but little thought \n What wealth the show to me had brought" 
+	解析="The poet stares at the daffodils lingeringly, without yet realizing the complete extent of the positive effects of encountering them. Even when the poet calls for the original emotion of “returning to nature”, he does not forget the relative independence of himself and nature.
+\n 诗人久久凝望，却想象不到这奇景赋予了他多少精神财富。即使诗人在深情地呼唤 “回归自然”的原始情感时,也没有忘记自我与自然的相对独立性。" 
+	选择="浪漫主义色彩1: Subjectivism: the description of natural objects is modified by the poet’s feelings. 
+		|浪漫主义色彩2: Spontaneity: the role of instinct, intuition, and the feeling of “the heart” is stressed. 
+		|浪漫主义色彩3: Singularity: it has a strong love for the remote, the supernatural, the mysterious, the splendid and the picturesque. 
+		|浪漫主义色彩4: Worship of nature: the poet reads in nature some mysterious force. 
+		|浪漫主义色彩5：There is a dominating note of solitude and melancholy." 
+	答案="1" 
+	答案解析="" 
+	提示="浪漫主义色彩2" />
+</QuestionBankConfig>

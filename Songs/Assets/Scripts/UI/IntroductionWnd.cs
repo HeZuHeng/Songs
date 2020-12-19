@@ -15,13 +15,13 @@ public class IntroductionWnd : UIBase
 
     public void OnClickHZHS()
     {
-        SongsDataMng.GetInstance().SetTaskData(1);
+        SongsDataMng.GetInstance().SetTaskConfigData(1);
         UIMng.Instance.OpenUI(UIType.SelectPlotWnd);
     }
 
     public void OnClickHTM()
     {
-        SongsDataMng.GetInstance().SetTaskData(0);
+        SongsDataMng.GetInstance().SetTaskConfigData(0);
         UIMng.Instance.OpenUI(UIType.SelectPlotWnd);
     }
 }

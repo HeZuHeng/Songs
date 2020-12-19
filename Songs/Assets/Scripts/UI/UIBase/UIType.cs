@@ -18,6 +18,8 @@ namespace Songs{
 		SelectPlotWnd = 9,
 		MainDialogueWnd = 10,
 		LeftDialogueWnd = 11,
+		AnswerWnd = 12,
+		FantasyWnd = 13,
 	}
 	/// <summary>
 	/// 二级界面枚举

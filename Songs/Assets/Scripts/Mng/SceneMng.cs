@@ -40,20 +40,29 @@ public class SceneMng
 
     Dictionary<int, IObject> spaceObjects = new Dictionary<int, IObject>();
 
-    public SceneAssetObject AddSpaceAsset(int targetId, string assetName, string name, OnLoadProgressDelegate OnProgress = null)
+    public SceneAssetObject AddSpaceAsset(int targetId,string assetName, string name, OnLoadProgressDelegate OnProgress = null)
     {
         if (OnProgress == null) OnProgress = OnAddProgress;
-
         if (spaceObjects.ContainsKey(targetId))
         {
             OnProgress(1);
             return (SceneAssetObject)spaceObjects[targetId];
         }
+        if(targetId == 0) targetId = GetCreateTargetID();
         SceneAssetObject obj = new SceneAssetObject(targetId, assetName);
         obj.OnProgress += OnProgress;
 
         spaceObjects[targetId] = obj;
         return obj;
+    }
+
+    public SceneAssetObject GetSceneAssetObject(int targetId)
+    {
+        if (spaceObjects.ContainsKey(targetId))
+        {
+            return (SceneAssetObject)spaceObjects[targetId];
+        }
+        return null;
     }
 
     public void RemoveSpaceObject(int targetId)

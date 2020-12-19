@@ -333,9 +333,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Ladies and gentlemen, welcome to Wordsworth\u2019s residence. I\u2019m
-    Lucy. Today, I\u2019m honored to serve you as a tour guide, and show you around
-    Wordsworth\u2019s Dove Cottage."
+  m_Text: 
 --- !u!114 &8003012270222701323
 MonoBehaviour:
   m_ObjectHideFlags: 0

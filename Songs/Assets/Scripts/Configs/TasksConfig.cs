@@ -44,6 +44,10 @@ public enum TaskType
     /// 阅读诗歌
     /// </summary>
     LookSong,
+    /// <summary>
+    /// 答题
+    /// </summary>
+    Question,
 }
 
 public enum TaskState
