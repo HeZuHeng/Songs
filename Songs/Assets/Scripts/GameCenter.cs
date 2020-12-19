@@ -27,13 +27,14 @@ namespace SpaceSimulation
             if (!enabled) return;
             SongsDataMng.GetInstance().Init();
             //CameraMng.GetInstance().UserControl = ThirdPerson;
-            GameDataManager.GetInstance().Startup(transform,delegate() {
-                SceneAssetObject assetObject = SceneMng.GetInstance().AddSpaceAsset(1, "nvyk", "女游客",delegate(float pro) { 
-                    if(pro >= 1)
+            GameDataManager.GetInstance().Startup(transform, delegate () {
+                SceneAssetObject assetObject = SceneMng.GetInstance().AddSpaceAsset(1, "nvyk", "女游客", delegate (float pro) {
+                    if (pro >= 1)
                     {
                         SceneAssetObject sceneAsset = SceneMng.GetInstance().GetSceneAssetObject(1);
                         sceneAsset.Tran.SetParent(transform);
                         CameraMng.GetInstance().InitPlayer(sceneAsset.Tran);
+                        sceneAsset.Tran.gameObject.SetActive(false);
                     }
                 });
             });
@@ -43,7 +44,10 @@ namespace SpaceSimulation
         // Use this for initialization
         void Start() {
             UIMng.Instance.OpenUI(UIType.StartWnd);
+            
             GameDataLoader.GetInstance().Startup();
+
+            
         }
 
         // Update is called once per frame
@@ -51,16 +55,6 @@ namespace SpaceSimulation
             GameDataLoader.GetInstance().FrameUpdate();
             GameDataManager.GetInstance().FrameUpdate();
             SongsDataMng.GetInstance().LoadUpdate();
-
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                UIMng.Instance.OpenUI(UIType.StartWnd);
-            }
-
-            if (Input.GetKeyDown(KeyCode.L))
-            {
-                UIMng.Instance.OpenUI(UIType.LoadingWnd);
-            }
         }
 
         public void OnApplicationQuit()

@@ -58,7 +58,18 @@ public class SceneAssetObject : IAssetObject
         if (LoadTask != null && !IsDone)
         {
             GameObject gameObject = LoadTask.MainData.LoadGameObject(URL);
-
+#if UNITY_EDITOR
+            Transform[] games = gameObject.GetComponentsInChildren<Transform>();
+            Renderer[] renderers = null;
+            for (int i = 0; i < games.Length; i++)
+            {
+                renderers = games[i].GetComponentsInChildren<Renderer>();
+                for (int j = 0; j < renderers.Length; j++)
+                {
+                    renderers[j].sharedMaterial.shader = Shader.Find(renderers[j].sharedMaterial.shader.name);
+                }
+            }
+#endif
             InitAssetObject(gameObject.transform);
         }
         LoadTask = null;

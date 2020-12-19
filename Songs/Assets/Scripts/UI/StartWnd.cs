@@ -15,6 +15,7 @@ public class StartWnd :  UIBase
 
     public void OnBtnClick()
     {
+        
         UIMng.Instance.OpenUI(UIType.IntroductionWnd);
     }
 }

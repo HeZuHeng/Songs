@@ -200,7 +200,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		{
 			// we implement this function to override the default root motion.
 			// this allows us to modify the positional speed before it's applied.
-			if (m_IsGrounded && Time.deltaTime > 0 && m_ForwardAmount > 0.1f)
+			if (Time.deltaTime > 0 && m_ForwardAmount > 0.1f)
 			{
 				Vector3 v = (move * 0.0125f * m_MoveSpeedMultiplier) / Time.deltaTime;
 
@@ -221,7 +221,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 #endif
 			// 0.1f is a small offset to start the ray from inside the character
 			// it is also good to note that the transform position in the sample assets is at the base of the character
-			if (Physics.Raycast(transform.position + (Vector3.up * 0.1f), Vector3.down, out hitInfo, m_GroundCheckDistance))
+			if (Physics.Raycast(transform.position + (Vector3.up * m_GroundCheckDistance), Vector3.down, out hitInfo, m_GroundCheckDistance))
 			{
 				m_GroundNormal = hitInfo.normal;
 				m_IsGrounded = true;
