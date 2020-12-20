@@ -26,7 +26,13 @@ public class LoadingWnd : UIBase
 
     protected override void OnEnable()
     {
-        if (SongsDataMng.GetInstance().GetSceneData != null) LoadScene(SongsDataMng.GetInstance().GetSceneData);
+        SceneData sceneData = SongsDataMng.GetInstance().GetSceneData;
+        if (sceneData  != null)
+        {
+        
+            LoadScene(sceneData);
+            LoadSceneItem(sceneData.datas);
+        }
 	}
 
     protected override void OnDisable()
@@ -76,6 +82,7 @@ public class LoadingWnd : UIBase
                 GameObject obj = loadCamera.MainData.LoadGameObject(sceneData.sceneCamera);
                 if(obj != null)
                 {
+                    obj.AddComponent<HighlightingEffect>();
                     camera = obj.GetComponent<Camera>();
                 }
                 CameraMng.GetInstance().InitScene(camera);
@@ -103,7 +110,10 @@ public class LoadingWnd : UIBase
                 string path = loadTask.MainData.GetSceneName(sceneData.sceneName);
                 Debug.Log(path);
                 SceneManager.sceneLoaded += OnSceneLoaded;
-                if (!string.IsNullOrEmpty(path))SceneManager.LoadSceneAsync(path);
+                if (!string.IsNullOrEmpty(path))
+                {
+                    SceneManager.LoadSceneAsync(path);
+                }
             }
             else
             {
@@ -111,6 +121,74 @@ public class LoadingWnd : UIBase
                 lblStatus.text = Mathf.Round(progress * 100f) + "%";
             }
         };
+    }
+
+
+    /// <summary>
+    /// 加载场景相关物品
+    /// </summary>
+    /// <param name="datas"></param>
+    void LoadSceneItem(List<ModelData> datas)
+    {
+        if(datas!=null && datas.Count>0)
+        {
+            //加载挂点
+            ModelData pointdata = datas[0];
+            GameLoadTask loadPointTask = GameDataManager.GetInstance().GetGameTask(pointdata.assetName);
+            loadPointTask.OnTaskProgress += delegate (float progress)
+            {
+                if (progress >= 1)
+                {
+                    GameObject obj = loadPointTask.MainData.LoadGameObject(pointdata.assetName);
+                    if (obj != null)
+                    {
+                        obj.transform.localPosition = Vector3.zero;
+                        obj.transform.localRotation = Quaternion.identity;
+                        DontDestroyOnLoad(obj);
+
+                       int pointnum =  obj.transform.childCount;
+                        Dictionary<string,Transform> pointDic = new  Dictionary<string, Transform>();
+                        for (int i = 0; i < pointnum; i++)
+                        {
+                            Transform child = obj.transform.GetChild(i);
+                            pointDic.Add(child.name, child);
+                        }
+
+
+                        //加载其它资源
+                        for (int j = 1; j < datas.Count; j++)
+                        {
+
+
+                            ModelData data = datas[j];
+                            GameLoadTask loadTask = GameDataManager.GetInstance().GetGameTask(data.assetName);
+                            loadTask.OnTaskProgress += delegate (float progress2)
+                            {
+                                if (progress2 >= 1)
+                                {
+                                    GameObject book = loadTask.MainData.LoadGameObject(data.assetName);
+                                    if (book != null)
+                                    {
+                                        if (pointDic.ContainsKey(book.name))
+                                        {
+                                            book.transform.parent = pointDic[book.name];
+                                            book.transform.localPosition = Vector3.zero;
+                                            book.transform.localRotation = Quaternion.identity;
+                                        }
+                                    }
+
+                                }
+                            };
+                        }
+
+                    }
+                  
+                }
+            };
+            
+
+
+        }
     }
 }
 

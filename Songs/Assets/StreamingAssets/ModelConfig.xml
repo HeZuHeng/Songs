@@ -11,9 +11,10 @@
     <ModelDatas 模型名="吴亦凡" 资源名="18" />
   </SceneDatas>
   <SceneDatas 场景="华兹华斯书房三本诗歌" 场景资源名="华兹华斯书房" 摄像机 = "IntroductionCamera" 位置="IntroductionInitPosition" 镜头="Cutscene_poetry">
-    <ModelDatas 模型名="张三" 资源名="12" />
-    <ModelDatas 模型名="李四" 资源名="14" />
-    <ModelDatas 模型名="吴亦凡" 资源名="18" />
+    <ModelDatas 模型名="书的挂点" 资源名="book_point_group" />
+    <ModelDatas 模型名="书1" 资源名="Book_01" />
+    <ModelDatas 模型名="书2" 资源名="Book_02" />
+    <ModelDatas 模型名="书3" 资源名="Book_03" />
   </SceneDatas>
   <SceneDatas 场景="华兹华斯赏花" 场景资源名="华兹华斯赏花" 摄像机 = "ParsingCamera" 位置="ParsingInitPosition" 镜头="Cutscene_enjoyflower">
     <ModelDatas 模型名="张三" 资源名="12" />
