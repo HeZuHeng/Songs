@@ -19,6 +19,7 @@ public class AnswerWnd : UIBase
     public Button confirmBtn;
     public Image icon;
 
+    private int num;
     protected override void Awake()
     {
         base.Awake();
@@ -32,6 +33,13 @@ public class AnswerWnd : UIBase
         base.OnEnable();
         Show();
         transform.SetAsLastSibling();
+        num = 0;
+    }
+
+    protected override void OnDisable()
+    {
+        base.OnDisable();
+        StopAllCoroutines();
     }
 
     void Show()
@@ -86,6 +94,23 @@ public class AnswerWnd : UIBase
         Show(question);
     }
 
+    void OnEndParsing()
+    {
+        QuestionBankData question = SongsDataMng.GetInstance().GetQuestionBankData;
+        if (question == null) return;
+        answerParent.gameObject.SetActive(false);
+        startParent.gameObject.SetActive(false);
+
+        if (!string.IsNullOrEmpty(question.endParsing))
+        {
+            startParent.gameObject.SetActive(true);
+            trendsText.m_CallBack.RemoveListener(OnEnd);
+            trendsText.m_CallBack.AddListener(OnStartParsing);
+            trendsText.Play(question.startParsing.Replace("\\n", "\n"));
+            return;
+        }
+    }
+
     void Show(QuestionBankData question)
     {
         for (int i = 0; i < scrollRect.content.childCount; i++)
@@ -138,8 +163,8 @@ public class AnswerWnd : UIBase
                 t.Add(i);
             }
         }
-        bool val = true;
-        if(t.Count == question.answers.Count)
+        bool val = t.Count == question.answers.Count;
+        if(val)
         {
             for (int i = 0; i < t.Count; i++)
             {
@@ -151,11 +176,33 @@ public class AnswerWnd : UIBase
         }
         if (!val)
         {
-            errorTip.text = question.errorTip;
+            num++;
+            if (num >= 3)
+            {
+                errorTip.text = "选择错误！请重新选择。";
+                StopCoroutine(Reset());
+                StartCoroutine(Reset());
+            }
+            else
+            {
+                errorTip.text = question.errorTip;
+            }
             errorTip.enabled = true;
             return;
         }
+        if (!string.IsNullOrEmpty(question.endParsing))
+        {
+            OnEndParsing();
+        }
+        else
+        {
+            OnEnd();
+        }
+    }
 
+    void OnEnd()
+    {
+        QuestionBankData question = SongsDataMng.GetInstance().GetQuestionBankData;
         TaskData taskData = SongsDataMng.GetInstance().GetTaskData;
         if (taskData != null)
         {
@@ -168,5 +215,11 @@ public class AnswerWnd : UIBase
             }
         }
         UIMng.Instance.ConcealUI(UIType.AnswerWnd);
+    }
+
+    IEnumerator Reset()
+    {
+        yield return new WaitForSeconds(0.3f);
+        Show();
     }
 }
