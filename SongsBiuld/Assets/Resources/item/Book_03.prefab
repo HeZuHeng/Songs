@@ -100,6 +100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2859877461244204810}
   - component: {fileID: 851216577756205391}
+  - component: {fileID: 4305997017814028867}
   m_Layer: 0
   m_Name: Book_03
   m_TagString: Untagged
@@ -138,6 +139,19 @@ MonoBehaviour:
   m_hos:
   - {fileID: 2632686932886056520}
   - {fileID: 1522536393793259082}
+--- !u!65 &4305997017814028867
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2859877461244300074}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.2, y: 0.2, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2859877461244300078
 GameObject:
   m_ObjectHideFlags: 0
