@@ -23,6 +23,7 @@ public abstract class IAssetObject : IObject
     {
         if (asset == null) return;
         Tran = asset;
+
         //Tran.name = SpaceType + "_" + TargetId;
         Tran.localPosition = Position;
         Tran.localEulerAngles = Euler;

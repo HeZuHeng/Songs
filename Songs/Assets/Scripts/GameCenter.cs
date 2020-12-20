@@ -15,6 +15,8 @@ namespace SpaceSimulation
     public class GameCenter : MonoBehaviour {
         //[SerializeField]
         //ThirdPersonUserControl ThirdPerson = null;
+        public static Transform AssetsParent;
+
         private void Awake()
         {
             DontDestroyOnLoad(this);
@@ -24,9 +26,17 @@ namespace SpaceSimulation
             Application.targetFrameRate = 120;
 #endif
             //Xml();
+            //ModelXml();
             if (!enabled) return;
+
+            AssetsParent = new GameObject("AssetsParent").transform;
+            AssetsParent.SetParent(transform);
+            AssetsParent.position = Vector3.zero;
+            AssetsParent.rotation = Quaternion.identity;
+            AssetsParent.localScale = Vector3.one;
+
             SongsDataMng.GetInstance().Init();
-            CameraMng.GetInstance().Init(transform);
+            CameraMng.GetInstance().Start(transform);
             //CameraMng.GetInstance().UserControl = ThirdPerson;
             GameDataLoader.GetInstance().Startup();
             GameDataManager.GetInstance().Startup(transform, delegate () {
@@ -58,6 +68,30 @@ namespace SpaceSimulation
         {
             GameDataLoader.GetInstance().Terminate();
             GameDataManager.GetInstance().Terminate();
+        }
+
+        void ModelXml()
+        {
+            ModelConfig modelConfig = new ModelConfig();
+            SceneData data = new SceneData();
+            data.name = "22";
+            data.sceneName = "33";
+
+            ModelData modelData = new ModelData();
+            modelData.name = "111";
+            modelData.assetName = "3333";
+            modelData.position = new Vector3(0,0,0);
+            modelData.eulerAngle = new Vector3(0, 0, 0);
+
+            data.datas.Add(modelData);
+
+            modelConfig.datas.Add(data);
+
+            using (FileStream fileStream = new FileStream(Application.streamingAssetsPath + "/TestModel.xml", FileMode.Create))
+            {
+                XmlSerializer xmlSerializer = new XmlSerializer(typeof(ModelConfig));
+                xmlSerializer.Serialize(fileStream, modelConfig);
+            }
         }
 
         //void Xml()

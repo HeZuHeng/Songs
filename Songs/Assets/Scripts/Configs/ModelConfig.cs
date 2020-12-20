@@ -34,12 +34,14 @@ public class SceneData
 [System.Serializable]
 public class ModelData
 {
+    [XmlAttribute("Id")]
+    public int Id;
     [XmlAttribute("模型名")]
     public string name;
     [XmlAttribute("资源名")]
     public string assetName;
-    //[XmlAttribute("父节点")]
-    //public string parent;
+    public Vector3 position;
+    public Vector3 eulerAngle;
 
     [XmlAttribute("图标")]
     public string icon;
@@ -49,6 +51,8 @@ public class ModelData
     {
         this.name = name;
         this.assetName = assetName;
+        position = new Vector3(0,0,0);
+        eulerAngle = new Vector3(0, 0, 0);
     }
 #endif
 }

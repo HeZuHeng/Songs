@@ -56,6 +56,22 @@ public class SceneMng
         return obj;
     }
 
+    public SceneAssetObject AddSpaceAsset(ModelData modelData, OnLoadProgressDelegate OnProgress = null)
+    {
+        if (OnProgress == null) OnProgress = OnAddProgress;
+        if (spaceObjects.ContainsKey(modelData.Id))
+        {
+            OnProgress(1);
+            return (SceneAssetObject)spaceObjects[modelData.Id];
+        }
+        if (modelData.Id == 0) modelData.Id = GetCreateTargetID();
+        SceneAssetObject obj = new SceneAssetObject(modelData);
+        obj.OnProgress += OnProgress;
+
+        spaceObjects[modelData.Id] = obj;
+        return obj;
+    }
+
     public SceneAssetObject GetSceneAssetObject(int targetId)
     {
         if (spaceObjects.ContainsKey(targetId))

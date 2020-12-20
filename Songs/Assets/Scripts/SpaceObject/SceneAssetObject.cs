@@ -1,4 +1,5 @@
 ﻿using MREngine;
+using SpaceSimulation;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -6,6 +7,7 @@ using UnityEngine;
 
 public class SceneAssetObject : IAssetObject
 {
+    public ModelData Data { get; private set; }
     public OnLoadProgressDelegate OnProgress;
     public bool IsDone { get; protected set; }
     public float Progress { get; protected set; }
@@ -23,6 +25,27 @@ public class SceneAssetObject : IAssetObject
         Euler = Vector3.zero;
         Scale = Vector3.one;
         URL = url;
+        IsDone = false;
+        LoadTask = GameDataManager.GetInstance().GetGameTask(URL);
+        if (LoadTask.Progress >= 1)
+        {
+            InitGameObject();
+        }
+        else
+        {
+            LoadTask.OnTaskProgress += OnLoadProgress;
+        }
+    }
+
+    public SceneAssetObject(ModelData data)
+    {
+        Data = data;
+        Name = data.name;
+        TargetId = Data.Id;
+        Position = Data.position;
+        Euler = Data.eulerAngle;
+        Scale = Vector3.one;
+        URL = Data.assetName;
         IsDone = false;
         LoadTask = GameDataManager.GetInstance().GetGameTask(URL);
         if (LoadTask.Progress >= 1)
@@ -66,6 +89,8 @@ public class SceneAssetObject : IAssetObject
 
     public override void InitAssetObject(Transform asset)
     {
+        asset.SetParent(GameCenter.AssetsParent);
+
         base.InitAssetObject(asset);
         if (Tran == null) return;
         Col = Tran.GetComponentInChildren<Collider>();
