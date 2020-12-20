@@ -16,28 +16,29 @@ public class QuestionBankConfig
 [Serializable]
 public class QuestionBankData
 {
-    [XmlAttribute("ID")]
+    [XmlElement("ID")]
     public int Id;
-    [XmlAttribute("图标")]
+    [XmlElement("图标")]
     public string icon;
-    [XmlAttribute("题头")]
+    [XmlElement("题头")]
     public string head;
-    [XmlAttribute("阅读")]
+    [XmlElement("阅读")]
     public string des;
-    [XmlAttribute("解析")]
+    [XmlElement("解析")]
     public string startParsing;
-    [XmlAttribute("选择")]
-    public string questions;
-    [XmlAttribute("答案")]
+    [XmlElement("选择")]
+    public List<string> questions;
+    [XmlElement("答案")]
     public List<int> answers;
-    [XmlAttribute("答案解析")]
+    [XmlElement("答案解析")]
     public string endParsing;
-    [XmlAttribute("提示")]
+    [XmlElement("提示")]
     public string errorTip;
 
 
     public QuestionBankData()
     {
+        questions = new List<string>();
         answers = new List<int>();
     }
 }

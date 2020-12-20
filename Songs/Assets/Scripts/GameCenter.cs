@@ -27,6 +27,7 @@ namespace SpaceSimulation
             if (!enabled) return;
             SongsDataMng.GetInstance().Init();
             //CameraMng.GetInstance().UserControl = ThirdPerson;
+            GameDataLoader.GetInstance().Startup();
             GameDataManager.GetInstance().Startup(transform, delegate () {
                 SceneAssetObject assetObject = SceneMng.GetInstance().AddSpaceAsset(1, "nvyk", "女游客", delegate (float pro) {
                     if (pro >= 1)
@@ -38,16 +39,11 @@ namespace SpaceSimulation
                     }
                 });
             });
-
         }
 
         // Use this for initialization
         void Start() {
             UIMng.Instance.OpenUI(UIType.StartWnd);
-            
-            GameDataLoader.GetInstance().Startup();
-
-            
         }
 
         // Update is called once per frame
@@ -63,22 +59,29 @@ namespace SpaceSimulation
             GameDataManager.GetInstance().Terminate();
         }
 
-//        void Xml()
-//        {
-//            QuestionBankConfig questionBankConfig = new QuestionBankConfig();
-//            QuestionBankData question = new QuestionBankData();
-//            question.Id = 1;
-//            question.icon = "111";
-//            question.errorTip = "111";
-//            question.questions = "1"
-//;            question.answers.Add(0);
-//            questionBankConfig.datas.Add(question);
+        //void Xml()
+        //{
+        //    QuestionBankConfig questionBankConfig = new QuestionBankConfig();
+        //    QuestionBankData question = new QuestionBankData();
+        //    question.Id = 1;
+        //    question.icon = "111";
+        //    question.errorTip = "111";
+        //    question.questions.Add("1");
+        //    question.questions.Add("2");
+        //    question.answers.Add(2);
+        //    question.answers.Add(3);
+        //    question.des = "11";
+        //    question.head = "11";
+        //    question.startParsing = "11";
+        //    question.endParsing = "11";
 
-//            using (FileStream fileStream = new FileStream(SongsDataMng.QuestionBankPath, FileMode.Create))
-//            {
-//                XmlSerializer xmlSerializer = new XmlSerializer(typeof(QuestionBankConfig));
-//                xmlSerializer.Serialize(fileStream, questionBankConfig);
-//            }
-//        }
+        //    questionBankConfig.datas.Add(question);
+
+        //    using (FileStream fileStream = new FileStream(SongsDataMng.QuestionBankPath, FileMode.Create))
+        //    {
+        //        XmlSerializer xmlSerializer = new XmlSerializer(typeof(QuestionBankConfig));
+        //        xmlSerializer.Serialize(fileStream, questionBankConfig);
+        //    }
+        //}
     }
 }

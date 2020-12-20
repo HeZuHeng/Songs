@@ -107,8 +107,7 @@ public class AnswerWnd : UIBase
         errorTip.enabled = false;
         Transform tran = null;
         int count = scrollRect.content.childCount;
-        string[] questions = question.questions.Split('|');
-        for (int i = 0; i < questions.Length; i++)
+        for (int i = 0; i < question.questions.Count; i++)
         {
             if (count > i)
             {
@@ -119,11 +118,12 @@ public class AnswerWnd : UIBase
                 tran = Instantiate(scrollRect.content.GetChild(0));
                 tran.transform.SetParent(scrollRect.content);
             }
-            tran.GetComponentInChildren<Text>().text = questions[i];
-            tran.localPosition = new Vector3(0, i * -100, tran.localPosition.z);
+            tran.GetComponentInChildren<Text>().text = question.questions[i];
+            tran.localPosition = new Vector3(scrollRect.content.GetChild(0).localPosition.x, i * -100, tran.localPosition.z);
+            tran.localScale = Vector3.one;
             tran.gameObject.SetActive(true);
         }
-        scrollRect.content.sizeDelta = new Vector2(scrollRect.content.localPosition.x, questions.Length * 100);
+        scrollRect.content.sizeDelta = new Vector2(scrollRect.content.localPosition.x, question.questions.Count * 100);
         scrollRect.content.localPosition = Vector3.zero;
     }
 

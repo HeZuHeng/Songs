@@ -38,20 +38,20 @@ public class LoadingWnd : UIBase
 
         SceneManager.SetActiveScene(scene);
         GameObject[] games = scene.GetRootGameObjects();
-        Renderer[] renderers = null;
+        //Renderer[] renderers = null;
         Camera camera = null;
         string str = "InitPosition";
         Vector3 initPosition = Vector3.zero;
         Vector3 initRotation = Vector3.zero;
         for (int i = 0; i < games.Length; i++)
         {
-#if UNITY_EDITOR
-            renderers = games[i].GetComponentsInChildren<Renderer>();
-            for (int j = 0; j < renderers.Length; j++)
-            {
-                renderers[j].sharedMaterial.shader = Shader.Find(renderers[j].sharedMaterial.shader.name);
-            }
-#endif
+//#if UNITY_EDITOR
+//            renderers = games[i].GetComponentsInChildren<Renderer>();
+//            for (int j = 0; j < renderers.Length; j++)
+//            {
+//                renderers[j].sharedMaterial.shader = Shader.Find(renderers[j].sharedMaterial.shader.name);
+//            }
+//#endif
             if (camera == null) camera = games[i].GetComponent<Camera>();
             if (games[i].name.Equals(str))
             {
@@ -59,9 +59,9 @@ public class LoadingWnd : UIBase
                 initRotation = games[i].transform.eulerAngles;
             }
         }
-#if UNITY_EDITOR
-        RenderSettings.skybox.shader = Shader.Find(RenderSettings.skybox.shader.name);
-#endif
+//#if UNITY_EDITOR
+//        RenderSettings.skybox.shader = Shader.Find(RenderSettings.skybox.shader.name);
+//#endif
         CameraMng.GetInstance().InitScene(camera, initPosition, initRotation);
         UIMng.Instance.OpenUI(UIType.NONE);
         UIMng.Instance.ActivationUI(UIType.SettingWnd);
