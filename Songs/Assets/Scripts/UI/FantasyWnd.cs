@@ -68,7 +68,8 @@ public class FantasyWnd : UIBase
                 }
                 if (index == 5)
                 {
-                    SongsDataMng.GetInstance().SetQuestion(3);
+                    QuestionBankData bankData = SongsDataMng.GetInstance().SetQuestion(3);
+                    bankData.onQuestionEnd.AddListener(Close);
                     UIMng.Instance.ActivationUI(UIType.AnswerWnd);
                 }
                 
@@ -91,5 +92,10 @@ public class FantasyWnd : UIBase
         }
         tip.transform.parent.gameObject.SetActive(true);
         tip.text = Tips[index];
+    }
+
+    void Close()
+    {
+        UIMng.Instance.OpenUI(UIType.NONE);
     }
 }

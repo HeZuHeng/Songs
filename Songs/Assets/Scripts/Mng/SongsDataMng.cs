@@ -143,15 +143,17 @@ public class SongsDataMng
         return null;
     }
 
-    public void SetQuestion(int questionId)
+    public QuestionBankData SetQuestion(int questionId)
     {
         for (int i = 0; i < GetQuestionBankConfig.datas.Count; i++)
         {
             if (GetQuestionBankConfig.datas[i].Id == questionId)
             {
                 GetQuestionBankData = GetQuestionBankConfig.datas[i];
+                return GetQuestionBankData;
             }
         }
+        return null;
     }
     public void LoadUpdate()
     {

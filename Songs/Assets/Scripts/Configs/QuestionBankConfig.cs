@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Xml.Serialization;
 using UnityEngine;
+using UnityEngine.Events;
 
 [Serializable]
 public class QuestionBankConfig
@@ -35,9 +36,16 @@ public class QuestionBankData
     [XmlElement("提示")]
     public string errorTip;
 
+    [NonSerialized]
+    public QuestionEndEvent onQuestionEnd = new QuestionEndEvent();
     public QuestionBankData()
     {
         questions = new List<string>();
         answers = new List<int>();
     }
+}
+
+public class QuestionEndEvent : UnityEvent
+{
+    public QuestionEndEvent() { }
 }

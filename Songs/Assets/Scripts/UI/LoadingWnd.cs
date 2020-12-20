@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Songs;
+using Slate;
 
 public class LoadingWnd : UIBase
 {
@@ -52,6 +53,21 @@ public class LoadingWnd : UIBase
         UIMng.Instance.ConcealUI(UIType.MainDialogueWnd);
 
         CameraMng.GetInstance().UserControl.gameObject.SetActive(false);
+
+        GameLoadTask loadCutscenen = GameDataManager.GetInstance().GetGameTask(sceneData.sceneCutscenen);
+        loadCutscenen.OnTaskProgress += delegate (float progress)
+        {
+            if (progress >= 1)
+            {
+                GameObject obj = loadCutscenen.MainData.LoadGameObject(sceneData.sceneCutscenen);
+                if (obj != null)
+                {
+                    Cutscene playCutscene = obj.GetComponent<Cutscene>();
+                    CameraMng.GetInstance().InitScene(playCutscene);
+                }
+            }
+        };
+
         GameLoadTask loadCamera = GameDataManager.GetInstance().GetGameTask(sceneData.sceneCamera);
         loadCamera.OnTaskProgress += delegate (float progress)
         {

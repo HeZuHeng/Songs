@@ -250,7 +250,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4793950261187390845}
   - component: {fileID: 5616175491206961616}
-  - component: {fileID: 4012923772524623230}
   m_Layer: 0
   m_Name: Cutscene_introduction
   m_TagString: Untagged
@@ -299,24 +298,6 @@ MonoBehaviour:
   _length: 20
   _viewTimeMin: -0.084696315
   _viewTimeMax: 25.586052
---- !u!114 &4012923772524623230
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5755261799129996328}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38438984f14899e4a97f58813893acc4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cutscene: {fileID: 5616175491206961616}
-  onFinish:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1 &8720861070739522729
 GameObject:
   m_ObjectHideFlags: 0

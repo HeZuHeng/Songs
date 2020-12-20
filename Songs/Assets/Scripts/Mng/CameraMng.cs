@@ -6,6 +6,7 @@ using UnityStandardAssets.Characters.ThirdPerson;
 using DG.Tweening;
 using AQUAS;
 using UnityEngine.Events;
+using Slate;
 
 public class CameraMng
 {
@@ -40,7 +41,7 @@ public class CameraMng
     public static Vector3 InitPosition = Vector3.zero;
     public static Vector3 InitRotation = Vector3.zero;
     public ThirdPersonUserControl  UserControl{ get; set; }
-
+    public Cutscene PlayCutscene { get; set; }
     public void Init(Transform transform)
     {
         mainCameraParent = transform;
@@ -55,6 +56,11 @@ public class CameraMng
             MainCamera.transform.SetParent(mainCameraParent);
             ResetMove();
         }
+    }
+    public void InitScene(Cutscene playCutscene)
+    {
+        PlayCutscene = playCutscene;
+        PlayCutscene.transform.SetParent(mainCameraParent);
     }
 
     public void InitScene(Vector3 pos, Vector3 rota)
@@ -92,6 +98,16 @@ public class CameraMng
 
     public void DOTweenPaly(UnityAction action)
     {
+        if(PlayCutscene != null)
+        {
+            PlayCutscene.Play(delegate()
+            {
+                PlayCutscene.gameObject.SetActive(false);
+                if (action != null) action();
+            });
+            return;
+        }
+
         ResetMove();
         DOTweenPath tweenPath = MainCamera.GetComponent<DOTweenPath>();
         if (tweenPath != null)

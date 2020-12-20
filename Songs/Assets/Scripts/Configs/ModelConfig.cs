@@ -23,6 +23,8 @@ public class SceneData
     public string sceneCamera;
     [XmlAttribute("位置")]
     public string scenePosition;
+    [XmlAttribute("镜头")]
+    public string sceneCutscenen;
     [XmlElement("ModelDatas")]
     public List<ModelData> datas;
 
