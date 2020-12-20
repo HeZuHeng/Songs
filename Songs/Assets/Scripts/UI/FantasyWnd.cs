@@ -96,6 +96,7 @@ public class FantasyWnd : UIBase
 
     void Close()
     {
-        UIMng.Instance.OpenUI(UIType.NONE);
+        SongsDataMng.GetInstance().SetQuestion(4);
+        UIMng.Instance.ActivationUI(UIType.AnswerWnd);
     }
 }

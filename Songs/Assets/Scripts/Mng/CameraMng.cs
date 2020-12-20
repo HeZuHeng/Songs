@@ -136,7 +136,9 @@ public class CameraMng
         UserControl.transform.eulerAngles = InitRotation;
         UserControl.gameObject.SetActive(true);
         UserControl.SetMainCamera(go.transform);
-        MainCamera.gameObject.AddComponent<AQUAS_Look>()._isLocked = false;
+        AQUAS_Look _Look = MainCamera.gameObject.AddComponent<AQUAS_Look>();
+        _Look._isLocked = false;
+        _Look.SetParent(go.transform);
     }
 
     public void SetGodRoamsMove()
@@ -145,7 +147,9 @@ public class CameraMng
         UserControl.transform.eulerAngles = InitRotation;
         UserControl.gameObject.SetActive(true);
         UserControl.SetMainCamera(MainCamera.transform, true);
-        MainCamera.gameObject.AddComponent<AQUAS_Look>()._isLocked = true;
+        AQUAS_Look _Look = MainCamera.gameObject.AddComponent<AQUAS_Look>();
+        _Look._isLocked = true;
+        _Look.SetParent(null);
     }
 
     public void SetFirstPersonMove()
@@ -154,7 +158,9 @@ public class CameraMng
         UserControl.transform.eulerAngles = InitRotation;
         UserControl.gameObject.SetActive(false);
         MainCamera.gameObject.AddComponent<CharacterController>();
-        MainCamera.gameObject.AddComponent<AQUAS_Look>()._isLocked = true;
+        AQUAS_Look _Look = MainCamera.gameObject.AddComponent<AQUAS_Look>();
+        _Look._isLocked = true;
+        _Look.SetParent(null);
         MainCamera.gameObject.AddComponent<AQUAS_Walk>();
 
     }

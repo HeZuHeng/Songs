@@ -26,7 +26,8 @@ namespace Slate{
 	            GUI.DrawTexture(r, Styles.cutsceneIcon);
             }
 
-            if (go.GetComponent(typeof(IDirectableCamera)) != null){
+            if (go.GetComponent(typeof(IDirectableCamera)) != null && Styles.cameraIcon != null)
+            {
 	            r.x = r.xMax - 16;
 	            r.width = 16;
 	            GUI.DrawTexture(r, Styles.cameraIcon);

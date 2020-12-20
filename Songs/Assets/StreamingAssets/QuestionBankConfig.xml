@@ -63,6 +63,20 @@
     <答案>0</答案>
 	<答案>3</答案>
     <答案解析></答案解析>
-    <提示>A、D</提示>
+    <提示>正确答案：A, D</提示>
+  </QuestionBankDatas>
+  <QuestionBankDatas>
+    <ID>5</ID>
+    <图标></图标>
+    <题头>What does “ daffodil ” stand for? （multiple choices）</题头>
+    <阅读></阅读>
+    <解析></解析>
+    <选择>A. the beauty of nature that could release the burden of sadness.</选择>
+	<选择>B. the embodiment of a spirit leading to a happy heaven. </选择>
+	<选择>C. a virtual image that has a temporary impact on poet’s mind.</选择>
+    <答案>0</答案>
+	<答案>1</答案>
+    <答案解析></答案解析>
+    <提示>正确答案：A, B</提示>
   </QuestionBankDatas>
 </QuestionBankConfig>
