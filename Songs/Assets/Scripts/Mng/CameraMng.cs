@@ -19,6 +19,7 @@ public class CameraMng
 
         return _instance;
     }
+    static Transform mainCameraParent = null;
     static Camera mainCamera = null;
     public static Camera MainCamera
     {
@@ -40,22 +41,27 @@ public class CameraMng
     public static Vector3 InitRotation = Vector3.zero;
     public ThirdPersonUserControl  UserControl{ get; set; }
 
-    /// <summary>
-    /// 场景小地图拍照
-    /// </summary>
-    /// <param name="position">相机位置</param>
-    /// <param name="size">大小</param>
-    /// <param name="onfinish">完成事件</param>
-    public void InitScene(Camera camera, Vector3 pos, Vector3 rota)
+    public void Init(Transform transform)
     {
-        InitPosition = pos;
-        InitRotation = rota;
+        mainCameraParent = transform;
+    }
+
+    public void InitScene(Camera camera)
+    {
         if (camera != null)
         {
             camera.tag = "MainCamera";
             MainCamera = camera;
+            MainCamera.transform.SetParent(mainCameraParent);
             ResetMove();
         }
+    }
+
+    public void InitScene(Vector3 pos, Vector3 rota)
+    {
+        InitPosition = pos;
+        InitRotation = rota;
+        ResetMove();
     }
 
     public void InitPlayer(Transform tran)

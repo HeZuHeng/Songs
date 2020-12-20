@@ -26,6 +26,7 @@ namespace SpaceSimulation
             //Xml();
             if (!enabled) return;
             SongsDataMng.GetInstance().Init();
+            CameraMng.GetInstance().Init(transform);
             //CameraMng.GetInstance().UserControl = ThirdPerson;
             GameDataLoader.GetInstance().Startup();
             GameDataManager.GetInstance().Startup(transform, delegate () {

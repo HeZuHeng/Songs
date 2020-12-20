@@ -18,7 +18,7 @@ public class LeftDialogueWnd : UIBase
     {
         base.Awake();
         Type = UIType.LeftDialogueWnd;
-        MutexInterface = true;
+        MutexInterface = false;
         nextBtn.onClick.AddListener(OnNext);
     }
 
@@ -46,7 +46,7 @@ public class LeftDialogueWnd : UIBase
                 allTexts = unityWeb.downloadHandler.text.Split('|');
                 if(allTexts == null || allTexts.Length == 0)
                 {
-                    UIMng.Instance.OpenUI(UIType.NONE);
+                    UIMng.Instance.ConcealUI(UIType.LeftDialogueWnd);
                 }
                 else
                 {
@@ -56,7 +56,7 @@ public class LeftDialogueWnd : UIBase
             }
             else
             {
-                UIMng.Instance.OpenUI(UIType.NONE);
+                UIMng.Instance.ConcealUI(UIType.LeftDialogueWnd);
             }
         }
     }
@@ -77,7 +77,7 @@ public class LeftDialogueWnd : UIBase
         }
         else
         {
-            UIMng.Instance.OpenUI(UIType.NONE);
+            UIMng.Instance.ConcealUI(UIType.LeftDialogueWnd);
         }
     }
 
