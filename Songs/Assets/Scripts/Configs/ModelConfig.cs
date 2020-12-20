@@ -19,6 +19,10 @@ public class SceneData
     public string name;
     [XmlAttribute("场景资源名")]
     public string sceneName;
+    [XmlAttribute("摄像机")]
+    public string sceneCamera;
+    [XmlAttribute("位置")]
+    public string scenePosition;
     [XmlElement("ModelDatas")]
     public List<ModelData> datas;
 

@@ -48,7 +48,7 @@ public class TrendsText : MonoBehaviour
     {
         if(Application.platform == RuntimePlatform.WindowsEditor)
         {
-            m_ShowSpeed = 1000;
+            m_ShowSpeed = 300;
         }
         suspend = false;
         //\u3000为中文空格英文空格会引起unity中Text的自动换行因此将内容中的英文空格换成中文空格
@@ -141,6 +141,7 @@ public class TrendsText : MonoBehaviour
     IEnumerator Player()
     {
         float idx = 0;
+        if (m_Conetnt == null) m_Conetnt = this.GetComponent<Text>();
         m_Conetnt.text = "";
         yield return 0;
         if (m_AudioSource != null)

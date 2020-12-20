@@ -470,6 +470,9 @@ namespace Songs
                 case UIType.FantasyWnd:
                     openList.Add(string.Format("Prefabs/UI/FantasyWnd", path));
                     return openList;
+                case UIType.ExperienceWnd:
+                    openList.Add(string.Format("Prefabs/UI/ExperienceWnd", path));
+                    return openList;
                 default:
                     return openList;
             }

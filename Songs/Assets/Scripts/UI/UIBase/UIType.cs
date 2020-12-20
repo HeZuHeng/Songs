@@ -20,6 +20,7 @@ namespace Songs{
 		LeftDialogueWnd = 11,
 		AnswerWnd = 12,
 		FantasyWnd = 13,
+		ExperienceWnd = 14,
 	}
 	/// <summary>
 	/// 二级界面枚举

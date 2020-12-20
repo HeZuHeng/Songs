@@ -79,7 +79,7 @@ public class MainDialogueWnd : UIBase
                 break;
             case TaskType.LookSong:
                 SongsDataMng.GetInstance().GetSongFilePath = taskData.val;
-                UIMng.Instance.OpenUI(UIType.LeftDialogueWnd);
+                UIMng.Instance.ActivationUI(UIType.LeftDialogueWnd);
                 break;
             case TaskType.DOTween:
                 CameraMng.GetInstance().DOTweenPaly(delegate()

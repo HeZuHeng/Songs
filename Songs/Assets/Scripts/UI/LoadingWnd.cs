@@ -11,6 +11,10 @@ public class LoadingWnd : UIBase
 	public Slider progressBar;
 	public Text lblStatus;
 
+    Camera camera = null;
+    Vector3 initPosition = Vector3.zero;
+    Vector3 initRotation = Vector3.zero;
+
     protected override void Awake()
     {
         base.Awake();
@@ -21,7 +25,7 @@ public class LoadingWnd : UIBase
 
     protected override void OnEnable()
     {
-        if (SongsDataMng.GetInstance().GetSceneData != null) LoadScene(SongsDataMng.GetInstance().GetSceneData.sceneName);
+        if (SongsDataMng.GetInstance().GetSceneData != null) LoadScene(SongsDataMng.GetInstance().GetSceneData);
 	}
 
     protected override void OnDisable()
@@ -37,56 +41,58 @@ public class LoadingWnd : UIBase
         lblStatus.text = "100%";
 
         SceneManager.SetActiveScene(scene);
-        GameObject[] games = scene.GetRootGameObjects();
-        //Renderer[] renderers = null;
-        Camera camera = null;
-        string str = "InitPosition";
-        Vector3 initPosition = Vector3.zero;
-        Vector3 initRotation = Vector3.zero;
-        for (int i = 0; i < games.Length; i++)
-        {
-//#if UNITY_EDITOR
-//            renderers = games[i].GetComponentsInChildren<Renderer>();
-//            for (int j = 0; j < renderers.Length; j++)
-//            {
-//                renderers[j].sharedMaterial.shader = Shader.Find(renderers[j].sharedMaterial.shader.name);
-//            }
-//#endif
-            if (camera == null) camera = games[i].GetComponent<Camera>();
-            if (games[i].name.Equals(str))
-            {
-                initPosition = games[i].transform.position;
-                initRotation = games[i].transform.eulerAngles;
-            }
-        }
-//#if UNITY_EDITOR
-//        RenderSettings.skybox.shader = Shader.Find(RenderSettings.skybox.shader.name);
-//#endif
-        CameraMng.GetInstance().InitScene(camera, initPosition, initRotation);
+       
         UIMng.Instance.OpenUI(UIType.NONE);
         UIMng.Instance.ActivationUI(UIType.SettingWnd);
     }
 
-    void LoadScene(string url)
+    void LoadScene(SceneData sceneData)
     {
         UIMng.Instance.ConcealUI(UIType.SettingWnd);
         UIMng.Instance.ConcealUI(UIType.MainDialogueWnd);
 
         CameraMng.GetInstance().UserControl.gameObject.SetActive(false);
-        GameLoadTask loadTask = GameDataManager.GetInstance().GetGameTask(url);
-        loadTask.OnTaskProgress += delegate (float proggpess)
+        GameLoadTask loadCamera = GameDataManager.GetInstance().GetGameTask(sceneData.sceneCamera);
+        loadCamera.OnTaskProgress += delegate (float progress)
         {
-            if (proggpess >= 1)
+            if (progress >= 1)
             {
-                string path = loadTask.MainData.GetSceneName(url);
+                GameObject obj = loadCamera.MainData.LoadGameObject(sceneData.sceneCamera);
+                if(obj != null)
+                {
+                    camera = obj.GetComponent<Camera>();
+                }
+                CameraMng.GetInstance().InitScene(camera);
+            }
+        };
+        GameLoadTask loadPosition = GameDataManager.GetInstance().GetGameTask(sceneData.scenePosition);
+        loadPosition.OnTaskProgress += delegate (float progress)
+        {
+            if (progress >= 1)
+            {
+                GameObject obj = loadPosition.MainData.LoadGameObject(sceneData.scenePosition);
+                if (obj != null)
+                {
+                    initPosition = obj.transform.position;
+                    initRotation = obj.transform.eulerAngles;
+                }
+                CameraMng.GetInstance().InitScene(initPosition, initRotation);
+            }
+        };
+        GameLoadTask loadTask = GameDataManager.GetInstance().GetGameTask(sceneData.sceneName);
+        loadTask.OnTaskProgress += delegate (float progress)
+        {
+            if (progress >= 1)
+            {
+                string path = loadTask.MainData.GetSceneName(sceneData.sceneName);
                 Debug.Log(path);
                 SceneManager.sceneLoaded += OnSceneLoaded;
                 if (!string.IsNullOrEmpty(path))SceneManager.LoadSceneAsync(path);
             }
             else
             {
-                progressBar.value = proggpess;
-                lblStatus.text = Mathf.Round(proggpess * 100f) + "%";
+                progressBar.value = progress;
+                lblStatus.text = Mathf.Round(progress * 100f) + "%";
             }
         };
     }
