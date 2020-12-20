@@ -2012,57 +2012,7 @@ ModelImporter:
     13700048: YaoDai_04_Group2
     13700050: YaoDai_05_Group2
     13700052: YaoDai_06_Group2
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Landlord_RIG2_aiStandard16
-    second: {fileID: 2100000, guid: 3ba07b05938efe44785595e77192a409, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: ShuSheng_RIG_Model_lambert2
-    second: {fileID: 2100000, guid: fad71332eb2318e43aa3ff91e7d4b4b0, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: aiStandard1
-    second: {fileID: 2100000, guid: 4581865205a4c9d46af2fa871dbd7cc8, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: aiStandard10
-    second: {fileID: 2100000, guid: 5a27b16432523d84ab7aad8db493e99c, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: aiStandard11
-    second: {fileID: 2100000, guid: 0174b20548759e949afe447a59c54025, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: aiStandard12
-    second: {fileID: 2100000, guid: c3b99bf5c1eb1a145b458762c4fdbd57, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: aiStandard9
-    second: {fileID: 2100000, guid: 24315502f60334343b00550c708b5c71, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: pasted__ShuSheng_RIG_Model_aiStandard7
-    second: {fileID: 2100000, guid: 38055c7375714f14ca110eb55fb0c0c1, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: pasted__aiStandard5
-    second: {fileID: 2100000, guid: 3bfbac51ffc9bec46ba7c754e27ea208, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: pasted__aiStandard9
-    second: {fileID: 2100000, guid: f55e7a899f3f75f43850fd7317e1cc0a, type: 2}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
