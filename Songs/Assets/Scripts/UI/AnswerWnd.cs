@@ -177,7 +177,7 @@ public class AnswerWnd : UIBase
         if (!val)
         {
             num++;
-            if (num >= 3)
+            if (num <= 1)
             {
                 errorTip.text = "选择错误！请重新选择。";
                 StopCoroutine(Reset());
