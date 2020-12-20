@@ -70,29 +70,29 @@ namespace SpaceSimulation
             GameDataManager.GetInstance().Terminate();
         }
 
-        void ModelXml()
-        {
-            ModelConfig modelConfig = new ModelConfig();
-            SceneData data = new SceneData();
-            data.name = "22";
-            data.sceneName = "33";
+        //void ModelXml()
+        //{
+        //    ModelConfig modelConfig = new ModelConfig();
+        //    SceneData data = new SceneData();
+        //    data.name = "22";
+        //    data.sceneName = "33";
 
-            ModelData modelData = new ModelData();
-            modelData.name = "111";
-            modelData.assetName = "3333";
-            modelData.position = new Vector3(0,0,0);
-            modelData.eulerAngle = new Vector3(0, 0, 0);
+        //    ModelData modelData = new ModelData();
+        //    modelData.name = "111";
+        //    modelData.assetName = "3333";
+        //    modelData.position = new Vector3(0,0,0);
+        //    modelData.eulerAngle = new Vector3(0, 0, 0);
 
-            data.datas.Add(modelData);
+        //    data.datas.Add(modelData);
 
-            modelConfig.datas.Add(data);
+        //    modelConfig.datas.Add(data);
 
-            using (FileStream fileStream = new FileStream(Application.streamingAssetsPath + "/TestModel.xml", FileMode.Create))
-            {
-                XmlSerializer xmlSerializer = new XmlSerializer(typeof(ModelConfig));
-                xmlSerializer.Serialize(fileStream, modelConfig);
-            }
-        }
+        //    using (FileStream fileStream = new FileStream(Application.streamingAssetsPath + "/TestModel.xml", FileMode.Create))
+        //    {
+        //        XmlSerializer xmlSerializer = new XmlSerializer(typeof(ModelConfig));
+        //        xmlSerializer.Serialize(fileStream, modelConfig);
+        //    }
+        //}
 
         //void Xml()
         //{

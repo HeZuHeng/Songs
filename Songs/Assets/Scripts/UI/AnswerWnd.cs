@@ -67,6 +67,7 @@ public class AnswerWnd : UIBase
             trendsText.Play(question.startParsing.Replace("\\n", "\n"));
             return;
         }
+        answerParent.gameObject.SetActive(true);
         Show(question);
     }
 
@@ -105,7 +106,7 @@ public class AnswerWnd : UIBase
         {
             startParent.gameObject.SetActive(true);
             trendsText.m_CallBack.RemoveListener(OnEnd);
-            trendsText.m_CallBack.AddListener(OnStartParsing);
+            trendsText.m_CallBack.AddListener(OnEnd);
             trendsText.Play(question.startParsing.Replace("\\n", "\n"));
             return;
         }

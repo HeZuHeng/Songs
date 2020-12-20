@@ -22,6 +22,9 @@ public class FantasyWnd : UIBase
     {
         "一朵云","成片且摇曳的水仙花","漫天闪烁的星星","银河","粼粼水波"
     };
+
+    public Image[] images;
+    public Image Item;
     public ScrollRect scrollRect;
     public Text tip;
 
@@ -37,6 +40,11 @@ public class FantasyWnd : UIBase
     {
         base.OnEnable();
         index = 0;
+        Item.gameObject.SetActive(false);
+        for (int i = 0; i < images.Length; i++)
+        {
+            images[i].gameObject.SetActive(false);
+        }
         Show();
         for (int i = 0; i < scrollRect.content.childCount; i++)
         {
@@ -47,13 +55,31 @@ public class FantasyWnd : UIBase
 
     public void OnCilck(Text game)
     {
-        if (game.text.Equals(Names[index]))
+        if (index < Names.Length && game.text.Equals(Names[index]))
         {
-            Tweener tweener = game.transform.parent.DOScale(Vector3.one * 0.1f, 1);
+            images[index].sprite = game.transform.parent.GetComponent<Image>().sprite;
+            Item.sprite = images[index].sprite;
+
+            Item.transform.position = game.transform.position;
+            Item.transform.rotation = game.transform.rotation;
+            Item.transform.localScale = Vector3.one;
+
+            Item.gameObject.SetActive(true);
+            game.transform.parent.gameObject.SetActive(false);
+
+            tip.transform.parent.DOScaleY(0, 1);
+            Tweener tweener = Item.transform.DOShakeRotation(2, new Vector3(25, 15, 90));
+            Tweener tweenerTip = Item.transform.DOMove(images[index].transform.position, 1);
+            tweenerTip.onComplete += delegate ()
+            {
+                tip.transform.parent.DOScaleY(1, 1);
+            };
             tweener.onComplete += delegate ()
             {
+                Item.gameObject.SetActive(false);
+                images[index].gameObject.SetActive(true);
+
                 tweener.onComplete = null;
-                game.transform.parent.gameObject.SetActive(false);
                 index++;
                 
                 if(index == 2)
@@ -69,7 +95,8 @@ public class FantasyWnd : UIBase
                 if (index == 5)
                 {
                     QuestionBankData bankData = SongsDataMng.GetInstance().SetQuestion(3);
-                    bankData.onQuestionEnd.AddListener(Close);
+                    bankData.onQuestionEnd.RemoveListener(NextQuestion);
+                    bankData.onQuestionEnd.AddListener(NextQuestion);
                     UIMng.Instance.ActivationUI(UIType.AnswerWnd);
                 }
                 
@@ -94,9 +121,37 @@ public class FantasyWnd : UIBase
         tip.text = Tips[index];
     }
 
-    void Close()
+    void NextQuestion()
     {
-        SongsDataMng.GetInstance().SetQuestion(4);
+        QuestionBankData bankData = SongsDataMng.GetInstance().SetQuestion(4);
+        bankData.onQuestionEnd.RemoveListener(NextQuestionTwo);
+        bankData.onQuestionEnd.AddListener(NextQuestionTwo);
         UIMng.Instance.ActivationUI(UIType.AnswerWnd);
+    }
+
+    void NextQuestionTwo()
+    {
+        QuestionBankData bankData = SongsDataMng.GetInstance().SetQuestion(5);
+        bankData.onQuestionEnd.RemoveListener(OnEnd);
+        bankData.onQuestionEnd.AddListener(OnEnd);
+        UIMng.Instance.ActivationUI(UIType.AnswerWnd);
+    }
+
+    void OnEnd()
+    {
+        QuestionBankData question = SongsDataMng.GetInstance().GetQuestionBankData;
+        TaskData taskData = SongsDataMng.GetInstance().GetTaskData;
+        if (taskData != null)
+        {
+            if (taskData.type == TaskType.Question)
+            {
+                if (taskData.val.Equals(question.Id.ToString()))
+                {
+                    taskData.TaskState = TaskState.End;
+                }
+            }
+        }
+
+        UIMng.Instance.OpenUI(UIType.NONE);
     }
 }

@@ -65,4 +65,18 @@
     <ModelDatas 模型名="李四" 资源名="14" />
     <ModelDatas 模型名="吴亦凡" 资源名="18" /-->
   </SceneDatas>
+  <SceneDatas 场景="华兹华斯书房意境" 场景资源名="华兹华斯书房" 摄像机 = "IntroductionCamera" 位置="IntroductionInitPosition" 镜头="Cutscene_introduction">
+    <ModelDatas 模型名="华兹华斯" 资源名="hzhs" >
+	  <position>
+        <x>-0.679</x>
+        <y>0</y>
+        <z>1.217</z>
+      </position>
+      <eulerAngle>
+        <x>0</x>
+        <y>135</y>
+        <z>0</z>
+      </eulerAngle>
+    </ModelDatas>
+  </SceneDatas>
 </ModelConfig>
