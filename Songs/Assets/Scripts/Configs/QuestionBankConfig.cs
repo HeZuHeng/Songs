@@ -35,7 +35,6 @@ public class QuestionBankData
     [XmlElement("提示")]
     public string errorTip;
 
-
     public QuestionBankData()
     {
         questions = new List<string>();
