@@ -214,7 +214,9 @@ public class AnswerWnd : UIBase
                 }
             }
         }
+        
         UIMng.Instance.ConcealUI(UIType.AnswerWnd);
+        if(question.onQuestionEnd != null) question.onQuestionEnd.Invoke();
     }
 
     IEnumerator Reset()
