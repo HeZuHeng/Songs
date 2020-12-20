@@ -36,7 +36,7 @@ namespace AQUAS
         {
             _playerRootT = transform;
             _cameraT = transform;
-            if (parent == null) parent = transform.parent;
+            //if (parent == null) parent = transform.parent;
         }
 
         void Update()
@@ -118,6 +118,11 @@ namespace AQUAS
                 _playerRootT.Rotate(0f, rotAverageX, 0f, Space.World);
                 _cameraT.Rotate(-rotAverageY, 0f, 0f, Space.Self);
             }
+        }
+
+        public void SetParent(Transform tran)
+        {
+            parent = tran;
         }
     }
 }
