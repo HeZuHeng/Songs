@@ -21,6 +21,7 @@ namespace Songs{
 		AnswerWnd = 12,
 		FantasyWnd = 13,
 		ExperienceWnd = 14,
+		FantasyCompareWnd = 15,
 	}
 	/// <summary>
 	/// 二级界面枚举

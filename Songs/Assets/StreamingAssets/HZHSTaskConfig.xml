@@ -1,9 +1,11 @@
 <?xml version="1.0"?>
 <TasksConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SceneTasks 场景任务名="陶渊明《饮酒（其五）》" 图标="矩形 8" 场景数据="陶渊明赏花">
-    <TaskDatas ID="1" 任务名="张三" 下一个="2" 类型="None" />
-    <TaskDatas ID="2" 任务名="李四" 下一个="14" 类型="None" />
-    <TaskDatas ID="3" 任务名="吴亦凡" 下一个="18" 类型="None" />
+    <TaskDatas ID="1" 任务名="预览菊花场景" 下一个="2" 类型="DOTween" 描述 = "Far away in the beautiful landscape of China, there is also a representative pastoral poet - Tao Yuanming. Let’s go and see.
+\n 游客您好，远在山水优美的中国也有一位具有代表性的田园诗人——陶渊明，让我们去看看吧。"/>
+    <TaskDatas ID="2" 任务名="鉴赏陶渊明的诗——《饮酒（其五）》" 下一个="3" 类型="LookSong" 值 = "/饮酒其五.txt"/>
+    <TaskDatas ID="3" 任务名="意境比较" 下一个="4" 类型="OpenWnd" 值 = "FantasyCompareWnd"/>
+	<TaskDatas ID="4" 任务名="菊花场景中自由漫游" 下一个="0" 类型="ThirdPerson" />
   </SceneTasks>
   <SceneTasks 场景任务名="中英诗歌精神比较" 图标="矩形 8" 场景数据="天堂场景">
     <TaskDatas ID="1" 任务名="张三" 下一个="2" 类型="None" />
@@ -12,15 +14,15 @@
   </SceneTasks>
   <SceneTasks 场景任务名="《我好似一朵孤独的流云》意境" 图标="矩形 8" 场景数据="华兹华斯书房意境">
 	<TaskDatas ID="1" 任务名="华兹华斯的烦恼" 下一个="2" 类型="Animator" 值 = "101|1|1|true|shake" 描述 = "一天，华兹华斯躺在躺椅上想到革命失败又沮丧起来，想回忆美好事物之时，脑海却一片空白。为了让诗人回忆起当时快乐的场景，首先请为他复原记忆内容。"/>
-	<TaskDatas ID="2" 任务名="帮助华兹华斯找回意境" 下一个="3" 类型="Talk" 值 = "" 描述 = "您需要根据诗的前三节内容及所给的提示来选择屏幕下方的意象，还原诗中所描绘的场景。"/>
+	<TaskDatas ID="2" 任务名="帮助华兹华斯找回意境" 下一个="3" 类型="Talk" 描述 = "您需要根据诗的前三节内容及所给的提示来选择屏幕下方的意象，还原诗中所描绘的场景。"/>
 	<TaskDatas ID="3" 任务名="开始还原意境" 下一个="4" 类型="OpenWnd" 值 = "FantasyWnd" 描述 = ""/>
-    <TaskDatas ID="4" 任务名="请赏析第四节诗歌" 下一个="5" 类型="Talk" 值 = "" 描述 = "您已成功激活诗人记忆，请赏析第四节诗歌。"/>
-	<TaskDatas ID="5" 任务名="第四节诗歌" 下一个="6" 类型="Talk" 值 = "" 描述 = "For oft, when on my couch I lie In vacant or in pensive mood, They flash upon that inward ey Which is the bliss of solitude; And then my heart with pleasure fills,And dances with the daffodils."/>
+    <TaskDatas ID="4" 任务名="请赏析第四节诗歌" 下一个="5" 类型="Talk"  描述 = "您已成功激活诗人记忆，请赏析第四节诗歌。"/>
+	<TaskDatas ID="5" 任务名="第四节诗歌" 下一个="6" 类型="Talk" 描述 = "For oft, when on my couch I lie In vacant or in pensive mood, They flash upon that inward ey Which is the bliss of solitude; And then my heart with pleasure fills,And dances with the daffodils."/>
 	<TaskDatas ID="6" 任务名="第四节诗歌解析" 下一个="7" 类型="Animator" 值 = "101|1|1|true|sit" 描述 = "Firstly, the poet writes daffodils, and in the last part, he writes about the daffodils’ healing power. He writes both objective things (daffodils) and subjective feelings. The poet and daffodils are connected to each other, and the empty mind can be healed at any time through this infinite spiritual wealth.
 \n 诗人先写水仙, 最后再写水仙对诗人的魅力, 写的既是客观之物 (水仙) , 又是主观之情 (诗人)。诗人与水仙心灵相通,无论何时都能通过这种无穷的精神财富使百无聊赖的心灵空虚和精神颓唐得到治愈。"/>
 	<TaskDatas ID="7" 任务名="与花瓶里摇曳的水仙花一起舞蹈" 下一个="8" 类型="Animator" 值 = "101|1|1|true|dance|end"/>
 	<TaskDatas ID="8" 任务名="找到回故居的通道" 下一个="9" 类型="Question" 值 = "6"/>
-	<TaskDatas ID="9" 任务名="华兹华斯书房中自由漫游" 下一个="0" 类型="GodRoams" 值 = "0"/>
+	<TaskDatas ID="9" 任务名="华兹华斯书房中自由漫游" 下一个="0" 类型="GodRoams" />
   </SceneTasks>
   <SceneTasks 场景任务名="诗人华兹华斯介绍" 图标="矩形 8" 场景数据="华兹华斯书房预览">
     <TaskDatas ID="1" 任务名="华兹华斯背景介绍" 下一个="2" 类型="OpenWnd" 值 = "HZHSWnd"/>
@@ -28,14 +30,14 @@
     <TaskDatas ID="3" 任务名="书房中自由漫游" 下一个="0" 类型="GodRoams" 值 = "0"/>
   </SceneTasks>
  <SceneTasks 场景任务名="华兹华斯书房三本诗歌" 图标="矩形 8" 场景数据="华兹华斯书房三本诗歌">
-    <TaskDatas ID="1" 任务名="发现三本诗集" 下一个="2" 类型="DOTween" 值 = "5"/>
+    <TaskDatas ID="1" 任务名="发现三本诗集" 下一个="2" 类型="DOTween" />
     <TaskDatas ID="2" 任务名="选择诗集" 下一个="3" 类型="GodRoams" 值 = "0" />
     <TaskDatas ID="3" 任务名="阅读" 下一个="0" 类型="None" />
   </SceneTasks>
   <SceneTasks 场景任务名="《我好似一朵孤独的流云》解析" 图标="矩形 8" 场景数据="华兹华斯赏花">
-    <TaskDatas ID="1" 任务名="预览水仙花场景" 下一个="2" 类型="DOTween" 值 = "5"/>
+    <TaskDatas ID="1" 任务名="预览水仙花场景" 下一个="2" 类型="DOTween" />
     <TaskDatas ID="2" 任务名="阅读《我好似一朵孤独的流云》诗歌" 下一个="3" 类型="LookSong" 值 = "/我好似一朵孤独的流云.txt"/>
     <TaskDatas ID="3" 任务名="《我好似一朵孤独的流云》创作背景介绍" 下一个="4" 类型="OpenWnd" 值 = "ExperienceWnd"/>
-	<TaskDatas ID="4" 任务名="水仙花场景自由漫游" 下一个="0" 类型="ThirdPerson"  值 = "0"/>
+	<TaskDatas ID="4" 任务名="水仙花场景自由漫游" 下一个="0" 类型="ThirdPerson" />
   </SceneTasks>
 </TasksConfig>

@@ -131,6 +131,7 @@ public class MainDialogueWnd : UIBase
                 {
                     taskData.TaskState = TaskState.End;
                 });
+                talking = 1;
                 break;
             case TaskType.GodRoams:
                 CameraMng.GetInstance().SetGodRoamsMove();
@@ -161,10 +162,11 @@ public class MainDialogueWnd : UIBase
                 talking = 1;
                 break;
         }
-        talkParent.gameObject.SetActive(talking == 1);
-        taskNameParent.gameObject.SetActive(talking == 0);
+        
         if (talking == 1)
         {
+            talkParent.gameObject.SetActive(talking == 1);
+            taskNameParent.gameObject.SetActive(talking == 0);
             Show(taskData.des);
         }
     }
@@ -180,11 +182,9 @@ public class MainDialogueWnd : UIBase
 
     void OnNext()
     {
-        if (taskData != null && taskData.next != 0)
+        if (taskData.type == TaskType.Talk && taskData != null && taskData.next != 0)
         {
-            taskData.onStateChange.RemoveListener(OnStateChange);
-            SongsDataMng.GetInstance().SetNextTaskData(taskData);
-            Show();
+            taskData.TaskState = TaskState.End;
         }
         else
         {
@@ -197,7 +197,9 @@ public class MainDialogueWnd : UIBase
     {
         if(taskState == TaskState.End)
         {
-            OnNext();
+            taskData.onStateChange.RemoveListener(OnStateChange);
+            SongsDataMng.GetInstance().SetNextTaskData(taskData);
+            Show();
         }
     }
 }
