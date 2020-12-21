@@ -17,6 +17,8 @@ namespace SpaceSimulation
         //ThirdPersonUserControl ThirdPerson = null;
         public static Transform AssetsParent;
 
+        public string TestSceneName = "《我好似一朵孤独的流云》意境";
+
         private void Awake()
         {
             DontDestroyOnLoad(this);
@@ -35,32 +37,44 @@ namespace SpaceSimulation
             AssetsParent.rotation = Quaternion.identity;
             AssetsParent.localScale = Vector3.one;
 
+            GameDataManager.GetInstance().Startup(transform, delegate () {
+
+            });
             SongsDataMng.GetInstance().Init();
             CameraMng.GetInstance().Start(transform);
             //CameraMng.GetInstance().UserControl = ThirdPerson;
             GameDataLoader.GetInstance().Startup();
-            GameDataManager.GetInstance().Startup(transform, delegate () {
-                SceneAssetObject assetObject = SceneMng.GetInstance().AddSpaceAsset(1, "nvyk", "女游客", delegate (float pro) {
-                    if (pro >= 1)
-                    {
-                        SceneAssetObject sceneAsset = SceneMng.GetInstance().GetSceneAssetObject(1);
-                        sceneAsset.Tran.SetParent(transform);
-                        CameraMng.GetInstance().InitPlayer(sceneAsset.Tran);
-                        sceneAsset.Tran.gameObject.SetActive(false);
-                    }
-                });
-            });
+
+#if SONGS_DEBUG
+            SongsDataMng.GetInstance().OnDataLoaded = delegate (string val)
+            {
+                if (!string.IsNullOrEmpty(TestSceneName))
+                {
+                    SceneTaskData sceneTask = SongsDataMng.GetInstance().GetSceneTaskDataFromName(TestSceneName);
+                    SongsDataMng.GetInstance().SetSceneTaskData(sceneTask);
+                    UIMng.Instance.OpenUI(UIType.LoadingWnd);
+                }
+            };
+#endif
         }
 
         // Use this for initialization
         void Start() {
+#if SONGS_DEBUG
+            if (string.IsNullOrEmpty(TestSceneName))
+            {
+                UIMng.Instance.OpenUI(UIType.StartWnd);
+            }
+#else
             UIMng.Instance.OpenUI(UIType.StartWnd);
+#endif
         }
 
         // Update is called once per frame
         void Update() {
             GameDataLoader.GetInstance().FrameUpdate();
             GameDataManager.GetInstance().FrameUpdate();
+            SceneController.GetInstance().FrameUpdate();
             SongsDataMng.GetInstance().LoadUpdate();
         }
 

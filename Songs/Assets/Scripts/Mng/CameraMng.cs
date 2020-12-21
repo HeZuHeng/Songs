@@ -91,7 +91,7 @@ public class CameraMng
 
     public void ResetMove()
     {
-        UserControl.gameObject.SetActive(false);
+        if(UserControl != null) UserControl.gameObject.SetActive(false);
         PlayCutscene = null;
         if (MainCamera == null) return;
 

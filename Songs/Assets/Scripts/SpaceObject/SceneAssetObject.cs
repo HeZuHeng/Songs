@@ -5,9 +5,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public delegate void OnAnimatorEnd(string aName);
+
 public class SceneAssetObject : IAssetObject
 {
     public ModelData Data { get; private set; }
+    public Animator MAnimator { get; private set; }
+    public string AnimationName { get; private set; }
+    public OnAnimatorEnd OnAnimatorEnd { get; private set; }
     public OnLoadProgressDelegate OnProgress;
     public bool IsDone { get; protected set; }
     public float Progress { get; protected set; }
@@ -93,7 +98,34 @@ public class SceneAssetObject : IAssetObject
 
         base.InitAssetObject(asset);
         if (Tran == null) return;
+        MAnimator = Tran.GetComponent<Animator>();
         Col = Tran.GetComponentInChildren<Collider>();
+    }
+
+    public bool PlayAnimator(string aName, float val,float speed, OnAnimatorEnd onAnimatorEnd)
+    {
+        if(MAnimator != null)
+        {
+            AnimationName = aName;
+            MAnimator.SetFloat(aName, val);
+            MAnimator.speed = speed;
+            OnAnimatorEnd = onAnimatorEnd;
+            return MAnimator.GetCurrentAnimatorStateInfo(0).loop;
+        }
+        return false;
+    }
+
+    public bool PlayAnimator(string aName, bool val, float speed, OnAnimatorEnd onAnimatorEnd)
+    {
+        if (MAnimator != null)
+        {
+            AnimationName = aName;
+            MAnimator.SetBool(aName, val);
+            MAnimator.speed = speed;
+            OnAnimatorEnd = onAnimatorEnd;
+            return MAnimator.GetCurrentAnimatorStateInfo(0).loop;
+        }
+        return false;
     }
 
     public override void Destroy()

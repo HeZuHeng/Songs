@@ -143,9 +143,10 @@ public class FantasyWnd : UIBase
         TaskData taskData = SongsDataMng.GetInstance().GetTaskData;
         if (taskData != null)
         {
-            if (taskData.type == TaskType.Question)
+            if (taskData.type == TaskType.OpenWnd)
             {
-                if (taskData.val.Equals(question.Id.ToString()))
+                UIType type = (UIType)System.Enum.Parse(typeof(UIType), taskData.val);
+                if (type == Type)
                 {
                     taskData.TaskState = TaskState.End;
                 }

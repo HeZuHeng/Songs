@@ -30,6 +30,7 @@ public class SongsDataMng
         return instance;
     }
     public MainPlayer Player { get; private set; }
+    public OnDataLoaded OnDataLoaded { get; set; }
     private TasksConfig GetHZHSTasks { get;  set; }
     private TasksConfig GetHTMTasks { get;  set; }
     private ModelConfig GetModelConfig { get; set; }
@@ -108,6 +109,27 @@ public class SongsDataMng
             GetTaskData.TaskState = TaskState.Start;
         }
     }
+
+    public SceneTaskData GetSceneTaskDataFromName(string name)
+    {
+        SceneTaskData sceneTask = null;
+        for (int i = 0; i < GetHZHSTasks.datas.Count; i++)
+        {
+            if (GetHZHSTasks.datas[i].name.Equals(name))
+            {
+                sceneTask = GetHZHSTasks.datas[i];
+            }
+        }
+        for (int i = 0; i < GetHTMTasks.datas.Count; i++)
+        {
+            if (GetHTMTasks.datas[i].name.Equals(name))
+            {
+                sceneTask = GetHTMTasks.datas[i];
+            }
+        }
+        return sceneTask;
+    }
+
     public void SetNextTaskData(TaskData val)
     {
         for (int i = 0; i < GetSceneTaskData.datas.Count; i++)
@@ -175,6 +197,16 @@ public class SongsDataMng
                 i++;
             }
         }
+#if SONGS_DEBUG
+        if (dataLoaders.Count == 0)
+        {
+            if(OnDataLoaded != null)
+            {
+                OnDataLoaded(string.Empty);
+                OnDataLoaded = null;
+            }
+        }
+#endif
     }
     public DataLoader AddLoad(string url, OnDataLoaded onDataLoaded)
     {

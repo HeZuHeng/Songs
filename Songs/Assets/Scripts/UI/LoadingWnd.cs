@@ -45,17 +45,10 @@ public class LoadingWnd : UIBase
 
         SceneManager.SetActiveScene(scene);
        
-        UIMng.Instance.OpenUI(UIType.NONE);
-        UIMng.Instance.ActivationUI(UIType.SettingWnd);
     }
 
     void LoadScene(SceneData sceneData)
     {
-        UIMng.Instance.ConcealUI(UIType.SettingWnd);
-        UIMng.Instance.ConcealUI(UIType.MainDialogueWnd);
-
-        SceneController.GetInstance().Init();
-
         GameLoadTask loadTask = GameDataManager.GetInstance().GetGameTask(sceneData.sceneName);
         loadTask.OnTaskProgress += delegate (float progress)
         {
@@ -75,6 +68,9 @@ public class LoadingWnd : UIBase
                 lblStatus.text = Mathf.Round(progress * 100f) + "%";
             }
         };
+
+        SceneController.GetInstance().Init();
+
     }
 }
 

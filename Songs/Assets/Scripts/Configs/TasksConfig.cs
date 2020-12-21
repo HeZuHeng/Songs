@@ -48,6 +48,10 @@ public enum TaskType
     /// 答题
     /// </summary>
     Question,
+    /// <summary>
+    /// 动画控制
+    /// </summary>
+    Animator,
 }
 
 public enum TaskState

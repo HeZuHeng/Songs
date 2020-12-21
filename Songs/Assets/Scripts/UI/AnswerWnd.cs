@@ -83,6 +83,12 @@ public class AnswerWnd : UIBase
             trendsText.m_CallBack.AddListener(OnStartParsing);
             trendsText.Play(question.startParsing.Replace("\\n", "\n"));
         }
+        else
+        {
+            answerParent.gameObject.SetActive(true);
+            startParent.gameObject.SetActive(false);
+            Show(question);
+        }
     }
 
     void OnStartParsing()

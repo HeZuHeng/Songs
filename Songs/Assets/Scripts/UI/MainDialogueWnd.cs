@@ -69,6 +69,51 @@ public class MainDialogueWnd : UIBase
                 break;
             case TaskType.Click:
                 break;
+            case TaskType.Animator:
+                string[] strs = taskData.val.Split('|');
+                int id = 0;
+                int.TryParse(strs[0],out id);
+                int aType = 0;
+                int.TryParse(strs[1], out aType);
+                int speed = 0;
+                int.TryParse(strs[2], out speed);
+                SceneAssetObject sceneAsset = SceneMng.GetInstance().GetSceneAssetObject(id);
+                if((AnimatorType)aType == AnimatorType.BOOl)
+                {
+                    bool b = false;
+                    bool.TryParse(strs[3], out b);
+                    bool loop = sceneAsset.PlayAnimator(strs[4], b, speed,delegate(string aName)
+                    {
+                        if(strs.Length >= 6 && aName.Equals(strs[4]))
+                        {
+                            sceneAsset.PlayAnimator(strs[4], !b, speed, null);
+                            taskData.TaskState = TaskState.End;
+                        }
+                    });
+                    if (!loop)
+                    {
+                        SceneController.GetInstance().AddPlayAnimator(sceneAsset);
+                    }
+                }
+                else if ((AnimatorType)aType == AnimatorType.FLOAT)
+                {
+                    float f = 0;
+                    float.TryParse(strs[3], out f);
+                    bool loop = sceneAsset.PlayAnimator(strs[4], f, speed, delegate (string aName)
+                    {
+                        if (strs.Length >= 6 && aName.Equals(strs[4]))
+                        {
+                            sceneAsset.PlayAnimator(strs[4], 1 - f, speed, null);
+                            taskData.TaskState = TaskState.End;
+                        }
+                    });
+                    if (!loop)
+                    {
+                        SceneController.GetInstance().AddPlayAnimator(sceneAsset);
+                    }
+                }
+                talking = 1;
+                break;
             case TaskType.Question:
                 int qId = 0;
                 int.TryParse(taskData.val,out qId);
@@ -106,17 +151,22 @@ public class MainDialogueWnd : UIBase
                     {
                         talkIcon.sprite = obj;
                     }
+                    talkIcon.enabled = true;
                 }
                 else
                 {
+                    talkIcon.enabled = false;
                     talkName.text = "系统";
                 }
-                Show(taskData.des);
                 talking = 1;
                 break;
         }
         talkParent.gameObject.SetActive(talking == 1);
         taskNameParent.gameObject.SetActive(talking == 0);
+        if (talking == 1)
+        {
+            Show(taskData.des);
+        }
     }
 
     void Show(string content)
@@ -124,8 +174,8 @@ public class MainDialogueWnd : UIBase
         if (string.IsNullOrEmpty(content)) return;
         talkContent.m_CallBack.RemoveListener(OnNext);
         talkContent.m_CallBack.AddListener(OnNext);
-        talkContent.Play(content);
         talkContent.gameObject.SetActive(true);
+        talkContent.Play(content.Replace("\\n", "\n"));
     }
 
     void OnNext()
@@ -135,6 +185,11 @@ public class MainDialogueWnd : UIBase
             taskData.onStateChange.RemoveListener(OnStateChange);
             SongsDataMng.GetInstance().SetNextTaskData(taskData);
             Show();
+        }
+        else
+        {
+            talkParent.gameObject.SetActive(false);
+            taskNameParent.gameObject.SetActive(true);
         }
     }
 
