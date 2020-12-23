@@ -96,4 +96,40 @@
 	\n（在诗人的心中, 水仙已经不仅是一种植物, 而且是一种象征, 代表了一种灵魂。那山谷上的高傲形象, 那水仙的欢欣雀跃的形象, 是诗人对自己的描述, 也是诗人内心的向往，从而使人得以在自然中找到了自我的对应物，遇见了自己。）</答案解析>
     <提示>正确答案：A, B, C</提示>
   </QuestionBankDatas>
+  <QuestionBankDatas>
+    <ID>7</ID>
+    <图标></图标>
+    <题头>Hi, {0}, 你能想到为何这首诗中的“悠然见南山”一句，用的是“见”，而不是“望”吗？</题头>
+    <阅读>/饮酒其五.txt</阅读>
+    <解析>从主客体的关系去考虑。</解析>
+    <选择>A、从属关系</选择>
+	<选择>B、平等关系</选择>
+	<!--答案>0</答案!-->
+    <答案解析>“见”是无意中的偶见，南山的美景正好与采菊时悠然自得的心境相映衬，合成物我两忘的“无我之境”。如果用“望”字，便是心中先有南山，才有意去望，成了“有我之境”，不就失去了一种天真意趣吗。</答案解析>
+  </QuestionBankDatas>
+  <QuestionBankDatas>
+    <ID>8</ID>
+    <图标></图标>
+    <题头>Since this is mentioned, Mr. Wordsworth, the use of the word ‘gaze’ in your poem seems to have a kind of thinking in the depiction of nature, what does it mean? {0}, what do you think？
+\n 既然提到这个，在您的诗中用了gaze一词，在描绘自然中似乎带有着一种思索，这背后代表了什么吗？</题头>
+    <阅读>/我好似一朵孤独的流云.txt</阅读>
+    <解析>从体现自我的角度思考。</解析>
+    <选择>A、从属关系</选择>
+	<选择>B、平等关系</选择>
+	<!--答案>0</答案!-->
+    <答案解析>I constantly gaze at the daffodils, and project my desire for joy and eternal spirit on the daffodils. This is because I long to find the meaning of my own life in it.</答案解析>
+  </QuestionBankDatas>
+  <QuestionBankDatas>
+    <ID>9</ID>
+    <图标></图标>
+    <题头>After communicating with the poets, which of the following thoughts on the relationship between man and nature do the two poets embody?
+经过和诗人们的交流，请问两位诗人分别体现了以下哪种人与自然关系的思想？ </题头>
+    <阅读></阅读>
+    <解析></解析>
+    <选择>A、从属关系</选择>
+	<选择>B、平等关系</选择>
+	<!--答案>0</答案!-->
+    <答案解析>The journey in Wordsworth’s former residence is over. Hope you have a good memory. And please start your next journey!
+\n 您好，今天在华兹华斯故居游览完毕，希望你在这次旅程中留下美好回忆，请开启下一段旅程。</答案解析>
+  </QuestionBankDatas>
 </QuestionBankConfig>

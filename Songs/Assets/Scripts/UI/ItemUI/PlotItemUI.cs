@@ -13,7 +13,7 @@ public class PlotItemUI : MonoBehaviour
     {
         sceneTaskData = taskData;
         plotName.text = taskData.name;
-        Sprite obj = Resources.Load<Sprite>("Sprites/" + taskData.icon);
+        Sprite obj = Resources.Load<Sprite>("Sprites/SceneIcon/" + taskData.icon);
         if(obj != null)
         {
             icon.sprite = obj;

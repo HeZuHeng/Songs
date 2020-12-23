@@ -5,10 +5,31 @@
     <ModelDatas 模型名="李四" 资源名="14" />
     <ModelDatas 模型名="吴亦凡" 资源名="18" /-->
   </SceneDatas> 
-  <SceneDatas 场景="中英诗歌精神比较" 场景资源名="天堂场景" 摄像机 = "DrinkingCamera" 位置="DrinkingInitPosition" 镜头="Cutscene_enjoyflower_tym">
-    <!--ModelDatas 模型名="张三" 资源名="12" />
-    <ModelDatas 模型名="李四" 资源名="14" />
-    <ModelDatas 模型名="吴亦凡" 资源名="18" /-->
+  <SceneDatas 场景="中英诗歌精神比较" 场景资源名="天堂场景" 摄像机 = "HeavenCamera" 位置="HeavenInitPosition" 镜头="Cutscene_enjoyflower_tym">
+    <ModelDatas Id="101" 模型名="华兹华斯" 资源名="hzhs" >
+	  <position>
+        <x>408.4748</x>
+        <y>34.9</y>
+        <z>982.4935</z>
+      </position>
+      <eulerAngle>
+        <x>0</x>
+        <y>135</y>
+        <z>0</z>
+      </eulerAngle>
+    </ModelDatas>
+	<ModelDatas Id="102" 模型名="陶渊明" 资源名="tym" >
+	  <position>
+        <x>411.5391</x>
+        <y>34.9</y>
+        <z>982.2038</z>
+      </position>
+      <eulerAngle>
+        <x>0</x>
+        <y>-85</y>
+        <z>0</z>
+      </eulerAngle>
+    </ModelDatas>
   </SceneDatas> 
  <SceneDatas 场景="华兹华斯书房预览" 场景资源名="华兹华斯书房" 摄像机 = "IntroductionCamera" 位置="IntroductionInitPosition" 镜头="Cutscene_introduction">
     <!--ModelDatas 模型名="张三" 资源名="12" />

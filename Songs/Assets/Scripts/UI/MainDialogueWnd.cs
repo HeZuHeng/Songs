@@ -36,19 +36,22 @@ public class MainDialogueWnd : UIBase
     protected override void OnEnable()
     {
         base.OnEnable();
+        
         Show();
     }
 
     protected override void OnDisable()
     {
         base.OnDisable();
-       if(taskData != null) taskData.onStateChange.RemoveListener(OnStateChange);
+        if(taskData != null) taskData.onStateChange.RemoveListener(OnStateChange);
         talkContent.gameObject.SetActive(false);
         talkContent.m_Enable = false;
     }
 
     void Show()
     {
+        talkParent.gameObject.SetActive(false);
+        taskNameParent.gameObject.SetActive(false);
         taskData = SongsDataMng.GetInstance().GetTaskData;
         if (taskData == null)
         {
@@ -58,6 +61,7 @@ public class MainDialogueWnd : UIBase
         taskData.onStateChange.RemoveListener(OnStateChange);
         taskData.onStateChange.AddListener(OnStateChange);
         if (taskData.TaskState == TaskState.Start) taskData.TaskState = TaskState.Run;
+        talkIcon.enabled = false;
 
         int talking = 0;
         taskName.text = taskData.name;
@@ -120,6 +124,21 @@ public class MainDialogueWnd : UIBase
                 SongsDataMng.GetInstance().SetQuestion(qId);
                 UIMng.Instance.ActivationUI(UIType.AnswerWnd);
                 break;
+            case TaskType.QATalk:
+                int qaId = 0;
+                int.TryParse(taskData.val, out qaId);
+                SongsDataMng.GetInstance().SetQuestion(qaId);
+                UIMng.Instance.OpenUI(UIType.QATalkWnd);
+                break;
+            case TaskType.StartState:
+                State state = (State)System.Enum.Parse(typeof(State), taskData.val);
+                SceneController.GetInstance().ToState(state,delegate(State end) { 
+                    if(state == end)
+                    {
+                        taskData.TaskState = TaskState.End;
+                    }
+                });
+                break;
             case TaskType.Move:
                 break;
             case TaskType.LookSong:
@@ -147,7 +166,7 @@ public class MainDialogueWnd : UIBase
                 if(modelData != null)
                 {
                     talkName.text = modelData.name;
-                    Sprite obj = Resources.Load<Sprite>("Sprites/" + modelData.icon);
+                    Sprite obj = Resources.Load<Sprite>("Sprites/PlayerIcon/" + modelData.icon);
                     if (obj != null)
                     {
                         talkIcon.sprite = obj;
@@ -163,7 +182,7 @@ public class MainDialogueWnd : UIBase
                 break;
         }
         
-        if (talking == 1)
+        if (talking == 1 && !string.IsNullOrEmpty(taskData.des))
         {
             talkParent.gameObject.SetActive(talking == 1);
             taskNameParent.gameObject.SetActive(talking == 0);

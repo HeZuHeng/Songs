@@ -126,7 +126,7 @@ public class AnswerWnd : UIBase
             scrollRect.content.GetChild(i).GetComponentInChildren<Toggle>().isOn = false;
         }
 
-        Sprite obj = Resources.Load<Sprite>("Sprites/" + question.icon);
+        Sprite obj = Resources.Load<Sprite>("Sprites/PlayerIcon/" + question.icon);
         if (obj != null)
         {
             icon.sprite = obj;
@@ -170,33 +170,39 @@ public class AnswerWnd : UIBase
                 t.Add(i);
             }
         }
-        bool val = t.Count == question.answers.Count;
-        if(val)
+        
+        
+        if (question.answers.Count > 0)
         {
-            for (int i = 0; i < t.Count; i++)
+            bool val = t.Count == question.answers.Count;
+            if (val)
             {
-                if (!question.answers.Contains(t[i]))
+                for (int i = 0; i < t.Count; i++)
                 {
-                    val = false;
+                    if (!question.answers.Contains(t[i]))
+                    {
+                        val = false;
+                    }
                 }
             }
-        }
-        if (!val)
-        {
-            num++;
-            if (num <= 1)
+            if (!val)
             {
-                errorTip.text = "选择错误！请重新选择。";
-                StopCoroutine(Reset());
-                StartCoroutine(Reset());
+                num++;
+                if (num <= 1)
+                {
+                    errorTip.text = "选择错误！请重新选择。";
+                    StopCoroutine(Reset());
+                    StartCoroutine(Reset());
+                }
+                else
+                {
+                    errorTip.text = question.errorTip;
+                }
+                errorTip.enabled = true;
+                return;
             }
-            else
-            {
-                errorTip.text = question.errorTip;
-            }
-            errorTip.enabled = true;
-            return;
         }
+        
         if (!string.IsNullOrEmpty(question.endParsing))
         {
             OnEndParsing();

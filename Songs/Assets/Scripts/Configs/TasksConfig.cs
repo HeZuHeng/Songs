@@ -52,6 +52,14 @@ public enum TaskType
     /// 动画控制
     /// </summary>
     Animator,
+    /// <summary>
+    /// 进入状态
+    /// </summary>
+    StartState,
+    /// <summary>
+    /// 问答式
+    /// </summary>
+    QATalk,
 }
 
 public enum TaskState

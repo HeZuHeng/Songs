@@ -83,7 +83,11 @@ public class CameraMng
         capsuleCollider.height = 1.6f;
         capsuleCollider.radius = 0.25f;
         capsuleCollider.center = new Vector3(0, 0.8f, 0);
-        Rigidbody rigidbody = tran.gameObject.AddComponent<Rigidbody>();
+        Rigidbody rigidbody = tran.gameObject.GetComponent<Rigidbody>();
+        if(rigidbody == null)
+        {
+            rigidbody = tran.gameObject.AddComponent<Rigidbody>();
+        }
         rigidbody.constraints = RigidbodyConstraints.None;
         tran.gameObject.AddComponent<ThirdPersonCharacter>();
         UserControl = tran.gameObject.AddComponent<ThirdPersonUserControl>();

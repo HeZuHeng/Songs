@@ -59,6 +59,8 @@ public class LoadingWnd : UIBase
                 SceneManager.sceneLoaded += OnSceneLoaded;
                 if (!string.IsNullOrEmpty(path))
                 {
+                    SceneController.GetInstance().Init();
+
                     SceneManager.LoadSceneAsync(path);
                 }
             }
@@ -68,9 +70,6 @@ public class LoadingWnd : UIBase
                 lblStatus.text = Mathf.Round(progress * 100f) + "%";
             }
         };
-
-        SceneController.GetInstance().Init();
-
     }
 }
 

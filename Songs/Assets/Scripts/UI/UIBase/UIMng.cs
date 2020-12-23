@@ -476,6 +476,15 @@ namespace Songs
                 case UIType.FantasyCompareWnd:
                     openList.Add(string.Format("Prefabs/UI/FantasyCompareWnd", path));
                     return openList;
+                case UIType.RenameWnd:
+                    openList.Add(string.Format("Prefabs/UI/RenameWnd", path));
+                    return openList;
+                case UIType.QATalkWnd:
+                    openList.Add(string.Format("Prefabs/UI/QATalkWnd", path));
+                    return openList;
+                case UIType.HZHSEndWnd:
+                    openList.Add(string.Format("Prefabs/UI/HZHSEndWnd", path));
+                    return openList;
                 default:
                     return openList;
             }

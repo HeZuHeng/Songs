@@ -22,6 +22,9 @@ namespace Songs{
 		FantasyWnd = 13,
 		ExperienceWnd = 14,
 		FantasyCompareWnd = 15,
+		RenameWnd = 16,
+		QATalkWnd = 17,
+		HZHSEndWnd,
 	}
 	/// <summary>
 	/// 二级界面枚举
