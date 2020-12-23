@@ -6,7 +6,7 @@
     <ModelDatas 模型名="吴亦凡" 资源名="18" /-->
   </SceneDatas> 
   <SceneDatas 场景="中英诗歌精神比较" 场景资源名="天堂场景" 摄像机 = "HeavenCamera" 位置="HeavenInitPosition" 镜头="Cutscene_enjoyflower_tym">
-    <ModelDatas Id="101" 模型名="华兹华斯" 资源名="hzhs" >
+    <ModelDatas Id="101" 模型名="华兹华斯" 资源名="hzhs" 图标 ="hzhs">
 	  <position>
         <x>408.4748</x>
         <y>34.9</y>
@@ -18,7 +18,7 @@
         <z>0</z>
       </eulerAngle>
     </ModelDatas>
-	<ModelDatas Id="102" 模型名="陶渊明" 资源名="tym" >
+	<ModelDatas Id="102" 模型名="陶渊明" 资源名="tym" 图标 ="tym">
 	  <position>
         <x>411.5391</x>
         <y>34.9</y>
@@ -51,36 +51,36 @@
     </ModelDatas>
     <ModelDatas Id="1002" 模型名="书1" 资源名="Book_01" >
 	  <position>
-        <x>1</x>
-        <y>2</y>
-        <z>3</z>
+        <x>0</x>
+        <y>0.815</y>
+        <z>-0.915</z>
       </position>
       <eulerAngle>
-        <x>0</x>
+        <x>-90</x>
         <y>0</y>
         <z>0</z>
       </eulerAngle>
     </ModelDatas>
     <ModelDatas Id="1003" 模型名="书2" 资源名="Book_02" >
 	  <position>
-        <x>0</x>
-        <y>0</y>
-        <z>0</z>
+        <x>-1.898</x>
+        <y>0.901</y>
+        <z>2.312</z>
       </position>
       <eulerAngle>
-        <x>0</x>
-        <y>0</y>
+        <x>-90</x>
+        <y>90</y>
         <z>0</z>
       </eulerAngle>
     </ModelDatas>
     <ModelDatas Id="1004" 模型名="书3" 资源名="Book_03" >
 	  <position>
-        <x>0</x>
-        <y>0</y>
-        <z>0</z>
+        <x>1.904</x>
+        <y>0.658</y>
+        <z>-2.484</z>
       </position>
       <eulerAngle>
-        <x>0</x>
+        <x>-90</x>
         <y>0</y>
         <z>0</z>
       </eulerAngle>

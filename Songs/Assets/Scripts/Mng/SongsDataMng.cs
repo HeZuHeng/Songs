@@ -129,17 +129,20 @@ public class SongsDataMng
         }
         return sceneTask;
     }
-
-    public void SetNextTaskData(TaskData val)
+    public void SetNextTaskData(int id)
     {
         for (int i = 0; i < GetSceneTaskData.datas.Count; i++)
         {
-            if (GetSceneTaskData.datas[i].Id == val.next)
+            if (GetSceneTaskData.datas[i].Id == id)
             {
                 GetTaskData = GetSceneTaskData.datas[i];
                 GetTaskData.TaskState = TaskState.Start;
             }
         }
+    }
+    public void SetNextTaskData(TaskData val)
+    {
+        SetNextTaskData(val.next);
     }
     public void SetNextTaskData(string val)
     {

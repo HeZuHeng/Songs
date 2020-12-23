@@ -9,18 +9,18 @@
   </SceneTasks>
   <SceneTasks 场景任务名="中英诗歌精神比较" 图标="矩形 8" 场景数据="中英诗歌精神比较">
     <TaskDatas ID="1" 任务名="取名" 下一个="2" 类型="OpenWnd" 值 = "RenameWnd"/>
-	<TaskDatas ID="2" 任务名="取名" 下一个="3" 类型="StartState" 值 = "InitMoveCamera"/>
-	<TaskDatas ID="3" 任务名="取名" 下一个="4" 类型="Talk" 描述 = "Hi, Mr. Wordsworth. Is you? "/>
-	<TaskDatas ID="4" 任务名="取名" 下一个="5" 类型="Talk" 描述 = "Yes! Are you Tao yuanming? "/>
-	<TaskDatas ID="5" 任务名="取名" 下一个="6" 类型="Talk" 描述 = "Yes, so nice to meet you."/>
-	<TaskDatas ID="6" 任务名="取名" 下一个="7" 类型="Talk" 描述 = "Oh, I have read your poems about nature. You know, in nature and the language of the sense, I can find my purest thoughts, the nurse, the guide, the guardian of my heart, and soul of all my moral being."/>
-	<TaskDatas ID="7" 任务名="取名" 下一个="8" 类型="Talk" 描述 = "Exactly."/>
-	<TaskDatas ID="8" 任务名="取名" 下一个="11" 类型="Talk" 描述 = "But may I ask a question about your poem?"/>
-	<TaskDatas ID="11" 任务名="取名" 下一个="12" 类型="StartState" 值 = "TalkCamera"/>
+	<TaskDatas ID="2" 任务名="两位诗人见面" 下一个="3" 类型="StartState" 值 = "InitMoveCamera"/>
+	<TaskDatas ID="3" 任务名="陶渊明发起交谈" 下一个="4" 类型="Talk" 值 = "102" 描述 = "Hi, Mr. Wordsworth. Is you? "/>
+	<TaskDatas ID="4" 任务名="华兹华斯问好" 下一个="5" 类型="Talk" 值 = "101" 描述 = "Yes! Are you Tao yuanming? "/>
+	<TaskDatas ID="5" 任务名="陶渊明问好" 下一个="6" 类型="Talk" 值 = "102" 描述 = "Yes, so nice to meet you."/>
+	<TaskDatas ID="6" 任务名="华兹华斯称赞" 下一个="7" 类型="Talk" 值 = "101" 描述 = "Oh, I have read your poems about nature. You know, in nature and the language of the sense, I can find my purest thoughts, the nurse, the guide, the guardian of my heart, and soul of all my moral being."/>
+	<TaskDatas ID="7" 任务名="陶渊明疑惑" 下一个="8" 类型="Talk" 值 = "102" 描述 = "Exactly."/>
+	<TaskDatas ID="8" 任务名="华兹华斯疑惑" 下一个="11" 类型="Talk" 值 = "101" 描述 = "But may I ask a question about your poem?"/>
+	<TaskDatas ID="11" 任务名="实验者见面" 下一个="12" 类型="StartState" 值 = "TalkCamera"/>
 	<TaskDatas ID="12" 任务名="从主客体的关系去考虑" 下一个="13" 类型="QATalk" 值 = "7" 描述 = "101"/>
-	<TaskDatas ID="13" 任务名="" 下一个="14" 类型="Talk" 值 = "101" 描述 = " Oh， I see!"/>
+	<TaskDatas ID="13" 任务名="华兹华斯赞同" 下一个="14" 类型="Talk" 值 = "101" 描述 = " Oh， I see!"/>
 	<TaskDatas ID="14" 任务名="从体现自我的角度思考" 下一个="15" 类型="QATalk" 值 = "8" 描述 = "102"/>
-	<TaskDatas ID="15" 任务名="取名" 下一个="16" 类型="Talk" 描述 = "In the connection between spirit and nature, we can find a correspondence between self-emotions in natural existence, and emphasize the physical and mental feelings after the intersection of mind and nature，which is different from directly integrating self into nature. 
+	<TaskDatas ID="15" 任务名="华兹华斯表达思想" 下一个="16" 类型="Talk" 描述 = "In the connection between spirit and nature, we can find a correspondence between self-emotions in natural existence, and emphasize the physical and mental feelings after the intersection of mind and nature，which is different from directly integrating self into nature. 
 \n 在精神与自然联系中，将自我的情感在自然存在中寻找一种对应,强调心灵与自然的交汇后的身心感受和人生品味, 这与你们直接将自我融入自然有着区别。"/>
 	<TaskDatas ID="16" 任务名="找到回故居的通道" 下一个="17" 类型="Question" 值 = "9"/>
 	<TaskDatas ID="17" 任务名="跟惠特曼一起寻找自由女神" 下一个="0" 类型="OpenWnd" 值 = "HZHSEndWnd"/>
@@ -43,9 +43,11 @@
     <TaskDatas ID="3" 任务名="书房中自由漫游" 下一个="0" 类型="GodRoams" 值 = "0"/>
   </SceneTasks>
  <SceneTasks 场景任务名="华兹华斯书房三本诗歌" 图标="矩形 8" 场景数据="华兹华斯书房三本诗歌">
-    <TaskDatas ID="1" 任务名="发现三本诗集" 下一个="2" 类型="DOTween" />
-    <TaskDatas ID="2" 任务名="选择诗集" 下一个="3" 类型="GodRoams" 值 = "0" />
-    <TaskDatas ID="3" 任务名="阅读" 下一个="0" 类型="None" />
+    <TaskDatas ID="4" 任务名="发现三本诗集" 下一个="5" 类型="DOTween" />
+    <TaskDatas ID="5" 任务名="寻找三本诗集并阅读" 下一个="0" 类型="GodRoams" 值 = "0" />
+    <TaskDatas ID="1" 任务名="阅读《The Solitary Reaper》诗歌" 下一个="0" 类型="LookSong" 值 = "/The Solitary Reaper.txt"/>
+	<TaskDatas ID="2" 任务名="阅读《My Heart Leaps Up》诗歌" 下一个="0" 类型="LookSong" 值 = "/My Heart Leaps Up.txt"/>
+	<TaskDatas ID="3" 任务名="阅读《I Wandered Lonely as a Cloud》诗歌第一节" 下一个="0" 类型="LookSong" 值 = "/I Wandered Lonely as a Cloud.txt"/>
   </SceneTasks>
   <SceneTasks 场景任务名="《我好似一朵孤独的流云》解析" 图标="矩形 8" 场景数据="华兹华斯赏花">
     <TaskDatas ID="1" 任务名="预览水仙花场景" 下一个="2" 类型="DOTween" />

@@ -109,10 +109,16 @@ public class SceneController
         {
             childController = new HeavenController();
         }
+
+        if (ThreeSongsController.Name.Equals(sceneData.name))
+        {
+            childController = new ThreeSongsController();
+        }
     }
 
     public void Close()
     {
+        childController = null;
         UIMng.Instance.ConcealUI(UIType.SettingWnd);
         UIMng.Instance.ConcealUI(UIType.MainDialogueWnd);
 
@@ -317,5 +323,36 @@ public class HeavenController : ChildController
         }
         //Debug.Log(y);
         sceneAsset.Tran.DORotate(new Vector3(0, y, 0), 2f, RotateMode.LocalAxisAdd);
+    }
+}
+
+public class ThreeSongsController : ChildController
+{
+    public static string Name = "华兹华斯书房三本诗歌";
+
+    SceneAssetObject sceneAsset;
+    public override void Init()
+    {
+        base.Init();
+        sceneAsset = SceneMng.GetInstance().GetSceneAssetObject(1);
+        sceneAsset.Tran.gameObject.AddComponent<TriggerEvent>().enterEvent.AddListener(EnterEvent);
+    }
+
+    void EnterEvent(string name)
+    {
+        Debug.Log(name);
+        string[] strs = name.Split('_');
+        int id = 0;
+        if(strs.Length > 1)int.TryParse(strs[1],out id);
+        CameraMng.GetInstance().UserControl.State(false);
+        sceneAsset.PlayAnimator("Shu",true,1,delegate(string a) {
+            sceneAsset.PlayAnimator("Shu", false, 1, null);
+            SongsDataMng.GetInstance().SetNextTaskData(id);
+            UIMng.Instance.ConcealUI(UIType.MainDialogueWnd);
+            UIMng.Instance.ActivationUI(UIType.MainDialogueWnd);
+            CameraMng.GetInstance().UserControl.State(true);
+        });
+        SceneController.GetInstance().AddPlayAnimator(sceneAsset);
+        
     }
 }

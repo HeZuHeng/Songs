@@ -106,7 +106,7 @@ public class SceneAssetObject : IAssetObject
     {
         if(MAnimator != null)
         {
-            AnimationName = aName;
+            AnimationName = aName.ToLower();
             MAnimator.SetFloat(aName, val);
             MAnimator.speed = speed;
             OnAnimatorEnd = onAnimatorEnd;
@@ -119,7 +119,7 @@ public class SceneAssetObject : IAssetObject
     {
         if (MAnimator != null)
         {
-            AnimationName = aName;
+            AnimationName = aName.ToLower();
             MAnimator.SetBool(aName, val);
             MAnimator.speed = speed;
             OnAnimatorEnd = onAnimatorEnd;

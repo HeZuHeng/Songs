@@ -81,7 +81,7 @@ public class CameraMng
     {
         CapsuleCollider capsuleCollider = tran.gameObject.AddComponent<CapsuleCollider>();
         capsuleCollider.height = 1.6f;
-        capsuleCollider.radius = 0.25f;
+        capsuleCollider.radius = 0.3f;
         capsuleCollider.center = new Vector3(0, 0.8f, 0);
         Rigidbody rigidbody = tran.gameObject.GetComponent<Rigidbody>();
         if(rigidbody == null)
