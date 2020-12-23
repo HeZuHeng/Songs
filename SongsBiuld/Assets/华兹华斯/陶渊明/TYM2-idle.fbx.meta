@@ -2120,7 +2120,7 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: cecba61ec6320ee42891f76ee0b5309e,
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 80bc1bc6944917044a1837f10d9517c1,
     type: 3}
   animationType: 2
   humanoidOversampling: 1

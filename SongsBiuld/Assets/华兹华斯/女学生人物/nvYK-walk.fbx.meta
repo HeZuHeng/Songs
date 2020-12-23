@@ -1624,7 +1624,82 @@ ModelImporter:
     13700020: model:model:TFS_Long_Shirt_Prop_23917
     13700022: model:model:TFS_Skirt_21152
     13700024: model:model:TFS_Tie_3593
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: model_model_Arms_ai
+    second: {fileID: 2100000, guid: 01e8c763e7b38394c9e9b361e33c2942, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: model_model_Badge1_ai
+    second: {fileID: 2100000, guid: 266b9d40eaac4374a9acf45c6f28e292, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: model_model_Badge_ai
+    second: {fileID: 2100000, guid: 266b9d40eaac4374a9acf45c6f28e292, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: model_model_EyeMoisture
+    second: {fileID: 2100000, guid: 1eabdd82b46b2474abde15b315d2802c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: model_model_Eyelashes
+    second: {fileID: 2100000, guid: f25fd18227429a140a61b75be290e130, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: model_model_Face_ai
+    second: {fileID: 2100000, guid: 1efb57ea6abe1d4459775bc61861b883, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: model_model_Main1_ai
+    second: {fileID: 2100000, guid: 81cdb90b95df26a44b677bcb31a638e0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: model_model_Main2_ai
+    second: {fileID: 2100000, guid: ffac65fca35f8444ab9eaa961af71aec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: model_model_Main_ai
+    second: {fileID: 2100000, guid: a7c463ea8947f3340a1ee34f3924e6d0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: model_model_Sclera_ai
+    second: {fileID: 2100000, guid: cde70d160caec764d84e92e9064d1e92, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: model_model_Sole_ai
+    second: {fileID: 2100000, guid: 77d2c2290803aad4e9362693bfa9f66a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: model_model_Tie_ai
+    second: {fileID: 2100000, guid: cafbaf630b36b084db485b9945d90480, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: model_model_Torso_ai
+    second: {fileID: 2100000, guid: 5ebf69a78f67bee41aa4b554817593a5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: model_model_main_ai
+    second: {fileID: 2100000, guid: 77471556ba4413046af0a541b6af682a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: model_model_sky108
+    second: {fileID: 2100000, guid: 15bdcdb9b9d94c84d94cd3f382d065be, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -1731,7 +1806,7 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 81c868c9d9844904fb40cdb4ad2cb0e9,
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 3ba4679d793fed34da3c32ebc8801c19,
     type: 3}
   animationType: 2
   humanoidOversampling: 1
