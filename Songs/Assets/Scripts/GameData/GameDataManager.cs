@@ -75,6 +75,7 @@ namespace MREngine
 
         public GameLoadTask GetGameTask(string url)
         {
+            url = url.ToLower();
             AbstractData data = null;
             GameLoadTask task = GetTaskInLoadingTask(url);
             //在任务队列里

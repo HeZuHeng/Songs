@@ -42,22 +42,33 @@ public class QATalkWnd : UIBase
         tip.text = question.startParsing;
 
         TaskData taskData = SongsDataMng.GetInstance().GetTaskData;
-        ModelData modelData = SongsDataMng.GetInstance().GetModelData(taskData.val);
+        ModelData modelData = SongsDataMng.GetInstance().GetModelData(taskData.des);
+        string iconN = string.Empty;
         if (modelData != null)
         {
             talkName.text = modelData.name;
-            Sprite obj = Resources.Load<Sprite>("Sprites/PlayerIcon/" + modelData.icon);
-            if (obj != null)
-            {
-                icon.sprite = obj;
-            }
-            icon.enabled = true;
+            iconN = modelData.icon;
         }
         else
         {
-            icon.enabled = false;
-            talkName.text = "系统";
+            talkName.text = "实验者";
+            SceneAssetObject sceneAssetObject = SceneMng.GetInstance().GetSceneAssetObject(1);
+            if ("nyk".Equals(sceneAssetObject.URL))
+            {
+                iconN = "nyk";
+            }
+            else
+            {
+                iconN = "nvyk";
+            }
         }
+        Sprite obj = Resources.Load<Sprite>("Sprites/PlayerIcon/" + iconN);
+        if (obj != null)
+        {
+            icon.sprite = obj;
+        }
+        icon.enabled = true;
+
         string des = string.Format(question.head, SongsDataMng.GetInstance().Player.name);
         head.m_CallBack.RemoveListener(OnEndParsing);
         head.m_CallBack.RemoveListener(OnHeadEnd);

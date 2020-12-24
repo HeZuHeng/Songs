@@ -22,6 +22,8 @@ public class LoadingWnd : UIBase
 
     protected override void OnEnable()
     {
+        progressBar.value = 0;
+        lblStatus.text = Mathf.Round(0 * 100f) + "%";
         SceneData sceneData = SongsDataMng.GetInstance().GetSceneData;
         if (sceneData  != null)
         {
@@ -44,11 +46,16 @@ public class LoadingWnd : UIBase
         lblStatus.text = "100%";
 
         SceneManager.SetActiveScene(scene);
-       
+        if(SceneController.GetInstance().InitScene)
+        {
+            SceneController.GetInstance().Start();
+        }
     }
 
     void LoadScene(SceneData sceneData)
     {
+        SceneController.GetInstance().Init();
+
         GameLoadTask loadTask = GameDataManager.GetInstance().GetGameTask(sceneData.sceneName);
         loadTask.OnTaskProgress += delegate (float progress)
         {
@@ -59,8 +66,6 @@ public class LoadingWnd : UIBase
                 SceneManager.sceneLoaded += OnSceneLoaded;
                 if (!string.IsNullOrEmpty(path))
                 {
-                    SceneController.GetInstance().Init();
-
                     SceneManager.LoadSceneAsync(path);
                 }
             }

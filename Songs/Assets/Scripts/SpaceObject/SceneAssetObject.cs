@@ -107,7 +107,7 @@ public class SceneAssetObject : IAssetObject
         if(MAnimator != null)
         {
             AnimationName = aName.ToLower();
-            MAnimator.SetFloat(aName, val);
+            MAnimator.SetFloat(AnimationName, val);
             MAnimator.speed = speed;
             OnAnimatorEnd = onAnimatorEnd;
             return MAnimator.GetCurrentAnimatorStateInfo(0).loop;
@@ -120,7 +120,7 @@ public class SceneAssetObject : IAssetObject
         if (MAnimator != null)
         {
             AnimationName = aName.ToLower();
-            MAnimator.SetBool(aName, val);
+            MAnimator.SetBool(AnimationName, val);
             MAnimator.speed = speed;
             OnAnimatorEnd = onAnimatorEnd;
             return MAnimator.GetCurrentAnimatorStateInfo(0).loop;

@@ -79,7 +79,8 @@ public class CameraMng
 
     public void InitPlayer(Transform tran)
     {
-        CapsuleCollider capsuleCollider = tran.gameObject.AddComponent<CapsuleCollider>();
+        CapsuleCollider capsuleCollider = tran.gameObject.GetComponent<CapsuleCollider>();
+        if(capsuleCollider == null) capsuleCollider = tran.gameObject.AddComponent<CapsuleCollider>();
         capsuleCollider.height = 1.6f;
         capsuleCollider.radius = 0.3f;
         capsuleCollider.center = new Vector3(0, 0.8f, 0);
@@ -88,9 +89,11 @@ public class CameraMng
         {
             rigidbody = tran.gameObject.AddComponent<Rigidbody>();
         }
-        rigidbody.constraints = RigidbodyConstraints.None;
-        tran.gameObject.AddComponent<ThirdPersonCharacter>();
-        UserControl = tran.gameObject.AddComponent<ThirdPersonUserControl>();
+        rigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
+        ThirdPersonCharacter thirdPersonCharacter = tran.gameObject.GetComponent<ThirdPersonCharacter>(); 
+        if(thirdPersonCharacter == null) thirdPersonCharacter= tran.gameObject.AddComponent<ThirdPersonCharacter>();
+        UserControl = tran.gameObject.GetComponent<ThirdPersonUserControl>();
+        if(UserControl == null) UserControl = tran.gameObject.AddComponent<ThirdPersonUserControl>();
     }
 
     public void ResetMove()

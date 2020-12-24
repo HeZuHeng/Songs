@@ -156,11 +156,11 @@ public class SongsDataMng
         }
     }
 
-    public ModelData GetModelData(string modelName)
+    public ModelData GetModelData(string id)
     {
         for (int i = 0; i < GetSceneData.datas.Count; i++)
         {
-            if (GetSceneData.datas[i].name.Equals(modelName))
+            if (GetSceneData.datas[i].Id.ToString().Equals(id))
             {
                 return GetSceneData.datas[i];
             }

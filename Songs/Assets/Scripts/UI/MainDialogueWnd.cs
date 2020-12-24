@@ -64,6 +64,7 @@ public class MainDialogueWnd : UIBase
         talkIcon.enabled = false;
 
         int talking = 0;
+        string talkId = "0";
         taskName.text = taskData.name;
         switch (taskData.type)
         {
@@ -88,16 +89,16 @@ public class MainDialogueWnd : UIBase
                     bool.TryParse(strs[3], out b);
                     bool loop = sceneAsset.PlayAnimator(strs[4], b, speed,delegate(string aName)
                     {
-                        if(strs.Length >= 6 && aName.Equals(strs[4]))
+                        if (aName.Equals(strs[4]))
                         {
-                            sceneAsset.PlayAnimator(strs[4], !b, speed, null);
                             taskData.TaskState = TaskState.End;
                         }
+                        if(strs.Length >= 6)
+                        {
+                            sceneAsset.PlayAnimator(strs[4], !b, speed, null);
+                        }
                     });
-                    if (!loop)
-                    {
-                        SceneController.GetInstance().AddPlayAnimator(sceneAsset);
-                    }
+                    SceneController.GetInstance().AddPlayAnimator(sceneAsset);
                 }
                 else if ((AnimatorType)aType == AnimatorType.FLOAT)
                 {
@@ -105,16 +106,17 @@ public class MainDialogueWnd : UIBase
                     float.TryParse(strs[3], out f);
                     bool loop = sceneAsset.PlayAnimator(strs[4], f, speed, delegate (string aName)
                     {
-                        if (strs.Length >= 6 && aName.Equals(strs[4]))
+                        if (aName.Equals(strs[4]))
+                        {
+                            taskData.TaskState = TaskState.End;
+                        }
+                        if (strs.Length >= 6)
                         {
                             sceneAsset.PlayAnimator(strs[4], 1 - f, speed, null);
                             taskData.TaskState = TaskState.End;
                         }
                     });
-                    if (!loop)
-                    {
-                        SceneController.GetInstance().AddPlayAnimator(sceneAsset);
-                    }
+                    SceneController.GetInstance().AddPlayAnimator(sceneAsset);
                 }
                 talking = 1;
                 break;
@@ -162,28 +164,40 @@ public class MainDialogueWnd : UIBase
                 CameraMng.GetInstance().SetFirstPersonMove();
                 break;
             case TaskType.Talk:
-                ModelData modelData = SongsDataMng.GetInstance().GetModelData(taskData.val);
-                if(modelData != null)
-                {
-                    talkName.text = modelData.name;
-                    Sprite obj = Resources.Load<Sprite>("Sprites/PlayerIcon/" + modelData.icon);
-                    if (obj != null)
-                    {
-                        talkIcon.sprite = obj;
-                    }
-                    talkIcon.enabled = true;
-                }
-                else
-                {
-                    talkIcon.enabled = false;
-                    talkName.text = "系统";
-                }
+                talkId = taskData.val;
                 talking = 1;
                 break;
         }
         
         if (talking == 1 && !string.IsNullOrEmpty(taskData.des))
         {
+            ModelData modelData = SongsDataMng.GetInstance().GetModelData(talkId);
+            string iconN = string.Empty;
+            if (modelData != null)
+            {
+                talkName.text = modelData.name;
+                iconN = modelData.icon;
+            }
+            else
+            {
+                talkName.text = "实验者";
+                SceneAssetObject sceneAssetObject = SceneMng.GetInstance().GetSceneAssetObject(1);
+                if ("nyk".Equals(sceneAssetObject.URL))
+                {
+                    iconN = "nyk";
+                }
+                else
+                {
+                    iconN = "nvyk";
+                }
+            }
+            Sprite obj = Resources.Load<Sprite>("Sprites/PlayerIcon/" + modelData.icon);
+            if (obj != null)
+            {
+                talkIcon.sprite = obj;
+            }
+            talkIcon.enabled = true;
+
             talkParent.gameObject.SetActive(talking == 1);
             taskNameParent.gameObject.SetActive(talking == 0);
             Show(taskData.des);

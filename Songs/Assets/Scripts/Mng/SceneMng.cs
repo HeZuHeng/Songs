@@ -36,7 +36,7 @@ public class SceneMng
     public SimpleProgressSignal OnSceneLoadProgress;
     public float Progress { get { return LoadedCount / spaceObjects.Count; } }
 
-    protected float LoadedCount { get; set; }
+    public float LoadedCount { get; set; }
 
     Dictionary<int, IObject> spaceObjects = new Dictionary<int, IObject>();
 
@@ -87,6 +87,7 @@ public class SceneMng
         if (spaceObjects.TryGetValue(targetId, out obj))
         {
             spaceObjects.Remove(targetId);
+            LoadedCount--;
             if (obj.GetType() == typeof(SceneAssetObject))
             {
                 IAssetObject asset = (IAssetObject)obj;

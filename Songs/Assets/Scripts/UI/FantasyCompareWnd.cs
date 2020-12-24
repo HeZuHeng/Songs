@@ -15,6 +15,9 @@ public class FantasyCompareWnd : UIBase
     RectTransform rect;
     Vector3 initJh;
     Vector3 initSx;
+
+    bool jh = false;
+    bool sx = false;
     protected override void Awake()
     {
         base.Awake();
@@ -23,6 +26,29 @@ public class FantasyCompareWnd : UIBase
         rect = transform as RectTransform;
         initJh = textJh.position;
         initSx = textSx.position;
+    }
+
+    protected override void OnEnable()
+    {
+         jh = false;
+         sx = false;
+    }
+
+    protected override void OnDisable()
+    {
+        base.OnDisable();
+        TaskData taskData = SongsDataMng.GetInstance().GetTaskData;
+        if (taskData != null)
+        {
+            if (taskData.type == TaskType.OpenWnd)
+            {
+                UIType type = (UIType)System.Enum.Parse(typeof(UIType), taskData.val);
+                if (type == Type)
+                {
+                    taskData.TaskState = TaskState.End;
+                }
+            }
+        }
     }
 
     public void OnDragJh()
@@ -43,6 +69,14 @@ public class FantasyCompareWnd : UIBase
                 textJh.gameObject.SetActive(false);
             };
         }
+        else
+        {
+            jh = true;
+            if(jh && sx)
+            {
+                UIMng.Instance.OpenUI(UIType.NONE);
+            }
+        }
     }
 
     public void OnDragSx()
@@ -61,6 +95,14 @@ public class FantasyCompareWnd : UIBase
             {
                 textSx.gameObject.SetActive(false);
             };
+        }
+        else
+        {
+            sx = true;
+            if (jh && sx)
+            {
+                UIMng.Instance.OpenUI(UIType.NONE);
+            }
         }
     }
 }

@@ -48,10 +48,11 @@ public class SceneController
     {
         Close();
         InitScene = false;
-        SceneMng.GetInstance().OnSceneLoadProgress += OnSceneLoaded;
         SceneData sceneData = SongsDataMng.GetInstance().GetSceneData;
         CurSceneData = sceneData;
         if (sceneData == null) return;
+
+        SceneMng.GetInstance().OnSceneLoadProgress += OnSceneLoaded;
 
         GameLoadTask loadCutscenen = GameDataManager.GetInstance().GetGameTask(CurSceneData.sceneCutscenen);
         loadCutscenen.OnTaskProgress += delegate (float progress)
@@ -66,7 +67,6 @@ public class SceneController
                 }
             }
         };
-
         GameLoadTask loadCamera = GameDataManager.GetInstance().GetGameTask(CurSceneData.sceneCamera);
         loadCamera.OnTaskProgress += delegate (float progress)
         {
@@ -96,14 +96,14 @@ public class SceneController
             }
         };
 
+        SceneAssetObject assetObject = SceneMng.GetInstance().AddSpaceAsset(1, "nvyk", "女游客");
+
         ModelData modelData = null;
         for (int i = 0; i < CurSceneData.datas.Count; i++)
         {
             modelData = CurSceneData.datas[i];
             SceneMng.GetInstance().AddSpaceAsset(modelData);
         }
-
-        SceneAssetObject assetObject = SceneMng.GetInstance().AddSpaceAsset(1, "nvyk", "女游客");
 
         if (HeavenController.Name.Equals(sceneData.name))
         {
@@ -121,14 +121,15 @@ public class SceneController
         childController = null;
         UIMng.Instance.ConcealUI(UIType.SettingWnd);
         UIMng.Instance.ConcealUI(UIType.MainDialogueWnd);
-
         SceneMng.GetInstance().OnSceneLoadProgress -= OnSceneLoaded;
         palyAnimators.Clear();
         CameraMng.GetInstance().ResetMove();
+
         if(playCutsceneObj != null) GameObject.DestroyImmediate(playCutsceneObj);
         if (cameraObj != null) GameObject.DestroyImmediate(cameraObj);
         if (initTranObj != null) GameObject.DestroyImmediate(initTranObj);
         if (CurSceneData == null) return;
+
         for (int i = 0; i < CurSceneData.datas.Count; i++)
         {
             SceneMng.GetInstance().RemoveSpaceObject(CurSceneData.datas[i].Id);
@@ -174,12 +175,19 @@ public class SceneController
         AnimatorStateInfo stateInfo;
         for (int i = 0; i < palyAnimators.Count;)
         {
-            stateInfo = palyAnimators[i].MAnimator.GetCurrentAnimatorStateInfo(0);
-            if (stateInfo.normalizedTime >= 1.0f && stateInfo.IsName(palyAnimators[i].AnimationName))
+            if (palyAnimators[i].MAnimator != null)
             {
-                SceneAssetObject sceneAsset = palyAnimators[i];
-                palyAnimators.RemoveAt(i);
-                if (sceneAsset.OnAnimatorEnd != null) sceneAsset.OnAnimatorEnd(sceneAsset.AnimationName);
+                stateInfo = palyAnimators[i].MAnimator.GetCurrentAnimatorStateInfo(0);
+                if (stateInfo.normalizedTime >= 1.0f && stateInfo.IsName(palyAnimators[i].AnimationName))
+                {
+                    SceneAssetObject sceneAsset = palyAnimators[i];
+                    palyAnimators.RemoveAt(i);
+                    if (sceneAsset.OnAnimatorEnd != null) sceneAsset.OnAnimatorEnd(sceneAsset.AnimationName);
+                }
+                else
+                {
+                    i++;
+                }
             }
             else
             {
@@ -194,7 +202,6 @@ public class SceneController
         {
             SceneMng.GetInstance().OnSceneLoadProgress -= OnSceneLoaded;
             InitScene = true;
-            Start();
         }
     }
 }
@@ -345,8 +352,8 @@ public class ThreeSongsController : ChildController
         int id = 0;
         if(strs.Length > 1)int.TryParse(strs[1],out id);
         CameraMng.GetInstance().UserControl.State(false);
-        sceneAsset.PlayAnimator("Shu",true,1,delegate(string a) {
-            sceneAsset.PlayAnimator("Shu", false, 1, null);
+        sceneAsset.PlayAnimator("shu",true,1,delegate(string a) {
+            sceneAsset.PlayAnimator("shu", false, 1, null);
             SongsDataMng.GetInstance().SetNextTaskData(id);
             UIMng.Instance.ConcealUI(UIType.MainDialogueWnd);
             UIMng.Instance.ActivationUI(UIType.MainDialogueWnd);
