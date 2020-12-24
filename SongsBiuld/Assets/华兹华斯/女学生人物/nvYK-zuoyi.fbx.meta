@@ -792,6 +792,16 @@ ModelImporter:
     101572: model:Wrist_L
     101574: model:Wrist_R
     101576: //RootNode
+    101578: model:joint1
+    101580: model:joint2
+    101582: model:joint3
+    101584: model:joint4
+    101586: model:joint5
+    101588: model:nurbsCircle1
+    101590: model:nurbsCircle2
+    101592: model:nurbsCircle3
+    101594: model:nurbsCircle4
+    101596: model:zui
     400000: model:AimSystem
     400002: model:AlignIKToAnkle_L
     400004: model:AlignIKToAnkle_R
@@ -1581,6 +1591,16 @@ ModelImporter:
     401572: model:Wrist_L
     401574: model:Wrist_R
     401576: //RootNode
+    401578: model:joint1
+    401580: model:joint2
+    401582: model:joint3
+    401584: model:joint4
+    401586: model:joint5
+    401588: model:nurbsCircle1
+    401590: model:nurbsCircle2
+    401592: model:nurbsCircle3
+    401594: model:nurbsCircle4
+    401596: model:zui
     2100000: model_model_Sole_ai
     2100002: model_model_Arms_ai
     2100004: model_model_Main_ai
@@ -1624,6 +1644,7 @@ ModelImporter:
     13700020: model:model:TFS_Long_Shirt_Prop_23917
     13700022: model:model:TFS_Skirt_21152
     13700024: model:model:TFS_Tie_3593
+    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
