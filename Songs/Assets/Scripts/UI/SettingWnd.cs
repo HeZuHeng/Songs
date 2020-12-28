@@ -79,7 +79,7 @@ public class SettingWnd : UIBase
     {
         if (val)
         {
-            UIMng.Instance.OpenUI(UIType.SelectPlotWnd);
+            UIMng.Instance.ActivationUI(UIType.SelectPlotWnd);
         }
         else
         {
@@ -95,7 +95,7 @@ public class SettingWnd : UIBase
         }
         else
         {
-            if(SongsDataMng.GetInstance().GetTaskData.TaskState == TaskState.Start) UIMng.Instance.ConcealUI(UIType.MainDialogueWnd);
+            UIMng.Instance.ConcealUI(UIType.MainDialogueWnd);
         }
     }
 
@@ -106,10 +106,14 @@ public class SettingWnd : UIBase
 
     void OnMusic(bool val)
     {
-        AudioSource  audioSource = CameraMng.MainCamera.gameObject.GetComponent<AudioSource>();
-        if(audioSource != null)
+        Scene scene = SceneManager.GetActiveScene();
+        GameObject[] gameObjects = scene.GetRootGameObjects();
+        for (int i = 0; i < gameObjects.Length; i++)
         {
-            audioSource.enabled = val;
+            if (gameObjects[i].name.Equals("InitSound"))
+            {
+                gameObjects[i].SetActive(!gameObjects[i].activeSelf);
+            }
         }
     }
 

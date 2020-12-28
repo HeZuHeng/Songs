@@ -29,6 +29,10 @@ public enum TaskType
     /// </summary>
     DOTween = 5,
     /// <summary>
+    /// 室内第三人称
+    /// </summary>
+    PersonMove,
+    /// <summary>
     /// 上帝视角漫游，摄像机不动
     /// </summary>
     GodRoams,
@@ -60,6 +64,10 @@ public enum TaskType
     /// 问答式
     /// </summary>
     QATalk,
+    /// <summary>
+    /// 切换任务场景
+    /// </summary>
+    TaskChange,
 }
 
 public enum TaskState
@@ -73,7 +81,8 @@ public enum TaskState
 [Serializable]
 public class TasksConfig
 {
-    
+    [XmlElement("任务分支名")]
+    public string name;
     [XmlElement("SceneTasks")]
     public List<SceneTaskData> datas;
 

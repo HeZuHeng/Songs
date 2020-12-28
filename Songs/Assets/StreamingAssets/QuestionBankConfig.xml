@@ -2,7 +2,7 @@
 <QuestionBankConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <QuestionBankDatas>
     <ID>1</ID>
-    <图标></图标>
+    <图标>hzhsqs</图标>
     <题头>Please choose the romantic features of the first stanza.（multiple choices）</题头>
     <阅读>I wandered lonely as a cloud \n That floats on high o’er vales and hills \n When all at once I saw a crowd,\n host, of golden daffodils; \n Besides the lake, beneath the trees, \n Fluttering and dancing in the breeze.</阅读>
     <解析>Natural scenery is often an important theme of romantic poetry. The poet compares the daffodils with himself, and contrasts them with lonely clouds to reflect the vivid scene of the daffodils. It inspires poets to create, and embodies the natural scenery with human being’s “life, emotion and expression”.
@@ -19,7 +19,7 @@
   </QuestionBankDatas>
   <QuestionBankDatas>
     <ID>2</ID>
-    <图标></图标>
+    <图标>hzhsqs</图标>
     <题头>Please choose the romantic features of the second stanza. （multiple choices）</题头>
     <阅读>Continuous as the stars that shine \n And twinkle on the Milky Way, \n They stretched in never-ending line \n Along the margin of a bay: \n Ten thousand saw I at a glance, \n Tossing their heads in sprightly dance.</阅读>
     <解析>In the heart of poet, daffodils are no longer just a plant. It has become a messenger of God and a spiritual embodiment. It is this kind of spirit that rejoices the original melancholy heart. Here “continuous”and “never-ending” may suggest that the flowers leave an everlasting impact on Wordsworth.
@@ -36,7 +36,7 @@
   </QuestionBankDatas>
   <QuestionBankDatas>
     <ID>3</ID>
-    <图标></图标>
+    <图标>hzhsqs</图标>
     <题头>Please choose the romantic feature of the third stanza.</题头>
     <阅读>The waves beside them danced; but they \n Outdid the sparking waves in glee: \n A poet could not but be gay, \n In such a jocund company! \n I gazed – and gazed – but little thought \n What wealth the show to me had brought.</阅读>
     <解析>The poet stares at the daffodils lingeringly, without yet realizing the complete extent of the positive effects of encountering them. Even when the poet calls for the original emotion of “returning to nature”, he does not forget the relative independence of himself and nature.
@@ -52,7 +52,7 @@
   </QuestionBankDatas>
   <QuestionBankDatas>
     <ID>4</ID>
-    <图标></图标>
+    <图标>hzhsqs</图标>
     <题头>Select two lines from the first 3 stanzas that demonstrate the daffodils have the power to change Wordsworth’s mood.（multiple choices）</题头>
     <阅读>You have managed to find the memory, but in the last two sentences of the third stanza it is mentioned that the poet has doubts about the spiritual wealth that daffodils can bring. In order for the poet to gain permanent spiritual wealth, you need to answer questions to extend his memory, which enables Wordsworth to look back and re-experience the magical and special time he has whenever he feels upset or lonely.</阅读>
     <解析>您已成功找到记忆，但在第三节诗的最后两句提到诗人对水仙能够带来多少的精神财富产生了疑惑，为了使诗人获得永久的精神财富，需要您回答问题为他延长记忆。让诗人在任何沮丧之时都能够回忆起当时水仙花的画面，重获精神的救赎与治愈。</解析>
@@ -67,7 +67,7 @@
   </QuestionBankDatas>
   <QuestionBankDatas>
     <ID>5</ID>
-    <图标></图标>
+    <图标>hzhsqs</图标>
     <题头>What does “ daffodil ” stand for? （multiple choices）</题头>
     <阅读></阅读>
     <解析></解析>
@@ -82,7 +82,7 @@
   </QuestionBankDatas>
   <QuestionBankDatas>
     <ID>6</ID>
-    <图标></图标>
+    <图标>nvyk</图标>
     <题头>Walking and wandering with Wordsworth allow the experimenter to transcend his present circumstances, and encounter his genuine self. Why? （multiple choices）</题头>
     <阅读>Your poem-reading is about to end. Please complete the questions to find the way back to the former residence. \n 您的体验即将结束，请完成弹出的相应问题，找到回故居的通道。</阅读>
     <解析></解析>
@@ -98,9 +98,9 @@
   </QuestionBankDatas>
   <QuestionBankDatas>
     <ID>7</ID>
-    <图标></图标>
+    <图标>tym</图标>
     <题头>Hi, {0}, 你能想到为何这首诗中的“悠然见南山”一句，用的是“见”，而不是“望”吗？</题头>
-    <阅读>/饮酒其五.txt</阅读>
+    <阅读>yinjiuqi5.txt</阅读>
     <解析>从主客体的关系去考虑。</解析>
     <选择>A、从属关系</选择>
 	<选择>B、平等关系</选择>
@@ -109,10 +109,10 @@
   </QuestionBankDatas>
   <QuestionBankDatas>
     <ID>8</ID>
-    <图标></图标>
+    <图标>hzhs</图标>
     <题头>Since this is mentioned, Mr. Wordsworth, the use of the word ‘gaze’ in your poem seems to have a kind of thinking in the depiction of nature, what does it mean? {0}, what do you think？
 \n 既然提到这个，在您的诗中用了gaze一词，在描绘自然中似乎带有着一种思索，这背后代表了什么吗？</题头>
-    <阅读>/我好似一朵孤独的流云.txt</阅读>
+    <阅读>iwanderedlonelyasacloud.txt</阅读>
     <解析>从体现自我的角度思考。</解析>
     <选择>A、从属关系</选择>
 	<选择>B、平等关系</选择>

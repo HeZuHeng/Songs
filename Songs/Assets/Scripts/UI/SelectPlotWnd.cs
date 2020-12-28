@@ -12,6 +12,7 @@ public class SelectPlotWnd : UIBase
     public Button confirmBtn;
     public Button lastBtn;
     public Button nextBtn;
+    public Text taskName;
 
     public Button returnBtn;
 
@@ -19,7 +20,7 @@ public class SelectPlotWnd : UIBase
     {
         base.Awake();
         Type = UIType.SelectPlotWnd;
-        MutexInterface = true;
+        MutexInterface = false;
     }
 
     protected override void Start()
@@ -35,6 +36,7 @@ public class SelectPlotWnd : UIBase
     {
         base.OnEnable();
         //returnBtn.gameObject.SetActive(SongsDataMng.GetInstance().GetSceneTaskData != null);
+        transform.SetAsLastSibling();
         Show();
     }
 
@@ -54,8 +56,12 @@ public class SelectPlotWnd : UIBase
         }
 
         TasksConfig tasksConfig = SongsDataMng.GetInstance().GetTasksConfig;
+        if (tasksConfig == null) return;
+        taskName.text = tasksConfig.name;
+        SceneTaskData sceneTaskData = SongsDataMng.GetInstance().GetSceneTaskData;
         Transform tran = null;
         int child = parent.childCount;
+        int curId = 0;
         for (int i = 0; i < tasksConfig.datas.Count; i++)
         {
             if(child > i)
@@ -70,20 +76,36 @@ public class SelectPlotWnd : UIBase
                 tran.localPosition = Vector3.zero;
                 tran.localScale = Vector3.one;
             }
+            if (sceneTaskData != null && sceneTaskData.name.Equals(tasksConfig.datas[i].name))
+            {
+                curId = i + 1;
+            }
             tran.GetComponent<PlotItemUI>().Show(tasksConfig.datas[i]);
             tran.gameObject.SetActive(true);
         }
+        //scrollFlow.startCenterIndex = curId;
         scrollFlow.Refrshed();
+        SetItem(curId);
+    }
+
+    void SetItem(int curId)
+    {
+        if(curId <0 || curId >= scrollFlow.listEnhanceItems.Count)
+        {
+            curId = 0;
+        }
+        scrollFlow.SetHorizontalTargetItemIndex(scrollFlow.listEnhanceItems[curId]);
     }
 
     void OnConfirm()
     {
         PlotItemUI plotItemUI = scrollFlow.curCenterItem.GetComponent<PlotItemUI>();
-        if(plotItemUI != null)
+        if (SongsDataMng.GetInstance().GetSceneTaskData != plotItemUI.sceneTaskData)
         {
             SongsDataMng.GetInstance().SetSceneTaskData(plotItemUI.sceneTaskData);
+            UIMng.Instance.OpenUI(UIType.LoadingWnd);
         }
-        UIMng.Instance.OpenUI(UIType.LoadingWnd);
+        UIMng.Instance.ConcealUI(UIType.SelectPlotWnd);
     }
 
     void OnLast()
@@ -98,13 +120,7 @@ public class SelectPlotWnd : UIBase
 
     void OnReturn()
     {
-        if(SongsDataMng.GetInstance().GetSceneTaskData != null)
-        {
-            UIMng.Instance.OpenUI(UIType.NONE);
-        }
-        else
-        {
-            UIMng.Instance.OpenUI(UIType.IntroductionWnd);
-        }
+        UIMng.Instance.ConcealUI(UIType.SelectPlotWnd);
+        UIMng.Instance.OpenUI(UIType.IntroductionWnd);
     }
 }

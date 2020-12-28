@@ -14,7 +14,9 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
         private Vector3 off;
         private bool _isLocked = false;
+        private bool walk = true;
 
+        public Vector3 offset = new Vector3(0, 2, 0);
         private void Start()
         {
             // get the transform of the main camera
@@ -33,9 +35,21 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             m_Character = GetComponent<ThirdPersonCharacter>();
         }
 
+        private void OnEnable()
+        {
+           //if(m_Character != null) m_Character.enabled = true;
+        }
+
         private void OnDisable()
         {
             _isLocked = false;
+           //if(m_Character != null) m_Character.enabled = false;
+        }
+
+        public void State(bool walk = true)
+        {
+            this.walk = walk;
+            if (m_Character != null) m_Character.State(walk);
         }
 
         public void SetMainCamera(Transform tran, bool isLocked = false)
@@ -55,13 +69,37 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
         private void LateUpdate()
         {
-           if(!_isLocked && m_Cam != null) m_Cam.position = transform.position;
+            if (!_isLocked && m_Cam != null) m_Cam.position = transform.position + offset;
         }
+
+        //Vector3 m_CamPos = Vector3.zero;
+        //Vector3 thirdPos = Vector3.zero;
+        //Vector3 direction = new Vector3();
+        //private void ProcessMode()
+        //{
+        //    m_CamPos = transform.position + offset;
+        //    thirdPos = transform.position + Vector3.up * offset.y;
+        //    direction = (m_CamPos - thirdPos).normalized;
+        //    RaycastHit hit;
+        //    if (Physics.Raycast(thirdPos, direction, out hit, Vector3.Distance(thirdPos,m_CamPos)))
+        //    {
+        //        if(hit.transform.GetHashCode() != transform.GetHashCode())
+        //        {
+        //            m_Cam.position = hit.point - direction * offset.z;
+        //        }
+        //    }
+        //    else
+        //    {
+        //        m_Cam.position = m_CamPos - direction * offset.z;
+        //    }
+        //    //Debug.Log(m_Cam.forward);
+        //}
 
         // Fixed update is called in sync with physics
         private void FixedUpdate()
         {
             // read inputs
+            if (!walk) return;
             float h = Input.GetAxis("Horizontal");
             float v = Input.GetAxis("Vertical");
             bool crouch = Input.GetKey(KeyCode.C);

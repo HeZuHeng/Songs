@@ -78,7 +78,7 @@ public class QATalkWnd : UIBase
 
     IEnumerator GetSongFileText(string path)
     {
-        UnityWebRequest unityWeb = UnityWebRequest.Get(Application.streamingAssetsPath + path);
+        UnityWebRequest unityWeb = UnityWebRequest.Get(Application.streamingAssetsPath + "/" + path.ToLower());
         yield return unityWeb.SendWebRequest();
         if (unityWeb.isDone)
         {
@@ -99,6 +99,12 @@ public class QATalkWnd : UIBase
         rectTransform.gameObject.SetActive(false);
         QuestionBankData question = SongsDataMng.GetInstance().GetQuestionBankData;
         if (question == null) return;
+        Sprite obj = Resources.Load<Sprite>("Sprites/PlayerIcon/" + question.icon);
+        if (obj != null)
+        {
+            icon.sprite = obj;
+        }
+        icon.enabled = true;
         head.m_CallBack.RemoveListener(OnHeadEnd);
         head.m_CallBack.RemoveListener(OnEndParsing);
         head.m_CallBack.AddListener(OnEndParsing);

@@ -19,7 +19,6 @@ public class HZHSEndWnd : UIBase
     public void OnEnd()
     {
         SongsDataMng.GetInstance().SetTaskConfigData(0);
-        UIMng.Instance.OpenUI(UIType.SelectPlotWnd);
-
+        UIMng.Instance.ActivationUI(UIType.SelectPlotWnd);
     }
 }

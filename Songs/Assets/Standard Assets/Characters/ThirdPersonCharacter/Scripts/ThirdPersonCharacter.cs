@@ -42,7 +42,17 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			m_OrigGroundCheckDistance = m_GroundCheckDistance;
 		}
 
-		private Vector3 move;
+		public void State(bool walk = true)
+		{
+			if (m_Animator != null && !walk) m_Animator.SetFloat("forward", 0, 0, Time.deltaTime);
+		}
+
+		private void OnDisable()
+        {
+			if(m_Animator != null) m_Animator.SetFloat("forward", 0, 0, Time.deltaTime);
+		}
+
+        private Vector3 move;
 		public void Move(Vector3 move, bool crouch, bool jump)
 		{
 			this.move = move;
@@ -119,11 +129,11 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		{
 			if(move == Vector3.zero)
             {
-				m_Animator.SetFloat("Forward", 0, 0, Time.deltaTime);
+				m_Animator.SetFloat("forward", 0, 0, Time.deltaTime);
 			}
 			else
             {
-				m_Animator.SetFloat("Forward", m_ForwardAmount, 0.1f, Time.deltaTime);
+				m_Animator.SetFloat("forward", m_ForwardAmount, 0, Time.deltaTime);
 				//Debug.Log(m_ForwardAmount);
 			}
 			// update the animator parameters
@@ -200,9 +210,14 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		{
 			// we implement this function to override the default root motion.
 			// this allows us to modify the positional speed before it's applied.
-			if (Time.deltaTime > 0 && m_ForwardAmount > 0.1f)
+			if (Time.deltaTime > 0 && m_ForwardAmount >= 0.6f)
 			{
-				Vector3 v = (move * 0.0125f * m_MoveSpeedMultiplier) / Time.deltaTime;
+				float speed = 0.02f;
+				if (Application.platform == RuntimePlatform.WebGLPlayer)
+                {
+					speed = 0.04f;
+				}
+				Vector3 v = (move * speed * m_MoveSpeedMultiplier) / Time.deltaTime;
 
 				// we preserve the existing y part of the current velocity.
 				v.y = m_Rigidbody.velocity.y;
@@ -210,7 +225,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				//Debug.Log(m_ForwardAmount + " : " + move.magnitude);
 			}
 		}
-
 
 		void CheckGroundStatus()
 		{

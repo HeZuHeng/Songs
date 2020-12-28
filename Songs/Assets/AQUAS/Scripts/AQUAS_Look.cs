@@ -72,13 +72,19 @@ namespace AQUAS
             {
                 if (Input.GetAxis("Mouse ScrollWheel") > 0)
                 {
-                    if (_playerRootT.localPosition.magnitude < 2.5f) return;
-                    _playerRootT.Translate(Vector3.forward);
+                    offset += Vector3.forward * 0.1f;
+                    if(offset.magnitude < 0.5f)
+                    {
+                        offset.z = -0.5f;
+                    }
                 }
                 if (Input.GetAxis("Mouse ScrollWheel") < 0)
                 {
-                    if (_playerRootT.localPosition.magnitude > 20) return;
-                    _playerRootT.Translate(-Vector3.forward);
+                    offset -= Vector3.forward * 0.1f;
+                    if(offset.magnitude > 20)
+                    {
+                        offset.z = -20;
+                    }
                 }
             }
             
@@ -108,16 +114,38 @@ namespace AQUAS
             if (parent != null)
             {
                 parent.Rotate(0f, rotAverageX, 0f, Space.World);
-                float x = parent.localEulerAngles.x > 180 ? parent.localEulerAngles.x - 360 : parent.localEulerAngles.x;
+                float x = _playerRootT.localEulerAngles.x > 180 ? _playerRootT.localEulerAngles.x - 360 : _playerRootT.localEulerAngles.x;
                 if (rotAverageY > 0 && x < 0) return;
                 if (rotAverageY < 0 && x > 70) return;
-                parent.Rotate(-rotAverageY, 0f, 0f, Space.Self);
+                _playerRootT.Rotate(-rotAverageY, 0f, 0f, Space.Self);
+                ProcessMode();
             }
             else
             {
                 _playerRootT.Rotate(0f, rotAverageX, 0f, Space.World);
                 _cameraT.Rotate(-rotAverageY, 0f, 0f, Space.Self);
             }
+        }
+        Vector3 offset = new Vector3(0, 0, -0.8f);
+        Vector3 m_CamPos = Vector3.zero;
+        Vector3 thirdPos = Vector3.zero;
+        Vector3 direction = new Vector3();
+        private void ProcessMode()
+        {
+            m_CamPos = _playerRootT.position;
+            thirdPos = parent.position;
+            direction = (thirdPos - m_CamPos).normalized;
+            RaycastHit hit;
+            Debug.DrawLine(thirdPos, m_CamPos,Color.red);
+            if (Physics.Raycast(thirdPos, m_CamPos, out hit, 1))
+            {
+                _playerRootT.localPosition = hit.distance * offset * 0.8f;
+            }
+            else
+            {
+                _playerRootT.localPosition = offset;
+            }
+            //Debug.Log(m_Cam.forward);
         }
 
         public void SetParent(Transform tran)

@@ -290,7 +290,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: d5def7c894abc5949b0196dc8212c562, type: 3}
-    m_FontSize: 36
+    m_FontSize: 40
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 2
@@ -380,7 +380,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\u8BD7\u4EBA\u4ECB\u7ECD"
+  m_Text: "\u8BD7\u4EBA\u60E0\u7279\u66FC\u4ECB\u7ECD"
 --- !u!1 &5591028547193467906
 GameObject:
   m_ObjectHideFlags: 0

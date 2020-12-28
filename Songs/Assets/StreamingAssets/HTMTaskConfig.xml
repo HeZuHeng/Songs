@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <TasksConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <任务分支名>分支二：惠特曼</任务分支名>
   <SceneTasks 场景任务名="体现诗人的平等" 图标="矩形 8" 场景数据="华兹华斯书房">
     <TaskDatas ID="0" 任务名="张三" 下一个="12" 类型="None" />
     <TaskDatas ID="0" 任务名="李四" 下一个="14" 类型="None" />

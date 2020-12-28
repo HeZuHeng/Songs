@@ -184,6 +184,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8933262821770293691, guid: 5ddf7438a90002c4cad608063deab05c,
+        type: 3}
+      propertyPath: TestSceneName
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5138143236767656779, guid: 5ddf7438a90002c4cad608063deab05c,
         type: 3}
       propertyPath: m_IsActive
@@ -202,7 +207,7 @@ PrefabInstance:
     - target: {fileID: 330423710286306335, guid: 5ddf7438a90002c4cad608063deab05c,
         type: 3}
       propertyPath: m_MatchWidthOrHeight
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 330423710286306335, guid: 5ddf7438a90002c4cad608063deab05c,
         type: 3}

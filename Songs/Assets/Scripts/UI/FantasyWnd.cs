@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Songs;
 using DG.Tweening;
+using Coffee.UIEffects;
 
 public class FantasyWnd : UIBase
 {
@@ -24,9 +25,10 @@ public class FantasyWnd : UIBase
     };
 
     public Image[] images;
+    public UIShadow[] shadows;
     public Image Item;
     public ScrollRect scrollRect;
-    public Text tip;
+    public TrendsText tip;
 
     int index = 0;
     protected override void Awake()
@@ -45,12 +47,12 @@ public class FantasyWnd : UIBase
         {
             images[i].gameObject.SetActive(false);
         }
-        Show();
         for (int i = 0; i < scrollRect.content.childCount; i++)
         {
             scrollRect.content.GetChild(i).localScale = Vector3.one;
             scrollRect.content.GetChild(i).gameObject.SetActive(true);
         }
+        Show();
     }
 
     public void OnCilck(Text game)
@@ -118,7 +120,17 @@ public class FantasyWnd : UIBase
             return;
         }
         tip.transform.parent.gameObject.SetActive(true);
-        tip.text = Tips[index];
+        tip.m_CallBack.RemoveListener(ShowIconTip);
+        tip.m_CallBack.AddListener(ShowIconTip);
+        tip.Play(Tips[index]);
+    }
+
+    void ShowIconTip()
+    {
+        for (int i = 0; i < shadows.Length; i++)
+        {
+            shadows[i].enabled = index == i;
+        }
     }
 
     void NextQuestion()

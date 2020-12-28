@@ -119,6 +119,7 @@ public class SceneController
     public void Close()
     {
         childController = null;
+        UIMng.Instance.ConcealUI(UIType.LeftDialogueWnd);
         UIMng.Instance.ConcealUI(UIType.SettingWnd);
         UIMng.Instance.ConcealUI(UIType.MainDialogueWnd);
         SceneMng.GetInstance().OnSceneLoadProgress -= OnSceneLoaded;

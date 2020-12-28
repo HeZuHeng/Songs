@@ -23,10 +23,11 @@ namespace SpaceSimulation
         {
             DontDestroyOnLoad(this);
 #if UNITY_WEBGL
-            Application.targetFrameRate = -1;
+            Application.targetFrameRate = 30;
 #else
             Application.targetFrameRate = 120;
 #endif
+            //TaskXml();
             //Xml();
             //ModelXml();
             if (!enabled) return;
@@ -83,6 +84,21 @@ namespace SpaceSimulation
             GameDataLoader.GetInstance().Terminate();
             GameDataManager.GetInstance().Terminate();
         }
+
+        //void TaskXml()
+        //{
+        //    TasksConfig tasksConfig = new TasksConfig();
+
+        //    tasksConfig.name = "strg";
+        //    SceneTaskData sceneTaskData = new SceneTaskData();
+        //    sceneTaskData.name = "000";
+        //    tasksConfig.datas.Add(sceneTaskData) ;
+        //    using (FileStream fileStream = new FileStream(Application.streamingAssetsPath + "/TasksConfig111.xml", FileMode.Create))
+        //    {
+        //        XmlSerializer xmlSerializer = new XmlSerializer(typeof(TasksConfig));
+        //        xmlSerializer.Serialize(fileStream, tasksConfig);
+        //    }
+        //}
 
         //void ModelXml()
         //{

@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Songs;
+using Coffee.UIEffects;
 
 public class MainDialogueWnd : UIBase
 {
@@ -19,24 +20,27 @@ public class MainDialogueWnd : UIBase
     public Button next;
 
     TaskData taskData;
+    UIShiny taskNameParentShiny;
+    Animator taskNameParentAnimator;
 
     protected override void Awake()
     {
         base.Awake();
         Type = UIType.MainDialogueWnd;
         MutexInterface = false;
+        taskNameParentShiny = taskNameParent.GetComponentInChildren<UIShiny>();
+        taskNameParentAnimator = taskNameParent.GetComponentInChildren<Animator>();
     }
 
     protected override void Start()
     {
         base.Start();
-        next.onClick.AddListener(OnNext);
+        next.onClick.AddListener(OnRun);
     }
 
     protected override void OnEnable()
     {
         base.OnEnable();
-        
         Show();
     }
 
@@ -50,14 +54,19 @@ public class MainDialogueWnd : UIBase
 
     void Show()
     {
-        talkParent.gameObject.SetActive(false);
-        taskNameParent.gameObject.SetActive(false);
         taskData = SongsDataMng.GetInstance().GetTaskData;
         if (taskData == null)
         {
             UIMng.Instance.ConcealUI(this.Type);
             return;
         }
+        talkParent.gameObject.SetActive(false);
+        taskNameParent.gameObject.SetActive(false);
+        next.gameObject.SetActive(false);
+
+        taskNameParentShiny.enabled = false;
+        taskNameParentAnimator.enabled = false;
+
         taskData.onStateChange.RemoveListener(OnStateChange);
         taskData.onStateChange.AddListener(OnStateChange);
         if (taskData.TaskState == TaskState.Start) taskData.TaskState = TaskState.Run;
@@ -73,6 +82,11 @@ public class MainDialogueWnd : UIBase
                 UIMng.Instance.OpenUI(type);
                 break;
             case TaskType.Click:
+
+                break;
+            case TaskType.TaskChange:
+                taskNameParentShiny.enabled = true;
+                taskNameParentAnimator.enabled = true;
                 break;
             case TaskType.Animator:
                 string[] strs = taskData.val.Split('|');
@@ -118,7 +132,6 @@ public class MainDialogueWnd : UIBase
                     });
                     SceneController.GetInstance().AddPlayAnimator(sceneAsset);
                 }
-                talking = 1;
                 break;
             case TaskType.Question:
                 int qId = 0;
@@ -148,27 +161,55 @@ public class MainDialogueWnd : UIBase
                 UIMng.Instance.ActivationUI(UIType.LeftDialogueWnd);
                 break;
             case TaskType.DOTween:
-                CameraMng.GetInstance().DOTweenPaly(delegate()
+                if(Application.platform == RuntimePlatform.WindowsEditor)
                 {
                     taskData.TaskState = TaskState.End;
-                });
-                talking = 1;
+                }
+                else
+                {
+                    CameraMng.GetInstance().DOTweenPaly(delegate ()
+                    {
+                        taskData.TaskState = TaskState.End;
+                    });
+                }
+                break;
+            case TaskType.PersonMove:
+                CameraMng.GetInstance().SetPersonMove();
+                if ("end".Equals(taskData.val))
+                {
+                    taskData.TaskState = TaskState.End;
+                }
                 break;
             case TaskType.GodRoams:
                 CameraMng.GetInstance().SetGodRoamsMove();
+                if ("end".Equals(taskData.val))
+                {
+                    taskData.TaskState = TaskState.End;
+                }
                 break;
             case TaskType.ThirdPerson:
                 CameraMng.GetInstance().SetThirdPersonMove();
+                if ("end".Equals(taskData.val))
+                {
+                    taskData.TaskState = TaskState.End;
+                }
                 break;
             case TaskType.FirstPerson:
                 CameraMng.GetInstance().SetFirstPersonMove();
+                if ("end".Equals(taskData.val))
+                {
+                    taskData.TaskState = TaskState.End;
+                }
                 break;
             case TaskType.Talk:
                 talkId = taskData.val;
-                talking = 1;
                 break;
         }
-        
+
+        talking = !string.IsNullOrEmpty(taskData.des) ? 1 : 0;
+
+        talkParent.gameObject.SetActive(talking == 1);
+        taskNameParent.gameObject.SetActive(talking == 0);
         if (talking == 1 && !string.IsNullOrEmpty(taskData.des))
         {
             ModelData modelData = SongsDataMng.GetInstance().GetModelData(talkId);
@@ -191,15 +232,13 @@ public class MainDialogueWnd : UIBase
                     iconN = "nvyk";
                 }
             }
-            Sprite obj = Resources.Load<Sprite>("Sprites/PlayerIcon/" + modelData.icon);
+            Sprite obj = Resources.Load<Sprite>("Sprites/PlayerIcon/" + iconN);
             if (obj != null)
             {
                 talkIcon.sprite = obj;
             }
             talkIcon.enabled = true;
 
-            talkParent.gameObject.SetActive(talking == 1);
-            taskNameParent.gameObject.SetActive(talking == 0);
             Show(taskData.des);
         }
     }
@@ -217,7 +256,7 @@ public class MainDialogueWnd : UIBase
     {
         if (taskData.type == TaskType.Talk && taskData != null && taskData.next != 0)
         {
-            taskData.TaskState = TaskState.End;
+            next.gameObject.SetActive(true);
         }
         else
         {
@@ -233,6 +272,21 @@ public class MainDialogueWnd : UIBase
             taskData.onStateChange.RemoveListener(OnStateChange);
             SongsDataMng.GetInstance().SetNextTaskData(taskData);
             Show();
+        }
+    }
+
+    void OnRun()
+    {
+        taskData.TaskState = TaskState.End;
+    }
+
+    public void OnTaskChangeClick()
+    {
+        if(taskData != null && taskData.type == TaskType.TaskChange)
+        {
+            SceneTaskData sceneTask = SongsDataMng.GetInstance().GetSceneTaskDataFromName(taskData.val);
+            SongsDataMng.GetInstance().SetSceneTaskData(sceneTask);
+            UIMng.Instance.OpenUI(UIType.LoadingWnd);
         }
     }
 }

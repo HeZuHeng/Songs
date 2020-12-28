@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using DG.Tweening;
 
 public class FantasyCompareWnd : UIBase
@@ -11,10 +12,13 @@ public class FantasyCompareWnd : UIBase
 
     public RectTransform textJh;
     public RectTransform textSx;
-
+    public RectTransform tip;
+    public Button confirmBtn;
     RectTransform rect;
     Vector3 initJh;
     Vector3 initSx;
+
+
 
     bool jh = false;
     bool sx = false;
@@ -26,29 +30,14 @@ public class FantasyCompareWnd : UIBase
         rect = transform as RectTransform;
         initJh = textJh.position;
         initSx = textSx.position;
+        confirmBtn.onClick.AddListener(OnEnd);
     }
 
     protected override void OnEnable()
     {
          jh = false;
          sx = false;
-    }
-
-    protected override void OnDisable()
-    {
-        base.OnDisable();
-        TaskData taskData = SongsDataMng.GetInstance().GetTaskData;
-        if (taskData != null)
-        {
-            if (taskData.type == TaskType.OpenWnd)
-            {
-                UIType type = (UIType)System.Enum.Parse(typeof(UIType), taskData.val);
-                if (type == Type)
-                {
-                    taskData.TaskState = TaskState.End;
-                }
-            }
-        }
+        //confirmBtn.gameObject.SetActive(false);
     }
 
     public void OnDragJh()
@@ -74,7 +63,7 @@ public class FantasyCompareWnd : UIBase
             jh = true;
             if(jh && sx)
             {
-                UIMng.Instance.OpenUI(UIType.NONE);
+                //confirmBtn.gameObject.SetActive(true);
             }
         }
     }
@@ -101,8 +90,34 @@ public class FantasyCompareWnd : UIBase
             sx = true;
             if (jh && sx)
             {
-                UIMng.Instance.OpenUI(UIType.NONE);
+                //confirmBtn.gameObject.SetActive(true);
             }
+        }
+    }
+
+    void OnEnd()
+    {
+        if (jh && sx)
+        {
+            QuestionBankData question = SongsDataMng.GetInstance().GetQuestionBankData;
+            TaskData taskData = SongsDataMng.GetInstance().GetTaskData;
+            if (taskData != null)
+            {
+                if (taskData.type == TaskType.OpenWnd)
+                {
+                    UIType type = (UIType)System.Enum.Parse(typeof(UIType), taskData.val);
+                    if (type == Type)
+                    {
+                        taskData.TaskState = TaskState.End;
+                    }
+                }
+            }
+            UIMng.Instance.OpenUI(UIType.NONE);
+        }
+        else
+        {
+            tip.DOShakeRotation(2, new Vector3(10, 7, 0));
+            tip.DOShakePosition(2, new Vector3(5, 6, 0));
         }
     }
 }

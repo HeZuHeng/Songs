@@ -141,9 +141,9 @@ public class CameraMng
         mainCameraParent.transform.rotation = MainCamera.transform.rotation;
 
         MainCamera.transform.SetParent(mainCameraParent.transform);
-        MainCamera.transform.localPosition = -Vector3.forward * 3f + Vector3.up * 1.6f;
-        MainCamera.transform.localRotation = Quaternion.identity;
-
+        MainCamera.transform.localPosition = -Vector3.forward * 0.5f;
+        MainCamera.transform.localRotation = Quaternion.Euler(new Vector3(25,0,0));
+        //UserControl.offset = new Vector3(0, 2, 0.5f);
         UserControl.transform.position = InitPosition;
         UserControl.transform.eulerAngles = InitRotation;
         UserControl.gameObject.SetActive(true);
@@ -151,6 +151,25 @@ public class CameraMng
         AQUAS_Look _Look = MainCamera.gameObject.AddComponent<AQUAS_Look>();
         _Look._isLocked = false;
         _Look.SetParent(mainCameraParent.transform);
+    }
+
+    public void SetPersonMove()
+    {
+        ResetCamera();
+
+        MainCamera.transform.SetParent(mainCameraParent.transform);
+        MainCamera.transform.localPosition = -Vector3.forward * 0.8f;
+        MainCamera.transform.localRotation = Quaternion.Euler(new Vector3(25, 0, 0));
+
+        UserControl.transform.position = InitPosition;
+        UserControl.transform.eulerAngles = InitRotation;
+        UserControl.gameObject.SetActive(true);
+        UserControl.SetMainCamera(mainCameraParent.transform);
+        AQUAS_Look _Look = MainCamera.gameObject.AddComponent<AQUAS_Look>();
+        _Look._isLocked = true;
+        _Look.SetParent(mainCameraParent.transform);
+
+        mainCameraParent.localRotation = Quaternion.Euler(Vector3.up * 180);
     }
 
     public void SetGodRoamsMove()

@@ -46,7 +46,7 @@ public class SongsDataMng
     /// <summary>
     /// 当前场景任务数据
     /// </summary>
-    public SceneTaskData GetSceneTaskData { get; private set; }
+    public SceneTaskData GetSceneTaskData { get; set; }
 
     /// <summary>
     /// 当前任务数据

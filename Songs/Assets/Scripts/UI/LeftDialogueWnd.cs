@@ -18,7 +18,7 @@ public class LeftDialogueWnd : UIBase
         base.Awake();
         Type = UIType.LeftDialogueWnd;
         MutexInterface = false;
-        nextBtn.onClick.AddListener(OnNext);
+        nextBtn.onClick.AddListener(OnEnd);
     }
 
     protected override void OnEnable()
@@ -33,6 +33,13 @@ public class LeftDialogueWnd : UIBase
         CheckEnd();
         StopAllCoroutines();
         allTexts = null;
+        lblStatus.m_Text = string.Empty;
+        if (lblStatus.m_AudioClip != null)
+        {
+            AudioClip audioClip = lblStatus.m_AudioClip;
+            lblStatus.m_AudioClip = null;
+            audioClip.UnloadAudioData();
+        }
     }
 
     IEnumerator GetSongFileText(string path)
@@ -56,7 +63,7 @@ public class LeftDialogueWnd : UIBase
     IEnumerator GetSongFileSound(string path)
     {
         string newPath = path.Split('.')[0].ToLower();
-        UnityWebRequest unityWeb = UnityWebRequestAssetBundle.GetAssetBundle(Application.streamingAssetsPath + "/" + newPath);
+        UnityWebRequest unityWeb = UnityWebRequestAssetBundle.GetAssetBundle(Application.streamingAssetsPath + "/WebGL/" + newPath);
         yield return unityWeb.SendWebRequest();
         AudioClip audioClip = null;
         if (unityWeb.isDone)
@@ -69,6 +76,8 @@ public class LeftDialogueWnd : UIBase
                 {
                     audioClip = assetBundle.LoadAsset<AudioClip>(newPath);
                 }
+                assetBundle.Unload(false);
+                assetBundle = null;
             }
         }
         index = 0;
@@ -80,20 +89,23 @@ public class LeftDialogueWnd : UIBase
         lblStatus.m_CallBack.RemoveListener(OnNext);
         lblStatus.m_CallBack.AddListener(OnNext);
         lblStatus.m_AudioClip = audioClip;
-        lblStatus.Play(allTexts[index]);
+        lblStatus.Play(allTexts[index], audioClip);
     }
 
     void OnNext()
     {
         index++;
-        if (CheckEnd())
+        if (index >= allTexts.Length)
         {
             Show();
         }
-        else
-        {
-            UIMng.Instance.ConcealUI(UIType.LeftDialogueWnd);
-        }
+    }
+
+    void OnEnd()
+    {
+        index++;
+        CheckEnd();
+        UIMng.Instance.ConcealUI(UIType.LeftDialogueWnd);
     }
 
     bool CheckEnd()
