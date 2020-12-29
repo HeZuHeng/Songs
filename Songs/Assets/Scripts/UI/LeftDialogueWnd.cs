@@ -88,8 +88,11 @@ public class LeftDialogueWnd : UIBase
     {
         lblStatus.m_CallBack.RemoveListener(OnNext);
         lblStatus.m_CallBack.AddListener(OnNext);
-        lblStatus.m_AudioClip = audioClip;
-        lblStatus.Play(allTexts[index], audioClip);
+        if (index < allTexts.Length)
+        {
+            lblStatus.Play(allTexts[index], audioClip);
+            lblStatus.m_AudioClip = audioClip;
+        }
     }
 
     void OnNext()
