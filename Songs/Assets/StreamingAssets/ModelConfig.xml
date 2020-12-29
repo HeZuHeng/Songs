@@ -9,8 +9,8 @@
     <ModelDatas Id="101" 模型名="华兹华斯" 资源名="hzhs" 图标 ="hzhs">
 	  <position>
         <x>408.4748</x>
-        <y>34.9</y>
-        <z>982.4935</z>
+        <y>34.965</y>
+        <z>982.4985</z>
       </position>
       <eulerAngle>
         <x>0</x>

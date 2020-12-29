@@ -1,0 +1,1273 @@
+fileFormatVersion: 2
+guid: ae6f0b2ef00ceb04ab0ce77d48594e59
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: 332
+    100002: Arch41_028_obj_4
+    100004: Arch41_028_obj_7
+    100006: Arch41_048_obj_5
+    100008: Arch41_048_obj_9
+    100010: Charbany black09
+    100012: Cylinder01
+    100014: Cylinder03
+    100016: dc_04
+    100018: dc_05
+    100020: dc_10
+    100022: dc_11
+    100024: dc_13
+    100026: dc_14
+    100028: houmen
+    100030: Inst3D
+    100032: Inst3D 1
+    100034: Inst3D001
+    100036: Inst3D004
+    100038: Inst3D011
+    100040: Inst3D013
+    100042: Inst3D014
+    100044: Inst3D015
+    100046: Inst3D017
+    100048: Inst3D018
+    100050: Inst3D021
+    100052: Inst3D022
+    100054: Inst3D023
+    100056: Inst3D024
+    100058: Inst3D025
+    100060: Inst3D026
+    100062: lo_Prop_Bed_A_LOD1
+    100064: lo_Prop_Cabinet_A_LOD0
+    100066: lo_Prop_Cabinet_A_LOD1
+    100068: lo_Prop_Cabinet_B_LOD0
+    100070: lo_Prop_Chair_A_LOD0
+    100072: lo_Prop_Chair_A_LOD018
+    100074: lo_Prop_Chair_B_LOD001
+    100076: lo_Prop_ChurchBench_A_LOD1
+    100078: lo_Prop_Clock_A_LOD0
+    100080: lo_Prop_Lamp_E_LOD002
+    100082: lo_Prop_Lamp_E_LOD003
+    100084: lo_Prop_SmallTable_A_LOD0
+    100086: lo_Prop_SmallTable_B_LOD1
+    100088: lo_Prop_Sofa_A_LOD0
+    100090: lo_Prop_Sofa_A_LOD1
+    100092: lo_Prop_Vase_B_LOD002
+    100094: lo_Prop_Vase_B_LOD1
+    100096: Object002
+    100098: Object003
+    100100: Plane02
+    100102: Prop_Rug_A
+    100104: Prop_Rug_A001
+    100106: RefRep.1454.1
+    100108: RefRep.1471.1
+    100110: RefRep.1522.1
+    100112: RefRep.1806.1
+    100114: Shu_01
+    100116: Shu_02
+    100118: Shu_03
+    100120: Shu_04
+    100122: Shu_05
+    100124: Shu_06
+    100126: Shu_07
+    100128: Shu_08
+    100130: Shu_09
+    100132: Shu_10
+    100134: Shu_11
+    100136: Shu_book
+    100138: Shu_top
+    100140: Shu_ye
+    100142: SZ
+    100144: Three
+    100146: Three002
+    100148: Three003
+    100150: Villa2_Deco_WindowGlass_A
+    100152: Villa2_Door_A
+    100154: Villa2_Door_A001
+    100156: Villa2_Door_A003
+    100158: Villa2_Wall_Mid_A
+    100160: Villa2_Wall_Mid_C
+    100162: Villa2_Wall_Mid_E004
+    100164: Vino Blanco19
+    100166: w-cg.taobao.com          330
+    100168: whisky06
+    100170: "\u4E66\u67DC01"
+    100172: "\u4E66\u684C"
+    100174: "\u56F4\u6746"
+    100176: "\u5899\u58C1"
+    100178: "\u5927\u5385"
+    100180: "\u5927\u5385\u95E8"
+    100182: "\u5927\u6446\u4EF6"
+    100184: "\u5929\u79E4"
+    100186: "\u5BF9\u8C61024"
+    100188: "\u5BF9\u8C61026"
+    100190: "\u5BF9\u8C61028"
+    100192: "\u5BF9\u8C61029"
+    100194: "\u5BF9\u8C61030"
+    100196: "\u5BF9\u8C61047"
+    100198: "\u5BF9\u8C61070"
+    100200: "\u5BF9\u8C61077"
+    100202: "\u5BF9\u8C61078"
+    100204: "\u5BF9\u8C61088"
+    100206: "\u5BF9\u8C61089"
+    100208: "\u5BF9\u8C61090"
+    100210: "\u5BF9\u8C61095"
+    100212: "\u5C0F\u6446\u4EF6"
+    100214: "\u5C4B\u9876"
+    100216: "\u690D\u7269"
+    100218: "\u753B\u6846"
+    100220: "\u753B\u6846 1"
+    100222: "\u767D\u6728\u7EB9.3"
+    100224: "\u767D\u8272\u6CE1\u6CAB"
+    100226: "\u77F3\u58A9"
+    100228: "\u7EBF"
+    100230: "\u8001\u5F0F\u706F"
+    100232: //RootNode
+    100234: "\u8239\u5E06"
+    100236: "\u8239\u5E95"
+    100238: "\u8239\u677F"
+    100240: "\u8239\u6CBF"
+    100242: "\u8239\u8231"
+    100244: "\u8239\u8231\u5927\u95E8"
+    100246: "\u8239\u8231\u95E8"
+    100248: "\u8239\u8EAB"
+    100250: "\u94A2\u7434"
+    100252: "\u95E8\u53E3\u5730\u6BEF"
+    100254: "\u95E8\u6846"
+    100256: "\u95E8\u7A97"
+    100258: "\u9910\u684C"
+    100260: "\u9ED1\u4F20\u8EAB"
+    100262: "\u9ED1\u76D8"
+    100264: lo_Prop_Sofa_A_LOD002
+    100266: "\u4E66\u672C"
+    100268: "\u652F\u6491\u6746"
+    100270: "\u6728\u623F"
+    100272: "\u5BF9\u8C61098"
+    100274: "\u5BF9\u8C61099"
+    100276: "\u6000\u8868"
+    100278: "\u6446\u8BBE\u4E66"
+    100280: "\u6CB3\u9A6C\u8BD7\u96C6"
+    100282: "\u767D\u5C45\u6613\u8BD7\u53E5"
+    100284: "\u7FBD\u6BDB"
+    100286: "\u81EA\u6211\u4E4B\u6B4C"
+    100288: "\u838E\u58EB\u6BD4\u4E9A\u8BD7\u96C6"
+    400000: 332
+    400002: Arch41_028_obj_4
+    400004: Arch41_028_obj_7
+    400006: Arch41_048_obj_5
+    400008: Arch41_048_obj_9
+    400010: Charbany black09
+    400012: Cylinder01
+    400014: Cylinder03
+    400016: dc_04
+    400018: dc_05
+    400020: dc_10
+    400022: dc_11
+    400024: dc_13
+    400026: dc_14
+    400028: houmen
+    400030: Inst3D
+    400032: Inst3D 1
+    400034: Inst3D001
+    400036: Inst3D004
+    400038: Inst3D011
+    400040: Inst3D013
+    400042: Inst3D014
+    400044: Inst3D015
+    400046: Inst3D017
+    400048: Inst3D018
+    400050: Inst3D021
+    400052: Inst3D022
+    400054: Inst3D023
+    400056: Inst3D024
+    400058: Inst3D025
+    400060: Inst3D026
+    400062: lo_Prop_Bed_A_LOD1
+    400064: lo_Prop_Cabinet_A_LOD0
+    400066: lo_Prop_Cabinet_A_LOD1
+    400068: lo_Prop_Cabinet_B_LOD0
+    400070: lo_Prop_Chair_A_LOD0
+    400072: lo_Prop_Chair_A_LOD018
+    400074: lo_Prop_Chair_B_LOD001
+    400076: lo_Prop_ChurchBench_A_LOD1
+    400078: lo_Prop_Clock_A_LOD0
+    400080: lo_Prop_Lamp_E_LOD002
+    400082: lo_Prop_Lamp_E_LOD003
+    400084: lo_Prop_SmallTable_A_LOD0
+    400086: lo_Prop_SmallTable_B_LOD1
+    400088: lo_Prop_Sofa_A_LOD0
+    400090: lo_Prop_Sofa_A_LOD1
+    400092: lo_Prop_Vase_B_LOD002
+    400094: lo_Prop_Vase_B_LOD1
+    400096: Object002
+    400098: Object003
+    400100: Plane02
+    400102: Prop_Rug_A
+    400104: Prop_Rug_A001
+    400106: RefRep.1454.1
+    400108: RefRep.1471.1
+    400110: RefRep.1522.1
+    400112: RefRep.1806.1
+    400114: Shu_01
+    400116: Shu_02
+    400118: Shu_03
+    400120: Shu_04
+    400122: Shu_05
+    400124: Shu_06
+    400126: Shu_07
+    400128: Shu_08
+    400130: Shu_09
+    400132: Shu_10
+    400134: Shu_11
+    400136: Shu_book
+    400138: Shu_top
+    400140: Shu_ye
+    400142: SZ
+    400144: Three
+    400146: Three002
+    400148: Three003
+    400150: Villa2_Deco_WindowGlass_A
+    400152: Villa2_Door_A
+    400154: Villa2_Door_A001
+    400156: Villa2_Door_A003
+    400158: Villa2_Wall_Mid_A
+    400160: Villa2_Wall_Mid_C
+    400162: Villa2_Wall_Mid_E004
+    400164: Vino Blanco19
+    400166: w-cg.taobao.com          330
+    400168: whisky06
+    400170: "\u4E66\u67DC01"
+    400172: "\u4E66\u684C"
+    400174: "\u56F4\u6746"
+    400176: "\u5899\u58C1"
+    400178: "\u5927\u5385"
+    400180: "\u5927\u5385\u95E8"
+    400182: "\u5927\u6446\u4EF6"
+    400184: "\u5929\u79E4"
+    400186: "\u5BF9\u8C61024"
+    400188: "\u5BF9\u8C61026"
+    400190: "\u5BF9\u8C61028"
+    400192: "\u5BF9\u8C61029"
+    400194: "\u5BF9\u8C61030"
+    400196: "\u5BF9\u8C61047"
+    400198: "\u5BF9\u8C61070"
+    400200: "\u5BF9\u8C61077"
+    400202: "\u5BF9\u8C61078"
+    400204: "\u5BF9\u8C61088"
+    400206: "\u5BF9\u8C61089"
+    400208: "\u5BF9\u8C61090"
+    400210: "\u5BF9\u8C61095"
+    400212: "\u5C0F\u6446\u4EF6"
+    400214: "\u5C4B\u9876"
+    400216: "\u690D\u7269"
+    400218: "\u753B\u6846"
+    400220: "\u753B\u6846 1"
+    400222: "\u767D\u6728\u7EB9.3"
+    400224: "\u767D\u8272\u6CE1\u6CAB"
+    400226: "\u77F3\u58A9"
+    400228: "\u7EBF"
+    400230: "\u8001\u5F0F\u706F"
+    400232: //RootNode
+    400234: "\u8239\u5E06"
+    400236: "\u8239\u5E95"
+    400238: "\u8239\u677F"
+    400240: "\u8239\u6CBF"
+    400242: "\u8239\u8231"
+    400244: "\u8239\u8231\u5927\u95E8"
+    400246: "\u8239\u8231\u95E8"
+    400248: "\u8239\u8EAB"
+    400250: "\u94A2\u7434"
+    400252: "\u95E8\u53E3\u5730\u6BEF"
+    400254: "\u95E8\u6846"
+    400256: "\u95E8\u7A97"
+    400258: "\u9910\u684C"
+    400260: "\u9ED1\u4F20\u8EAB"
+    400262: "\u9ED1\u76D8"
+    400264: lo_Prop_Sofa_A_LOD002
+    400266: "\u4E66\u672C"
+    400268: "\u652F\u6491\u6746"
+    400270: "\u6728\u623F"
+    400272: "\u5BF9\u8C61098"
+    400274: "\u5BF9\u8C61099"
+    400276: "\u6000\u8868"
+    400278: "\u6446\u8BBE\u4E66"
+    400280: "\u6CB3\u9A6C\u8BD7\u96C6"
+    400282: "\u767D\u5C45\u6613\u8BD7\u53E5"
+    400284: "\u7FBD\u6BDB"
+    400286: "\u81EA\u6211\u4E4B\u6B4C"
+    400288: "\u838E\u58EB\u6BD4\u4E9A\u8BD7\u96C6"
+    2100000: "\u6D45\u6728\u7EB9"
+    2100002: Archmodels55_31_black_plastic
+    2100004: "\u684C\u5E03"
+    2100006: "\u63A7\u5236\u5668"
+    2100008: "Arch\u87BA\u4E1D"
+    2100010: "\u9ED1\u76D8"
+    2100012: "\u5E06\u5E10"
+    2100014: "\u767D\u8272\u56F4\u6746"
+    2100016: "\u7EBF"
+    2100018: "\u9ED1\u6728\u7EB9"
+    2100020: "\u7EA2\u6728\u7EB9"
+    2100022: "\u8239\u6CBF"
+    2100024: "\u767D\u6728\u7EB9"
+    2100026: "\u9EC4\u6728\u7EB9"
+    2100028: 'Material #64'
+    2100030: 'Material #66'
+    2100032: 'Material #65'
+    2100034: Shu_01
+    2100036: Shu_top
+    2100038: book
+    2100040: 'Material #70'
+    2100042: 'Material #69'
+    2100044: Shu_06
+    2100046: Shu_03
+    2100048: Shu_02
+    2100050: 'Material #2125640478'
+    2100052: Shu_05
+    2100054: Shu_07
+    2100056: 'Material #68'
+    2100058: 'Material #2125640479'
+    2100060: 'Material #67'
+    2100062: "\u4E66\u67DC01"
+    2100064: No Name
+    2100066: "\u95E8\u628A"
+    2100068: "RefRep.1445\u5927\u95E8"
+    2100070: Villa2_Wall_Mid_C
+    2100072: Villa2_Wall_Mid_A
+    2100074: Villa2_Deco_WindowGlass_A
+    2100076: lo_Prop_Clock_A_LOD0
+    2100078: lo_Prop_Sofa_A_LOD0
+    2100080: lo_Prop_Chair_A_LOD0
+    2100082: lo_Prop_SmallTable_B_LOD1
+    2100084: 'Material #62'
+    2100086: Villa2_Wall_Mid_E
+    2100088: lo_Prop_Bed_A_LOD1
+    2100090: lo_Prop_SmallTable_A
+    2100092: 'Material #28'
+    2100094: 'Material #27'
+    2100096: 'Material #26'
+    2100098: 'Material #25'
+    2100100: Prop_Rug_A001
+    2100102: lo_Prop_Chair_B_LOD0
+    2100104: 02 - Default
+    2100106: "\u4E66\u684C"
+    2100108: Villa2_Door_A
+    2100110: 'Material #2125640480'
+    2100112: 'Material #61'
+    2100114: "\u753B2"
+    2100116: fangjiamhuazuo
+    2100118: 'Material #55'
+    2100120: 'Material #56'
+    2100122: 'Material #58'
+    2100124: 'Material #60'
+    2100126: lo_Prop_Vase_B_LOD1
+    2100128: one
+    2100130: two
+    2100132: three
+    2100134: 12 - Default
+    2100136: lo_Prop_ChurchBench_A_LOD1
+    2100138: lo_Prop_Cabinet_B_LOD0
+    2100140: Piano_default
+    2100142: RefRep.1542
+    2100144: "RefRep.1951\u7A97\u6237\u7EB8"
+    2100146: "RefRep.1467\u95E8\u6846\u6728\u7EB9"
+    2100148: RefRep.1536
+    2100150: "RefRep.1809\u5185\u95E8"
+    2100152: "RefRep.1501\u5927\u7406\u77F3"
+    2100154: "RefRep.1459\u95E8\u6846"
+    2100156: "RefRep.1452\u6728\u67F1"
+    2100158: "RefRep.1471\u7EB9\u8DEF"
+    2100160: "RefRep.1522\u767D\u5899"
+    2100162: RefRep.1807
+    2100164: RefRep.1566
+    2100166: RefRep.1475
+    2100168: "RefRep.1798\u5F2F\u6881"
+    2100170: "RefRep.1702\u5C4B\u9876"
+    2100172: "RefRep.1690\u5C4B\u9876\u6728\u7EB9"
+    2300000: 332
+    2300002: Arch41_028_obj_4
+    2300004: Arch41_028_obj_7
+    2300006: Arch41_048_obj_5
+    2300008: Arch41_048_obj_9
+    2300010: Charbany black09
+    2300012: Cylinder01
+    2300014: Cylinder03
+    2300016: dc_04
+    2300018: dc_05
+    2300020: dc_10
+    2300022: dc_11
+    2300024: dc_13
+    2300026: houmen
+    2300028: Inst3D
+    2300030: Inst3D 1
+    2300032: Inst3D001
+    2300034: Inst3D004
+    2300036: Inst3D011
+    2300038: Inst3D013
+    2300040: Inst3D014
+    2300042: Inst3D015
+    2300044: Inst3D017
+    2300046: Inst3D018
+    2300048: Inst3D021
+    2300050: Inst3D022
+    2300052: Inst3D023
+    2300054: Inst3D024
+    2300056: Inst3D025
+    2300058: Inst3D026
+    2300060: lo_Prop_Bed_A_LOD1
+    2300062: lo_Prop_Cabinet_A_LOD0
+    2300064: lo_Prop_Cabinet_A_LOD1
+    2300066: lo_Prop_Cabinet_B_LOD0
+    2300068: lo_Prop_Chair_A_LOD0
+    2300070: lo_Prop_Chair_A_LOD018
+    2300072: lo_Prop_Chair_B_LOD001
+    2300074: lo_Prop_ChurchBench_A_LOD1
+    2300076: lo_Prop_Clock_A_LOD0
+    2300078: lo_Prop_Lamp_E_LOD002
+    2300080: lo_Prop_Lamp_E_LOD003
+    2300082: lo_Prop_SmallTable_A_LOD0
+    2300084: lo_Prop_SmallTable_B_LOD1
+    2300086: lo_Prop_Sofa_A_LOD0
+    2300088: lo_Prop_Sofa_A_LOD1
+    2300090: lo_Prop_Vase_B_LOD002
+    2300092: lo_Prop_Vase_B_LOD1
+    2300094: Object002
+    2300096: Object003
+    2300098: Plane02
+    2300100: Prop_Rug_A
+    2300102: Prop_Rug_A001
+    2300104: RefRep.1454.1
+    2300106: RefRep.1471.1
+    2300108: RefRep.1522.1
+    2300110: RefRep.1806.1
+    2300112: Shu_01
+    2300114: Shu_02
+    2300116: Shu_03
+    2300118: Shu_04
+    2300120: Shu_05
+    2300122: Shu_06
+    2300124: Shu_07
+    2300126: Shu_09
+    2300128: Shu_10
+    2300130: Shu_11
+    2300132: Shu_book
+    2300134: Shu_top
+    2300136: Shu_ye
+    2300138: SZ
+    2300140: Villa2_Deco_WindowGlass_A
+    2300142: Villa2_Door_A
+    2300144: Villa2_Door_A001
+    2300146: Villa2_Door_A003
+    2300148: Villa2_Wall_Mid_A
+    2300150: Villa2_Wall_Mid_C
+    2300152: Villa2_Wall_Mid_E004
+    2300154: Vino Blanco19
+    2300156: w-cg.taobao.com          330
+    2300158: whisky06
+    2300160: "\u4E66\u67DC01"
+    2300162: "\u56F4\u6746"
+    2300164: "\u5899\u58C1"
+    2300166: "\u5929\u79E4"
+    2300168: "\u5BF9\u8C61024"
+    2300170: "\u5BF9\u8C61026"
+    2300172: "\u5BF9\u8C61028"
+    2300174: "\u5BF9\u8C61029"
+    2300176: "\u5BF9\u8C61030"
+    2300178: "\u5BF9\u8C61047"
+    2300180: "\u5BF9\u8C61070"
+    2300182: "\u5BF9\u8C61077"
+    2300184: "\u5BF9\u8C61078"
+    2300186: "\u5BF9\u8C61088"
+    2300188: "\u5BF9\u8C61089"
+    2300190: "\u5BF9\u8C61090"
+    2300192: "\u5BF9\u8C61095"
+    2300194: "\u767D\u6728\u7EB9.3"
+    2300196: "\u767D\u8272\u6CE1\u6CAB"
+    2300198: "\u77F3\u58A9"
+    2300200: "\u7EBF"
+    2300202: "\u8239\u5E06"
+    2300204: "\u8239\u5E95"
+    2300206: "\u8239\u677F"
+    2300208: "\u8239\u6CBF"
+    2300210: "\u94A2\u7434"
+    2300212: "\u95E8\u53E3\u5730\u6BEF"
+    2300214: "\u95E8\u6846"
+    2300216: "\u95E8\u7A97"
+    2300218: "\u9910\u684C"
+    2300220: "\u9ED1\u4F20\u8EAB"
+    2300222: "\u9ED1\u76D8"
+    2300224: lo_Prop_Sofa_A_LOD002
+    2300226: "\u4E66\u684C"
+    2300228: "\u652F\u6491\u6746"
+    2300230: "\u6728\u623F"
+    2300232: "\u5BF9\u8C61098"
+    2300234: "\u5BF9\u8C61099"
+    2300236: "\u6000\u8868"
+    2300238: "\u6446\u8BBE\u4E66"
+    2300240: "\u6CB3\u9A6C\u8BD7\u96C6"
+    2300242: "\u767D\u5C45\u6613\u8BD7\u53E5"
+    2300244: "\u7FBD\u6BDB"
+    2300246: "\u81EA\u6211\u4E4B\u6B4C"
+    2300248: "\u838E\u58EB\u6BD4\u4E9A\u8BD7\u96C6"
+    3300000: 332
+    3300002: Arch41_028_obj_4
+    3300004: Arch41_028_obj_7
+    3300006: Arch41_048_obj_5
+    3300008: Arch41_048_obj_9
+    3300010: Charbany black09
+    3300012: Cylinder01
+    3300014: Cylinder03
+    3300016: dc_04
+    3300018: dc_05
+    3300020: dc_10
+    3300022: dc_11
+    3300024: dc_13
+    3300026: houmen
+    3300028: Inst3D
+    3300030: Inst3D 1
+    3300032: Inst3D001
+    3300034: Inst3D004
+    3300036: Inst3D011
+    3300038: Inst3D013
+    3300040: Inst3D014
+    3300042: Inst3D015
+    3300044: Inst3D017
+    3300046: Inst3D018
+    3300048: Inst3D021
+    3300050: Inst3D022
+    3300052: Inst3D023
+    3300054: Inst3D024
+    3300056: Inst3D025
+    3300058: Inst3D026
+    3300060: lo_Prop_Bed_A_LOD1
+    3300062: lo_Prop_Cabinet_A_LOD0
+    3300064: lo_Prop_Cabinet_A_LOD1
+    3300066: lo_Prop_Cabinet_B_LOD0
+    3300068: lo_Prop_Chair_A_LOD0
+    3300070: lo_Prop_Chair_A_LOD018
+    3300072: lo_Prop_Chair_B_LOD001
+    3300074: lo_Prop_ChurchBench_A_LOD1
+    3300076: lo_Prop_Clock_A_LOD0
+    3300078: lo_Prop_Lamp_E_LOD002
+    3300080: lo_Prop_Lamp_E_LOD003
+    3300082: lo_Prop_SmallTable_A_LOD0
+    3300084: lo_Prop_SmallTable_B_LOD1
+    3300086: lo_Prop_Sofa_A_LOD0
+    3300088: lo_Prop_Sofa_A_LOD1
+    3300090: lo_Prop_Vase_B_LOD002
+    3300092: lo_Prop_Vase_B_LOD1
+    3300094: Object002
+    3300096: Object003
+    3300098: Plane02
+    3300100: Prop_Rug_A
+    3300102: Prop_Rug_A001
+    3300104: RefRep.1454.1
+    3300106: RefRep.1471.1
+    3300108: RefRep.1522.1
+    3300110: RefRep.1806.1
+    3300112: Shu_01
+    3300114: Shu_02
+    3300116: Shu_03
+    3300118: Shu_04
+    3300120: Shu_05
+    3300122: Shu_06
+    3300124: Shu_07
+    3300126: Shu_09
+    3300128: Shu_10
+    3300130: Shu_11
+    3300132: Shu_book
+    3300134: Shu_top
+    3300136: Shu_ye
+    3300138: SZ
+    3300140: Villa2_Deco_WindowGlass_A
+    3300142: Villa2_Door_A
+    3300144: Villa2_Door_A001
+    3300146: Villa2_Door_A003
+    3300148: Villa2_Wall_Mid_A
+    3300150: Villa2_Wall_Mid_C
+    3300152: Villa2_Wall_Mid_E004
+    3300154: Vino Blanco19
+    3300156: w-cg.taobao.com          330
+    3300158: whisky06
+    3300160: "\u4E66\u67DC01"
+    3300162: "\u56F4\u6746"
+    3300164: "\u5899\u58C1"
+    3300166: "\u5929\u79E4"
+    3300168: "\u5BF9\u8C61024"
+    3300170: "\u5BF9\u8C61026"
+    3300172: "\u5BF9\u8C61028"
+    3300174: "\u5BF9\u8C61029"
+    3300176: "\u5BF9\u8C61030"
+    3300178: "\u5BF9\u8C61047"
+    3300180: "\u5BF9\u8C61070"
+    3300182: "\u5BF9\u8C61077"
+    3300184: "\u5BF9\u8C61078"
+    3300186: "\u5BF9\u8C61088"
+    3300188: "\u5BF9\u8C61089"
+    3300190: "\u5BF9\u8C61090"
+    3300192: "\u5BF9\u8C61095"
+    3300194: "\u767D\u6728\u7EB9.3"
+    3300196: "\u767D\u8272\u6CE1\u6CAB"
+    3300198: "\u77F3\u58A9"
+    3300200: "\u7EBF"
+    3300202: "\u8239\u5E06"
+    3300204: "\u8239\u5E95"
+    3300206: "\u8239\u677F"
+    3300208: "\u8239\u6CBF"
+    3300210: "\u94A2\u7434"
+    3300212: "\u95E8\u53E3\u5730\u6BEF"
+    3300214: "\u95E8\u6846"
+    3300216: "\u95E8\u7A97"
+    3300218: "\u9910\u684C"
+    3300220: "\u9ED1\u4F20\u8EAB"
+    3300222: "\u9ED1\u76D8"
+    3300224: lo_Prop_Sofa_A_LOD002
+    3300226: "\u4E66\u684C"
+    3300228: "\u652F\u6491\u6746"
+    3300230: "\u6728\u623F"
+    3300232: "\u5BF9\u8C61098"
+    3300234: "\u5BF9\u8C61099"
+    3300236: "\u6000\u8868"
+    3300238: "\u6446\u8BBE\u4E66"
+    3300240: "\u6CB3\u9A6C\u8BD7\u96C6"
+    3300242: "\u767D\u5C45\u6613\u8BD7\u53E5"
+    3300244: "\u7FBD\u6BDB"
+    3300246: "\u81EA\u6211\u4E4B\u6B4C"
+    3300248: "\u838E\u58EB\u6BD4\u4E9A\u8BD7\u96C6"
+    4300000: "\u8239\u677F"
+    4300002: "\u767D\u8272\u6CE1\u6CAB"
+    4300004: dc_05
+    4300006: dc_10
+    4300008: dc_11
+    4300010: "\u9ED1\u76D8"
+    4300012: "\u8239\u5E06"
+    4300014: "\u56F4\u6746"
+    4300016: "\u7EBF"
+    4300018: "\u9ED1\u4F20\u8EAB"
+    4300020: "\u8239\u5E95"
+    4300022: "\u8239\u6CBF"
+    4300024: "\u767D\u6728\u7EB9.3"
+    4300026: dc_13
+    4300028: dc_04
+    4300030: "\u5BF9\u8C61030"
+    4300032: "\u5BF9\u8C61028"
+    4300034: "\u5BF9\u8C61029"
+    4300036: Shu_01
+    4300038: Shu_top
+    4300040: Shu_book
+    4300042: Shu_11
+    4300044: Shu_04
+    4300046: Shu_06
+    4300048: Shu_03
+    4300050: Shu_02
+    4300052: Shu_09
+    4300054: Shu_05
+    4300056: Shu_07
+    4300058: Shu_ye
+    4300060: Shu_10
+    4300062: "\u5BF9\u8C61026"
+    4300064: 332
+    4300066: "\u5BF9\u8C61024"
+    4300068: w-cg.taobao.com          330
+    4300070: "\u4E66\u67DC01"
+    4300072: "\u5BF9\u8C61095"
+    4300074: Inst3D015
+    4300076: Inst3D014
+    4300078: Villa2_Wall_Mid_C
+    4300080: Villa2_Wall_Mid_A
+    4300082: Villa2_Deco_WindowGlass_A
+    4300084: lo_Prop_Clock_A_LOD0
+    4300086: lo_Prop_Sofa_A_LOD0
+    4300088: lo_Prop_Chair_A_LOD0
+    4300090: lo_Prop_SmallTable_B_LOD1
+    4300092: lo_Prop_Cabinet_A_LOD1
+    4300094: Villa2_Wall_Mid_E004
+    4300096: lo_Prop_Bed_A_LOD1
+    4300098: lo_Prop_SmallTable_A_LOD0
+    4300100: Arch41_048_obj_9
+    4300102: Arch41_048_obj_5
+    4300104: Arch41_028_obj_4
+    4300106: Arch41_028_obj_7
+    4300108: Prop_Rug_A
+    4300110: lo_Prop_Chair_B_LOD001
+    4300112: Cylinder01
+    4300114: Cylinder03
+    4300116: Plane02
+    4300118: SZ
+    4300120: Villa2_Door_A
+    4300122: Villa2_Door_A001
+    4300124: "\u5929\u79E4"
+    4300126: Villa2_Door_A003
+    4300128: lo_Prop_Lamp_E_LOD003
+    4300130: "\u5BF9\u8C61088"
+    4300132: "\u5BF9\u8C61089"
+    4300134: Inst3D018
+    4300136: Inst3D017
+    4300138: Inst3D025
+    4300140: Inst3D026
+    4300142: Object003
+    4300144: lo_Prop_Lamp_E_LOD002
+    4300146: whisky06
+    4300148: Charbany black09
+    4300150: Object002
+    4300152: Vino Blanco19
+    4300154: lo_Prop_Vase_B_LOD1
+    4300156: lo_Prop_Vase_B_LOD002
+    4300158: Inst3D
+    4300160: Inst3D
+    4300162: Inst3D021
+    4300164: Inst3D022
+    4300166: Inst3D023
+    4300168: Inst3D024
+    4300170: lo_Prop_Chair_A_LOD018
+    4300172: "\u9910\u684C"
+    4300174: lo_Prop_Sofa_A_LOD1
+    4300176: lo_Prop_ChurchBench_A_LOD1
+    4300178: lo_Prop_Cabinet_A_LOD0
+    4300180: lo_Prop_Cabinet_B_LOD0
+    4300182: "\u94A2\u7434"
+    4300184: "\u5BF9\u8C61078"
+    4300186: "\u5BF9\u8C61077"
+    4300188: "\u95E8\u7A97"
+    4300190: "\u5BF9\u8C61090"
+    4300192: "\u77F3\u58A9"
+    4300194: houmen
+    4300196: "\u5899\u58C1"
+    4300198: "\u95E8\u6846"
+    4300200: Prop_Rug_A001
+    4300202: RefRep.1454.1
+    4300204: RefRep.1471.1
+    4300206: RefRep.1522.1
+    4300208: RefRep.1806.1
+    4300210: "\u95E8\u53E3\u5730\u6BEF"
+    4300212: "\u5BF9\u8C61047"
+    4300214: "\u5BF9\u8C61070"
+    4300216: Inst3D011
+    4300218: Inst3D013
+    4300220: Inst3D001
+    4300222: Inst3D004
+    4300224: "\u4E66\u684C"
+    4300226: lo_Prop_Sofa_A_LOD002
+    4300228: "\u652F\u6491\u6746"
+    4300230: "\u6728\u623F"
+    4300232: "\u5BF9\u8C61098"
+    4300234: "\u5BF9\u8C61099"
+    4300236: "\u81EA\u6211\u4E4B\u6B4C"
+    4300238: "\u7FBD\u6BDB"
+    4300240: "\u838E\u58EB\u6BD4\u4E9A\u8BD7\u96C6"
+    4300242: "\u6000\u8868"
+    4300244: "\u6CB3\u9A6C\u8BD7\u96C6"
+    4300246: "\u6446\u8BBE\u4E66"
+    4300248: "\u767D\u5C45\u6613\u8BD7\u53E5"
+    20500000: //RootNode
+    2186277476908879412: ImportLogs
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 02 - Default
+    second: {fileID: 2100000, guid: 8e56edd9d73f1c04c90bfe7a7e6f09a6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 12 - Default
+    second: {fileID: 2100000, guid: 80cb049d1941dc3468c4cd7f6bb70e31, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Archmodels55_31_black_plastic
+    second: {fileID: 2100000, guid: c0ca572ac8432a64c849f73a31aed565, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "Arch\u87BA\u4E1D"
+    second: {fileID: 2100000, guid: 5b87821d43892454b88f1a0deaf0b442, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #0'
+    second: {fileID: 2100000, guid: e2bb95d4f401634468370e8b9c966b2d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #2125640480'
+    second: {fileID: 2100000, guid: 2ac8bc19b49e77742aeb66085593b92f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #25'
+    second: {fileID: 2100000, guid: c2e6f57d610d4d14399700789fb1ff3e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #26'
+    second: {fileID: 2100000, guid: 099e36ce4c36f52479de03386e930c7d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #27'
+    second: {fileID: 2100000, guid: f5f1a51cdf53afe49858a42206ec5288, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #28'
+    second: {fileID: 2100000, guid: bbff64f282020ac42b571932503dcbaf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #55'
+    second: {fileID: 2100000, guid: 304c28f75aafb7c488db8e4a30790f1e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #56'
+    second: {fileID: 2100000, guid: 5458622125b55964ba9954347ab08cb3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #58'
+    second: {fileID: 2100000, guid: 961d42c12b6909242b0c34560b51c726, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #61'
+    second: {fileID: 2100000, guid: 732ad545b4817da4ca90d9b64f9c7fe3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #67'
+    second: {fileID: 2100000, guid: 32e6ce35675eec74a94b606135642288, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #68'
+    second: {fileID: 2100000, guid: 6d058265d337fd747836b63486a6cb02, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #70'
+    second: {fileID: 2100000, guid: 32e6ce35675eec74a94b606135642288, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: c6465169ac993ba498d60f9730993d86, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Piano_default
+    second: {fileID: 2100000, guid: 43890eea1a5a9be4ba1f56a7062dbc5b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "RefRep.1445\u5927\u95E8"
+    second: {fileID: 2100000, guid: f13555c51cc52774f92b4c8bd75f9843, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "RefRep.1452\u6728\u67F1"
+    second: {fileID: 2100000, guid: c9aaa140d22df4e4db12cd859c14a081, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "RefRep.1459\u95E8\u6846"
+    second: {fileID: 2100000, guid: 0db3833c499997343b484f54f566285f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "RefRep.1467\u95E8\u6846\u6728\u7EB9"
+    second: {fileID: 2100000, guid: 68acd40375a292a4abddc0bf0a175e7c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "RefRep.1471\u7EB9\u8DEF"
+    second: {fileID: 2100000, guid: cbf83d17033e6cd44a3a6802c5d9f736, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RefRep.1475
+    second: {fileID: 2100000, guid: 7dceee431b929014fa4fb515c9f03374, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "RefRep.1501\u5927\u7406\u77F3"
+    second: {fileID: 2100000, guid: 1e16db16b3dd13b49901a4923a03d84d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "RefRep.1522\u767D\u5899"
+    second: {fileID: 2100000, guid: 77ff63056037c094a9c31659eff26d6b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RefRep.1536
+    second: {fileID: 2100000, guid: 9a563c614d8136a40a292d1cc8b0c7dd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RefRep.1542
+    second: {fileID: 2100000, guid: a89713ed15745954592e8ef35d87fba7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RefRep.1566
+    second: {fileID: 2100000, guid: 50199cff668e28646a4a985232769c9f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "RefRep.1690\u5C4B\u9876\u6728\u7EB9"
+    second: {fileID: 2100000, guid: 864c11faca6b1f84ea64881c8f57780d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "RefRep.1702\u5C4B\u9876"
+    second: {fileID: 2100000, guid: 192f604f2b10cad468a757be0b179a8d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "RefRep.1798\u5F2F\u6881"
+    second: {fileID: 2100000, guid: 21f8d36df80d0d04a8aa7b4e8379fc96, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RefRep.1807
+    second: {fileID: 2100000, guid: 6419e2100ba62c2499f57456ea0cbb5f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "RefRep.1809\u5185\u95E8"
+    second: {fileID: 2100000, guid: 961f6cd2e62f2f6469e50586f305668a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "RefRep.1951\u7A97\u6237\u7EB8"
+    second: {fileID: 2100000, guid: dbbef73a7ce397e498a37e287364c09d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rost01
+    second: {fileID: 2100000, guid: 8bbf56de2dc7a38438d0e331ddaafd7e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shu_01
+    second: {fileID: 2100000, guid: da6ebe2da26ed624482a8cdfb476f989, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shu_03
+    second: {fileID: 2100000, guid: d0b5df70061ed8e479d7f2090eda2f36, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shu_05
+    second: {fileID: 2100000, guid: 54c2f2e4b5a43b644ae183b49b6eb6ab, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shu_06
+    second: {fileID: 2100000, guid: f5f4e7b3aa3e0da429838b7cf182b82d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shu_top
+    second: {fileID: 2100000, guid: 6c784c956197a0f4eaf0a349610bcaf7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Villa2_Deco_WindowGlass_A
+    second: {fileID: 2100000, guid: e2c4e08121053bf44993ac1e66d7217d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Villa2_Door_A
+    second: {fileID: 2100000, guid: b648cef149a819e42a9b6d084ae89085, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Villa2_Wall_Mid_A
+    second: {fileID: 2100000, guid: b648cef149a819e42a9b6d084ae89085, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Villa2_Wall_Mid_C
+    second: {fileID: 2100000, guid: b648cef149a819e42a9b6d084ae89085, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Villa2_Wall_Mid_E
+    second: {fileID: 2100000, guid: b648cef149a819e42a9b6d084ae89085, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: book
+    second: {fileID: 2100000, guid: 84fec12fbf670d544a82760d48f52fae, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fangjiamhuazuo
+    second: {fileID: 2100000, guid: 66da39a05a88d57409d78948d7bdf43c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "file_\u7FBD\u6BDB\u7B1402"
+    second: {fileID: 2100000, guid: 737a4b1d59d303b4fa0978609ade4050, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lo_Prop_Bed_A_LOD1
+    second: {fileID: 2100000, guid: 6a0a049eb735aec4ba4d3f2ac15ad526, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lo_Prop_Cabinet_B_LOD0
+    second: {fileID: 2100000, guid: 80cb049d1941dc3468c4cd7f6bb70e31, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lo_Prop_Chair_A_LOD0
+    second: {fileID: 2100000, guid: 80cb049d1941dc3468c4cd7f6bb70e31, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lo_Prop_Chair_B_LOD0
+    second: {fileID: 2100000, guid: 8b9ccd48521ac6a4bb6af52a29c6b32b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lo_Prop_Clock_A_LOD0
+    second: {fileID: 2100000, guid: 6a0a049eb735aec4ba4d3f2ac15ad526, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lo_Prop_SmallTable_A
+    second: {fileID: 2100000, guid: 8b9ccd48521ac6a4bb6af52a29c6b32b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lo_Prop_SmallTable_B_LOD1
+    second: {fileID: 2100000, guid: 8b9ccd48521ac6a4bb6af52a29c6b32b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lo_Prop_Sofa_A_LOD0
+    second: {fileID: 2100000, guid: 6a0a049eb735aec4ba4d3f2ac15ad526, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lo_Prop_Vase_B_LOD1
+    second: {fileID: 2100000, guid: 8b9ccd48521ac6a4bb6af52a29c6b32b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: one
+    second: {fileID: 2100000, guid: 5cc8ec16c3dd89a4faf67431dcb23a17, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rug
+    second: {fileID: 2100000, guid: 95cb8857f1654bc4485dae86e91fa673, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: three
+    second: {fileID: 2100000, guid: 5892856da27a4f04380c560e17bc1a40, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: two
+    second: {fileID: 2100000, guid: 5892856da27a4f04380c560e17bc1a40, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u4E66\u67DC01"
+    second: {fileID: 2100000, guid: 5a69edefa019a51419d3bcae606a6368, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u4E66\u684C"
+    second: {fileID: 2100000, guid: b09f230cf7bb3a14d80d1cf19c05562e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u5E06\u5E10"
+    second: {fileID: 2100000, guid: 8545b77a920924041aed562f44ffc197, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u63A7\u5236\u5668"
+    second: {fileID: 2100000, guid: 3d26aafa74702e0458ac9bf1887a9ff1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u652F\u6491\u6746"
+    second: {fileID: 2100000, guid: d2a64f63a23ca4c45b5ee00b3071e3ee, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u6728\u623F"
+    second: {fileID: 2100000, guid: e29efe17bd8bf0c46b879f9d5624ab94, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u684C\u5E03"
+    second: {fileID: 2100000, guid: 9bd5042e95c85de4093946f31061c578, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u6D45\u6728\u7EB9"
+    second: {fileID: 2100000, guid: b8efb6cd4b29f5f47a2630944869f8fd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u753B2"
+    second: {fileID: 2100000, guid: 3de92d9b5ceb9c04ea23d9811817c541, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u767D\u5C45\u6613"
+    second: {fileID: 2100000, guid: 7cd7a357b8b7d2643b88900558d2a875, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u767D\u6728\u7EB9"
+    second: {fileID: 2100000, guid: 1b814e7bb45b69b48beb1665c6c762b8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u767D\u8272\u56F4\u6746"
+    second: {fileID: 2100000, guid: 31cf6c274becc5a48a9711866bf4a9d1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u7B80\u6613\u4E66"
+    second: {fileID: 2100000, guid: 34507ffc0d02e794ca9272f0b34713f7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u7EA2\u6728\u7EB9"
+    second: {fileID: 2100000, guid: 87efb258676c0e8428aab3911654431d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u7EBF"
+    second: {fileID: 2100000, guid: 679264eb2bde2ef4591f1e611300ff67, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u81EA\u6211\u4E4B\u6B4C"
+    second: {fileID: 2100000, guid: fd43984169785504180195db6b70a297, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u8239\u6CBF"
+    second: {fileID: 2100000, guid: 83832f662ccbfe84483ec563eb940034, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u8349"
+    second: {fileID: 2100000, guid: 877a0d2219e73294cbef3c42862b2499, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u95E8\u628A"
+    second: {fileID: 2100000, guid: ac279ef639f7834418ce51f48cc8a7f3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u9EC4\u6728\u7EB9"
+    second: {fileID: 2100000, guid: 40dc441c41ed26a47bb89356356ddda2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u9ED1\u6728\u7EB9"
+    second: {fileID: 2100000, guid: deddb4d1be30c364482dc13f74396af6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u9ED1\u76D8"
+    second: {fileID: 2100000, guid: ce81f35e4c661e949b1c687558aa0745, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages:
+    - 0.25
+    - 0.125
+    - 0.01
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 1
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

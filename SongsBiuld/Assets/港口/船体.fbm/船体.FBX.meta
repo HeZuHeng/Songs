@@ -1,0 +1,359 @@
+fileFormatVersion: 2
+guid: 4b5e152a12d8d5a4eb5529a2e044f1b9
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Object01
+    100002: Object01 1
+    100004: Object01 2
+    100006: Object02
+    100008: Object02 1
+    100010: Object03
+    100012: Object03 1
+    100014: Object03 2
+    100016: Object04
+    100018: Object05
+    100020: Object06
+    100022: Object06 1
+    100024: Object08
+    100026: Object08 1
+    100028: Object10
+    100030: Object13
+    100032: Object141
+    100034: Object142
+    100036: Object143
+    100038: Object16
+    100040: Object25
+    100042: Object738
+    100044: Object739
+    100046: Plane13
+    100048: //RootNode
+    100050: Object821
+    100052: Object823
+    100054: Object824
+    100056: Object825
+    100058: Object826
+    100060: Object827
+    100062: Object828
+    100064: Object829
+    100066: Object831
+    100068: Object832
+    100070: Object833
+    100072: Object834
+    100074: Object835
+    100076: Object836
+    100078: Object837
+    100080: Object838
+    100082: Object839
+    100084: Object840
+    100086: Object841
+    100088: Object842
+    100090: Object843
+    100092: Object844
+    100094: Object845
+    400000: Object01
+    400002: Object01 1
+    400004: Object01 2
+    400006: Object02
+    400008: Object02 1
+    400010: Object03
+    400012: Object03 1
+    400014: Object03 2
+    400016: Object04
+    400018: Object05
+    400020: Object06
+    400022: Object06 1
+    400024: Object08
+    400026: Object08 1
+    400028: Object10
+    400030: Object13
+    400032: Object141
+    400034: Object142
+    400036: Object143
+    400038: Object16
+    400040: Object25
+    400042: Object738
+    400044: Object739
+    400046: Plane13
+    400048: //RootNode
+    400050: Object821
+    400052: Object823
+    400054: Object824
+    400056: Object825
+    400058: Object826
+    400060: Object827
+    400062: Object828
+    400064: Object829
+    400066: Object831
+    400068: Object832
+    400070: Object833
+    400072: Object834
+    400074: Object835
+    400076: Object836
+    400078: Object837
+    400080: Object838
+    400082: Object839
+    400084: Object840
+    400086: Object841
+    400088: Object842
+    400090: Object843
+    400092: Object844
+    400094: Object845
+    2100000: 222
+    2100002: sail
+    2100004: 'Material #264'
+    2100006: 'Material #2941214'
+    2100008: 4 - Default
+    2100010: 'Material #60'
+    2300000: Object01
+    2300002: Object01 1
+    2300004: Object01 2
+    2300006: Object02
+    2300008: Object02 1
+    2300010: Object03
+    2300012: Object03 1
+    2300014: Object03 2
+    2300016: Object04
+    2300018: Object05
+    2300020: Object06
+    2300022: Object06 1
+    2300024: Object08
+    2300026: Object08 1
+    2300028: Object10
+    2300030: Object13
+    2300032: Object141
+    2300034: Object142
+    2300036: Object143
+    2300038: Object16
+    2300040: Object25
+    2300042: Object738
+    2300044: Object739
+    2300046: Plane13
+    2300048: Object821
+    2300050: Object823
+    2300052: Object824
+    2300054: Object825
+    2300056: Object826
+    2300058: Object827
+    2300060: Object828
+    2300062: Object829
+    2300064: Object831
+    2300066: Object832
+    2300068: Object833
+    2300070: Object834
+    2300072: Object835
+    2300074: Object836
+    2300076: Object837
+    2300078: Object838
+    2300080: Object839
+    2300082: Object840
+    2300084: Object841
+    2300086: Object842
+    2300088: Object843
+    2300090: Object844
+    2300092: Object845
+    3300000: Object01
+    3300002: Object01 1
+    3300004: Object01 2
+    3300006: Object02
+    3300008: Object02 1
+    3300010: Object03
+    3300012: Object03 1
+    3300014: Object03 2
+    3300016: Object04
+    3300018: Object05
+    3300020: Object06
+    3300022: Object06 1
+    3300024: Object08
+    3300026: Object08 1
+    3300028: Object10
+    3300030: Object13
+    3300032: Object141
+    3300034: Object142
+    3300036: Object143
+    3300038: Object16
+    3300040: Object25
+    3300042: Object738
+    3300044: Object739
+    3300046: Plane13
+    3300048: Object821
+    3300050: Object823
+    3300052: Object824
+    3300054: Object825
+    3300056: Object826
+    3300058: Object827
+    3300060: Object828
+    3300062: Object829
+    3300064: Object831
+    3300066: Object832
+    3300068: Object833
+    3300070: Object834
+    3300072: Object835
+    3300074: Object836
+    3300076: Object837
+    3300078: Object838
+    3300080: Object839
+    3300082: Object840
+    3300084: Object841
+    3300086: Object842
+    3300088: Object843
+    3300090: Object844
+    3300092: Object845
+    4300000: Object13
+    4300002: Object25
+    4300004: Object01
+    4300006: Object141
+    4300008: Object02
+    4300010: Object02
+    4300012: Object16
+    4300014: Object01
+    4300016: Object06
+    4300018: Object05
+    4300020: Object04
+    4300022: Object03
+    4300024: Object142
+    4300026: Object143
+    4300028: Object03
+    4300030: Object08
+    4300032: Object06
+    4300034: Object03
+    4300036: Object01
+    4300038: Plane13
+    4300040: Object10
+    4300042: Object08
+    4300044: Object739
+    4300046: Object738
+    4300048: Object845
+    4300050: Object844
+    4300052: Object843
+    4300054: Object842
+    4300056: Object841
+    4300058: Object840
+    4300060: Object839
+    4300062: Object838
+    4300064: Object837
+    4300066: Object836
+    4300068: Object835
+    4300070: Object834
+    4300072: Object833
+    4300074: Object832
+    4300076: Object831
+    4300078: Object829
+    4300080: Object828
+    4300082: Object827
+    4300084: Object826
+    4300086: Object825
+    4300088: Object824
+    4300090: Object823
+    4300092: Object821
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 222
+    second: {fileID: 2100000, guid: cbf2d1665e8b19148b3224fe1dea9e30, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 4 - Default
+    second: {fileID: 2100000, guid: e141ce12965c58148bf5ad93ab73a82f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #264'
+    second: {fileID: 2100000, guid: b6269502bde21ec4b94ca728f8909cca, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #2941214'
+    second: {fileID: 2100000, guid: 099494d6b342d724483c6eae3bc324a4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: sail
+    second: {fileID: 2100000, guid: 2d9f868d12ab9ab4ea9432ee61a2cdf8, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

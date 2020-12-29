@@ -23,7 +23,7 @@ namespace SpaceSimulation
         {
             DontDestroyOnLoad(this);
 #if UNITY_WEBGL
-            Application.targetFrameRate = 30;
+            Application.targetFrameRate = -1;
 #else
             Application.targetFrameRate = 120;
 #endif

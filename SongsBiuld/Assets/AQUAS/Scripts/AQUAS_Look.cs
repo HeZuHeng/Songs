@@ -30,14 +30,9 @@ namespace AQUAS
         [Tooltip("Object to be rotated when mouse moves up/down.")]
         public Transform _cameraT;
 
-        private Transform parent;
-
-        private void Awake()
-        {
-            _playerRootT = transform;
-            _cameraT = transform;
-            if (parent == null) parent = transform.parent;
-        }
+        //============================================
+        // FUNCTIONS (UNITY)
+        //============================================
 
         void Update()
         {
@@ -55,29 +50,9 @@ namespace AQUAS
             mouseDeltaX = 0f;
             mouseDeltaY = 0f;
 
-            if (Input.GetMouseButton(0))
-            {
-                mouseDeltaX += Input.GetAxis("Mouse X") * _sensitivityX;
-                mouseDeltaY += Input.GetAxis("Mouse Y") * _sensitivityY;
-            }
-            if (Input.GetMouseButtonUp(0))
-            {
-                rotAverageX = 0f;
-                rotAverageY = 0f;
-                mouseDeltaX = 0f;
-                mouseDeltaY = 0f;
-            }
+            mouseDeltaX += Input.GetAxis("Mouse X") * _sensitivityX;
+            mouseDeltaY += Input.GetAxis("Mouse Y") * _sensitivityY;
 
-            if (Input.GetAxis("Mouse ScrollWheel") > 0)
-            {
-                if (_playerRootT.localPosition.magnitude < 2.5f) return;
-                _playerRootT.Translate(Vector3.forward);
-            }
-            if (Input.GetAxis("Mouse ScrollWheel") < 0)
-            {
-                if (_playerRootT.localPosition.magnitude > 20) return;
-                _playerRootT.Translate(-Vector3.forward);
-            }
             // Add current rot to list, at end
             _rotArrayX.Add(mouseDeltaX);
             _rotArrayY.Add(mouseDeltaY);
@@ -101,19 +76,8 @@ namespace AQUAS
             rotAverageY /= _rotArrayY.Count;
 
             // Apply
-            if (parent != null)
-            {
-                parent.Rotate(0f, rotAverageX, 0f, Space.World);
-                float x = parent.localEulerAngles.x > 180 ? parent.localEulerAngles.x - 360 : parent.localEulerAngles.x;
-                if (rotAverageY > 0 && x < 0) return;
-                if (rotAverageY < 0 && x > 70) return;
-                parent.Rotate(-rotAverageY, 0f, 0f, Space.Self);
-            }
-            else
-            {
-                _playerRootT.Rotate(0f, rotAverageX, 0f, Space.World);
-                _cameraT.Rotate(-rotAverageY, 0f, 0f, Space.Self);
-            }
+            _playerRootT.Rotate(0f, rotAverageX, 0f, Space.World);
+            _cameraT.Rotate(-rotAverageY, 0f, 0f, Space.Self);
         }
     }
 }
