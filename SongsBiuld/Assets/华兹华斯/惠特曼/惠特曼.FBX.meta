@@ -1,0 +1,156 @@
+fileFormatVersion: 2
+guid: cb3489ebd6c4ae849bc47e35cc2dfe21
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: HTM_00
+    100002: HTM_01
+    100004: HTM_02
+    100006: HTM_03
+    100008: HTM_04
+    100010: HTM_05
+    100012: HTM_06
+    100014: HTM_07
+    100016: HTM_08
+    100018: HTM_09
+    100020: "\u3000\uE813\uE811"
+    100022: //RootNode
+    100024: "\uE814\uE812"
+    400000: HTM_00
+    400002: HTM_01
+    400004: HTM_02
+    400006: HTM_03
+    400008: HTM_04
+    400010: HTM_05
+    400012: HTM_06
+    400014: HTM_07
+    400016: HTM_08
+    400018: HTM_09
+    400020: "\u3000\uE813\uE811"
+    400022: //RootNode
+    400024: "\uE814\uE812"
+    2100000: Furnishings.Fabrics.Leather.Brown
+    2100002: "\u773C\u7403"
+    2100004: "\u80E1\u5B50"
+    2100006: No Name
+    2100008: "\u5934\u76AE"
+    2100010: "\u5934\u53D1"
+    2100012: "\u8138"
+    2100014: Tex_0038_1.dds
+    2100016: Tex_0040_1.dds
+    2300000: HTM_00
+    2300002: HTM_01
+    2300004: HTM_02
+    2300006: HTM_03
+    2300008: HTM_04
+    2300010: HTM_05
+    2300012: HTM_06
+    2300014: HTM_07
+    2300016: HTM_08
+    2300018: HTM_09
+    3300000: HTM_00
+    3300002: HTM_01
+    3300004: HTM_02
+    3300006: HTM_03
+    3300008: HTM_04
+    3300010: HTM_05
+    3300012: HTM_06
+    3300014: HTM_07
+    3300016: HTM_08
+    3300018: HTM_09
+    4300000: HTM_09
+    4300002: HTM_04
+    4300004: HTM_00
+    4300006: HTM_05
+    4300008: HTM_01
+    4300010: HTM_02
+    4300012: HTM_03
+    4300014: HTM_07
+    4300016: HTM_06
+    4300018: HTM_08
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
