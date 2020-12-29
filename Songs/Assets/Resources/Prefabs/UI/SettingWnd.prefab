@@ -828,6 +828,7 @@ MonoBehaviour:
   task: {fileID: 3922015324648574698}
   open: {fileID: 6536930360027270150}
   music: {fileID: 7001220590468245321}
+  musicCheck: {fileID: 1859894620194243705}
 --- !u!1 &3317185540050965504
 GameObject:
   m_ObjectHideFlags: 0
@@ -2303,7 +2304,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: d5def7c894abc5949b0196dc8212c562, type: 3}
-    m_FontSize: 32
+    m_FontSize: 28
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -3136,7 +3137,7 @@ MonoBehaviour:
   m_Interactable: 1
   m_TargetGraphic: {fileID: 966595183039834042}
   toggleTransition: 1
-  graphic: {fileID: 5895178009526325798}
+  graphic: {fileID: 0}
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
@@ -3271,7 +3272,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1859894620194243705
 RectTransform:
   m_ObjectHideFlags: 0

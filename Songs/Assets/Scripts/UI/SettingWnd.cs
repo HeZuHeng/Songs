@@ -19,6 +19,8 @@ public class SettingWnd : UIBase
     public Toggle open;
     public Toggle music;
 
+    public RectTransform musicCheck;
+
     protected override void Awake()
     {
         base.Awake();
@@ -106,6 +108,7 @@ public class SettingWnd : UIBase
 
     void OnMusic(bool val)
     {
+        musicCheck.gameObject.SetActive(!val);
         Scene scene = SceneManager.GetActiveScene();
         GameObject[] gameObjects = scene.GetRootGameObjects();
         for (int i = 0; i < gameObjects.Length; i++)
