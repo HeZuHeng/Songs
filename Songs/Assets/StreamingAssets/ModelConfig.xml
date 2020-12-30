@@ -111,9 +111,42 @@
     <ModelDatas 模型名="吴亦凡" 资源名="18" /-->
   </SceneDatas>
   <SceneDatas 场景="草的意象数据" 场景资源名="海岸" 摄像机 = "htm_Camera_partyhall" 位置="htm_InitPosition_partyhall" 镜头="cutscene_enjoyflower_tym">
-    <!--ModelDatas 模型名="张三" 资源名="12" />
-    <ModelDatas 模型名="李四" 资源名="14" />
-    <ModelDatas 模型名="吴亦凡" 资源名="18" /-->
+    <ModelDatas Id="1002" 模型名="废奴运动" 资源名="picture_01" >
+      <position>
+        <x>104.0314</x>
+        <y>23.72446</y>
+        <z>667.9683</z>
+      </position>
+      <eulerAngle>
+        <x>0</x>
+        <y>38.219</y>
+        <z>0</z>
+      </eulerAngle>
+    </ModelDatas>
+    <ModelDatas Id="1003" 模型名="拯救伤员" 资源名="picture_02" >
+      <position>
+        <x>110.3656</x>
+        <y>24.03341</y>
+        <z>672.6235</z>
+      </position>
+      <eulerAngle>
+        <x>0</x>
+        <y>-141.781</y>
+        <z>0</z>
+      </eulerAngle>
+    </ModelDatas>
+    <ModelDatas Id="1004" 模型名="自我之歌" 资源名="picture_03" >
+      <position>
+        <x>106.9445</x>
+        <y>24.0367</y>
+        <z>675.3175</z>
+      </position>
+      <eulerAngle>
+        <x>0</x>
+        <y>-141.781</y>
+        <z>0</z>
+      </eulerAngle>
+    </ModelDatas>
   </SceneDatas>
   <SceneDatas 场景="寻找草的意象数据" 场景资源名="港口" 摄像机 = "htm_Camera_start" 位置="htm_InitPosition_start" 镜头="cutscene_enjoyflower_tym">
     <!--ModelDatas 模型名="张三" 资源名="12" />

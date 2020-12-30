@@ -12,7 +12,7 @@
     <TaskDatas ID="6" 任务名="美国地图2" 下一个="7" 类型="OpenWnd" 值 = "HTMMapEndWnd"/>
     <TaskDatas ID="7" 任务名="起航" 下一个="0" 类型="DOTween" 值 = "5" 描述="船只起航镜头"/>
   </SceneTasks>
-  <SceneTasks 场景任务名="草的意象" 图标="sjdt" 场景数据="草的意象数据">
+  <SceneTasks 场景任务名="草的意象" 图标="icon_cover_picture" 场景数据="草的意象数据">
     <TaskDatas ID="1" 任务名="聚会大厅引子" 下一个="2"  类型="Talk" 描述 = "As a captain, you meet your crew for the first time. You need to introduce yourself.
 \n(由于你和你的船员第一次见面，需要自我介绍。)"/>
     <TaskDatas ID="2" 任务名="书房中自由漫游" 下一个="3" 类型="PersonMove" 值 = "end"/>

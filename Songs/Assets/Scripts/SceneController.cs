@@ -114,6 +114,11 @@ public class SceneController
         {
             childController = new ThreeSongsController();
         }
+
+        if(ThreePictureController.Name.Equals(sceneData.name))
+        {
+            childController = new ThreePictureController();
+        }
     }
 
     public void Close()
@@ -362,5 +367,35 @@ public class ThreeSongsController : ChildController
         });
         SceneController.GetInstance().AddPlayAnimator(sceneAsset);
         
+    }
+}
+public class ThreePictureController : ChildController
+{
+    public static string Name = "草的意象数据";
+
+    SceneAssetObject sceneAsset;
+    public override void Init()
+    {
+        base.Init();
+        sceneAsset = SceneMng.GetInstance().GetSceneAssetObject(1);
+        sceneAsset.Tran.gameObject.AddComponent<TriggerEvent>().enterEvent.AddListener(EnterEvent);
+    }
+
+    void EnterEvent(string name)
+    {
+        Debug.Log(name);
+        string[] strs = name.Split('_');
+        int id = 0;
+        if (strs.Length > 1) int.TryParse(strs[1], out id);
+        CameraMng.GetInstance().UserControl.State(false);
+        sceneAsset.PlayAnimator("shu", true, 1, delegate (string a) {
+            sceneAsset.PlayAnimator("shu", false, 1, null);
+            SongsDataMng.GetInstance().SetNextTaskData(id);
+            UIMng.Instance.ConcealUI(UIType.MainDialogueWnd);
+            UIMng.Instance.ActivationUI(UIType.MainDialogueWnd);
+            CameraMng.GetInstance().UserControl.State(true);
+        });
+        SceneController.GetInstance().AddPlayAnimator(sceneAsset);
+
     }
 }
