@@ -24,7 +24,9 @@ namespace Songs{
 		FantasyCompareWnd = 15,
 		RenameWnd = 16,
 		QATalkWnd = 17,
-		HZHSEndWnd,
+        HTMMapWnd =18,
+        BoatRenameWnd = 19,
+        HZHSEndWnd,
 	}
 	/// <summary>
 	/// 二级界面枚举

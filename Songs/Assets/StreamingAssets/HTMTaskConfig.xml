@@ -1,34 +1,41 @@
 <?xml version="1.0"?>
 <TasksConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <任务分支名>分支二：惠特曼</任务分支名>
-  <SceneTasks 场景任务名="体现诗人的平等" 图标="矩形 8" 场景数据="华兹华斯书房">
+  <SceneTasks 场景任务名="诗人惠特曼介绍" 图标="icon_cover_jieshao" 场景数据="惠特曼介绍数据">
+    <TaskDatas ID="1" 任务名="旅程引子1" 下一个="2"  类型="Talk" 描述 = "First across the time, then across the Atlantic ocean, you reach Louisiana in American. 
+\n(你坐船穿越时空，穿越了大西洋，最终到达美国的路易斯安那州海岸。)"/>
+    <TaskDatas ID="2" 任务名="旅程引子2" 下一个="3"  类型="Talk" 描述 = "You decide to look for the Statue of Liberty beginning your journey at the river of Mississippi River- the mother river of America. You have a boat already. Click the button to start this adventure in the identity of Whitman!
+\n(你决定沿着美国的母亲河-密西西比河前去寻找自由女神像。你现在已经拥有一条船了。点击按钮开始你作为惠特曼的冒险旅程吧！)"/>
+    <TaskDatas ID="3" 任务名="惠特曼介绍" 下一个="4"  类型="OpenWnd" 值 = "HTMWnd"/>
+    <TaskDatas ID="4" 任务名="美国地图" 下一个="5" 类型="OpenWnd" 值 = "HTMMapWnd"/>
+    <TaskDatas ID="5" 任务名="取名" 下一个="6" 类型="OpenWnd" 值 = "RenameWnd"/>
+    <TaskDatas ID="6" 任务名="vvv" 下一个="0" 类型="None" />
+  </SceneTasks>
+  <SceneTasks 场景任务名="草的意象" 图标="sjdt" 场景数据="草的意象数据">
     <TaskDatas ID="0" 任务名="张三" 下一个="12" 类型="None" />
     <TaskDatas ID="0" 任务名="李四" 下一个="14" 类型="None" />
     <TaskDatas ID="0" 任务名="吴亦凡" 下一个="18" 类型="None" />
   </SceneTasks>
-  <SceneTasks 场景任务名="《自我之歌》意境" 图标="矩形 8" 场景数据="华兹华斯书房">
+  <SceneTasks 场景任务名="寻找草的意象" 图标="sjdt" 场景数据="寻找草的意象数据">
     <TaskDatas ID="0" 任务名="张三" 下一个="12" 类型="None" />
     <TaskDatas ID="0" 任务名="李四" 下一个="14" 类型="None" />
     <TaskDatas ID="0" 任务名="吴亦凡" 下一个="18" 类型="None" />
   </SceneTasks>
-  <SceneTasks 场景任务名="诗人惠特曼介绍" 图标="矩形 8" 场景数据="华兹华斯书房">
+  <SceneTasks 场景任务名="《自我之歌》意境" 图标="sjdt" 场景数据="自我之歌数据">
     <TaskDatas ID="0" 任务名="张三" 下一个="12" 类型="None" />
     <TaskDatas ID="0" 任务名="李四" 下一个="14" 类型="None" />
     <TaskDatas ID="0" 任务名="吴亦凡" 下一个="18" 类型="None" />
   </SceneTasks>
-  <SceneTasks 场景任务名="解析民主主义" 图标="矩形 8" 场景数据="华兹华斯书房">
+  <SceneTasks 场景任务名="体现诗人的平等" 图标="sjdt" 场景数据="体现诗人平等数据">
     <TaskDatas ID="0" 任务名="张三" 下一个="12" 类型="None" />
     <TaskDatas ID="0" 任务名="李四" 下一个="14" 类型="None" />
     <TaskDatas ID="0" 任务名="吴亦凡" 下一个="18" 类型="None" />
   </SceneTasks>
-  <SceneTasks 场景任务名="寻找草的意象" 图标="矩形 8" 场景数据="华兹华斯书房">
+  <SceneTasks 场景任务名="中美民主思想比较" 图标="sjdt" 场景数据="中美民主思想比较数据">
     <TaskDatas ID="0" 任务名="张三" 下一个="12" 类型="None" />
     <TaskDatas ID="0" 任务名="李四" 下一个="14" 类型="None" />
     <TaskDatas ID="0" 任务名="吴亦凡" 下一个="18" 类型="None" />
   </SceneTasks>
-  <SceneTasks 场景任务名="中美民主思想比较" 图标="矩形 8" 场景数据="华兹华斯书房">
-    <TaskDatas ID="0" 任务名="张三" 下一个="12" 类型="None" />
-    <TaskDatas ID="0" 任务名="李四" 下一个="14" 类型="None" />
-    <TaskDatas ID="0" 任务名="吴亦凡" 下一个="18" 类型="None" />
-  </SceneTasks>
+
+
 </TasksConfig>
