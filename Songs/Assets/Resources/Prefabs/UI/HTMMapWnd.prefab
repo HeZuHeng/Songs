@@ -960,7 +960,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5591028547201148255
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1000,8 +1000,8 @@ MonoBehaviour:
   subUIBase: []
   page_map: {fileID: 957749650772543458}
   Image_map_start: {fileID: 6814214380455243365}
-  Button_next: {fileID: 0}
-  Button_start: {fileID: 0}
+  Button_next: {fileID: 7316886152951821182}
+  Button_start: {fileID: 3599773636880250900}
 --- !u!1 &5591028547323248914
 GameObject:
   m_ObjectHideFlags: 0
