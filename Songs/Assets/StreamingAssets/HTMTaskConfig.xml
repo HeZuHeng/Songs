@@ -9,7 +9,7 @@
     <TaskDatas ID="3" 任务名="惠特曼介绍" 下一个="4"  类型="OpenWnd" 值 = "HTMWnd"/>
     <TaskDatas ID="4" 任务名="美国地图" 下一个="5" 类型="OpenWnd" 值 = "HTMMapWnd"/>
     <TaskDatas ID="5" 任务名="取名" 下一个="6" 类型="OpenWnd" 值 = "HTMBoatNameWnd"/>
-    <TaskDatas ID="6" 任务名="起航" 下一个="0" 类型="DOTween"  值 = "5" 描述="船只起航"/>
+    <TaskDatas ID="6" 任务名="起航" 下一个="0" 类型="DOTween" 值 = "5" 描述="船只起航"/>
   </SceneTasks>
   <SceneTasks 场景任务名="草的意象" 图标="sjdt" 场景数据="草的意象数据">
     <TaskDatas ID="0" 任务名="张三" 下一个="12" 类型="None" />
