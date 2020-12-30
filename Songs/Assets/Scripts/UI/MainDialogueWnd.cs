@@ -47,10 +47,25 @@ public class MainDialogueWnd : UIBase
     protected override void OnDisable()
     {
         base.OnDisable();
-        if(taskData != null) taskData.onStateChange.RemoveListener(OnStateChange);
+        if (taskData != null)
+        {
+            if (taskData.type == TaskType.Talk)
+            {
+                int talkTargetId = 0;
+                int.TryParse(taskData.val, out talkTargetId);
+                SceneAssetObject sceneAsset = SceneMng.GetInstance().GetSceneAssetObject(talkTargetId);
+                if (sceneAsset != null)
+                {
+                    sceneAsset.PlayAnimator("talk", false, 1, null);
+                }
+            }
+            taskData.onStateChange.RemoveListener(OnStateChange);
+        }
         talkContent.gameObject.SetActive(false);
         talkContent.m_Enable = false;
-    }
+
+        
+     }
 
     void Show()
     {
@@ -216,6 +231,13 @@ public class MainDialogueWnd : UIBase
             string iconN = string.Empty;
             if (modelData != null)
             {
+                int talkTargetId = 0;
+                int.TryParse(talkId,out talkTargetId);
+                SceneAssetObject sceneAsset = SceneMng.GetInstance().GetSceneAssetObject(talkTargetId);
+                if(sceneAsset != null)
+                {
+                    sceneAsset.PlayAnimator("talk", true, 1, null);
+                }
                 talkName.text = modelData.name;
                 iconN = modelData.icon;
             }
@@ -256,6 +278,13 @@ public class MainDialogueWnd : UIBase
     {
         if (taskData.type == TaskType.Talk && taskData != null && taskData.next != 0)
         {
+            int talkTargetId = 0;
+            int.TryParse(taskData.val, out talkTargetId);
+            SceneAssetObject sceneAsset = SceneMng.GetInstance().GetSceneAssetObject(talkTargetId);
+            if (sceneAsset != null)
+            {
+                sceneAsset.PlayAnimator("talk", false, 1, null);
+            }
             next.gameObject.SetActive(true);
         }
         else
