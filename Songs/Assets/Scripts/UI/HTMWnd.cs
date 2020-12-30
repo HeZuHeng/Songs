@@ -14,6 +14,8 @@ public class HTMWnd : UIBase
 
     public void OnClose()
     {
+        UIMng.Instance.OpenUI(UIType.NONE);
+
         TaskData taskData = SongsDataMng.GetInstance().GetTaskData;
         if (taskData != null)
         {
@@ -26,6 +28,5 @@ public class HTMWnd : UIBase
                 }
             }
         }
-        UIMng.Instance.OpenUI(UIType.NONE);
     }
 }
