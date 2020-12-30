@@ -10,10 +10,20 @@
     <TaskDatas ID="4" 任务名="美国地图" 下一个="5" 类型="OpenWnd" 值 = "HTMMapWnd"/>
 <<<<<<< HEAD
     <TaskDatas ID="5" 任务名="取名" 下一个="6" 类型="OpenWnd" 值 = "HTMBoatNameWnd"/>
+    <TaskDatas ID="6" 任务名="起航" 下一个="0" 类型="DOTween" 值 = "5" 描述="船只起航"/>
+=======
+<<<<<<< HEAD
+    <TaskDatas ID="5" 任务名="取名" 下一个="6" 类型="OpenWnd" 值 = "HTMBoatNameWnd"/>
+    <TaskDatas ID="6" 任务名="起航" 下一个="0" 类型="DOTween" 值 = "5" 描述="船只起航"/>
+=======
+<<<<<<< HEAD
+    <TaskDatas ID="5" 任务名="取名" 下一个="6" 类型="OpenWnd" 值 = "HTMBoatNameWnd"/>
 =======
     <TaskDatas ID="5" 任务名="取名" 下一个="6" 类型="OpenWnd" 值 = "RenameWnd"/>
 >>>>>>> dda4ad362795d6299a45e9027cb738caa5420b2f
     <TaskDatas ID="6" 任务名="起航" 下一个="0" 类型="DOTween"  值 = "5" 描述="船只起航"/>
+>>>>>>> ba4a17a6f23a36d026ae2af7cd1cbfed9b61ab64
+>>>>>>> 9dd89b178e63291d1d7b7c2665ae957dc0b79de1
   </SceneTasks>
   <SceneTasks 场景任务名="草的意象" 图标="sjdt" 场景数据="草的意象数据">
     <TaskDatas ID="0" 任务名="张三" 下一个="12" 类型="None" />
