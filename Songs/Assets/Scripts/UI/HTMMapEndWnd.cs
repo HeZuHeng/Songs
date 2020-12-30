@@ -4,27 +4,46 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BoatRenameWnd : UIBase
+public class HTMMapEndWnd : UIBase
 {
-    public InputField input;
-    public Button submit;
+    public Button Button_end;
+
     protected override void Awake()
     {
         base.Awake();
-        Type = UIType.RenameWnd;
+        Type = UIType.HTMMapStartWnd;
         MutexInterface = true;
-
-        submit.onClick.AddListener(OnEnd);
+        Initialized();
     }
+
+    private void Initialized()
+    {
+        if(Button_end != null) Button_end.onClick.AddListener(OnClickEnd);
+    }
+
+
+
     protected override void OnEnable()
     {
         base.OnEnable();
     }
 
-    void OnEnd()
+
+
+
+
+
+    public void OnClickEnd()
+    {
+        //to do:切换界面
+        Debug.Log("结束地图");
+        OnEnd();
+    }
+
+    public void OnEnd()
     {
         UIMng.Instance.OpenUI(UIType.NONE);
-        SongsDataMng.GetInstance().Player.name = input.text;
+
         TaskData taskData = SongsDataMng.GetInstance().GetTaskData;
         if (taskData != null)
         {
@@ -37,6 +56,7 @@ public class BoatRenameWnd : UIBase
                 }
             }
         }
-       
     }
+
+   
 }

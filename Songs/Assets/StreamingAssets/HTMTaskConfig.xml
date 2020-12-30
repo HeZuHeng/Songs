@@ -7,14 +7,16 @@
     <TaskDatas ID="2" 任务名="旅程引子2" 下一个="3"  类型="Talk" 描述 = "You decide to look for the Statue of Liberty beginning your journey at the river of Mississippi River- the mother river of America. You have a boat already. Click the button to start this adventure in the identity of Whitman!
 \n(你决定沿着美国的母亲河-密西西比河前去寻找自由女神像。你现在已经拥有一条船了。点击按钮开始你作为惠特曼的冒险旅程吧！)"/>
     <TaskDatas ID="3" 任务名="惠特曼介绍" 下一个="4"  类型="OpenWnd" 值 = "HTMWnd"/>
-    <TaskDatas ID="4" 任务名="美国地图" 下一个="5" 类型="OpenWnd" 值 = "HTMMapWnd"/>
+    <TaskDatas ID="4" 任务名="美国地图1" 下一个="5" 类型="OpenWnd" 值 = "HTMMapStartWnd"/>
     <TaskDatas ID="5" 任务名="取名" 下一个="6" 类型="OpenWnd" 值 = "HTMBoatNameWnd"/>
-    <TaskDatas ID="6" 任务名="起航" 下一个="0" 类型="DOTween" 值 = "5" 描述="船只起航"/>
+    <TaskDatas ID="6" 任务名="美国地图2" 下一个="7" 类型="OpenWnd" 值 = "HTMMapEndWnd"/>
+    <TaskDatas ID="7" 任务名="起航" 下一个="0" 类型="DOTween" 值 = "5" 描述="船只起航镜头"/>
   </SceneTasks>
   <SceneTasks 场景任务名="草的意象" 图标="sjdt" 场景数据="草的意象数据">
-    <TaskDatas ID="0" 任务名="张三" 下一个="12" 类型="None" />
-    <TaskDatas ID="0" 任务名="李四" 下一个="14" 类型="None" />
-    <TaskDatas ID="0" 任务名="吴亦凡" 下一个="18" 类型="None" />
+    <TaskDatas ID="1" 任务名="聚会大厅引子" 下一个="2"  类型="Talk" 描述 = "As a captain, you meet your crew for the first time. You need to introduce yourself.
+\n(由于你和你的船员第一次见面，需要自我介绍。)"/>
+    <TaskDatas ID="2" 任务名="书房中自由漫游" 下一个="3" 类型="PersonMove" 值 = "end"/>
+    <TaskDatas ID="3" 任务名="三张照片" 下一个="0" 类型="TaskChange" 值 = "聚会大厅三张照片" 描述="点击右侧任务名前往观看聚会大厅三张照片"/>
   </SceneTasks>
   <SceneTasks 场景任务名="寻找草的意象" 图标="sjdt" 场景数据="寻找草的意象数据">
     <TaskDatas ID="0" 任务名="张三" 下一个="12" 类型="None" />

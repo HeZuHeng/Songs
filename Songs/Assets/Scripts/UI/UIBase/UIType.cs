@@ -24,8 +24,9 @@ namespace Songs{
 		FantasyCompareWnd = 15,
 		RenameWnd = 16,
 		QATalkWnd = 17,
-        HTMMapWnd =18,
-        BoatRenameWnd = 19,
+        HTMMapStartWnd =18,
+        HTMMapEndWnd = 19,
+        HTMBoatNameWnd = 20,
         HZHSEndWnd,
 	}
 	/// <summary>

@@ -105,12 +105,12 @@
       </eulerAngle>
     </ModelDatas>
   </SceneDatas>
-  <SceneDatas 场景="惠特曼介绍数据" 场景资源名="海岸" 摄像机 = "htm_Camera_start" 位置="htm_InitPosition_start" 镜头="cutscene_enjoyflower_tym">
+  <SceneDatas 场景="惠特曼介绍数据" 场景资源名="海岸" 摄像机 = "htm_Camera_start" 位置="htm_InitPosition_start" 镜头="Cutscene_set_sail">
     <!--ModelDatas 模型名="张三" 资源名="12" />
     <ModelDatas 模型名="李四" 资源名="14" />
     <ModelDatas 模型名="吴亦凡" 资源名="18" /-->
   </SceneDatas>
-  <SceneDatas 场景="草的意象数据" 场景资源名="港口" 摄像机 = "htm_Camera_start" 位置="htm_InitPosition_start" 镜头="cutscene_enjoyflower_tym">
+  <SceneDatas 场景="草的意象数据" 场景资源名="海岸" 摄像机 = "htm_Camera_partyhall" 位置="htm_InitPosition_partyhall" 镜头="cutscene_enjoyflower_tym">
     <!--ModelDatas 模型名="张三" 资源名="12" />
     <ModelDatas 模型名="李四" 资源名="14" />
     <ModelDatas 模型名="吴亦凡" 资源名="18" /-->
