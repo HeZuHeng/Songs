@@ -485,6 +485,15 @@ namespace Songs
                 case UIType.HZHSEndWnd:
                     openList.Add(string.Format("Prefabs/UI/HZHSEndWnd", path));
                     return openList;
+                case UIType.HTMMapWnd:
+                    openList.Add(string.Format("Prefabs/UI/HTMMapWnd", path));
+                    return openList;
+                case UIType.BoatRenameWnd:
+                    openList.Add(string.Format("Prefabs/UI/BoatRenameWnd", path));
+                    return openList;
+
+
+
                 default:
                     return openList;
             }
