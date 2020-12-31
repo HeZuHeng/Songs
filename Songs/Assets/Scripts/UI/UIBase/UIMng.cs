@@ -485,11 +485,17 @@ namespace Songs
                 case UIType.HZHSEndWnd:
                     openList.Add(string.Format("Prefabs/UI/HZHSEndWnd", path));
                     return openList;
-                case UIType.HTMMapStartWnd:
-                    openList.Add(string.Format("Prefabs/UI/HTMMapStartWnd", path));
+                case UIType.HTMMapPathWnd:
+                    openList.Add(string.Format("Prefabs/UI/HTMMapPathWnd", path));
                     return openList;
-                case UIType.HTMMapEndWnd:
-                    openList.Add(string.Format("Prefabs/UI/HTMMapEndWnd", path));
+                case UIType.HTMMapPoint1Wnd:
+                    openList.Add(string.Format("Prefabs/UI/HTMMapPoint1Wnd", path));
+                    return openList;
+                case UIType.HTMMapPoint2Wnd:
+                    openList.Add(string.Format("Prefabs/UI/HTMMapPoint2Wnd", path));
+                    return openList;
+                case UIType.HTMMapPoint3Wnd:
+                    openList.Add(string.Format("Prefabs/UI/HTMMapPoint3Wnd", path));
                     return openList;
                 case UIType.HTMBoatNameWnd:
                     openList.Add(string.Format("Prefabs/UI/HTMBoatNameWnd", path));

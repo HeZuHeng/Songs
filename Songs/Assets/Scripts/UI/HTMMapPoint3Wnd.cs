@@ -4,21 +4,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HTMMapEndWnd : UIBase
+public class HTMMapPoint3Wnd : UIBase
 {
-    public Button Button_end;
+    public Button Button_ok;
 
     protected override void Awake()
     {
         base.Awake();
-        Type = UIType.HTMMapStartWnd;
+        Type = UIType.HTMMapPoint3Wnd;
         MutexInterface = true;
         Initialized();
     }
 
     private void Initialized()
     {
-        if(Button_end != null) Button_end.onClick.AddListener(OnClickEnd);
+        if(Button_ok != null) Button_ok.onClick.AddListener(OnClick);
     }
 
 
@@ -33,7 +33,7 @@ public class HTMMapEndWnd : UIBase
 
 
 
-    public void OnClickEnd()
+    public void OnClick()
     {
         //to do:切换界面
         Debug.Log("结束地图");

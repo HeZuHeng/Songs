@@ -4,14 +4,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HTMMapStartWnd : UIBase
+public class HTMMapPathWnd : UIBase
 {
     public Button Button_next;
 
     protected override void Awake()
     {
         base.Awake();
-        Type = UIType.HTMMapStartWnd;
+        Type = UIType.HTMMapPathWnd;
         MutexInterface = true;
         Initialized();
     }
