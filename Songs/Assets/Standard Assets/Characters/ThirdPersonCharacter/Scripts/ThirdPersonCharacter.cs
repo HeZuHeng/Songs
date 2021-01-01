@@ -215,7 +215,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				float speed = 0.02f;
 				if (Application.platform == RuntimePlatform.WebGLPlayer)
                 {
-					speed = 0.04f;
+					speed = 0.08f;
 				}
 				Vector3 v = (move * speed * m_MoveSpeedMultiplier) / Time.deltaTime;
 
