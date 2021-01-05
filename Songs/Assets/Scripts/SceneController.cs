@@ -5,6 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using LaoZiCloudSDK.CameraHelper;
 
 public delegate void OnStateEndDelegate(State state);
 public delegate void OnStateChangeDelegate();
@@ -34,7 +35,7 @@ public class SceneController
         }
         return _instance;
     }
-
+    public static TerrainController TerrainController { get; private set; }
     public bool InitScene = false;
 
     SceneData CurSceneData;
@@ -142,14 +143,16 @@ public class SceneController
         }
     }
 
-    public void Start()
+    public void Start(TerrainController controller = null)
     {
+        TerrainController = controller;
         SceneAssetObject sceneAsset = SceneMng.GetInstance().GetSceneAssetObject(1);
         CameraMng.GetInstance().InitPlayer(sceneAsset.Tran);
         sceneAsset.Tran.gameObject.SetActive(false);
 
         if(childController != null) childController.Init();
-
+        UIMng.Instance.ConcealUI(UIType.SelectPlotWnd);
+        UIMng.Instance.ConcealUI(UIType.LoadingWnd);
         UIMng.Instance.OpenUI(UIType.NONE);
         UIMng.Instance.ActivationUI(UIType.SettingWnd);
     }
@@ -172,7 +175,7 @@ public class SceneController
 
     public void ToState(State state, OnStateEndDelegate onStateEnd)
     {
-        childController.ToState(state, onStateEnd);
+        if(childController != null) childController.ToState(state, onStateEnd);
     }
 
     public void FrameUpdate()
@@ -228,7 +231,7 @@ public class ChildController
 
 public class HeavenController : ChildController
 {
-    public static string Name = "中英诗歌精神比较";
+    public static string Name = "Men and Nature";
     SceneAssetObject sceneAsset;
     SceneAssetObject hzhs;
     SceneAssetObject tym;
@@ -341,7 +344,7 @@ public class HeavenController : ChildController
 
 public class ThreeSongsController : ChildController
 {
-    public static string Name = "华兹华斯书房三本诗歌";
+    public static string Name = "Three Books";
 
     SceneAssetObject sceneAsset;
     public override void Init()
@@ -349,6 +352,7 @@ public class ThreeSongsController : ChildController
         base.Init();
         sceneAsset = SceneMng.GetInstance().GetSceneAssetObject(1);
         sceneAsset.Tran.gameObject.AddComponent<TriggerEvent>().enterEvent.AddListener(EnterEvent);
+        InputManager.GetInstance().AddClickEventListener(OnClickEvent);
     }
 
     void EnterEvent(string name)
@@ -368,10 +372,15 @@ public class ThreeSongsController : ChildController
         SceneController.GetInstance().AddPlayAnimator(sceneAsset);
         
     }
+
+    void OnClickEvent(GameObject obj)
+    {
+        EnterEvent(obj.name);
+    }
 }
 public class ThreePictureController : ChildController
 {
-    public static string Name = "草的意象数据";
+    public static string Name = "The Image of Grass";
 
     SceneAssetObject sceneAsset;
     public override void Init()

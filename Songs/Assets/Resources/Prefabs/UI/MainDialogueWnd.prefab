@@ -194,8 +194,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 663050428364748922}
   m_HandleRect: {fileID: 5792407908589525166}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.8
+  m_Value: 0
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -239,7 +239,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -17, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1799542632549772545
 MonoBehaviour:
@@ -500,7 +500,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 200}
+  m_SizeDelta: {x: 0, y: 160}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &2680560363230047291
 GameObject:
@@ -571,10 +571,10 @@ RectTransform:
   m_Father: {fileID: 3714702424623685175}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 532.5, y: -190}
-  m_SizeDelta: {x: 1045, y: 360}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2469045787412865944
 CanvasRenderer:
@@ -606,7 +606,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: d5def7c894abc5949b0196dc8212c562, type: 3}
-    m_FontSize: 20
+    m_FontSize: 28
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -616,7 +616,7 @@ MonoBehaviour:
     m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
-    m_LineSpacing: 1
+    m_LineSpacing: 1.1
   m_Text: 
 --- !u!114 &8003012270222701323
 MonoBehaviour:
@@ -631,6 +631,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_TextIndent: 2
+  endYieldTime: 0.5
   m_Text: 
   m_Enable: 0
   m_ShowSpeed: 10
@@ -991,7 +992,7 @@ RectTransform:
   m_Father: {fileID: 3545938014770665798}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.19999999}
+  m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
@@ -1609,7 +1610,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Visit
+  m_Text: Next
 --- !u!1 &7639829401114409299
 GameObject:
   m_ObjectHideFlags: 0

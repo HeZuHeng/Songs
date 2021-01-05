@@ -7,6 +7,7 @@ using UnityEngine.UI;
 using Songs;
 using DG.Tweening;
 using Coffee.UIEffects;
+using UnityEngine.EventSystems;
 
 public class FantasyWnd : UIBase
 {
@@ -26,11 +27,13 @@ public class FantasyWnd : UIBase
 
     public Image[] images;
     public UIShadow[] shadows;
-    public Image Item;
     public ScrollRect scrollRect;
     public TrendsText tip;
 
+    public FantasyItemUI[] itemUIs;
+
     int index = 0;
+    Image curImage = null;
     protected override void Awake()
     {
         base.Awake();
@@ -38,78 +41,103 @@ public class FantasyWnd : UIBase
         MutexInterface = true;
     }
 
+    protected override void Start()
+    {
+        base.Start();
+
+        for (int i = 0; i < itemUIs.Length; i++)
+        {
+            itemUIs[i].OnPointUp += OnPointUpIamge;
+        }
+    }
+
     protected override void OnEnable()
     {
         base.OnEnable();
         index = 0;
-        Item.gameObject.SetActive(false);
-        for (int i = 0; i < images.Length; i++)
-        {
-            images[i].gameObject.SetActive(false);
-        }
+        curImage = null;
         for (int i = 0; i < scrollRect.content.childCount; i++)
         {
             scrollRect.content.GetChild(i).localScale = Vector3.one;
             scrollRect.content.GetChild(i).gameObject.SetActive(true);
         }
         Show();
+
+        SceneController.TerrainController.SetDetailObjects(0.1f);
+        SceneController.TerrainController.SetWater(false);
+        SceneController.TerrainController.SetSky(0,1f);
     }
 
-    public void OnCilck(Text game)
+    void OnPointUpIamge(Image image)
     {
-        if (index < Names.Length && game.text.Equals(Names[index]))
+        StopAllCoroutines();
+        StartCoroutine(OnShowFantasy(image));
+    }
+
+    IEnumerator OnShowFantasy(Image image)
+    {
+        if(image != images[index])
         {
-            images[index].sprite = game.transform.parent.GetComponent<Image>().sprite;
-            Item.sprite = images[index].sprite;
-
-            Item.transform.position = game.transform.position;
-            Item.transform.rotation = game.transform.rotation;
-            Item.transform.localScale = Vector3.one;
-
-            Item.gameObject.SetActive(true);
-            game.transform.parent.gameObject.SetActive(false);
-
-            tip.transform.parent.DOScaleY(0, 1);
-            Tweener tweener = Item.transform.DOShakeRotation(2, new Vector3(25, 15, 90));
-            Tweener tweenerTip = Item.transform.DOMove(images[index].transform.position, 1);
-            tweenerTip.onComplete += delegate ()
-            {
-                tip.transform.parent.DOScaleY(1, 1);
-            };
-            tweener.onComplete += delegate ()
-            {
-                Item.gameObject.SetActive(false);
-                images[index].gameObject.SetActive(true);
-
-                tweener.onComplete = null;
-                index++;
-                
-                if(index == 2)
-                {
-                    SongsDataMng.GetInstance().SetQuestion(1);
-                    UIMng.Instance.ActivationUI(UIType.AnswerWnd);
-                }
-                if (index == 4)
-                {
-                    SongsDataMng.GetInstance().SetQuestion(2);
-                    UIMng.Instance.ActivationUI(UIType.AnswerWnd);
-                }
-                if (index == 5)
-                {
-                    QuestionBankData bankData = SongsDataMng.GetInstance().SetQuestion(3);
-                    bankData.onQuestionEnd.RemoveListener(NextQuestion);
-                    bankData.onQuestionEnd.AddListener(NextQuestion);
-                    UIMng.Instance.ActivationUI(UIType.AnswerWnd);
-                }
-                
-                Show();
-            };
-        }
-        else
-        {
+            image.gameObject.SetActive(true);
             tip.transform.parent.DOShakeRotation(2, new Vector3(10, 7, 0));
             tip.transform.parent.DOShakePosition(2, new Vector3(5, 6, 0));
+            yield break;
         }
+        image.gameObject.SetActive(false);
+        QuestionBankData bankData = null;
+        if (index == 0)
+        {
+            SceneController.TerrainController.SetSky(1, 0.7f);
+            yield return new WaitForSeconds(0.3f);
+        }
+
+        if (index == 1)
+        {
+            SceneController.TerrainController.SetDetailObjects(1);
+            yield return new WaitForSeconds(1f);
+            tip.transform.parent.gameObject.SetActive(false);
+            bankData = SongsDataMng.GetInstance().SetQuestion(1);
+            bankData.onQuestionEnd.RemoveListener(NextFantasy);
+            bankData.onQuestionEnd.AddListener(NextFantasy);
+            UIMng.Instance.ActivationUI(UIType.AnswerWnd);
+        }
+
+        if (index == 2)
+        {
+            SceneController.TerrainController.SetSky(2, 0.3f);
+            yield return new WaitForSeconds(0.3f);
+            NextFantasy();
+        }
+
+        if (index == 3)
+        {
+            SceneController.TerrainController.SetSky(3, 0.1f);
+            yield return new WaitForSeconds(1f);
+            tip.transform.parent.gameObject.SetActive(false);
+            bankData = SongsDataMng.GetInstance().SetQuestion(2);
+            bankData.onQuestionEnd.RemoveListener(NextFantasy);
+            bankData.onQuestionEnd.AddListener(NextFantasy);
+            UIMng.Instance.ActivationUI(UIType.AnswerWnd);
+        }
+        if (index == 4)
+        {
+            SceneController.TerrainController.SetWater(true);
+            yield return new WaitForSeconds(1f);
+            tip.transform.parent.gameObject.SetActive(false);
+            bankData = SongsDataMng.GetInstance().SetQuestion(3);
+            bankData.onQuestionEnd.RemoveListener(NextFantasy);
+            bankData.onQuestionEnd.AddListener(NextFantasy);
+            UIMng.Instance.ActivationUI(UIType.AnswerWnd);
+        }
+
+        if(bankData == null) NextFantasy();
+
+    }
+
+    void NextFantasy()
+    {
+        index++;
+        Show();
     }
 
     void Show()
@@ -117,6 +145,7 @@ public class FantasyWnd : UIBase
         if (index >= Names.Length)
         {
             tip.transform.parent.gameObject.SetActive(false);
+            NextQuestion();
             return;
         }
         tip.transform.parent.gameObject.SetActive(true);
@@ -151,6 +180,8 @@ public class FantasyWnd : UIBase
 
     void OnEnd()
     {
+        UIMng.Instance.OpenUI(UIType.NONE);
+
         QuestionBankData question = SongsDataMng.GetInstance().GetQuestionBankData;
         TaskData taskData = SongsDataMng.GetInstance().GetTaskData;
         if (taskData != null)
@@ -164,7 +195,6 @@ public class FantasyWnd : UIBase
                 }
             }
         }
-
-        UIMng.Instance.OpenUI(UIType.NONE);
     }
+
 }

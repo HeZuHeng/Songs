@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class TrendsText : MonoBehaviour
 {
     public uint m_TextIndent;       //首行缩进--字符数
+    public float endYieldTime = 0.5f;
     [TextArea(4, 10)]
     public string m_Text;           //显示的文本内容
     public bool m_Enable;           //是否在OnEnable中初始化Play
@@ -56,7 +57,7 @@ public class TrendsText : MonoBehaviour
         }
         suspend = false;
         //\u3000为中文空格英文空格会引起unity中Text的自动换行因此将内容中的英文空格换成中文空格
-        string str = m_Text.Replace(" ", "\u3000");
+        string str = m_Text;//.Replace(" ", "\u3000");
         string LineHead = "";
         //设置段落的首行缩进的字符数
         if (m_TextIndent != 0)
@@ -214,7 +215,7 @@ public class TrendsText : MonoBehaviour
         if (m_AudioSource != null)
             Destroy(m_AudioSource);
         //等待一帧以便以上信息运行完成
-        yield return 0;
+        yield return new WaitForSeconds(endYieldTime);
         m_AudioSource = null;
         //执行播放完成回调
         m_CallBack?.Invoke();

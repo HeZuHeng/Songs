@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <TasksConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <任务分支名>分支二：惠特曼</任务分支名>
-  <SceneTasks 场景任务名="诗人惠特曼介绍" 图标="icon_cover_jieshao" 场景数据="惠特曼介绍数据">
+  <任务分支名>II.Walt Whitman</任务分支名>
+  <SceneTasks 场景任务名="About Whitman" 图标="icon_cover_jieshao" 场景数据="惠特曼介绍数据">
     <TaskDatas ID="1" 任务名="旅程引子1" 下一个="2"  类型="Talk" 描述 = "First across the time, then across the Atlantic ocean, you reach Louisiana in American. 
 \n(你坐船穿越时空，穿越了大西洋，最终到达美国的路易斯安那州海岸。)"/>
     <TaskDatas ID="2" 任务名="旅程引子2" 下一个="3"  类型="Talk" 描述 = "You decide to look for the Statue of Liberty beginning your journey at the river of Mississippi River- the mother river of America. You have a boat already. Click the button to start this adventure in the identity of Whitman!
@@ -11,9 +11,9 @@
     <TaskDatas ID="5" 任务名="取名" 下一个="6" 类型="OpenWnd" 值 = "HTMBoatNameWnd"/>
     <TaskDatas ID="6" 任务名="美国地图2" 下一个="7" 类型="OpenWnd" 值 = "HTMMapPoint1Wnd"/>
     <TaskDatas ID="7" 任务名="起航" 下一个="8" 类型="DOTween" 值 = "5" 描述="船只起航镜头"/>
-    <TaskDatas ID="8" 任务名="三张照片" 下一个="0" 类型="TaskChange" 值 = "聚会大厅三张照片" 描述="点击右侧任务名前往观看聚会大厅三张照片"/>
+    <TaskDatas ID="8" 任务名="三张照片" 下一个="0" 类型="TaskChange" 值 = "The Image of Grass" 描述="点击右侧任务名前往观看聚会大厅三张照片"/>
   </SceneTasks>
-  <SceneTasks 场景任务名="草的意象" 图标="icon_cover_picture" 场景数据="草的意象数据">
+  <SceneTasks 场景任务名="The Image of Grass" 图标="icon_cover_picture" 场景数据="草的意象数据">
     <TaskDatas ID="101" 任务名="聚会大厅引子" 下一个="102"  类型="Talk" 描述 = "As a captain, you meet your crew for the first time. You need to introduce yourself.
 \n(由于你和你的船员第一次见面，需要自我介绍。)"/>
     <TaskDatas ID="102" 任务名="聚会大厅自由漫游" 下一个="0" 类型="PersonMove" 值 = "0"/>
@@ -29,26 +29,26 @@
     <TaskDatas ID="31" 任务名="解析自我之歌照片" 下一个="0"  类型="Talk" 描述 = "In New York Whitman witnessed the rapid growth of the city and wanted to write a new kind of poetry in tune with mankind’s new faith, hopeful expectations and energy of his days.
 \n (在纽约的时候，惠特曼目睹了城市的高速发展，想要写出一种新型诗歌，契合他的时代的人类的新信仰，充满希望的前景以及勃勃生机。)"/>
     <TaskDatas ID="103" 任务名="美国地图3" 下一个="104" 类型="OpenWnd" 值 = "HTMMapPoint2Wnd"/>
-    <TaskDatas ID="104" 任务名="寻找草的意象" 下一个="0" 类型="TaskChange" 值 = "寻找草的意象" 描述="点击右侧任务名前往 寻找草的意象"/>
+    <TaskDatas ID="104" 任务名="寻找草的意象" 下一个="0" 类型="TaskChange" 值 = "The Image of Self" 描述="点击右侧任务名前往 寻找草的意象"/>
   </SceneTasks>
-  <SceneTasks 场景任务名="寻找草的意象" 图标="icon_cover_glassimage" 场景数据="寻找草的意象数据">
+  <SceneTasks 场景任务名="The Image of Self" 图标="icon_cover_glassimage" 场景数据="寻找草的意象数据">
     <TaskDatas ID="1" 任务名="船员对话" 下一个="2" 类型="StartState" 值 = "InitMoveCamera"/>
     <TaskDatas ID="2" 任务名="船员A说" 下一个="3" 类型="Talk" 值 = "102" 描述 = "Captain Whitman once said that the art of art, the glory of expression and the sunshine of the light of letters are simplicity. Nothing is better than simplicity... Could you tell me what do these sentences refer to? "/>
     <TaskDatas ID="3" 任务名="船员B说" 下一个="4" 类型="Talk" 值 = "101" 描述 = " Sure, I think Captain Whitman is talking about free verse. "/>
     <TaskDatas ID="4" 任务名="惠特曼的房间" 下一个="5" 类型="DOTween" 值 = "5" 描述="跟随镜头预览惠特曼的房间"/>
     <TaskDatas ID="5" 任务名="确认查看《自我之歌》" 下一个="6"  类型="Talk" 描述 = "Aclick to read the selections ( 确认查看选段 )。"/>
   </SceneTasks>
-  <SceneTasks 场景任务名="《自我之歌》意境" 图标="icon_cover_songofmyself" 场景数据="自我之歌数据">
+  <SceneTasks 场景任务名="Artistic Conception" 图标="icon_cover_songofmyself" 场景数据="自我之歌数据">
     <TaskDatas ID="0" 任务名="张三" 下一个="12" 类型="None" />
     <TaskDatas ID="0" 任务名="李四" 下一个="14" 类型="None" />
     <TaskDatas ID="0" 任务名="吴亦凡" 下一个="18" 类型="None" />
   </SceneTasks>
-  <SceneTasks 场景任务名="体现诗人的平等" 图标="icon_cover_equity" 场景数据="体现诗人平等数据">
+  <SceneTasks 场景任务名="Equality" 图标="icon_cover_equity" 场景数据="体现诗人平等数据">
     <TaskDatas ID="0" 任务名="张三" 下一个="12" 类型="None" />
     <TaskDatas ID="0" 任务名="李四" 下一个="14" 类型="None" />
     <TaskDatas ID="0" 任务名="吴亦凡" 下一个="18" 类型="None" />
   </SceneTasks>
-  <SceneTasks 场景任务名="中美民主思想比较" 图标="icon_cover_china_usa" 场景数据="中美民主思想比较数据">
+  <SceneTasks 场景任务名="About Democracy" 图标="icon_cover_china_usa" 场景数据="中美民主思想比较数据">
     <TaskDatas ID="0" 任务名="张三" 下一个="12" 类型="None" />
     <TaskDatas ID="0" 任务名="李四" 下一个="14" 类型="None" />
     <TaskDatas ID="0" 任务名="吴亦凡" 下一个="18" 类型="None" />

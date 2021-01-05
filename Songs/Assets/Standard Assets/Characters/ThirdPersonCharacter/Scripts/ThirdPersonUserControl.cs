@@ -16,7 +16,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         private bool _isLocked = false;
         private bool walk = true;
 
-        public Vector3 offset = new Vector3(0, 1.6f, 0);
+        [HideInInspector]
+        public Vector3 offset = new Vector3(0, 1.478f, 0);
         private void Start()
         {
             // get the transform of the main camera

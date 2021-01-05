@@ -45,7 +45,7 @@ namespace SpaceSimulation
             CameraMng.GetInstance().Start(transform);
             //CameraMng.GetInstance().UserControl = ThirdPerson;
             GameDataLoader.GetInstance().Startup();
-
+            
 #if SONGS_DEBUG
             SongsDataMng.GetInstance().OnDataLoaded = delegate (string val)
             {
@@ -53,7 +53,7 @@ namespace SpaceSimulation
                 {
                     SceneTaskData sceneTask = SongsDataMng.GetInstance().GetSceneTaskDataFromName(TestSceneName);
                     SongsDataMng.GetInstance().SetSceneTaskData(sceneTask);
-                    UIMng.Instance.OpenUI(UIType.LoadingWnd);
+                    UIMng.Instance.ActivationUI(UIType.LoadingWnd);
                 }
             };
 #endif
@@ -77,6 +77,11 @@ namespace SpaceSimulation
             GameDataManager.GetInstance().FrameUpdate();
             SceneController.GetInstance().FrameUpdate();
             SongsDataMng.GetInstance().LoadUpdate();
+
+            if (Input.GetKeyDown(KeyCode.P))
+            {
+                CameraMng.GetInstance().GetPhoto();
+            }
         }
 
         public void OnApplicationQuit()

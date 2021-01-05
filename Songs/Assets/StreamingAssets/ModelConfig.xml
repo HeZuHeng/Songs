@@ -85,6 +85,18 @@
         <z>0</z>
       </eulerAngle>
     </ModelDatas>
+	<ModelDatas Id="1005" 模型名="书3" 资源名="bookopen_open" >
+	  <position>
+        <x>-10000</x>
+        <y>-10000</y>
+        <z>-10000</z>
+      </position>
+      <eulerAngle>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </eulerAngle>
+    </ModelDatas>
   </SceneDatas>
   <SceneDatas 场景="华兹华斯赏花" 场景资源名="华兹华斯赏花" 摄像机 = "parsingcamera" 位置="parsinginitposition" 镜头="cutscene_enjoyflower">
     <!--ModelDatas 模型名="张三" 资源名="12" />

@@ -112,6 +112,11 @@ public class MainDialogueWnd : UIBase
                 int speed = 0;
                 int.TryParse(strs[2], out speed);
                 SceneAssetObject sceneAsset = SceneMng.GetInstance().GetSceneAssetObject(id);
+                if(sceneAsset == null)
+                {
+                    taskData.TaskState = TaskState.End;
+                    return;
+                }
                 if((AnimatorType)aType == AnimatorType.BOOl)
                 {
                     bool b = false;
@@ -243,23 +248,30 @@ public class MainDialogueWnd : UIBase
             }
             else
             {
-                talkName.text = "实验者";
-                SceneAssetObject sceneAssetObject = SceneMng.GetInstance().GetSceneAssetObject(1);
-                if ("nyk".Equals(sceneAssetObject.URL))
-                {
-                    iconN = "nyk";
-                }
-                else
-                {
-                    iconN = "nvyk";
-                }
+                talkName.text = "系统提示";
+                iconN = string.Empty;
+                //SceneAssetObject sceneAssetObject = SceneMng.GetInstance().GetSceneAssetObject(1);
+                //if ("nyk".Equals(sceneAssetObject.URL))
+                //{
+                //    iconN = "nyk";
+                //}
+                //else
+                //{
+                //    iconN = "nvyk";
+                //}
             }
-            Sprite obj = Resources.Load<Sprite>("Sprites/PlayerIcon/" + iconN);
-            if (obj != null)
+            if (!string.IsNullOrEmpty(iconN)) {
+                Sprite obj = Resources.Load<Sprite>("Sprites/PlayerIcon/" + iconN);
+                if (obj != null)
+                {
+                    talkIcon.sprite = obj;
+                }
+                talkIcon.enabled = true;
+            }
+            else
             {
-                talkIcon.sprite = obj;
+                talkIcon.enabled = false;
             }
-            talkIcon.enabled = true;
 
             Show(taskData.des);
         }
@@ -315,7 +327,7 @@ public class MainDialogueWnd : UIBase
         {
             SceneTaskData sceneTask = SongsDataMng.GetInstance().GetSceneTaskDataFromName(taskData.val);
             SongsDataMng.GetInstance().SetSceneTaskData(sceneTask);
-            UIMng.Instance.OpenUI(UIType.LoadingWnd);
+            UIMng.Instance.ActivationUI(UIType.LoadingWnd);
         }
     }
 }

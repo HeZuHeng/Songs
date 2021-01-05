@@ -126,7 +126,8 @@ namespace AQUAS
                 _cameraT.Rotate(-rotAverageY, 0f, 0f, Space.Self);
             }
         }
-        Vector3 offset = new Vector3(0, 0, -0.8f);
+        [HideInInspector]
+        public Vector3 offset = new Vector3(0, 0, 0.08f);
         Vector3 m_CamPos = Vector3.zero;
         Vector3 thirdPos = Vector3.zero;
         Vector3 direction = new Vector3();
@@ -137,9 +138,9 @@ namespace AQUAS
             direction = (thirdPos - m_CamPos).normalized;
             RaycastHit hit;
             Debug.DrawLine(thirdPos, m_CamPos,Color.red);
-            if (Physics.Raycast(thirdPos, m_CamPos, out hit, 1))
+            if (Physics.Raycast(thirdPos, m_CamPos, out hit, offset.magnitude))
             {
-                _playerRootT.localPosition = hit.distance * offset * 0.8f;
+                _playerRootT.localPosition = hit.distance * offset;
             }
             else
             {

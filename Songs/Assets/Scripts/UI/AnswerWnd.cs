@@ -126,17 +126,18 @@ public class AnswerWnd : UIBase
             scrollRect.content.GetChild(i).GetComponentInChildren<Toggle>().isOn = false;
         }
 
-        Sprite obj = Resources.Load<Sprite>("Sprites/PlayerIcon/" + question.icon);
-        if (obj != null)
-        {
-            icon.sprite = obj;
-        }
-        else
-        {
-            icon.enabled = false;
-        }
+        //Sprite obj = Resources.Load<Sprite>("Sprites/PlayerIcon/" + question.icon);
+        //if (obj != null)
+        //{
+        //    icon.sprite = obj;
+        //}
+        //else
+        //{
+        //    icon.enabled = false;
+        //}
         head.text = question.head;
         errorTip.enabled = false;
+        bool showTip = false;
         Transform tran = null;
         int count = scrollRect.content.childCount;
         for (int i = 0; i < question.questions.Count; i++)
@@ -150,12 +151,16 @@ public class AnswerWnd : UIBase
                 tran = Instantiate(scrollRect.content.GetChild(0));
                 tran.transform.SetParent(scrollRect.content);
             }
-            tran.GetComponentInChildren<Text>().text = question.questions[i];
-            tran.localPosition = new Vector3(scrollRect.content.GetChild(0).localPosition.x, i * -100, tran.localPosition.z);
+            if (question.answers != null)
+            {
+                showTip = question.answers.Contains(i);
+            }
+            tran.GetComponentInChildren<AnswerItemUI>().Show(question.questions[i], showTip);
+            tran.localPosition = new Vector3(100 + i * 600, -50, tran.localPosition.z);
             tran.localScale = Vector3.one;
             tran.gameObject.SetActive(true);
         }
-        scrollRect.content.sizeDelta = new Vector2(scrollRect.content.localPosition.x, question.questions.Count * 100);
+        scrollRect.content.sizeDelta = new Vector2(200 + question.questions.Count * 600, scrollRect.content.sizeDelta.y);
         scrollRect.content.localPosition = Vector3.zero;
     }
 

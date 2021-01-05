@@ -145,27 +145,27 @@ namespace LaoZiCloudSDK.CameraHelper
         }
 
 
-        public void PressEventDispatch(int _instaceId_)
+        public void PressEventDispatch(GameObject obj)
         {
             if (null != onPress)
             {
-                onPress.Invoke(_instaceId_);
+                onPress.Invoke(obj);
             }
         }
 
-        public void ClickEventDispatch(int _instaceId_)
+        public void ClickEventDispatch(GameObject obj)
         {
             if (null != onClick)
             {
-                onClick.Invoke(_instaceId_);
+                onClick.Invoke(obj);
             }
         }
 
-        public void ReleaseEventDispatch(int _instaceId_)
+        public void ReleaseEventDispatch(GameObject obj)
         {
             if (null != onRelease)
             {
-                onRelease.Invoke(_instaceId_);
+                onRelease.Invoke(obj);
             }
         }
 

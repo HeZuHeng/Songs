@@ -16,7 +16,7 @@ public class LoadingWnd : UIBase
     {
         base.Awake();
         Type = UIType.LoadingWnd;
-        MutexInterface = true;
+        MutexInterface = false;
         progressBar.value = 0;
     }
 
@@ -31,6 +31,7 @@ public class LoadingWnd : UIBase
             LoadScene(sceneData);
             //LoadSceneItem(sceneData.datas);
         }
+        transform.SetAsLastSibling();
 	}
 
     protected override void OnDisable()
@@ -46,16 +47,35 @@ public class LoadingWnd : UIBase
         lblStatus.text = "100%";
 
         SceneManager.SetActiveScene(scene);
-        if(SceneController.GetInstance().InitScene)
+        TerrainController terrainController = null;
+        GameObject[] gameObjects = scene.GetRootGameObjects();
+
+        for (int i = 0; i < gameObjects.Length; i++)
         {
-            SceneController.GetInstance().Start();
+            if ("Root".Equals(gameObjects[i].name))
+            {
+                terrainController = gameObjects[i].GetComponent<TerrainController>();
+                if(terrainController == null)
+                {
+                    terrainController = gameObjects[i].AddComponent<TerrainController>();
+                }
+            }
+        }
+        if (SceneController.GetInstance().InitScene)
+        {
+            SceneController.GetInstance().Start(terrainController);
         }
     }
 
     void LoadScene(SceneData sceneData)
     {
         SceneController.GetInstance().Init();
-
+        Scene scene = SceneManager.GetActiveScene();
+        if (scene.name.Equals(sceneData.sceneName))
+        {
+            OnSceneLoaded(scene, LoadSceneMode.Single);
+            return;
+        }
         GameLoadTask loadTask = GameDataManager.GetInstance().GetGameTask(sceneData.sceneName);
         loadTask.OnTaskProgress += delegate (float progress)
         {

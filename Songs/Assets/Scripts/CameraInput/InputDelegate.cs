@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace LaoZiCloudSDK.CameraHelper
 {
-    public delegate void SimpleInputSignal(int _instanceId_);
+    public delegate void SimpleInputSignal(GameObject obj);
     public delegate void DoubleInputSignal(int _instanceId_);
     public delegate void DragInputSignal(Vector3 _pos_);
     public delegate void HoldDownInputSignal(Vector2 _pos_);

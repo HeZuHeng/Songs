@@ -364,7 +364,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Visit
+  m_Text: Next
 --- !u!1 &3741383275503049976
 GameObject:
   m_ObjectHideFlags: 0
@@ -799,6 +799,7 @@ GameObject:
   - component: {fileID: 5890982964301836930}
   - component: {fileID: 7851142373027575705}
   - component: {fileID: 6663380950746091189}
+  - component: {fileID: 4137704674408123932}
   m_Layer: 5
   m_Name: Text_dialogue
   m_TagString: Untagged
@@ -820,10 +821,10 @@ RectTransform:
   m_Father: {fileID: 6716853940005442350}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -10, y: 0}
+  m_SizeDelta: {x: 370, y: 28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5890982964301836930
 CanvasRenderer:
@@ -855,17 +856,17 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: d5def7c894abc5949b0196dc8212c562, type: 3}
-    m_FontSize: 20
+    m_FontSize: 28
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
-    m_LineSpacing: 1
+    m_LineSpacing: 1.1
   m_Text: 
 --- !u!114 &6663380950746091189
 MonoBehaviour:
@@ -880,6 +881,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_TextIndent: 1
+  endYieldTime: 0.5
   m_Text: "Ladies and gentlemen, welcome to Wordsworth\u2019s residence. I\u2019m
     Lucy. Today, I\u2019m honored to serve you as a tour guide, and show you around
     Wordsworth\u2019s Dove Cottage."
@@ -892,6 +894,20 @@ MonoBehaviour:
     m_TypeName: TrendsText+CallBack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   m_ScrollRect: {fileID: 112423972150363385}
+--- !u!114 &4137704674408123932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6860389630233622620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1741964061, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 0
+  m_VerticalFit: 2
 --- !u!1 &7573305609181259789
 GameObject:
   m_ObjectHideFlags: 0

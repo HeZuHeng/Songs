@@ -188,7 +188,7 @@ namespace LaoZiCloudSDK.CameraHelper
             if (this.lastGo != null)
             {
                 //this.lastGo.SendMessage("OnPress", screenPos, SendMessageOptions.DontRequireReceiver);
-                InputManager.GetInstance().PressEventDispatch(this.lastGo.GetInstanceID());
+                InputManager.GetInstance().PressEventDispatch(this.lastGo);
 
                 Vector3 screen = mainCamera.WorldToScreenPoint(lastGo.transform.position);
                 dragOffset = screen - new Vector3(screenPos.x, screenPos.y, 0);
@@ -235,12 +235,12 @@ namespace LaoZiCloudSDK.CameraHelper
                 if (currentGo == this.lastGo && (screenPos - pressedPosition).magnitude <= 10 && Time.frameCount - pressedTime <= frameCount)
                 {
                     //this.lastGo.SendMessage("OnClick", SendMessageOptions.DontRequireReceiver);
-                    InputManager.GetInstance().ClickEventDispatch(this.lastGo.GetInstanceID());
+                    InputManager.GetInstance().ClickEventDispatch(this.lastGo);
                 }
                 
 
                 //this.lastGo.SendMessage("OnRelease", SendMessageOptions.DontRequireReceiver);
-                InputManager.GetInstance().ReleaseEventDispatch(this.lastGo.GetInstanceID());
+                InputManager.GetInstance().ReleaseEventDispatch(this.lastGo);
                 this.lastGo = null;
             }
             else if ((screenPos - pressedPosition).magnitude <= 10 && Time.frameCount - pressedTime <= frameCount)
@@ -268,11 +268,11 @@ namespace LaoZiCloudSDK.CameraHelper
                 if (currentGo == this.lastGo && detalPos.magnitude <= 10f && Time.frameCount - pressedTime <= frameCount)
                 {
                     //this.lastGo.SendMessage("OnClick", SendMessageOptions.DontRequireReceiver);
-                    InputManager.GetInstance().ClickEventDispatch(this.lastGo.GetInstanceID());
+                    InputManager.GetInstance().ClickEventDispatch(this.lastGo);
                 }
 
                 //this.lastGo.SendMessage("OnRelease", SendMessageOptions.DontRequireReceiver);
-                InputManager.GetInstance().ReleaseEventDispatch(this.lastGo.GetInstanceID());
+                InputManager.GetInstance().ReleaseEventDispatch(this.lastGo);
                 this.lastGo = null;
             }
             else if ((screenPos - pressedPosition).magnitude <= 10 && Time.frameCount - pressedTime <= frameCount)

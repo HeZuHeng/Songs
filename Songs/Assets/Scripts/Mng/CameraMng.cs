@@ -45,10 +45,10 @@ public class CameraMng
     public Cutscene PlayCutscene { get; set; }
     public void Start(Transform transform)
     {
+        MainCamera = transform.GetComponentInChildren<Camera>();
         GameObject go = new GameObject("CameraParent");
         go.transform.SetParent(transform);
         go.transform.localPosition = Vector3.zero;
-
         mainCameraParent = go.transform;
     }
 
@@ -59,7 +59,8 @@ public class CameraMng
             camera.tag = "MainCamera";
             MainCamera = camera;
             MainCamera.transform.SetParent(mainCameraParent);
-            if (MainCamera.gameObject.GetComponent<InputEvent>())
+            
+            if (MainCamera.gameObject.GetComponent<InputEvent>() == null)
             {
                 MainCamera.gameObject.AddComponent<InputEvent>();
             }
@@ -79,11 +80,25 @@ public class CameraMng
 
     public void InitPlayer(Transform tran)
     {
+        int layer = LayerMask.NameToLayer("Player");
+        Transform[] transforms = tran.GetComponentsInChildren<Transform>();
+        for (int i = 0; i < transforms.Length; i++)
+        {
+            transforms[i].gameObject.layer = layer;
+        }
         CapsuleCollider capsuleCollider = tran.gameObject.GetComponent<CapsuleCollider>();
         if(capsuleCollider == null) capsuleCollider = tran.gameObject.AddComponent<CapsuleCollider>();
         capsuleCollider.height = 1.6f;
         capsuleCollider.radius = 0.3f;
         capsuleCollider.center = new Vector3(0, 0.8f, 0);
+        PhysicMaterial physicMaterial = new PhysicMaterial();
+        physicMaterial.dynamicFriction = 0.2f;
+        physicMaterial.staticFriction = 0.1f;
+        physicMaterial.bounciness = 0.01f;
+        physicMaterial.frictionCombine = PhysicMaterialCombine.Multiply;
+        physicMaterial.bounceCombine = PhysicMaterialCombine.Minimum;
+        capsuleCollider.material = physicMaterial;
+
         Rigidbody rigidbody = tran.gameObject.GetComponent<Rigidbody>();
         if(rigidbody == null)
         {
@@ -136,19 +151,21 @@ public class CameraMng
     public void SetThirdPersonMove()
     {
         ResetCamera();
-
+        int layer = LayerMask.NameToLayer("Player");
+        MainCamera.cullingMask |= ~(1 << layer);
         mainCameraParent.transform.position = MainCamera.transform.position + MainCamera.transform.forward * 3;
         mainCameraParent.transform.rotation = MainCamera.transform.rotation;
 
         MainCamera.transform.SetParent(mainCameraParent.transform);
-        MainCamera.transform.localPosition = -Vector3.forward * 0.1f;
-        MainCamera.transform.localRotation = Quaternion.Euler(new Vector3(25,0,0));
-        //UserControl.offset = new Vector3(0, 2, 0.5f);
+        MainCamera.transform.localPosition = -Vector3.forward * 0.8f;
+        MainCamera.transform.localRotation = Quaternion.Euler(new Vector3(5,0,0));
+        UserControl.offset = new Vector3(0, 1.7f, 0.5f);
         UserControl.transform.position = InitPosition;
         UserControl.transform.eulerAngles = InitRotation;
         UserControl.gameObject.SetActive(true);
         UserControl.SetMainCamera(mainCameraParent.transform);
         AQUAS_Look _Look = MainCamera.gameObject.AddComponent<AQUAS_Look>();
+        _Look.offset = new Vector3(0,0,-0.8f);
         _Look._isLocked = false;
         _Look.SetParent(mainCameraParent.transform);
     }
@@ -156,7 +173,8 @@ public class CameraMng
     public void SetPersonMove()
     {
         ResetCamera();
-
+        int layer = LayerMask.NameToLayer("Player");
+        MainCamera.cullingMask &= ~(1 << layer);
         MainCamera.transform.SetParent(mainCameraParent.transform);
         MainCamera.transform.localPosition = -Vector3.forward * 0.1f;
         MainCamera.transform.localRotation = Quaternion.Euler(new Vector3(0, 0, 0));
@@ -198,5 +216,24 @@ public class CameraMng
         _Look.SetParent(null);
         MainCamera.gameObject.AddComponent<AQUAS_Walk>();
 
+    }
+    int index = 0;
+    public void GetPhoto()
+    {
+        index++;
+        Rect rect = new Rect(Vector2.zero, new Vector2(Screen.width, Screen.height));
+        RenderTexture rt = new RenderTexture((int)Screen.width, (int)rect.height, 24);
+        MainCamera.targetTexture = rt;
+        MainCamera.Render();
+        RenderTexture.active = rt;
+        Texture2D screenShot = new Texture2D((int)rect.width, (int)rect.height, TextureFormat.RGBA32, false);
+        screenShot.ReadPixels(rect, 0, 0);
+        screenShot.Apply();
+        MainCamera.targetTexture = null;
+        RenderTexture.active = null;
+        GameObject.Destroy(rt);
+        string filepath = "F:\\Desstop\\"+ index+".png";//路径请自拟，这里随便写的
+        byte[] bytes = screenShot.EncodeToPNG();
+        System.IO.File.WriteAllBytes(filepath, bytes);
     }
 }

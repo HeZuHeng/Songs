@@ -21,6 +21,7 @@ public class SelectPlotWnd : UIBase
         base.Awake();
         Type = UIType.SelectPlotWnd;
         MutexInterface = false;
+        
     }
 
     protected override void Start()
@@ -103,9 +104,8 @@ public class SelectPlotWnd : UIBase
         if (SongsDataMng.GetInstance().GetSceneTaskData != plotItemUI.sceneTaskData)
         {
             SongsDataMng.GetInstance().SetSceneTaskData(plotItemUI.sceneTaskData);
-            UIMng.Instance.OpenUI(UIType.LoadingWnd);
+            UIMng.Instance.ActivationUI(UIType.LoadingWnd);
         }
-        UIMng.Instance.ConcealUI(UIType.SelectPlotWnd);
     }
 
     void OnLast()
