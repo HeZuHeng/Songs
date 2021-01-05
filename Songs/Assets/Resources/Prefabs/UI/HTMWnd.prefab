@@ -65,7 +65,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 23063a1bcb60caf47887930c33477630, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0dde30dbfed8c8d46be7980e63ab5a39, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -472,7 +472,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5591028547201148255
 RectTransform:
   m_ObjectHideFlags: 0
@@ -680,6 +680,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_TextIndent: 2
+  endYieldTime: 0.5
   m_Text: "Harold Bloom has stated in The Western Canon (1994) that \u201Cno western
     poet, in the past century and half, not even Browning, or Leopardi or Baudelaire,
     overshadows Walt Whitman or Emily Dickinson \u201D. Next we will come to the poetic

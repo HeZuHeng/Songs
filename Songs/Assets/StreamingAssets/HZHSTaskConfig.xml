@@ -16,7 +16,7 @@
 	<TaskDatas ID="6" 任务名="《我好似一朵孤独的流云》赏析" 下一个="0" 类型="TaskChange" 值 = "I Wandered Lonely as a Cloud" 描述="点击右侧任务名前往《我好似一朵孤独的流云》赏析"/>
   </SceneTasks>
   <SceneTasks 场景任务名="I Wandered Lonely as a Cloud" 图标="sxh_cj" 场景数据="华兹华斯赏花">
-    <TaskDatas ID="1" 任务名="预览水仙花场景" 下一个="4" 类型="DOTween" />
+    <!--TaskDatas ID="1" 任务名="预览水仙花场景" 下一个="4" 类型="DOTween" /-->
 	<TaskDatas ID="4" 任务名="水仙花场景自由漫游" 下一个="2" 类型="ThirdPerson" 值 = "end"/>
     <TaskDatas ID="2" 任务名="阅读《我好似一朵孤独的流云》诗歌" 下一个="3" 类型="LookSong" 值 = "iwanderedlonelyasacloud.txt"/>
     <TaskDatas ID="3" 任务名="《我好似一朵孤独的流云》创作背景介绍" 下一个="5" 类型="OpenWnd" 值 = "ExperienceWnd"/>

@@ -90,6 +90,8 @@ namespace SpaceSimulation
             GameDataManager.GetInstance().Terminate();
         }
 
+
+
         //void TaskXml()
         //{
         //    TasksConfig tasksConfig = new TasksConfig();

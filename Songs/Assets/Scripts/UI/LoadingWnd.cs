@@ -61,10 +61,8 @@ public class LoadingWnd : UIBase
                 }
             }
         }
-        if (SceneController.GetInstance().InitScene)
-        {
-            SceneController.GetInstance().Start(terrainController);
-        }
+        SceneController.TerrainController = terrainController;
+        SceneController.GetInstance().InitScene = true;
     }
 
     void LoadScene(SceneData sceneData)
@@ -73,6 +71,7 @@ public class LoadingWnd : UIBase
         Scene scene = SceneManager.GetActiveScene();
         if (scene.name.Equals(sceneData.sceneName))
         {
+            SceneController.GetInstance().InitScene = true;
             OnSceneLoaded(scene, LoadSceneMode.Single);
             return;
         }

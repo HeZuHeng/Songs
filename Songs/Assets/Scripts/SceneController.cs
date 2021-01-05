@@ -35,8 +35,9 @@ public class SceneController
         }
         return _instance;
     }
-    public static TerrainController TerrainController { get; private set; }
+    public static TerrainController TerrainController { get; set; }
     public bool InitScene = false;
+    public bool InitSceneObject = false;
 
     SceneData CurSceneData;
     GameObject playCutsceneObj;
@@ -44,11 +45,15 @@ public class SceneController
     GameObject initTranObj;
     ChildController childController;
     List<SceneAssetObject> palyAnimators = new List<SceneAssetObject>();
+    int totalLoadNum = 4;
+    int loadNum = 0;
 
     public void Init()
     {
         Close();
         InitScene = false;
+        InitSceneObject = false;
+        loadNum = 0;
         SceneData sceneData = SongsDataMng.GetInstance().GetSceneData;
         CurSceneData = sceneData;
         if (sceneData == null) return;
@@ -60,6 +65,7 @@ public class SceneController
         {
             if (progress >= 1)
             {
+                loadNum++;
                 playCutsceneObj = loadCutscenen.MainData.LoadGameObject(CurSceneData.sceneCutscenen);
                 if (playCutsceneObj != null)
                 {
@@ -73,6 +79,7 @@ public class SceneController
         {
             if (progress >= 1)
             {
+                loadNum++;
                 cameraObj = loadCamera.MainData.LoadGameObject(CurSceneData.sceneCamera);
                 if (cameraObj != null)
                 {
@@ -87,6 +94,7 @@ public class SceneController
         {
             if (progress >= 1)
             {
+                loadNum++;
                 initTranObj = loadPosition.MainData.LoadGameObject(CurSceneData.scenePosition);
                 if (initTranObj != null)
                 {
@@ -98,7 +106,7 @@ public class SceneController
         };
 
         SceneAssetObject assetObject = SceneMng.GetInstance().AddSpaceAsset(1, "nvyk", "女游客");
-
+        if (CurSceneData.datas.Count <= 0) loadNum++;
         ModelData modelData = null;
         for (int i = 0; i < CurSceneData.datas.Count; i++)
         {
@@ -145,7 +153,7 @@ public class SceneController
 
     public void Start(TerrainController controller = null)
     {
-        TerrainController = controller;
+        //TerrainController = controller;
         SceneAssetObject sceneAsset = SceneMng.GetInstance().GetSceneAssetObject(1);
         CameraMng.GetInstance().InitPlayer(sceneAsset.Tran);
         sceneAsset.Tran.gameObject.SetActive(false);
@@ -180,7 +188,15 @@ public class SceneController
 
     public void FrameUpdate()
     {
-        if (!InitScene) return;
+        if(InitScene && !InitSceneObject && totalLoadNum <= loadNum)
+        {
+            InitSceneObject = true;
+            Start();
+        }
+        if(!InitSceneObject || !InitScene)
+        {
+            return;
+        }
         AnimatorStateInfo stateInfo;
         for (int i = 0; i < palyAnimators.Count;)
         {
@@ -210,7 +226,7 @@ public class SceneController
         if(progress >= 1)
         {
             SceneMng.GetInstance().OnSceneLoadProgress -= OnSceneLoaded;
-            InitScene = true;
+            loadNum++;
         }
     }
 }
@@ -231,7 +247,7 @@ public class ChildController
 
 public class HeavenController : ChildController
 {
-    public static string Name = "Men and Nature";
+    public static string Name = "中英诗歌精神比较";
     SceneAssetObject sceneAsset;
     SceneAssetObject hzhs;
     SceneAssetObject tym;
@@ -344,7 +360,7 @@ public class HeavenController : ChildController
 
 public class ThreeSongsController : ChildController
 {
-    public static string Name = "Three Books";
+    public static string Name = "华兹华斯书房三本诗歌";
 
     SceneAssetObject sceneAsset;
     public override void Init()
@@ -380,7 +396,7 @@ public class ThreeSongsController : ChildController
 }
 public class ThreePictureController : ChildController
 {
-    public static string Name = "The Image of Grass";
+    public static string Name = "草的意象数据";
 
     SceneAssetObject sceneAsset;
     public override void Init()
@@ -388,6 +404,7 @@ public class ThreePictureController : ChildController
         base.Init();
         sceneAsset = SceneMng.GetInstance().GetSceneAssetObject(1);
         sceneAsset.Tran.gameObject.AddComponent<TriggerEvent>().enterEvent.AddListener(EnterEvent);
+        InputManager.GetInstance().AddClickEventListener(OnClickEvent);
     }
 
     void EnterEvent(string name)
@@ -406,5 +423,10 @@ public class ThreePictureController : ChildController
         });
         SceneController.GetInstance().AddPlayAnimator(sceneAsset);
 
+    }
+
+    void OnClickEvent(GameObject obj)
+    {
+        EnterEvent(obj.name);
     }
 }

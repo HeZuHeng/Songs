@@ -181,7 +181,7 @@ public class MainDialogueWnd : UIBase
                 UIMng.Instance.ActivationUI(UIType.LeftDialogueWnd);
                 break;
             case TaskType.DOTween:
-                if(Application.platform == RuntimePlatform.WindowsEditor)
+                if(Application.platform == RuntimePlatform.WindowsPlayer)
                 {
                     taskData.TaskState = TaskState.End;
                 }
@@ -326,7 +326,7 @@ public class MainDialogueWnd : UIBase
         if(taskData != null && taskData.type == TaskType.TaskChange)
         {
             SceneTaskData sceneTask = SongsDataMng.GetInstance().GetSceneTaskDataFromName(taskData.val);
-            SongsDataMng.GetInstance().SetSceneTaskData(sceneTask);
+            if(sceneTask != null) SongsDataMng.GetInstance().SetSceneTaskData(sceneTask);
             UIMng.Instance.ActivationUI(UIType.LoadingWnd);
         }
     }

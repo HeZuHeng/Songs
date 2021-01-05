@@ -19,6 +19,7 @@ public class SongsDataMng
     public static string HTMTaskPath = Application.streamingAssetsPath + "/HTMTaskConfig.xml";
     public static string ModelPath = Application.streamingAssetsPath + "/ModelConfig.xml";
     public static string QuestionBankPath = Application.streamingAssetsPath + "/QuestionBankConfig.xml";
+    public static string TranslatePath = Application.streamingAssetsPath + "/TranslateConfig.xml";
 
     static SongsDataMng instance;
     public static SongsDataMng GetInstance()
