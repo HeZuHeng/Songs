@@ -66,8 +66,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 22b3fb17d0a013c49978f13ebdab7bb1, type: 3}
-    m_FontSize: 28
+    m_Font: {fileID: 12800000, guid: d6c5349ada27ca54c8cd6f8151037162, type: 3}
+    m_FontSize: 32
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -326,7 +326,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 46, y: 109}
+  m_AnchoredPosition: {x: 106, y: 95}
   m_SizeDelta: {x: 300, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5539018091763469488
@@ -570,13 +570,13 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: d5def7c894abc5949b0196dc8212c562, type: 3}
-    m_FontSize: 24
+    m_Font: {fileID: 12800000, guid: d6c5349ada27ca54c8cd6f8151037162, type: 3}
+    m_FontSize: 28
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -584,7 +584,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "You have successfully obtained the opportunity to meet and communicate
     with the poets. Let\u2019s talk with them and know about the spiritual differences
-    behind the different perspectives of their poems.\u60A8\u5DF2\u6210\u529F\u83B7\u53D6\u4E0E\u8BD7\u4EBA\u89C1\u9762\u4EA4\u6D41\u7684\u673A\u4F1A\uFF0C\u8BA9\u6211\u4EEC\u901A\u8FC7\u4E0E\u8BD7\u4EBA\u5BF9\u8BDD,\u6765\u4E86\u89E3\u4ED6\u4EEC\u8BD7\u4F5C\u4E0D\u540C\u89C6\u89D2\u80CC\u540E\u6240\u8574\u542B\u7684\u7CBE\u795E\u5DEE\u5F02\u5427\u3002Please
+    behind the different perspectives of their poems.\n\u60A8\u5DF2\u6210\u529F\u83B7\u53D6\u4E0E\u8BD7\u4EBA\u89C1\u9762\u4EA4\u6D41\u7684\u673A\u4F1A\uFF0C\u8BA9\u6211\u4EEC\u901A\u8FC7\u4E0E\u8BD7\u4EBA\u5BF9\u8BDD,\u6765\u4E86\u89E3\u4ED6\u4EEC\u8BD7\u4F5C\u4E0D\u540C\u89C6\u89D2\u80CC\u540E\u6240\u8574\u542B\u7684\u7CBE\u795E\u5DEE\u5F02\u5427\u3002\nPlease
     give yourself an English name."
 --- !u!1 &5539018092559735754
 GameObject:
@@ -694,8 +694,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -201, y: 109}
-  m_SizeDelta: {x: 200, y: 30}
+  m_AnchoredPosition: {x: -160, y: 95}
+  m_SizeDelta: {x: 240, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5539018092576863809
 CanvasRenderer:
@@ -726,8 +726,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 22b3fb17d0a013c49978f13ebdab7bb1, type: 3}
-    m_FontSize: 24
+    m_Font: {fileID: 12800000, guid: d6c5349ada27ca54c8cd6f8151037162, type: 3}
+    m_FontSize: 28
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -805,8 +805,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: d5def7c894abc5949b0196dc8212c562, type: 3}
-    m_FontSize: 24
+    m_Font: {fileID: 12800000, guid: d6c5349ada27ca54c8cd6f8151037162, type: 3}
+    m_FontSize: 28
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -884,7 +884,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: d5def7c894abc5949b0196dc8212c562, type: 3}
+    m_Font: {fileID: 12800000, guid: d6c5349ada27ca54c8cd6f8151037162, type: 3}
     m_FontSize: 14
     m_FontStyle: 2
     m_BestFit: 0
@@ -1038,7 +1038,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 22b3fb17d0a013c49978f13ebdab7bb1, type: 3}
+    m_Font: {fileID: 12800000, guid: d6c5349ada27ca54c8cd6f8151037162, type: 3}
     m_FontSize: 28
     m_FontStyle: 0
     m_BestFit: 0

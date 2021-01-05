@@ -27,10 +27,11 @@ public class TrendsText : MonoBehaviour
     private bool suspend = false;
     private AudioSource m_AudioSource;
 
-
+    private RectTransform rect;
     private void Awake()
     {
         m_Conetnt = this.GetComponent<Text>();
+        rect = m_Conetnt.transform as RectTransform;
     }
     private void OnEnable()
     {
@@ -187,7 +188,7 @@ public class TrendsText : MonoBehaviour
             }
             m_Conetnt.text = currcentent;
             //当有ScrollRect时让文字始终显示刷新文字的地方
-            if (m_ScrollRect != null)
+            if (m_ScrollRect != null && m_Conetnt.preferredHeight >= TempCententRect.sizeDelta.y)
             {
                 //更新滑动区域大小使之与文本框大小相同（仅高度相同）
                 TempCententRect.sizeDelta = new Vector2(TempCententRect.sizeDelta.x, m_Conetnt.preferredHeight);

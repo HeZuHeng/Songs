@@ -1,0 +1,341 @@
+fileFormatVersion: 2
+guid: 1fea5c1edbcc0264885c5636a97c5285
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: cluster10Handle
+    100002: cluster11Handle
+    100004: cluster12Handle
+    100006: cluster13Handle
+    100008: cluster14Handle
+    100010: cluster1Handle
+    100012: cluster2Handle
+    100014: cluster3Handle
+    100016: cluster4Handle
+    100018: cluster5Handle
+    100020: cluster6Handle
+    100022: cluster7Handle
+    100024: cluster8Handle
+    100026: cluster9Handle
+    100028: curve1
+    100030: curve2
+    100032: curve3
+    100034: dayan_Delete
+    100036: dayan_kzq
+    100038: ffd3Base
+    100040: ffd3Base 1
+    100042: ffd3Lattice
+    100044: ffd3Lattice 1
+    100046: ffd5Base
+    100048: ffd5Lattice
+    100050: group10
+    100052: group11
+    100054: group12
+    100056: group13
+    100058: group14
+    100060: group15
+    100062: group16
+    100064: group17
+    100066: group18
+    100068: group19
+    100070: group3
+    100072: group3 1
+    100074: group5
+    100076: group6
+    100078: group7
+    100080: group8
+    100082: group9
+    100084: ikHandle1
+    100086: ikHandle2
+    100088: ikHandle3
+    100090: joint1
+    100092: joint10
+    100094: joint11
+    100096: joint12
+    100098: joint14
+    100100: joint15
+    100102: joint16
+    100104: joint17
+    100106: joint18
+    100108: joint19
+    100110: joint2
+    100112: joint20
+    100114: joint21
+    100116: joint22
+    100118: joint23
+    100120: joint24
+    100122: joint25
+    100124: joint26
+    100126: joint27
+    100128: joint28
+    100130: joint29
+    100132: joint3
+    100134: joint30
+    100136: joint31
+    100138: joint4
+    100140: joint5
+    100142: joint6
+    100144: joint7
+    100146: joint8
+    100148: joint9
+    100150: Mesh
+    100152: pSphere1
+    100154: pSphere2
+    100156: slt_HipCtrl6
+    100158: slt_LFkElbowCtrl12
+    100160: slt_LFkElbowCtrl15
+    100162: slt_LFkElbowCtrl16
+    100164: slt_LFkElbowCtrl20
+    100166: slt_LFkElbowCtrl21
+    100168: slt_LFkElbowCtrl22
+    100170: slt_LFkElbowCtrl23
+    100172: slt_LFkElbowCtrl24
+    100174: slt_LFkElbowCtrl25
+    100176: slt_LFkElbowCtrl26
+    100178: slt_LFkElbowCtrl27
+    100180: slt_LFkElbowCtrl28
+    100182: slt_LFkElbowCtrl29
+    100184: slt_LFkElbowCtrl30
+    100186: slt_LFkElbowCtrl31
+    100188: slt_LFkElbowCtrl32
+    100190: slt_LFkElbowCtrl33
+    100192: slt_LFkElbowCtrl34
+    100194: slt_LFkElbowCtrl35
+    100196: wei
+    100198: //RootNode
+    400000: cluster10Handle
+    400002: cluster11Handle
+    400004: cluster12Handle
+    400006: cluster13Handle
+    400008: cluster14Handle
+    400010: cluster1Handle
+    400012: cluster2Handle
+    400014: cluster3Handle
+    400016: cluster4Handle
+    400018: cluster5Handle
+    400020: cluster6Handle
+    400022: cluster7Handle
+    400024: cluster8Handle
+    400026: cluster9Handle
+    400028: curve1
+    400030: curve2
+    400032: curve3
+    400034: dayan_Delete
+    400036: dayan_kzq
+    400038: ffd3Base
+    400040: ffd3Base 1
+    400042: ffd3Lattice
+    400044: ffd3Lattice 1
+    400046: ffd5Base
+    400048: ffd5Lattice
+    400050: group10
+    400052: group11
+    400054: group12
+    400056: group13
+    400058: group14
+    400060: group15
+    400062: group16
+    400064: group17
+    400066: group18
+    400068: group19
+    400070: group3
+    400072: group3 1
+    400074: group5
+    400076: group6
+    400078: group7
+    400080: group8
+    400082: group9
+    400084: ikHandle1
+    400086: ikHandle2
+    400088: ikHandle3
+    400090: joint1
+    400092: joint10
+    400094: joint11
+    400096: joint12
+    400098: joint14
+    400100: joint15
+    400102: joint16
+    400104: joint17
+    400106: joint18
+    400108: joint19
+    400110: joint2
+    400112: joint20
+    400114: joint21
+    400116: joint22
+    400118: joint23
+    400120: joint24
+    400122: joint25
+    400124: joint26
+    400126: joint27
+    400128: joint28
+    400130: joint29
+    400132: joint3
+    400134: joint30
+    400136: joint31
+    400138: joint4
+    400140: joint5
+    400142: joint6
+    400144: joint7
+    400146: joint8
+    400148: joint9
+    400150: Mesh
+    400152: pSphere1
+    400154: pSphere2
+    400156: slt_HipCtrl6
+    400158: slt_LFkElbowCtrl12
+    400160: slt_LFkElbowCtrl15
+    400162: slt_LFkElbowCtrl16
+    400164: slt_LFkElbowCtrl20
+    400166: slt_LFkElbowCtrl21
+    400168: slt_LFkElbowCtrl22
+    400170: slt_LFkElbowCtrl23
+    400172: slt_LFkElbowCtrl24
+    400174: slt_LFkElbowCtrl25
+    400176: slt_LFkElbowCtrl26
+    400178: slt_LFkElbowCtrl27
+    400180: slt_LFkElbowCtrl28
+    400182: slt_LFkElbowCtrl29
+    400184: slt_LFkElbowCtrl30
+    400186: slt_LFkElbowCtrl31
+    400188: slt_LFkElbowCtrl32
+    400190: slt_LFkElbowCtrl33
+    400192: slt_LFkElbowCtrl34
+    400194: slt_LFkElbowCtrl35
+    400196: wei
+    400198: //RootNode
+    2100000: lambert1
+    2100002: lambert56
+    2300000: pSphere1
+    2300002: pSphere2
+    3300000: pSphere1
+    3300002: pSphere2
+    4300000: pSphere1
+    4300002: pSphere2
+    4300004: Mesh
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Mesh
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 81fce0a15bdff3f44997b8b581700a33, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert56
+    second: {fileID: 2100000, guid: 16775cac86f9227448fae6c892715103, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 4
+      lastFrame: 80
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

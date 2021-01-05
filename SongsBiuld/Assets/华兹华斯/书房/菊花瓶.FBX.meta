@@ -1,0 +1,151 @@
+fileFormatVersion: 2
+guid: 6a9fbb818e573d9408ce2b065487bb1d
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Box001
+    100002: Cone001
+    100004: 'Material #42'
+    100006: 'Material #43'
+    100008: 'Material #44'
+    100010: 'Material #45'
+    100012: Object044
+    100014: "\u5BF9\u8C61001"
+    100016: //RootNode
+    400000: Box001
+    400002: Cone001
+    400004: 'Material #42'
+    400006: 'Material #43'
+    400008: 'Material #44'
+    400010: 'Material #45'
+    400012: Object044
+    400014: "\u5BF9\u8C61001"
+    400016: //RootNode
+    2100000: 'Material #49'
+    2100002: Gorhok plastikovii
+    2100004: Standard_2
+    2300000: Box001
+    2300002: Cone001
+    2300004: 'Material #42'
+    2300006: 'Material #43'
+    2300008: 'Material #44'
+    2300010: 'Material #45'
+    2300012: Object044
+    2300014: "\u5BF9\u8C61001"
+    3300000: Box001
+    3300002: Cone001
+    3300004: 'Material #42'
+    3300006: 'Material #43'
+    3300008: 'Material #44'
+    3300010: 'Material #45'
+    3300012: Object044
+    3300014: "\u5BF9\u8C61001"
+    4300000: Object044
+    4300002: Cone001
+    4300004: 'Material #42'
+    4300006: 'Material #45'
+    4300008: 'Material #43'
+    4300010: 'Material #44'
+    4300012: Box001
+    4300014: "\u5BF9\u8C61001"
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Gorhok plastikovii
+    second: {fileID: 2100000, guid: 9f14823e7b2bc504999f34602a1efd33, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #49'
+    second: {fileID: 2100000, guid: e9fdf22df28cd3e49889bab19adda451, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Standard_2
+    second: {fileID: 2100000, guid: 768aed0ae4518a1418bd144fcb4f5213, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

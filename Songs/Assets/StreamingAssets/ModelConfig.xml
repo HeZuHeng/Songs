@@ -31,7 +31,7 @@
       </eulerAngle>
     </ModelDatas>
   </SceneDatas> 
- <SceneDatas 场景="华兹华斯书房预览" 场景资源名="华兹华斯书房" 摄像机 = "introductioncamera" 位置="introductioninitposition" 镜头="cutscene_introduction">
+ <SceneDatas 场景="华兹华斯书房预览" 场景资源名="华兹华斯书房" 摄像机 = "start_camera" 位置="start_initposition" 镜头="cutscene_introduction">
     <!--ModelDatas 模型名="张三" 资源名="12" />
     <ModelDatas 模型名="李四" 资源名="14" />
     <ModelDatas 模型名="吴亦凡" 资源名="18" /-->

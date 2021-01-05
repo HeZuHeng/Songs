@@ -10,6 +10,8 @@ ModelImporter:
     100008: Object021
     100010: Object044
     100012: //RootNode
+    100014: hua:pPlane018
+    100016: hua:pPlane019
     400000: Cone001
     400002: hua:pPlane015
     400004: hua:pPlane016
@@ -17,6 +19,8 @@ ModelImporter:
     400008: Object021
     400010: Object044
     400012: //RootNode
+    400014: hua:pPlane018
+    400016: hua:pPlane019
     2100000: 'Material #49'
     2100002: Gorhok plastikovii
     2100004: 'Material #1'
@@ -26,18 +30,24 @@ ModelImporter:
     2300006: hua:pPlane017
     2300008: Object021
     2300010: Object044
+    2300012: hua:pPlane018
+    2300014: hua:pPlane019
     3300000: Cone001
     3300002: hua:pPlane015
     3300004: hua:pPlane016
     3300006: hua:pPlane017
     3300008: Object021
     3300010: Object044
+    3300012: hua:pPlane018
+    3300014: hua:pPlane019
     4300000: Object044
     4300002: Cone001
     4300004: hua:pPlane016
     4300006: hua:pPlane017
     4300008: hua:pPlane015
     4300010: Object021
+    4300012: hua:pPlane018
+    4300014: hua:pPlane019
   externalObjects:
   - first:
       type: UnityEngine:Material

@@ -621,7 +621,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 22b3fb17d0a013c49978f13ebdab7bb1, type: 3}
+    m_Font: {fileID: 12800000, guid: d6c5349ada27ca54c8cd6f8151037162, type: 3}
     m_FontSize: 36
     m_FontStyle: 0
     m_BestFit: 0
@@ -1431,7 +1431,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 60.4, y: 86.2}
-  m_SizeDelta: {x: 1520, y: 127}
+  m_SizeDelta: {x: 1520, y: 122}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3230439245509406095
 CanvasRenderer:
@@ -1462,7 +1462,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 22b3fb17d0a013c49978f13ebdab7bb1, type: 3}
+    m_Font: {fileID: 12800000, guid: d6c5349ada27ca54c8cd6f8151037162, type: 3}
     m_FontSize: 36
     m_FontStyle: 0
     m_BestFit: 0
@@ -1631,7 +1631,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: d5def7c894abc5949b0196dc8212c562, type: 3}
+    m_Font: {fileID: 12800000, guid: d6c5349ada27ca54c8cd6f8151037162, type: 3}
     m_FontSize: 28
     m_FontStyle: 0
     m_BestFit: 0
@@ -1679,10 +1679,10 @@ RectTransform:
   m_Father: {fileID: 8783472303808806424}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -100}
-  m_SizeDelta: {x: 1280, y: 157}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 980}
+  m_SizeDelta: {x: 1400, y: 202}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5443352202765628608
 CanvasRenderer:
@@ -1713,7 +1713,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 22b3fb17d0a013c49978f13ebdab7bb1, type: 3}
+    m_Font: {fileID: 12800000, guid: d6c5349ada27ca54c8cd6f8151037162, type: 3}
     m_FontSize: 44
     m_FontStyle: 1
     m_BestFit: 0
@@ -1725,9 +1725,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Walking and wandering with Wordsworth allow the experimenter to transcend
-    his present circumstances, and encounter his genuine self. Why? \uFF08multiple
-    choices\uFF09"
+  m_Text: "After communicating with the poets, which of the following thoughts on
+    the relationship between man and nature do the two poets embody?\r\t(\u7ECF\u8FC7\u548C\u8BD7\u4EBA\u4EEC\u7684\u4EA4\u6D41\uFF0C\u8BF7\u95EE\u4E24\u4F4D\u8BD7\u4EBA\u5206\u522B\u4F53\u73B0\u4E86\u4EE5\u4E0B\u54EA\u79CD\u4EBA\u4E0E\u81EA\u7136\u5173\u7CFB\u7684\u601D\u60F3?)"
 --- !u!114 &6470631816842419793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2132,8 +2131,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: d5def7c894abc5949b0196dc8212c562, type: 3}
-    m_FontSize: 40
+    m_Font: {fileID: 12800000, guid: d6c5349ada27ca54c8cd6f8151037162, type: 3}
+    m_FontSize: 36
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 2
@@ -2323,7 +2322,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 22b3fb17d0a013c49978f13ebdab7bb1, type: 3}
+    m_Font: {fileID: 12800000, guid: d6c5349ada27ca54c8cd6f8151037162, type: 3}
     m_FontSize: 56
     m_FontStyle: 0
     m_BestFit: 0

@@ -1,0 +1,243 @@
+fileFormatVersion: 2
+guid: b0bafbd6e5a736b41a6f5c05fad8b4b4
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: grass
+    100002: "\u5927\u95E8\u767D\u5899"
+    100004: //RootNode
+    100006: "\u5BA4\u5916\u6807\u724C"
+    100008: "\u5BA4\u5916\u7A97"
+    100010: "\u5BA4\u5916\u7A97_01"
+    100012: "\u5BA4\u5916\u7A97\u6846"
+    100014: "\u5EFA\u7B51"
+    100016: "\u5EFA\u7B51\u8E22\u811A\u7EBF"
+    100018: "\u7A97\u53F0"
+    100020: "\u7A97\u6746"
+    100022: "\u7A97\u6746 1"
+    100024: "\u7A97\u6846"
+    100026: "\u7A97\u6846 1"
+    100028: "\u7A97\u73BB"
+    100030: "\u7A97\u73BB 1"
+    100032: "\u8DEF\u9762"
+    100034: "\u5185\u666F"
+    100036: "\u8349\u5730"
+    400000: grass
+    400002: "\u5927\u95E8\u767D\u5899"
+    400004: //RootNode
+    400006: "\u5BA4\u5916\u6807\u724C"
+    400008: "\u5BA4\u5916\u7A97"
+    400010: "\u5BA4\u5916\u7A97_01"
+    400012: "\u5BA4\u5916\u7A97\u6846"
+    400014: "\u5EFA\u7B51"
+    400016: "\u5EFA\u7B51\u8E22\u811A\u7EBF"
+    400018: "\u7A97\u53F0"
+    400020: "\u7A97\u6746"
+    400022: "\u7A97\u6746 1"
+    400024: "\u7A97\u6846"
+    400026: "\u7A97\u6846 1"
+    400028: "\u7A97\u73BB"
+    400030: "\u7A97\u73BB 1"
+    400032: "\u8DEF\u9762"
+    400034: "\u5185\u666F"
+    400036: "\u8349\u5730"
+    2100000: "\u53E4\u5178\u7816"
+    2100002: "\u7A97\u6846"
+    2100004: "\u6805\u680F"
+    2100006: boli
+    2100008: concrete_spotted
+    2100010: Grass
+    2100012: Ground_basecolor
+    2100014: concrete_worn
+    2100016: concrete_grooved
+    2100018: "\u5BA4\u5916\u6807\u724C"
+    2100020: "\u5BA4\u5185\u666F"
+    2300000: grass
+    2300002: "\u5927\u95E8\u767D\u5899"
+    2300004: "\u5BA4\u5916\u6807\u724C"
+    2300006: "\u5BA4\u5916\u7A97\u6846"
+    2300008: "\u5EFA\u7B51"
+    2300010: "\u5EFA\u7B51\u8E22\u811A\u7EBF"
+    2300012: "\u7A97\u53F0"
+    2300014: "\u7A97\u6746"
+    2300016: "\u7A97\u6746 1"
+    2300018: "\u7A97\u6846"
+    2300020: "\u7A97\u6846 1"
+    2300022: "\u7A97\u73BB"
+    2300024: "\u7A97\u73BB 1"
+    2300026: "\u8DEF\u9762"
+    2300028: "\u5185\u666F"
+    2300030: "\u8349\u5730"
+    3300000: grass
+    3300002: "\u5927\u95E8\u767D\u5899"
+    3300004: "\u5BA4\u5916\u6807\u724C"
+    3300006: "\u5BA4\u5916\u7A97\u6846"
+    3300008: "\u5EFA\u7B51"
+    3300010: "\u5EFA\u7B51\u8E22\u811A\u7EBF"
+    3300012: "\u7A97\u53F0"
+    3300014: "\u7A97\u6746"
+    3300016: "\u7A97\u6746 1"
+    3300018: "\u7A97\u6846"
+    3300020: "\u7A97\u6846 1"
+    3300022: "\u7A97\u73BB"
+    3300024: "\u7A97\u73BB 1"
+    3300026: "\u8DEF\u9762"
+    3300028: "\u5185\u666F"
+    3300030: "\u8349\u5730"
+    4300000: "\u5EFA\u7B51"
+    4300002: "\u7A97\u6846"
+    4300004: "\u7A97\u6746"
+    4300006: "\u7A97\u73BB"
+    4300008: "\u7A97\u53F0"
+    4300010: grass
+    4300012: "\u8DEF\u9762"
+    4300014: "\u5EFA\u7B51\u8E22\u811A\u7EBF"
+    4300016: "\u5BA4\u5916\u7A97\u6846"
+    4300018: "\u5927\u95E8\u767D\u5899"
+    4300020: "\u5BA4\u5916\u6807\u724C"
+    4300022: "\u7A97\u6846"
+    4300024: "\u7A97\u6746"
+    4300026: "\u7A97\u73BB"
+    4300028: "\u8349\u5730"
+    4300030: "\u5185\u666F"
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Grass
+    second: {fileID: 2100000, guid: 4391fc005472e334b9bb77cbb1159396, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ground_basecolor
+    second: {fileID: 2100000, guid: 676831e26e2cd8948be0388bebf2792e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: boli
+    second: {fileID: 2100000, guid: a70931687880c1e458ca4235575be59c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: concrete_grooved
+    second: {fileID: 2100000, guid: b3818433c84952d43a2d55eef6979b89, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: concrete_spotted
+    second: {fileID: 2100000, guid: dd897c69cd601f94b892744e70ed8901, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: concrete_worn
+    second: {fileID: 2100000, guid: e0264e07e2cf61a4f8f41c3702c26378, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u53E4\u5178\u7816"
+    second: {fileID: 2100000, guid: dc0392c691e57cd47bd71a9c3fc4e368, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u5BA4\u5185\u666F"
+    second: {fileID: 2100000, guid: 595f39836b82b5b438cecef6e533888c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u5BA4\u5916\u6807\u724C"
+    second: {fileID: 2100000, guid: be4e2729b288f50479c4731d8ee89cb8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u6805\u680F"
+    second: {fileID: 2100000, guid: 91149e3a2869c8c48a807ed2e5b0999a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u7A97\u6846"
+    second: {fileID: 2100000, guid: 10a2beee147791745a20e11b05df359d, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
