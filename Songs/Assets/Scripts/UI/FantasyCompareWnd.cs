@@ -14,6 +14,7 @@ public class FantasyCompareWnd : UIBase
     public RectTransform textSx;
     public RectTransform tip;
     public Button confirmBtn;
+    public RectTransform tuozhan;
     RectTransform rect;
     Vector3 initJh;
     Vector3 initSx;
@@ -37,7 +38,7 @@ public class FantasyCompareWnd : UIBase
     {
          jh = false;
          sx = false;
-        //confirmBtn.gameObject.SetActive(false);
+        tuozhan.gameObject.SetActive(false);
     }
 
     public void OnDragJh()
@@ -63,7 +64,7 @@ public class FantasyCompareWnd : UIBase
             jh = true;
             if(jh && sx)
             {
-                //confirmBtn.gameObject.SetActive(true);
+                tuozhan.gameObject.SetActive(true);
             }
         }
     }
@@ -90,7 +91,7 @@ public class FantasyCompareWnd : UIBase
             sx = true;
             if (jh && sx)
             {
-                //confirmBtn.gameObject.SetActive(true);
+                tuozhan.gameObject.SetActive(true);
             }
         }
     }
@@ -99,6 +100,7 @@ public class FantasyCompareWnd : UIBase
     {
         if (jh && sx)
         {
+            UIMng.Instance.OpenUI(UIType.NONE);
             QuestionBankData question = SongsDataMng.GetInstance().GetQuestionBankData;
             TaskData taskData = SongsDataMng.GetInstance().GetTaskData;
             if (taskData != null)
@@ -112,7 +114,6 @@ public class FantasyCompareWnd : UIBase
                     }
                 }
             }
-            UIMng.Instance.OpenUI(UIType.NONE);
         }
         else
         {

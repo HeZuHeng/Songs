@@ -16,7 +16,7 @@
   <SceneTasks 场景任务名="The Image of Grass" 图标="icon_cover_picture" 场景数据="草的意象数据">
     <TaskDatas ID="101" 任务名="聚会大厅引子" 下一个="102"  类型="Talk" 描述 = "As a captain, you meet your crew for the first time. You need to introduce yourself.
 	\n(由于你和你的船员第一次见面，需要自我介绍。)"/>
-    <TaskDatas ID="102" 任务名="聚会大厅自由漫游" 下一个="0" 类型="PersonMove" 值 = "0"/>
+    <TaskDatas ID="102" 任务名="聚会大厅自由漫游" 下一个="0" 类型="PersonMove" 值 = "end"/>
     <TaskDatas ID="1" 任务名="解析废奴运动照片" 下一个="11"  类型="Talk" 描述 = "Taking part in the abolitionist movement.（参加废奴运动）\n Click to know more. （点击知道更多）"/>
     <TaskDatas ID="11" 任务名="解析废奴运动照片" 下一个="0"  类型="Talk" 描述 = "Before the Civil War, Whitman publishes “ The Slave and the Slave Trade” in which he attacks this man-eating institution, and urges every young man to vote and to work for what he regards as the true concept of political democracy.
 	\n(参加废奴运动表明了惠特曼的民主思想。他早在内战前就发表《奴隶以及奴隶买卖》，抨击这一吃人的奴隶制度, 并敦促每个年轻人为他所认为的真正的政治民主而投票和奋斗。)"/>
@@ -31,26 +31,21 @@
     <TaskDatas ID="104" 任务名="寻找草的意象" 下一个="0" 类型="TaskChange" 值 = "The Image of Self" 描述="点击右侧任务名前往 寻找草的意象"/>
   </SceneTasks>
   <SceneTasks 场景任务名="The Image of Self" 图标="icon_cover_glassimage" 场景数据="寻找草的意象数据">
+	<TaskDatas ID="100" 任务名="船员对话" 下一个="1" 类型="PersonMove" 值 = "end"/>
     <TaskDatas ID="1" 任务名="船员对话" 下一个="2" 类型="StartState" 值 = "InitMoveCamera"/>
     <TaskDatas ID="2" 任务名="船员A说" 下一个="3" 类型="Talk" 值 = "102" 描述 = "Captain Whitman once said that the art of art, the glory of expression and the sunshine of the light of letters are simplicity. Nothing is better than simplicity... Could you tell me what do these sentences refer to? "/>
     <TaskDatas ID="3" 任务名="船员B说" 下一个="4" 类型="Talk" 值 = "101" 描述 = " Sure, I think Captain Whitman is talking about free verse. "/>
     <TaskDatas ID="4" 任务名="惠特曼的房间" 下一个="5" 类型="DOTween" 值 = "5" 描述="跟随镜头预览惠特曼的房间"/>
     <TaskDatas ID="5" 任务名="确认查看《自我之歌》" 下一个="6"  类型="Talk" 描述 = "Aclick to read the selections ( 确认查看选段 )。"/>
   </SceneTasks>
-  <SceneTasks 场景任务名="Artistic Conception" 图标="icon_cover_songofmyself" 场景数据="自我之歌数据">
-    <TaskDatas ID="0" 任务名="张三" 下一个="12" 类型="None" />
-    <TaskDatas ID="0" 任务名="李四" 下一个="14" 类型="None" />
-    <TaskDatas ID="0" 任务名="吴亦凡" 下一个="18" 类型="None" />
+  <SceneTasks 场景任务名="自我之歌" 图标="icon_cover_songofmyself" 场景数据="自我之歌数据">
+    <TaskDatas ID="100" 任务名="船员对话" 下一个="1" 类型="PersonMove" 值 = "end"/>
   </SceneTasks>
   <SceneTasks 场景任务名="Equality" 图标="icon_cover_equity" 场景数据="体现诗人平等数据">
-    <TaskDatas ID="0" 任务名="张三" 下一个="12" 类型="None" />
-    <TaskDatas ID="0" 任务名="李四" 下一个="14" 类型="None" />
-    <TaskDatas ID="0" 任务名="吴亦凡" 下一个="18" 类型="None" />
+    <TaskDatas ID="100" 任务名="船员对话" 下一个="1" 类型="PersonMove" 值 = "end"/>
   </SceneTasks>
   <SceneTasks 场景任务名="About Democracy" 图标="icon_cover_china_usa" 场景数据="中美民主思想比较数据">
-    <TaskDatas ID="0" 任务名="张三" 下一个="12" 类型="None" />
-    <TaskDatas ID="0" 任务名="李四" 下一个="14" 类型="None" />
-    <TaskDatas ID="0" 任务名="吴亦凡" 下一个="18" 类型="None" />
+    <TaskDatas ID="100" 任务名="船员对话" 下一个="1" 类型="PersonMove" 值 = "end"/>
   </SceneTasks>
 
 

@@ -39,7 +39,7 @@ namespace SpaceSimulation
             AssetsParent.localScale = Vector3.one;
 
             GameDataManager.GetInstance().Startup(transform, delegate () {
-
+                SceneAssetObject assetObject = SceneMng.GetInstance().AddSpaceAsset(1, "nvyk", "女游客");
             });
             SongsDataMng.GetInstance().Init();
             CameraMng.GetInstance().Start(transform);

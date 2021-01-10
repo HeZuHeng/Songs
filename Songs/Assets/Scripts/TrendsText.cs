@@ -28,10 +28,17 @@ public class TrendsText : MonoBehaviour
     private AudioSource m_AudioSource;
 
     private RectTransform rect;
+    Vector2 initSizeData;
+    Vector2 initPosition;
     private void Awake()
     {
         m_Conetnt = this.GetComponent<Text>();
         rect = m_Conetnt.transform as RectTransform;
+        
+        if (Application.platform == RuntimePlatform.WindowsEditor)
+        {
+            endYieldTime = 0.1f;
+        }
     }
     private void OnEnable()
     {
@@ -54,7 +61,7 @@ public class TrendsText : MonoBehaviour
         }
         if (Application.platform == RuntimePlatform.WebGLPlayer)
         {
-            m_ShowSpeed = 10;
+            m_ShowSpeed = 20;
         }
         suspend = false;
         //\u3000为中文空格英文空格会引起unity中Text的自动换行因此将内容中的英文空格换成中文空格
@@ -83,6 +90,7 @@ public class TrendsText : MonoBehaviour
             //读写速度根据音频长度平均计算
             m_ShowSpeed = str.Length / m_AudioClip.length;
         }
+        
         StopCoroutine("Player");
         StartCoroutine("Player");
     }
@@ -158,6 +166,9 @@ public class TrendsText : MonoBehaviour
         {
             TempCententRect = m_ScrollRect.content.GetComponent<RectTransform>();
             TempScrollRect = m_ScrollRect.GetComponent<RectTransform>();
+            TempCententRect.sizeDelta = new Vector2(TempCententRect.sizeDelta.x, m_Conetnt.preferredHeight);
+            if (m_ScrollRect.verticalScrollbar != null)
+                m_ScrollRect.verticalScrollbar.value = 1;
         }
         while (idx <= m_Text_Char.Length)
         {
@@ -188,7 +199,7 @@ public class TrendsText : MonoBehaviour
             }
             m_Conetnt.text = currcentent;
             //当有ScrollRect时让文字始终显示刷新文字的地方
-            if (m_ScrollRect != null && m_Conetnt.preferredHeight >= TempCententRect.sizeDelta.y)
+            if (m_ScrollRect != null)
             {
                 //更新滑动区域大小使之与文本框大小相同（仅高度相同）
                 TempCententRect.sizeDelta = new Vector2(TempCententRect.sizeDelta.x, m_Conetnt.preferredHeight);

@@ -212,10 +212,10 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			// this allows us to modify the positional speed before it's applied.
 			if (Time.deltaTime > 0 && m_ForwardAmount >= 0.6f)
 			{
-				float speed = 0.02f;
+				float speed = 0.05f;
 				if (Application.platform == RuntimePlatform.WebGLPlayer)
                 {
-					speed = 0.08f;
+					speed = 0.12f;
 				}
 				Vector3 v = (move * speed * m_MoveSpeedMultiplier) / Time.deltaTime;
 

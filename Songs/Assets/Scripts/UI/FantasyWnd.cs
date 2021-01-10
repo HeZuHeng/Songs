@@ -66,23 +66,31 @@ public class FantasyWnd : UIBase
         SceneController.TerrainController.SetDetailObjects(0.1f);
         SceneController.TerrainController.SetWater(false);
         SceneController.TerrainController.SetSky(0,1f);
+        UIMng.Instance.ActivationUI(UIType.MemoryWnd);
+    }
+
+    protected override void OnDisable()
+    {
+        base.OnDisable();
+        UIMng.Instance.ConcealUI(UIType.MemoryWnd);
     }
 
     void OnPointUpIamge(Image image)
     {
+        if (image != images[index])
+        {
+            image.gameObject.SetActive(true);
+            tip.transform.parent.DOShakeRotation(2, new Vector3(10, 7, 0));
+            tip.transform.parent.DOShakePosition(2, new Vector3(5, 6, 0));
+            return;
+        }
         StopAllCoroutines();
         StartCoroutine(OnShowFantasy(image));
     }
 
     IEnumerator OnShowFantasy(Image image)
     {
-        if(image != images[index])
-        {
-            image.gameObject.SetActive(true);
-            tip.transform.parent.DOShakeRotation(2, new Vector3(10, 7, 0));
-            tip.transform.parent.DOShakePosition(2, new Vector3(5, 6, 0));
-            yield break;
-        }
+        
         image.gameObject.SetActive(false);
         QuestionBankData bankData = null;
         if (index == 0)
@@ -94,6 +102,7 @@ public class FantasyWnd : UIBase
         if (index == 1)
         {
             SceneController.TerrainController.SetDetailObjects(1);
+            SongsDataMng.GetInstance().Player.MemoryNum = 1;
             yield return new WaitForSeconds(1f);
             tip.transform.parent.gameObject.SetActive(false);
             bankData = SongsDataMng.GetInstance().SetQuestion(1);
@@ -111,6 +120,7 @@ public class FantasyWnd : UIBase
         if (index == 3)
         {
             SceneController.TerrainController.SetSky(3, 0.1f);
+            SongsDataMng.GetInstance().Player.MemoryNum = 2;
             yield return new WaitForSeconds(1f);
             tip.transform.parent.gameObject.SetActive(false);
             bankData = SongsDataMng.GetInstance().SetQuestion(2);
@@ -120,7 +130,9 @@ public class FantasyWnd : UIBase
         }
         if (index == 4)
         {
+            SceneController.TerrainController.SetSky(1, 1f);
             SceneController.TerrainController.SetWater(true);
+            SongsDataMng.GetInstance().Player.MemoryNum = 3;
             yield return new WaitForSeconds(1f);
             tip.transform.parent.gameObject.SetActive(false);
             bankData = SongsDataMng.GetInstance().SetQuestion(3);
@@ -180,6 +192,7 @@ public class FantasyWnd : UIBase
     void OnEnd()
     {
         UIMng.Instance.OpenUI(UIType.NONE);
+        SongsDataMng.GetInstance().Player.MemoryNum = 4;
 
         QuestionBankData question = SongsDataMng.GetInstance().GetQuestionBankData;
         TaskData taskData = SongsDataMng.GetInstance().GetTaskData;

@@ -22,6 +22,7 @@ public class MainDialogueWnd : UIBase
     TaskData taskData;
     UIShiny taskNameParentShiny;
     Animator taskNameParentAnimator;
+    public Image jiantou;
 
     protected override void Awake()
     {
@@ -81,6 +82,7 @@ public class MainDialogueWnd : UIBase
 
         taskNameParentShiny.enabled = false;
         taskNameParentAnimator.enabled = false;
+        jiantou.enabled = false;
 
         taskData.onStateChange.RemoveListener(OnStateChange);
         taskData.onStateChange.AddListener(OnStateChange);
@@ -102,6 +104,7 @@ public class MainDialogueWnd : UIBase
             case TaskType.TaskChange:
                 taskNameParentShiny.enabled = true;
                 taskNameParentAnimator.enabled = true;
+                jiantou.enabled = true;
                 break;
             case TaskType.Animator:
                 string[] strs = taskData.val.Split('|');
@@ -181,7 +184,7 @@ public class MainDialogueWnd : UIBase
                 UIMng.Instance.ActivationUI(UIType.LeftDialogueWnd);
                 break;
             case TaskType.DOTween:
-                if(Application.platform == RuntimePlatform.WindowsPlayer)
+                if(Application.platform == RuntimePlatform.WindowsEditor)
                 {
                     taskData.TaskState = TaskState.End;
                 }

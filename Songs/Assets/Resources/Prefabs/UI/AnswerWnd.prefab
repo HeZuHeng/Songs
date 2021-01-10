@@ -2347,7 +2347,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 044b3d3629309c546ad609517f5c1d50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TextIndent: 1
+  m_TextIndent: 0
   endYieldTime: 0.5
   m_Text: 
   m_Enable: 0

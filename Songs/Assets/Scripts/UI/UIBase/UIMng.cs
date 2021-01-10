@@ -500,6 +500,9 @@ namespace Songs
                 case UIType.HTMBoatNameWnd:
                     openList.Add(string.Format("Prefabs/UI/HTMBoatNameWnd", path));
                     return openList;
+                case UIType.MemoryWnd:
+                    openList.Add(string.Format("Prefabs/UI/MemoryWnd", path));
+                    return openList;
                 default:
                     return openList;
             }

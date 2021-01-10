@@ -21,7 +21,7 @@ public class CameraMng
 
         return _instance;
     }
-    static Transform mainCameraParent = null;
+    public static Transform mainCameraParent = null;
     static Camera mainCamera = null;
     public static Camera MainCamera
     {
@@ -41,6 +41,7 @@ public class CameraMng
 
     public static Vector3 InitPosition = Vector3.zero;
     public static Vector3 InitRotation = Vector3.zero;
+    public Twist Twist { get; set; }
     public ThirdPersonUserControl  UserControl{ get; set; }
     public Cutscene PlayCutscene { get; set; }
     public void Start(Transform transform)
@@ -59,7 +60,11 @@ public class CameraMng
             camera.tag = "MainCamera";
             MainCamera = camera;
             MainCamera.transform.SetParent(mainCameraParent);
-            
+            Twist = MainCamera.GetComponent<Twist>();
+            if(Twist == null)
+            {
+                Twist = MainCamera.gameObject.AddComponent<Twist>();
+            }
             if (MainCamera.gameObject.GetComponent<InputEvent>() == null)
             {
                 MainCamera.gameObject.AddComponent<InputEvent>();
@@ -80,6 +85,7 @@ public class CameraMng
 
     public void InitPlayer(Transform tran)
     {
+        if (tran == null) return;
         int layer = LayerMask.NameToLayer("Player");
         Transform[] transforms = tran.GetComponentsInChildren<Transform>();
         for (int i = 0; i < transforms.Length; i++)
@@ -88,7 +94,7 @@ public class CameraMng
         }
         CapsuleCollider capsuleCollider = tran.gameObject.GetComponent<CapsuleCollider>();
         if(capsuleCollider == null) capsuleCollider = tran.gameObject.AddComponent<CapsuleCollider>();
-        capsuleCollider.height = 1.6f;
+        capsuleCollider.height = 1.8f;
         capsuleCollider.radius = 0.3f;
         capsuleCollider.center = new Vector3(0, 0.8f, 0);
         PhysicMaterial physicMaterial = new PhysicMaterial();
@@ -178,12 +184,13 @@ public class CameraMng
         MainCamera.transform.SetParent(mainCameraParent.transform);
         MainCamera.transform.localPosition = -Vector3.forward * 0.1f;
         MainCamera.transform.localRotation = Quaternion.Euler(new Vector3(0, 0, 0));
-
+        UserControl.offset = new Vector3(0, 1.55f, 0f);
         UserControl.transform.position = InitPosition;
         UserControl.transform.eulerAngles = InitRotation;
         UserControl.gameObject.SetActive(true);
         UserControl.SetMainCamera(mainCameraParent.transform);
         AQUAS_Look _Look = MainCamera.gameObject.AddComponent<AQUAS_Look>();
+        _Look.offset = new Vector3(0, 0, 0.01f);
         _Look._isLocked = true;
         _Look.SetParent(mainCameraParent.transform);
 

@@ -11,6 +11,7 @@ public class QATalkWnd : UIBase
     public Text tip;
     public Text talkName;
     public Image icon;
+    public InputField inputField;
 
     public RectTransform rectTransform;
 
@@ -96,6 +97,7 @@ public class QATalkWnd : UIBase
 
     public void OnSelected()
     {
+        Debug.Log("答案： "+ inputField.text);
         rectTransform.gameObject.SetActive(false);
         QuestionBankData question = SongsDataMng.GetInstance().GetQuestionBankData;
         if (question == null) return;
@@ -113,6 +115,8 @@ public class QATalkWnd : UIBase
 
     void OnEndParsing()
     {
+        UIMng.Instance.OpenUI(UIType.NONE);
+
         QuestionBankData question = SongsDataMng.GetInstance().GetQuestionBankData;
         TaskData taskData = SongsDataMng.GetInstance().GetTaskData;
         if (taskData != null)
@@ -125,6 +129,5 @@ public class QATalkWnd : UIBase
                 }
             }
         }
-        UIMng.Instance.OpenUI(UIType.NONE);
     }
 }

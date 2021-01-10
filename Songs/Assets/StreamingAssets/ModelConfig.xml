@@ -31,7 +31,7 @@
       </eulerAngle>
     </ModelDatas>
   </SceneDatas> 
- <SceneDatas 场景="华兹华斯书房预览" 场景资源名="华兹华斯书房" 摄像机 = "start_camera" 位置="start_initposition" 镜头="cutscene_introduction">
+ <SceneDatas 场景="华兹华斯书房预览" 场景资源名="华兹华斯书房" 摄像机 = "start_camera" 位置="introductioninitposition" 镜头="cutscene_introduction">
     <!--ModelDatas 模型名="张三" 资源名="12" />
     <ModelDatas 模型名="李四" 资源名="14" />
     <ModelDatas 模型名="吴亦凡" 资源名="18" /-->
@@ -51,41 +51,41 @@
     </ModelDatas>
     <ModelDatas Id="1002" 模型名="书1" 资源名="book_01" >
 	  <position>
-        <x>0</x>
-        <y>0.815</y>
-        <z>-0.915</z>
+        <x>2.02</x>
+        <y>1.109</y>
+        <z>1.097</z>
       </position>
       <eulerAngle>
-        <x>-90</x>
-        <y>0</y>
+        <x>45</x>
+        <y>90</y>
         <z>0</z>
       </eulerAngle>
     </ModelDatas>
     <ModelDatas Id="1003" 模型名="书2" 资源名="book_02" >
 	  <position>
-        <x>-1.898</x>
-        <y>0.901</y>
-        <z>2.312</z>
+        <x>2.02</x>
+        <y>1.109</y>
+        <z>0.881</z>>
       </position>
       <eulerAngle>
-        <x>-90</x>
+        <x>45</x>
         <y>90</y>
         <z>0</z>
       </eulerAngle>
     </ModelDatas>
     <ModelDatas Id="1004" 模型名="书3" 资源名="book_03" >
 	  <position>
-        <x>1.904</x>
-        <y>0.658</y>
-        <z>-2.484</z>
+        <x>2.02</x>
+        <y>1.109</y>
+        <z>1.327</z>
       </position>
       <eulerAngle>
-        <x>-90</x>
-        <y>0</y>
+        <x>45</x>
+        <y>90</y>
         <z>0</z>
       </eulerAngle>
     </ModelDatas>
-	<ModelDatas Id="1005" 模型名="书3" 资源名="bookopen_open" >
+	<ModelDatas Id="1005" 模型名="书动画" 资源名="bookopen_open" >
 	  <position>
         <x>-10000</x>
         <y>-10000</y>
@@ -94,6 +94,18 @@
       <eulerAngle>
         <x>0</x>
         <y>0</y>
+        <z>0</z>
+      </eulerAngle>
+    </ModelDatas>
+	<ModelDatas Id="101" 模型名="华兹华斯" 资源名="hzhs" >
+	  <position>
+        <x>-0.679</x>
+        <y>0</y>
+        <z>1.217</z>
+      </position>
+      <eulerAngle>
+        <x>0</x>
+        <y>135</y>
         <z>0</z>
       </eulerAngle>
     </ModelDatas>
@@ -117,12 +129,33 @@
       </eulerAngle>
     </ModelDatas>
   </SceneDatas>
-  <SceneDatas 场景="惠特曼介绍数据" 场景资源名="海岸" 摄像机 = "htm_Camera_start" 位置="htm_InitPosition_start" 镜头="Cutscene_set_sail">
-    <!--ModelDatas 模型名="张三" 资源名="12" />
-    <ModelDatas 模型名="李四" 资源名="14" />
-    <ModelDatas 模型名="吴亦凡" 资源名="18" /-->
+  <SceneDatas 场景="惠特曼介绍数据" 场景资源名="海岸" 摄像机 = "htm_camera_start" 位置="htm_initposition_start" 镜头="cutscene_set_sail">
+    <ModelDatas Id="103" 模型名="chuang_self" 资源名="chuang_self" >
+	  <position>
+        <x>127.2</x>
+        <y>62.2</y>
+        <z>654.3</z>
+      </position>
+      <eulerAngle>
+        <x>0</x>
+        <y>218.219</y>
+        <z>0</z>
+      </eulerAngle>
+    </ModelDatas>
   </SceneDatas>
-  <SceneDatas 场景="草的意象数据" 场景资源名="海岸" 摄像机 = "htm_Camera_partyhall" 位置="htm_InitPosition_partyhall" 镜头="cutscene_enjoyflower_tym">
+  <SceneDatas 场景="草的意象数据" 场景资源名="海岸" 摄像机 = "htm_camera_partyhall" 位置="htm_initposition_partyhall" 镜头="cutscene_enjoyflower_tym">
+	<ModelDatas Id="103" 模型名="chuang_self" 资源名="chuang_self" >
+	  <position>
+        <x>127.2</x>
+        <y>62.2</y>
+        <z>654.3</z>
+      </position>
+      <eulerAngle>
+        <x>0</x>
+        <y>218.219</y>
+        <z>0</z>
+      </eulerAngle>
+    </ModelDatas>
     <ModelDatas Id="1002" 模型名="废奴运动" 资源名="picture_01" >
       <position>
         <x>104.0314</x>
@@ -160,24 +193,60 @@
       </eulerAngle>
     </ModelDatas>
   </SceneDatas>
-  <SceneDatas 场景="寻找草的意象数据" 场景资源名="港口" 摄像机 = "htm_Camera_start" 位置="htm_InitPosition_start" 镜头="cutscene_enjoyflower_tym">
-    <!--ModelDatas 模型名="张三" 资源名="12" />
-    <ModelDatas 模型名="李四" 资源名="14" />
-    <ModelDatas 模型名="吴亦凡" 资源名="18" /-->
+  <SceneDatas 场景="寻找草的意象数据" 场景资源名="海岸" 摄像机 = "htm_camera_self" 位置="htm_initposition_self" 镜头="cutscene_enjoyflower_tym">
+    <ModelDatas Id="103" 模型名="chuang_self" 资源名="chuang_self" >
+	  <position>
+        <x>127.2</x>
+        <y>62.2</y>
+        <z>654.3</z>
+      </position>
+      <eulerAngle>
+        <x>0</x>
+        <y>218.219</y>
+        <z>0</z>
+      </eulerAngle>
+    </ModelDatas>
   </SceneDatas>
-  <SceneDatas 场景="自我之歌数据" 场景资源名="港口" 摄像机 = "htm_Camera_start" 位置="htm_InitPosition_start" 镜头="cutscene_enjoyflower_tym">
-    <!--ModelDatas 模型名="张三" 资源名="12" />
-    <ModelDatas 模型名="李四" 资源名="14" />
-    <ModelDatas 模型名="吴亦凡" 资源名="18" /-->
+  <SceneDatas 场景="自我之歌数据" 场景资源名="海岸" 摄像机 = "htm_camera_artistic" 位置="htm_initposition_artistic" 镜头="cutscene_enjoyflower_tym">
+    <ModelDatas Id="103" 模型名="chuang_self" 资源名="chuang_self" >
+	  <position>
+        <x>127.2</x>
+        <y>62.2</y>
+        <z>654.3</z>
+      </position>
+      <eulerAngle>
+        <x>0</x>
+        <y>218.219</y>
+        <z>0</z>
+      </eulerAngle>
+    </ModelDatas>
   </SceneDatas>
-  <SceneDatas 场景="体现诗人平等数据" 场景资源名="港口" 摄像机 = "htm_Camera_start" 位置="htm_InitPosition_start" 镜头="cutscene_enjoyflower_tym">
-    <!--ModelDatas 模型名="张三" 资源名="12" />
-    <ModelDatas 模型名="李四" 资源名="14" />
-    <ModelDatas 模型名="吴亦凡" 资源名="18" /-->
+  <SceneDatas 场景="体现诗人平等数据" 场景资源名="海岸" 摄像机 = "htm_camera_artistic" 位置="htm_initposition_equality" 镜头="cutscene_enjoyflower_tym">
+    <ModelDatas Id="103" 模型名="chuang_self" 资源名="chuang_self" >
+	  <position>
+        <x>127.2</x>
+        <y>62.2</y>
+        <z>654.3</z>
+      </position>
+      <eulerAngle>
+        <x>0</x>
+        <y>218.219</y>
+        <z>0</z>
+      </eulerAngle>
+    </ModelDatas>
   </SceneDatas>
-  <SceneDatas 场景="中美民主思想比较数据" 场景资源名="港口" 摄像机 = "htm_Camera_start" 位置="htm_InitPosition_start" 镜头="cutscene_enjoyflower_tym">
-    <!--ModelDatas 模型名="张三" 资源名="12" />
-    <ModelDatas 模型名="李四" 资源名="14" />
-    <ModelDatas 模型名="吴亦凡" 资源名="18" /-->
+  <SceneDatas 场景="中美民主思想比较数据" 场景资源名="港口" 摄像机 = "htm_camera_democracy" 位置="htm_initposition_democracy" 镜头="cutscene_enjoyflower_tym">
+    <ModelDatas Id="103" 模型名="chuang_self" 资源名="chuang_self" >
+	  <position>
+        <x>160</x>
+        <y>62.2</y>
+        <z>661.2</z>
+      </position>
+      <eulerAngle>
+        <x>0</x>
+        <y>180</y>
+        <z>0</z>
+      </eulerAngle>
+    </ModelDatas>
   </SceneDatas>
 </ModelConfig>

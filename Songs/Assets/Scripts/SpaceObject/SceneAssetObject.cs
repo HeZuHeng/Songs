@@ -92,6 +92,11 @@ public class SceneAssetObject : IAssetObject
         IsDone = true;
     }
 
+    public void Start()
+    {
+        if(Tran != null) Tran.gameObject.SetActive(Data.active);
+    }
+
     public override void InitAssetObject(Transform asset)
     {
         asset.SetParent(GameCenter.AssetsParent);
@@ -100,6 +105,8 @@ public class SceneAssetObject : IAssetObject
         if (Tran == null) return;
         MAnimator = Tran.GetComponent<Animator>();
         Col = Tran.GetComponentInChildren<Collider>();
+
+        Tran.gameObject.SetActive(false);
     }
 
     public bool PlayAnimator(string aName, float val,float speed, OnAnimatorEnd onAnimatorEnd)

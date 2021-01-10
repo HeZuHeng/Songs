@@ -2,17 +2,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HZHSWnd : UIBase
 {
+    public Button next;
+
     protected override void Awake()
     {
         base.Awake();
         Type = UIType.HZHSWnd;
         MutexInterface = true;
+        next.onClick.AddListener(OnClose);
     }
 
-    public void OnClose()
+    protected override void OnEnable()
+    {
+        base.OnEnable();
+        next.gameObject.SetActive(false);
+    }
+
+    void OnClose()
     {
         TaskData taskData = SongsDataMng.GetInstance().GetTaskData;
         if (taskData != null)

@@ -30,6 +30,7 @@ namespace Songs{
         HTMMapPoint3Wnd = 21,
         HTMBoatNameWnd = 22,
         HZHSEndWnd,
+		MemoryWnd,
 	}
 	/// <summary>
 	/// 二级界面枚举

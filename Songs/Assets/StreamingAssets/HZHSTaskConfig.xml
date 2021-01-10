@@ -2,38 +2,41 @@
 <TasksConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <任务分支名>I .William Wordsworth</任务分支名>
   <SceneTasks 场景任务名="About Wordsworth" 图标="jieshao_cj" 场景数据="华兹华斯书房预览">
+	<TaskDatas ID="1" 任务名="来到故居" 下一个="1" 类型="StartState" 值 = "InitMoveCamera"/>
     <TaskDatas ID="1" 任务名="华兹华斯背景介绍" 下一个="2" 类型="OpenWnd" 值 = "HZHSWnd"/>
-    <TaskDatas ID="2" 任务名="预览书房" 下一个="3" 类型="DOTween" 值 = "5" 描述="跟随镜头预览书房"/>
+    <TaskDatas ID="2" 任务名="预览书房" 下一个="3" 类型="StartState" 值 = "TalkCamera"/>
     <TaskDatas ID="3" 任务名="书房中自由漫游" 下一个="4" 类型="PersonMove" 值 = "end"/>
-	<TaskDatas ID="4" 任务名="鉴赏华兹华斯书房三本诗歌" 下一个="0" 类型="TaskChange" 值 = "Three Books" 描述="点击右侧任务名前往体验华兹华斯书房三本诗歌"/>
+	<TaskDatas ID="4" 任务名="点击前往Three Books场景" 下一个="0" 类型="TaskChange" 值 = "Three Books" 描述="点击前往体验华兹华斯书房三本诗歌"/>
   </SceneTasks>
  <SceneTasks 场景任务名="Three Books" 图标="sanbenshu_cj" 场景数据="华兹华斯书房三本诗歌">
-    <TaskDatas ID="4" 任务名="发现三本诗集" 下一个="5" 类型="DOTween" 描述="跟随镜头预览书房中的选择三本诗集的线索"/>
+    <!--TaskDatas ID="4" 任务名="发现三本诗集" 下一个="5" 类型="DOTween" 描述="跟随镜头预览书房中的选择三本诗集的线索"/-->
     <TaskDatas ID="5" 任务名="寻找三本诗集并阅读" 下一个="0" 类型="PersonMove" 值 = "0" />
-    <TaskDatas ID="1" 任务名="阅读《The Solitary Reaper》诗歌" 下一个="0" 类型="LookSong" 值 = "thesolitaryreaper.txt"/>
+    <TaskDatas ID="3" 任务名="阅读《The Solitary Reaper》诗歌" 下一个="0" 类型="LookSong" 值 = "thesolitaryreaper.txt"/>
 	<TaskDatas ID="2" 任务名="阅读《My Heart Leaps Up》诗歌" 下一个="0" 类型="LookSong" 值 = "myheartleapsup.txt"/>
-	<TaskDatas ID="3" 任务名="阅读《I Wandered Lonely as a Cloud》诗歌第一节" 下一个="0" 类型="LookSong" 值 = "iwanderedlonelyasacloud1.txt"/>
-	<TaskDatas ID="6" 任务名="《我好似一朵孤独的流云》赏析" 下一个="0" 类型="TaskChange" 值 = "I Wandered Lonely as a Cloud" 描述="点击右侧任务名前往《我好似一朵孤独的流云》赏析"/>
+	<TaskDatas ID="1" 任务名="阅读《I Wandered Lonely as a Cloud》诗歌第一节" 下一个="6" 类型="LookSong" 值 = "iwanderedlonelyasacloud1.txt"/>
+	<TaskDatas ID="6" 任务名="穿越回到华兹华斯时代" 下一个="7" 类型="StartState" 值 = "InitMoveCamera"/>
+	<TaskDatas ID="7" 任务名="《我好似一朵孤独的流云》创作背景介绍" 下一个="8" 类型="OpenWnd" 值 = "ExperienceWnd"/>
+	<TaskDatas ID="8" 任务名="华兹华斯的烦恼" 下一个="9" 类型="Animator" 值 = "101|1|1|true|sit" 描述 = "一天，华兹华斯躺在躺椅上想到革命失败又沮丧起来，想回忆美好事物之时，脑海却一片空白。
+	为了让诗人回忆起当时快乐的场景，首先请为他复原记忆内容。"/>
+	<TaskDatas ID="9" 任务名="点击前往I Wandered Lonely as a Cloud场景" 下一个="0" 类型="TaskChange" 值 = "I Wandered Lonely as a Cloud" 描述="点击右侧任务名前往《我好似一朵孤独的流云》意境还原"/>
   </SceneTasks>
-  <SceneTasks 场景任务名="I Wandered Lonely as a Cloud" 图标="sxh_cj" 场景数据="华兹华斯赏花">
-    <!--TaskDatas ID="1" 任务名="预览水仙花场景" 下一个="4" 类型="DOTween" /-->
-	<TaskDatas ID="4" 任务名="水仙花场景自由漫游" 下一个="2" 类型="ThirdPerson" 值 = "end"/>
-    <TaskDatas ID="2" 任务名="阅读《我好似一朵孤独的流云》诗歌" 下一个="3" 类型="LookSong" 值 = "iwanderedlonelyasacloud.txt"/>
-    <TaskDatas ID="3" 任务名="《我好似一朵孤独的流云》创作背景介绍" 下一个="5" 类型="OpenWnd" 值 = "ExperienceWnd"/>
-	<TaskDatas ID="5" 任务名="《我好似一朵孤独的流云》意境" 下一个="0" 类型="TaskChange" 值 = "《我好似一朵孤独的流云》意境" 描述="点击右侧任务名前往体验《我好似一朵孤独的流云》意境"/>
-  </SceneTasks>
-  <SceneTasks 场景任务名="Artistic Conception" 图标="hzhsyj_cj" 场景数据="华兹华斯赏花">
-	<TaskDatas ID="1" 任务名="华兹华斯的烦恼" 下一个="2" 类型="ThirdPerson" 值 = "end" 描述 = "一天，华兹华斯躺在躺椅上想到革命失败又沮丧起来，想回忆美好事物之时，脑海却一片空白。为了让诗人回忆起当时快乐的场景，首先请为他复原记忆内容。"/>
-	<TaskDatas ID="2" 任务名="帮助华兹华斯找回意境" 下一个="3" 类型="Talk" 值 = "101" 描述 = "您需要根据诗的前三节内容及所给的提示来选择屏幕下方的意象，还原诗中所描绘的场景。"/>
+  <SceneTasks 场景任务名="I Wandered Lonely as a Cloud" 图标="hzhsyj_cj" 场景数据="华兹华斯赏花">
+	<TaskDatas ID="2" 任务名="帮助华兹华斯找回意境" 下一个="3" 类型="Talk" 描述 = "您需要根据诗的前三节内容及所给的提示来选择屏幕下方的意象，还原诗中所描绘的场景。"/>
 	<TaskDatas ID="3" 任务名="开始还原意境" 下一个="4" 类型="OpenWnd" 值 = "FantasyWnd" 描述 = ""/>
-    <TaskDatas ID="4" 任务名="请赏析第四节诗歌" 下一个="5" 类型="Talk" 描述 = "您已成功激活诗人记忆，请赏析第四节诗歌。"/>
-	<TaskDatas ID="5" 任务名="第四节诗歌" 下一个="6" 类型="Talk" 描述 = "For oft, when on my couch I lie In vacant or in pensive mood, They flash upon that inward ey Which is the bliss of solitude; And then my heart with pleasure fills,And dances with the daffodils."/>
-	<TaskDatas ID="6" 任务名="第四节诗歌解析" 下一个="7" 类型="Animator" 值 = "101|1|1|true|sit" 描述 = "Firstly, the poet writes daffodils, and in the last part, he writes about the daffodils’ healing power. He writes both objective things (daffodils) and subjective feelings. The poet and daffodils are connected to each other, and the empty mind can be healed at any time through this infinite spiritual wealth.
+    <TaskDatas ID="4" 任务名="点击前往找回现代故居书房通道场景" 下一个="0" 类型="TaskChange" 值 = "找回现代故居书房通道" 描述="点击右侧任务名前往体验找回现代故居书房通道场景"/>
+  </SceneTasks>
+  <SceneTasks 场景任务名="找回现代故居书房通道" 图标="sxh_cj" 场景数据="华兹华斯书房意境">
+	<TaskDatas ID="100" 任务名="华兹华斯书房中自由漫游" 下一个="1" 类型="PersonMove" 值 = "end" />
+    <TaskDatas ID="1" 任务名="来到华兹华斯时代书房" 下一个="2" 类型="StartState" 值 = "InitMoveCamera"/>
+	<TaskDatas ID="2" 任务名="请赏析第四节诗歌" 下一个="3" 类型="Talk" 描述 = "您已成功激活诗人记忆，请赏析第四节诗歌。"/>
+	<TaskDatas ID="3" 任务名="第四节诗歌" 下一个="5" 类型="LookSong" 值 = "iwanderedlonelyasacloud4.txt"/>
+	<TaskDatas ID="5" 任务名="第四节诗歌解析" 下一个="7" 类型="Animator" 值 = "101|1|1|true|sit" 描述 = "Firstly, the poet writes daffodils, and in the last part, he writes about the daffodils’ healing power. He writes both objective things (daffodils) and subjective feelings. The poet and daffodils are connected to each other, and the empty mind can be healed at any time through this infinite spiritual wealth.
 	\n诗人先写水仙, 最后再写水仙对诗人的魅力, 写的既是客观之物 (水仙) , 又是主观之情 (诗人)。诗人与水仙心灵相通,无论何时都能通过这种无穷的精神财富使百无聊赖的心灵空虚和精神颓唐得到治愈。"/>
 	<TaskDatas ID="7" 任务名="与花瓶里摇曳的水仙花一起舞蹈" 下一个="8" 类型="Animator" 值 = "101|1|1|true|dance|end"/>
-	<TaskDatas ID="8" 任务名="找到回故居的通道" 下一个="10" 类型="Question" 值 = "6"/>
-	<!--TaskDatas ID="9" 任务名="华兹华斯书房中自由漫游" 下一个="10" 类型="PersonMove" 值 = "end" /-->
-	<TaskDatas ID="10" 任务名="陶渊明《饮酒（其五）》" 下一个="0" 类型="TaskChange" 值 = "SelectPlotWnd" 描述="点击右侧任务名前往体验陶渊明《饮酒（其五）》"/>
+	<TaskDatas ID="8" 任务名="找到回故居的通道" 下一个="9" 类型="Question" 值 = "6"/>
+	<TaskDatas ID="9" 任务名="回到华兹华斯时代书房" 下一个="10" 类型="StartState" 值 = "TalkCamera"/>
+	<TaskDatas ID="10" 任务名="找到书房中的菊花并点击" 下一个="11" 类型="Talk" 描述 = "Far away in the beautiful landscape of China, there is also a representative pastoral image，Let’s find it!"/>
+	<TaskDatas ID="11" 任务名="点击前往《饮酒》场景" 下一个="12" 类型="TaskChange" 值 = "《饮酒》" 描述="点击右侧任务名前往体验陶渊明《饮酒（其五）》"/>
   </SceneTasks>
   <SceneTasks 场景任务名="《饮酒》" 图标="tymjh_cj" 场景数据="陶渊明赏花">
     <TaskDatas ID="1" 任务名="预览菊花场景" 下一个="4" 类型="DOTween" 描述 = "Far away in the beautiful landscape of China, there is also a representative pastoral poet - Tao Yuanming. Let’s go and see.

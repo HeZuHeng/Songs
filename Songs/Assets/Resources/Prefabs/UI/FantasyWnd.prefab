@@ -89,7 +89,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_BlurFactor: 1
   m_Style: 3
-  m_EffectColor: {r: 0.22078538, g: 1, b: 0, a: 0.50980395}
+  m_EffectColor: {r: 1, g: 0, b: 0.11390495, a: 0.50980395}
   m_EffectDistance: {x: 12, y: 12}
   m_UseGraphicAlpha: 0
 --- !u!1 &1049603707
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_BlurFactor: 1
   m_Style: 3
-  m_EffectColor: {r: 0.22078538, g: 1, b: 0, a: 0.50980395}
+  m_EffectColor: {r: 1, g: 0, b: 0.11390495, a: 0.50980395}
   m_EffectDistance: {x: 12, y: 12}
   m_UseGraphicAlpha: 0
 --- !u!1 &1071541446
@@ -273,7 +273,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_BlurFactor: 1
   m_Style: 3
-  m_EffectColor: {r: 0.22078538, g: 1, b: 0, a: 0.50980395}
+  m_EffectColor: {r: 1, g: 0, b: 0.11390495, a: 0.50980395}
   m_EffectDistance: {x: 12, y: 12}
   m_UseGraphicAlpha: 0
 --- !u!1 &1438936992
@@ -365,7 +365,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_BlurFactor: 1
   m_Style: 3
-  m_EffectColor: {r: 0.22078538, g: 1, b: 0, a: 0.50980395}
+  m_EffectColor: {r: 1, g: 0, b: 0.11390495, a: 0.50980395}
   m_EffectDistance: {x: 12, y: 12}
   m_UseGraphicAlpha: 0
 --- !u!1 &1460630214
@@ -457,7 +457,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_BlurFactor: 1
   m_Style: 3
-  m_EffectColor: {r: 0.22078538, g: 1, b: 0, a: 0.50980395}
+  m_EffectColor: {r: 1, g: 0, b: 0.11390495, a: 0.50980395}
   m_EffectDistance: {x: 12, y: 12}
   m_UseGraphicAlpha: 0
 --- !u!1 &223616345230135120
@@ -1128,7 +1128,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: d5def7c894abc5949b0196dc8212c562, type: 3}
+    m_Font: {fileID: 12800000, guid: d6c5349ada27ca54c8cd6f8151037162, type: 3}
     m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0

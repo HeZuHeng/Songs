@@ -42,6 +42,7 @@ public class SceneController
     SceneData CurSceneData;
     GameObject playCutsceneObj;
     GameObject cameraObj;
+    GameObject newCameraObj;
     GameObject initTranObj;
     ChildController childController;
     List<SceneAssetObject> palyAnimators = new List<SceneAssetObject>();
@@ -80,11 +81,11 @@ public class SceneController
             if (progress >= 1)
             {
                 loadNum++;
-                cameraObj = loadCamera.MainData.LoadGameObject(CurSceneData.sceneCamera);
-                if (cameraObj != null)
+                newCameraObj = loadCamera.MainData.LoadGameObject(CurSceneData.sceneCamera);
+                if (newCameraObj != null)
                 {
-                    cameraObj.AddComponent<HighlightingEffect>();
-                    Camera camera = cameraObj.GetComponent<Camera>();
+                    newCameraObj.SetActive(false);
+                    Camera camera = newCameraObj.GetComponent<Camera>();
                     CameraMng.GetInstance().InitScene(camera);
                 }
             }
@@ -105,7 +106,6 @@ public class SceneController
             }
         };
 
-        SceneAssetObject assetObject = SceneMng.GetInstance().AddSpaceAsset(1, "nvyk", "女游客");
         if (CurSceneData.datas.Count <= 0) loadNum++;
         ModelData modelData = null;
         for (int i = 0; i < CurSceneData.datas.Count; i++)
@@ -128,11 +128,22 @@ public class SceneController
         {
             childController = new ThreePictureController();
         }
+
+        if (HZHSStartController.Name.Equals(sceneData.name))
+        {
+            childController = new HZHSStartController();
+        }
+
+        if (ArtisticController.Name.Equals(sceneData.name))
+        {
+            childController = new ArtisticController();
+        }
     }
 
     public void Close()
     {
         childController = null;
+        UIMng.Instance.ConcealUI(UIType.MemoryWnd);
         UIMng.Instance.ConcealUI(UIType.LeftDialogueWnd);
         UIMng.Instance.ConcealUI(UIType.SettingWnd);
         UIMng.Instance.ConcealUI(UIType.MainDialogueWnd);
@@ -141,19 +152,32 @@ public class SceneController
         CameraMng.GetInstance().ResetMove();
 
         if(playCutsceneObj != null) GameObject.DestroyImmediate(playCutsceneObj);
-        if (cameraObj != null) GameObject.DestroyImmediate(cameraObj);
         if (initTranObj != null) GameObject.DestroyImmediate(initTranObj);
         if (CurSceneData == null) return;
-
+        //SceneMng.GetInstance().RemoveSpaceObject(1);
         for (int i = 0; i < CurSceneData.datas.Count; i++)
         {
             SceneMng.GetInstance().RemoveSpaceObject(CurSceneData.datas[i].Id);
         }
     }
 
-    public void Start(TerrainController controller = null)
+    public void Start()
     {
-        //TerrainController = controller;
+        if (cameraObj != null) GameObject.DestroyImmediate(cameraObj);
+        cameraObj = newCameraObj;
+        if (cameraObj != null)
+        {
+            cameraObj.AddComponent<HighlightingEffect>();
+            cameraObj.gameObject.SetActive(true);
+        }
+        newCameraObj = null;
+        SceneAssetObject assetObject = null;
+        for (int i = 0; i < CurSceneData.datas.Count; i++)
+        {
+            assetObject = SceneMng.GetInstance().GetSceneAssetObject(CurSceneData.datas[i].Id);
+            if (assetObject != null) assetObject.Start();
+        }
+
         SceneAssetObject sceneAsset = SceneMng.GetInstance().GetSceneAssetObject(1);
         CameraMng.GetInstance().InitPlayer(sceneAsset.Tran);
         sceneAsset.Tran.gameObject.SetActive(false);
@@ -363,30 +387,106 @@ public class ThreeSongsController : ChildController
     public static string Name = "华兹华斯书房三本诗歌";
 
     SceneAssetObject sceneAsset;
+    SceneAssetObject hzhs;
+
+    SceneAssetObject bool1;
+    SceneAssetObject bool2;
+    SceneAssetObject bool3;
     public override void Init()
     {
         base.Init();
         sceneAsset = SceneMng.GetInstance().GetSceneAssetObject(1);
+        hzhs = SceneMng.GetInstance().GetSceneAssetObject(101);
+        bool1 = SceneMng.GetInstance().GetSceneAssetObject(1002);
+        bool2 = SceneMng.GetInstance().GetSceneAssetObject(1003);
+        bool3 = SceneMng.GetInstance().GetSceneAssetObject(1004);
+        if(hzhs != null) hzhs.Tran.gameObject.SetActive(false);
         sceneAsset.Tran.gameObject.AddComponent<TriggerEvent>().enterEvent.AddListener(EnterEvent);
         InputManager.GetInstance().AddClickEventListener(OnClickEvent);
     }
 
+    public override void ToState(State state, OnStateEndDelegate onStateEnd)
+    {
+        base.ToState(state, onStateEnd);
+        switch (state)
+        {
+            case State.InitMoveCamera:
+                InitMoveCamera(onStateEnd);
+                break;
+            case State.TalkCamera:
+                TalkCamera(onStateEnd);
+                break;
+        }
+    }
+
+    void InitMoveCamera(OnStateEndDelegate onStateEnd)
+    {
+        Transform newModelParent = SceneController.TerrainController.transform.Find("ALL_Model/NewModelParent");
+        if (newModelParent != null)
+        {
+            newModelParent.gameObject.SetActive(false);
+        }
+        bool1.Tran.gameObject.SetActive(false);
+        bool2.Tran.gameObject.SetActive(false);
+        bool3.Tran.gameObject.SetActive(false);
+        hzhs.Tran.gameObject.SetActive(true);
+        float tw = 0;
+        Tween t = DOTween.To(() => tw, x => tw = x, 20, 2);
+        t.onUpdate += delegate ()
+        {
+            CameraMng.GetInstance().Twist.twistAngle = tw;
+        };
+        t.onComplete += delegate ()
+        {
+            CameraMng.GetInstance().Twist.twistAngle = 0;
+            Vector3 dir = hzhs.Tran.position - sceneAsset.Tran.position; //位置差，方向     
+            float v = Vector3.Dot(sceneAsset.Tran.forward, dir);
+            float y = 0;
+            if (v > 0)
+            {
+                y = Vector3.Angle(sceneAsset.Tran.forward, hzhs.Tran.forward);
+            }
+            else
+            {
+                y = Vector3.Angle(sceneAsset.Tran.forward, hzhs.Tran.forward) - 180;
+            }
+            sceneAsset.Tran.localEulerAngles = new Vector3(0, 180 + y, 0);
+            CameraMng.mainCameraParent.localEulerAngles = new Vector3(0, 180 + y, 0);
+            onStateEnd?.Invoke(GetState);
+        };
+    }
+
+    void TalkCamera(OnStateEndDelegate onStateEnd)
+    {
+        Transform newModelParent = SceneController.TerrainController.transform.Find("ALL_Model/NewModelParent");
+        if (newModelParent != null)
+        {
+            newModelParent.gameObject.SetActive(true);
+        }
+        onStateEnd?.Invoke(GetState);
+    }
+
+
     void EnterEvent(string name)
     {
-        Debug.Log(name);
+        if (!name.Contains("Book")) return;
         string[] strs = name.Split('_');
         int id = 0;
         if(strs.Length > 1)int.TryParse(strs[1],out id);
-        CameraMng.GetInstance().UserControl.State(false);
-        sceneAsset.PlayAnimator("shu",true,1,delegate(string a) {
-            sceneAsset.PlayAnimator("shu", false, 1, null);
-            SongsDataMng.GetInstance().SetNextTaskData(id);
-            UIMng.Instance.ConcealUI(UIType.MainDialogueWnd);
-            UIMng.Instance.ActivationUI(UIType.MainDialogueWnd);
-            CameraMng.GetInstance().UserControl.State(true);
-        });
-        SceneController.GetInstance().AddPlayAnimator(sceneAsset);
-        
+        if (id == 0) return;
+        //CameraMng.GetInstance().UserControl.State(false);
+        //sceneAsset.PlayAnimator("shu",true,1,delegate(string a) {
+        //    sceneAsset.PlayAnimator("shu", false, 1, null);
+        //    SongsDataMng.GetInstance().SetNextTaskData(id);
+        //    UIMng.Instance.ConcealUI(UIType.MainDialogueWnd);
+        //    UIMng.Instance.ActivationUI(UIType.MainDialogueWnd);
+        //    CameraMng.GetInstance().UserControl.State(true);
+        //});
+        //SceneController.GetInstance().AddPlayAnimator(sceneAsset);
+        SongsDataMng.GetInstance().SetNextTaskData(id);
+        UIMng.Instance.ConcealUI(UIType.MainDialogueWnd);
+        UIMng.Instance.ActivationUI(UIType.MainDialogueWnd);
+
     }
 
     void OnClickEvent(GameObject obj)
@@ -410,19 +510,23 @@ public class ThreePictureController : ChildController
     void EnterEvent(string name)
     {
         Debug.Log(name);
+        if (!name.Contains("Picture")) return;
         string[] strs = name.Split('_');
         int id = 0;
         if (strs.Length > 1) int.TryParse(strs[1], out id);
-        CameraMng.GetInstance().UserControl.State(false);
-        sceneAsset.PlayAnimator("shu", true, 1, delegate (string a) {
-            sceneAsset.PlayAnimator("shu", false, 1, null);
-            SongsDataMng.GetInstance().SetNextTaskData(id);
-            UIMng.Instance.ConcealUI(UIType.MainDialogueWnd);
-            UIMng.Instance.ActivationUI(UIType.MainDialogueWnd);
-            CameraMng.GetInstance().UserControl.State(true);
-        });
-        SceneController.GetInstance().AddPlayAnimator(sceneAsset);
-
+        if (id == 0) return;
+        //CameraMng.GetInstance().UserControl.State(false);
+        //sceneAsset.PlayAnimator("shu", true, 1, delegate (string a) {
+        //    sceneAsset.PlayAnimator("shu", false, 1, null);
+        //    SongsDataMng.GetInstance().SetNextTaskData(id);
+        //    UIMng.Instance.ConcealUI(UIType.MainDialogueWnd);
+        //    UIMng.Instance.ActivationUI(UIType.MainDialogueWnd);
+        //    CameraMng.GetInstance().UserControl.State(true);
+        //});
+        //SceneController.GetInstance().AddPlayAnimator(sceneAsset);
+        SongsDataMng.GetInstance().SetNextTaskData(id);
+        UIMng.Instance.ConcealUI(UIType.MainDialogueWnd);
+        UIMng.Instance.ActivationUI(UIType.MainDialogueWnd);
     }
 
     void OnClickEvent(GameObject obj)

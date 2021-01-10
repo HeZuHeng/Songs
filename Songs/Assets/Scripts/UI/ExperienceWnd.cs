@@ -31,7 +31,7 @@ public class ExperienceWnd : UIBase
 
         index1 = 0;
         texts[index1].enabled = true;
-        //CancelInvoke("ShowText");
+        CancelInvoke("ShowText");
         InvokeRepeating("ShowText",3,3);
     }
 
