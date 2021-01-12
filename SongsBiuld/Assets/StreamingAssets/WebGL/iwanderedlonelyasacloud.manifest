@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 2800917809
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 214806007c8534571b7fc55fe6591e60
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 3f7d0c5e0986ec71841622bcb2f9be1c
+HashAppended: 0
+ClassTypes:
+- Class: 83
+  Script: {instanceID: 0}
+Assets:
+- Assets/Sound/iwanderedlonelyasacloud.wav
+Dependencies: []

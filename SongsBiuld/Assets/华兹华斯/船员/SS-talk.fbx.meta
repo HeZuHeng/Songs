@@ -375,7 +375,47 @@ ModelImporter:
     13700016: wingman2
     13700018: wingman3
     13700020: wingman4
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 09 - Default
+    second: {fileID: 2100000, guid: 24d0dd839512c2d44b2aebdd77cb0921, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #26'
+    second: {fileID: 2100000, guid: f6557928d80cbf842a37bd48396a2603, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #28'
+    second: {fileID: 2100000, guid: 0fbe4cebf0707fa48aab19bd961b0914, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #36'
+    second: {fileID: 2100000, guid: 0e0065bfabc5c274886d4466ad28881d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #37'
+    second: {fileID: 2100000, guid: 75000b3f6c8b72845a754371b577b83f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #38'
+    second: {fileID: 2100000, guid: b44f6fc4ea7e4024fafa5713f8f951fd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #39'
+    second: {fileID: 2100000, guid: 0a799286f1706c8499afd734405e55f6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #49'
+    second: {fileID: 2100000, guid: 3b73156f5d78b2f429a2e282c7b775a8, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -395,7 +435,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -403,15 +443,15 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
     globalScale: 1
-    meshCompression: 0
+    meshCompression: 3
     addColliders: 0
     useSRGBMaterialColor: 1
     importVisibility: 1
-    importBlendShapes: 1
+    importBlendShapes: 0
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
@@ -459,5 +499,5 @@ ModelImporter:
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
-  assetBundleName: 
+  assetBundleName: bruceyangcg1
   assetBundleVariant: 

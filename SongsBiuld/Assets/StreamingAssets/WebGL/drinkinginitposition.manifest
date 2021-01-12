@@ -1,0 +1,20 @@
+ManifestFileVersion: 0
+CRC: 2377043878
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: aafd01ca970e7c56dfa852e3333daa2d
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 85b0f9bb494a05cfc0c2741ff84340d0
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 136
+  Script: {instanceID: 0}
+Assets:
+- "Assets/Resources/\u9676\u6E0A\u660E\u8D4F\u82B1\u6444\u50CF\u673A/DrinkingInitPosition.prefab"
+Dependencies: []

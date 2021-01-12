@@ -1,0 +1,22 @@
+ManifestFileVersion: 0
+CRC: 1594344267
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 3ff73c90fbff1dd672050587713debfa
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: fe397485c3cec1106b49e9ff95e8f8a2
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+Assets:
+- "Assets/\u534E\u5179\u534E\u65AF/\u7537\u5B66\u751F\u4EBA\u7269/hairkisaragi.png"
+- "Assets/\u534E\u5179\u534E\u65AF/\u5973\u5B66\u751F\u4EBA\u7269/Materials/hairkisaragi.mat"
+Dependencies:
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/hairsky108

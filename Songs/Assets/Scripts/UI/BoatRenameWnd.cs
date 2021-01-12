@@ -11,7 +11,7 @@ public class BoatRenameWnd : UIBase
     protected override void Awake()
     {
         base.Awake();
-        Type = UIType.RenameWnd;
+        Type = UIType.HTMBoatNameWnd;
         MutexInterface = true;
 
         submit.onClick.AddListener(OnEnd);

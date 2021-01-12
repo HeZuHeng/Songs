@@ -1,0 +1,30 @@
+ManifestFileVersion: 0
+CRC: 1433255179
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 13acdcba4ea53ab371585bb294c5cc07
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 7a06cdc29970eee5c25b662729ee57d8
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 20
+  Script: {instanceID: 0}
+- Class: 81
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 8a3bdb2cd68f901469e7cc149151eb49, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 124
+  Script: {instanceID: 0}
+Assets:
+- "Assets/Resources/\u9676\u6E0A\u660E\u8D4F\u82B1\u6444\u50CF\u673A/DrinkingCamera.prefab"
+Dependencies: []

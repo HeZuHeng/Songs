@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using LaoZiCloudSDK.CameraHelper;
+using BuildUtil;
+using UnityEngine.SceneManagement;
 
 public delegate void OnStateEndDelegate(State state);
 public delegate void OnStateChangeDelegate();
@@ -20,7 +22,11 @@ public enum State
 {
     InitMoveCamera,
     TalkCamera,
-
+    TalkCameraOne,
+    TalkCameraTwo,
+    TalkCameraThere,
+    TalkCameraFour,
+    TalkCameraError,
 }
 
 public class SceneController 
@@ -38,7 +44,7 @@ public class SceneController
     public static TerrainController TerrainController { get; set; }
     public bool InitScene = false;
     public bool InitSceneObject = false;
-
+    public float Progress { get; private set; }
     SceneData CurSceneData;
     GameObject playCutsceneObj;
     GameObject cameraObj;
@@ -138,10 +144,30 @@ public class SceneController
         {
             childController = new ArtisticController();
         }
+
+        if (ImageSelfController.Name.Equals(sceneData.name))
+        {
+            childController = new ImageSelfController();
+        }
+
+        if (CoverSongController.Name.Equals(sceneData.name))
+        {
+            childController = new CoverSongController();
+        }
+        if (EqualityController.Name.Equals(sceneData.name))
+        {
+            childController = new EqualityController();
+        }
+        if (DemocracyController.Name.Equals(sceneData.name))
+        {
+            childController = new DemocracyController();
+        }
     }
 
     public void Close()
     {
+        Progress = 0;
+        if (childController != null) childController.Close();
         childController = null;
         UIMng.Instance.ConcealUI(UIType.MemoryWnd);
         UIMng.Instance.ConcealUI(UIType.LeftDialogueWnd);
@@ -163,6 +189,18 @@ public class SceneController
 
     public void Start()
     {
+        TerrainController terrainController = null;
+        Scene scene = SceneManager.GetActiveScene();
+        GameObject[] gameObjects = scene.GetRootGameObjects();
+
+        GameObject root = null;
+        for (int i = 0; i < gameObjects.Length; i++)
+        {
+            if ("Root".Equals(gameObjects[i].name))
+            {
+                root = gameObjects[i];
+            }
+        }
         if (cameraObj != null) GameObject.DestroyImmediate(cameraObj);
         cameraObj = newCameraObj;
         if (cameraObj != null)
@@ -175,14 +213,21 @@ public class SceneController
         for (int i = 0; i < CurSceneData.datas.Count; i++)
         {
             assetObject = SceneMng.GetInstance().GetSceneAssetObject(CurSceneData.datas[i].Id);
-            if (assetObject != null) assetObject.Start();
+            if (assetObject != null) assetObject.Start(root.transform);
         }
+
+        terrainController = root.GetComponent<TerrainController>();
+        if (terrainController == null)
+        {
+            terrainController = root.AddComponent<TerrainController>();
+        }
+        TerrainController = terrainController;
 
         SceneAssetObject sceneAsset = SceneMng.GetInstance().GetSceneAssetObject(1);
         CameraMng.GetInstance().InitPlayer(sceneAsset.Tran);
         sceneAsset.Tran.gameObject.SetActive(false);
+        if (childController != null) childController.Init();
 
-        if(childController != null) childController.Init();
         UIMng.Instance.ConcealUI(UIType.SelectPlotWnd);
         UIMng.Instance.ConcealUI(UIType.LoadingWnd);
         UIMng.Instance.OpenUI(UIType.NONE);
@@ -247,7 +292,8 @@ public class SceneController
 
     void OnSceneLoaded(float progress)
     {
-        if(progress >= 1)
+        Progress = progress;
+        if (progress >= 1)
         {
             SceneMng.GetInstance().OnSceneLoadProgress -= OnSceneLoaded;
             loadNum++;
@@ -260,6 +306,11 @@ public class ChildController
     public State GetState { get; set; }
 
     public virtual void Init()
+    {
+
+    }
+
+    public virtual void Close()
     {
 
     }
@@ -405,6 +456,11 @@ public class ThreeSongsController : ChildController
         InputManager.GetInstance().AddClickEventListener(OnClickEvent);
     }
 
+    public override void Close()
+    {
+        base.Close();
+        InputManager.GetInstance().RemoveClickEventListener(OnClickEvent);
+    }
     public override void ToState(State state, OnStateEndDelegate onStateEnd)
     {
         base.ToState(state, onStateEnd);
@@ -469,7 +525,7 @@ public class ThreeSongsController : ChildController
 
     void EnterEvent(string name)
     {
-        if (!name.Contains("Book")) return;
+        if (!name.Contains("book")) return;
         string[] strs = name.Split('_');
         int id = 0;
         if(strs.Length > 1)int.TryParse(strs[1],out id);
@@ -507,10 +563,15 @@ public class ThreePictureController : ChildController
         InputManager.GetInstance().AddClickEventListener(OnClickEvent);
     }
 
+    public override void Close()
+    {
+        base.Close();
+        InputManager.GetInstance().RemoveClickEventListener(OnClickEvent);
+    }
     void EnterEvent(string name)
     {
         Debug.Log(name);
-        if (!name.Contains("Picture")) return;
+        if (!name.Contains("picture")) return;
         string[] strs = name.Split('_');
         int id = 0;
         if (strs.Length > 1) int.TryParse(strs[1], out id);

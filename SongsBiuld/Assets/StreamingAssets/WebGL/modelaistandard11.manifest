@@ -1,0 +1,22 @@
+ManifestFileVersion: 0
+CRC: 3251636259
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: daf59145c992cc16d13b031fda9aa10a
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: fe397485c3cec1106b49e9ff95e8f8a2
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+Assets:
+- "Assets/\u534E\u5179\u534E\u65AF/\u9676\u6E0A\u660E/Materials/model_aiStandard11.mat"
+Dependencies:
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/shushengnormal
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/shushengcolor

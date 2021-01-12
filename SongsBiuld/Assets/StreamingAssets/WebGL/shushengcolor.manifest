@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 1175912381
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: da501d13150f5f95cc654f93d76d6eb1
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: f19fbf085e00d23fbc8d6cf7b345590b
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- "Assets/\u534E\u5179\u534E\u65AF/\u9676\u6E0A\u660E/ShuSheng_Color.jpg"
+Dependencies: []

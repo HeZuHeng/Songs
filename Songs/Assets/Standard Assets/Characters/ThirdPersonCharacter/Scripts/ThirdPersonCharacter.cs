@@ -213,7 +213,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			if (Time.deltaTime > 0 && m_ForwardAmount >= 0.6f)
 			{
 				float speed = 0.05f;
-				if (Application.platform == RuntimePlatform.WebGLPlayer)
+				if (Application.platform != RuntimePlatform.WebGLPlayer)
                 {
 					speed = 0.12f;
 				}

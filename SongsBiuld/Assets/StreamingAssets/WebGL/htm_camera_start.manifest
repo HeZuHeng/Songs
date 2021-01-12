@@ -1,0 +1,33 @@
+ManifestFileVersion: 0
+CRC: 841501474
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 4480f741a62e9e17be3a596b562473c5
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: a1f94ff1e7375976765472160eb2753d
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 20
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 81
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 8a3bdb2cd68f901469e7cc149151eb49, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 124
+  Script: {instanceID: 0}
+Assets:
+- "Assets/Resources/\u60E0\u7279\u66FC\u573A\u666F\u6444\u50CF\u673A/htm_Camera_start.prefab"
+Dependencies:
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/lensdirt01

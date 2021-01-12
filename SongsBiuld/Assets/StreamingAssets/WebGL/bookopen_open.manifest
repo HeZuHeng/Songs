@@ -1,0 +1,33 @@
+ManifestFileVersion: 0
+CRC: 3476841151
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 5c995ff8ac7b7a0045eb8826bb7bf4a9
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: a2da3533e08a98a00dc79b7c54e9c555
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 90
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 137
+  Script: {instanceID: 0}
+Assets:
+- Assets/Resources/item/BookOpen_Open.prefab
+Dependencies:
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/01default

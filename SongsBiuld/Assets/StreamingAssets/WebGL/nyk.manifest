@@ -1,0 +1,50 @@
+ManifestFileVersion: 0
+CRC: 938415819
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: f0c37d1d22bec951cdbd48ba4da1620c
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 4ebc59422ee913146204999cfce2b5cc
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 90
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 136
+  Script: {instanceID: 0}
+- Class: 137
+  Script: {instanceID: 0}
+Assets:
+- Assets/Resources/NYK.prefab
+Dependencies:
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/beltblack
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/pantsdarkgrey
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/mrllinlash21007
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/sockswhite
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/leatherblack
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/jessemouth1005
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/blazerdarkgrey
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/fwsacoleeyes061007
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/shirtblue
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/jessearms1004
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/hairsky108
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/tie03
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/blazerbadge02
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/defaultmaterial
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/modelmodeleyemoisture
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/modelmodeleyelets

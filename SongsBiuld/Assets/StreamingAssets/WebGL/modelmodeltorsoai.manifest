@@ -1,0 +1,40 @@
+ManifestFileVersion: 0
+CRC: 4190518166
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: a6987c86acefaba4c1fd03f14b1713c6
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 5ceed6cd6f87ee278dbc687275d256e3
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 137
+  Script: {instanceID: 0}
+Assets:
+- "Assets/\u534E\u5179\u534E\u65AF/\u5973\u5B66\u751F\u4EBA\u7269/nvYK-talk.fbx"
+Dependencies:
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/mrllinedef1007
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/mrllinface1001
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/mrllinlash21007
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/hairkisaragi
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/g3fhoseopaqueblack
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/skirtg3fplaidred
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/tie07
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/blazerdarkgrey
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/shirtblue
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/mrllintorsoa1002
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/flatsdiffuse
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/mrllinarms1004
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/blazerbadge02
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/modelmodeleyemoisture

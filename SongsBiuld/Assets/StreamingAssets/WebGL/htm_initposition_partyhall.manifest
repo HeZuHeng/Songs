@@ -1,0 +1,20 @@
+ManifestFileVersion: 0
+CRC: 1226392431
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 6205e222d00b5827d7f02e06a650c5a4
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 85b0f9bb494a05cfc0c2741ff84340d0
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 136
+  Script: {instanceID: 0}
+Assets:
+- "Assets/Resources/\u60E0\u7279\u66FC\u573A\u666F\u6444\u50CF\u673A/htm_InitPosition_partyhall.prefab"
+Dependencies: []

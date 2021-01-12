@@ -30,7 +30,27 @@ ModelImporter:
     4300004: 02
     4300006: 01
     2186277476908879412: ImportLogs
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 09 - Default
+    second: {fileID: 2100000, guid: 976e6dd0f9c2e0e468d11c2686403304, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #27'
+    second: {fileID: 2100000, guid: 504fa5f568dcb774381642f09130050e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #28'
+    second: {fileID: 2100000, guid: 0082ad587bb342a4e90a886243b95de3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #29'
+    second: {fileID: 2100000, guid: 9b04a7e7e69db7e438e2c1ef25fffcc3, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -58,15 +78,15 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
     globalScale: 1
-    meshCompression: 0
+    meshCompression: 3
     addColliders: 0
     useSRGBMaterialColor: 1
     importVisibility: 1
-    importBlendShapes: 1
+    importBlendShapes: 0
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
@@ -92,7 +112,7 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  importAnimation: 1
+  importAnimation: 0
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2

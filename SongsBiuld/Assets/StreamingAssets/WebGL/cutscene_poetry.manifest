@@ -1,0 +1,34 @@
+ManifestFileVersion: 0
+CRC: 1424152054
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: e593d0aa469f40b8e124cb77192ba0cf
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 4cb291c30e7d1e7bc7d8f047cf4c7825
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 20
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 69f47b944f3657d4ba881070bf2a5df5, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 2fa33787113f32d46a7764fa0670964b, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 06f3e2b7c54761e4293bc6878e935010, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 7e746b3982d5fca4d947c554d2d141ad, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 294ea5bada9da5d43b931ccea817a3dd, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: bdc8b61f12029504c9f82940d8937473, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+Assets:
+- Assets/Resources/cutscene/Cutscene_poetry.prefab
+Dependencies: []

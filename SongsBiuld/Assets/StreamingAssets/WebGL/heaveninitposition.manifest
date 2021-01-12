@@ -1,0 +1,18 @@
+ManifestFileVersion: 0
+CRC: 2140780354
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 4fb701797bee109cf191d1f1cf53b061
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 27295f96fcdc2b917bd061e8817c7e02
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+Assets:
+- "Assets/Resources/\u5929\u5802\u573A\u666F/HeavenInitPosition.prefab"
+Dependencies: []

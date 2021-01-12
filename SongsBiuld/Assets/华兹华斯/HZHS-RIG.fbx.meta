@@ -1546,12 +1546,42 @@ ModelImporter:
     13700010: model:TOOTH1
     13700012: model:TOUFA
     13700014: model:YIFU1
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: model_blinn1
+    second: {fileID: 2100000, guid: 0b3ab849ebd833541a02a0b959f06176, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: model_hzhs_1002_mtl
+    second: {fileID: 2100000, guid: 0f8fbc278bfe3de40ad251ec19eff9df, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: model_hzhs_1003_mtl
+    second: {fileID: 2100000, guid: 9e2041fa855132a4885f4a7c379943bf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: model_hzhs_1004_mtl
+    second: {fileID: 2100000, guid: 682888b9a908f1642a8e9fd96910c1c4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: model_hzhs_1005_mtl
+    second: {fileID: 2100000, guid: e1cb6ca50c102b241adf03653bdf62f5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: model_hzhs_1006_mtl
+    second: {fileID: 2100000, guid: 1caee0bd7afbc5e48afc8ac44e41177f, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
-    materialLocation: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -1566,7 +1596,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -1574,15 +1604,15 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
     globalScale: 1
-    meshCompression: 0
+    meshCompression: 3
     addColliders: 0
     useSRGBMaterialColor: 1
     importVisibility: 1
-    importBlendShapes: 1
+    importBlendShapes: 0
     importCameras: 1
     importLights: 1
     swapUVChannels: 0

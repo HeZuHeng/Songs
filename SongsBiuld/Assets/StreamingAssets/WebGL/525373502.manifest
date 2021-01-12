@@ -1,0 +1,23 @@
+ManifestFileVersion: 0
+CRC: 3275983191
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 310a9651d596190c4a14cfe7a5cb5ac0
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: fe397485c3cec1106b49e9ff95e8f8a2
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+Assets:
+- "Assets/\u534E\u5179\u534E\u65AF/\u4E66\u623F/Materials/\u4E09\u672C\u4E66_Material
+  _2125640483_BaseColor.mat"
+- "Assets/\u534E\u5179\u534E\u65AF/\u4E66\u623F/Book_01.fbm/\u4E09\u672C\u4E66_Material
+  _2125640483_BaseColor.png"
+Dependencies: []

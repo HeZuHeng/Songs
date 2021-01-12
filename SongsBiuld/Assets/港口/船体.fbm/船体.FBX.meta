@@ -251,27 +251,27 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: 222
-    second: {fileID: 2100000, guid: cbf2d1665e8b19148b3224fe1dea9e30, type: 2}
+    second: {fileID: 2100000, guid: 03bfcf2ba9356b343ab1bf1585543feb, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: 4 - Default
-    second: {fileID: 2100000, guid: e141ce12965c58148bf5ad93ab73a82f, type: 2}
+    second: {fileID: 2100000, guid: ffe38d8b89554774ca162a99a1fec89c, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: 'Material #264'
-    second: {fileID: 2100000, guid: b6269502bde21ec4b94ca728f8909cca, type: 2}
+    second: {fileID: 2100000, guid: a9b0a09ae131bc846b3006cb9f1ddd54, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: 'Material #2941214'
-    second: {fileID: 2100000, guid: 099494d6b342d724483c6eae3bc324a4, type: 2}
+    second: {fileID: 2100000, guid: e2c03a5145fceae408a9abe464673126, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: sail
-    second: {fileID: 2100000, guid: 2d9f868d12ab9ab4ea9432ee61a2cdf8, type: 2}
+    second: {fileID: 2100000, guid: 9303365f67fe55d4596705d65ac0de56, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -299,15 +299,15 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
     globalScale: 1
-    meshCompression: 0
+    meshCompression: 3
     addColliders: 0
     useSRGBMaterialColor: 1
     importVisibility: 1
-    importBlendShapes: 1
+    importBlendShapes: 0
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
@@ -333,7 +333,7 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  importAnimation: 1
+  importAnimation: 0
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2
@@ -355,5 +355,5 @@ ModelImporter:
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
-  assetBundleName: 
+  assetBundleName: object824
   assetBundleVariant: 

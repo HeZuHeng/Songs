@@ -128,4 +128,125 @@
     <答案解析>The journey in Wordsworth’s former residence is over. Hope you have a good memory. And please start your next journey!
 	\n您好，今天在华兹华斯故居游览完毕，希望你在这次旅程中留下美好回忆，请开启下一段旅程。</答案解析>
   </QuestionBankDatas>
+  <QuestionBankDatas>
+    <ID>10</ID>
+    <图标></图标>
+    <题头>Sure. There are two or more explanations: the first______, the second______. （当然！有两种或者更多的解释。第一是____，第二是____）</题头>
+    <阅读></阅读>
+    <解析></解析>
+    <选择>1. American’s identity;</选择>
+	<选择>2. Life Circle (The seven days in Bible)</选择>
+	<答案>0</答案>
+	<答案>1</答案>
+    <答案解析>If you have other explanations, please write them down here. If not, click the button to continue the experiment. (如果你有其他的解释，把它写在下方，如果没有，请跳过继续实验。)</答案解析>
+  </QuestionBankDatas>
+  <QuestionBankDatas>
+    <ID>11</ID>
+    <图标></图标>
+    <题头>I celebrate _____, and sing myself, </题头>
+    <阅读>Please choose the right words to fill the blanks. ( 请选择正确的词来还原诗行) </阅读>
+    <解析></解析>
+    <选择>me</选择>
+	<选择>parents</选择>
+	<选择>energy</选择>
+	<选择>myself</选择>
+	<选择>you </选择>
+	<答案>3</答案>
+    <答案解析>Whitman himself</答案解析>
+  </QuestionBankDatas>
+  <QuestionBankDatas>
+    <ID>12</ID>
+    <图标></图标>
+    <题头>For every atom belonging to___ as good belongs to ___. </题头>
+    <阅读>Please choose the right words to fill the blanks. ( 请选择正确的词来还原诗行)</阅读>
+    <解析></解析>
+    <选择>me</选择>
+	<选择>parents</选择>
+	<选择>energy</选择>
+	<选择>myself</选择>
+	<选择>you </选择>
+	<答案>0</答案>
+	<答案>4</答案>
+    <答案解析>the close relationship of you and me. (你和我的密切关系)</答案解析>
+  </QuestionBankDatas>
+  <QuestionBankDatas>
+    <ID>13</ID>
+    <图标></图标>
+    <题头>Born here of parents born here from ___the same, and their parents the same， </题头>
+    <阅读>Please choose the right words to fill the blanks. ( 请选择正确的词来还原诗行)</阅读>
+    <解析></解析>
+    <选择>me</选择>
+	<选择>parents</选择>
+	<选择>energy</选择>
+	<选择>myself</选择>
+	<选择>you </选择>
+	<答案>1</答案>
+    <答案解析>The American fellow, to be an American poet. （美国同胞，成为一个美国诗人。）</答案解析>
+  </QuestionBankDatas>
+  <QuestionBankDatas>
+    <ID>14</ID>
+    <图标></图标>
+    <题头>Nature without check with original ________.  </题头>
+    <阅读>Please choose the right words to fill the blanks. ( 请选择正确的词来还原诗行)</阅读>
+    <解析></解析>
+    <选择>me</选择>
+	<选择>parents</选择>
+	<选择>energy</选择>
+	<选择>myself</选择>
+	<选择>you </选择>
+	<答案>2</答案>
+    <答案解析>the nature, the universal vitality.（自然和宇宙生命力）</答案解析>
+  </QuestionBankDatas>
+  <QuestionBankDatas>
+    <ID>15</ID>
+    <图标></图标>
+    <题头>Concerning I, What connotation do you find? Write it down please. （你认为惠特曼是自我还有什么含义呢？请把你的答案写在下面。） </题头>
+    <阅读></阅读>
+    <解析></解析>
+  </QuestionBankDatas>
+  <QuestionBankDatas>
+    <ID>16</ID>
+    <图标></图标>
+    <题头>There are 39“I”in“Tian Gou”, what’s the connotation of“I”？(   )【在该诗中，“我”出现了39次，该词的内涵是什么呢？】</题头>
+    <阅读></阅读>
+	<选择>A.The lighting（闪电）</选择>
+	<选择>B.Guo Moruo（郭沫若)</选择>
+	<选择>C.Human beings（人类）</选择>
+	<选择>D.The ship（船只） </选择>
+	<答案>1</答案>
+	<答案>2</答案>
+  </QuestionBankDatas>
+  <QuestionBankDatas>
+    <ID>17</ID>
+    <图标></图标>
+    <题头>This line tells that every life, including human beings, animals and plants, originates from the same energy that makes every creature equal.It implies a spirit of________【该诗行表示：每一个生命，无论是人类，动物或者植物都来自于能量，正是能量使得万物平等。诗行体现了_______精神】</题头>
+    <阅读></阅读>
+	<选择>A.democracy</选择>
+	<选择>B.monarchy</选择>
+	<答案>0</答案>
+  </QuestionBankDatas>
+  <QuestionBankDatas>
+    <ID>18</ID>
+    <图标></图标>
+    <题头>For Whitman, men and women, the white and the black, the rich and the poor, the honoured and the despised are equal. Everyone is different. The view of democracy, advocated by Whitman, highlights the role of _______.</题头>
+    <阅读></阅读>
+	<选择>A.the individual</选择>
+	<选择>B.the collective</选择>
+	<答案>0</答案>
+  </QuestionBankDatas>
+  <QuestionBankDatas>
+    <ID>19</ID>
+    <图标></图标>
+    <题头>“Light”and “Energy” stand for a kind of collective power. Therefore, Guo Moruo emphasizes the role of _________ in this poem.【“光”与“能量”代表了一种集体的力量，因此，郭沫若在这首诗中更加强调_________的力量】</题头>
+    <阅读></阅读>
+	<选择>A.the individual</选择>
+	<选择>B.the collective</选择>
+	<答案>1</答案>
+  </QuestionBankDatas>
+  <QuestionBankDatas>
+    <ID>19</ID>
+    <图标></图标>
+    <题头>The happy journey is about to end, what have you learned? Could you write a short passage of democracy? (about 50 words, Chinese or English ).【旅行将要结束，你学习到了什么？你能写一篇有关民主精神的小短文吗？50字左右，中英文皆可。】</题头>
+    <阅读></阅读>
+  </QuestionBankDatas>
 </QuestionBankConfig>

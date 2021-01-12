@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModelConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SceneDatas 场景="华兹华斯书房" 场景资源名="华兹华斯书房" />
+  <SceneDatas 场景="华兹华斯赏花" 场景资源名="华兹华斯赏花" />
+  <SceneDatas 场景="天堂场景" 场景资源名="天堂场景" />
+  <SceneDatas 场景="海岸" 场景资源名="海岸">
+    <ModelDatas Id="10000" 模型名="chuang_self" 模型路径="Root" 资源名="chuang_self" 默认显隐="true">
+      <position>
+        <x>127.2</x>
+        <y>62.2</y>
+        <z>654.3</z>
+      </position>
+      <eulerAngle>
+        <x>0</x>
+        <y>218.218979</y>
+        <z>0</z>
+      </eulerAngle>
+      <scale>
+        <x>1.00000048</x>
+        <y>1</y>
+        <z>1.00000048</z>
+      </scale>
+    </ModelDatas>
+    <ModelDatas Id="10001" 模型名="HTM" 模型路径="" 资源名="htm" 默认显隐="true">
+      <position>
+        <x>125.283</x>
+        <y>22.493</y>
+        <z>658.125</z>
+      </position>
+      <eulerAngle>
+        <x>-0</x>
+        <y>190</y>
+        <z>0</z>
+      </eulerAngle>
+      <scale>
+        <x>1.00000024</x>
+        <y>1</y>
+        <z>1.00000024</z>
+      </scale>
+    </ModelDatas>
+    <ModelDatas Id="10002" 模型名="gentle" 模型路径="" 资源名="gentle" 默认显隐="true">
+      <position>
+        <x>123.792</x>
+        <y>22.493</y>
+        <z>653.075</z>
+      </position>
+      <eulerAngle>
+        <x>-0</x>
+        <y>24.9999962</y>
+        <z>0</z>
+      </eulerAngle>
+      <scale>
+        <x>1</x>
+        <y>1</y>
+        <z>1</z>
+      </scale>
+    </ModelDatas>
+    <ModelDatas Id="10003" 模型名="Shower" 模型路径="" 资源名="shower" 默认显隐="true">
+      <position>
+        <x>124.44</x>
+        <y>26.77</y>
+        <z>647.79</z>
+      </position>
+      <eulerAngle>
+        <x>-0</x>
+        <y>215.9</y>
+        <z>0</z>
+      </eulerAngle>
+      <scale>
+        <x>1.00000024</x>
+        <y>1</y>
+        <z>1.00000024</z>
+      </scale>
+    </ModelDatas>
+    <ModelDatas Id="10004" 模型名="htm_Camera_Artistic" 模型路径="" 资源名="htm_camera_artistic" 默认显隐="true">
+      <position>
+        <x>123.24</x>
+        <y>24.135</y>
+        <z>659.685</z>
+      </position>
+      <eulerAngle>
+        <x>-0</x>
+        <y>148.699982</y>
+        <z>0</z>
+      </eulerAngle>
+      <scale>
+        <x>1.00000036</x>
+        <y>1</y>
+        <z>1.00000036</z>
+      </scale>
+    </ModelDatas>
+  </SceneDatas>
+  <SceneDatas 场景="港口" 场景资源名="港口" />
+  <SceneDatas 场景="陶渊明赏花" 场景资源名="陶渊明赏花" />
+</ModelConfig>

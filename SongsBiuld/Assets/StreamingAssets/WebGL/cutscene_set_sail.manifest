@@ -1,0 +1,32 @@
+ManifestFileVersion: 0
+CRC: 2615618838
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: eff080866e1b6089492ad281d8c76eed
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 43ec6f331afcc3f6349956926c0bf29b
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 20
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 69f47b944f3657d4ba881070bf2a5df5, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 2fa33787113f32d46a7764fa0670964b, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 7e746b3982d5fca4d947c554d2d141ad, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 294ea5bada9da5d43b931ccea817a3dd, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: bdc8b61f12029504c9f82940d8937473, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+Assets:
+- Assets/Resources/cutscene/Cutscene_set_sail.prefab
+Dependencies: []

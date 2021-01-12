@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 1625410286
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: a759689db592cf1bafc80839a3d90aa1
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: f19fbf085e00d23fbc8d6cf7b345590b
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- "Assets/\u534E\u5179\u534E\u65AF/\u5973\u5B66\u751F\u4EBA\u7269/MRLLinArmsN_1004.jpg"
+Dependencies: []

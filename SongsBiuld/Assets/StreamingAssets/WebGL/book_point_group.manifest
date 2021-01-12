@@ -1,0 +1,18 @@
+ManifestFileVersion: 0
+CRC: 1401377934
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 5cec90389be3715a0360f0fb5f2a02e8
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 27295f96fcdc2b917bd061e8817c7e02
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+Assets:
+- Assets/Resources/item/book_point_group.prefab
+Dependencies: []

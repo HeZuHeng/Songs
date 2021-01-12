@@ -15,7 +15,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: 01 - Default
-    second: {fileID: 2100000, guid: 31aa8f6836c63974e91e2a0318a50731, type: 2}
+    second: {fileID: 2100000, guid: 4acdd3aea37fb1b4c91ef9da8204a03d, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -43,15 +43,15 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
     globalScale: 1
-    meshCompression: 0
+    meshCompression: 3
     addColliders: 0
     useSRGBMaterialColor: 1
     importVisibility: 1
-    importBlendShapes: 1
+    importBlendShapes: 0
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
@@ -99,5 +99,5 @@ ModelImporter:
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
-  assetBundleName: 
+  assetBundleName: 2115384050
   assetBundleVariant: 

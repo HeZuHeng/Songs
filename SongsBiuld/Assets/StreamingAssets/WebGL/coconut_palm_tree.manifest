@@ -1,0 +1,67 @@
+ManifestFileVersion: 0
+CRC: 102795863
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 9bdeaf8da3a24a9bf6eebab7fc765372
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 909abd7abc6a30d8227b1d14a9ff21bd
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 12106, guid: 0000000000000000e000000000000000, type: 0}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 136
+  Script: {instanceID: 0}
+- Class: 193
+  Script: {instanceID: 0}
+Assets:
+- Assets/Coconut Palm Tree Pack/Materials/Parts/Coconut_Palm_Tree_Brush.mat
+- Assets/Coconut Palm Tree Pack/Textures/Coconut_Palm_Tree_diffuse.psd
+- Assets/Coconut Palm Tree Pack/Textures/Parts/Coconut_Palm_Tree_Branch2_diffuse.psd
+- Assets/Coconut Palm Tree Pack/Textures/Parts/Frond_Stem_gloss.psd
+- Assets/Coconut Palm Tree Pack/Textures/Parts/Palm_Brush_trans.psd
+- Assets/Coconut Palm Tree Pack/Shaders/TFP_treecreator/TFPTreeCreatorLeavesOptimized.shader
+- Assets/Coconut Palm Tree Pack/Textures/Parts/Coconut_Palm_Tree_Branch2_gloss.png
+- Assets/Coconut Palm Tree Pack/Textures/Coconut_Palm_Tree_AFS.psd
+- Assets/Coconut Palm Tree Pack/Textures/Parts/Coconut_Palm_Tree_Branch1_shadowoffset.png
+- Assets/Coconut Palm Tree Pack/Textures/Parts/Coconut_Palm_Tree_Branch2_translucency.png
+- Assets/Coconut Palm Tree Pack/Textures/Parts/Coconut_Palm_Tree_Branch2_normal.png
+- Assets/Coconut Palm Tree Pack/Textures/Parts/Palm_Brush_normal.tif
+- Assets/Coconut Palm Tree Pack/Textures/Parts/Coconut_Palm_Tree_Bark_normal.tif
+- Assets/Coconut Palm Tree Pack/Textures/Parts/Palm_Brush_diffuse.psd
+- Assets/Coconut Palm Tree Pack/Materials/Parts/Coconut_Palm_Tree_Bark3.mat
+- Assets/Coconut Palm Tree Pack/Textures/Parts/Frond_Stem_normal.psd
+- Assets/Coconut Palm Tree Pack/Shaders/TFP_treecreator/TFPTreeCreatorBarkOptimized.shader
+- Assets/Coconut Palm Tree Pack/Materials/Parts/Coconut_Palm_Tree_Frond_Stem.mat
+- Assets/Coconut Palm Tree Pack/Textures/Coconut_Palm_Tree_transgloss.psd
+- Assets/Coconut Palm Tree Pack/Materials/Parts/Coconut_Palm_Tree_Leaf2.mat
+- Assets/Coconut Palm Tree Pack/Materials/leaf.mat
+- Assets/Coconut Palm Tree Pack/Textures/Coconut_Palm_Tree_normalspec_bark.psd
+- Assets/Coconut Palm Tree Pack/Materials/bark.mat
+- Assets/Coconut Palm Tree Pack/Textures/Parts/Palm_Brush_gloss.png
+- Assets/Coconut Palm Tree Pack/Prefabs/Coconut_Palm_Tree01.prefab
+- Assets/Coconut Palm Tree Pack/Textures/Parts/Coconut_Palm_Tree_Bark_gloss.tif
+- Assets/Coconut Palm Tree Pack/Prefabs/TreeCreatorEditable/Coconut_Palm_Tree01.prefab
+- Assets/Coconut Palm Tree Pack/Textures/Parts/Coconut_Palm_Tree_Bark_diffuse.tif
+- Assets/Coconut Palm Tree Pack/Textures/Coconut_Palm_Tree_normalspec.psd
+- Assets/Coconut Palm Tree Pack/Textures/Parts/Frond_Stem_diffuse.psd
+Dependencies: []

@@ -1,4 +1,5 @@
-﻿using MREngine;
+﻿using BuildUtil;
+using MREngine;
 using SpaceSimulation;
 using System;
 using System.Collections;
@@ -49,7 +50,7 @@ public class SceneAssetObject : IAssetObject
         TargetId = Data.Id;
         Position = Data.position;
         Euler = Data.eulerAngle;
-        Scale = Vector3.one;
+        Scale = data.scale;
         URL = Data.assetName;
         IsDone = false;
         LoadTask = GameDataManager.GetInstance().GetGameTask(URL);
@@ -92,9 +93,24 @@ public class SceneAssetObject : IAssetObject
         IsDone = true;
     }
 
-    public void Start()
+    public void Start(Transform parent)
     {
-        if(Tran != null) Tran.gameObject.SetActive(Data.active);
+        if (parent != null)
+        {
+            if (string.IsNullOrEmpty(Data.parentPath) || parent.Find(Data.parentPath) == null)
+            {
+                Tran.SetParent(parent);
+            }
+            else
+            {
+                Tran.SetParent(parent.Find(Data.parentPath));
+            }
+        }
+        Tran.name = Name;
+        Tran.position = Position;
+        Tran.eulerAngles = Euler;
+        Tran.localScale = Scale == Vector3.zero ? Vector3.one : Scale;
+        if (Tran != null) Tran.gameObject.SetActive(Data.active);
     }
 
     public override void InitAssetObject(Transform asset)
@@ -103,9 +119,9 @@ public class SceneAssetObject : IAssetObject
 
         base.InitAssetObject(asset);
         if (Tran == null) return;
-        MAnimator = Tran.GetComponent<Animator>();
+        MAnimator = Tran.GetComponentInChildren<Animator>();
         Col = Tran.GetComponentInChildren<Collider>();
-
+        if(MAnimator != null) MAnimator.enabled = MAnimator.parameterCount != 0;
         Tran.gameObject.SetActive(false);
     }
 
@@ -126,6 +142,7 @@ public class SceneAssetObject : IAssetObject
     {
         if (MAnimator != null)
         {
+            MAnimator.enabled = true;
             AnimationName = aName.ToLower();
             MAnimator.SetBool(AnimationName, val);
             MAnimator.speed = speed;

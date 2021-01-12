@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 2093661955
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: ea8ffc550bb2cd78cd5361555ffc8043
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: f19fbf085e00d23fbc8d6cf7b345590b
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- "Assets/\u534E\u5179\u534E\u65AF/\u9676\u6E0A\u660E/MaoZi_Color.jpg"
+Dependencies: []

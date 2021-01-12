@@ -1,0 +1,21 @@
+ManifestFileVersion: 0
+CRC: 1656256826
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 75a4d514187ca309bff7df4f1d2aeff0
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: fe397485c3cec1106b49e9ff95e8f8a2
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+Assets:
+- "Assets/\u5927\u8239/\u8239.fbm/12.jpg"
+- "Assets/\u5927\u8239/Materials/12.mat"
+Dependencies: []

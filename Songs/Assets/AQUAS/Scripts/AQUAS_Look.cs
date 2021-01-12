@@ -115,8 +115,8 @@ namespace AQUAS
             {
                 parent.Rotate(0f, rotAverageX, 0f, Space.World);
                 float x = _playerRootT.localEulerAngles.x > 180 ? _playerRootT.localEulerAngles.x - 360 : _playerRootT.localEulerAngles.x;
-                if (rotAverageY > 0 && x < 0) return;
-                if (rotAverageY < 0 && x > 70) return;
+                if (rotAverageY > 0 && x < -15) return;
+                if (rotAverageY < -15 && x > 70) return;
                 _playerRootT.Rotate(-rotAverageY, 0f, 0f, Space.Self);
                 ProcessMode();
             }

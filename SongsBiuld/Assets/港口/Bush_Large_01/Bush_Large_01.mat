@@ -8,14 +8,13 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Bush_Large_01
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: _ALPHATEST_ON _NORMALMAP
+  m_Shader: {fileID: 54, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: _ALPHABLEND_ON _NORMALMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2450
-  stringTagMap:
-    RenderType: TransparentCutout
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
@@ -154,7 +153,7 @@ Material:
     - _Cutoff: 0.5
     - _DetailMode: 0
     - _DetailNormalMapScale: 1
-    - _DstBlend: 0
+    - _DstBlend: 10
     - _EdgeFlutterInfluence: 0.25
     - _EnableAdvancedEdgeBending: 0
     - _EnableLeafTurbulence: 0
@@ -171,7 +170,7 @@ Material:
     - _Lum: 1
     - _Metallic: 0
     - _Metallic_Power: 0.5
-    - _Mode: 1
+    - _Mode: 2
     - _MySliderValue: 2.5
     - _NormalLerp: 1
     - _NormalScale: 0.5
@@ -191,7 +190,7 @@ Material:
     - _Specular: 0
     - _SpecularHighlights: 1
     - _SquashAmount: 1
-    - _SrcBlend: 1
+    - _SrcBlend: 5
     - _SwapUVS: 0
     - _TL: 0
     - _TimeOffset: 0.25
@@ -209,7 +208,7 @@ Material:
     - _Wind_Frequency: 0
     - _Wind_Ondulation: 0.5
     - _Wind_Power: 0
-    - _ZWrite: 1
+    - _ZWrite: 0
     - __dirty: 1
     m_Colors:
     - _AdvancedEdgeBending: {r: 0.1, g: 5, b: 0, a: 0}

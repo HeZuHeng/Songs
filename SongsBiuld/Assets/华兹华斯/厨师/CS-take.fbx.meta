@@ -352,7 +352,62 @@ ModelImporter:
     13700000: geo
     13700002: polySurface180
     2186277476908879412: ImportLogs
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SpatulaBlinn
+    second: {fileID: 2100000, guid: f63a3e6d935182e478675e16758af1c3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: eye
+    second: {fileID: 2100000, guid: 1bed224814921194b9fd4f033c89c4e9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: face
+    second: {fileID: 2100000, guid: 81403b86af4b28149a014ff57209a9e1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fushi
+    second: {fileID: 2100000, guid: 530a1ba301e375b4c904bdfa029bc999, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: kouzi
+    second: {fileID: 2100000, guid: 9800b8c485c969540a27a22b32ac77a6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: kuzi
+    second: {fileID: 2100000, guid: ec28d55692280c14f95731fee2075ba2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 5a97831f788dbbc448d44d18ca86cf4f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: meimao
+    second: {fileID: 2100000, guid: ad587d9f7afcd2442883f04812fd7870, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: shou
+    second: {fileID: 2100000, guid: da39d5ad7696f9b4ebcac8dc705cf3dc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: shoubi
+    second: {fileID: 2100000, guid: 34e8dd05326696d4987be0495be3b931, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: xiezi
+    second: {fileID: 2100000, guid: 78b3f334f284b2e47ab55dc52023257e, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -372,7 +427,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -380,15 +435,15 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
     globalScale: 1
-    meshCompression: 0
+    meshCompression: 3
     addColliders: 0
     useSRGBMaterialColor: 1
     importVisibility: 1
-    importBlendShapes: 1
+    importBlendShapes: 0
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
@@ -436,5 +491,5 @@ ModelImporter:
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
-  assetBundleName: 
+  assetBundleName: default1
   assetBundleVariant: 

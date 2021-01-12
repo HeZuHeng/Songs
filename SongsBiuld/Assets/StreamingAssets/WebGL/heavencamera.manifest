@@ -1,0 +1,24 @@
+ManifestFileVersion: 0
+CRC: 1333034611
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 177947d07e4abdc6ee8ce730fbce804b
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 25b6c959e67bec5b726189ac515478f0
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 20
+  Script: {instanceID: 0}
+- Class: 81
+  Script: {instanceID: 0}
+- Class: 124
+  Script: {instanceID: 0}
+Assets:
+- "Assets/Resources/\u5929\u5802\u573A\u666F/HeavenCamera.prefab"
+Dependencies: []

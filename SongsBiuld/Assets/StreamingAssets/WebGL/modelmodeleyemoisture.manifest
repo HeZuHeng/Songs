@@ -1,0 +1,19 @@
+ManifestFileVersion: 0
+CRC: 2666244109
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 664406ba26e8773bd2e6ef301bb3c771
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 51a16e16d5113854a16091e54ae5bb0d
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+Assets:
+- "Assets/\u534E\u5179\u534E\u65AF/\u5973\u5B66\u751F\u4EBA\u7269/Materials/model_model_EyeMoisture.mat"
+- "Assets/\u534E\u5179\u534E\u65AF/\u7537\u5B66\u751F\u4EBA\u7269/Materials/model_model_EyeMoisture.mat"
+Dependencies: []

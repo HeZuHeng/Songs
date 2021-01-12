@@ -29,7 +29,22 @@ ModelImporter:
     4300002: Archmodels_114_44_43
     4300004: "\u5B57\u6BCD"
     4300006: Archmodels_114_44_49
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 13 - Default
+    second: {fileID: 2100000, guid: 9a5b05b54f52a7a42bef758eda9bd792, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 23 - Default
+    second: {fileID: 2100000, guid: 34dbeabec5de80a47805fe5f862f58b9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u5B57\u6BCD"
+    second: {fileID: 2100000, guid: 4bb2f4025bf950a4aabc195922d3e007, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -57,15 +72,15 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
     globalScale: 1
-    meshCompression: 0
+    meshCompression: 3
     addColliders: 0
     useSRGBMaterialColor: 1
     importVisibility: 1
-    importBlendShapes: 1
+    importBlendShapes: 0
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
@@ -91,7 +106,7 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  importAnimation: 1
+  importAnimation: 0
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2
@@ -113,5 +128,5 @@ ModelImporter:
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
-  assetBundleName: 
+  assetBundleName: archmodels1144443
   assetBundleVariant: 

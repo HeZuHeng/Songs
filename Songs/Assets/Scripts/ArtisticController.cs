@@ -22,6 +22,11 @@ public class ArtisticController : ChildController
         InputManager.GetInstance().AddClickEventListener(OnClickEvent);
     }
 
+    public override void Close()
+    {
+        base.Close();
+        InputManager.GetInstance().RemoveClickEventListener(OnClickEvent);
+    }
     public override void ToState(State state, OnStateEndDelegate onStateEnd)
     {
         base.ToState(state, onStateEnd);

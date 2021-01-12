@@ -1,0 +1,21 @@
+ManifestFileVersion: 0
+CRC: 978006738
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: f61b6b25b86382ffb04bc8cdeac0f0ef
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: fe397485c3cec1106b49e9ff95e8f8a2
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+Assets:
+- "Assets/\u534E\u5179\u534E\u65AF/\u5973\u5B66\u751F\u4EBA\u7269/MRLLinTorsoA_1002.jpg"
+- "Assets/\u534E\u5179\u534E\u65AF/\u5973\u5B66\u751F\u4EBA\u7269/Materials/MRLLinTorsoA_1002.mat"
+Dependencies: []

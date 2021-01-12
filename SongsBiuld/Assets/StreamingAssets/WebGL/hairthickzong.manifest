@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 391073426
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 32d6676e74113165a9f8739d7c01f3d0
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: f19fbf085e00d23fbc8d6cf7b345590b
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- "Assets/\u534E\u5179\u534E\u65AF/\u9676\u6E0A\u660E/Hair_thick_Zong.png"
+Dependencies: []

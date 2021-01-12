@@ -6,12 +6,13 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Songs;
 using Slate;
+using BuildUtil;
 
 public class LoadingWnd : UIBase
 {
 	public Slider progressBar;
 	public Text lblStatus;
-
+    public float Progress { get; private set; }
     protected override void Awake()
     {
         base.Awake();
@@ -22,6 +23,7 @@ public class LoadingWnd : UIBase
 
     protected override void OnEnable()
     {
+        Progress = 0;
         progressBar.value = 0;
         lblStatus.text = Mathf.Round(0 * 100f) + "%";
         SceneData sceneData = SongsDataMng.GetInstance().GetSceneData;
@@ -33,6 +35,12 @@ public class LoadingWnd : UIBase
         }
         transform.SetAsLastSibling();
 	}
+
+    private void Update()
+    {
+       progressBar.value = (Progress + SceneController.GetInstance().Progress)/2f;
+       lblStatus.text = Mathf.Round(progressBar.value * 100f) + "%";
+    }
 
     protected override void OnDisable()
     {
@@ -47,21 +55,7 @@ public class LoadingWnd : UIBase
         lblStatus.text = "100%";
 
         SceneManager.SetActiveScene(scene);
-        TerrainController terrainController = null;
-        GameObject[] gameObjects = scene.GetRootGameObjects();
-
-        for (int i = 0; i < gameObjects.Length; i++)
-        {
-            if ("Root".Equals(gameObjects[i].name))
-            {
-                terrainController = gameObjects[i].GetComponent<TerrainController>();
-                if(terrainController == null)
-                {
-                    terrainController = gameObjects[i].AddComponent<TerrainController>();
-                }
-            }
-        }
-        SceneController.TerrainController = terrainController;
+        
         SceneController.GetInstance().InitScene = true;
     }
 
@@ -90,8 +84,8 @@ public class LoadingWnd : UIBase
             }
             else
             {
-                progressBar.value = progress;
-                lblStatus.text = Mathf.Round(progress * 100f) + "%";
+                Progress = progress;
+                
             }
         };
     }

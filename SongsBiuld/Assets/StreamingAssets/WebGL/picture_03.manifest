@@ -1,0 +1,98 @@
+ManifestFileVersion: 0
+CRC: 3812561022
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: ca35b66b17685426d4a4025ae2316a4d
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: eb75d30c62848672b19197d5782098ec
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 65
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 96c944b2f0b5e564a93cb072474facd3, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: c7da66f6d5d94ac43af988e2490a59bd, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+Assets:
+- Assets/Resources/item/picture_03.prefab
+Dependencies:
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/specialexesunoct03191817201038
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/620684263
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/12
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/490089157
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/bldvilla2a
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/1934068189
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/yumaobi
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/am153021color
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/1172576928
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/material25
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/material27
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/269777274
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/material26
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/1765282263
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/433260441
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/691568251
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/nf0011
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/blddoors1a
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/propbooks01mtbasecolor
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/archmodels55woodblack
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/371996901
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/13
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/rost01
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/276100423
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/archmodels5531blackplastic
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/114043713
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/monlmade
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/372034835
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/1583165708
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/1458588688
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/archmodels55woodwhite
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/noname
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/591656447
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/1611465506
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/propsmallprops1a
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/obvampirecandelsd
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/pianobasecolor
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/specialexesunoct03191817201035
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/propcabinets1a
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/material58
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/propbeds1a
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/specialexesunoct03191817201020
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/specialexesunoct03191817201043
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/specialexesunoct03191817201061
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/specialexesunoct03191817201032
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/specialexesunoct031918172010183
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/specialexesunoct031918172010257
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/material56
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/specialexesunoct031918172010138
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/specialexesunoct031918172010132
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/1692237745
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/specialexesunoct03191817201059
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/specialexesunoct03191817201073
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/specialexesunoct03191817201026
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/specialexesunoct03191817201029
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/591735546
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/villa2decowindowglassa
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/propsmallprops2a
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/specialexesunoct031918172010188
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/rug
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/specialexesunoct03191817201023
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/specialexesunoct03191817201031
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/specialexesunoct03191817201052
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/specialexesunoct031918172010187

@@ -1,0 +1,21 @@
+ManifestFileVersion: 0
+CRC: 1603421221
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: dd7c69d59778e6867a1f469d47729a32
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: fe397485c3cec1106b49e9ff95e8f8a2
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+Assets:
+- "Assets/\u5927\u8239/\u8239.fbm/Special.exe_Sun_Oct_03_19-18-17_2010_38.jpg"
+- "Assets/\u5927\u8239/Materials/Special.exe_Sun_Oct_03_19-18-17_2010_38.mat"
+Dependencies: []

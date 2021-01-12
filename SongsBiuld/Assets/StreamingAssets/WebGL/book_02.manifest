@@ -1,0 +1,36 @@
+ManifestFileVersion: 0
+CRC: 3891932082
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 6c374463652c8c557cbf9622f3a326b7
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: eb75d30c62848672b19197d5782098ec
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 65
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 96c944b2f0b5e564a93cb072474facd3, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: c7da66f6d5d94ac43af988e2490a59bd, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+Assets:
+- Assets/Resources/item/Book_02.prefab
+Dependencies:
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/720693215
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/2133967050

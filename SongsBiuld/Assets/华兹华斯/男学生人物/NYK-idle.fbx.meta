@@ -1583,12 +1583,92 @@ ModelImporter:
     13700020: model:model:Shoes
     13700022: model:model:Tie_
     13700024: model:model:UPTOOTH
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Default_Material
+    second: {fileID: 2100000, guid: 06e3d7c421fb6bf4ba8364972224a2af, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: model_model_Arms_ai
+    second: {fileID: 2100000, guid: ccbd90b2734b724499ccfabab3cf7a98, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: model_model_Badge1_ai
+    second: {fileID: 2100000, guid: 97649746b32b95c48a0c64393260180d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: model_model_Badge_ai
+    second: {fileID: 2100000, guid: 97649746b32b95c48a0c64393260180d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: model_model_EyeMoisture
+    second: {fileID: 2100000, guid: ae5554f3e1594d441bffc5a77c367984, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: model_model_Eyelashes
+    second: {fileID: 2100000, guid: 9477cea1728290b4886a42f92632fb33, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: model_model_Eyelets
+    second: {fileID: 2100000, guid: a81b8521a90a51d4c8c43f22e55e3edf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: model_model_Leather_ai
+    second: {fileID: 2100000, guid: 2b56ffbb67aa97e46a11cd952dc8d5ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: model_model_Main1_ai
+    second: {fileID: 2100000, guid: 6468c3ba00f004942ba747817f74bb56, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: model_model_Main_ai
+    second: {fileID: 2100000, guid: dd34160fdb5d95444afdc1b1af7c25e0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: model_model_Metal_ai
+    second: {fileID: 2100000, guid: 2b56ffbb67aa97e46a11cd952dc8d5ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: model_model_Sclera_ai
+    second: {fileID: 2100000, guid: 22b272e84ff54b241840525f507eab7c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: model_model_Teeth_ai
+    second: {fileID: 2100000, guid: 8fb544761101bff488be26ca46562116, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: model_model_Tie_ai
+    second: {fileID: 2100000, guid: 3aa367a6660a4b948a84c6ab50461348, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: model_model_kisaragi2
+    second: {fileID: 2100000, guid: 158dc4f06945311468233e7c7a10a823, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: model_model_main_ai
+    second: {fileID: 2100000, guid: 2169ad4dec75f54478ea06ab21a8fef6, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
-    materialLocation: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -1603,7 +1683,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -1611,15 +1691,15 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
     globalScale: 1
-    meshCompression: 0
+    meshCompression: 3
     addColliders: 0
     useSRGBMaterialColor: 1
     importVisibility: 1
-    importBlendShapes: 1
+    importBlendShapes: 0
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
@@ -1646,7 +1726,7 @@ ModelImporter:
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   importAnimation: 1
-  copyAvatar: 0
+  copyAvatar: 1
   humanDescription:
     serializedVersion: 2
     human: []
@@ -1662,7 +1742,8 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: d361071ec06f1e44b961a4abc6148298,
+    type: 3}
   animationType: 2
   humanoidOversampling: 1
   additionalBone: 0

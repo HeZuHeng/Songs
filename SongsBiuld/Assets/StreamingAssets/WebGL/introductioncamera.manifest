@@ -1,0 +1,30 @@
+ManifestFileVersion: 0
+CRC: 93156909
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 9bb8fcb73172edbd4937edabe8b09280
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 7a06cdc29970eee5c25b662729ee57d8
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 20
+  Script: {instanceID: 0}
+- Class: 81
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 8a3bdb2cd68f901469e7cc149151eb49, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 124
+  Script: {instanceID: 0}
+Assets:
+- "Assets/Resources/\u534E\u5179\u534E\u65AF\u4E66\u623F\u6444\u50CF\u673A/IntroductionCamera.prefab"
+Dependencies: []

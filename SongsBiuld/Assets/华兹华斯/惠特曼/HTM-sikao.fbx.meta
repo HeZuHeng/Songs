@@ -1557,7 +1557,47 @@ ModelImporter:
     13700012: model:model:T1
     13700014: model:model:TF
     13700016: model:model:TF1
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: model_model_Furnishings.Fabrics.Leather.Brown
+    second: {fileID: 2100000, guid: b5563610e3dc7ef4986601f8374c5913, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: model_model_Tex_0038_1.dds
+    second: {fileID: 2100000, guid: cdb3290d3ec153941a7c22159c95958f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: model_model_Tex_0040_1.dds
+    second: {fileID: 2100000, guid: 4dbc6039b0db9934bb69010f6e8701a5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "model_model_\u5934\u53D1"
+    second: {fileID: 2100000, guid: 1304b87d689fff64585b2ad72d80fc0b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "model_model_\u5934\u76AE"
+    second: {fileID: 2100000, guid: 2a8bb7a3200d87b4293c82b757b9ff43, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "model_model_\u773C\u7403"
+    second: {fileID: 2100000, guid: 364cc0c476fb6b54aad9e5f7507fe5d0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "model_model_\u80E1\u5B50"
+    second: {fileID: 2100000, guid: dddcdacb8dd416043928c2f782726a8d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "model_model_\u8138"
+    second: {fileID: 2100000, guid: 9fa7e6c446d008948b0d0ed175fd537a, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -1577,23 +1617,51 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
-    isReadable: 1
+    clipAnimations:
+    - serializedVersion: 16
+      name: sikao
+      takeName: sikao
+      firstFrame: 33
+      lastFrame: 65
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
     globalScale: 1
-    meshCompression: 0
+    meshCompression: 3
     addColliders: 0
     useSRGBMaterialColor: 1
     importVisibility: 1
-    importBlendShapes: 1
+    importBlendShapes: 0
     importCameras: 1
     importLights: 1
     swapUVChannels: 0

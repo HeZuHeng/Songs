@@ -198,6 +198,7 @@ public class AnswerWnd : UIBase
                     errorTip.text = "选择错误！请重新选择。";
                     StopCoroutine(Reset());
                     StartCoroutine(Reset());
+                    SceneController.GetInstance().ToState(State.TalkCameraError, null);
                 }
                 else
                 {
@@ -220,7 +221,11 @@ public class AnswerWnd : UIBase
 
     void OnEnd()
     {
+        trendsText.m_CallBack.RemoveListener(OnEnd);
+        UIMng.Instance.ConcealUI(UIType.AnswerWnd);
+
         QuestionBankData question = SongsDataMng.GetInstance().GetQuestionBankData;
+        if (question.onQuestionEnd != null) question.onQuestionEnd.Invoke();
         TaskData taskData = SongsDataMng.GetInstance().GetTaskData;
         if (taskData != null)
         {
@@ -232,9 +237,6 @@ public class AnswerWnd : UIBase
                 }
             }
         }
-        
-        UIMng.Instance.ConcealUI(UIType.AnswerWnd);
-        if(question.onQuestionEnd != null) question.onQuestionEnd.Invoke();
     }
 
     IEnumerator Reset()

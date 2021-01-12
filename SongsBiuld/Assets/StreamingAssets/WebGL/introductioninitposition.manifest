@@ -1,0 +1,20 @@
+ManifestFileVersion: 0
+CRC: 3913043291
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 0860e689b181ef8a34461a071879dd4e
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 85b0f9bb494a05cfc0c2741ff84340d0
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 136
+  Script: {instanceID: 0}
+Assets:
+- "Assets/Resources/\u534E\u5179\u534E\u65AF\u4E66\u623F\u6444\u50CF\u673A/IntroductionInitPosition.prefab"
+Dependencies: []

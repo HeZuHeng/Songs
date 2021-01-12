@@ -7,45 +7,48 @@ using UnityEngine;
 
 public class BuildAssetBundle
 {
-    [MenuItem("Tools/BuildAssetBundle", false, 2)]
-    public static void BuildAb()
-    {
-        if (!Directory.Exists(Application.streamingAssetsPath))
-        {
-            Directory.CreateDirectory(Application.streamingAssetsPath);
-        }
-        string output = Application.streamingAssetsPath + "/WebGL";
-        if(!Directory.Exists(output))
-        {
-            Directory.CreateDirectory(output);
-        }
-        BuildPipeline.BuildAssetBundles(output, BuildAssetBundleOptions.UncompressedAssetBundle, BuildTarget.WebGL);
-        Debug.Log("------ Build Completed ---- ");
-        AssetDatabase.Refresh();
-    }
+    public static string OutPutPrefabsPath = Application.dataPath + "/BuildUtil/Resources";
+    public static string PrefabsPath = "Assets/BuildUtil/Resources";
 
-    [MenuItem("Tools/BuildScene", false, 4)]
-    public static void BuildScene()
-    {
-        if (!Directory.Exists(Application.streamingAssetsPath))
-        {
-            Directory.CreateDirectory(Application.streamingAssetsPath);
-        }
-        string output = "F:/SongsBiuld/WebGL";
-        if (!Directory.Exists(output))
-        {
-            Directory.CreateDirectory(output);
-        }
+    //[MenuItem("Tools/BuildAssetBundle", false, 2)]
+    //public static void BuildAb()
+    //{
+    //    if (!Directory.Exists(Application.streamingAssetsPath))
+    //    {
+    //        Directory.CreateDirectory(Application.streamingAssetsPath);
+    //    }
+    //    string output = Application.streamingAssetsPath + "/WebGL";
+    //    if(!Directory.Exists(output))
+    //    {
+    //        Directory.CreateDirectory(output);
+    //    }
+    //    BuildPipeline.BuildAssetBundles(output, BuildAssetBundleOptions.UncompressedAssetBundle, BuildTarget.WebGL);
+    //    Debug.Log("------ Build Completed ---- ");
+    //    AssetDatabase.Refresh();
+    //}
 
-        string[] levels = { "Assets/Scenes/华兹华斯赏花.unity" };
-        BuildPipeline.BuildPlayer(levels, output + "/hzhssh.scene", BuildTarget.WebGL, BuildOptions.BuildAdditionalStreamedScenes);
-        AssetDatabase.Refresh();
-        levels[0] = "Assets/Scenes/陶渊明赏花.unity";
-        BuildPipeline.BuildPlayer(levels, output + "/tym.scene", BuildTarget.WebGL, BuildOptions.BuildAdditionalStreamedScenes);
-        AssetDatabase.Refresh();
-        levels[0] = "Assets/Scenes/华兹华斯书房.unity";
-        BuildPipeline.BuildPlayer(levels, output + "/hzhs.scene", BuildTarget.WebGL, BuildOptions.BuildAdditionalStreamedScenes);
-    }
+    //[MenuItem("Tools/BuildScene", false, 4)]
+    //public static void BuildScene()
+    //{
+    //    if (!Directory.Exists(Application.streamingAssetsPath))
+    //    {
+    //        Directory.CreateDirectory(Application.streamingAssetsPath);
+    //    }
+    //    string output = "F:/SongsBiuld/WebGL";
+    //    if (!Directory.Exists(output))
+    //    {
+    //        Directory.CreateDirectory(output);
+    //    }
+
+    //    string[] levels = { "Assets/Scenes/华兹华斯赏花.unity" };
+    //    BuildPipeline.BuildPlayer(levels, output + "/华兹华斯赏花", BuildTarget.WebGL, BuildOptions.BuildAdditionalStreamedScenes);
+    //    AssetDatabase.Refresh();
+    //    levels[0] = "Assets/Scenes/陶渊明赏花.unity";
+    //    BuildPipeline.BuildPlayer(levels, output + "/陶渊明赏花", BuildTarget.WebGL, BuildOptions.BuildAdditionalStreamedScenes);
+    //    AssetDatabase.Refresh();
+    //    levels[0] = "Assets/Scenes/华兹华斯书房.unity";
+    //    BuildPipeline.BuildPlayer(levels, output + "/华兹华斯书房", BuildTarget.WebGL, BuildOptions.BuildAdditionalStreamedScenes);
+    //}
 
     [MenuItem("Tools/ClearABMark", false, 3)]
     public static void ClearAllMarks()
@@ -59,73 +62,52 @@ public class BuildAssetBundle
         Debug.Log("Clear mark finished ---- ");
     }
 
-    //[MenuItem("Tools/MarkAssetBundle", false, 1)]
-    //public static void MarkAb()
-    //{
-    //    string prefix = Application.dataPath + "/Resources";
-
-        
-    //    string prefabDir = prefix + "/Prefab";      
-    //    string uiDir = prefix + "/UI";
-    //    string textureDir = prefix + "/Textures";
-
-    //    string loadingUI = uiDir + "/Loading";
-
-    //    string solarUI = uiDir + "/SolarSystem";
-
-    //    // 得到Prefab、 UI 目录下的prefab 文件
-    //    MarkSingleAB(new List<string> {prefabDir, loadingUI }, new List<string> {".prefab"});
-
-    //    MarkSingleAB(new List<string> { solarUI }, new List<string> { ".prefab" }, "solarsystem");
-
-    //    // 得到Texture目录下的贴图文件       ;
-    //    MarkSingleAB(new List<string> {textureDir }, new List<string> {".png", ".tga"});
-
-    //    //标记material and shader
-    //    MarkShader();
-
-    //    AssetDatabase.Refresh();
-    //    Debug.Log("----------------- Mark AssetBundle Complete --- ");
-
-    //}
-
     [MenuItem("Tools/MarkAllAssetBundle", false, 1)]
     public static void MarkAllAb()
     {
         List<string> gamePaths = new List<string>();
         List<GameObject> games = GetAllPrefabs(ref gamePaths);
+        List<string> curNamePaths = new List<string>();
         for (int i = 0; i < games.Count; i++)
         {
             AssetImporter importer = AssetImporter.GetAtPath(gamePaths[i]);
             if (importer != null) importer.assetBundleName = games[i].name;
-
+            EditorUtility.DisplayProgressBar("AB预制体赋值……", "AB预制体赋值中……", (float)i / games.Count);
             List<string> names = new List<string>();
             List<string> abs = GetPrefabDepePaths(games[i], ref names);
             for (int j = 0; j < abs.Count; j++)
             {
-                importer = AssetImporter.GetAtPath(abs[j]);
-                string name = names[j].Replace(" ","");
-                if (CheckString(name))
+                if (!curNamePaths.Contains(abs[j]))
                 {
-                    name = name.GetHashCode().ToString();
+                    importer = AssetImporter.GetAtPath(abs[j]);
+                    if (importer != null && string.IsNullOrEmpty(importer.assetBundleName))
+                    {
+                        curNamePaths.Add(abs[j]);
+                        string name = names[j].Replace(' ', '_');
+                        if (CheckString(name))
+                        {
+                            name = name.GetHashCode().ToString();
+                        }
+                        name = Regex.Replace(name, "[^0-9A-Za-z]", "");
+                        Debug.Log(name + "  :  " + abs[j]);
+                        if (importer != null) importer.assetBundleName = name;
+                    }
                 }
-                name = Regex.Replace(name, "[^0-9A-Za-z]", "");
-                Debug.Log(name + "  :  " + abs[j]);
-                if (importer != null) importer.assetBundleName = name;
             }
         }
+        EditorUtility.ClearProgressBar();
     }
 
-    private static List<GameObject> GetAllPrefabs(ref List<string> gamePaths)
+    public static List<GameObject> GetAllPrefabs(ref List<string> gamePaths)
     {
         List<GameObject> prefabs = new List<GameObject>();
-        var resourcesPath = Application.dataPath + "/Resources";
+        var resourcesPath = OutPutPrefabsPath;
         var absolutePaths = System.IO.Directory.GetFiles(resourcesPath, "*.prefab", System.IO.SearchOption.AllDirectories);
         for (int i = 0; i < absolutePaths.Length; i++)
         {
             EditorUtility.DisplayProgressBar("获取预制体……", "获取预制体中……", (float)i / absolutePaths.Length);
 
-            string path = "Assets/Resources" + absolutePaths[i].Remove(0, resourcesPath.Length);
+            string path = PrefabsPath + absolutePaths[i].Remove(0, resourcesPath.Length);
             path = path.Replace("\\", "/");
             GameObject prefab = AssetDatabase.LoadAssetAtPath(path, typeof(GameObject)) as GameObject;
             if (prefab != null)
@@ -148,24 +130,56 @@ public class BuildAssetBundle
     /// <typeparam name="T">欲获取的类型</typeparam>
     /// <param name="go"></param>
     /// <returns></returns>
-    private static List<string> GetPrefabDepePaths(GameObject go, ref List<string> names)
+    public static List<string> GetPrefabDepePaths(GameObject go, ref List<string> names)
     {
         List<string> results = new List<string>();
         Object[] roots = new Object[] { go };
         Object[] dependObjs = EditorUtility.CollectDependencies(roots);
         foreach (Object dependObj in dependObjs)
         {
-            string path = AssetDatabase.GetAssetPath(dependObj);
-            if (dependObj != null && (dependObj.GetType() == typeof(Cubemap) || dependObj.GetType() == typeof(Texture2D) || 
-                dependObj.GetType() == typeof(Material) || dependObj.GetType() == typeof(Shader)))
+            if (dependObj != null && (dependObj.GetType() == typeof(Cubemap) || dependObj.GetType() == typeof(Texture2D) ||
+                dependObj.GetType() == typeof(Material) || dependObj.GetType() == typeof(Shader) || dependObj.GetType() == typeof(Mesh)))
+                //if (dependObj != null)
             {
-                names.Add(dependObj.name);
-                results.Add(path);
+                string path = AssetDatabase.GetAssetPath(dependObj);
+                if (!results.Contains(path))
+                {
+                    names.Add(dependObj.name);
+                    results.Add(path);
+                }
             }
         } 
         return results;
     }
-    
+
+    public static List<string> GetPrefabDepePaths(GameObject go,string extension = ".fbx")
+    {
+        List<string> results = new List<string>();
+        Object[] roots = new Object[] { go };
+        Object[] dependObjs = EditorUtility.CollectDependencies(roots);
+        for (int i = 0; i < dependObjs.Length; i++)
+        {
+            string path = AssetDatabase.GetAssetPath(dependObjs[i]);
+            if (dependObjs[i] != null && (path.Contains(extension) || path.Contains(extension.ToUpper()) || path.Contains(extension.ToLower())))
+            {
+                if(dependObjs[i].GetType() != typeof(AnimationClip) && !results.Contains(path))
+                {
+                    results.Add(path);
+                    //Debug.LogWarning(go.name + " : " + path);
+                }
+            }
+        }
+        if(results.Count == 0)
+        {
+            Debug.LogWarning(go.name + " : " + AssetDatabase.GetAssetPath(go) + " 没有找到FBX引用，请检查引用");
+        }
+        if(results.Count > 1)
+        {
+            Debug.LogError(go.name + " : " + AssetDatabase.GetAssetPath(go) + " 存在多个FBX引用，请排查问题");
+        }
+        return results;
+    }
+
     //要单独打AssetBundle的
     private static void MarkSingleAB(List<string> dirList, List<string> fileExtList, string defaultFileName = null)
     {
@@ -265,11 +279,19 @@ public class BuildAssetBundle
         string assetPrefixPath = "Assets/ZhongKeYuan/Prefab";
 
         GameObject[] objs = Selection.gameObjects;
+        bool success = false;
         foreach (GameObject obj in objs)
         {
             string name = obj.name;  
-            PrefabUtility.CreatePrefab(assetPrefixPath + "/" + name + ".prefab", obj);
-            Debug.Log("--prefab name is: " + obj.name);
+            PrefabUtility.SaveAsPrefabAsset(obj, assetPrefixPath + "/" + name + ".prefab", out success);
+            if (success)
+            {
+                Debug.Log("--prefab name is: " + obj.name);
+            }
+            else
+            {
+                Debug.LogError("--prefab Error: " + obj.name);
+            }
         }
     }
 

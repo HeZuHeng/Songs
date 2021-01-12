@@ -1,0 +1,41 @@
+ManifestFileVersion: 0
+CRC: 661282847
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 5a38b86ede9a437c3f31294b63f96e56
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 4ebc59422ee913146204999cfce2b5cc
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 90
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 136
+  Script: {instanceID: 0}
+- Class: 137
+  Script: {instanceID: 0}
+Assets:
+- Assets/Resources/HZHS.prefab
+Dependencies:
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/hzhssuf1001basecolor
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/hzhssuf1004basecolor
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/hzhssuf1005basecolor
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/hzhssuf1002basecolor
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/hzhssuf1003basecolor
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/modelmodelhzhs1006mtl
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/hzhssuf1006basecolor

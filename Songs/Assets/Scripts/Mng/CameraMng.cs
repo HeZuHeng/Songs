@@ -94,7 +94,7 @@ public class CameraMng
         }
         CapsuleCollider capsuleCollider = tran.gameObject.GetComponent<CapsuleCollider>();
         if(capsuleCollider == null) capsuleCollider = tran.gameObject.AddComponent<CapsuleCollider>();
-        capsuleCollider.height = 1.8f;
+        capsuleCollider.height = 1.6f;
         capsuleCollider.radius = 0.3f;
         capsuleCollider.center = new Vector3(0, 0.8f, 0);
         PhysicMaterial physicMaterial = new PhysicMaterial();
@@ -115,11 +115,22 @@ public class CameraMng
         if(thirdPersonCharacter == null) thirdPersonCharacter= tran.gameObject.AddComponent<ThirdPersonCharacter>();
         UserControl = tran.gameObject.GetComponent<ThirdPersonUserControl>();
         if(UserControl == null) UserControl = tran.gameObject.AddComponent<ThirdPersonUserControl>();
+
+        AStarRun aStarRun = tran.gameObject.GetComponent<AStarRun>();
+        if (aStarRun == null)
+        {
+            aStarRun = tran.gameObject.AddComponent<AStarRun>();
+        }
     }
 
     public void ResetMove()
     {
-        if(UserControl != null) UserControl.gameObject.SetActive(false);
+        if(UserControl != null)
+        {
+            UserControl.gameObject.SetActive(false);
+            UserControl.transform.parent.position = Vector3.zero;
+            UserControl.transform.position = Vector3.zero;
+        }
         PlayCutscene = null;
         if (MainCamera == null) return;
 

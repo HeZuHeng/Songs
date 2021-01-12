@@ -1,0 +1,44 @@
+ManifestFileVersion: 0
+CRC: 592015356
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 927b264e189c15e366b2fe842b9d32f7
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 4ebc59422ee913146204999cfce2b5cc
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 90
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 136
+  Script: {instanceID: 0}
+- Class: 137
+  Script: {instanceID: 0}
+Assets:
+- Assets/Resources/TYM.prefab
+Dependencies:
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/modelaistandard10
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/modellandlordrig2aistandard16
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/modelaistandard11
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/modelpastedaistandard9
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/modelpastedaistandard5
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/modelaistandard9
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/modelaistandard12
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/modelpastedshushengrigmodelaistandard7
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/modelaistandard1
+- F:/SongProject/SongsBiuld/Assets/StreamingAssets/WebGL/body02c

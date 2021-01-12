@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 3349155515
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 62190743247dcca33f58c195d58762e1
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: f19fbf085e00d23fbc8d6cf7b345590b
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- "Assets/\u534E\u5179\u534E\u65AF/\u534E\u5179\u534E\u65AF\u4EBA\u7269/hzhs_suf_1004_BaseColor.jpg"
+Dependencies: []

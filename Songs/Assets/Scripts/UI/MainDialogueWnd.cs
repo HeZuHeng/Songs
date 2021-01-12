@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Songs;
 using Coffee.UIEffects;
+using BuildUtil;
+using LaoZiCloudSDK.CameraHelper;
 
 public class MainDialogueWnd : UIBase
 {
@@ -48,6 +50,8 @@ public class MainDialogueWnd : UIBase
     protected override void OnDisable()
     {
         base.OnDisable();
+
+        InputManager.GetInstance().RemoveClickEventListener(OnClickEvent);
         if (taskData != null)
         {
             if (taskData.type == TaskType.Talk)
@@ -99,7 +103,24 @@ public class MainDialogueWnd : UIBase
                 UIMng.Instance.OpenUI(type);
                 break;
             case TaskType.Click:
-
+                Transform clikcObj = SceneController.TerrainController.transform.Find(taskData.val);
+                if(clikcObj != null)
+                {
+                    MeshRenderer[] meshes = clikcObj.GetComponentsInChildren<MeshRenderer>();
+                    for (int i = 0; i < meshes.Length; i++)
+                    {
+                        meshes[i].gameObject.AddComponent<HighlightableObject>();
+                    }
+                    HighlightableObjectHelper objectHelper = clikcObj.GetComponent<HighlightableObjectHelper>();
+                    if(objectHelper == null) objectHelper = clikcObj.gameObject.AddComponent<HighlightableObjectHelper>();
+                    objectHelper.enabled = true;
+                    InputManager.GetInstance().RemoveClickEventListener(OnClickEvent);
+                    InputManager.GetInstance().AddClickEventListener(OnClickEvent);
+                }
+                else
+                {
+                    taskData.TaskState = TaskState.End;
+                }
                 break;
             case TaskType.TaskChange:
                 taskNameParentShiny.enabled = true;
@@ -184,17 +205,10 @@ public class MainDialogueWnd : UIBase
                 UIMng.Instance.ActivationUI(UIType.LeftDialogueWnd);
                 break;
             case TaskType.DOTween:
-                if(Application.platform == RuntimePlatform.WindowsEditor)
+                CameraMng.GetInstance().DOTweenPaly(delegate ()
                 {
                     taskData.TaskState = TaskState.End;
-                }
-                else
-                {
-                    CameraMng.GetInstance().DOTweenPaly(delegate ()
-                    {
-                        taskData.TaskState = TaskState.End;
-                    });
-                }
+                });
                 break;
             case TaskType.PersonMove:
                 CameraMng.GetInstance().SetPersonMove();
@@ -247,7 +261,7 @@ public class MainDialogueWnd : UIBase
                     sceneAsset.PlayAnimator("talk", true, 1, null);
                 }
                 talkName.text = modelData.name;
-                iconN = modelData.icon;
+                iconN = string.IsNullOrEmpty(modelData.icon) ? modelData.assetName : modelData.icon;
             }
             else
             {
@@ -331,6 +345,17 @@ public class MainDialogueWnd : UIBase
             SceneTaskData sceneTask = SongsDataMng.GetInstance().GetSceneTaskDataFromName(taskData.val);
             if(sceneTask != null) SongsDataMng.GetInstance().SetSceneTaskData(sceneTask);
             UIMng.Instance.ActivationUI(UIType.LoadingWnd);
+        }
+    }
+
+    void OnClickEvent(GameObject obj)
+    {
+        if (!string.IsNullOrEmpty(taskData.val) && taskData.val.Contains(obj.name))
+        {
+            HighlightableObjectHelper objectHelper = obj.GetComponent<HighlightableObjectHelper>();
+            objectHelper.enabled = false;
+            InputManager.GetInstance().RemoveClickEventListener(OnClickEvent);
+            taskData.TaskState = TaskState.End;
         }
     }
 }
