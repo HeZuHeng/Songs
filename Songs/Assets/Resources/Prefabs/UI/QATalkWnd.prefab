@@ -704,6 +704,89 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!1 &2724432703732685153
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8182540041858961643}
+  - component: {fileID: 8643185432563349077}
+  - component: {fileID: 8902500758021693527}
+  m_Layer: 5
+  m_Name: Text (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &8182540041858961643
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2724432703732685153}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3594606831717706040}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -640, y: 133}
+  m_SizeDelta: {x: 1120, y: 44}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &8643185432563349077
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2724432703732685153}
+  m_CullTransparentMesh: 0
+--- !u!114 &8902500758021693527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2724432703732685153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: d6c5349ada27ca54c8cd6f8151037162, type: 3}
+    m_FontSize: 28
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 6
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: "I am planing to choose one image here. Finally, the grass comes into my
+    mind: But why Grass? \uFF08\u6211\u51C6\u5907\u5728\u8FD9\u91CC\u4F7F\u7528\u4E00\u4E2A\u610F\u8C61\uFF0C\u6700\u540E\uFF0C\u8349\u6620\u5165\u6211\u7684\u8111\u6D77\uFF0C\u4F46\u662F\u4E3A\u4EC0\u4E48\u662F\u8349\u5462\uFF1F\uFF09\nlook
+    around to find the answers!\uFF08\u56DB\u5904\u627E\u627E\u7B54\u6848\u5427\uFF01\uFF09\nA.Grass
+    can be seen everywhere\uFF08\u8349\u968F\u5904\u53EF\u89C1\uFF09\nB.recalcitrant
+    vitality\uFF08\u987D\u5F3A\u7684\u751F\u547D\u529B\uFF09 \nC. the way of its growth\uFF08\u751F\u957F\u65B9\u5F0F\uFF09 "
 --- !u!1 &2798901952518369025
 GameObject:
   m_ObjectHideFlags: 0
@@ -1059,6 +1142,7 @@ RectTransform:
   - {fileID: 7936606094615698394}
   - {fileID: 1090345514265034378}
   - {fileID: 1048084310872143448}
+  - {fileID: 8182540041858961643}
   m_Father: {fileID: 9078735967564224429}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2689,6 +2773,7 @@ MonoBehaviour:
   talkName: {fileID: 8165772595862491110}
   icon: {fileID: 337343186734846163}
   inputField: {fileID: 941651212459285067}
+  errorTip: {fileID: 8902500758021693527}
   rectTransform: {fileID: 3594606831717706040}
 --- !u!1 &7207345874357651974
 GameObject:

@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using LaoZiCloudSDK.CameraHelper;
+using BuildUtil;
+using UnityEngine.SceneManagement;
 
 public delegate void OnStateEndDelegate(State state);
 public delegate void OnStateChangeDelegate();
@@ -20,7 +22,10 @@ public enum State
 {
     InitMoveCamera,
     TalkCamera,
-
+    TalkCameraOne,
+    TalkCameraTwo,
+    TalkCameraThere,
+    TalkCameraFour,
 }
 
 public class SceneController 
@@ -138,6 +143,16 @@ public class SceneController
         {
             childController = new ArtisticController();
         }
+
+        if (ImageSelfController.Name.Equals(sceneData.name))
+        {
+            childController = new ImageSelfController();
+        }
+
+        if (CoverSongController.Name.Equals(sceneData.name))
+        {
+            childController = new CoverSongController();
+        }
     }
 
     public void Close()
@@ -163,6 +178,23 @@ public class SceneController
 
     public void Start()
     {
+        TerrainController terrainController = null;
+        Scene scene = SceneManager.GetActiveScene();
+        GameObject[] gameObjects = scene.GetRootGameObjects();
+
+        for (int i = 0; i < gameObjects.Length; i++)
+        {
+            if ("Root".Equals(gameObjects[i].name))
+            {
+                terrainController = gameObjects[i].GetComponent<TerrainController>();
+                if (terrainController == null)
+                {
+                    terrainController = gameObjects[i].AddComponent<TerrainController>();
+                }
+            }
+        }
+        TerrainController = terrainController;
+
         if (cameraObj != null) GameObject.DestroyImmediate(cameraObj);
         cameraObj = newCameraObj;
         if (cameraObj != null)
@@ -175,14 +207,14 @@ public class SceneController
         for (int i = 0; i < CurSceneData.datas.Count; i++)
         {
             assetObject = SceneMng.GetInstance().GetSceneAssetObject(CurSceneData.datas[i].Id);
-            if (assetObject != null) assetObject.Start();
+            if (assetObject != null) assetObject.Start(TerrainController.transform);
         }
 
         SceneAssetObject sceneAsset = SceneMng.GetInstance().GetSceneAssetObject(1);
         CameraMng.GetInstance().InitPlayer(sceneAsset.Tran);
         sceneAsset.Tran.gameObject.SetActive(false);
+        if (childController != null) childController.Init();
 
-        if(childController != null) childController.Init();
         UIMng.Instance.ConcealUI(UIType.SelectPlotWnd);
         UIMng.Instance.ConcealUI(UIType.LoadingWnd);
         UIMng.Instance.OpenUI(UIType.NONE);
@@ -510,7 +542,7 @@ public class ThreePictureController : ChildController
     void EnterEvent(string name)
     {
         Debug.Log(name);
-        if (!name.Contains("Picture")) return;
+        if (!name.Contains("picture")) return;
         string[] strs = name.Split('_');
         int id = 0;
         if (strs.Length > 1) int.TryParse(strs[1], out id);

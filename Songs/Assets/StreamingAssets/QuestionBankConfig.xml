@@ -128,4 +128,80 @@
     <答案解析>The journey in Wordsworth’s former residence is over. Hope you have a good memory. And please start your next journey!
 	\n您好，今天在华兹华斯故居游览完毕，希望你在这次旅程中留下美好回忆，请开启下一段旅程。</答案解析>
   </QuestionBankDatas>
+  <QuestionBankDatas>
+    <ID>10</ID>
+    <图标></图标>
+    <题头>Sure. There are two or more explanations: the first______, the second______. （当然！有两种或者更多的解释。第一是____，第二是____）</题头>
+    <阅读></阅读>
+    <解析></解析>
+    <选择>1. American’s identity;</选择>
+	<选择>2. Life Circle (The seven days in Bible)</选择>
+	<答案>0</答案>
+	<答案>1</答案>
+    <答案解析>If you have other explanations, please write them down here. If not, click the button to continue the experiment. (如果你有其他的解释，把它写在下方，如果没有，请跳过继续实验。)</答案解析>
+  </QuestionBankDatas>
+  <QuestionBankDatas>
+    <ID>11</ID>
+    <图标></图标>
+    <题头>I celebrate _____, and sing myself, </题头>
+    <阅读>Please choose the right words to fill the blanks. ( 请选择正确的词来还原诗行) </阅读>
+    <解析></解析>
+    <选择>me</选择>
+	<选择>parents</选择>
+	<选择>energy</选择>
+	<选择>myself</选择>
+	<选择>you </选择>
+	<答案>3</答案>
+    <答案解析>Whitman himself</答案解析>
+  </QuestionBankDatas>
+  <QuestionBankDatas>
+    <ID>12</ID>
+    <图标></图标>
+    <题头>For every atom belonging to___ as good belongs to ___. </题头>
+    <阅读>Please choose the right words to fill the blanks. ( 请选择正确的词来还原诗行)</阅读>
+    <解析></解析>
+    <选择>me</选择>
+	<选择>parents</选择>
+	<选择>energy</选择>
+	<选择>myself</选择>
+	<选择>you </选择>
+	<答案>0</答案>
+	<答案>4</答案>
+    <答案解析>the close relationship of you and me. (你和我的密切关系)</答案解析>
+  </QuestionBankDatas>
+  <QuestionBankDatas>
+    <ID>13</ID>
+    <图标></图标>
+    <题头>Born here of parents born here from ___the same, and their parents the same， </题头>
+    <阅读>Please choose the right words to fill the blanks. ( 请选择正确的词来还原诗行)</阅读>
+    <解析></解析>
+    <选择>me</选择>
+	<选择>parents</选择>
+	<选择>energy</选择>
+	<选择>myself</选择>
+	<选择>you </选择>
+	<答案>1</答案>
+    <答案解析>The American fellow, to be an American poet. （美国同胞，成为一个美国诗人。）</答案解析>
+  </QuestionBankDatas>
+  <QuestionBankDatas>
+    <ID>14</ID>
+    <图标></图标>
+    <题头>Nature without check with original ________.  </题头>
+    <阅读>Please choose the right words to fill the blanks. ( 请选择正确的词来还原诗行)</阅读>
+    <解析></解析>
+    <选择>me</选择>
+	<选择>parents</选择>
+	<选择>energy</选择>
+	<选择>myself</选择>
+	<选择>you </选择>
+	<答案>2</答案>
+    <答案解析>the nature, the universal vitality.（自然和宇宙生命力）</答案解析>
+  </QuestionBankDatas>
+  <QuestionBankDatas>
+    <ID>15</ID>
+    <图标></图标>
+    <题头>Concerning I, What connotation do you find? Write it down please. （你认为惠特曼是自我还有什么含义呢？请把你的答案写在下面。） </题头>
+    <阅读></阅读>
+    <解析></解析>
+  </QuestionBankDatas>
 </QuestionBankConfig>

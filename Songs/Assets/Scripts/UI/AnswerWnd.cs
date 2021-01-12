@@ -220,7 +220,11 @@ public class AnswerWnd : UIBase
 
     void OnEnd()
     {
+        trendsText.m_CallBack.RemoveListener(OnEnd);
+        UIMng.Instance.ConcealUI(UIType.AnswerWnd);
+
         QuestionBankData question = SongsDataMng.GetInstance().GetQuestionBankData;
+        if (question.onQuestionEnd != null) question.onQuestionEnd.Invoke();
         TaskData taskData = SongsDataMng.GetInstance().GetTaskData;
         if (taskData != null)
         {
@@ -232,9 +236,6 @@ public class AnswerWnd : UIBase
                 }
             }
         }
-        
-        UIMng.Instance.ConcealUI(UIType.AnswerWnd);
-        if(question.onQuestionEnd != null) question.onQuestionEnd.Invoke();
     }
 
     IEnumerator Reset()

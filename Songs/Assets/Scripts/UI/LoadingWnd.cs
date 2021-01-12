@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Songs;
 using Slate;
+using BuildUtil;
 
 public class LoadingWnd : UIBase
 {
@@ -47,21 +48,7 @@ public class LoadingWnd : UIBase
         lblStatus.text = "100%";
 
         SceneManager.SetActiveScene(scene);
-        TerrainController terrainController = null;
-        GameObject[] gameObjects = scene.GetRootGameObjects();
-
-        for (int i = 0; i < gameObjects.Length; i++)
-        {
-            if ("Root".Equals(gameObjects[i].name))
-            {
-                terrainController = gameObjects[i].GetComponent<TerrainController>();
-                if(terrainController == null)
-                {
-                    terrainController = gameObjects[i].AddComponent<TerrainController>();
-                }
-            }
-        }
-        SceneController.TerrainController = terrainController;
+        
         SceneController.GetInstance().InitScene = true;
     }
 

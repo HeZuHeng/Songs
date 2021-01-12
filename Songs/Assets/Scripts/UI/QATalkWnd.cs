@@ -1,4 +1,5 @@
-﻿using Songs;
+﻿using BuildUtil;
+using Songs;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,6 +13,7 @@ public class QATalkWnd : UIBase
     public Text talkName;
     public Image icon;
     public InputField inputField;
+    public Text errorTip;
 
     public RectTransform rectTransform;
 
@@ -41,7 +43,7 @@ public class QATalkWnd : UIBase
         StopAllCoroutines();
         StartCoroutine(GetSongFileText(question.des));
         tip.text = question.startParsing;
-
+        errorTip.enabled = false;
         TaskData taskData = SongsDataMng.GetInstance().GetTaskData;
         ModelData modelData = SongsDataMng.GetInstance().GetModelData(taskData.des);
         string iconN = string.Empty;
@@ -49,26 +51,18 @@ public class QATalkWnd : UIBase
         {
             talkName.text = modelData.name;
             iconN = modelData.icon;
+            Sprite obj = Resources.Load<Sprite>("Sprites/PlayerIcon/" + iconN);
+            if (obj != null)
+            {
+                icon.sprite = obj;
+            }
+            icon.enabled = true;
         }
         else
         {
-            talkName.text = "实验者";
-            SceneAssetObject sceneAssetObject = SceneMng.GetInstance().GetSceneAssetObject(1);
-            if ("nyk".Equals(sceneAssetObject.URL))
-            {
-                iconN = "nyk";
-            }
-            else
-            {
-                iconN = "nvyk";
-            }
+            talkName.text = "系统提示";
+            icon.enabled = false;
         }
-        Sprite obj = Resources.Load<Sprite>("Sprites/PlayerIcon/" + iconN);
-        if (obj != null)
-        {
-            icon.sprite = obj;
-        }
-        icon.enabled = true;
 
         string des = string.Format(question.head, SongsDataMng.GetInstance().Player.name);
         head.m_CallBack.RemoveListener(OnEndParsing);
@@ -98,15 +92,32 @@ public class QATalkWnd : UIBase
     public void OnSelected()
     {
         Debug.Log("答案： "+ inputField.text);
-        rectTransform.gameObject.SetActive(false);
         QuestionBankData question = SongsDataMng.GetInstance().GetQuestionBankData;
         if (question == null) return;
+
+        int answer = question.questions.IndexOf(inputField.text);
+
+        if (question.answers != null && !question.answers.Contains(answer))
+        {
+            if(errorTip != null)
+            {
+                errorTip.text = question.errorTip.Replace("\\n", "\n");
+                errorTip.enabled = true;
+                return;
+            }
+        }
+        rectTransform.gameObject.SetActive(false);
+
         Sprite obj = Resources.Load<Sprite>("Sprites/PlayerIcon/" + question.icon);
         if (obj != null)
         {
             icon.sprite = obj;
+            icon.enabled = true;
         }
-        icon.enabled = true;
+        else
+        {
+            icon.enabled = false;
+        }
         head.m_CallBack.RemoveListener(OnHeadEnd);
         head.m_CallBack.RemoveListener(OnEndParsing);
         head.m_CallBack.AddListener(OnEndParsing);
