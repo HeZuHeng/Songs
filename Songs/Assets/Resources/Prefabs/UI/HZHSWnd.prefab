@@ -1113,15 +1113,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "William Wordsworth (1770-1850) is a typical representative of British Romanticism\uFF08Romanticism
-    emerged in the 1790s in Germany and Britain, and in the 1820s in France and elsewhere.
-    It is known as the Romantic Movement or Romantic Revival. Its chief emphasis is
-    upon freedom of individual self-expression: sincerity, spontaneity and originality.\uFF09
-    All good poetry is the spontaneous overflow of powerful feelings recollected in
-    tranquility. In 1798 Wordsworth published Lyrical Ballads in collaboration with
-    Coleridge. The preface to this collection of poems can be read as a declaration
-    of romanticism. From 1799 to Wordsworth\u2019s death he lived in retirement at
-    Grasmere in the Lake district."
+  m_Text: 
 --- !u!114 &5591028547768727829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1136,15 +1128,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_TextIndent: 2
   endYieldTime: 0.5
-  m_Text: "William Wordsworth (1770-1850) is a typical representative of British Romanticism\uFF08Romanticism
-    emerged in the 1790s in Germany and Britain, and in the 1820s in France and elsewhere.
-    It is known as the Romantic Movement or Romantic Revival. Its chief emphasis is
-    upon freedom of individual self-expression: sincerity, spontaneity and originality.\uFF09
-    All good poetry is the spontaneous overflow of powerful feelings recollected in
-    tranquility. In 1798 Wordsworth published Lyrical Ballads in collaboration with
-    Coleridge. The preface to this collection of poems can be read as a declaration
-    of romanticism. From 1799 to Wordsworth\u2019s death he lived in retirement at
-    Grasmere in the Lake district."
+  m_Text: "William Wordsworth (1770-1850), one of the Lake Poets, is a typical representative
+    of British Romanticism. He asserts all good poetry is the spontaneous overflow
+    of powerful feelings recollected in tranquility.\n|\u5A01\u5EC9\xB7\u534E\u5179\u534E\u65AF(1770-1850),\u6E56\u7554\u6D3E\u8BD7\u4EBA\u4E4B\u4E00\uFF0C\u662F\u82F1\u56FD\u6D6A\u6F2B\u4E3B\u4E49\u7684\u4EE3\u8868\u4EBA\u7269\u3002\u4ED6\u8BA4\u4E3A\u6240\u6709\u597D\u7684\u8BD7\u6B4C\u90FD\u662F\u5F3A\u70C8\u611F\u60C5\u7684\u81EA\u7136\u6D41\u9732\uFF0C\u8BD7\u6B4C\u6E90\u4E8E\u5B81\u9759\u4E2D\u56DE\u5FC6\u7684\u60C5\u611F\u3002"
   m_Enable: 1
   m_ShowSpeed: 30
   m_AudioClip: {fileID: 0}
@@ -1165,6 +1151,7 @@ MonoBehaviour:
     m_TypeName: TrendsText+CallBack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   m_ScrollRect: {fileID: 5510804240001092317}
+  m_TextC: 
 --- !u!1 &5591028547858308149
 GameObject:
   m_ObjectHideFlags: 0

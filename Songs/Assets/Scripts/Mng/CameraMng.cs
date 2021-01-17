@@ -176,7 +176,7 @@ public class CameraMng
         MainCamera.transform.SetParent(mainCameraParent.transform);
         MainCamera.transform.localPosition = -Vector3.forward * 0.8f;
         MainCamera.transform.localRotation = Quaternion.Euler(new Vector3(5,0,0));
-        UserControl.offset = new Vector3(0, 1.7f, 0.5f);
+        UserControl.offset = new Vector3(0, 1.55f, 0.5f);
         UserControl.transform.position = InitPosition;
         UserControl.transform.eulerAngles = InitRotation;
         UserControl.gameObject.SetActive(true);
@@ -195,7 +195,7 @@ public class CameraMng
         MainCamera.transform.SetParent(mainCameraParent.transform);
         MainCamera.transform.localPosition = -Vector3.forward * 0.1f;
         MainCamera.transform.localRotation = Quaternion.Euler(new Vector3(0, 0, 0));
-        UserControl.offset = new Vector3(0, 1.55f, 0f);
+        UserControl.offset = new Vector3(0, 1.50f, 0f);
         UserControl.transform.position = InitPosition;
         UserControl.transform.eulerAngles = InitRotation;
         UserControl.gameObject.SetActive(true);

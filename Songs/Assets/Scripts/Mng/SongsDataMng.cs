@@ -8,6 +8,8 @@ using UnityEngine.Networking;
 
 public delegate void OnDataLoaded(string text);
 
+public delegate void OnChineseOrEnglishChange(bool chinese);
+
 public class DataLoader
 {
     public UnityWebRequest request;
@@ -31,6 +33,7 @@ public class SongsDataMng
         }
         return instance;
     }
+    public OnChineseOrEnglishChange orEnglishChange;
     public MainPlayer Player { get; private set; }
     public OnDataLoaded OnDataLoaded { get; set; }
     private TasksConfig GetHZHSTasks { get;  set; }

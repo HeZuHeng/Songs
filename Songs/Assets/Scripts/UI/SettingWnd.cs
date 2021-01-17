@@ -19,7 +19,10 @@ public class SettingWnd : UIBase
     public Toggle open;
     public Toggle music;
 
+    public Toggle chinese;
+
     public RectTransform musicCheck;
+    public RectTransform chineseCheck;
 
     protected override void Awake()
     {
@@ -33,6 +36,7 @@ public class SettingWnd : UIBase
         task.onValueChanged.AddListener(OnTask);
         open.onValueChanged.AddListener(OnOpen);
         music.onValueChanged.AddListener(OnMusic);
+        chinese.onValueChanged.AddListener(OnChinese);
     }
 
     protected override void Start()
@@ -54,6 +58,8 @@ public class SettingWnd : UIBase
         open.isOn = false;
         CancelInvoke("HideHelp");
         Invoke("HideHelp", 2);
+
+        transform.SetSiblingIndex(100);
     }
 
     protected override void OnDisable()
@@ -61,6 +67,7 @@ public class SettingWnd : UIBase
         base.OnDisable();
         task.isOn = false;
         CancelInvoke("HideHelp");
+        CancelInvoke("ShowEnglish");
     }
 
     void HideHelp()
@@ -109,15 +116,22 @@ public class SettingWnd : UIBase
     void OnMusic(bool val)
     {
         musicCheck.gameObject.SetActive(!val);
-        Scene scene = SceneManager.GetActiveScene();
-        GameObject[] gameObjects = scene.GetRootGameObjects();
-        for (int i = 0; i < gameObjects.Length; i++)
+        SceneController.TerrainController.SetAllAudio(val);
+    }
+
+    void OnChinese(bool val)
+    {
+        SongsDataMng.GetInstance().orEnglishChange?.Invoke(val);
+        chineseCheck.gameObject.SetActive(val);
+        if (val)
         {
-            if (gameObjects[i].name.Equals("InitSound"))
-            {
-                gameObjects[i].SetActive(!gameObjects[i].activeSelf);
-            }
+            CancelInvoke("ShowEnglish");
+            Invoke("ShowEnglish", 10);
         }
     }
 
+    void ShowEnglish()
+    {
+        chinese.isOn = false;
+    }
 }

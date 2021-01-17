@@ -22,9 +22,12 @@ public class TrendsText : MonoBehaviour
 
     public ScrollRect m_ScrollRect;
 
+    [TextArea(4, 10)]
+    public string m_TextC;//中文
 
     private char[] m_Text_Char;
     private bool suspend = false;
+    private bool compelete = false;
     private AudioSource m_AudioSource;
 
     private RectTransform rect;
@@ -39,15 +42,65 @@ public class TrendsText : MonoBehaviour
         {
             endYieldTime = 0.1f;
         }
+        SongsDataMng.GetInstance().orEnglishChange += OnEnglishChange;
     }
     private void OnEnable()
     {
+        //CancelInvoke("ShowEnglish");
         if (m_Enable)
             Play();
     }
     private void OnDisable()
     {
+        //CancelInvoke("ShowEnglish");
         StopAllCoroutines();
+    }
+
+    private void OnDestroy()
+    {
+        SongsDataMng.GetInstance().orEnglishChange -= OnEnglishChange;
+    }
+
+    void OnEnglishChange(bool val)
+    {
+        if (!val)
+        {
+            //CancelInvoke("ShowEnglish");
+            ShowEnglish();
+        }
+        if(val && compelete)
+        {
+            string str = m_TextC;
+            string LineHead = "";
+            if (m_TextIndent != 0)
+            {
+                for (int i = 0; i < m_TextIndent; i++)
+                {
+                    LineHead += "\u3000";
+                }
+                str = str.Replace("\n", "\n" + LineHead);
+                str = LineHead + str;
+            }
+            m_Conetnt.text = str;
+            //CancelInvoke("ShowEnglish");
+            //Invoke("ShowEnglish", 10);
+        }
+    }
+
+    void ShowEnglish()
+    {
+        string str = m_Text;
+        string LineHead = "";
+        if (m_TextIndent != 0)
+        {
+            for (int i = 0; i < m_TextIndent; i++)
+            {
+                LineHead += "\u3000";
+            }
+            str = str.Replace("\n", "\n" + LineHead);
+            str = LineHead + str;
+        }
+        m_Conetnt.text = str;
     }
 
     /// <summary>
@@ -63,8 +116,18 @@ public class TrendsText : MonoBehaviour
         {
             m_ShowSpeed = 20;
         }
+        compelete = false;
         suspend = false;
         //\u3000为中文空格英文空格会引起unity中Text的自动换行因此将内容中的英文空格换成中文空格
+        string[] ecs = m_Text.Split('|');
+        if(ecs.Length > 0)
+        {
+            m_Text = ecs[0];
+        }
+        if (ecs.Length > 1)
+        {
+            m_TextC = ecs[1];
+        }
         string str = m_Text;//.Replace(" ", "\u3000");
         string LineHead = "";
         //设置段落的首行缩进的字符数
@@ -140,6 +203,7 @@ public class TrendsText : MonoBehaviour
     /// </summary>
     public void Recovery()
     {
+        compelete = false;
         suspend = false;
     }
 
@@ -229,6 +293,7 @@ public class TrendsText : MonoBehaviour
         //等待一帧以便以上信息运行完成
         yield return new WaitForSeconds(endYieldTime);
         m_AudioSource = null;
+        compelete = true;
         //执行播放完成回调
         m_CallBack?.Invoke();
     }

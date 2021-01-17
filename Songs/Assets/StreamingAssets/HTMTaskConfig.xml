@@ -14,65 +14,79 @@
   </SceneTasks>
   <SceneTasks 场景任务名="The Image of Grass" 图标="icon_cover_picture" 场景数据="草的意象数据">
     <TaskDatas ID="102" 任务名="聚会大厅自由漫游" 下一个="0" 类型="PersonMove" 值 = "end"/>
-    <TaskDatas ID="1" 任务名="解析废奴运动照片" 下一个="11"  类型="Talk" 描述 = "Taking part in the abolitionist movement.（参加废奴运动）\n Click to know more. （点击知道更多）"/>
-    <TaskDatas ID="11" 任务名="解析废奴运动照片" 下一个="0"  类型="Talk" 描述 = "Before the Civil War, Whitman publishes “ The Slave and the Slave Trade” in which he attacks this man-eating institution, and urges every young man to vote and to work for what he regards as the true concept of political democracy.
-	\n(参加废奴运动表明了惠特曼的民主思想。他早在内战前就发表《奴隶以及奴隶买卖》，抨击这一吃人的奴隶制度, 并敦促每个年轻人为他所认为的真正的政治民主而投票和奋斗。)"/>
-    <TaskDatas ID="2" 任务名="解析拯救伤员照片" 下一个="21"  类型="Talk" 描述 = "saving the wounded in the battlefield（战场上拯救伤员）
-	\n Click to know more.（点击知道更多）"/>
-    <TaskDatas ID="21" 任务名="解析拯救伤员照片" 下一个="0"  类型="Talk" 描述 = "And that all men ever born are also my brothers...and the women my sisters and lovers. — “ Song of Myself \n ”Whitman once said during the American Civil War: “ I wear my hat as I please indoors or out. I find no sweeter fat than sticks to my own bones. I am the man, I suffered, I was there. ”
-	\n(所有出生的男子都是我的兄弟，所有的女人都是我的姐妹和爱人。—《自我之歌》 \n 在美国南北战争期间，惠特曼曾经说：“无论室内还是室外我都一直戴着头盔。我找不到比黏在我骨头上更甜美的脂肪了。我就是这个人，我曾困苦难堪，我曾在此处。”)"/>
-    <TaskDatas ID="3" 任务名="解析自我之歌照片" 下一个="31"  类型="Talk" 描述 = "Click to know more.（点击知道更多）"/>
+    <TaskDatas ID="1" 任务名="解析废奴运动照片" 下一个="11"  类型="Talk" 描述 = "Taking part in the abolitionist movement.
+	|参加废奴运动"/>
+    <TaskDatas ID="11" 任务名="解析废奴运动照片" 下一个="2"  类型="Talk" 描述 = "Before the Civil War, Whitman publishes “ The Slave and the Slave Trade” in which he attacks this man-eating institution, and urges every young man to vote and to work for what he regards as the true concept of political democracy.
+	|参加废奴运动表明了惠特曼的民主思想。\n 他早在内战前就发表《奴隶以及奴隶买卖》，抨击这一吃人的奴隶制度, \n 并敦促每个年轻人为他所认为的真正的政治民主而投票和奋斗。"/>
+    <TaskDatas ID="2" 任务名="解析拯救伤员照片" 下一个="21"  类型="Talk" 描述 = "saving the wounded in the battlefield.
+	|战场上拯救伤员"/>
+    <TaskDatas ID="21" 任务名="解析拯救伤员照片" 下一个="3"  类型="Talk" 描述 = "And that all men ever born are also my brothers...and the women my sisters and lovers. — “Song of Myself \n ”Whitman once said during the American Civil War:“I wear my hat as I please indoors or out. I find no sweeter fat than sticks to my own bones. I am the man, I suffered, I was there.”
+	|所有出生的男子都是我的兄弟，所有的女人都是我的姐妹和爱人。—《自我之歌》 \n 在美国南北战争期间，惠特曼曾经说：“无论室内还是室外我都一直戴着头盔。我找不到比黏在我骨头上更甜美的脂肪了。我就是这个人，我曾困苦难堪，我曾在此处。”"/>
+    <TaskDatas ID="3" 任务名="解析自我之歌照片" 下一个="31"  类型="Talk" 描述 = "Click to know more.
+	|点击知道更多"/>
     <TaskDatas ID="31" 任务名="解析自我之歌照片" 下一个="104"  类型="Talk" 描述 = "In New York Whitman witnessed the rapid growth of the city and wanted to write a new kind of poetry in tune with mankind’s new faith, hopeful expectations and energy of his days.
-	\n(在纽约的时候，惠特曼目睹了城市的高速发展，想要写出一种新型诗歌，契合他的时代的人类的新信仰，充满希望的前景以及勃勃生机。)"/>
+	|在纽约的时候，惠特曼目睹了城市的高速发展，想要写出一种新型诗歌，契合他的时代的人类的新信仰，充满希望的前景以及勃勃生机。"/>
     <TaskDatas ID="104" 任务名="点击前往寻找草的意象" 下一个="0" 类型="TaskChange" 值 = "The Image of Self" 描述="点击右侧任务名前往The Image of Self场景"/>
   </SceneTasks>
   <SceneTasks 场景任务名="The Image of Self" 图标="icon_cover_glassimage" 场景数据="寻找草的意象数据">
 	<!--TaskDatas ID="1" 任务名="船员对话" 下一个="2" 类型="PersonMove" 值 = "end"/-->
     <TaskDatas ID="2" 任务名="进入书房" 下一个="3" 类型="StartState" 值 = "InitMoveCamera"/>
-    <TaskDatas ID="3" 任务名="帮助惠特曼进行创作" 下一个="4" 类型="Animator" 值 = "102|1|1|true|sikao" 描述="click to read the selections ( 确认查看选段 )"/>
+    <TaskDatas ID="3" 任务名="帮助惠特曼进行创作" 下一个="4" 类型="Animator" 值 = "102|1|1|true|sikao" 描述="click to read the selections.|确认查看选段。"/>
     <TaskDatas ID="4" 任务名="阅读《自我之歌》第一节" 下一个="5"  类型="LookSong" 值 = "ziwozhige1.txt" />
-	<TaskDatas ID="5" 任务名="完善阅读《自我之歌》第一节" 下一个="6"  类型="Talk" 值 = "102" 描述 = "Here an image is needed. Which one is more appropriate? Please look around to find your inspiration!（这里需要填写一个意象，填什么意象好呢？请惠特曼您四处找找灵感吧！）"/>
+	<TaskDatas ID="5" 任务名="完善阅读《自我之歌》第一节" 下一个="6"  类型="Talk" 值 = "102" 描述 = "Here an image is needed. Which one is more appropriate? Please look around to find your inspiration!|这里需要填写一个意象，填什么意象好呢？请惠特曼您四处找找灵感吧！"/>
 	<TaskDatas ID="6" 任务名="寻找灵感" 下一个="7"  类型="Click" 值 = "chuang_self/船舱/植物" 描述 = "点击窗台上的青草。"/>
-	<TaskDatas ID="7" 任务名="look around to find the answers!（四处找找答案吧！）" 下一个="8"  类型="Talk" 值 = "102" 描述 = "I am planing to choose one image here. Finally, the grass comes into my mind: But why Grass? （我准备在这里使用一个意象，最后，草映入我的脑海，但是为什么是草呢？）。"/>
-	<TaskDatas ID="8" 任务名="寻找线索" 下一个="9"  类型="Talk" 描述 = "A.Grass can be seen everywhere（草随处可见）\n B.recalcitrant vitality（顽强的生命力）\n C. the way of its growth（生长方式）。"/>
+	<TaskDatas ID="7" 任务名="look around to find the answers!（四处找找答案吧！）" 下一个="8"  类型="Talk" 值 = "102" 描述 = "I am planing to choose one image here. Finally, the grass comes into my mind: But why Grass?|我准备在这里使用一个意象，最后，草映入我的脑海，但是为什么是草呢？"/>
+	<TaskDatas ID="8" 任务名="寻找线索" 下一个="9"  类型="Talk" 描述 = "A.Grass can be seen everywhere \n B.recalcitrant vitality \n C. the way of its growth。| A.草随处可见 \n B.顽强的生命力 \n C.生长方式"/>
 	
 	<TaskDatas ID="9" 任务名="线索1：草随处可见" 下一个="10"  类型="Click" 值 = "chuang_self/船舱/画框 1" 描述 = "左边墙上有一幅画。"/>
-	<TaskDatas ID="10" 任务名="获得线索1：草随处可见" 下一个="11"  类型="Talk" 描述 = "Grass stands for the ordinary people. （民主是大多数人的民主）"/>
+	<TaskDatas ID="10" 任务名="获得线索1：草随处可见" 下一个="11"  类型="Talk" 描述 = "Grass stands for the ordinary people.|民主是大多数人的民主"/>
 	
 	<TaskDatas ID="11" 任务名="线索2：顽强的生命力" 下一个="12"  类型="Click" 值 = "chuang_self/船舱/白居易诗句" 描述 = "惠特曼书桌上的离离原上草的诗。"/>
-	<TaskDatas ID="12" 任务名="获得线索2：顽强的生命力" 下一个="13"  类型="Talk" 描述 = "The characteristic of the public：indomitable vitality.（民众的特征，顽强生命力）"/>
-	<TaskDatas ID="13" 任务名="解析顽强的生命力" 下一个="14"  类型="Talk" 描述 = "In Leaves of Grass, Whitman borrows from Homer the metaphor of “untrimmed hair on the grave” as the rebirth of the dead; then he calls it the “speaking tongue”. Only in this way can human enter the eternal cycle of life and death, rebirth and immortality like the growth of grass.  ( 在《草叶集》中，他从荷马借用了“坟墓上没有修剪过的头发”的比喻把它看作死者的再生; 说它是“说话的舌头”。这样就进入了生命—死亡—再生—不朽的永恒循环的过程。)"/>
+	<TaskDatas ID="12" 任务名="获得线索2：顽强的生命力" 下一个="13"  类型="Talk" 描述 = "The characteristic of the public：indomitable vitality.|民众的特征，顽强生命力"/>
+	<TaskDatas ID="13" 任务名="解析顽强的生命力" 下一个="14"  类型="Talk" 描述 = "In Leaves of Grass, Whitman borrows from Homer the metaphor of “untrimmed hair on the grave” as the rebirth of the dead; then he calls it the “speaking tongue”. Only in this way can human enter the eternal cycle of life and death, rebirth and immortality like the growth of grass.
+	|在《草叶集》中，他从荷马借用了“坟墓上没有修剪过的头发”的比喻把它看作死者的再生; 说它是“说话的舌头”。这样就进入了生命—死亡—再生—不朽的永恒循环的过程。"/>
 	
 	<TaskDatas ID="14" 任务名="线索3：生长方式" 下一个="15"  类型="Click" 值 = "chuang_self/船员A" 描述 = "两个船员在甲板上讨论。"/>
 	<TaskDatas ID="15" 任务名="获得线索3：生长方式1" 下一个="16"  类型="Talk" 值 = "104" 描述 = "Captain Whitman once said that the art of art, the glory of expression and the sunshine of the light of letters is simplicity. Nothing is better than simplicity... Could you tell me what these sentences refer to? 。"/>
 	<TaskDatas ID="16" 任务名="获得线索3：生长方式2" 下一个="17"  类型="Talk" 值 = "105" 描述 = "Sure, I think Captain Whitman is talking about free verse."/>
-	<TaskDatas ID="17" 任务名="解析生长方式1" 下一个="18"  类型="Talk"  描述 = "Grass grows freely. It implies the form and style of a poetic genre: free verse.（草自由生长，这暗示自由体的形式与风格）"/>
-	<TaskDatas ID="18" 任务名="解析生长方式2" 下一个="19"  类型="Talk"  描述 = "Free verse: a kind of poetry that does not conform to any regular metre: the length of its lines is irregular, as is its use of rhyme. Instead of a regular metrical pattern it uses more flexible cadences or rhythmic groupings. Sometimes it is supported by alliteration and repetition. Now the most widely practised verse form in English, it established itself in the 19th and 20th centuries by Walt Whitman, the French symbolists and the poets of modernism. (一种不符合任何规则韵律的诗歌:其诗行的长度不规则，韵律的使用也不规则。它使用更灵活的抑扬顿挫或节奏组合，而不是规则的格律。有时使用头韵和重复来支持。自由体是现在英语中最广泛使用的诗歌形式，在19世纪和20世纪由法国象征主义诗人和现代主义诗人沃尔特·惠特曼确立。)"/>
+	<TaskDatas ID="17" 任务名="解析生长方式1" 下一个="18"  类型="Talk"  描述 = "Grass grows freely. It implies the form and style of a poetic genre: free verse.|草自由生长，这暗示自由体的形式与风格"/>
+	<TaskDatas ID="18" 任务名="解析生长方式2" 下一个="19"  类型="Talk"  描述 = "Free verse: a kind of poetry that does not conform to any regular metre: the length of its lines is irregular, as is its use of rhyme. Instead of a regular metrical pattern it uses more flexible cadences or rhythmic groupings. Sometimes it is supported by alliteration and repetition. Now the most widely practised verse form in English, it established itself in the 19th and 20th centuries by Walt Whitman, the French symbolists and the poets of modernism.
+	|一种不符合任何规则韵律的诗歌:其诗行的长度不规则，韵律的使用也不规则。它使用更灵活的抑扬顿挫或节奏组合，而不是规则的格律。有时使用头韵和重复来支持。自由体是现在英语中最广泛使用的诗歌形式，在19世纪和20世纪由法国象征主义诗人和现代主义诗人沃尔特·惠特曼确立。"/>
 	
 	<TaskDatas ID="19" 任务名="超验主义" 下一个="20"  类型="Talk" 描述 = "Whitman continues to create: I agree with transcendentalism proposed by Emerson. But how can I endow my poem with this thought? (惠特曼继续进行创作：我一直很认同爱默生的超验主义，但是我要怎样才能够体现出我的观点呢？)"/>
 	<TaskDatas ID="20" 任务名="解析超验主义" 下一个="201"  类型="Talk" 描述 = "Transcendentalism: an idealist philosophical tendency among writers in and around Boston in the mid-19th century. Growing out Christian Unitarianism in the 1830s under the influence of German and British Romanticism. Transcendentalism affirmed Kant’s principle of intuitive knowledge not derived from the senses, asserted the primacy of the spiritual and transcendental over the material and empirical while rejecting organized religion for an extremely individualistic celebration of the divinity in each human being. The leading transcendentalist Ralph Waldo Emerson issued what was virtually the movement’s manifesto in his essay Nature (1836), which presents natural phenomena as symbols of higher spiritual truths.
-	（超验主义：是19世纪中期波士顿及周边地区作家的一种理想主义哲学思想倾向。19世纪30年代，在德国和英国浪漫主义的影响下，从基督教圣教中产生。超验主义肯定了康德的理论—即直觉知识不是来自感觉，主张精神的和超验的领先于物质的和经验的知识，同时反对因鼓吹极端个人主义方式获得神性而组建的宗教。超验主义先驱拉尔夫·沃尔多·爱默生在他的散文《自然》(1836)中发表了该运动的宣言，将自然现象作为更高的精神真理的象征。）"/>
+	|超验主义：是19世纪中期波士顿及周边地区作家的一种理想主义哲学思想倾向。19世纪30年代，在德国和英国浪漫主义的影响下，从基督教圣教中产生。超验主义肯定了康德的理论—即直觉知识不是来自感觉，主张精神的和超验的领先于物质的和经验的知识，同时反对因鼓吹极端个人主义方式获得神性而组建的宗教。超验主义先驱拉尔夫·沃尔多·爱默生在他的散文《自然》(1836)中发表了该运动的宣言，将自然现象作为更高的精神真理的象征。"/>
 	
 	<TaskDatas ID="201" 任务名="美国地图" 下一个="21" 类型="OpenWnd" 值 = "HTMMapPathWnd"/>
 	<TaskDatas ID="21" 任务名="阅读《自我之歌》第二节" 下一个="22"  类型="LookSong" 值 = "ziwozhige2.txt" />
-	<TaskDatas ID="22" 任务名="惠特曼的旁白" 下一个="23"  类型="Talk" 值="102" 描述 = "Whitman: My blood is my body. The ancestors of my fellow Americans is united with the earth, the air, the nature. That is my praise of the human beings, that is my praise of democracy. Moreover, My main concern is the elimination of the idea in traditional religion of man’s subjection to a monarchial God.(惠特曼：我的血液也就是我的身体，我的祖先，与美国同胞的祖先，与这土地，与这空气，也就是与这个自然融为一体的。这是对世间芸芸众生的讴歌和赞美，这正是我在歌颂民主。此外，我主要关注的是，消除传统宗教中人类服从君主上帝的观念。)" />
+	<TaskDatas ID="22" 任务名="惠特曼的旁白" 下一个="23"  类型="Talk" 值="102" 描述 = "Whitman: My blood is my body. The ancestors of my fellow Americans is united with the earth, the air, the nature. That is my praise of the human beings, that is my praise of democracy. Moreover, My main concern is the elimination of the idea in traditional religion of man’s subjection to a monarchial God.
+	|惠特曼：我的血液也就是我的身体，我的祖先，与美国同胞的祖先，与这土地，与这空气，也就是与这个自然融为一体的。这是对世间芸芸众生的讴歌和赞美，这正是我在歌颂民主。此外，我主要关注的是，消除传统宗教中人类服从君主上帝的观念。" />
 	<TaskDatas ID="23" 任务名="点击前往《Song of Myself》场景" 下一个="0" 类型="TaskChange" 值 = "《Song of Myself》" 描述="点击右侧任务名前往《Song of Myself》鉴赏"/>
   </SceneTasks>
   <SceneTasks 场景任务名="《Song of Myself》" 图标="icon_cover_songofmyself" 场景数据="自我之歌数据">
 	<TaskDatas ID="201" 任务名="美国地图" 下一个="1" 类型="OpenWnd" 值 = "HTMMapPathWnd"/>
     <TaskDatas ID="1" 任务名="一位绅士入场" 下一个="2" 类型="StartState" 值 = "InitMoveCamera"/>
-	<TaskDatas ID="2" 任务名="绅士对话" 下一个="3" 类型="Talk" 值 = "106" 描述="Hi，Captain! （你好呀，船长！）"/>
-	<TaskDatas ID="3" 任务名="惠特曼对话" 下一个="4" 类型="Talk" 值 = "102" 描述="Hello! My fellow!（你好，我的同胞！）"/>
-	<TaskDatas ID="4" 任务名="绅士对话" 下一个="5" 类型="Talk" 值 = "106" 描述="Oh, you’re writing something. May I have a look? (噢，你在创作呀，我可以看看吗？)"/>
-	<TaskDatas ID="5" 任务名="绅士阅读诗歌" 下一个="6" 类型="Animator" 值 = "106|1|1|true|shu" 描述="Gorgeous! I like it! Definitely! But could I ask you some questions about this poem? (太棒了! 我喜欢这个！确实喜欢！但是我能问你一些关于诗歌的问题吗？)"/>
+	<TaskDatas ID="2" 任务名="绅士对话" 下一个="3" 类型="Talk" 值 = "106" 描述="Hi，Captain!
+	|你好呀，船长！"/>
+	<TaskDatas ID="3" 任务名="惠特曼对话" 下一个="4" 类型="Talk" 值 = "102" 描述="Hello! My fellow!
+	|你好，我的同胞！"/>
+	<TaskDatas ID="4" 任务名="绅士对话" 下一个="5" 类型="Talk" 值 = "106" 描述="Oh, you’re writing something. May I have a look?
+	|噢，你在创作呀，我可以看看吗？"/>
+	<TaskDatas ID="5" 任务名="绅士阅读诗歌" 下一个="6" 类型="Animator" 值 = "106|1|1|true|shu" 描述="Gorgeous! I like it! Definitely! But could I ask you some questions about this poem? 
+	|太棒了! 我喜欢这个！确实喜欢！但是我能问你一些关于诗歌的问题吗？"/>
 	<TaskDatas ID="6" 任务名="惠特曼对话" 下一个="7" 类型="Talk" 值 = "102" 描述="Of course. （当然）"/>
-	<TaskDatas ID="7" 任务名="绅士对话" 下一个="8" 类型="Talk" 值 = "106" 描述="I notice the word “ I ” occurs seven times in this poem. Could you give me some explanation? ( 但是，我注意到，诗篇中，I 出现了七次。你能够帮我解释一下吗？)"/>
+	<TaskDatas ID="7" 任务名="绅士对话" 下一个="8" 类型="Talk" 值 = "106" 描述="I notice the word “ I ” occurs seven times in this poem. Could you give me some explanation?
+	|但是，我注意到，诗篇中，I 出现了七次。你能够帮我解释一下吗？"/>
 	<TaskDatas ID="8" 任务名="答题" 下一个="9" 类型="Question" 值 = "10"/>
-	<TaskDatas ID="9" 任务名="绅士对话" 下一个="10" 类型="Talk" 值 = "106" 描述="That sounds reasonable! And the “self” is so inspiring, would you mind giving me more explanations? ( 这个解释太棒了。诗中的这个自我也意味深长，你能帮我解说一下吗？)"/>
+	<TaskDatas ID="9" 任务名="绅士对话" 下一个="10" 类型="Talk" 值 = "106" 描述="That sounds reasonable! And the “self” is so inspiring, would you mind giving me more explanations?
+	|这个解释太棒了。诗中的这个自我也意味深长，你能帮我解说一下吗？"/>
 	<TaskDatas ID="10" 任务名="暴风雨来临" 下一个="11" 类型="StartState" 值 = "TalkCamera"/>
-	<TaskDatas ID="11" 任务名="绅士求救" 下一个="12" 类型="Talk" 值 = "106" 描述="The storm was  horrible!  The ship is  tipping over! Help, help, captain Whitman, save us, please!  ( 这暴风雨真是吓人! 船都要被掀翻了！ 救命，救命，惠特曼船长，帮帮我们！)"/>
-	<TaskDatas ID="12" 任务名="惠特曼稳定众人情绪" 下一个="13" 类型="Talk" 值 = "102" 描述="Sure! Calm down, my fellow! (当然！请镇定下来，我的同伴！)"/>
-	<TaskDatas ID="13" 任务名="进入答题稳定船只" 下一个="14" 类型="Talk" 描述="Please choose the right words to fill the blanks. ( 请选择正确的词来还原诗行)"/>
+	<TaskDatas ID="11" 任务名="绅士求救" 下一个="12" 类型="Talk" 值 = "106" 描述="The storm was  horrible!  The ship is  tipping over! Help, help, captain Whitman, save us, please!
+	|这暴风雨真是吓人! 船都要被掀翻了！ 救命，救命，惠特曼船长，帮帮我们！"/>
+	<TaskDatas ID="12" 任务名="惠特曼稳定众人情绪" 下一个="13" 类型="Talk" 值 = "102" 描述="Sure! Calm down, my fellow!
+	|当然！请镇定下来，我的同伴！"/>
+	<TaskDatas ID="13" 任务名="进入答题稳定船只" 下一个="14" 类型="Talk" 描述="Please choose the right words to fill the blanks.
+	|请选择正确的词来还原诗行"/>
 	<TaskDatas ID="14" 任务名="答题1" 下一个="15" 类型="Question" 值 = "11"/>
 	<TaskDatas ID="15" 任务名="答题完成" 下一个="16" 类型="StartState" 值 = "TalkCameraOne"/>
 	<TaskDatas ID="16" 任务名="答题2" 下一个="17" 类型="Question" 值 = "12"/>
@@ -81,7 +95,8 @@
 	<TaskDatas ID="19" 任务名="答题完成" 下一个="20" 类型="StartState" 值 = "TalkCameraThere"/>
 	<TaskDatas ID="20" 任务名="答题4" 下一个="21" 类型="Question" 值 = "14"/>
 	<TaskDatas ID="21" 任务名="答题完成" 下一个="22" 类型="StartState" 值 = "TalkCameraFour"/>
-	<TaskDatas ID="22" 任务名="惠特曼对话" 下一个="23" 类型="Talk" 描述="The power of finding yourself stabilizes the ship. You can continue your adventure! (找到自我的力量稳定了船只，你能够继续冒险了！)"/>
+	<TaskDatas ID="22" 任务名="惠特曼对话" 下一个="23" 类型="Talk" 描述="The power of finding yourself stabilizes the ship. You can continue your adventure!
+	|找到自我的力量稳定了船只，你能够继续冒险了！"/>
 	<TaskDatas ID="23" 任务名="答题3" 下一个="24" 类型="QATalk" 值 = "15"/>
 	<TaskDatas ID="24" 任务名="点击前往Equality场景" 下一个="0" 类型="TaskChange" 值 = "Equality" 描述="点击右侧任务名前往Equality场景"/>
   </SceneTasks>
@@ -91,19 +106,27 @@
 	<TaskDatas ID="2" 任务名="点击鸟" 下一个="4"  类型="Click" 值 = "鸟" 描述 = "To show American’s unique identity, Whitman uses many images from American landscape in his poem, and also describes the abyss of the suffering in American, such as the American Civil War. ( 为了展示美国的独特性，惠特曼选取了很多美国独特的意象，描写美国大众的苦难，譬如美国独立战争。) "/>
 	<TaskDatas ID="3" 任务名="点击鸟" 下一个="4"  类型="Click" 值 = "鸟" 描述 = "To show American’s unique identity, Whitman uses many images from American landscape in his poem, and also describes the abyss of the suffering in American, such as the American Civil War. ( 为了展示美国的独特性，惠特曼选取了很多美国独特的意象，描写美国大众的苦难，譬如美国独立战争。) "/-->
 	<TaskDatas ID="101" 任务名="寻找船员" 下一个="4" 类型="PersonMove" 值 = "end" />
-	<TaskDatas ID="4" 任务名="与船员交流" 下一个="0" 类型="StartState" 值 = "TalkCamera" 描述="Your crew have read your poem already. They have something to say.(你的船员已经读过了你的诗，他们有话对你说。)"/>
+	<TaskDatas ID="4" 任务名="与船员交流" 下一个="0" 类型="StartState" 值 = "TalkCamera" 描述="Your crew have read your poem already. They have something to say.
+	|你的船员已经读过了你的诗，他们有话对你说。"/>
 	
-	<TaskDatas ID="5" 任务名="政治家对话" 下一个="6" 类型="Talk" 值 = "106" 描述="Thank you, Captain Whitman, you are like Abraham Lincoln who pursues the happiness and democracy for all races.（谢谢你惠特曼船长，你就像亚伯拉罕林肯一样，追求的是全人类的幸福与民主。）"/>
-	<TaskDatas ID="6" 任务名="惠特曼对话" 下一个="0" 类型="Talk" 值 = "102" 描述="In poems like “Captain! My Captain”, “When lilacs In The Dooryard Bloomed”, Whitman sings high praise for president Lincoln who was trying to abolish slavery. (在诗歌《噢！我的船长》《紫丁香花盛开在庭院》中，惠特曼歌颂尝试废除奴隶制的林肯。)"/>
+	<TaskDatas ID="5" 任务名="政治家对话" 下一个="6" 类型="Talk" 值 = "106" 描述="Thank you, Captain Whitman, you are like Abraham Lincoln who pursues the happiness and democracy for all races.
+	|谢谢你惠特曼船长，你就像亚伯拉罕林肯一样，追求的是全人类的幸福与民主。"/>
+	<TaskDatas ID="6" 任务名="惠特曼对话" 下一个="0" 类型="Talk" 值 = "102" 描述="In poems like “Captain! My Captain”, “When lilacs In The Dooryard Bloomed”, Whitman sings high praise for president Lincoln who was trying to abolish slavery.
+	|在诗歌《噢！我的船长》《紫丁香花盛开在庭院》中，惠特曼歌颂尝试废除奴隶制的林肯。"/>
 	
-	<TaskDatas ID="7" 任务名="难民对话" 下一个="0" 类型="Talk" 值 = "107" 描述="Thank you, Captain Whitman, you add fraternity as the third major ingredient in your concept of democracy. It is the adhesiveness or love, that fuses, ties, aggregates, and makes the races comrades.（谢谢你船长,在你的民主理念中，博爱是第三个主要成分，正是这种粘合性或者正是这种爱，使种族融合、联结、凝聚并成为同志。）"/>
+	<TaskDatas ID="7" 任务名="难民对话" 下一个="0" 类型="Talk" 值 = "107" 描述="Thank you, Captain Whitman, you add fraternity as the third major ingredient in your concept of democracy. It is the adhesiveness or love, that fuses, ties, aggregates, and makes the races comrades.
+	|谢谢你船长,在你的民主理念中，博爱是第三个主要成分，正是这种粘合性或者正是这种爱，使种族融合、联结、凝聚并成为同志。"/>
 	
-	<TaskDatas ID="8" 任务名="女厨师对话" 下一个="0" 类型="Talk" 值 = "108" 描述="Thank you, Captain Whitman. You insists that women of American should be raised to become the robust equals of men in all departments of human activity. （谢谢你船长，你坚持认为，美国的女性必须被培养成在人类各个部门，都与男性平等的女人。）"/>
+	<TaskDatas ID="8" 任务名="女厨师对话" 下一个="0" 类型="Talk" 值 = "108" 描述="Thank you, Captain Whitman. You insists that women of American should be raised to become the robust equals of men in all departments of human activity.
+	|谢谢你船长，你坚持认为，美国的女性必须被培养成在人类各个部门，都与男性平等的女人。"/>
 	
-	<TaskDatas ID="9" 任务名="农夫对话" 下一个="10" 类型="Talk" 值 = "110" 描述="Thank you, Captain, your democracy means having sympathy for the poor. (谢谢你船长，你的民主意味着对于贫穷者有同情心。)"/>
+	<TaskDatas ID="9" 任务名="农夫对话" 下一个="10" 类型="Talk" 值 = "110" 描述="Thank you, Captain, your democracy means having sympathy for the poor.
+	|谢谢你船长，你的民主意味着对于贫穷者有同情心。"/>
 	
-	<TaskDatas ID="10" 任务名="惠特曼对话" 下一个="11" 类型="Talk" 值 = "102" 描述="Yes, I believe that no one unlimited personality can be any more or less than any other unlimited personality. Hence, I assert the equality of all personalities. (是的，我相信，没有一个无限人格可以比其他任何无限人格多或少。因此，我主张所有人格都是平等的。 )"/>
-	<TaskDatas ID="11" 任务名="盘白" 下一个="12" 类型="Talk" 描述="It is this insistence upon fraternity, upon the comradeship of races and classes that sets Whitman’s concept of democracy more noble than that of his generations. ( 正是这种对兄弟情谊、对不同种族和阶级的同志情谊的坚持，使惠特曼的民主观念比他那一代的更加崇高。)"/>
+	<TaskDatas ID="10" 任务名="惠特曼对话" 下一个="11" 类型="Talk" 值 = "102" 描述="Yes, I believe that no one unlimited personality can be any more or less than any other unlimited personality. Hence, I assert the equality of all personalities.
+	|是的，我相信，没有一个无限人格可以比其他任何无限人格多或少。因此，我主张所有人格都是平等的。"/>
+	<TaskDatas ID="11" 任务名="盘白" 下一个="12" 类型="Talk" 描述="It is this insistence upon fraternity, upon the comradeship of races and classes that sets Whitman’s concept of democracy more noble than that of his generations.
+	|正是这种对兄弟情谊、对不同种族和阶级的同志情谊的坚持，使惠特曼的民主观念比他那一代的更加崇高。"/>
 	<TaskDatas ID="12" 任务名="点击前往About Democracy场景" 下一个="0" 类型="TaskChange" 值 = "About Democracy" 描述="点击右侧任务名前往About Democracy场景"/>
   </SceneTasks>
   <SceneTasks 场景任务名="About Democracy" 图标="icon_cover_china_usa" 场景数据="中美民主思想比较数据">
@@ -111,7 +134,8 @@
 	<TaskDatas ID="101" 任务名="位置显示" 下一个="99" 类型="PersonMove" 值 = "end" />
 	<TaskDatas ID="99" 任务名="位置显示" 下一个="1" 类型="StartState" 值 = "InitMoveCamera" />
     <TaskDatas ID="1" 任务名="位置显示" 下一个="2" 类型="OpenWnd" 值 = "HTMMapPathWnd" />
-	<TaskDatas ID="2" 任务名="旗子指引前行" 下一个="3" 类型="Talk" 描述="Go ahead with the guidance of the flags!【你们需要在旗子指引下前行。】"/>
+	<TaskDatas ID="2" 任务名="旗子指引前行" 下一个="3" 类型="Talk" 描述="Go ahead with the guidance of the flags!
+	|你们需要在旗子指引下前行。"/>
 	<TaskDatas ID="3" 任务名="阅读《天狗》" 下一个="4" 类型="LookSong" 值 = "tiangou.txt" />
 	
 	<TaskDatas ID="4" 任务名="旗子1" 下一个="5"  类型="Click" 值 = "旗子集/旗子(2)" 描述 = "Ready?"/>
@@ -120,7 +144,8 @@
 	
 	<TaskDatas ID="6" 任务名="旗子2" 下一个="7"  类型="Click" 值 = "旗子集/旗子(5)" 描述 = "我是全宇宙的 Energy 的总量！"/>
 	<TaskDatas ID="7" 任务名="答题2" 下一个="8"  类型="Question" 值 = "17" />
-	<TaskDatas ID="8" 任务名="解说" 下一个="103" 类型="Talk" 描述="As the essence of matter, “Energy” is not static, but constantly moving, constantly converging, constantly divergent. 【“Energy” 作为物质的本质，不是静止的，而是常动不息，不断合并，不断地分化。】"/>
+	<TaskDatas ID="8" 任务名="解说" 下一个="103" 类型="Talk" 描述="As the essence of matter, “Energy” is not static, but constantly moving, constantly converging, constantly divergent.
+	|“Energy” 作为物质的本质，不是静止的，而是常动不息，不断合并，不断地分化。"/>
 	<TaskDatas ID="103" 任务名="前进" 下一个="9"  类型="StartState" 值 = "TalkCameraOne" />
 	
 	<TaskDatas ID="9" 任务名="旗子3" 下一个="10"  类型="Click" 值 = "旗子集/旗子(6)"/>
@@ -136,7 +161,8 @@
 	<TaskDatas ID="17" 任务名="答题5" 下一个="105"  类型="Question" 值 = "19" />
 	<TaskDatas ID="105" 任务名="前进" 下一个="18"  类型="StartState" 值 = "TalkCameraThere" />
 	
-	<TaskDatas ID="18" 任务名="到达终点" 下一个="20"  类型="Talk" 值 = "102" 描述 = "Congratulations! The ship has reached the final destination successfully ! We found the Statue of Liberty through many difficulties! 【恭喜！本次航行，我们历经千辛万苦，终于找到了自由女神！】"/>
+	<TaskDatas ID="18" 任务名="到达终点" 下一个="20"  类型="Talk" 值 = "102" 描述 = "Congratulations! The ship has reached the final destination successfully ! We found the Statue of Liberty through many difficulties!
+	|恭喜！本次航行，我们历经千辛万苦，终于找到了自由女神！"/>
 	<TaskDatas ID="19" 任务名="旅行结束" 下一个="20" 类型="OpenWnd" 值 = "HTMEndWnd" />
 	<TaskDatas ID="20" 任务名="旅行结束" 下一个="0" 类型="QATalk" 值 = "20" />
   </SceneTasks>

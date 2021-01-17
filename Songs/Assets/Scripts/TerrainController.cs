@@ -8,7 +8,7 @@ public class TerrainController : MonoBehaviour
     public Transform water;
     public Material[] skys;
     public Light sceneLight;
-    public Transform audioParent;
+    public AudioSource[] audioSources;
     private void Awake()
     {
         if(terrain == null)
@@ -26,6 +26,10 @@ public class TerrainController : MonoBehaviour
             {
                 water = qUAS_Reflection.transform;
             }
+            if(water == null)
+            {
+                water = transform.Find("AQUAS_Waterplane");
+            }
         }
         Transform skysParent = transform.Find("Skys");
         if(skysParent != null)
@@ -36,14 +40,7 @@ public class TerrainController : MonoBehaviour
                 skys[i] = skysParent.GetChild(i).GetComponent<MeshRenderer>().sharedMaterial;
             }
         }
-        if(audioParent == null)
-        {
-             AudioSource a = GetComponentInChildren<AudioSource>();
-            if(a != null)
-            {
-                audioParent = a.transform;
-            }
-        }
+        audioSources = GetComponentsInChildren<AudioSource>();
     }
 
     public void SetDetailObjects(float val)
@@ -66,5 +63,13 @@ public class TerrainController : MonoBehaviour
     public void SetWater(bool val)
     {
         if (water != null) water.gameObject.SetActive(val);
+    }
+
+    public void SetAllAudio(bool val)
+    {
+        for (int i = 0; i < audioSources.Length; i++)
+        {
+            audioSources[i].enabled = val;
+        }
     }
 }

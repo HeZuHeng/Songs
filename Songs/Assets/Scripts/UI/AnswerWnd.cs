@@ -19,6 +19,8 @@ public class AnswerWnd : UIBase
     public Button confirmBtn;
     public Image icon;
 
+    public string m_Text;
+    public string m_TextC;//中文
     private int num;
     protected override void Awake()
     {
@@ -34,11 +36,13 @@ public class AnswerWnd : UIBase
         Show();
         transform.SetAsLastSibling();
         num = 0;
+        SongsDataMng.GetInstance().orEnglishChange += OnEnglishChange;
     }
 
     protected override void OnDisable()
     {
         base.OnDisable();
+        SongsDataMng.GetInstance().orEnglishChange -= OnEnglishChange;
         StopAllCoroutines();
     }
 
@@ -135,7 +139,16 @@ public class AnswerWnd : UIBase
         //{
         //    icon.enabled = false;
         //}
-        head.text = question.head;
+        string[] ecs = question.head.Split('|');
+        if (ecs.Length > 0)
+        {
+            m_Text = ecs[0];
+        }
+        if (ecs.Length > 1)
+        {
+            m_TextC = ecs[1];
+        }
+        head.text = m_Text;
         errorTip.enabled = false;
         bool showTip = false;
         Transform tran = null;
@@ -243,5 +256,26 @@ public class AnswerWnd : UIBase
     {
         yield return new WaitForSeconds(0.3f);
         Show();
+    }
+
+
+    void OnEnglishChange(bool val)
+    {
+        if (!val)
+        {
+            //CancelInvoke("ShowEnglish");
+            ShowEnglish();
+        }
+        if (val)
+        {
+            head.text = m_TextC;
+            //CancelInvoke("ShowEnglish");
+            //Invoke("ShowEnglish", 10);
+        }
+    }
+
+    void ShowEnglish()
+    {
+        head.text = m_Text;
     }
 }
