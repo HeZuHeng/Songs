@@ -2,14 +2,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HTMWnd : UIBase
 {
+    public Button next;
     protected override void Awake()
     {
         base.Awake();
         Type = UIType.HTMWnd;
         MutexInterface = true;
+        next.onClick.AddListener(OnClose);
     }
 
     public void OnClose()

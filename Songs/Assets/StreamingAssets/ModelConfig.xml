@@ -784,6 +784,23 @@
         <z>1</z>
       </scale>
     </ModelDatas>
+	<ModelDatas Id="102" 模型名="惠特曼" 模型路径="chuang_self" 资源名="htm" >
+	  <position>
+        <x>110</x>
+        <y>22.466</y>
+        <z>663</z>
+      </position>
+      <eulerAngle>
+        <x>0</x>
+        <y>128</y>
+        <z>0</z>
+      </eulerAngle>
+	  <scale>
+        <x>1</x>
+        <y>1</y>
+        <z>1</z>
+      </scale>
+    </ModelDatas>
 	<ModelDatas Id="203" 模型名="船行驶声音" 模型路径="chuang_self" 资源名="chuanxingshisheng_audio" >
 	  <position>
         <x>124.44</x>

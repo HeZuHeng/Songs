@@ -2,20 +2,17 @@
 <TasksConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <任务分支名>II.Walt Whitman</任务分支名>
   <SceneTasks 场景任务名="About Whitman" 图标="icon_cover_jieshao" 场景数据="惠特曼介绍数据">
-    <TaskDatas ID="1" 任务名="旅程引子1" 下一个="2"  类型="Talk" 描述 = "First across the time, then across the Atlantic ocean, you reach Louisiana in American.
-	\n(你坐船穿越时空，穿越了大西洋，最终到达美国的路易斯安那州海岸。)"/>
-    <TaskDatas ID="2" 任务名="旅程引子2" 下一个="3"  类型="Talk" 描述 = "You decide to look for the Statue of Liberty beginning your journey at the river of Mississippi River- the mother river of America. You have a boat already. Click the button to start this adventure in the identity of Whitman!
-	\n(你决定沿着美国的母亲河-密西西比河前去寻找自由女神像。你现在已经拥有一条船了。点击按钮开始你作为惠特曼的冒险旅程吧！)"/>
-    <TaskDatas ID="3" 任务名="惠特曼介绍" 下一个="4"  类型="OpenWnd" 值 = "HTMWnd"/>
-    <TaskDatas ID="4" 任务名="美国地图1" 下一个="5" 类型="OpenWnd" 值 = "HTMMapPathWnd"/>
-    <TaskDatas ID="5" 任务名="取名" 下一个="6" 类型="OpenWnd" 值 = "HTMBoatNameWnd"/>
-    <TaskDatas ID="6" 任务名="美国地图2" 下一个="7" 类型="OpenWnd" 值 = "HTMMapPoint1Wnd"/>
-    <TaskDatas ID="7" 任务名="起航" 下一个="8" 类型="DOTween" 值 = "5" 描述="船只起航镜头"/>
-    <TaskDatas ID="8" 任务名="点击前往The Image of Grass" 下一个="0" 类型="TaskChange" 值 = "The Image of Grass" 描述="点击右侧前往观看The Image of Grass场景"/>
+    <TaskDatas ID="1" 任务名="美国地图" 下一个="2" 类型="OpenWnd" 值 = "HTMMapPathWnd"/>
+	<TaskDatas ID="2" 任务名="登船" 下一个="3" 类型="Talk" 描述 = "Please get on board quickly!"/>
+	<TaskDatas ID="3" 任务名="登船" 下一个="4" 类型="StartState" 值 = "InitMoveCamera"/>
+	<TaskDatas ID="4" 任务名="惠特曼介绍" 下一个="5" 类型="OpenWnd" 值 = "HTMWnd"/>
+	<TaskDatas ID="5" 任务名="惠特曼请你为船命名" 下一个="6" 类型="Talk" 值 = "102" 描述 = "Hi guy! Welcome to my world! Please name the ship!"/>
+    <TaskDatas ID="6" 任务名="取名" 下一个="7" 类型="OpenWnd" 值 = "HTMBoatNameWnd"/>
+    <TaskDatas ID="7" 任务名="起航" 下一个="8" 类型="DOTween" 描述="Whitman is known as the poet of America for his view of democracy."/>
+	<TaskDatas ID="8" 任务名="船出发" 下一个="9" 类型="StartState" 值 = "TalkCamera"/>
+    <TaskDatas ID="9" 任务名="点击前往The Image of Grass" 下一个="0" 类型="TaskChange" 值 = "The Image of Grass" 描述="点击右侧前往体验The Image of Grass场景"/>
   </SceneTasks>
   <SceneTasks 场景任务名="The Image of Grass" 图标="icon_cover_picture" 场景数据="草的意象数据">
-    <TaskDatas ID="101" 任务名="聚会大厅引子" 下一个="102"  类型="Talk" 描述 = "As a captain, you meet your crew for the first time. You need to introduce yourself.
-	\n(由于你和你的船员第一次见面，需要自我介绍。)"/>
     <TaskDatas ID="102" 任务名="聚会大厅自由漫游" 下一个="0" 类型="PersonMove" 值 = "end"/>
     <TaskDatas ID="1" 任务名="解析废奴运动照片" 下一个="11"  类型="Talk" 描述 = "Taking part in the abolitionist movement.（参加废奴运动）\n Click to know more. （点击知道更多）"/>
     <TaskDatas ID="11" 任务名="解析废奴运动照片" 下一个="0"  类型="Talk" 描述 = "Before the Civil War, Whitman publishes “ The Slave and the Slave Trade” in which he attacks this man-eating institution, and urges every young man to vote and to work for what he regards as the true concept of political democracy.
@@ -25,9 +22,8 @@
     <TaskDatas ID="21" 任务名="解析拯救伤员照片" 下一个="0"  类型="Talk" 描述 = "And that all men ever born are also my brothers...and the women my sisters and lovers. — “ Song of Myself \n ”Whitman once said during the American Civil War: “ I wear my hat as I please indoors or out. I find no sweeter fat than sticks to my own bones. I am the man, I suffered, I was there. ”
 	\n(所有出生的男子都是我的兄弟，所有的女人都是我的姐妹和爱人。—《自我之歌》 \n 在美国南北战争期间，惠特曼曾经说：“无论室内还是室外我都一直戴着头盔。我找不到比黏在我骨头上更甜美的脂肪了。我就是这个人，我曾困苦难堪，我曾在此处。”)"/>
     <TaskDatas ID="3" 任务名="解析自我之歌照片" 下一个="31"  类型="Talk" 描述 = "Click to know more.（点击知道更多）"/>
-    <TaskDatas ID="31" 任务名="解析自我之歌照片" 下一个="103"  类型="Talk" 描述 = "In New York Whitman witnessed the rapid growth of the city and wanted to write a new kind of poetry in tune with mankind’s new faith, hopeful expectations and energy of his days.
+    <TaskDatas ID="31" 任务名="解析自我之歌照片" 下一个="104"  类型="Talk" 描述 = "In New York Whitman witnessed the rapid growth of the city and wanted to write a new kind of poetry in tune with mankind’s new faith, hopeful expectations and energy of his days.
 	\n(在纽约的时候，惠特曼目睹了城市的高速发展，想要写出一种新型诗歌，契合他的时代的人类的新信仰，充满希望的前景以及勃勃生机。)"/>
-    <TaskDatas ID="103" 任务名="美国地图3" 下一个="104" 类型="OpenWnd" 值 = "HTMMapPoint2Wnd"/>
     <TaskDatas ID="104" 任务名="点击前往寻找草的意象" 下一个="0" 类型="TaskChange" 值 = "The Image of Self" 描述="点击右侧任务名前往The Image of Self场景"/>
   </SceneTasks>
   <SceneTasks 场景任务名="The Image of Self" 图标="icon_cover_glassimage" 场景数据="寻找草的意象数据">
@@ -54,14 +50,16 @@
 	<TaskDatas ID="18" 任务名="解析生长方式2" 下一个="19"  类型="Talk"  描述 = "Free verse: a kind of poetry that does not conform to any regular metre: the length of its lines is irregular, as is its use of rhyme. Instead of a regular metrical pattern it uses more flexible cadences or rhythmic groupings. Sometimes it is supported by alliteration and repetition. Now the most widely practised verse form in English, it established itself in the 19th and 20th centuries by Walt Whitman, the French symbolists and the poets of modernism. (一种不符合任何规则韵律的诗歌:其诗行的长度不规则，韵律的使用也不规则。它使用更灵活的抑扬顿挫或节奏组合，而不是规则的格律。有时使用头韵和重复来支持。自由体是现在英语中最广泛使用的诗歌形式，在19世纪和20世纪由法国象征主义诗人和现代主义诗人沃尔特·惠特曼确立。)"/>
 	
 	<TaskDatas ID="19" 任务名="超验主义" 下一个="20"  类型="Talk" 描述 = "Whitman continues to create: I agree with transcendentalism proposed by Emerson. But how can I endow my poem with this thought? (惠特曼继续进行创作：我一直很认同爱默生的超验主义，但是我要怎样才能够体现出我的观点呢？)"/>
-	<TaskDatas ID="20" 任务名="解析超验主义" 下一个="21"  类型="Talk" 描述 = "Transcendentalism: an idealist philosophical tendency among writers in and around Boston in the mid-19th century. Growing out Christian Unitarianism in the 1830s under the influence of German and British Romanticism. Transcendentalism affirmed Kant’s principle of intuitive knowledge not derived from the senses, asserted the primacy of the spiritual and transcendental over the material and empirical while rejecting organized religion for an extremely individualistic celebration of the divinity in each human being. The leading transcendentalist Ralph Waldo Emerson issued what was virtually the movement’s manifesto in his essay Nature (1836), which presents natural phenomena as symbols of higher spiritual truths.
+	<TaskDatas ID="20" 任务名="解析超验主义" 下一个="201"  类型="Talk" 描述 = "Transcendentalism: an idealist philosophical tendency among writers in and around Boston in the mid-19th century. Growing out Christian Unitarianism in the 1830s under the influence of German and British Romanticism. Transcendentalism affirmed Kant’s principle of intuitive knowledge not derived from the senses, asserted the primacy of the spiritual and transcendental over the material and empirical while rejecting organized religion for an extremely individualistic celebration of the divinity in each human being. The leading transcendentalist Ralph Waldo Emerson issued what was virtually the movement’s manifesto in his essay Nature (1836), which presents natural phenomena as symbols of higher spiritual truths.
 	（超验主义：是19世纪中期波士顿及周边地区作家的一种理想主义哲学思想倾向。19世纪30年代，在德国和英国浪漫主义的影响下，从基督教圣教中产生。超验主义肯定了康德的理论—即直觉知识不是来自感觉，主张精神的和超验的领先于物质的和经验的知识，同时反对因鼓吹极端个人主义方式获得神性而组建的宗教。超验主义先驱拉尔夫·沃尔多·爱默生在他的散文《自然》(1836)中发表了该运动的宣言，将自然现象作为更高的精神真理的象征。）"/>
 	
+	<TaskDatas ID="201" 任务名="美国地图" 下一个="21" 类型="OpenWnd" 值 = "HTMMapPathWnd"/>
 	<TaskDatas ID="21" 任务名="阅读《自我之歌》第二节" 下一个="22"  类型="LookSong" 值 = "ziwozhige2.txt" />
 	<TaskDatas ID="22" 任务名="惠特曼的旁白" 下一个="23"  类型="Talk" 值="102" 描述 = "Whitman: My blood is my body. The ancestors of my fellow Americans is united with the earth, the air, the nature. That is my praise of the human beings, that is my praise of democracy. Moreover, My main concern is the elimination of the idea in traditional religion of man’s subjection to a monarchial God.(惠特曼：我的血液也就是我的身体，我的祖先，与美国同胞的祖先，与这土地，与这空气，也就是与这个自然融为一体的。这是对世间芸芸众生的讴歌和赞美，这正是我在歌颂民主。此外，我主要关注的是，消除传统宗教中人类服从君主上帝的观念。)" />
 	<TaskDatas ID="23" 任务名="点击前往《Song of Myself》场景" 下一个="0" 类型="TaskChange" 值 = "《Song of Myself》" 描述="点击右侧任务名前往《Song of Myself》鉴赏"/>
   </SceneTasks>
   <SceneTasks 场景任务名="《Song of Myself》" 图标="icon_cover_songofmyself" 场景数据="自我之歌数据">
+	<TaskDatas ID="201" 任务名="美国地图" 下一个="1" 类型="OpenWnd" 值 = "HTMMapPathWnd"/>
     <TaskDatas ID="1" 任务名="一位绅士入场" 下一个="2" 类型="StartState" 值 = "InitMoveCamera"/>
 	<TaskDatas ID="2" 任务名="绅士对话" 下一个="3" 类型="Talk" 值 = "106" 描述="Hi，Captain! （你好呀，船长！）"/>
 	<TaskDatas ID="3" 任务名="惠特曼对话" 下一个="4" 类型="Talk" 值 = "102" 描述="Hello! My fellow!（你好，我的同胞！）"/>
@@ -88,6 +86,7 @@
 	<TaskDatas ID="24" 任务名="点击前往Equality场景" 下一个="0" 类型="TaskChange" 值 = "Equality" 描述="点击右侧任务名前往Equality场景"/>
   </SceneTasks>
   <SceneTasks 场景任务名="Equality" 图标="icon_cover_equity" 场景数据="体现诗人平等数据">
+	<TaskDatas ID="201" 任务名="美国地图" 下一个="101" 类型="OpenWnd" 值 = "HTMMapPathWnd"/>
     <!--TaskDatas ID="1" 任务名="惊奇两只飞鸟" 下一个="0" 类型="StartState" 值 = "InitMoveCamera" 描述="请点击两只鸟"/>
 	<TaskDatas ID="2" 任务名="点击鸟" 下一个="4"  类型="Click" 值 = "鸟" 描述 = "To show American’s unique identity, Whitman uses many images from American landscape in his poem, and also describes the abyss of the suffering in American, such as the American Civil War. ( 为了展示美国的独特性，惠特曼选取了很多美国独特的意象，描写美国大众的苦难，譬如美国独立战争。) "/>
 	<TaskDatas ID="3" 任务名="点击鸟" 下一个="4"  类型="Click" 值 = "鸟" 描述 = "To show American’s unique identity, Whitman uses many images from American landscape in his poem, and also describes the abyss of the suffering in American, such as the American Civil War. ( 为了展示美国的独特性，惠特曼选取了很多美国独特的意象，描写美国大众的苦难，譬如美国独立战争。) "/-->
@@ -108,6 +107,7 @@
 	<TaskDatas ID="12" 任务名="点击前往About Democracy场景" 下一个="0" 类型="TaskChange" 值 = "About Democracy" 描述="点击右侧任务名前往About Democracy场景"/>
   </SceneTasks>
   <SceneTasks 场景任务名="About Democracy" 图标="icon_cover_china_usa" 场景数据="中美民主思想比较数据">
+	<TaskDatas ID="201" 任务名="美国地图" 下一个="101" 类型="OpenWnd" 值 = "HTMMapPathWnd"/>
 	<TaskDatas ID="101" 任务名="位置显示" 下一个="99" 类型="PersonMove" 值 = "end" />
 	<TaskDatas ID="99" 任务名="位置显示" 下一个="1" 类型="StartState" 值 = "InitMoveCamera" />
     <TaskDatas ID="1" 任务名="位置显示" 下一个="2" 类型="OpenWnd" 值 = "HTMMapPathWnd" />

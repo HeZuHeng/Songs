@@ -162,6 +162,7 @@ GameObject:
   - component: {fileID: 5426554637263636499}
   - component: {fileID: 4121526749358482585}
   - component: {fileID: 6903935935358580573}
+  - component: {fileID: 1362623062346385623}
   m_Layer: 0
   m_Name: InputField
   m_TagString: Untagged
@@ -291,6 +292,20 @@ MonoBehaviour:
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
+--- !u!114 &1362623062346385623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1655895250266740732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6fe79cded16a4f4d99bb58f9f8f6f05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputField: {fileID: 0}
+  RectT: {fileID: 0}
 --- !u!1 &1756481619250388050
 GameObject:
   m_ObjectHideFlags: 0
@@ -449,7 +464,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Name it as a captain! (\u4F5C\u4E3A\u8239\u957F\uFF0C\u8BF7\u4F60\u7ED9\u5B83\u547D\u540D\u5427\uFF01)"
+  m_Text: Hi guy! Welcome to my world! Please name the ship!
 --- !u!114 &6155372698851127484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -785,7 +800,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5290645652918116273
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1109,7 +1124,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5290645653988540280
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1309,7 +1324,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: d6c5349ada27ca54c8cd6f8151037162, type: 3}
-    m_FontSize: 28
+    m_FontSize: 32
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -1320,4 +1335,4 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: ok
+  m_Text: "\u786E\u8BA4"

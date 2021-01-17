@@ -8,6 +8,8 @@ public class HTMMapPathWnd : UIBase
 {
     public Button Button_next;
 
+    public Button[] maps;
+
     protected override void Awake()
     {
         base.Awake();
@@ -19,6 +21,11 @@ public class HTMMapPathWnd : UIBase
     private void Initialized()
     {
         if(Button_next != null) Button_next.onClick.AddListener(OnClickNext);
+
+        for (int i = 0; i < maps.Length; i++)
+        {
+            maps[i].onClick.AddListener(OnEnd);
+        }
     }
 
 
@@ -26,18 +33,42 @@ public class HTMMapPathWnd : UIBase
     protected override void OnEnable()
     {
         base.OnEnable();
+        int index = 0;
+        if(SceneController.ChildController.GetType() == typeof(HTMStartController))
+        {
+            index = 0;
+        }
+
+        if (SceneController.ChildController.GetType() == typeof(ImageSelfController))
+        {
+            index = 1;
+        }
+
+        if (SceneController.ChildController.GetType() == typeof(CoverSongController))
+        {
+            index = 2;
+        }
+
+        if (SceneController.ChildController.GetType() == typeof(EqualityController))
+        {
+            index = 3;
+        }
+
+        if (SceneController.ChildController.GetType() == typeof(DemocracyController))
+        {
+            index = 4;
+        }
+
+        for (int i = 0; i < maps.Length; i++)
+        {
+            maps[i].transform.parent.gameObject.SetActive(index == i);
+        }
     }
-
-
-
-
-
 
     public void OnClickNext()
     {
-        //to do:切换界面
-        Debug.Log("切换界面");
-        OnEnd();
+        Button_next.transform.parent.gameObject.SetActive(false);
+
     }
 
     public void OnEnd()
