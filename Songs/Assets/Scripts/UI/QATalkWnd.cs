@@ -97,7 +97,7 @@ public class QATalkWnd : UIBase
 
         int answer = question.questions.IndexOf(inputField.text);
 
-        if (question.answers != null && question.answers.Count > 0 && !question.answers.Contains(answer))
+        if (answer >= 0 && question.answers != null && question.answers.Count > 0 && !question.answers.Contains(answer))
         {
             if(errorTip != null)
             {

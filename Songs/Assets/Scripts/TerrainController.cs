@@ -30,6 +30,7 @@ public class TerrainController : MonoBehaviour
             {
                 water = transform.Find("AQUAS_Waterplane");
             }
+            
         }
         Transform skysParent = transform.Find("Skys");
         if(skysParent != null)
@@ -41,6 +42,23 @@ public class TerrainController : MonoBehaviour
             }
         }
         audioSources = GetComponentsInChildren<AudioSource>();
+
+        if (Application.platform == RuntimePlatform.WindowsEditor)
+        {
+            if(water != null)
+            {
+                MeshRenderer[] meshs = water.GetComponentsInChildren<MeshRenderer>();
+                for (int i = 0; i < meshs.Length; i++)
+                {
+                    Material mat = meshs[i].sharedMaterial;
+                    mat.shader = Shader.Find(mat.shader.name);
+                }
+            }
+            if (water != null)
+            {
+                terrain.basemapDistance = 0;
+            }
+        }
     }
 
     public void SetDetailObjects(float val)
