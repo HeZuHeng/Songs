@@ -163,7 +163,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7783353085722137050}
-  - component: {fileID: 7783353085715185210}
   - component: {fileID: 7783353085704160634}
   m_Layer: 0
   m_Name: Env_Hero_Tower
@@ -190,25 +189,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 364.127, z: 0}
---- !u!95 &7783353085715185210
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7783353085722562042}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: f7ed5596a923a4d47868e6893b3cda3f, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!205 &7783353085704160634
 LODGroup:
   m_ObjectHideFlags: 0

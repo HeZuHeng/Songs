@@ -317,7 +317,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7360810549121546767}
-  - component: {fileID: 7360810549128500719}
   - component: {fileID: 7360810549105962671}
   m_Layer: 0
   m_Name: Env_Hero_Mountain
@@ -344,25 +343,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -187.10399, z: 0}
---- !u!95 &7360810549128500719
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7360810549121246767}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 1cf8a7ede0c76274d912eae068cd0e97, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!205 &7360810549105962671
 LODGroup:
   m_ObjectHideFlags: 0
