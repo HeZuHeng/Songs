@@ -61,6 +61,10 @@ public class SongsDataMng
     /// 阅读的诗歌文件路径
     /// </summary>
     public string GetSongFilePath { get; set; }
+    /// <summary>
+    /// 阅读的诗歌文件路径
+    /// </summary>
+    public string GetSongSoundPath { get; set; }
 
     public QuestionBankData GetQuestionBankData { get; private set; }
 

@@ -5,11 +5,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Songs;
+using UnityEngine.Video;
 
 public class ExperienceWnd : UIBase
 {
     public Text[] texts;
-
+    public VideoPlayer videoPlayer;
     public Texture[] textures;
     int index = 0;
     int index1 = 0;
@@ -27,12 +28,11 @@ public class ExperienceWnd : UIBase
         index = 0;
         ExperienceUtil.Instance.SetTexture(textures[index]);
         //CancelInvoke("DoMove");
-        Invoke("DoMove", 1);
-
+        //Invoke("DoMove", 1);
+        DoMove();
         index1 = 0;
         texts[index1].enabled = true;
-        CancelInvoke("ShowText");
-        InvokeRepeating("ShowText",3,3);
+        
     }
 
     protected override void OnDisable()
@@ -55,12 +55,34 @@ public class ExperienceWnd : UIBase
 
     void DoMove()
     {
-        ExperienceUtil.Instance.DoMoveCamera(textures[index], new Vector3(1, 2, -4), 7.5f, delegate () {
-            index++;
-            ExperienceUtil.Instance.DoMoveCamera(textures[index], new Vector3(-1, 1, -6), 7.5f, delegate () {
-                OnClose();
-            });
-        });
+        ExperienceUtil.Instance.Close();
+        videoPlayer.source = VideoSource.Url;
+        videoPlayer.url = Application.streamingAssetsPath + "/ExperienceWnd.mp4";
+        videoPlayer.loopPointReached -= OnLoopPointReached;
+        videoPlayer.loopPointReached += OnLoopPointReached;
+        videoPlayer.prepareCompleted -= OnPrepareCompleted;
+        videoPlayer.prepareCompleted += OnPrepareCompleted;
+        //videoPlayer.enabled = true;
+        videoPlayer.Play();
+        //ExperienceUtil.Instance.DoMoveCamera(textures[index], new Vector3(1, 2, -4), 7.5f, delegate () {
+        //    index++;
+        //    ExperienceUtil.Instance.DoMoveCamera(textures[index], new Vector3(-1, 1, -6), 7.5f, delegate () {
+        //        OnClose();
+        //    });
+        //});
+        
+    }
+
+    void OnPrepareCompleted(VideoPlayer videoPlayer) 
+    {
+        CancelInvoke("ShowText");
+        float time = videoPlayer.frameCount / videoPlayer.frameRate / 5f;
+        InvokeRepeating("ShowText", time + 2, time);
+    }
+
+    void OnLoopPointReached(VideoPlayer videoPlayer)
+    {
+        OnClose();
     }
 
     public void OnClose()

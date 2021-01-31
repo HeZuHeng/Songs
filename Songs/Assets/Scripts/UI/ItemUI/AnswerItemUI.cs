@@ -11,7 +11,7 @@ public class AnswerItemUI : MonoBehaviour
 
     float radian = 0; // 弧度
     float perRadian = 0.03f; // 每次变化的弧度
-    float radius = 30f; // 半径
+    float radius = 10f; // 半径
     Vector3 oldPos; // 开始时候的坐标
 
     bool showTip;
@@ -53,5 +53,6 @@ public class AnswerItemUI : MonoBehaviour
         time = Time.time;
         tip.enabled = false;
         perRadian = Random.Range(0.01f, 0.1f);
+        oldPos = transform.localPosition; // 将最初的位置保存到oldPos
     }
 }

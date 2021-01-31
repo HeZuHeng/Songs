@@ -11,8 +11,7 @@ public class LeftDialogueWnd : UIBase
 {
     public TrendsText lblStatus;
     public Button nextBtn;
-    private string[] allTexts;
-    int index = 0;
+
     protected override void Awake()
     {
         base.Awake();
@@ -30,9 +29,10 @@ public class LeftDialogueWnd : UIBase
 
     protected override void OnDisable()
     {
-        CheckEnd();
+        //CheckEnd();
         StopAllCoroutines();
-        allTexts = null;
+        SongsDataMng.GetInstance().GetSongSoundPath = string.Empty;
+        SongsDataMng.GetInstance().GetSongFilePath = string.Empty;
         lblStatus.m_Text = string.Empty;
         if (lblStatus.m_AudioClip != null)
         {
@@ -50,8 +50,7 @@ public class LeftDialogueWnd : UIBase
         {
             if (!unityWeb.isHttpError)
             {
-                allTexts = unityWeb.downloadHandler.text.Split('|');
-                StartCoroutine(GetSongFileSound(SongsDataMng.GetInstance().GetSongFilePath));
+                Show(unityWeb.downloadHandler.text,SongsDataMng.GetInstance().GetSongSoundPath);
             }
             else
             {
@@ -60,75 +59,62 @@ public class LeftDialogueWnd : UIBase
         }
     }
 
-    IEnumerator GetSongFileSound(string path)
-    {
-        string newPath = path.Split('.')[0].ToLower();
-        UnityWebRequest unityWeb = UnityWebRequestAssetBundle.GetAssetBundle(Application.streamingAssetsPath + "/WebGL/" + newPath);
-        yield return unityWeb.SendWebRequest();
-        AudioClip audioClip = null;
-        if (unityWeb.isDone)
-        {
-            if (!unityWeb.isHttpError)
-            {
-                DownloadHandlerAssetBundle handlerAssetBundle = unityWeb.downloadHandler as DownloadHandlerAssetBundle;
-                AssetBundle assetBundle = handlerAssetBundle.assetBundle;
-                if (assetBundle != null)
-                {
-                    audioClip = assetBundle.LoadAsset<AudioClip>(newPath);
-                }
-                assetBundle.Unload(false);
-                assetBundle = null;
-            }
-        }
-        index = 0;
-        Show(audioClip);
-    }
-
-    void Show(AudioClip audioClip = null)
+    void Show(string text,string soundName)
     {
         lblStatus.m_CallBack.RemoveListener(OnNext);
         lblStatus.m_CallBack.AddListener(OnNext);
-        if (index < allTexts.Length)
-        {
-            lblStatus.Play(allTexts[index], audioClip);
-            lblStatus.m_AudioClip = audioClip;
-        }
+        lblStatus.Play(text, soundName);
     }
 
     void OnNext()
     {
-        index++;
-        if (index >= allTexts.Length)
-        {
-            Show();
-        }
+
     }
 
     void OnEnd()
     {
-        index++;
         CheckEnd();
+        
         UIMng.Instance.ConcealUI(UIType.LeftDialogueWnd);
     }
 
-    bool CheckEnd()
+    void CheckEnd()
     {
-        if (allTexts == null) return false;
-        if (index >= allTexts.Length)
+        TaskData taskData = SongsDataMng.GetInstance().GetTaskData;
+        if (taskData != null)
         {
-            TaskData taskData = SongsDataMng.GetInstance().GetTaskData;
-            if (taskData != null)
+            if (taskData.type == TaskType.LookSong && !string.IsNullOrEmpty(taskData.val))
             {
-                if (taskData.type == TaskType.LookSong && !string.IsNullOrEmpty(taskData.val))
+                if (taskData.val.Equals(SongsDataMng.GetInstance().GetSongFilePath))
                 {
-                    if (taskData.val.Equals(SongsDataMng.GetInstance().GetSongFilePath))
+                    if ("iwanderedlonelyasacloud4.txt".Equals(SongsDataMng.GetInstance().GetSongFilePath))
                     {
-                        taskData.TaskState = TaskState.End;
+                        MainPlayer.songResultInfo.FillAnswer(4, string.Empty, 2, AnswerType.Operating);
                     }
+                    if ("yinjiuqi5.txt".Equals(SongsDataMng.GetInstance().GetSongFilePath))
+                    {
+                        MainPlayer.songResultInfo.FillAnswer(6, string.Empty, 2, AnswerType.Operating);
+                    }
+                    if ("htmsong.txt".Equals(SongsDataMng.GetInstance().GetSongFilePath))
+                    {
+                        MainPlayer.songResultInfo.FillAnswer(17, string.Empty, 1, AnswerType.Operating);
+                    }
+                    if ("tiangou.txt".Equals(SongsDataMng.GetInstance().GetSongFilePath))
+                    {
+                        MainPlayer.songResultInfo.FillAnswer(20, string.Empty, 1, AnswerType.Operating);
+                    }
+
+                    if ("htmsong1.txt".Equals(SongsDataMng.GetInstance().GetSongFilePath))
+                    {
+                        MainPlayer.songResultInfo.FillAnswer(21, string.Empty, 1, AnswerType.Operating);
+                    }
+                    if ("htmsong2.txt".Equals(SongsDataMng.GetInstance().GetSongFilePath))
+                    {
+                        MainPlayer.songResultInfo.FillAnswer(22, string.Empty, 1, AnswerType.Operating);
+                    }
+                    taskData.TaskState = TaskState.End;
                 }
             }
-            return false;
         }
-        return true;
     }
 }

@@ -160,7 +160,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -17, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &5731884964299109343
 MonoBehaviour:
@@ -327,8 +327,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2624679538474293391}
   m_HandleRect: {fileID: 135947974043198564}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.8
+  m_Value: 0
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -660,7 +660,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 303d39751c9844844933b950d73d5ca5, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -995,7 +995,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 480, y: 0}
-  m_SizeDelta: {x: 960, y: 240}
+  m_SizeDelta: {x: 960, y: 280}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5591028547323248913
 CanvasRenderer:
@@ -1046,6 +1046,7 @@ GameObject:
   - component: {fileID: 5591028547768727835}
   - component: {fileID: 5591028547768727834}
   - component: {fileID: 5591028547768727829}
+  - component: {fileID: 7321558043109513741}
   m_Layer: 5
   m_Name: Text (1)
   m_TagString: Untagged
@@ -1093,7 +1094,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9058824, g: 0.9568628, b: 0.9803922, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1132,8 +1133,10 @@ MonoBehaviour:
     of British Romanticism. He asserts all good poetry is the spontaneous overflow
     of powerful feelings recollected in tranquility.\n|\u5A01\u5EC9\xB7\u534E\u5179\u534E\u65AF(1770-1850),\u6E56\u7554\u6D3E\u8BD7\u4EBA\u4E4B\u4E00\uFF0C\u662F\u82F1\u56FD\u6D6A\u6F2B\u4E3B\u4E49\u7684\u4EE3\u8868\u4EBA\u7269\u3002\u4ED6\u8BA4\u4E3A\u6240\u6709\u597D\u7684\u8BD7\u6B4C\u90FD\u662F\u5F3A\u70C8\u611F\u60C5\u7684\u81EA\u7136\u6D41\u9732\uFF0C\u8BD7\u6B4C\u6E90\u4E8E\u5B81\u9759\u4E2D\u56DE\u5FC6\u7684\u60C5\u611F\u3002"
   m_Enable: 1
+  m_Conetnt: {fileID: 0}
   m_ShowSpeed: 30
   m_AudioClip: {fileID: 0}
+  m_AudioName: sound_2
   m_CallBack:
     m_PersistentCalls:
       m_Calls:
@@ -1152,6 +1155,23 @@ MonoBehaviour:
       PublicKeyToken=null
   m_ScrollRect: {fileID: 5510804240001092317}
   m_TextC: 
+--- !u!114 &7321558043109513741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5591028547768727831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0848bff101191904ead4bb831f7084db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BlurFactor: 1
+  m_Style: 2
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 2, y: 2}
+  m_UseGraphicAlpha: 1
 --- !u!1 &5591028547858308149
 GameObject:
   m_ObjectHideFlags: 0
@@ -1221,8 +1241,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000034573204}
-  m_SizeDelta: {x: 0, y: 300}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 280}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &6587250159622320651
 GameObject:
@@ -1256,7 +1276,7 @@ RectTransform:
   m_Father: {fileID: 8551410068884959177}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.19999999}
+  m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
@@ -1310,6 +1330,7 @@ GameObject:
   - component: {fileID: 7059977438120538063}
   - component: {fileID: 1327604344835594580}
   - component: {fileID: 1286635094099690030}
+  - component: {fileID: 8072028874209501630}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -1416,6 +1437,19 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &8072028874209501630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6845150879353120612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2959af1056462f4dac933218f4ebd7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  btn: {fileID: 0}
 --- !u!1 &7528744517856501374
 GameObject:
   m_ObjectHideFlags: 0
@@ -1510,14 +1544,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5647059}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 648d1fcbdf5464a46b9bf1c6a81b6320, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1

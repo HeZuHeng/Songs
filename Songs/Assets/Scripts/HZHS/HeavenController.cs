@@ -47,6 +47,8 @@ public class HeavenController : ChildController
 
     void TalkCamera(OnStateEndDelegate onStateEnd)
     {
+        MainPlayer.songResultInfo.FillAnswer(9, string.Empty, 1, AnswerType.Operating);
+
         TymZouyi(delegate () {
             HzHsWoshou(delegate () {
                 if (onStateEnd != null) onStateEnd(GetState);
@@ -84,7 +86,7 @@ public class HeavenController : ChildController
 
     void HzHsWoshou(OnStateChangeDelegate onStateChange)
     {
-        Tween tween = sceneAsset.Tran.DOMove(hzhs.Tran.position + hzhs.Tran.forward * 1, 2f);
+        Tween tween = sceneAsset.Tran.DOMove(hzhs.Tran.position + hzhs.Tran.forward * 0.85f, 2f);
         tween.onUpdate = delegate ()
         {
             sceneAsset.PlayAnimator("Forward", 1, 1, null);
@@ -92,14 +94,14 @@ public class HeavenController : ChildController
         tween.onComplete = delegate ()
         {
             sceneAsset.PlayAnimator("Forward", 0, 1, null);
-            sceneAsset.PlayAnimator("woshou", true, 1, null);
-            hzhs.PlayAnimator("woshou", true, 1, delegate (string a)
+            hzhs.PlayAnimator("woshou", true, 1, null);
+            sceneAsset.PlayAnimator("woshou", true, 1, delegate (string a)
             {
                 hzhs.PlayAnimator("woshou", false, 1, null);
                 sceneAsset.PlayAnimator("woshou", false, 1, null);
                 onStateChange?.Invoke();
             });
-            SceneController.GetInstance().AddPlayAnimator(hzhs);
+            SceneController.GetInstance().AddPlayAnimator(sceneAsset);
         };
         Vector3 dir = hzhs.Tran.position - sceneAsset.Tran.position; //位置差，方向     
         float v = Vector3.Dot(sceneAsset.Tran.forward, dir);

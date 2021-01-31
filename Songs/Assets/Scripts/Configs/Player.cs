@@ -5,6 +5,7 @@ using UnityEngine.Events;
 
 public class MainPlayer
 {
+    public static SongResultInfo songResultInfo;
     public int Id;
     public string name;
     public int fraction;
@@ -20,6 +21,11 @@ public class MainPlayer
             memoryNum = value;
             OnMemoryNumChange?.Invoke(memoryNum);
         }
+    }
+
+    public MainPlayer()
+    {
+        songResultInfo = new SongResultInfo();
     }
 }
 

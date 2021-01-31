@@ -98,7 +98,7 @@ public class CameraMng
         capsuleCollider.radius = 0.3f;
         capsuleCollider.center = new Vector3(0, 0.8f, 0);
         PhysicMaterial physicMaterial = new PhysicMaterial();
-        physicMaterial.dynamicFriction = 0.2f;
+        physicMaterial.dynamicFriction = 0.5f;
         physicMaterial.staticFriction = 0.1f;
         physicMaterial.bounciness = 0.01f;
         physicMaterial.frictionCombine = PhysicMaterialCombine.Multiply;
@@ -152,6 +152,10 @@ public class CameraMng
 
     private void ResetCamera()
     {
+        if(PlayCutscene != null)
+        {
+            PlayCutscene.Stop();
+        }
         if (UserControl != null)
         {
             UserControl.transform.position = InitPosition;

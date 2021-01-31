@@ -46,7 +46,7 @@ public class EqualityController : ChildController
         nh = SceneMng.GetInstance().GetSceneAssetObject(111);
 
         //if (htm != null) htm.Tran.gameObject.SetActive(false);
-        
+        MainPlayer.songResultInfo.FillAnswer(18, string.Empty, 1, AnswerType.Operating);
     }
 
     public override void Close()
@@ -125,7 +125,7 @@ public class EqualityController : ChildController
         //    sceneAsset.Tran.parent.position = chuang.Tran.position - offset;
         //};
 
-        sceneAsset.Tran.gameObject.AddComponent<TriggerEvent>().enterEvent.AddListener(EnterEvent);
+        //sceneAsset.Tran.gameObject.AddComponent<TriggerEvent>().enterEvent.AddListener(EnterEvent);
         InputManager.GetInstance().RemoveClickEventListener(OnClickEvent);
         InputManager.GetInstance().AddClickEventListener(OnClickEvent);
 
@@ -164,6 +164,7 @@ public class EqualityController : ChildController
         UIMng.Instance.ActivationUI(UIType.MainDialogueWnd);
     }
 
+    List<int> lookSongNum = new List<int>();
     void OnClickEvent(GameObject obj)
     {
         int id = 0;
@@ -206,10 +207,12 @@ public class EqualityController : ChildController
         Tweener moveTw = sceneAsset.Tran.DOPath(points, time, PathType.Linear, PathMode.Ignore);
         moveTw.onUpdate += delegate ()
         {
+            AudioManager.Instance.PlayJiaobuSound(2, true);
             CameraMng.MainCamera.transform.LookAt(new Vector3(obj.transform.position.x, CameraMng.MainCamera.transform.position.y, obj.transform.position.z));
         };
         moveTw.onComplete += delegate ()
         {
+            AudioManager.Instance.PlayJiaobuSound(2, false);
             sceneAsset.Tran.LookAt(new Vector3(obj.transform.position.x, sceneAsset.Tran.position.y, obj.transform.position.z));
             CameraMng.mainCameraParent.position = CameraMng.MainCamera.transform.position;
             CameraMng.mainCameraParent.eulerAngles = CameraMng.MainCamera.transform.eulerAngles;
@@ -218,6 +221,9 @@ public class EqualityController : ChildController
             SongsDataMng.GetInstance().SetNextTaskData(id);
             UIMng.Instance.ConcealUI(UIType.MainDialogueWnd);
             UIMng.Instance.ActivationUI(UIType.MainDialogueWnd);
+
+            if (!lookSongNum.Contains(id)) lookSongNum.Add(id);
+            MainPlayer.songResultInfo.FillAnswer(19, string.Empty, lookSongNum.Count, AnswerType.Operating);
 
             movechuang.Play();
         };

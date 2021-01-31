@@ -119,7 +119,8 @@ public class TaskData
     public string val;
     [XmlAttribute("描述")]
     public string des;
-
+    [XmlAttribute("声音")]
+    public string sound;
     [NonSerialized]
     public TaskStateEvent onStateChange = new TaskStateEvent();
 

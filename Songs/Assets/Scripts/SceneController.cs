@@ -173,6 +173,7 @@ public class SceneController
         Progress = 0;
         if (ChildController != null) ChildController.Close();
         ChildController = null;
+        UIMng.Instance.ConcealUI(UIType.AnswerWnd);
         UIMng.Instance.ConcealUI(UIType.MemoryWnd);
         UIMng.Instance.ConcealUI(UIType.LeftDialogueWnd);
         UIMng.Instance.ConcealUI(UIType.SettingWnd);
@@ -231,7 +232,7 @@ public class SceneController
         CameraMng.GetInstance().InitPlayer(sceneAsset.Tran);
         sceneAsset.Tran.gameObject.SetActive(false);
         if (ChildController != null) ChildController.Init();
-
+        UIMng.Instance.ConcealUI(UIType.AnswerWnd);
         UIMng.Instance.ConcealUI(UIType.SelectPlotWnd);
         UIMng.Instance.ConcealUI(UIType.LoadingWnd);
         UIMng.Instance.OpenUI(UIType.NONE);

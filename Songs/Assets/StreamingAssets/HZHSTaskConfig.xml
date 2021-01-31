@@ -2,65 +2,99 @@
 <TasksConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <任务分支名>I .William Wordsworth</任务分支名>
   <SceneTasks 场景任务名="About Wordsworth" 图标="jieshao_cj" 场景数据="华兹华斯书房预览">
-	<TaskDatas ID="1" 任务名="来到故居" 下一个="1" 类型="StartState" 值 = "InitMoveCamera"/>
+	<TaskDatas ID="101" 任务名="来到故居" 下一个="102" 类型="Talk" 描述="Welcome to Wordsworth’s residence.|欢迎来到华兹华斯的故居"/>
+	<TaskDatas ID="102" 任务名="来到故居" 下一个="1" 类型="StartState" 值 = "InitMoveCamera"/>
     <TaskDatas ID="1" 任务名="华兹华斯背景介绍" 下一个="2" 类型="OpenWnd" 值 = "HZHSWnd"/>
-    <TaskDatas ID="2" 任务名="预览书房" 下一个="3" 类型="StartState" 值 = "TalkCamera"/>
-    <TaskDatas ID="3" 任务名="书房中自由漫游" 下一个="4" 类型="PersonMove" 值 = "end"/>
+    <TaskDatas ID="2" 任务名="进入书房" 下一个="3" 类型="StartState" 值 = "TalkCamera" />
+	<TaskDatas ID="3" 任务名="书房中自由漫游" 下一个="103" 类型="PersonMove" 值 = "end"/>
+	<TaskDatas ID="103" 任务名="进入书房" 下一个="104" 类型="Talk" 声音="sound_3" 描述="Wordsworth is renowned as a master of poetry about nature. Nature has moral values and its philosophical significance. For Wordsworth, nature is the embodiment of the “Divine Spirit”
+	|华兹华斯因他的自然诗歌而闻名于世。自然具有道德价值，蕴含哲学意义。对于华兹华斯来说，自然是“神灵”的化身"/>
+	<TaskDatas ID="104" 任务名="预览书房" 下一个="4" 类型="Talk" 声音="sound_4" 描述="As the leading figure of English romantic poetry, Wordsworth has not only started the modern poetry, but also has changed the course of English poetry by using ordinary language and by advocating “return to nature”.
+	|华兹华斯是英国浪漫主义的先驱。他不仅开创了现代诗歌的先河，而且还倡导“回归自然”的理念, 他运用平实、朴素的语言，改变了英国诗歌发展的方向。"/>
 	<TaskDatas ID="4" 任务名="点击前往Three Books场景" 下一个="0" 类型="TaskChange" 值 = "Three Books" 描述="点击前往体验华兹华斯书房三本诗歌"/>
   </SceneTasks>
  <SceneTasks 场景任务名="Three Books" 图标="sanbenshu_cj" 场景数据="华兹华斯书房三本诗歌">
     <!--TaskDatas ID="4" 任务名="发现三本诗集" 下一个="5" 类型="DOTween" 描述="跟随镜头预览书房中的选择三本诗集的线索"/-->
     <TaskDatas ID="5" 任务名="寻找三本诗集并阅读" 下一个="0" 类型="PersonMove" 值 = "0" />
-    <TaskDatas ID="3" 任务名="阅读《The Solitary Reaper》诗歌" 下一个="0" 类型="LookSong" 值 = "thesolitaryreaper.txt"/>
-	<TaskDatas ID="2" 任务名="阅读《My Heart Leaps Up》诗歌" 下一个="0" 类型="LookSong" 值 = "myheartleapsup.txt"/>
-	<TaskDatas ID="1" 任务名="阅读《I Wandered Lonely as a Cloud》诗歌第一节" 下一个="6" 类型="LookSong" 值 = "iwanderedlonelyasacloud1.txt"/>
+    <TaskDatas ID="3" 任务名="阅读《The Solitary Reaper》诗歌" 下一个="0" 类型="LookSong" 值 = "thesolitaryreaper.txt" 声音="sound_5"/>
+	<TaskDatas ID="2" 任务名="阅读《My Heart Leaps Up》诗歌" 下一个="0" 类型="LookSong" 值 = "myheartleapsup.txt" 声音="sound_6"/>
+	<TaskDatas ID="1" 任务名="《I Wandered Lonely as a Cloud》" 下一个="101" 类型="Talk" 描述="In English literature, “I Wandered Lonely As a Cloud” is perhaps the most anthologized poem, which takes readers to the core of Wordsworth’s poetic beliefs."/>
+	<TaskDatas ID="101" 任务名="阅读《I Wandered Lonely as a Cloud》" 下一个="6" 类型="LookSong" 值 = "iwanderedlonelyasacloud.txt" 声音="sound_7"/>
 	<TaskDatas ID="6" 任务名="穿越回到华兹华斯时代" 下一个="7" 类型="StartState" 值 = "InitMoveCamera"/>
 	<TaskDatas ID="7" 任务名="《我好似一朵孤独的流云》创作背景介绍" 下一个="8" 类型="OpenWnd" 值 = "ExperienceWnd"/>
-	<TaskDatas ID="8" 任务名="华兹华斯的烦恼" 下一个="9" 类型="Animator" 值 = "101|1|1|true|sit" 描述 = "一天，华兹华斯躺在躺椅上想到革命失败又沮丧起来，想回忆美好事物之时，脑海却一片空白。
-	为了让诗人回忆起当时快乐的场景，首先请为他复原记忆内容。"/>
-	<TaskDatas ID="9" 任务名="点击前往I Wandered Lonely as a Cloud场景" 下一个="0" 类型="TaskChange" 值 = "I Wandered Lonely as a Cloud" 描述="点击右侧任务名前往《我好似一朵孤独的流云》意境还原"/>
+	<TaskDatas ID="8" 任务名="华兹华斯的烦恼" 下一个="9" 类型="Animator" 值 = "101|1|1|true|sit" />
+	<TaskDatas ID="9" 任务名="华兹华斯的烦恼" 下一个="10" 类型="Talk" 声音="sound_9" 描述 = "One day, when Wordsworth lay on a couch, the reminiscence of the revolution’s failure frustrated him. And he tried to recall some good old days but failed. In order to recall the happy scene of time, please help the poet to restore his memory first.
+	|一天，华兹华斯躺在躺椅上想到革命失败又沮丧起来，想回忆美好事物之时，脑海却一片空白。为了让诗人回忆起当时快乐的场景，首先请为他复原记忆内容。"/>
+	<TaskDatas ID="10" 任务名="点击前往I Wandered Lonely as a Cloud场景" 下一个="0" 类型="TaskChange" 值 = "I Wandered Lonely as a Cloud" 描述="点击右侧任务名前往《I Wandered Lonely as a Cloud》意境还原"/>
   </SceneTasks>
   <SceneTasks 场景任务名="I Wandered Lonely as a Cloud" 图标="hzhsyj_cj" 场景数据="华兹华斯赏花">
 	<TaskDatas ID="2" 任务名="帮助华兹华斯找回意境" 下一个="3" 类型="Talk" 描述 = "您需要根据诗的前三节内容及所给的提示来选择屏幕下方的意象，还原诗中所描绘的场景。"/>
-	<TaskDatas ID="3" 任务名="开始还原意境" 下一个="4" 类型="OpenWnd" 值 = "FantasyWnd" 描述 = ""/>
-    <TaskDatas ID="4" 任务名="点击前往找回现代故居书房通道场景" 下一个="0" 类型="TaskChange" 值 = "找回现代故居书房通道" 描述="点击右侧任务名前往体验找回现代故居书房通道场景"/>
+	<TaskDatas ID="3" 任务名="开始还原意境" 下一个="4" 类型="OpenWnd" 值 = "FantasyWnd" />
+	<TaskDatas ID="4" 任务名="帮助华兹华斯找回意境" 下一个="5" 类型="Talk" 声音="sound_10" 描述 = "In order to keep the permanent spiritual legacy, you are required to answer some questions to help the poet to re-experience the magical and special time whenever he feels upset or lonely.
+	|为了使诗人获得永久的精神财富，需要您回答几个问题。让诗人在任何沮丧之时都能够回忆起当时水仙花的画面，重获精神的救赎。"/>
+	<TaskDatas ID="5" 任务名="答题环节" 下一个="6" 类型="Question" 值 = "4" />
+	<TaskDatas ID="6" 任务名="答题环节" 下一个="7" 类型="Question" 值 = "5" />
+    <TaskDatas ID="7" 任务名="点击前往Back to the Reality场景" 下一个="0" 类型="TaskChange" 值 = "Back to the Reality" 描述="点击右侧任务名前往体验Back to the Reality"/>
   </SceneTasks>
-  <SceneTasks 场景任务名="找回现代故居书房通道" 图标="sxh_cj" 场景数据="华兹华斯书房意境">
+  <SceneTasks 场景任务名="Back to the Reality" 图标="sxh_cj" 场景数据="华兹华斯书房意境">
 	<TaskDatas ID="100" 任务名="华兹华斯书房中自由漫游" 下一个="1" 类型="PersonMove" 值 = "end" />
     <TaskDatas ID="1" 任务名="来到华兹华斯时代书房" 下一个="2" 类型="StartState" 值 = "InitMoveCamera"/>
-	<TaskDatas ID="2" 任务名="请赏析第四节诗歌" 下一个="3" 类型="Talk" 描述 = "您已成功激活诗人记忆，请赏析第四节诗歌。"/>
-	<TaskDatas ID="3" 任务名="第四节诗歌" 下一个="5" 类型="LookSong" 值 = "iwanderedlonelyasacloud4.txt"/>
-	<TaskDatas ID="5" 任务名="第四节诗歌解析" 下一个="7" 类型="Animator" 值 = "101|1|1|true|sit" 描述 = "Firstly, the poet writes daffodils, and in the last part, he writes about the daffodils’ healing power. He writes both objective things (daffodils) and subjective feelings. The poet and daffodils are connected to each other, and the empty mind can be healed at any time through this infinite spiritual wealth.
-	|诗人先写水仙, 最后再写水仙对诗人的魅力, 写的既是客观之物 (水仙) , 又是主观之情 (诗人)。诗人与水仙心灵相通,无论何时都能通过这种无穷的精神财富使百无聊赖的心灵空虚和精神颓唐得到治愈。"/>
-	<TaskDatas ID="7" 任务名="与花瓶里摇曳的水仙花一起舞蹈" 下一个="8" 类型="Animator" 值 = "101|1|1|true|dance|end"/>
-	<TaskDatas ID="8" 任务名="找到回故居的通道" 下一个="9" 类型="Question" 值 = "6"/>
+	<TaskDatas ID="2" 任务名="请赏析第四节诗歌" 下一个="3" 类型="Talk" 描述 = "You have successfully activated the poet’s memory. Please appreciate the last stanza.
+	|您已成功激活诗人记忆，请赏析最后一节诗歌。"/>
+	<TaskDatas ID="3" 任务名="第四节诗歌" 下一个="4" 类型="LookSong" 值 = "iwanderedlonelyasacloud4.txt"/>
+	<TaskDatas ID="4" 任务名="华兹华斯的烦恼" 下一个="5" 类型="Animator" 值 = "101|1|1|true|sit" />
+	<TaskDatas ID="5" 任务名="第四节诗歌解析" 下一个="7" 类型="Talk" 描述 = "The speaker often lies on the couch, either absent-minded or thoughtful. It is then that the daffodils come back to the speaker’s imaginative memory. It argues that humanity is not separate from nature which is essential to human happiness. This happiness is drawn from the speaker’s interaction with daffodils, in turn encouraging  readers to appreciate the natural majesty.
+	|说话者时常躺在沙发上,正百无聊赖或思绪万千之时，水仙花悄然潜入诗人的记忆之中。诗歌主张自然与人类的快乐是密不可分的。快乐源自说话者与自然世界中水仙花的互动，同时也鼓励读者感受自然的神圣。"/>
+	<TaskDatas ID="7" 任务名="与花瓶里摇曳的水仙花一起舞蹈" 下一个="101" 类型="Animator" 值 = "101|1|1|true|dance|end"/>
+	<TaskDatas ID="101" 任务名="找到回故居的通道" 下一个="8" 类型="Talk" 描述 = "Please answer the question to find a way back to the reality.
+	|请完成弹出的相应问题，找到回故居的通道。"/>
+	<TaskDatas ID="8" 任务名="答题环节" 下一个="9" 类型="Question" 值 = "6"/>
 	<TaskDatas ID="9" 任务名="回到华兹华斯时代书房" 下一个="10" 类型="StartState" 值 = "TalkCamera"/>
-	<TaskDatas ID="10" 任务名="找到书房中的菊花并点击" 下一个="11" 类型="Talk" 描述 = "Far away in the beautiful landscape of China, there is also a representative pastoral image，Let’s find it!"/>
-	<TaskDatas ID="11" 任务名="点击前往《饮酒》场景" 下一个="12" 类型="TaskChange" 值 = "《饮酒》" 描述="点击右侧任务名前往体验陶渊明《饮酒（其五）》"/>
+	<TaskDatas ID="10" 任务名="找到书房中的菊花" 下一个="12" 类型="Talk" 描述 = "In ancient China，there is also a poet who loves nature very much , what kind of flower do Chinese intellectuals like? Let’ s find it in this room!
+	|在古代中国，也有一个热爱大自然的诗人。中国文人喜欢什么样的花呢？一起来找找吧！"/>
+	<TaskDatas ID="12" 任务名="点击菊花" 下一个="13" 类型="Click" 值 = "ALL_Model/NewModelParent/菊花瓶"/>
+	<TaskDatas ID="13" 任务名="点击前往《饮酒》场景" 下一个="0" 类型="TaskChange" 值 = "《饮酒》" 描述="点击右侧任务名前往体验陶渊明《饮酒（其五）》"/>
   </SceneTasks>
   <SceneTasks 场景任务名="《饮酒》" 图标="tymjh_cj" 场景数据="陶渊明赏花">
-    <TaskDatas ID="1" 任务名="预览菊花场景" 下一个="4" 类型="DOTween" 描述 = "Far away in the beautiful landscape of China, there is also a representative pastoral poet - Tao Yuanming. Let’s go and see.
-	|游客您好，远在山水优美的中国也有一位具有代表性的田园诗人——陶渊明，让我们去看看吧。"/>
-	<TaskDatas ID="4" 任务名="菊花场景中自由漫游" 下一个="2" 类型="ThirdPerson" 值 = "end"/>
-    <TaskDatas ID="2" 任务名="鉴赏陶渊明的诗——《饮酒（其五）》" 下一个="3" 类型="LookSong" 值 = "yinjiuqi5.txt"/>
+    <TaskDatas ID="1" 任务名="预览菊花场景" 下一个="2" 类型="DOTween" 值 = "end" />
+	<TaskDatas ID="2" 任务名="鉴赏陶渊明的诗《饮酒(其五)》" 下一个="4" 类型="LookSong" 值 = "yinjiuqi5.txt" 声音="sound_12"/>
+	<TaskDatas ID="4" 任务名="菊花场景中自由漫游" 下一个="3" 类型="ThirdPerson" 值 = "end"/>
     <TaskDatas ID="3" 任务名="意境比较" 下一个="5" 类型="OpenWnd" 值 = "FantasyCompareWnd"/>
-	<TaskDatas ID="5" 任务名="中英诗歌精神比较" 下一个="0" 类型="TaskChange" 值 = "Men and Nature" 描述="点击右侧任务名前往体验中英诗歌精神比较"/>
+	<TaskDatas ID="5" 任务名="意境比较" 下一个="6" 类型="Talk" 描述="You have successfully obtained the opportunity to meet and communicate with Wordsworth and Tao Yuanming. Let’s talk with them.
+	|您已成功获取与诗人见面交流的机会，让我们与诗人对话吧。"/>
+	<TaskDatas ID="6" 任务名="中英诗歌精神比较" 下一个="0" 类型="TaskChange" 值 = "Man and Nature" 描述="点击右侧任务名前往体验中英诗歌精神比较"/>
   </SceneTasks>
-  <SceneTasks 场景任务名="Men and Nature" 图标="zywbij_cj" 场景数据="中英诗歌精神比较">
+  <SceneTasks 场景任务名="Man and Nature" 图标="zywbij_cj" 场景数据="中英诗歌精神比较">
     <TaskDatas ID="1" 任务名="取名" 下一个="2" 类型="OpenWnd" 值 = "RenameWnd"/>
 	<TaskDatas ID="2" 任务名="两位诗人见面" 下一个="3" 类型="StartState" 值 = "InitMoveCamera"/>
-	<TaskDatas ID="3" 任务名="陶渊明发起交谈" 下一个="4" 类型="Talk" 值 = "102" 描述 = "Hi, Mr. Wordsworth. Is you? "/>
-	<TaskDatas ID="4" 任务名="华兹华斯问好" 下一个="5" 类型="Talk" 值 = "101" 描述 = "Yes! Are you Tao yuanming? "/>
-	<TaskDatas ID="5" 任务名="陶渊明问好" 下一个="6" 类型="Talk" 值 = "102" 描述 = "Yes, so nice to meet you."/>
-	<TaskDatas ID="6" 任务名="华兹华斯称赞" 下一个="7" 类型="Talk" 值 = "101" 描述 = "Oh, I have read your poems about nature. You know, in nature and the language of the sense, I can find my purest thoughts, the nurse, the guide, the guardian of my heart, and soul of all my moral being."/>
-	<TaskDatas ID="7" 任务名="陶渊明疑惑" 下一个="8" 类型="Talk" 值 = "102" 描述 = "Exactly."/>
-	<TaskDatas ID="8" 任务名="华兹华斯疑惑" 下一个="11" 类型="Talk" 值 = "101" 描述 = "But may I ask a question about your poem?"/>
-	<TaskDatas ID="11" 任务名="实验者见面" 下一个="12" 类型="StartState" 值 = "TalkCamera"/>
-	<TaskDatas ID="12" 任务名="从主客体的关系去考虑" 下一个="13" 类型="QATalk" 值 = "7" 描述 = "101"/>
-	<TaskDatas ID="13" 任务名="华兹华斯赞同" 下一个="14" 类型="Talk" 值 = "101" 描述 = " Oh， I see!"/>
-	<TaskDatas ID="14" 任务名="从体现自我的角度思考" 下一个="15" 类型="QATalk" 值 = "8" 描述 = "102"/>
-	<TaskDatas ID="15" 任务名="华兹华斯表达思想" 下一个="16" 类型="Talk" 值 = "101" 描述 = "In the connection between spirit and nature, we can find a correspondence between self-emotions in natural existence, and emphasize the physical and mental feelings after the intersection of mind and nature，which is different from directly integrating self into nature.
-	|在精神与自然联系中，将自我的情感在自然存在中寻找一种对应,强调心灵与自然的交汇后的身心感受和人生品味, 这与你们直接将自我融入自然有着区别。"/>
+	<TaskDatas ID="3" 任务名="陶渊明发起交谈" 下一个="4" 类型="Talk" 值 = "102" 声音="sound_15_1" 描述 = "Hi, Mr. Wordsworth. Is you?
+	|华君，汝乎？"/>
+	<TaskDatas ID="4" 任务名="华兹华斯问好" 下一个="5" 类型="Talk" 值 = "101" 声音="sound_15_2" 描述 = "Yes! Are you Tao yuanming? "/>
+	<TaskDatas ID="5" 任务名="陶渊明问好" 下一个="6" 类型="Talk" 值 = "102" 声音="sound_15_3" 描述 = "Yes, so nice to meet you.
+	|然也，与君识，幸甚！"/>
+	<TaskDatas ID="6" 任务名="华兹华斯称赞" 下一个="7" 类型="Talk" 值 = "101" 声音="sound_15_4" 描述 = "Oh, I have read your poems about nature. You know, “In nature and the language of the sense,The anchor of my purest thoughts, the nurse,The guide, the guardian of my heart, and soul Of all my moral being”
+	|我读过您的自然之诗。你知道吗，我欣然发现在感官与大自然的交流中，我纯洁的思想有了依托，我的心有了乳母、导师及守护者，我全部精神生命有了灵魂。"/>
+	<TaskDatas ID="7" 任务名="陶渊明的肯定" 下一个="8" 类型="Talk" 值 = "102" 声音="sound_15_5" 描述 = "Exactly! So nice!
+	|然矣！甚好！"/>
+	<TaskDatas ID="8" 任务名="华兹华斯感谢" 下一个="11" 类型="Talk" 值 = "101" 声音="sound_15_6" 描述 = "Thank you!
+	|谢谢！"/>
+	<TaskDatas ID="11" 任务名="实验者见面" 下一个="101" 类型="StartState" 值 = "TalkCamera"/>
+	
+	<TaskDatas ID="101" 任务名="欣赏诗歌" 下一个="102" 类型="LookSong" 值 = "yinjiuqi5.txt|end" 声音=""/>
+	<TaskDatas ID="102" 任务名="华兹华斯疑惑" 下一个="103" 类型="Talk" 值 = "101" 声音="sound_15_7" 描述 = "Hi,{0},you like it？Could you explain the meaning of “见” and why it can not be replaced by “望”in“悠然见南山”？"/>
+	
+	<TaskDatas ID="103" 任务名="答题环节" 下一个="104" 类型="Question" 值 = "7"/>
+	<TaskDatas ID="104" 任务名="陶渊明解析" 下一个="105" 类型="Talk" 值 = "102" 声音="sound_15_8" 描述 = "于悠悠采菊之间，翠如南山之屏，间而入吾之眼帘。"/>
+	<TaskDatas ID="105" 任务名="华兹华斯肯定" 下一个="106" 类型="Talk" 值 = "101" 声音="sound_15_9" 描述 = "Oh, I see! "/>
+	
+	<TaskDatas ID="106" 任务名="欣赏诗歌" 下一个="107" 类型="LookSong" 值 = "iwanderedlonelyasacloud1.txt|end" 声音=""/>
+	<TaskDatas ID="107" 任务名="陶渊明疑惑" 下一个="108" 类型="Talk" 值 = "102" 声音="sound_15_10" 描述 = "Since you have mentioned the choice of words, Mr. Wordsworth, the use of ‘gaze’in this poem seems to have a special meaning , what does it mean?{0}？
+	|既然提到这个，在您的诗中用了gaze一词，似乎带有一种特别的意蕴，这背后代表了什么吗？”你怎么看?"/>
+	
+	<TaskDatas ID="108" 任务名="答题环节" 下一个="109" 类型="Question" 值 = "8"/>
+	<TaskDatas ID="109" 任务名="华兹华斯解析" 下一个="110" 类型="Talk" 值 = "101" 声音="sound_15_11" 描述 = "Both Chinese and British writers would love to explore the relationship between nature and humanity. The British romantic poets uses lines to express deep love for nature and how nature is able to completely change his life for the better. But the Chinese poets values harmony between nature and humanity.In a word,for British poets,Nature and humanity are good friends;for Chinese ones, nature and humanity all in one!
+	|中西诗人都乐于探索人与自然的关系，英国浪漫主义诗人倾向于用诗歌表达对自然的热爱，自然可以帮助人们更加美好地生活，但是中国诗人相信天人合一。 简而言之，对于英国诗人而言，人与自然是好朋友，对于中国诗人而言，人与自然融为一体。"/>
+	<TaskDatas ID="110" 任务名="陶渊明的肯定" 下一个="16" 类型="Talk" 值 = "102" 声音="sound_15_12" 描述 = "脱有经过便，念来存故人。临别之前，吾欲赠汝一宝。"/>
 	<TaskDatas ID="16" 任务名="找到回故居的通道" 下一个="17" 类型="Question" 值 = "9"/>
 	<TaskDatas ID="17" 任务名="跟惠特曼一起寻找自由女神" 下一个="0" 类型="OpenWnd" 值 = "HZHSEndWnd"/>
   </SceneTasks>

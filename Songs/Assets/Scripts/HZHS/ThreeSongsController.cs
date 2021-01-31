@@ -27,7 +27,7 @@ public class ThreeSongsController : ChildController
         bool2 = SceneMng.GetInstance().GetSceneAssetObject(1003);
         bool3 = SceneMng.GetInstance().GetSceneAssetObject(1004);
         if (hzhs != null) hzhs.Tran.gameObject.SetActive(false);
-        sceneAsset.Tran.gameObject.AddComponent<TriggerEvent>().enterEvent.AddListener(EnterEvent);
+        //sceneAsset.Tran.gameObject.AddComponent<TriggerEvent>().enterEvent.AddListener(EnterEvent);
         InputManager.GetInstance().AddClickEventListener(OnClickEvent);
     }
 
@@ -97,7 +97,7 @@ public class ThreeSongsController : ChildController
         onStateEnd?.Invoke(GetState);
     }
 
-
+    List<int> lookSongNum = new List<int>();
     void EnterEvent(string name)
     {
         if (!name.Contains("book")) return;
@@ -114,7 +114,10 @@ public class ThreeSongsController : ChildController
         //    CameraMng.GetInstance().UserControl.State(true);
         //});
         //SceneController.GetInstance().AddPlayAnimator(sceneAsset);
+        
         SongsDataMng.GetInstance().SetNextTaskData(id);
+        if (!lookSongNum.Contains(id)) lookSongNum.Add(id);
+        MainPlayer.songResultInfo.FillAnswer(2, string.Empty, lookSongNum.Count, AnswerType.Operating);
         UIMng.Instance.ConcealUI(UIType.MainDialogueWnd);
         UIMng.Instance.ActivationUI(UIType.MainDialogueWnd);
 

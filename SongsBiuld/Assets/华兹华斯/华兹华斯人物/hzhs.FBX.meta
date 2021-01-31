@@ -14,7 +14,37 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: hzhs
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: hzhs_1001_mtl
+    second: {fileID: 2100000, guid: c528583281a02244286774dece4e2b80, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: hzhs_1002_mtl
+    second: {fileID: 2100000, guid: 426d64c0fea277947bd9b0650bd24ede, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: hzhs_1003_mtl
+    second: {fileID: 2100000, guid: 47eb712eba684434dbf120d4d2921783, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: hzhs_1004_mtl
+    second: {fileID: 2100000, guid: bd288f6f49fe2d84abee2c14bed38c18, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: hzhs_1005_mtl
+    second: {fileID: 2100000, guid: dfe00b5ade0158242b3005dbbebe6d9d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: hzhs_1006_mtl
+    second: {fileID: 2100000, guid: d05f033f766eebe4aa45ae0e4c87a71f, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -42,17 +72,17 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
-    importVisibility: 1
+    importVisibility: 0
     importBlendShapes: 1
-    importCameras: 1
-    importLights: 1
+    importCameras: 0
+    importLights: 0
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1

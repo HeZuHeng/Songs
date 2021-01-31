@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MREngine;
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
@@ -12,11 +13,12 @@ public class TrendsText : MonoBehaviour
     [TextArea(4, 10)]
     public string m_Text;           //显示的文本内容
     public bool m_Enable;           //是否在OnEnable中初始化Play
-    private Text m_Conetnt;         //用于显示的文本
+    public Text m_Conetnt;         //用于显示的文本
     [Header("字/每秒")]
     public float m_ShowSpeed = 1;   //动态文字的速度
                                     //与文字播放同时播放的音频
     public AudioClip m_AudioClip;
+    public string m_AudioName;
     //文字播完回调
     public CallBack m_CallBack;
 
@@ -37,22 +39,26 @@ public class TrendsText : MonoBehaviour
     {
         m_Conetnt = this.GetComponent<Text>();
         rect = m_Conetnt.transform as RectTransform;
-        
-        if (Application.platform == RuntimePlatform.WindowsEditor)
-        {
-            endYieldTime = 0.1f;
-        }
+
+        endYieldTime = 0.1f;
         SongsDataMng.GetInstance().orEnglishChange += OnEnglishChange;
     }
     private void OnEnable()
     {
         //CancelInvoke("ShowEnglish");
+        m_Conetnt.text = string.Empty;
         if (m_Enable)
-            Play();
+            Play(m_Text, m_AudioName);
     }
     private void OnDisable()
     {
         //CancelInvoke("ShowEnglish");
+        m_Conetnt.text = string.Empty;
+        if (m_AudioClip != null)
+        {
+            m_AudioClip.UnloadAudioData();
+            m_AudioClip = null;
+        }
         StopAllCoroutines();
     }
 
@@ -63,12 +69,12 @@ public class TrendsText : MonoBehaviour
 
     void OnEnglishChange(bool val)
     {
-        if (!val)
+        if (!val && compelete)
         {
             //CancelInvoke("ShowEnglish");
             ShowEnglish();
         }
-        if(val && compelete)
+        if(val && compelete && !string.IsNullOrEmpty(m_TextC))
         {
             string str = m_TextC;
             string LineHead = "";
@@ -82,6 +88,19 @@ public class TrendsText : MonoBehaviour
                 str = LineHead + str;
             }
             m_Conetnt.text = str;
+            if (m_ScrollRect != null)
+            {
+                RectTransform TempCententRect = m_ScrollRect.content.GetComponent<RectTransform>();
+                RectTransform TempScrollRect = m_ScrollRect.GetComponent<RectTransform>();
+                //更新滑动区域大小使之与文本框大小相同（仅高度相同）
+                TempCententRect.sizeDelta = new Vector2(TempCententRect.sizeDelta.x, m_Conetnt.preferredHeight);
+                //当滑动高度大于ScrollRect的显示高度时保证滑动区域始终在最下方
+                if (TempCententRect.sizeDelta.y > TempScrollRect.sizeDelta.y)
+                {
+                    if (m_ScrollRect.verticalScrollbar != null)
+                        m_ScrollRect.verticalScrollbar.value = 0;
+                }
+            }
             //CancelInvoke("ShowEnglish");
             //Invoke("ShowEnglish", 10);
         }
@@ -101,6 +120,39 @@ public class TrendsText : MonoBehaviour
             str = LineHead + str;
         }
         m_Conetnt.text = str;
+        if (m_ScrollRect != null)
+        {
+            RectTransform TempCententRect = m_ScrollRect.content.GetComponent<RectTransform>();
+            RectTransform TempScrollRect = m_ScrollRect.GetComponent<RectTransform>();
+            //更新滑动区域大小使之与文本框大小相同（仅高度相同）
+            TempCententRect.sizeDelta = new Vector2(TempCententRect.sizeDelta.x, m_Conetnt.preferredHeight);
+            //当滑动高度大于ScrollRect的显示高度时保证滑动区域始终在最下方
+            if (TempCententRect.sizeDelta.y > TempScrollRect.sizeDelta.y)
+            {
+                if (m_ScrollRect.verticalScrollbar != null)
+                    m_ScrollRect.verticalScrollbar.value = 0;
+            }
+        }
+    }
+
+    public void Show(string text)
+    {
+        //m_Text = string.Empty;
+        string[] ecs = text.Split('|');
+        if (ecs.Length > 0)
+        {
+            m_Text = ecs[0];
+        }
+        if (ecs.Length > 1)
+        {
+            m_TextC = ecs[1];
+        }
+        ShowEnglish();
+        if (m_ScrollRect != null)
+        {
+            if (m_ScrollRect.verticalScrollbar != null)
+                m_ScrollRect.verticalScrollbar.value = 1;
+        }
     }
 
     /// <summary>
@@ -150,6 +202,7 @@ public class TrendsText : MonoBehaviour
             if (m_AudioSource == null)
                 m_AudioSource = this.gameObject.AddComponent<AudioSource>();
             m_AudioSource.clip = m_AudioClip;
+            m_AudioSource.bypassEffects = true;
             //读写速度根据音频长度平均计算
             m_ShowSpeed = str.Length / m_AudioClip.length;
         }
@@ -164,7 +217,12 @@ public class TrendsText : MonoBehaviour
     public void Play(string varCentent)
     {
         m_Text = varCentent;
-        m_AudioClip = null;
+        m_TextC = string.Empty;
+        if (m_AudioClip != null)
+        {
+            m_AudioClip.UnloadAudioData();
+            m_AudioClip = null;
+        }
         if (m_Conetnt == null) m_Conetnt = this.GetComponent<Text>();
         if (!enabled || !this.gameObject.activeSelf)
         {
@@ -181,6 +239,12 @@ public class TrendsText : MonoBehaviour
     public void Play(string varCentent, AudioClip audio)
     {
         m_Text = varCentent;
+        m_TextC = string.Empty;
+        if (m_AudioClip != null)
+        {
+            m_AudioClip.UnloadAudioData();
+            m_AudioClip = null;
+        }
         m_AudioClip = audio;
         if(m_Conetnt == null) m_Conetnt = this.GetComponent<Text>();
         if (!enabled || !this.gameObject.activeSelf)
@@ -189,6 +253,26 @@ public class TrendsText : MonoBehaviour
             return;
         }
         Play();
+    }
+
+    public void Play(string varCentent, string audioName)
+    {
+        m_AudioClip = null;
+        if (string.IsNullOrEmpty(audioName))
+        {
+            Play(varCentent);
+            return;
+        }
+        m_AudioName = audioName;
+        GameLoadTask loadCamera = GameDataManager.GetInstance().GetGameTask(m_AudioName);
+        loadCamera.OnTaskProgress += delegate (float progress)
+        {
+            if (progress >= 1)
+            {
+                AudioClip audioClip = loadCamera.MainData.LoadAsset(m_AudioName) as AudioClip;
+                Play(varCentent, audioClip);
+            }
+        };
     }
 
     /// <summary>

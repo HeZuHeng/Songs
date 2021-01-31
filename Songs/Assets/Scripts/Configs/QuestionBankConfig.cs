@@ -19,6 +19,14 @@ public class QuestionBankData
 {
     [XmlElement("ID")]
     public int Id;
+    [XmlElement("类型")]
+    public AnswerType answerType;
+    [XmlElement("题号")]
+    public int answerId;
+    [XmlElement("子题号")]
+    public int answerChildId;
+    [XmlElement("分数")]
+    public int minute;
     [XmlElement("图标")]
     public string icon;
     [XmlElement("题头")]
@@ -48,4 +56,14 @@ public class QuestionBankData
 public class QuestionEndEvent : UnityEvent
 {
     public QuestionEndEvent() { }
+}
+
+
+public enum AnswerType
+{
+    SingleChoice,
+    MultipleChoice,
+    FillInTheBlank,
+    Operating,
+    Summary
 }

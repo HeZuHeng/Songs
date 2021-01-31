@@ -13,11 +13,11 @@ public class FantasyWnd : UIBase
 {
     static string[] Tips =
     {
-        "In contrast to the crowds in the object, the author’s loneliness and frustration are reflected.（与客体中的成群结队形成对比，体现作者的孤单、沮丧。）",
-        "A group of brisk and lively images contrast with the poet’s melancholy.（一群舞姿轻快、活泼的意象，与诗人的忧郁惆怅形成对比。）",
-        "Shining bright, lighting up the world and driving away the poet’s inner haze.（闪耀璀璨，照亮了世界并驱赶了诗人内心的阴霾。）",
-        "A path that enables poet to a happy paradise and discover himself.（一条使诗人能够通往快乐的天堂、发现自我的道路。）",
-        "even if aroused by the wind, it doesn’t dance as cheerfully and delightfully as daffodils do.（即使被风撩拨，它也远不如水仙跳舞跳得欢快、热烈。）"
+        "In contrast to thousands of daffodils in the objective world, the speaker’s loneliness and frustration are highlighted.|与客体世界中无数的水仙花形成对比，体现说话者的孤单、沮丧。",
+        "In contrast with a group of brisk and lively flowers, the speaker is melancholy.|一群舞姿轻快、活泼的意象，与说话者的忧郁惆怅形成对比。",
+        "Shining bright, lighting up the world and driving away the speaker’s inner haze.|闪耀璀璨，照亮了世界并驱赶了说话者内心的阴霾。",
+        "A path that enables the speaker to get into the happy paradise and discover himself.|一条使说话者能够通往快乐的天堂、发现自我的道路。",
+        "In their gleeful fluttering and dancing, the daffodils outdo ___ of lake.|___远不如水仙跳舞跳得欢快、热烈。"
     };
 
     static string[] Names =
@@ -29,6 +29,7 @@ public class FantasyWnd : UIBase
     public UIShadow[] shadows;
     public ScrollRect scrollRect;
     public TrendsText tip;
+    public Text tip2;
 
     public FantasyItemUI[] itemUIs;
 
@@ -62,7 +63,7 @@ public class FantasyWnd : UIBase
             scrollRect.content.GetChild(i).gameObject.SetActive(true);
         }
         Show();
-
+        tip2.text = "第一节";
         SceneController.TerrainController.SetDetailObjects(0.1f);
         SceneController.TerrainController.SetWater(false);
         SceneController.TerrainController.SetSky(0,1f);
@@ -95,7 +96,9 @@ public class FantasyWnd : UIBase
         QuestionBankData bankData = null;
         if (index == 0)
         {
+           
             SceneController.TerrainController.SetSky(1, 0.7f);
+            MainPlayer.songResultInfo.FillAnswer(3,1, string.Empty, 1, AnswerType.Operating);
             yield return new WaitForSeconds(0.3f);
         }
 
@@ -103,17 +106,20 @@ public class FantasyWnd : UIBase
         {
             SceneController.TerrainController.SetDetailObjects(1);
             SongsDataMng.GetInstance().Player.MemoryNum = 1;
+            MainPlayer.songResultInfo.FillAnswer(3, 1, string.Empty, 2, AnswerType.Operating);
             yield return new WaitForSeconds(1f);
             tip.transform.parent.gameObject.SetActive(false);
             bankData = SongsDataMng.GetInstance().SetQuestion(1);
             bankData.onQuestionEnd.RemoveListener(NextFantasy);
             bankData.onQuestionEnd.AddListener(NextFantasy);
             UIMng.Instance.ActivationUI(UIType.AnswerWnd);
+            tip2.text = "第二节";
         }
 
         if (index == 2)
         {
             SceneController.TerrainController.SetSky(2, 0.3f);
+            MainPlayer.songResultInfo.FillAnswer(3, 2, string.Empty, 1, AnswerType.Operating);
             yield return new WaitForSeconds(0.3f);
         }
 
@@ -121,18 +127,22 @@ public class FantasyWnd : UIBase
         {
             SceneController.TerrainController.SetSky(3, 0.1f);
             SongsDataMng.GetInstance().Player.MemoryNum = 2;
+            MainPlayer.songResultInfo.FillAnswer(3, 2, string.Empty, 2, AnswerType.Operating);
             yield return new WaitForSeconds(1f);
             tip.transform.parent.gameObject.SetActive(false);
             bankData = SongsDataMng.GetInstance().SetQuestion(2);
             bankData.onQuestionEnd.RemoveListener(NextFantasy);
             bankData.onQuestionEnd.AddListener(NextFantasy);
             UIMng.Instance.ActivationUI(UIType.AnswerWnd);
+            tip2.text = "第三节";
         }
         if (index == 4)
         {
+            
             SceneController.TerrainController.SetSky(1, 1f);
             SceneController.TerrainController.SetWater(true);
             SongsDataMng.GetInstance().Player.MemoryNum = 3;
+            MainPlayer.songResultInfo.FillAnswer(3, 3, string.Empty, 1, AnswerType.Operating);
             yield return new WaitForSeconds(1f);
             tip.transform.parent.gameObject.SetActive(false);
             bankData = SongsDataMng.GetInstance().SetQuestion(3);
@@ -156,7 +166,7 @@ public class FantasyWnd : UIBase
         if (index >= Names.Length)
         {
             tip.transform.parent.gameObject.SetActive(false);
-            NextQuestion();
+            OnEnd();// NextQuestion();
             return;
         }
         tip.transform.parent.gameObject.SetActive(true);

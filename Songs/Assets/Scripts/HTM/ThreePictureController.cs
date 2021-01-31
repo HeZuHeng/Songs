@@ -20,7 +20,7 @@ public class ThreePictureController : ChildController
         htm = SceneMng.GetInstance().GetSceneAssetObject(102);
         chuang = SceneMng.GetInstance().GetSceneAssetObject(103);
 
-        sceneAsset.Tran.gameObject.AddComponent<TriggerEvent>().enterEvent.AddListener(EnterEvent);
+        //sceneAsset.Tran.gameObject.AddComponent<TriggerEvent>().enterEvent.AddListener(EnterEvent);
         InputManager.GetInstance().AddClickEventListener(OnClickEvent);
     }
 
@@ -53,7 +53,7 @@ public class ThreePictureController : ChildController
             onStateEnd?.Invoke(GetState);
         };
     }
-
+    List<int> lookSongNum = new List<int>();
     void EnterEvent(string name)
     {
         Debug.Log(name);
@@ -72,6 +72,10 @@ public class ThreePictureController : ChildController
         //});
         //SceneController.GetInstance().AddPlayAnimator(sceneAsset);
         SongsDataMng.GetInstance().SetNextTaskData(id);
+
+        if (!lookSongNum.Contains(id)) lookSongNum.Add(id);
+        MainPlayer.songResultInfo.FillAnswer(13, string.Empty, lookSongNum.Count, AnswerType.Operating);
+
         UIMng.Instance.ConcealUI(UIType.MainDialogueWnd);
         UIMng.Instance.ActivationUI(UIType.MainDialogueWnd);
     }

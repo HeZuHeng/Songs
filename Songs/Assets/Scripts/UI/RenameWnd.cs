@@ -32,6 +32,8 @@ public class RenameWnd : UIBase
                 UIType type = (UIType)System.Enum.Parse(typeof(UIType), taskData.val);
                 if (type == Type)
                 {
+
+                    MainPlayer.songResultInfo.FillAnswer(8, string.Empty, 1, AnswerType.Operating);
                     taskData.TaskState = TaskState.End;
                 }
             }

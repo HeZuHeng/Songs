@@ -36,6 +36,7 @@ public class HZHSWnd : UIBase
                 }
             }
         }
+        MainPlayer.songResultInfo.FillAnswer(1, string.Empty, 1, AnswerType.Operating);
         UIMng.Instance.OpenUI(UIType.NONE);
     }
 }

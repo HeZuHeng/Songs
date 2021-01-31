@@ -8,16 +8,22 @@ using Songs;
 
 public class AnswerWnd : UIBase
 {
+    static string[] ABCDEFG = new string[7] { "A", "B", "C", "D", "E", "F", "G", };
+
     public RectTransform answerParent;
     public RectTransform startParent;
 
     public ScrollRect scrollRect;
-
+    public Text trendsTextHead;
     public TrendsText trendsText;
     public Text head;
     public Text errorTip;
     public Button confirmBtn;
     public Image icon;
+
+    public Button btn1;
+    public Button btn2;
+    public Button btn3;
 
     public string m_Text;
     public string m_TextC;//中文
@@ -28,14 +34,20 @@ public class AnswerWnd : UIBase
         Type = UIType.SettingWnd;
         MutexInterface = false;
         confirmBtn.onClick.AddListener(OnConfirm);
+        btn1.onClick.AddListener(OnConfirm1);
+        btn2.onClick.AddListener(OnConfirm2);
+        btn3.onClick.AddListener(OnConfirm3);
     }
 
     protected override void OnEnable()
     {
         base.OnEnable();
-        Show();
-        transform.SetAsLastSibling();
         num = 0;
+        Show();
+        m_TextC = string.Empty;
+        m_Text = string.Empty;
+        transform.SetAsLastSibling();
+        
         SongsDataMng.GetInstance().orEnglishChange += OnEnglishChange;
     }
 
@@ -50,7 +62,7 @@ public class AnswerWnd : UIBase
     {
         answerParent.gameObject.SetActive(false);
         startParent.gameObject.SetActive(false);
-
+        btn3.gameObject.SetActive(false);
         QuestionBankData question = SongsDataMng.GetInstance().GetQuestionBankData;
         if (question == null) return;
 
@@ -58,16 +70,20 @@ public class AnswerWnd : UIBase
         if (!string.IsNullOrEmpty(question.des))
         {
             startParent.gameObject.SetActive(true);
-            trendsText.m_CallBack.RemoveListener(OnReadDes);
-            trendsText.m_CallBack.AddListener(OnReadDes);
+            //trendsText.m_CallBack.RemoveListener(OnReadDes);
+            //trendsText.m_CallBack.AddListener(OnReadDes);
+            btn3.gameObject.SetActive(true);
+            trendsTextHead.text = "诗歌阅读";
             trendsText.Play(question.des.Replace("\\n", "\n"));
             return;
         }
         if (!string.IsNullOrEmpty(question.startParsing))
         {
             startParent.gameObject.SetActive(true);
-            trendsText.m_CallBack.RemoveListener(OnStartParsing);
-            trendsText.m_CallBack.AddListener(OnStartParsing);
+            trendsTextHead.text = "诗歌解析";
+            //trendsText.m_CallBack.RemoveListener(OnStartParsing);
+            //trendsText.m_CallBack.AddListener(OnStartParsing);
+            btn3.gameObject.SetActive(true);
             trendsText.Play(question.startParsing.Replace("\\n", "\n"));
             return;
         }
@@ -83,8 +99,10 @@ public class AnswerWnd : UIBase
         if (!string.IsNullOrEmpty(question.startParsing))
         {
             startParent.gameObject.SetActive(true);
-            trendsText.m_CallBack.RemoveListener(OnStartParsing);
-            trendsText.m_CallBack.AddListener(OnStartParsing);
+            trendsTextHead.text = "诗歌解析";
+            //trendsText.m_CallBack.RemoveListener(OnStartParsing);
+            //trendsText.m_CallBack.AddListener(OnStartParsing);
+            btn3.gameObject.SetActive(true);
             trendsText.Play(question.startParsing.Replace("\\n", "\n"));
         }
         else
@@ -115,15 +133,21 @@ public class AnswerWnd : UIBase
         if (!string.IsNullOrEmpty(question.endParsing))
         {
             startParent.gameObject.SetActive(true);
-            trendsText.m_CallBack.RemoveListener(OnEnd);
-            trendsText.m_CallBack.AddListener(OnEnd);
-            trendsText.Play(question.startParsing.Replace("\\n", "\n"));
+            //trendsText.m_CallBack.RemoveListener(OnEnd);
+            //trendsText.m_CallBack.AddListener(OnEnd);
+            btn3.gameObject.SetActive(true);
+            trendsTextHead.text = "答案解析";
+            trendsText.Play(question.endParsing.Replace("\\n", "\n"));
             return;
         }
     }
 
     void Show(QuestionBankData question)
     {
+        btn1.gameObject.SetActive(!string.IsNullOrEmpty(question.des));
+        btn2.gameObject.SetActive(!string.IsNullOrEmpty(question.startParsing));
+        btn3.gameObject.SetActive(false);
+
         for (int i = 0; i < scrollRect.content.childCount; i++)
         {
             scrollRect.content.GetChild(i).gameObject.SetActive(false);
@@ -153,6 +177,8 @@ public class AnswerWnd : UIBase
         bool showTip = false;
         Transform tran = null;
         int count = scrollRect.content.childCount;
+        float total = 50 + question.questions.Count * 450;
+        float startPos = 50 + (5 - question.questions.Count) * 150;
         for (int i = 0; i < question.questions.Count; i++)
         {
             if (count > i)
@@ -166,14 +192,14 @@ public class AnswerWnd : UIBase
             }
             if (question.answers != null)
             {
-                showTip = question.answers.Contains(i);
+                showTip = question.answers.Contains(i) && !string.IsNullOrEmpty(question.errorTip);
             }
+            tran.localPosition = new Vector3(startPos + i * 450, -70, tran.localPosition.z);
             tran.GetComponentInChildren<AnswerItemUI>().Show(question.questions[i], showTip);
-            tran.localPosition = new Vector3(100 + i * 600, -50, tran.localPosition.z);
             tran.localScale = Vector3.one;
             tran.gameObject.SetActive(true);
         }
-        scrollRect.content.sizeDelta = new Vector2(200 + question.questions.Count * 600, scrollRect.content.sizeDelta.y);
+        scrollRect.content.sizeDelta = new Vector2(total, scrollRect.content.sizeDelta.y);
         scrollRect.content.localPosition = Vector3.zero;
     }
 
@@ -188,38 +214,67 @@ public class AnswerWnd : UIBase
                 t.Add(i);
             }
         }
-        
-        
-        if (question.answers.Count > 0)
+        string ansStr = string.Empty;
+        int minute = 0;
+
+        if (question.answers.Count > 0 && t.Count <= question.answers.Count)
         {
-            bool val = t.Count == question.answers.Count;
-            if (val)
+            for (int i = 0; i < t.Count; i++)
             {
-                for (int i = 0; i < t.Count; i++)
+                if (t[i] == question.answers[i])
                 {
-                    if (!question.answers.Contains(t[i]))
+                    minute += question.minute;
+                    if (i == 0)
                     {
-                        val = false;
+                        if(question.answerType == AnswerType.FillInTheBlank)
+                        {
+                            ansStr = question.questions[t[i]];
+                        }
+                        else if (question.answerType == AnswerType.SingleChoice || question.answerType == AnswerType.MultipleChoice)
+                        {
+                            ansStr = ABCDEFG[t[i]];
+                        }
+                    }
+                    else
+                    {
+                        if (question.answerType == AnswerType.FillInTheBlank)
+                        {
+                            ansStr += "," + question.questions[t[i]];
+                        }
+                        else if (question.answerType == AnswerType.SingleChoice || question.answerType == AnswerType.MultipleChoice)
+                        {
+                            ansStr = "," + ABCDEFG[t[i]];
+                        }
                     }
                 }
             }
-            if (!val)
-            {
-                num++;
-                if (num <= 1)
-                {
-                    errorTip.text = "选择错误！请重新选择。";
-                    StopCoroutine(Reset());
-                    StartCoroutine(Reset());
-                    SceneController.GetInstance().ToState(State.TalkCameraError, null);
-                }
-                else
-                {
-                    errorTip.text = question.errorTip;
-                }
-                errorTip.enabled = true;
-                return;
-            }
+        }
+
+        //if (minute == 0 && question.errorTip != null)
+        //{
+        //    num++;
+        //    if (num <= 1)
+        //    {
+        //        errorTip.text = "选择错误！请重新选择。";
+        //        StopCoroutine(Reset());
+        //        StartCoroutine(Reset());
+        //        SceneController.GetInstance().ToState(State.TalkCameraError, null);
+        //    }
+        //    else
+        //    {
+        //        errorTip.text = question.errorTip;
+        //    }
+        //    errorTip.enabled = true;
+        //    return;
+        //}
+
+        if (question.answerChildId > 0)
+        {
+            MainPlayer.songResultInfo.FillAnswer(question.answerId, question.answerChildId, ansStr, minute, question.answerType);
+        }
+        else
+        {
+            MainPlayer.songResultInfo.FillAnswer(question.answerId, ansStr, minute, question.answerType);
         }
         
         if (!string.IsNullOrEmpty(question.endParsing))
@@ -230,6 +285,68 @@ public class AnswerWnd : UIBase
         {
             OnEnd();
         }
+    }
+
+    void OnConfirm1()
+    {
+        QuestionBankData question = SongsDataMng.GetInstance().GetQuestionBankData;
+        if (question == null) return;
+        startParent.gameObject.SetActive(true);
+        btn3.gameObject.SetActive(true);
+        num = 1;
+        trendsTextHead.text = "诗歌阅读";
+        trendsText.Show(question.des.Replace("\\n", "\n"));
+    }
+
+    void OnConfirm2()
+    {
+        QuestionBankData question = SongsDataMng.GetInstance().GetQuestionBankData;
+        if (question == null) return;
+        startParent.gameObject.SetActive(true);
+        btn3.gameObject.SetActive(true);
+        num = 2;
+        trendsTextHead.text = "诗歌解析";
+        trendsText.Show(question.startParsing.Replace("\\n", "\n"));
+    }
+
+    void OnConfirm3()
+    {
+        if(num > 0)
+        {
+            num = 0;
+            startParent.gameObject.SetActive(false);
+            return;
+        }
+        QuestionBankData question = SongsDataMng.GetInstance().GetQuestionBankData;
+        if (question == null) return;
+        if (!string.IsNullOrEmpty(question.endParsing) && startParent.gameObject.activeSelf)
+        {
+            if (question.endParsing.Replace("\\n", "\n").Contains(trendsText.m_Text))
+            {
+                OnEnd();
+                startParent.gameObject.SetActive(false);
+                return;
+            }
+        }
+
+        if (!string.IsNullOrEmpty(question.startParsing) && startParent.gameObject.activeSelf)
+        {
+            if (question.startParsing.Replace("\\n", "\n").Contains(trendsText.m_Text))
+            {
+                OnStartParsing();
+                return;
+            }
+        }
+
+        if (!string.IsNullOrEmpty(question.des) && startParent.gameObject.activeSelf)
+        {
+            if (question.des.Replace("\\n", "\n").Contains(trendsText.m_Text))
+            {
+                OnReadDes();
+                return;
+            }
+        }
+        
     }
 
     void OnEnd()
@@ -266,7 +383,7 @@ public class AnswerWnd : UIBase
             //CancelInvoke("ShowEnglish");
             ShowEnglish();
         }
-        if (val)
+        if (val && !string.IsNullOrEmpty(m_TextC))
         {
             head.text = m_TextC;
             //CancelInvoke("ShowEnglish");

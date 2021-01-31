@@ -21,6 +21,7 @@ public class ExperienceUtil : MonoBehaviour
     }
     public void InitPosition()
     {
+        mCamera.enabled = true;
         mCamera.transform.localPosition = initPosition;
     }
     public void SetTexture(Texture texture)
@@ -33,5 +34,10 @@ public class ExperienceUtil : MonoBehaviour
        if(init) mCamera.transform.localPosition = initPosition;
         Tween tween = mCamera.transform.DOLocalMove(pos, time);
         tween.onComplete += callback;
+    }
+
+    public void Close()
+    {
+        mCamera.enabled = false;
     }
 }

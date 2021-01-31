@@ -14,7 +14,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Elemenery3dsMaterial1
-    second: {fileID: 2100000, guid: 993a5a33ddefcaf4b9c601e661a8003f, type: 2}
+    second: {fileID: 2100000, guid: 9a4d2701aca1e8048aabc2a9a9ad0f35, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -45,14 +45,14 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 10
     meshCompression: 3
     addColliders: 0
     useSRGBMaterialColor: 1
-    importVisibility: 1
+    importVisibility: 0
     importBlendShapes: 0
-    importCameras: 1
-    importLights: 1
+    importCameras: 0
+    importLights: 0
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1

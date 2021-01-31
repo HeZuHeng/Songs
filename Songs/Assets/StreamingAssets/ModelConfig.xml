@@ -448,7 +448,7 @@
     <ModelDatas Id="101" 模型名="华兹华斯" 资源名="hzhs" 图标 ="hzhs">
 	  <position>
         <x>408.4748</x>
-        <y>34.965</y>
+        <y>34.76</y>
         <z>982.4985</z>
       </position>
       <eulerAngle>
@@ -460,7 +460,7 @@
 	<ModelDatas Id="102" 模型名="陶渊明" 资源名="tym" 图标 ="tym">
 	  <position>
         <x>411.5391</x>
-        <y>34.9</y>
+        <y>34.76</y>
         <z>982.2038</z>
       </position>
       <eulerAngle>

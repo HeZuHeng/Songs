@@ -18,7 +18,7 @@ public class ArtisticController : ChildController
         sceneAsset = SceneMng.GetInstance().GetSceneAssetObject(1);
         hzhs = SceneMng.GetInstance().GetSceneAssetObject(101);
         if(hzhs != null) hzhs.Tran.gameObject.SetActive(false);
-        sceneAsset.Tran.gameObject.AddComponent<TriggerEvent>().enterEvent.AddListener(EnterEvent);
+        //sceneAsset.Tran.gameObject.AddComponent<TriggerEvent>().enterEvent.AddListener(EnterEvent);
         InputManager.GetInstance().AddClickEventListener(OnClickEvent);
     }
 

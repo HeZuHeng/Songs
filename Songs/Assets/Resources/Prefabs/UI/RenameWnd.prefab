@@ -91,6 +91,7 @@ GameObject:
   - component: {fileID: 6967440355616904281}
   - component: {fileID: 7730789412569470684}
   - component: {fileID: 848375583717745316}
+  - component: {fileID: 6073016864138127857}
   m_Layer: 5
   m_Name: Button (2)
   m_TagString: Untagged
@@ -115,7 +116,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 37}
+  m_AnchoredPosition: {x: 0, y: 76}
   m_SizeDelta: {x: 160, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6967440355616904281
@@ -194,20 +195,22 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7730789412569470684}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: OnClickHTM
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &6073016864138127857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4033590916446278088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2959af1056462f4dac933218f4ebd7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  btn: {fileID: 0}
 --- !u!1 &5539018091728751230
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,7 +330,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 106, y: 95}
+  m_AnchoredPosition: {x: 106, y: 165}
   m_SizeDelta: {x: 300, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5539018091763469488
@@ -577,7 +580,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9058824, g: 0.9568628, b: 0.9803922, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -597,10 +600,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "You have successfully obtained the opportunity to meet and communicate
-    with the poets. \nLet\u2019s talk with them and know about the spiritual differences
-    behind the different perspectives of their poems.\n\u60A8\u5DF2\u6210\u529F\u83B7\u53D6\u4E0E\u8BD7\u4EBA\u89C1\u9762\u4EA4\u6D41\u7684\u673A\u4F1A\uFF0C\u8BA9\u6211\u4EEC\u901A\u8FC7\u4E0E\u8BD7\u4EBA\u5BF9\u8BDD,\u6765\u4E86\u89E3\u4ED6\u4EEC\u8BD7\u4F5C\u4E0D\u540C\u89C6\u89D2\u80CC\u540E\u6240\u8574\u542B\u7684\u7CBE\u795E\u5DEE\u5F02\u5427\u3002\nPlease
-    give yourself an English name."
+  m_Text: "Hi!What\u2019s your English name? Please write down. If no, please name
+    yourself here.\n\u5728\u5F39\u51FA\u7684\u6846\u5185\u586B\u5165\u81EA\u5DF1\u7684\u82F1\u6587\u540D,\u6CA1\u6709\u7684\u8BDD\uFF0C\u7ED9\u81EA\u5DF1\u53D6\u4E00\u4E2A\u82F1\u6587\u540D"
 --- !u!1 &5539018092559735754
 GameObject:
   m_ObjectHideFlags: 0
@@ -709,7 +710,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -160, y: 95}
+  m_AnchoredPosition: {x: -160, y: 165}
   m_SizeDelta: {x: 240, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5539018092576863809

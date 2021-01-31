@@ -93,7 +93,6 @@ public class MainDialogueWnd : UIBase
         if (taskData.TaskState == TaskState.Start) taskData.TaskState = TaskState.Run;
         talkIcon.enabled = false;
 
-        int talking = 0;
         string talkId = "0";
         taskName.text = taskData.name;
         switch (taskData.type)
@@ -104,7 +103,7 @@ public class MainDialogueWnd : UIBase
                 break;
             case TaskType.Click:
                 Transform clikcObj = SceneController.TerrainController.transform.Find(taskData.val);
-                if(clikcObj != null)
+                if (clikcObj != null)
                 {
                     MeshRenderer[] meshes = clikcObj.GetComponentsInChildren<MeshRenderer>();
                     for (int i = 0; i < meshes.Length; i++)
@@ -112,7 +111,7 @@ public class MainDialogueWnd : UIBase
                         meshes[i].gameObject.AddComponent<HighlightableObject>();
                     }
                     HighlightableObjectHelper objectHelper = clikcObj.GetComponent<HighlightableObjectHelper>();
-                    if(objectHelper == null) objectHelper = clikcObj.gameObject.AddComponent<HighlightableObjectHelper>();
+                    if (objectHelper == null) objectHelper = clikcObj.gameObject.AddComponent<HighlightableObjectHelper>();
                     objectHelper.enabled = true;
                     InputManager.GetInstance().RemoveClickEventListener(OnClickEvent);
                     InputManager.GetInstance().AddClickEventListener(OnClickEvent);
@@ -130,32 +129,32 @@ public class MainDialogueWnd : UIBase
             case TaskType.Animator:
                 string[] strs = taskData.val.Split('|');
                 int id = 0;
-                int.TryParse(strs[0],out id);
+                int.TryParse(strs[0], out id);
                 int aType = 0;
                 int.TryParse(strs[1], out aType);
                 int speed = 0;
                 int.TryParse(strs[2], out speed);
                 SceneAssetObject sceneAsset = SceneMng.GetInstance().GetSceneAssetObject(id);
-                if(sceneAsset == null)
+                if (sceneAsset == null)
                 {
                     taskData.TaskState = TaskState.End;
                     return;
                 }
-                if((AnimatorType)aType == AnimatorType.BOOl)
+                if ((AnimatorType)aType == AnimatorType.BOOl)
                 {
                     bool b = false;
                     bool.TryParse(strs[3], out b);
-                    bool loop = sceneAsset.PlayAnimator(strs[4], b, speed,delegate(string aName)
-                    {
-                        if (aName.Equals(strs[4]))
-                        {
-                            taskData.TaskState = TaskState.End;
-                        }
-                        if(strs.Length >= 6)
-                        {
-                            sceneAsset.PlayAnimator(strs[4], !b, speed, null);
-                        }
-                    });
+                    bool loop = sceneAsset.PlayAnimator(strs[4], b, speed, delegate (string aName)
+                     {
+                         if (aName.Equals(strs[4]) && !string.IsNullOrEmpty(taskData.des))
+                         {
+                             taskData.TaskState = TaskState.End;
+                         }
+                         if (strs.Length >= 6)
+                         {
+                             sceneAsset.PlayAnimator(strs[4], !b, speed, null);
+                         }
+                     });
                     SceneController.GetInstance().AddPlayAnimator(sceneAsset);
                 }
                 else if ((AnimatorType)aType == AnimatorType.FLOAT)
@@ -164,14 +163,13 @@ public class MainDialogueWnd : UIBase
                     float.TryParse(strs[3], out f);
                     bool loop = sceneAsset.PlayAnimator(strs[4], f, speed, delegate (string aName)
                     {
-                        if (aName.Equals(strs[4]))
+                        if (aName.Equals(strs[4]) && !string.IsNullOrEmpty(taskData.des))
                         {
                             taskData.TaskState = TaskState.End;
                         }
                         if (strs.Length >= 6)
                         {
                             sceneAsset.PlayAnimator(strs[4], 1 - f, speed, null);
-                            taskData.TaskState = TaskState.End;
                         }
                     });
                     SceneController.GetInstance().AddPlayAnimator(sceneAsset);
@@ -179,7 +177,7 @@ public class MainDialogueWnd : UIBase
                 break;
             case TaskType.Question:
                 int qId = 0;
-                int.TryParse(taskData.val,out qId);
+                int.TryParse(taskData.val, out qId);
                 SongsDataMng.GetInstance().SetQuestion(qId);
                 UIMng.Instance.ActivationUI(UIType.AnswerWnd);
                 break;
@@ -191,8 +189,8 @@ public class MainDialogueWnd : UIBase
                 break;
             case TaskType.StartState:
                 State state = (State)System.Enum.Parse(typeof(State), taskData.val);
-                SceneController.GetInstance().ToState(state,delegate(State end) { 
-                    if(state == end)
+                SceneController.GetInstance().ToState(state, delegate (State end) {
+                    if (state == end)
                     {
                         taskData.TaskState = TaskState.End;
                     }
@@ -201,14 +199,30 @@ public class MainDialogueWnd : UIBase
             case TaskType.Move:
                 break;
             case TaskType.LookSong:
-                SongsDataMng.GetInstance().GetSongFilePath = taskData.val;
+                string[] songStrs = taskData.val.Split('|');
+                SongsDataMng.GetInstance().GetSongFilePath = songStrs[0];
+                SongsDataMng.GetInstance().GetSongSoundPath = taskData.sound;
+                UIMng.Instance.ConcealUI(UIType.LeftDialogueWnd);
                 UIMng.Instance.ActivationUI(UIType.LeftDialogueWnd);
-                break;
-            case TaskType.DOTween:
-                CameraMng.GetInstance().DOTweenPaly(delegate ()
+                if (songStrs.Length > 1)
                 {
                     taskData.TaskState = TaskState.End;
-                });
+                    return;
+                }
+                break;
+            case TaskType.DOTween:
+                if (taskData.val.Equals("end"))
+                {
+                    CameraMng.GetInstance().DOTweenPaly(null);
+                    taskData.TaskState = TaskState.End;
+                }
+                else
+                {
+                    CameraMng.GetInstance().DOTweenPaly(delegate ()
+                    {
+                        taskData.TaskState = TaskState.End;
+                    });
+                }
                 break;
             case TaskType.PersonMove:
                 CameraMng.GetInstance().SetPersonMove();
@@ -242,8 +256,7 @@ public class MainDialogueWnd : UIBase
                 talkId = taskData.val;
                 break;
         }
-
-        talking = !string.IsNullOrEmpty(taskData.des) ? 1 : 0;
+        int talking = !string.IsNullOrEmpty(taskData.des) ? 1 : 0;
 
         talkParent.gameObject.SetActive(talking == 1);
         taskNameParent.gameObject.SetActive(talking == 0);
@@ -258,6 +271,7 @@ public class MainDialogueWnd : UIBase
                 SceneAssetObject sceneAsset = SceneMng.GetInstance().GetSceneAssetObject(talkTargetId);
                 if(sceneAsset != null)
                 {
+                    sceneAsset.PlayAnimator("talk", false, 1, null);
                     sceneAsset.PlayAnimator("talk", true, 1, null);
                 }
                 talkName.text = modelData.name;
@@ -267,15 +281,6 @@ public class MainDialogueWnd : UIBase
             {
                 talkName.text = "系统提示";
                 iconN = string.Empty;
-                //SceneAssetObject sceneAssetObject = SceneMng.GetInstance().GetSceneAssetObject(1);
-                //if ("nyk".Equals(sceneAssetObject.URL))
-                //{
-                //    iconN = "nyk";
-                //}
-                //else
-                //{
-                //    iconN = "nvyk";
-                //}
             }
             if (!string.IsNullOrEmpty(iconN)) {
                 Sprite obj = Resources.Load<Sprite>("Sprites/PlayerIcon/" + iconN);
@@ -290,22 +295,23 @@ public class MainDialogueWnd : UIBase
                 talkIcon.enabled = false;
             }
 
-            Show(taskData.des);
+            Show(taskData.des, taskData.sound);
         }
     }
 
-    void Show(string content)
+    void Show(string content,string soundName)
     {
         if (string.IsNullOrEmpty(content)) return;
+        content = string.Format(content, SongsDataMng.GetInstance().Player.name);
         talkContent.m_CallBack.RemoveListener(OnNext);
         talkContent.m_CallBack.AddListener(OnNext);
         talkContent.gameObject.SetActive(true);
-        talkContent.Play(content.Replace("\\n", "\n"));
+        talkContent.Play(content.Replace("\\n", "\n"), soundName);
     }
 
     void OnNext()
     {
-        if (taskData.type == TaskType.Talk && taskData != null && taskData.next != 0)
+        if (taskData.type == TaskType.Talk)
         {
             int talkTargetId = 0;
             int.TryParse(taskData.val, out talkTargetId);
@@ -327,7 +333,25 @@ public class MainDialogueWnd : UIBase
     {
         if(taskState == TaskState.End)
         {
+            if(taskData.type == TaskType.Talk)
+            {
+                UIMng.Instance.ConcealUI(UIType.LeftDialogueWnd);
+            }
+            if(taskData.next == 0)
+            {
+                talkParent.gameObject.SetActive(false);
+                taskNameParent.gameObject.SetActive(true);
+                return;
+            }
             taskData.onStateChange.RemoveListener(OnStateChange);
+            if (taskData.name.Equals("超验主义"))
+            {
+                MainPlayer.songResultInfo.FillAnswer(15, string.Empty, 1, AnswerType.Operating);
+            }
+            if (taskData.name.Equals("惠特曼的旁白"))
+            {
+                MainPlayer.songResultInfo.FillAnswer(16, string.Empty, 1, AnswerType.Operating);
+            }
             SongsDataMng.GetInstance().SetNextTaskData(taskData);
             Show();
         }
@@ -344,6 +368,7 @@ public class MainDialogueWnd : UIBase
         {
             SceneTaskData sceneTask = SongsDataMng.GetInstance().GetSceneTaskDataFromName(taskData.val);
             if(sceneTask != null) SongsDataMng.GetInstance().SetSceneTaskData(sceneTask);
+            UIMng.Instance.ActivationUI(UIType.SelectPlotWnd);
             UIMng.Instance.ActivationUI(UIType.LoadingWnd);
         }
     }
@@ -355,6 +380,11 @@ public class MainDialogueWnd : UIBase
             HighlightableObjectHelper objectHelper = obj.GetComponent<HighlightableObjectHelper>();
             objectHelper.enabled = false;
             InputManager.GetInstance().RemoveClickEventListener(OnClickEvent);
+
+            if (obj.name.Equals("菊花瓶"))
+            {
+                MainPlayer.songResultInfo.FillAnswer(5, string.Empty, 1, AnswerType.Operating);
+            }
             taskData.TaskState = TaskState.End;
         }
     }

@@ -544,6 +544,7 @@ GameObject:
   - component: {fileID: 1938374848848390835}
   - component: {fileID: 6151747065805197056}
   - component: {fileID: 4971019929017228055}
+  - component: {fileID: 628552520385778931}
   m_Layer: 5
   m_Name: Button (2)
   m_TagString: Untagged
@@ -661,6 +662,19 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &628552520385778931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3883383414035725099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2959af1056462f4dac933218f4ebd7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  btn: {fileID: 0}
 --- !u!1 &4691799692238938106
 GameObject:
   m_ObjectHideFlags: 0
@@ -1397,8 +1411,10 @@ MonoBehaviour:
     democracy in his poems. Next, let\u2019s pass through a space-time tunnel and
     follow Whitman to look for the Statue of Liberty. |\u53C2\u89C2\u5B8C\u534E\u5179\u534E\u65AF\u7684\u6545\u5C45\uFF0C\u7ED3\u675F\u8BD7\u6B4C\u8C08\u8BBA\uFF0C\u76F8\u4FE1\u4F60\u611F\u89E6\u826F\u591A\u3002\u4F46\u65E0\u8BBA\u662F\u82F1\u56FD\u7684\u7269\u7686\u5907\u4E8E\u6211\u8FD8\u662F\u4E2D\u56FD\u7684\u7269\u6211\u7686\u5FD8\uFF0C\u90FD\u662F\u4EBA\u5BC4\u60C5\u4E8E\u5C71\u6C34\uFF0C\u5BFB\u6C42\u89E3\u8131\u7684\u4F53\u73B0\u3002\u9664\u5F00\u5173\u6CE8\u4EBA\u4E0E\u81EA\u7136\u5173\u7CFB\u5916\uFF0C\u6D6A\u6F2B\u4E3B\u4E49\u8FD8\u5F3A\u8C03\u4EBA\u7C7B\u81EA\u6211\u7684\u89D2\u8272\uFF0C\u4EBA\u7C7B\u4EE3\u66FF\u4E0A\u5E1D\u6210\u4E3A\u4E16\u754C\u7684\u4E2D\u5FC3\uFF0C\u5176\u4E2D\u7684\u4E00\u4E2A\u4F53\u73B0\u5C31\u662F\u6C11\u4E3B\u7CBE\u795E\u3002\u8B6C\u5982\u7F8E\u56FD\u8BD7\u4EBA\u60E0\u7279\u66FC\u3002\u63A5\u4E0B\u6765\uFF0C\u8BF7\u968F\u6211\u4EEC\u7A7F\u8D8A\u65F6\u7A7A\uFF0C\u8DDF\u60E0\u7279\u66FC\u4E00\u8D77\u5BFB\u627E\u81EA\u7531\u5973\u795E\u7684\u5F81\u7A0B\u5427\uFF01"
   m_Enable: 1
+  m_Conetnt: {fileID: 0}
   m_ShowSpeed: 30
   m_AudioClip: {fileID: 0}
+  m_AudioName: sound_16
   m_CallBack:
     m_PersistentCalls:
       m_Calls:

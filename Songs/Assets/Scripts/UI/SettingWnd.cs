@@ -21,6 +21,12 @@ public class SettingWnd : UIBase
 
     public Toggle chinese;
 
+    public Button btn;
+
+    public Transform aParent;
+    public Text minute;
+    public Text summary;
+
     public RectTransform musicCheck;
     public RectTransform chineseCheck;
 
@@ -37,6 +43,7 @@ public class SettingWnd : UIBase
         open.onValueChanged.AddListener(OnOpen);
         music.onValueChanged.AddListener(OnMusic);
         chinese.onValueChanged.AddListener(OnChinese);
+        btn.onClick.AddListener(OnBtn);
     }
 
     protected override void Start()
@@ -58,7 +65,7 @@ public class SettingWnd : UIBase
         open.isOn = false;
         CancelInvoke("HideHelp");
         Invoke("HideHelp", 2);
-
+        aParent.gameObject.SetActive(false);
         transform.SetSiblingIndex(100);
     }
 
@@ -133,5 +140,40 @@ public class SettingWnd : UIBase
     void ShowEnglish()
     {
         chinese.isOn = false;
+    }
+
+    void OnBtn()
+    {
+        if (aParent.gameObject.activeSelf)
+        {
+            aParent.gameObject.SetActive(false);
+            return;
+        }
+        aParent.gameObject.SetActive(true);
+
+        int m = 0;
+        for (int i = 0; i < MainPlayer.songResultInfo.singleChoices.Count; i++)
+        {
+            m += MainPlayer.songResultInfo.singleChoices[i].minute;
+        }
+        for (int i = 0; i < MainPlayer.songResultInfo.multipleChoices.Count; i++)
+        {
+            m += MainPlayer.songResultInfo.multipleChoices[i].minute;
+        }
+        for (int i = 0; i < MainPlayer.songResultInfo.fillInTheBlanks.Count; i++)
+        {
+            m += MainPlayer.songResultInfo.fillInTheBlanks[i].minute;
+        }
+        for (int i = 0; i < MainPlayer.songResultInfo.operatings.Count; i++)
+        {
+            m += MainPlayer.songResultInfo.operatings[i].minute;
+        }
+
+        if(m > 80)
+        {
+            m = 80;
+        }
+        minute.text = m.ToString();
+        summary.text = MainPlayer.songResultInfo.summary;
     }
 }

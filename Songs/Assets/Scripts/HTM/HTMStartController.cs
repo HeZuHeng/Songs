@@ -41,6 +41,8 @@ public class HTMStartController : ChildController
 
     void InitMoveCamera(OnStateEndDelegate onStateEnd)
     {
+        MainPlayer.songResultInfo.FillAnswer(10, string.Empty, 1, AnswerType.Operating);
+
         Tweener moveTw = CameraMng.MainCamera.transform.DOMove(htm.Tran.position + htm.Tran.forward * 1.5f + htm.Tran.up * 2f, 10);
 
         moveTw.onUpdate += delegate ()
@@ -55,6 +57,7 @@ public class HTMStartController : ChildController
 
     void TalkCamera(OnStateEndDelegate onStateEnd)
     {
+        MainPlayer.songResultInfo.FillAnswer(12, string.Empty, 1, AnswerType.Operating);
         Vector3[] vector3s = new Vector3[5];
         vector3s[0] = new Vector3(228, 61, 539);
         vector3s[1] = new Vector3(400, 61, 431);

@@ -604,8 +604,10 @@ MonoBehaviour:
   endYieldTime: 0.5
   m_Text: "Your present location\uFF1ANew Orleans."
   m_Enable: 1
+  m_Conetnt: {fileID: 0}
   m_ShowSpeed: 300
   m_AudioClip: {fileID: 0}
+  m_AudioName: 
   m_CallBack:
     m_PersistentCalls:
       m_Calls:
@@ -623,6 +625,7 @@ MonoBehaviour:
     m_TypeName: TrendsText+CallBack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   m_ScrollRect: {fileID: 0}
+  m_TextC: 
 --- !u!1 &1292499109459317117
 GameObject:
   m_ObjectHideFlags: 0
@@ -1569,8 +1572,10 @@ MonoBehaviour:
   endYieldTime: 0.5
   m_Text: Now the ship has arrived at Memphis.
   m_Enable: 1
+  m_Conetnt: {fileID: 0}
   m_ShowSpeed: 300
   m_AudioClip: {fileID: 0}
+  m_AudioName: 
   m_CallBack:
     m_PersistentCalls:
       m_Calls:
@@ -1588,6 +1593,7 @@ MonoBehaviour:
     m_TypeName: TrendsText+CallBack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   m_ScrollRect: {fileID: 0}
+  m_TextC: 
 --- !u!1 &3502652442568026805
 GameObject:
   m_ObjectHideFlags: 0
@@ -1954,7 +1960,7 @@ MonoBehaviour:
   autoKill: 1
   isActive: 1
   isValid: 1
-  target: {fileID: 182885167979744304}
+  target: {fileID: 4756716536654485423}
   animationType: 6
   targetType: 3
   forcedTargetType: 0
@@ -2614,8 +2620,10 @@ MonoBehaviour:
   endYieldTime: 0.5
   m_Text: 'Your present location: Cincinnati'
   m_Enable: 1
+  m_Conetnt: {fileID: 0}
   m_ShowSpeed: 300
   m_AudioClip: {fileID: 0}
+  m_AudioName: 
   m_CallBack:
     m_PersistentCalls:
       m_Calls:
@@ -2633,6 +2641,7 @@ MonoBehaviour:
     m_TypeName: TrendsText+CallBack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   m_ScrollRect: {fileID: 0}
+  m_TextC: 
 --- !u!1 &5186495845618701746
 GameObject:
   m_ObjectHideFlags: 0
@@ -2767,8 +2776,10 @@ MonoBehaviour:
   endYieldTime: 0.5
   m_Text: Now the ship has gotten into the Ohio River.
   m_Enable: 1
+  m_Conetnt: {fileID: 0}
   m_ShowSpeed: 300
   m_AudioClip: {fileID: 0}
+  m_AudioName: 
   m_CallBack:
     m_PersistentCalls:
       m_Calls:
@@ -2786,6 +2797,7 @@ MonoBehaviour:
     m_TypeName: TrendsText+CallBack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   m_ScrollRect: {fileID: 0}
+  m_TextC: 
 --- !u!1 &5407003148036803052
 GameObject:
   m_ObjectHideFlags: 0
@@ -3687,8 +3699,10 @@ MonoBehaviour:
   endYieldTime: 0.5
   m_Text: This is a map of the USA
   m_Enable: 1
+  m_Conetnt: {fileID: 0}
   m_ShowSpeed: 300
   m_AudioClip: {fileID: 0}
+  m_AudioName: 
   m_CallBack:
     m_PersistentCalls:
       m_Calls:
@@ -3706,6 +3720,7 @@ MonoBehaviour:
     m_TypeName: TrendsText+CallBack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   m_ScrollRect: {fileID: 0}
+  m_TextC: 
 --- !u!1 &5716539318270977973
 GameObject:
   m_ObjectHideFlags: 0
@@ -3802,8 +3817,10 @@ MonoBehaviour:
   endYieldTime: 0.5
   m_Text: Welcome to the city of Pittsburgh!
   m_Enable: 1
+  m_Conetnt: {fileID: 0}
   m_ShowSpeed: 300
   m_AudioClip: {fileID: 0}
+  m_AudioName: 
   m_CallBack:
     m_PersistentCalls:
       m_Calls:
@@ -3821,6 +3838,7 @@ MonoBehaviour:
     m_TypeName: TrendsText+CallBack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   m_ScrollRect: {fileID: 0}
+  m_TextC: 
 --- !u!1 &6100118045543288941
 GameObject:
   m_ObjectHideFlags: 0

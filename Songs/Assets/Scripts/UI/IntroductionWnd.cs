@@ -11,11 +11,15 @@ public class IntroductionWnd : UIBase
     public TrendsText trendsText;
     public RectTransform[] items;
     public RectTransform image;
+
+    public Toggle chinese;
+    public RectTransform chineseCheck;
     protected override void Awake()
     {
         base.Awake();
         Type = UIType.IntroductionWnd;
         MutexInterface = true;
+        chinese.onValueChanged.AddListener(OnChinese);
     }
 
     protected override void OnEnable()
@@ -30,6 +34,12 @@ public class IntroductionWnd : UIBase
         }
         Tweener moveTw = image.DOLocalPath(vector3s,10,PathType.Linear,PathMode.Sidescroller2D).SetLookAt(0.0001f);
         moveTw.SetLoops(-1, LoopType.Yoyo);
+    }
+
+    protected override void OnDisable()
+    {
+        base.OnDisable();
+        CancelInvoke("ShowEnglish");
     }
 
     public void OnClickHZHS()
@@ -49,5 +59,22 @@ public class IntroductionWnd : UIBase
     public void OnEnd()
     {
         trendsText.m_ShowSpeed = 10000;
+    }
+
+
+    void OnChinese(bool val)
+    {
+        SongsDataMng.GetInstance().orEnglishChange?.Invoke(val);
+        chineseCheck.gameObject.SetActive(val);
+        if (val)
+        {
+            CancelInvoke("ShowEnglish");
+            Invoke("ShowEnglish", 10);
+        }
+    }
+
+    void ShowEnglish()
+    {
+        chinese.isOn = false;
     }
 }

@@ -110,6 +110,7 @@ public class FantasyCompareWnd : UIBase
                     UIType type = (UIType)System.Enum.Parse(typeof(UIType), taskData.val);
                     if (type == Type)
                     {
+                        MainPlayer.songResultInfo.FillAnswer(7, string.Empty, 2, AnswerType.Operating);
                         taskData.TaskState = TaskState.End;
                     }
                 }

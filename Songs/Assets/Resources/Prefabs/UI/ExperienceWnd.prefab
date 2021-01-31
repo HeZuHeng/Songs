@@ -78,8 +78,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Inspired by the exciting slogan of \u201C freedom, equality, and fraternity\u201D,
-    he earnestly hoped that Britain could achieve it through the revolution.\n\u53D7\u201C\u81EA\u7531\u3001\u5E73\u7B49\u3001\u535A\u7231\u201D\u8FD9\u6FC0\u52A8\u4EBA\u5FC3\u7684\u53E3\u53F7\u6240\u9F13\u821E\uFF0C\u6BB7\u5207\u5E0C\u671B\u82F1\u56FD\u80FD\u901A\u8FC7\u9769\u547D\u5B9E\u73B0\u201C\u81EA\u7531\u5E73\u7B49\u201D\u3002"
+  m_Text: "However, the French Revolution failed.\n\u7136\u800C\uFF0C\u6CD5\u56FD\u5927\u9769\u547D\u5931\u8D25\u4E86"
 --- !u!1 &1531480372
 GameObject:
   m_ObjectHideFlags: 0
@@ -158,8 +157,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Wordsworth was disappointed with the revolution. So he moved to the country
-    and stayed with nature all day long.\n\u534E\u5179\u534E\u65AF\u5BF9\u9769\u547D\u5931\u671B\u4E86\uFF0C\u4E8E\u662F\u4ED6\u8FC1\u5C45\u4E61\u95F4\uFF0C\u7EC8\u65E5\u4E0E\u81EA\u7136\u4E3A\u4F34\u3002\n"
+  m_Text: "Wordsworth was so disappointed that he moved to the countryside and stayed
+    with nature all day long.\n\u56E0\u5BF9\u9769\u547D\u5931\u671B\uFF0C\u4ED6\u8FC1\u5C45\u4E61\u95F4\uFF0C\u7EC8\u65E5\u4E0E\u81EA\u7136\u4E3A\u4F34\u3002\n"
 --- !u!1 &1581290698
 GameObject:
   m_ObjectHideFlags: 0
@@ -170,6 +169,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1581290699}
   - component: {fileID: 1581290701}
+  - component: {fileID: 8047247772384031223}
   - component: {fileID: 1581290700}
   m_Layer: 5
   m_Name: RawImage
@@ -205,6 +205,40 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1581290698}
   m_CullTransparentMesh: 0
+--- !u!328 &8047247772384031223
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581290698}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 0}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 0}
+  m_TargetTexture: {fileID: 8400000, guid: de710688af97c064196ed5945a00238b, type: 2}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: _MainTex
+  m_RenderMode: 2
+  m_AspectRatio: 2
+  m_DataSource: 1
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 2
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
+  m_Url: 
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
+  m_PlayOnAwake: 0
+  m_SkipOnDrop: 1
+  m_Looping: 0
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
 --- !u!114 &1581290700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -310,8 +344,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "The French Revolution failed. After returning to England, Wordsworth did
-    not get rid of the shadow left by the French Revolution. \n\u7136\u800C\u6CD5\u56FD\u5927\u9769\u547D\u5931\u8D25\u4E86\uFF0C\u4E4B\u540E\u56DE\u5230\u82F1\u56FD\uFF0C\u4E5F\u6CA1\u6709\u6446\u9664\u6CD5\u56FD\u5927\u9769\u547D\u5728\u4ED6\u5FC3\u91CC\u7559\u4E0B\u7684\u9634\u5F71\u3002"
+  m_Text: "After returning to England, Wordsworth did not get rid of the shadow left
+    by the failure of French Revolution.\n\u534E\u5179\u534E\u65AF\u56DE\u5230\u82F1\u56FD\uFF0C\u4E5F\u6CA1\u6709\u6446\u8131\u6CD5\u56FD\u5927\u9769\u547D\u5728\u4ED6\u5FC3\u91CC\u7559\u4E0B\u7684\u9634\u5F71"
 --- !u!1 &1986975988
 GameObject:
   m_ObjectHideFlags: 0
@@ -390,8 +424,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "During this period, Wordsworth went to France three times to participate
-    in the revolution. \n\u5728\u6B64\u671F\u95F4\uFF0C\u534E\u5179\u534E\u65AF\u66FE\u4E09\u5EA6\u8D74\u6CD5\u53C2\u4E0E\u9769\u547D\u3002\n"
+  m_Text: "Inspired by the exciting slogan of \u201C freedom, equality, and fraternity\u201D,
+    he earnestly hoped that Britain could achieve it through a similar revolution.
+    \n\u53D7\u201C\u81EA\u7531\u3001\u5E73\u7B49\u3001\u535A\u7231\u201D\u8FD9\u4E00\u53E3\u53F7\u6240\u9F13\u821E\uFF0C\u4ED6\u6BB7\u5207\u5E0C\u671B\u82F1\u56FD\u80FD\u901A\u8FC7\u9769\u547D\u5B9E\u73B0\u8FD9\u4E00\u53E3\u53F7\u6240\u4F20\u9012\u7684\u7406\u60F3\n"
 --- !u!1 &2926367764242212153
 GameObject:
   m_ObjectHideFlags: 0
@@ -455,6 +490,7 @@ MonoBehaviour:
   - {fileID: 538109714}
   - {fileID: 1607299157}
   - {fileID: 1531480374}
+  videoPlayer: {fileID: 8047247772384031223}
   textures:
   - {fileID: 2800000, guid: 42e479085e7d7ae49a044cdd5d934e31, type: 3}
   - {fileID: 2800000, guid: bafa1a636ceeeb74cb3a782870cddd70, type: 3}
@@ -536,4 +572,5 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "In the late 1980s, the French Revolution broke out. \n20\u4E16\u7EAA80\u5E74\u4EE3\u672B\uFF0C\u6CD5\u56FD\u9769\u547D\u7206\u53D1"
+  m_Text: "In the late 1780s, the French Revolution broke out. During this period,
+    Wordsworth went to France three times to participate in the revolution.\n18\u4E16\u7EAA80\u5E74\u4EE3\u672B\uFF0C\u6CD5\u56FD\u9769\u547D\u7206\u53D1\uFF0C\u5728\u6B64\u671F\u95F4\uFF0C\u534E\u5179\u534E\u65AF\u66FE\u4E09\u5EA6\u8D74\u6CD5\u53C2\u4E0E\u9769\u547D"

@@ -42,6 +42,7 @@ public class QATalkWnd : UIBase
         QuestionBankData question = SongsDataMng.GetInstance().GetQuestionBankData;
         StopAllCoroutines();
         StartCoroutine(GetSongFileText(question.des));
+
         tip.text = question.startParsing;
         errorTip.enabled = false;
         TaskData taskData = SongsDataMng.GetInstance().GetTaskData;
@@ -109,6 +110,9 @@ public class QATalkWnd : UIBase
                 return;
             }
         }
+
+        MainPlayer.songResultInfo.FillSummary(inputField.text);
+
         rectTransform.gameObject.SetActive(false);
 
         Sprite obj = Resources.Load<Sprite>("Sprites/PlayerIcon/" + question.icon);

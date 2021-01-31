@@ -29,7 +29,7 @@ public class CoverSongController : ChildController
 
         baofeng.Tran.gameObject.SetActive(false);
         if (htm != null) htm.Tran.gameObject.SetActive(false);
-        sceneAsset.Tran.gameObject.AddComponent<TriggerEvent>().enterEvent.AddListener(EnterEvent);
+        //sceneAsset.Tran.gameObject.AddComponent<TriggerEvent>().enterEvent.AddListener(EnterEvent);
         InputManager.GetInstance().AddClickEventListener(OnClickEvent);
 
         Vector3[] vector3s = new Vector3[5];
@@ -99,15 +99,17 @@ public class CoverSongController : ChildController
         Vector3[] vector3s = new Vector3[2];
         vector3s[0] = new Vector3(2.3f, -39.734f, 1);
         vector3s[1] = new Vector3(2.823f, -39.734f, -1.17f);
-        Tweener moveTw = gentle.Tran.DOLocalPath(vector3s, 6, PathType.CatmullRom, PathMode.Ignore).SetLookAt(0);
+        Tweener moveTw = gentle.Tran.DOLocalPath(vector3s, 4, PathType.CatmullRom, PathMode.Ignore).SetLookAt(0);
         
         //moveTw.SetLoops(-1, LoopType.Restart);
         moveTw.onUpdate += delegate ()
         {
+            AudioManager.Instance.PlayJiaobuSound(2, true);
             gentle.PlayAnimator("forward", 1, 1, null);
         };
         moveTw.onComplete += delegate ()
         {
+            AudioManager.Instance.PlayJiaobuSound(2, false);
             gentle.PlayAnimator("forward", 0, 1, null);
 
             onStateEnd?.Invoke(GetState);
@@ -117,9 +119,9 @@ public class CoverSongController : ChildController
     Tweener tweener1;
     void TalkCamera(OnStateEndDelegate onStateEnd)
     {
-        tweener = CameraMng.MainCamera.transform.DOShakeRotation(20, new Vector3(0.2f, 0.2f, 0));
+        tweener = CameraMng.MainCamera.transform.DOShakeRotation(20, new Vector3(0.1f, 0.1f, 0));
         tweener.SetLoops(-1,LoopType.Restart);
-        tweener1 = CameraMng.MainCamera.transform.DOShakePosition(20, new Vector3(0.2f, 0.2f, 0));
+        tweener1 = CameraMng.MainCamera.transform.DOShakePosition(20, new Vector3(0.1f, 0.1f, 0));
         tweener1.SetLoops(-1, LoopType.Restart);
 
         gentle.PlayAnimator("dao", true, 1, null);
@@ -140,8 +142,16 @@ public class CoverSongController : ChildController
 
     void TalkCameraTwo(OnStateEndDelegate onStateEnd)
     {
-        if (tweener != null) tweener.Complete();
-        if (tweener1 != null) tweener1.Complete();
+        if (tweener != null)
+        {
+            tweener.Pause();
+            tweener.Complete();
+        }
+        if (tweener1 != null)
+        {
+            tweener1.Pause();
+            tweener1.Complete();
+        }
         gentle.PlayAnimator("dao", false, 1, null);
         onStateEnd?.Invoke(GetState);
     }

@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9058824, g: 0.9568628, b: 0.9803922, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -294,7 +294,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: d6c5349ada27ca54c8cd6f8151037162, type: 3}
-    m_FontSize: 28
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -322,14 +322,17 @@ MonoBehaviour:
   endYieldTime: 0.5
   m_Text: 
   m_Enable: 0
+  m_Conetnt: {fileID: 0}
   m_ShowSpeed: 30
   m_AudioClip: {fileID: 0}
+  m_AudioName: 
   m_CallBack:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: TrendsText+CallBack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   m_ScrollRect: {fileID: 21581806428082154}
+  m_TextC: 
 --- !u!114 &7786174330722600641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -721,7 +724,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8182540041858961643
 RectTransform:
   m_ObjectHideFlags: 0
@@ -762,7 +765,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9058824, g: 0.9568628, b: 0.9803922, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -835,6 +838,7 @@ GameObject:
   - component: {fileID: 6224482496297432633}
   - component: {fileID: 5436352945834870412}
   - component: {fileID: 6554360404963504470}
+  - component: {fileID: 1338041508891224939}
   m_Layer: 5
   m_Name: Button_next
   m_TagString: Untagged
@@ -952,6 +956,19 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1338041508891224939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2802364866592936398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2959af1056462f4dac933218f4ebd7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  btn: {fileID: 0}
 --- !u!1 &3298743172968909310
 GameObject:
   m_ObjectHideFlags: 0
@@ -1166,7 +1183,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6395789779873494623
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1347,6 +1364,7 @@ GameObject:
   - component: {fileID: 2227473367384229401}
   - component: {fileID: 3778504002986263793}
   - component: {fileID: 4774217610723626880}
+  - component: {fileID: 94426028501968182}
   m_Layer: 5
   m_Name: Button_next (1)
   m_TagString: Untagged
@@ -1451,8 +1469,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2429209609924422627}
-        m_MethodName: OnSelected
+      - m_Target: {fileID: 0}
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1464,6 +1482,19 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &94426028501968182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4107605266287567953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2959af1056462f4dac933218f4ebd7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  btn: {fileID: 0}
 --- !u!1 &4656041944928636958
 GameObject:
   m_ObjectHideFlags: 0
@@ -1502,8 +1533,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -930, y: -10}
-  m_SizeDelta: {x: 1080, y: 160}
+  m_AnchoredPosition: {x: -930, y: -47}
+  m_SizeDelta: {x: 1080, y: 94}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1777747443939097162
 CanvasRenderer:
@@ -1637,7 +1668,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1090345514265034378
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1678,7 +1709,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9058824, g: 0.9568628, b: 0.9803922, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2266,7 +2297,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9058824, g: 0.9568628, b: 0.9803922, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2303,14 +2334,17 @@ MonoBehaviour:
   endYieldTime: 0.5
   m_Text: 
   m_Enable: 0
+  m_Conetnt: {fileID: 0}
   m_ShowSpeed: 30
   m_AudioClip: {fileID: 0}
+  m_AudioName: 
   m_CallBack:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: TrendsText+CallBack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   m_ScrollRect: {fileID: 4402021620537676817}
+  m_TextC: 
 --- !u!114 &2274726853418496078
 MonoBehaviour:
   m_ObjectHideFlags: 0

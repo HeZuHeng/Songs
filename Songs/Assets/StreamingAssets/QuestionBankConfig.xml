@@ -2,16 +2,20 @@
 <QuestionBankConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <QuestionBankDatas>
     <ID>1</ID>
+	<类型>MultipleChoice</类型>
+	<题号>1</题号>
+	<子题号>1</子题号>
+	<分数>1</分数>
     <图标>hzhsqs</图标>
     <题头>Please choose the romantic features of the first stanza.（multiple choices）</题头>
     <阅读>I wandered lonely as a cloud \n That floats on high o’er vales and hills \n When all at once I saw a crowd,\n host, of golden daffodils; \n Besides the lake, beneath the trees, \n Fluttering and dancing in the breeze.</阅读>
-    <解析>Natural scenery is often an important theme of romantic poetry. The poet compares the daffodils with himself, and contrasts them with lonely clouds to reflect the vivid scene of the daffodils. It inspires poets to create, and embodies the natural scenery with human being’s “life, emotion and expression”.
-	|诗人将水仙与自己对比，用孤云反衬出水仙花盎然生机的景象。自然景物往往是浪漫主义诗歌的重要主题, 它激发了人们创作的灵感, 而同时诗人也赋予自然景物以人的“生命、情感和表现力”。</解析>
-    <选择>浪漫主义色彩1: Subjectivism: The description of natural objects is modified by the poet’s feelings.</选择>
-	<选择>浪漫主义色彩2: Spontaneity: The role of instinct, intuition, and the feeling of “the heart” is stressed. </选择>
-	<选择>浪漫主义色彩3: Singularity: It has a strong love for the remote, the supernatural, the mysterious, the splendid and the picturesque.  </选择>
-	<选择>浪漫主义色彩4: Worship of nature: The poet reads in nature some mysterious force. </选择>
-	<选择>浪漫主义色彩5：There is a dominating note of solitude and melancholy. </选择>
+    <解析>With a melancholy mood, the speaker makes a striking contrast between the lonely cloud and the vivid daffodils. Nature inspires poetry. The speaker humanizes the daffodils when he says they are engaging in a dance.
+	|说话者将自己比作一朵流云，用流云的孤寂反衬出水仙花的生机盎然。自然是诗歌的灵感源泉，当水仙花翩翩起舞时，说话者赋予自然以生命力。</解析>
+    <选择>浪漫主义色彩1:Subjectivism: The description of natural objects is modified by the poet’s feelings.</选择>
+	<选择>浪漫主义色彩2:Spontaneity: The role of instinct, intuition, and the feeling of “the heart” is stressed. </选择>
+	<选择>浪漫主义色彩3:Singularity: It has a strong love for the remote, the supernatural, the mysterious, the splendid and the picturesque.  </选择>
+	<选择>浪漫主义色彩4:Worship of nature: The poet reads in nature some mysterious force. </选择>
+	<选择>浪漫主义色彩5:There is a dominating note of solitude and melancholy. </选择>
     <答案>0</答案>
     <答案>4</答案>
     <答案解析></答案解析>
@@ -19,16 +23,20 @@
   </QuestionBankDatas>
   <QuestionBankDatas>
     <ID>2</ID>
+	<类型>MultipleChoice</类型>
+	<题号>1</题号>
+	<子题号>2</子题号>
+	<分数>1</分数>
     <图标>hzhsqs</图标>
     <题头>Please choose the romantic features of the second stanza. （multiple choices）</题头>
     <阅读>Continuous as the stars that shine \n And twinkle on the Milky Way, \n They stretched in never-ending line \n Along the margin of a bay: \n Ten thousand saw I at a glance, \n Tossing their heads in sprightly dance.</阅读>
     <解析>In the heart of poet, daffodils are no longer just a plant. It has become a messenger of God and a spiritual embodiment. It is this kind of spirit that rejoices the original melancholy heart. Here “continuous”and “never-ending” may suggest that the flowers leave an everlasting impact on Wordsworth.
 	|在诗人的心中, 水仙已不再是单单一种植物, 它成了神的使者，一种精神的化身。正是这种精神令原来本低沉忧郁的心灵变得欢欣鼓舞。 在这里“continuous”和“never-ending”暗示水仙花给他留下了永恒的影响。</解析>
-    <选择>浪漫主义色彩1: Subjectivism: The description of natural objects is modified by the poet’s feelings.</选择>
-	<选择>浪漫主义色彩2: Spontaneity: The role of instinct, intuition, and the feeling of “the heart” is stressed. </选择>
-	<选择>浪漫主义色彩3: Singularity: It has a strong love for the remote, the supernatural, the mysterious, the splendid and the picturesque.  </选择>
-	<选择>浪漫主义色彩4: Worship of nature: The poet reads in nature some mysterious force. </选择>
-	<选择>浪漫主义色彩5：There is a dominating note of solitude and melancholy. </选择>
+    <选择>浪漫主义色彩1:Subjectivism: The description of natural objects is modified by the poet’s feelings.</选择>
+	<选择>浪漫主义色彩2:Spontaneity: The role of instinct, intuition, and the feeling of “the heart” is stressed. </选择>
+	<选择>浪漫主义色彩3:Singularity: It has a strong love for the remote, the supernatural, the mysterious, the splendid and the picturesque.  </选择>
+	<选择>浪漫主义色彩4:Worship of nature: The poet reads in nature some mysterious force. </选择>
+	<选择>浪漫主义色彩5:There is a dominating note of solitude and melancholy. </选择>
     <答案>2</答案>
     <答案>3</答案>
     <答案解析></答案解析>
@@ -36,30 +44,35 @@
   </QuestionBankDatas>
   <QuestionBankDatas>
     <ID>3</ID>
+	<类型>MultipleChoice</类型>
+	<题号>1</题号>
+	<子题号>3</子题号>
+	<分数>1</分数>
     <图标>hzhsqs</图标>
     <题头>Please choose the romantic feature of the third stanza.</题头>
     <阅读>The waves beside them danced; but they \n Outdid the sparking waves in glee: \n A poet could not but be gay, \n In such a jocund company! \n I gazed – and gazed – but little thought \n What wealth the show to me had brought.</阅读>
     <解析>The poet stares at the daffodils lingeringly, without yet realizing the complete extent of the positive effects of encountering them. Even when the poet calls for the original emotion of “returning to nature”, he does not forget the relative independence of himself and nature.
 	|诗人久久凝望，却想象不到这奇景赋予了他多少精神财富。即使诗人在深情地呼唤 “回归自然”的原始情感时,也没有忘记自我与自然的相对独立性。</解析>
-    <选择>浪漫主义色彩1: Subjectivism: The description of natural objects is modified by the poet’s feelings.</选择>
-	<选择>浪漫主义色彩2: Spontaneity: The role of instinct, intuition, and the feeling of “the heart” is stressed. </选择>
-	<选择>浪漫主义色彩3: Singularity: It has a strong love for the remote, the supernatural, the mysterious, the splendid and the picturesque.  </选择>
-	<选择>浪漫主义色彩4: Worship of nature: The poet reads in nature some mysterious force. </选择>
-	<选择>浪漫主义色彩5：There is a dominating note of solitude and melancholy. </选择>
+    <选择>浪漫主义色彩1:Subjectivism: The description of natural objects is modified by the poet’s feelings.</选择>
+	<选择>浪漫主义色彩2:Spontaneity: The role of instinct, intuition, and the feeling of “the heart” is stressed. </选择>
+	<选择>浪漫主义色彩3:Singularity: It has a strong love for the remote, the supernatural, the mysterious, the splendid and the picturesque.  </选择>
+	<选择>浪漫主义色彩4:Worship of nature: The poet reads in nature some mysterious force. </选择>
+	<选择>浪漫主义色彩5:There is a dominating note of solitude and melancholy. </选择>
     <答案>1</答案>
     <答案解析></答案解析>
     <提示>浪漫主义色彩2</提示>
   </QuestionBankDatas>
   <QuestionBankDatas>
     <ID>4</ID>
+	<类型>MultipleChoice</类型>
+	<题号>2</题号>
+	<分数>1</分数>
     <图标>hzhsqs</图标>
-    <题头>Select two lines from the first 3 stanzas that demonstrate the daffodils have the power to change Wordsworth’s mood.（multiple choices）</题头>
-    <阅读>You have managed to find the memory, but in the last two sentences of the third stanza it is mentioned that the poet has doubts about the spiritual wealth that daffodils can bring. In order for the poet to gain permanent spiritual wealth, you need to answer questions to extend his memory, which enables Wordsworth to look back and re-experience the magical and special time he has whenever he feels upset or lonely.
-	|您已成功找到记忆，但在第三节诗的最后两句提到诗人对水仙能够带来多少的精神财富产生了疑惑，为了使诗人获得永久的精神财富，需要您回答问题为他延长记忆。让诗人在任何沮丧之时都能够回忆起当时水仙花的画面，重获精神的救赎与治愈。</阅读>
-    <选择>A. “ I wandered lonely as a cloud ” (line 1)</选择>
-	<选择>B. “ Continuous as the stars that shine ” (line 7) </选择>
-	<选择>C. “ Ten thousand saw I at a glance ” (line 11)C. “ Ten thousand saw I at a glance ” (line 11) </选择>
-	<选择>D. “ A poet could not but be gay ” (line 15)</选择>
+    <题头>Choose two lines from the following items that demonstrate the force of daffodils .（multiple choices）</题头>
+    <选择>A.Ten thousand saw I at a glance”(line 11)</选择>
+	<选择>B.“For oft, when on my couch I lie”(line 19) </选择>
+	<选择>C.“I wandered lonely as a cloud”(line 1)</选择>
+	<选择>D.“A poet could not but be gay ”(line 15)</选择>
     <答案>0</答案>
 	<答案>3</答案>
     <答案解析></答案解析>
@@ -67,160 +80,60 @@
   </QuestionBankDatas>
   <QuestionBankDatas>
     <ID>5</ID>
+	<类型>MultipleChoice</类型>
+	<题号>3</题号>
+	<分数>1</分数>
     <图标>hzhsqs</图标>
-    <题头>What does “ daffodil ” stand for? （multiple choices）</题头>
+    <题头>“Daffodil” stands for________（multiple choices）</题头>
     <阅读></阅读>
     <解析></解析>
-    <选择>A. the beauty of nature that could release the burden of sadness.</选择>
-	<选择>B. the embodiment of a spirit leading to a happy heaven. </选择>
-	<选择>C. a virtual image that has a temporary impact on poet’s mind.</选择>
+    <选择>A.the beauty of nature that may heal and give strength to body and soul alike</选择>
+	<选择>B.the embodiment of happiness </选择>
+	<选择>C.a virtual image that has a temporary impact on poet’s mind</选择>
     <答案>0</答案>
 	<答案>1</答案>
-    <答案解析>For the poet, nature is the object that the subject observes and reflects. To transcend oneself, one needs to rely on external power. And the innocence of nature can purify the human soul and rejuvenate the spirit.|
-	对于诗人来说自然是主体进行观察、反映的客体。人要超越自身，需借助外在的力量。而大自然的纯真、明快能使人类的灵魂得到净化，精神得以重生。</答案解析>
+    <答案解析>For the poet, nature is the object that reflects man’s observation and thinking. In order to find genuine self, man must rely on the power of nature, which could purify man’s soul and find his existence.
+	|对于诗人来说自然是主体进行观察、反映的客体。人要寻找真正的自己需借助自然的力量。因为大自然能使人类的灵魂得到净化，并找到其自身的存在。</答案解析>
     <提示>正确答案：A, B</提示>
   </QuestionBankDatas>
   <QuestionBankDatas>
     <ID>6</ID>
+	<类型>MultipleChoice</类型>
+	<题号>4</题号>
+	<分数>1</分数>
     <图标>nvyk</图标>
-    <题头>Walking and wandering with Wordsworth allow the experimenter to transcend his present circumstances, and encounter his genuine self. Why?（multiple choices）</题头>
-    <阅读>Your poem-reading is about to end. Please complete the questions to find the way back to the former residence.
-	|您的体验即将结束，请完成弹出的相应问题，找到回故居的通道。</阅读>
+    <题头>Walking and wandering in daffodils, the poet transcends the reality and encounters his genuine self. Why?（multiple choices）</题头>
     <解析></解析>
-    <选择>A. The daffodils help to find and lift the spirit of the self-isolated poet.</选择>
-	<选择>B. Wandering and walking make the poet pay much attention to the interaction between nature and his own nature. </选择>
-	<选择>C. The poet finds himself in the paradise as soon as the image of golden daffodils flashes before his eye.</选择>
+    <选择>A.In the poet’s mind, daffodil is not only a plant, but a symbol which represents a spirit.</选择>
+	<选择>B.Walking and wandering make the poet pay much more attention to the interaction between nature and himself.</选择>
+	<选择>C.The cheerful daffodils mirror the poet himself and his desire.</选择>
     <答案>0</答案>
 	<答案>1</答案>
 	<答案>2</答案>
-    <答案解析>In the poet’s mind, the daffodils are not only a plant, but a symbol which represents a soul. As the proud image on the valley, the cheerful daffodils are the poet’s own description and his inner yearning. Therefore, the poet finds the symbol of his consciousness in nature and meets himself.
-	|在诗人的心中, 水仙已经不仅是一种植物, 而且是一种象征, 代表了一种灵魂。那山谷上的高傲形象, 那水仙的欢欣雀跃的形象, 是诗人对自己的描述, 也是诗人内心的向往，从而使人得以在自然中找到了自我的对应物，遇见了自己。</答案解析>
     <提示>正确答案：A, B, C</提示>
   </QuestionBankDatas>
   <QuestionBankDatas>
-    <ID>7</ID>
-    <图标>tym</图标>
-    <题头>Hi, {0},你能想到为何这首诗中的“悠然见南山”一句，用的是“见”，而不是“望”吗？</题头>
-    <阅读>yinjiuqi5.txt</阅读>
-    <解析>从主客体的关系去考虑。</解析>
-    <选择>A、从属关系</选择>
-	<选择>B、平等关系</选择>
-	<!--答案>0</答案!-->
-    <答案解析>“见”是无意中的偶见，南山的美景正好与采菊时悠然自得的心境相映衬，合成物我两忘的“无我之境”。如果用“望”字，便是心中先有南山，才有意去望，成了“有我之境”，不就失去了一种天真意趣吗。</答案解析>
-  </QuestionBankDatas>
-  <QuestionBankDatas>
-    <ID>8</ID>
-    <图标>hzhs</图标>
-    <题头>Since this is mentioned, Mr. Wordsworth, the use of the word ‘gaze’ in your poem seems to have a kind of thinking in the depiction of nature, what does it mean? {0}, what do you think?
-	|既然提到这个，在您的诗中用了gaze一词，在描绘自然中似乎带有着一种思索，这背后代表了什么吗？</题头>
-    <阅读>iwanderedlonelyasacloud.txt</阅读>
-    <解析>从体现自我的角度思考。</解析>
-    <选择>A、从属关系</选择>
-	<选择>B、平等关系</选择>
-	<!--答案>0</答案!-->
-    <答案解析>I constantly gaze at the daffodils, and project my desire for joy and eternal spirit on the daffodils. This is because I long to find the meaning of my own life in it.</答案解析>
-  </QuestionBankDatas>
-  <QuestionBankDatas>
-    <ID>9</ID>
-    <图标></图标>
-    <题头>After communicating with the poets,which of the following thoughts on the relationship between man and nature do the two poets embody?
-	|经过和诗人们的交流，请问两位诗人分别体现了以下哪种人与自然关系的思想?</题头>
-    <阅读></阅读>
-    <解析></解析>
-    <选择>A、从属关系</选择>
-	<选择>B、平等关系</选择>
-	<!--答案>0</答案!-->
-    <答案解析>The journey in Wordsworth’s former residence is over. Hope you have a good memory. And please start your next journey!
-	|您好，今天在华兹华斯故居游览完毕，希望你在这次旅程中留下美好回忆，请开启下一段旅程。</答案解析>
-  </QuestionBankDatas>
-  <QuestionBankDatas>
     <ID>10</ID>
+	<类型>MultipleChoice</类型>
+	<题号>5</题号>
+	<分数>1</分数>
     <图标></图标>
-    <题头>Sure. There are two or more explanations: the first______, the second______. 
-	|当然！有两种或者更多的解释。第一是____，第二是____</题头>
+    <题头>Sure. Sure. There are several meanings, such as _____（multiple choices）</题头>
     <阅读></阅读>
     <解析></解析>
-    <选择>1. American’s identity;</选择>
-	<选择>2. Life Circle (The seven days in Bible)</选择>
+    <选择>A.to emphasize the identity of American people</选择>
+	<选择>B.to create new words</选择>
+	<选择>C.to create a smooth rhythm</选择>
+	<选择>D.to imply the poet himself</选择>
 	<答案>0</答案>
-	<答案>1</答案>
-    <答案解析>If you have other explanations, please write them down here. If not, click the button to continue the experiment.
-	|如果你有其他的解释，把它写在下方，如果没有，请跳过继续实验.</答案解析>
-  </QuestionBankDatas>
-  <QuestionBankDatas>
-    <ID>11</ID>
-    <图标></图标>
-    <题头>I celebrate _____, and sing myself, </题头>
-    <阅读>Please choose the right words to fill the blanks.
-	|请选择正确的词来还原诗行 </阅读>
-    <解析></解析>
-    <选择>me</选择>
-	<选择>parents</选择>
-	<选择>energy</选择>
-	<选择>myself</选择>
-	<选择>you </选择>
-	<答案>3</答案>
-    <答案解析>Whitman himself</答案解析>
-  </QuestionBankDatas>
-  <QuestionBankDatas>
-    <ID>12</ID>
-    <图标></图标>
-    <题头>For every atom belonging to___ as good belongs to ___. </题头>
-    <阅读>Please choose the right words to fill the blanks.
-	|请选择正确的词来还原诗行</阅读>
-    <解析></解析>
-    <选择>me</选择>
-	<选择>parents</选择>
-	<选择>energy</选择>
-	<选择>myself</选择>
-	<选择>you </选择>
-	<答案>0</答案>
-	<答案>4</答案>
-    <答案解析>the close relationship of you and me.
-	|你和我的密切关系</答案解析>
-  </QuestionBankDatas>
-  <QuestionBankDatas>
-    <ID>13</ID>
-    <图标></图标>
-    <题头>Born here of parents born here from ___the same, and their parents the same， </题头>
-    <阅读>Please choose the right words to fill the blanks.
-	|请选择正确的词来还原诗行</阅读>
-    <解析></解析>
-    <选择>me</选择>
-	<选择>parents</选择>
-	<选择>energy</选择>
-	<选择>myself</选择>
-	<选择>you </选择>
-	<答案>1</答案>
-    <答案解析>The American fellow, to be an American poet.
-	|美国同胞，成为一个美国诗人。</答案解析>
-  </QuestionBankDatas>
-  <QuestionBankDatas>
-    <ID>14</ID>
-    <图标></图标>
-    <题头>Nature without check with original ________.  </题头>
-    <阅读>Please choose the right words to fill the blanks.
-	|请选择正确的词来还原诗行</阅读>
-    <解析></解析>
-    <选择>me</选择>
-	<选择>parents</选择>
-	<选择>energy</选择>
-	<选择>myself</选择>
-	<选择>you </选择>
 	<答案>2</答案>
-    <答案解析>the nature, the universal vitality.
-	|自然和宇宙生命力</答案解析>
-  </QuestionBankDatas>
-  <QuestionBankDatas>
-    <ID>15</ID>
-    <图标></图标>
-    <题头>Concerning I, What connotation do you find? Write it down please.
-	|你认为惠特曼是自我还有什么含义呢？请把你的答案写在下面。</题头>
-    <阅读></阅读>
-    <解析></解析>
+	<答案>3</答案>
   </QuestionBankDatas>
   <QuestionBankDatas>
     <ID>16</ID>
+	<类型>MultipleChoice</类型>
+	<题号>6</题号>
+	<分数>2</分数>
     <图标></图标>
     <题头>There are 39“I”in“Tian Gou”, what’s the connotation of“I”?
 	|在该诗中，“我”出现了39次，该词的内涵是什么呢？</题头>
@@ -233,36 +146,162 @@
 	<答案>2</答案>
   </QuestionBankDatas>
   <QuestionBankDatas>
-    <ID>17</ID>
+    <ID>7</ID>
+	<类型>SingleChoice</类型>
+	<题号>1</题号>
+	<分数>2</分数>
+	<阅读>结庐在人境，而无车马喧。\n 问君何能尔？心远地自偏。\n 采菊东篱下，悠然见南山。\n 山气日夕佳，飞鸟相与还。\n 此中有真意，欲辨已忘言。</阅读>
+    <图标>tym</图标>
+    <题头>你能想到为何这首诗中的“悠然见南山”一句，用的是“见”，而不是“望”吗？</题头>
+    <阅读>yinjiuqi5.txt</阅读>
+    <选择>A.“见”是无意中的偶见，悠然自得，合成物我两忘的“无我之境”。如果用“望”字，便是心中先有南山，才有意去望，成了“有我之境”。</选择>
+	<选择>B.“见”是看见之意，诗人在采菊时若有所思地欣赏南山的美景。而“望”好像是在说诗人极目远眺南山，与自然美景产生了距离感。</选择>
+	<答案>0</答案>
+  </QuestionBankDatas>
+  <QuestionBankDatas>
+    <ID>8</ID>
+	<类型>SingleChoice</类型>
+	<题号>2</题号>
+	<分数>2</分数>
+	<阅读>The waves beside them danced; but they \n Outdid the sparking waves in glee: \n A poet could not but be gay, \n In such a jocund company! \n I gazed – and gazed – but little thought \n What wealth the show to me had brought:</阅读>
+    <图标>hzhs</图标>
+    <题头>Since you have mentioned the choice of words, Mr. Wordsworth, the use of ‘gaze’in this poem seems to have a special meaning , what does it mean?
+	|既然提到这个，在您的诗中用了gaze一词，似乎带有一种特别的意蕴，这背后代表了什么吗？</题头>
+    <阅读>iwanderedlonelyasacloud.txt</阅读>
+    <选择>A、Mr.Wordsworth constantly gazes at the daffodils, which reflects his curiosity about nature and his strong desire to find the secrets of nature.</选择>
+	<选择>B、Mr.Wordsworth constantly gazes at the daffodils, which reflects his strong desire for happiness and eternal spirit and his longing to find out the meaning of life.</选择>
+	<答案>1</答案>
+  </QuestionBankDatas>
+  <QuestionBankDatas>
+    <ID>9</ID>
+	<类型>SingleChoice</类型>
+	<题号>3</题号>
+	<分数>2</分数>
     <图标></图标>
-    <题头>This line tells that every life, including human beings, animals and plants, originates from the same energy that makes every creature equal.It implies a spirit of________
-	|该诗行表示：每一个生命，无论是人类，动物或者植物都来自于能量，正是能量使得万物平等。诗行体现了_______精神</题头>
+    <题头>For Tao Yuanming, the relationship between man and nature is______.
+	|陶渊明认为人与自然的关系是______</题头>
     <阅读></阅读>
-	<选择>A.democracy</选择>
-	<选择>B.monarchy</选择>
+    <解析></解析>
+    <选择>A、subordinate</选择>
+	<选择>B、equal</选择>
+	<答案>1</答案>
+    <答案解析>The journey in Wordsworth’s former residence is over. Hope you have a good memory. And please start your next journey!
+	|您好，今天在华兹华斯故居游览完毕，希望你在这次旅程中留下美好回忆，请开启下一段旅程。</答案解析>
+  </QuestionBankDatas>
+  <QuestionBankDatas>
+    <ID>11</ID>
+	<类型>FillInTheBlank</类型>
+	<题号>1</题号>
+	<子题号>1</子题号>
+	<分数>1</分数>
+    <图标></图标>
+    <题头>I celebrate _____, and sing myself, </题头>
+    <解析></解析>
+    <选择>me</选择>
+	<选择>parents</选择>
+	<选择>energy</选择>
+	<选择>myself</选择>
+	<选择>you </选择>
+	<答案>3</答案>
+    <答案解析>Whitman himself</答案解析>
+  </QuestionBankDatas>
+  <QuestionBankDatas>
+    <ID>12</ID>
+	<类型>FillInTheBlank</类型>
+	<题号>1</题号>
+	<子题号>2</子题号>
+	<分数>1</分数>
+    <图标></图标>
+    <题头>For every atom belonging to___ as good belongs to ___. </题头>
+    <解析></解析>
+    <选择>me</选择>
+	<选择>parents</选择>
+	<选择>energy</选择>
+	<选择>myself</选择>
+	<选择>you </选择>
+	<答案>0</答案>
+	<答案>4</答案>
+    <答案解析>the close relationship between you and me.
+	|你和我的密切关系。</答案解析>
+  </QuestionBankDatas>
+  <QuestionBankDatas>
+    <ID>13</ID>
+	<类型>FillInTheBlank</类型>
+	<题号>1</题号>
+	<子题号>3</子题号>
+	<分数>1</分数>
+    <图标></图标>
+    <题头>Born here of parents born here from ___the same, and their parents the same， </题头>
+    <解析></解析>
+    <选择>me</选择>
+	<选择>parents</选择>
+	<选择>energy</选择>
+	<选择>myself</选择>
+	<选择>you </选择>
+	<答案>1</答案>
+    <答案解析>American fellows.
+	|美国同胞。</答案解析>
+  </QuestionBankDatas>
+  <QuestionBankDatas>
+    <ID>14</ID>
+	<类型>FillInTheBlank</类型>
+	<题号>1</题号>
+	<子题号>4</子题号>
+	<分数>1</分数>
+    <图标></图标>
+    <题头>Nature without check with original ________.  </题头>
+    <解析></解析>
+    <选择>me</选择>
+	<选择>parents</选择>
+	<选择>energy</选择>
+	<选择>myself</选择>
+	<选择>you </选择>
+	<答案>2</答案>
+    <答案解析>the nature, the universal vitality.
+	|自然和宇宙生命力</答案解析>
+  </QuestionBankDatas>
+  <QuestionBankDatas>
+    <ID>17</ID>
+	<类型>FillInTheBlank</类型>
+	<题号>2</题号>
+	<分数>2</分数>
+    <图标></图标>
+    <题头>This line tells that every life, including human beings, animals and plants, originates from the same energy that makes every creature equal. It implies a spirit of________（democracy/ monarchy）
+	|每一个生命，无论是人类，动物或者植物都来自于能量，正是能量使得万物平等。诗行体现了______精神(民主精神/君主专制)</题头>
+    <阅读></阅读>
+	<选择>democracy</选择>
+	<选择>monarchy</选择>
 	<答案>0</答案>
   </QuestionBankDatas>
   <QuestionBankDatas>
     <ID>18</ID>
+	<类型>FillInTheBlank</类型>
+	<题号>3</题号>
+	<分数>2</分数>
     <图标></图标>
-    <题头>For Whitman, men and women, the white and the black, the rich and the poor, the honoured and the despised are equal. Everyone is different. The view of democracy, advocated by Whitman, highlights the role of _______.</题头>
+    <题头>For Whitman, men and women, the white and the black, the rich and the poor, the honoured and the despised are equal. Everyone is different. The view of democracy, advocated by Whitman, highlights the role of _______(the individual/ the collective).
+	|惠特曼把男女，白人黑人，富人和穷人，受尊敬的人与被鄙视的人置于同样的地位。他们每一个人都有自己独特的个性。所以，惠特曼所倡导的民主是重点强调________（个人/集体）, 这种民主将会放大个体的存在。</题头>
     <阅读></阅读>
-	<选择>A.the individual</选择>
-	<选择>B.the collective</选择>
+	<选择>the individual</选择>
+	<选择>the collective</选择>
 	<答案>0</答案>
   </QuestionBankDatas>
   <QuestionBankDatas>
     <ID>19</ID>
+	<类型>FillInTheBlank</类型>
+	<题号>4</题号>
+	<分数>2</分数>
     <图标></图标>
-    <题头>“Light”and “Energy” stand for a kind of collective power. Therefore, Guo Moruo emphasizes the role of _________ in this poem.
-	|“光”与“能量”代表了一种集体的力量，因此，郭沫若在这首诗中更加强调_________的力量</题头>
+    <题头>“Light”and “Energy” stand for a kind of collective power. Therefore, Guo Moruo emphasizes the role of _________(the individual/ the collective) in this poem.
+	|“光”与“能量”代表了一种集体的力量，因此，郭沫若在这首诗中更加强调_________(个人/集体)的力量</题头>
     <阅读></阅读>
-	<选择>A.the individual</选择>
-	<选择>B.the collective</选择>
+	<选择>the individual</选择>
+	<选择>the collective</选择>
 	<答案>1</答案>
   </QuestionBankDatas>
   <QuestionBankDatas>
-    <ID>19</ID>
+    <ID>20</ID>
+	<类型>Summary</类型>
     <图标></图标>
     <题头>The happy journey is about to end, what have you learned? Could you write a short passage of democracy? (about 50 words, Chinese or English ).
 	|旅行将要结束，你学习到了什么？你能写一篇有关民主精神的小短文吗？50字左右，中英文皆可。</题头>
