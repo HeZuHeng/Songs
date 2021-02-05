@@ -24,6 +24,9 @@ public class EqualityController : ChildController
     SceneAssetObject nf;
     SceneAssetObject nh;
 
+    SceneAssetObject niao1;
+    SceneAssetObject niao2;
+
     Tweener movechuang;
     public override void Init()
     {
@@ -45,8 +48,9 @@ public class EqualityController : ChildController
         nf = SceneMng.GetInstance().GetSceneAssetObject(110);
         nh = SceneMng.GetInstance().GetSceneAssetObject(111);
 
+        niao1 = SceneMng.GetInstance().GetSceneAssetObject(118);
+        niao2 = SceneMng.GetInstance().GetSceneAssetObject(119);
         //if (htm != null) htm.Tran.gameObject.SetActive(false);
-        MainPlayer.songResultInfo.FillAnswer(18, string.Empty, 1, AnswerType.Operating);
     }
 
     public override void Close()
@@ -83,25 +87,16 @@ public class EqualityController : ChildController
 
     void InitMoveCamera(OnStateEndDelegate onStateEnd)
     {
-        //zhengzhijia.Tran.gameObject.SetActive(true);
-
-        //Vector3[] vector3s = new Vector3[2];
-        //vector3s[0] = new Vector3(2.3f, -39.734f, 1);
-        //vector3s[1] = new Vector3(2.823f, -39.734f, -1.17f);
-        //Tweener moveTw = zhengzhijia.Tran.DOLocalPath(vector3s, 6, PathType.CatmullRom, PathMode.Ignore).SetLookAt(0);
-
-        ////moveTw.SetLoops(-1, LoopType.Restart);
-        //moveTw.onUpdate += delegate ()
-        //{
-        //    zhengzhijia.PlayAnimator("forward", 1, 1, null);
-        //};
-        //moveTw.onComplete += delegate ()
-        //{
-        //    zhengzhijia.PlayAnimator("forward", 0, 1, null);
-
-        //    onStateEnd?.Invoke(GetState);
-        //};
-        onStateEnd?.Invoke(GetState);
+        Tweener moveTw = niao1.Tran.DOLocalMove(new Vector3(4, niao1.Tran.localPosition.y,-38), 2);
+        niao2.Tran.DOLocalMove(new Vector3(6, niao2.Tran.localPosition.y, -44), 2);
+        niao1.MAnimator.enabled = true;
+        niao2.MAnimator.enabled = true;
+        moveTw.onComplete += delegate ()
+        {
+            InputManager.GetInstance().RemoveClickEventListener(OnClickEvent);
+            InputManager.GetInstance().AddClickEventListener(OnClickEvent);
+            onStateEnd?.Invoke(GetState);
+        };
     }
 
     void TalkCamera(OnStateEndDelegate onStateEnd)
@@ -126,6 +121,9 @@ public class EqualityController : ChildController
         //};
 
         //sceneAsset.Tran.gameObject.AddComponent<TriggerEvent>().enterEvent.AddListener(EnterEvent);
+        Tweener moveTw = niao1.Tran.DOLocalMove(new Vector3(20, niao1.Tran.localPosition.y + 5, -70), 2);
+        niao2.Tran.DOLocalMove(new Vector3(24, niao2.Tran.localPosition.y + 5, -80), 2);
+
         InputManager.GetInstance().RemoveClickEventListener(OnClickEvent);
         InputManager.GetInstance().AddClickEventListener(OnClickEvent);
 
@@ -168,7 +166,18 @@ public class EqualityController : ChildController
     void OnClickEvent(GameObject obj)
     {
         int id = 0;
-        if(obj.name.Equals(zhengzhijia.Tran.gameObject.name) || obj.name.Equals(junren.Tran.gameObject.name))
+        if (obj.name.Equals(niao1.Tran.gameObject.name) || obj.name.Equals(niao2.Tran.gameObject.name))
+        {
+            id = 3;
+            MainPlayer.songResultInfo.FillAnswer(18, string.Empty, 1, AnswerType.Operating);
+
+            SongsDataMng.GetInstance().SetNextTaskData(id);
+            UIMng.Instance.ConcealUI(UIType.MainDialogueWnd);
+            UIMng.Instance.ActivationUI(UIType.MainDialogueWnd);
+            return;
+        }
+
+        if (obj.name.Equals(zhengzhijia.Tran.gameObject.name) || obj.name.Equals(junren.Tran.gameObject.name))
         {
             id = 5;
             obj = zhengzhijia.Tran.gameObject;

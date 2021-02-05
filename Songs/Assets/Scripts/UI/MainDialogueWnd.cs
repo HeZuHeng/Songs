@@ -146,7 +146,7 @@ public class MainDialogueWnd : UIBase
                     bool.TryParse(strs[3], out b);
                     bool loop = sceneAsset.PlayAnimator(strs[4], b, speed, delegate (string aName)
                      {
-                         if (aName.Equals(strs[4]) && !string.IsNullOrEmpty(taskData.des))
+                         if (aName.Equals(strs[4]) && string.IsNullOrEmpty(taskData.des))
                          {
                              taskData.TaskState = TaskState.End;
                          }
@@ -163,7 +163,7 @@ public class MainDialogueWnd : UIBase
                     float.TryParse(strs[3], out f);
                     bool loop = sceneAsset.PlayAnimator(strs[4], f, speed, delegate (string aName)
                     {
-                        if (aName.Equals(strs[4]) && !string.IsNullOrEmpty(taskData.des))
+                        if (aName.Equals(strs[4]) && string.IsNullOrEmpty(taskData.des))
                         {
                             taskData.TaskState = TaskState.End;
                         }
@@ -211,7 +211,7 @@ public class MainDialogueWnd : UIBase
                 }
                 break;
             case TaskType.DOTween:
-                if (taskData.val.Equals("end"))
+                if (!string.IsNullOrEmpty(taskData.val) && taskData.val.Equals("end"))
                 {
                     CameraMng.GetInstance().DOTweenPaly(null);
                     taskData.TaskState = TaskState.End;
@@ -333,7 +333,8 @@ public class MainDialogueWnd : UIBase
     {
         if(taskState == TaskState.End)
         {
-            if(taskData.type == TaskType.Talk)
+            if (taskData.type != TaskType.OpenWnd) UIMng.Instance.ConcealUI(UIType.LookSongWnd);
+            if (taskData.type == TaskType.Talk)
             {
                 UIMng.Instance.ConcealUI(UIType.LeftDialogueWnd);
             }

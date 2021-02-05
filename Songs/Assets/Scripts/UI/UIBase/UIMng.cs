@@ -503,6 +503,12 @@ namespace Songs
                 case UIType.MemoryWnd:
                     openList.Add(string.Format("Prefabs/UI/MemoryWnd", path));
                     return openList;
+                case UIType.LookSongWnd:
+                    openList.Add(string.Format("Prefabs/UI/LookSongWnd", path));
+                    return openList;
+                case UIType.HTMEndWnd:
+                    openList.Add(string.Format("Prefabs/UI/HTMEndWnd", path));
+                    return openList;
                 default:
                     return openList;
             }

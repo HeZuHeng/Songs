@@ -6,7 +6,7 @@ namespace MREngine
 {
     public class GameDataLoader
     {
-        private const int MAXPROCESSER = 1;
+        private const int MAXPROCESSER = 10;
 
         private static GameDataLoader instance = null;
         public static GameDataLoader GetInstance()

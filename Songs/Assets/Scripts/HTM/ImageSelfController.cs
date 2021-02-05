@@ -78,6 +78,7 @@ public class ImageSelfController : ChildController
             CameraMng.GetInstance().SetPersonMove();
             sceneAsset.Tran.position = htm.Tran.position - htm.Tran.forward * 2f;
             sceneAsset.Tran.LookAt(htm.Tran);
+            CameraMng.MainCamera.transform.parent.eulerAngles = Vector3.zero;
             CameraMng.MainCamera.transform.eulerAngles = htm.Tran.eulerAngles + Vector3.right * 5;
 
             Vector3[] sikao = new Vector3[2];

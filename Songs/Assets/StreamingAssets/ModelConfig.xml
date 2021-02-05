@@ -2524,7 +2524,7 @@
         <z>1</z>
       </scale>
     </ModelDatas>
-	<ModelDatas Id="104" 模型名="船员A" 模型路径="chuang_self" 资源名="ss" >
+	<ModelDatas Id="104" 模型名="绅士" 模型路径="chuang_self" 资源名="gentle" >
 	  <position>
         <x>123.372</x>
         <y>22.466</y>
@@ -3427,7 +3427,7 @@
         <z>1</z>
       </scale>
     </ModelDatas>
-	<ModelDatas Id="201" 模型名="雨水" 模型路径="chuang_self" 资源名="shower" >
+	<ModelDatas Id="201" 模型名="雨水" 模型路径="chuang_self" 资源名="shower" 默认显隐="false">
 	  <position>
         <x>124.44</x>
         <y>26.77</y>
@@ -4278,7 +4278,7 @@
       </scale>
     </ModelDatas>
   </SceneDatas>
-  <SceneDatas 场景="体现诗人平等数据" 场景资源名="海岸" 摄像机 = "htm_camera_artistic" 位置="htm_initposition_artistic" 镜头="cutscene_enjoyflower_tym">
+  <SceneDatas 场景="体现诗人平等数据" 场景资源名="海岸" 摄像机 = "htm_Camera_Equality" 位置="htm_initposition_artistic" 镜头="cutscene_enjoyflower_tym">
     <ModelDatas Id="103" 模型名="chuang_self" 资源名="chuang_self" >
 	  <position>
         <x>127.2</x>
@@ -4424,6 +4424,40 @@
       <eulerAngle>
         <x>0</x>
         <y>82.29</y>
+        <z>0</z>
+      </eulerAngle>
+	  <scale>
+        <x>1</x>
+        <y>1</y>
+        <z>1</z>
+      </scale>
+    </ModelDatas>
+	<ModelDatas Id="118" 模型名="鸟1" 模型路径="chuang_self" 资源名="niao_1" >
+	  <position>
+        <x>212.6491</x>
+        <y>22.19805</y>
+        <z>678.8824</z>
+      </position>
+      <eulerAngle>
+        <x>0</x>
+        <y>-88.5</y>
+        <z>0</z>
+      </eulerAngle>
+	  <scale>
+        <x>1</x>
+        <y>1</y>
+        <z>1</z>
+      </scale>
+    </ModelDatas>
+	<ModelDatas Id="119" 模型名="鸟2" 模型路径="chuang_self" 资源名="niao_2" >
+	  <position>
+        <x>221.9</x>
+        <y>22.24008</y>
+        <z>685.4</z>
+      </position>
+      <eulerAngle>
+        <x>0</x>
+        <y>-88.5</y>
         <z>0</z>
       </eulerAngle>
 	  <scale>

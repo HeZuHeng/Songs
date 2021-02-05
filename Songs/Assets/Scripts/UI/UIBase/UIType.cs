@@ -31,6 +31,8 @@ namespace Songs{
         HTMBoatNameWnd = 22,
         HZHSEndWnd,
 		MemoryWnd,
+		LookSongWnd,
+		HTMEndWnd,
 	}
 	/// <summary>
 	/// 二级界面枚举

@@ -56,6 +56,7 @@ public class AnswerWnd : UIBase
         base.OnDisable();
         SongsDataMng.GetInstance().orEnglishChange -= OnEnglishChange;
         StopAllCoroutines();
+        CancelInvoke("ConfirmEnd");
     }
 
     void Show()
@@ -147,7 +148,7 @@ public class AnswerWnd : UIBase
         btn1.gameObject.SetActive(!string.IsNullOrEmpty(question.des));
         btn2.gameObject.SetActive(!string.IsNullOrEmpty(question.startParsing));
         btn3.gameObject.SetActive(false);
-
+        confirmBtn.gameObject.SetActive(true);
         for (int i = 0; i < scrollRect.content.childCount; i++)
         {
             scrollRect.content.GetChild(i).gameObject.SetActive(false);
@@ -212,6 +213,7 @@ public class AnswerWnd : UIBase
             if (scrollRect.content.GetChild(i).GetComponentInChildren<Toggle>().isOn)
             {
                 t.Add(i);
+                scrollRect.content.GetChild(i).GetComponentInChildren<AnswerItemUI>().Show(question.answers != null && question.answers.Contains(i));
             }
         }
         string ansStr = string.Empty;
@@ -276,7 +278,15 @@ public class AnswerWnd : UIBase
         {
             MainPlayer.songResultInfo.FillAnswer(question.answerId, ansStr, minute, question.answerType);
         }
-        
+        confirmBtn.gameObject.SetActive(false);
+        CancelInvoke("ConfirmEnd");
+        Invoke("ConfirmEnd",1f);
+    }
+
+    void ConfirmEnd()
+    {
+        confirmBtn.gameObject.SetActive(true);
+        QuestionBankData question = SongsDataMng.GetInstance().GetQuestionBankData;
         if (!string.IsNullOrEmpty(question.endParsing))
         {
             OnEndParsing();

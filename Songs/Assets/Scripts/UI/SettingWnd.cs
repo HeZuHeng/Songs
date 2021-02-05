@@ -174,6 +174,17 @@ public class SettingWnd : UIBase
             m = 80;
         }
         minute.text = m.ToString();
-        summary.text = MainPlayer.songResultInfo.summary;
+        if (string.IsNullOrEmpty(MainPlayer.songResultInfo.summary))
+        {
+            summary.text = "还没有总结哦，请前往惠特曼分支完成《About Democracy》，进行总结";
+            summary.fontStyle = FontStyle.BoldAndItalic;
+
+        }
+        else
+        {
+            summary.text = MainPlayer.songResultInfo.summary; 
+            summary.fontStyle = FontStyle.Normal;
+
+        }
     }
 }

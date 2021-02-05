@@ -12,9 +12,14 @@ public class LeftDialogueWnd : UIBase
     public TrendsText lblStatus;
     public Button nextBtn;
 
+    public VideoPlayerItemUI itemUI;
+
+    Vector3 initPos;
+    Vector3 pos;
     protected override void Awake()
     {
         base.Awake();
+        itemUI.gameObject.SetActive(false);
         Type = UIType.LeftDialogueWnd;
         MutexInterface = false;
         nextBtn.onClick.AddListener(OnEnd);
@@ -23,6 +28,14 @@ public class LeftDialogueWnd : UIBase
     protected override void OnEnable()
     {
         base.OnEnable();
+        lblStatus.m_Text = string.Empty;
+        lblStatus.m_AudioName = string.Empty;
+        if (lblStatus.m_AudioClip != null)
+        {
+            AudioClip audioClip = lblStatus.m_AudioClip;
+            lblStatus.m_AudioClip = null;
+            audioClip.UnloadAudioData();
+        }
         //StopAllCoroutines();
         StartCoroutine(GetSongFileText(SongsDataMng.GetInstance().GetSongFilePath));
     }
@@ -64,6 +77,15 @@ public class LeftDialogueWnd : UIBase
         lblStatus.m_CallBack.RemoveListener(OnNext);
         lblStatus.m_CallBack.AddListener(OnNext);
         lblStatus.Play(text, soundName);
+
+        if ("iwanderedlonelyasacloud4.txt".Equals(SongsDataMng.GetInstance().GetSongFilePath))
+        {
+            itemUI.gameObject.SetActive(true);
+        }
+        else
+        {
+            itemUI.gameObject.SetActive(false);
+        }
     }
 
     void OnNext()
@@ -74,7 +96,7 @@ public class LeftDialogueWnd : UIBase
     void OnEnd()
     {
         CheckEnd();
-        
+        itemUI.gameObject.SetActive(false);
         UIMng.Instance.ConcealUI(UIType.LeftDialogueWnd);
     }
 

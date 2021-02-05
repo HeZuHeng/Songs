@@ -59,6 +59,7 @@ public class TrendsText : MonoBehaviour
             m_AudioClip.UnloadAudioData();
             m_AudioClip = null;
         }
+        if(m_AudioSource != null) m_AudioSource.enabled = false;
         StopAllCoroutines();
     }
 
@@ -160,14 +161,6 @@ public class TrendsText : MonoBehaviour
     /// </summary>
     public void Play()
     {
-        if(Application.platform == RuntimePlatform.WindowsEditor)
-        {
-            m_ShowSpeed = 100;
-        }
-        if (Application.platform == RuntimePlatform.WebGLPlayer)
-        {
-            m_ShowSpeed = 20;
-        }
         compelete = false;
         suspend = false;
         //\u3000为中文空格英文空格会引起unity中Text的自动换行因此将内容中的英文空格换成中文空格
@@ -180,6 +173,7 @@ public class TrendsText : MonoBehaviour
         {
             m_TextC = ecs[1];
         }
+        m_ShowSpeed = m_Text.Length / 2f;
         string str = m_Text;//.Replace(" ", "\u3000");
         string LineHead = "";
         //设置段落的首行缩进的字符数
@@ -203,6 +197,7 @@ public class TrendsText : MonoBehaviour
                 m_AudioSource = this.gameObject.AddComponent<AudioSource>();
             m_AudioSource.clip = m_AudioClip;
             m_AudioSource.bypassEffects = true;
+            m_AudioSource.enabled = true;
             //读写速度根据音频长度平均计算
             m_ShowSpeed = str.Length / m_AudioClip.length;
         }
@@ -264,6 +259,15 @@ public class TrendsText : MonoBehaviour
             return;
         }
         m_AudioName = audioName;
+        if (string.IsNullOrEmpty(m_AudioName))
+        {
+            if (m_AudioClip != null)
+            {
+                m_AudioClip.UnloadAudioData();
+                m_AudioClip = null;
+            }
+            return;
+        }
         GameLoadTask loadCamera = GameDataManager.GetInstance().GetGameTask(m_AudioName);
         loadCamera.OnTaskProgress += delegate (float progress)
         {

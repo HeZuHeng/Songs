@@ -128,6 +128,7 @@ public class CoverSongController : ChildController
 
         shower.Tran.gameObject.SetActive(true);
         baofeng.Tran.gameObject.SetActive(true);
+        baofeng.Tran.GetComponent<AudioSource>().volume = 1;
 
         onStateEnd?.Invoke(GetState);
     }

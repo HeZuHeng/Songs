@@ -90,7 +90,7 @@ MonoBehaviour:
   m_BlurFactor: 1
   m_Style: 3
   m_EffectColor: {r: 1, g: 0, b: 0.11390495, a: 0.50980395}
-  m_EffectDistance: {x: 12, y: 12}
+  m_EffectDistance: {x: 20, y: 20}
   m_UseGraphicAlpha: 0
 --- !u!1 &1049603707
 GameObject:
@@ -182,7 +182,7 @@ MonoBehaviour:
   m_BlurFactor: 1
   m_Style: 3
   m_EffectColor: {r: 1, g: 0, b: 0.11390495, a: 0.50980395}
-  m_EffectDistance: {x: 12, y: 12}
+  m_EffectDistance: {x: 20, y: 20}
   m_UseGraphicAlpha: 0
 --- !u!1 &1071541446
 GameObject:
@@ -274,7 +274,7 @@ MonoBehaviour:
   m_BlurFactor: 1
   m_Style: 3
   m_EffectColor: {r: 1, g: 0, b: 0.11390495, a: 0.50980395}
-  m_EffectDistance: {x: 12, y: 12}
+  m_EffectDistance: {x: 20, y: 20}
   m_UseGraphicAlpha: 0
 --- !u!1 &1438936992
 GameObject:
@@ -366,7 +366,7 @@ MonoBehaviour:
   m_BlurFactor: 1
   m_Style: 3
   m_EffectColor: {r: 1, g: 0, b: 0.11390495, a: 0.50980395}
-  m_EffectDistance: {x: 12, y: 12}
+  m_EffectDistance: {x: 20, y: 20}
   m_UseGraphicAlpha: 0
 --- !u!1 &1460630214
 GameObject:
@@ -458,7 +458,7 @@ MonoBehaviour:
   m_BlurFactor: 1
   m_Style: 3
   m_EffectColor: {r: 1, g: 0, b: 0.11390495, a: 0.50980395}
-  m_EffectDistance: {x: 12, y: 12}
+  m_EffectDistance: {x: 20, y: 20}
   m_UseGraphicAlpha: 0
 --- !u!1 &223616345230135120
 GameObject:

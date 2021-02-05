@@ -129,6 +129,7 @@ public class SceneAssetObject : IAssetObject
     {
         if(MAnimator != null)
         {
+            MAnimator.enabled = true;
             AnimationName = aName.ToLower();
             MAnimator.SetFloat(AnimationName, val);
             MAnimator.speed = speed;

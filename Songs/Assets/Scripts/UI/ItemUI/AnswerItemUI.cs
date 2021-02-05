@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class AnswerItemUI : MonoBehaviour
 {
     public RectTransform rect;
     public Text qus;
     public Image tip;
+    public Image f;
+    public RectTransform toggle;
 
     float radian = 0; // 弧度
     float perRadian = 0.03f; // 每次变化的弧度
@@ -17,6 +20,7 @@ public class AnswerItemUI : MonoBehaviour
     bool showTip;
     float time;
     float t = 4;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +29,7 @@ public class AnswerItemUI : MonoBehaviour
             rect = transform as RectTransform;
         }
         oldPos = transform.localPosition; // 将最初的位置保存到oldPos
+
     }
 
     // Update is called once per frame
@@ -48,11 +53,23 @@ public class AnswerItemUI : MonoBehaviour
 
     public void Show(string text,bool val)
     {
+        toggle.gameObject.SetActive(true);
         qus.text = text;
         showTip = val;
         time = Time.time;
         tip.enabled = false;
         perRadian = Random.Range(0.01f, 0.1f);
         oldPos = transform.localPosition; // 将最初的位置保存到oldPos
+        f.gameObject.SetActive(false);
+    }
+
+    public void Show(bool val)
+    {
+        toggle.gameObject.SetActive(false);
+        f.color = val ? Color.green : Color.red;
+
+        Tween tween = f.DOColor(new Color(f.color.r, f.color.g, f.color.b, 30), 0.2f);
+        tween.SetLoops(-1,LoopType.Yoyo);
+        f.gameObject.SetActive(true);
     }
 }
