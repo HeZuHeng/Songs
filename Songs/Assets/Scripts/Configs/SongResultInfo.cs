@@ -107,10 +107,10 @@ public class SongResultInfo {
                 list = fillInTheBlanks;
                 break;
             case AnswerType.SingleChoice:
-                list = fillInTheBlanks;
+                list = singleChoices;
                 break;
             case AnswerType.MultipleChoice:
-                list = fillInTheBlanks;
+                list = multipleChoices;
                 break;
             case AnswerType.Operating:
                 list = operatings;
@@ -129,13 +129,15 @@ public class SongResultInfo {
     public void FillAnswer(int id,string answer,int min, AnswerType answerType)
     {
         AnswerResultData answerResultData = FindAnswer(id, answerType);
-        if(answerResultData != null) answerResultData.FillAnswer(answer, min);
+        if (answerResultData != null) answerResultData.FillAnswer(answer, min);
+        Debug.Log(" answerType = " + answerType + "Id = " + answerResultData.Id + " : minute = " + answerResultData.minute);
     }
 
     public void FillAnswer(int id, int childId, string answer, int min, AnswerType answerType)
     {
         AnswerResultData answerResultData = FindAnswer(id, answerType);
         if (answerResultData != null) answerResultData.FillAnswer(childId, answer, min);
+        Debug.Log(" answerType = " + answerType + "Id = " + answerResultData.Id + " : minute = " + answerResultData.minute);
     }
 
     public void FillSummary(string summary)
@@ -186,6 +188,7 @@ public class AnswerResultData
     {
         mAnswer = answer;
         minute = min;
+        //Debug.Log("Id = " + Id + " : minute = " + minute);
     }
 
     public void FillAnswer(int childId,string answer, int min)
@@ -210,6 +213,7 @@ public class AnswerResultData
         }
         mAnswer = str;
         minute = totalMin;
+        //Debug.Log("Id = " + Id + " : minute = " + minute);
     }
 }
 

@@ -176,7 +176,7 @@ public class SettingWnd : UIBase
         minute.text = m.ToString();
         if (string.IsNullOrEmpty(MainPlayer.songResultInfo.summary))
         {
-            summary.text = "还没有总结哦，请前往惠特曼分支完成《About Democracy》，进行总结";
+            summary.text = "还没有总结，请完成惠特曼分支《About Democracy》填写总结。";
             summary.fontStyle = FontStyle.BoldAndItalic;
 
         }

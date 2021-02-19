@@ -182,9 +182,9 @@ public class BuildAssetBundle
         Object[] dependObjs = EditorUtility.CollectDependencies(roots);
         foreach (Object dependObj in dependObjs)
         {
-            if (dependObj != null && (dependObj.GetType() == typeof(Cubemap) || dependObj.GetType() == typeof(Texture2D) ||
-                dependObj.GetType() == typeof(Material) || dependObj.GetType() == typeof(Shader) || dependObj.GetType() == typeof(Mesh)))
-                //if (dependObj != null)
+            if (dependObj != null && (dependObj.GetType() == typeof(Cubemap)  || dependObj.GetType() == typeof(Shader)))
+            //dependObj.GetType() == typeof(Material) || dependObj.GetType() == typeof(Texture2D) || dependObj.GetType() == typeof(Mesh)))
+            //if (dependObj != null)
             {
                 string path = AssetDatabase.GetAssetPath(dependObj);
                 if (!results.Contains(path))

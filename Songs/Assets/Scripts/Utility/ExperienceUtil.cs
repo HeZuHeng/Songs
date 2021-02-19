@@ -31,7 +31,7 @@ public class ExperienceUtil : MonoBehaviour
     public void DoMoveCamera(Texture texture, Vector3 pos,float time, TweenCallback callback,bool init = true)
     {
         material.SetTexture("_MainTex", texture);
-       if(init) mCamera.transform.localPosition = initPosition;
+        if(init) mCamera.transform.localPosition = initPosition;
         Tween tween = mCamera.transform.DOLocalMove(pos, time);
         tween.onComplete += callback;
     }

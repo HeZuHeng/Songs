@@ -131,6 +131,10 @@ public class CameraMng
             UserControl.transform.parent.position = Vector3.zero;
             UserControl.transform.position = Vector3.zero;
         }
+        if (PlayCutscene != null)
+        {
+            PlayCutscene.Stop();
+        }
         PlayCutscene = null;
         if (MainCamera == null) return;
 

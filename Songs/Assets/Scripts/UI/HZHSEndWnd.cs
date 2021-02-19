@@ -20,6 +20,7 @@ public class HZHSEndWnd : UIBase
     protected override void OnEnable()
     {
         base.OnEnable();
+        ExperienceUtil.Instance.InitPosition();
         ExperienceUtil.Instance.SetTexture(texture);
         image.enabled = false;
         Invoke("DoMove", 1);
