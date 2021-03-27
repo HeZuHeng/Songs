@@ -15,14 +15,14 @@
     <TaskDatas ID="9" 任务名="点击前往The Image of Grass" 下一个="0" 类型="TaskChange" 值 = "The Image of Grass" 描述="点击右侧前往体验The Image of Grass场景"/>
   </SceneTasks>
   <SceneTasks 场景任务名="The Image of Grass" 图标="icon_cover_picture" 场景数据="草的意象数据">
-    <TaskDatas ID="102" 任务名="聚会大厅自由漫游" 下一个="0" 类型="PersonMove" 值 = "end"/>
-    <TaskDatas ID="2" 任务名="点击废奴运动照片" 下一个="11"  类型="Talk" 描述 = "Taking part in the abolitionist movement.
+    <TaskDatas ID="102" 任务名="聚会大厅自由漫游" 下一个="2" 类型="PersonMove" 值 = "end"/>
+    <TaskDatas ID="2" 任务名="点击废奴运动照片" 下一个="11"  类型="Click" 值 = "chuang_self/画框/Three" 描述 = "Taking part in the abolitionist movement.
 	|参加废奴运动"/>
-    <TaskDatas ID="11" 任务名="解析废奴运动照片" 下一个="0"  类型="Talk" 描述 = "Before the Civil War, Whitman published “The Slave and the Slave Trade” in which he attacked the man-eating slavery, and encouraged young men to support the true political democracy.
+    <TaskDatas ID="11" 任务名="解析废奴运动照片" 下一个="3"  类型="Talk" 描述 = "Before the Civil War, Whitman published “The Slave and the Slave Trade” in which he attacked the man-eating slavery, and encouraged young men to support the true political democracy.
 	|惠特曼早在内战前就发表《奴隶以及奴隶买卖》，抨击美国吃人的奴隶制度, 并敦促年轻人为真正的政治民主而奋斗。"/>
-    <TaskDatas ID="3" 任务名="点击南北战争照片" 下一个="21"  类型="Talk" 描述 = "American Civil War.
+    <TaskDatas ID="3" 任务名="点击南北战争照片" 下一个="21"  类型="Click" 值 = "chuang_self/画框/Three002" 描述 = "American Civil War.
 	|南北战争"/>
-    <TaskDatas ID="21" 任务名="解析南北战争照片" 下一个="0"  类型="Talk" 描述 = "And that all men ever born are also my brothers...and the women my sisters and lovers.—“Song of Myself”
+    <TaskDatas ID="21" 任务名="解析南北战争照片" 下一个="1"  类型="Click" 值 = "chuang_self/画框/Three003" 描述 = "And that all men ever born are also my brothers...and the women my sisters and lovers.—“Song of Myself”
 	|所有出生的男子都是我的兄弟，所有的女人都是我的姐妹和爱人。—《自我之歌》"/>
     <TaskDatas ID="1" 任务名="解析自我之歌照片" 下一个="104"  类型="Talk" 描述 = "Song of Myself” (1855) is the longest and one of the best in Whitman’s canon.This poem is of rich connotation and magnificent prospect. By describing a harmonious picture of natural landscape with human being, Walt Whitman expressed the harmonious beauty of the modern civilization with primitive nature.
 	|“自我之歌”（1855）是惠特曼最长、最好的诗歌之一，内涵丰富，前景广阔。沃尔特·惠特曼通过描述自然与人类和谐相处的场景，表达了淳朴自然与现代文明的和谐之美。"/>

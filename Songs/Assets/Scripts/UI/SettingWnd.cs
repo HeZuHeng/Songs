@@ -22,6 +22,7 @@ public class SettingWnd : UIBase
     public Toggle chinese;
 
     public Button btn;
+    public Button tijiao;
 
     public Transform aParent;
     public Text minute;
@@ -44,6 +45,7 @@ public class SettingWnd : UIBase
         music.onValueChanged.AddListener(OnMusic);
         chinese.onValueChanged.AddListener(OnChinese);
         btn.onClick.AddListener(OnBtn);
+        tijiao.onClick.AddListener(OnTijiao);
     }
 
     protected override void Start()
@@ -75,6 +77,11 @@ public class SettingWnd : UIBase
         task.isOn = false;
         CancelInvoke("HideHelp");
         CancelInvoke("ShowEnglish");
+    }
+
+    void OnTijiao()
+    {
+        Debug.Log(JsonUtility.ToJson(MainPlayer.songResultInfo));
     }
 
     void HideHelp()

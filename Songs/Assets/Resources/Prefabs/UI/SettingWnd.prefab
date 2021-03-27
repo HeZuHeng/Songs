@@ -520,7 +520,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8523253914430647302
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1746,6 +1746,7 @@ MonoBehaviour:
   music: {fileID: 7001220590468245321}
   chinese: {fileID: 814416143136397445}
   btn: {fileID: 6425136543633330815}
+  tijiao: {fileID: 6936654376499859745}
   aParent: {fileID: 8523253914430647302}
   minute: {fileID: 8222187753014751936}
   summary: {fileID: 4091772008950507308}
