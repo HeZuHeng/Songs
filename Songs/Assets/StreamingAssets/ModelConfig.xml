@@ -445,7 +445,7 @@
     </ModelDatas>
   </SceneDatas>
   <SceneDatas 场景="中英诗歌精神比较" 场景资源名="陶渊明赏花" 摄像机 = "heavencamera" 位置="heaveninitposition" 镜头="cutscene_enjoyflower_tym">
-    <ModelDatas Id="101" 模型名="华兹华斯" 资源名="hzhs" 图标 ="hzhs">
+    <ModelDatas Id="101" 模型名="Wordsworth" 资源名="hzhs" 图标 ="hzhs">
 	  <position>
         <x>425.297</x>
         <y>35.912</y>
@@ -3393,13 +3393,13 @@
     </ModelDatas>
 	<ModelDatas Id="201" 模型名="雨水" 模型路径="chuang_self" 资源名="shower" 默认显隐="false">
 	  <position>
-        <x>124.44</x>
+        <x>127.2129</x>
         <y>26.77</y>
-        <z>647.79</z>
+        <z>662.9847</z>
       </position>
       <eulerAngle>
         <x>0</x>
-        <y>215.9</y>
+        <y>-144.1</y>
         <z>0</z>
       </eulerAngle>
 	  <scale>
@@ -5250,13 +5250,13 @@
   <SceneDatas 场景="中美民主思想比较数据" 场景资源名="港口" 摄像机 = "htm_camera_democracy" 位置="htm_initposition_democracy" 镜头="cutscene_enjoyflower_tym">
     <ModelDatas Id="103" 模型名="chuang_self" 资源名="chuang_self" >
 	  <position>
-        <x>124.86</x>
+        <x>107</x>
         <y>31.26</y>
-        <z>658.65</z>
+        <z>745.8</z>
       </position>
       <eulerAngle>
         <x>0</x>
-        <y>128.3</y>
+        <y>123.9</y>
         <z>0</z>
       </eulerAngle>
 	  <scale>

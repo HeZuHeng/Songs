@@ -110,8 +110,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -933, y: -820}
-  m_SizeDelta: {x: 1080, y: 300}
+  m_AnchoredPosition: {x: -948.8, y: -820}
+  m_SizeDelta: {x: 1425.4, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5476874675184012859
 MonoBehaviour:
@@ -1365,11 +1365,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: d6c5349ada27ca54c8cd6f8151037162, type: 3}
-    m_FontSize: 40
+    m_FontSize: 46
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
-    m_MaxSize: 40
+    m_MaxSize: 46
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -1400,16 +1400,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_TextIndent: 2
   endYieldTime: 0.5
-  m_Text: "After\_visiting\_Wordsworth\u2019s residence and discussing poems with
-    Tao Yuanming and Wordsworth, you must have learned a lot. The ideas that nature
-    serves for human being in Wordsworth\u2019s poem, and the forgetting of nature
-    and the self in Chinese poem, are the embodiment of man\u2019s struggle to seek
-    for relief from nature. Apart from focusing on the relationship between man and
-    nature, romanticism also highlights the importance of self. That means man, instead
-    of the God, becomes the center of this secular world. The spirit of democracy
-    is an example. Walt Whitman, one of the representatives in the 19th century, advocates
-    democracy in his poems. Next, let\u2019s pass through a space-time tunnel and
-    follow Whitman to look for the Statue of Liberty. |\u53C2\u89C2\u5B8C\u534E\u5179\u534E\u65AF\u7684\u6545\u5C45\uFF0C\u7ED3\u675F\u8BD7\u6B4C\u8C08\u8BBA\uFF0C\u76F8\u4FE1\u4F60\u611F\u89E6\u826F\u591A\u3002\u4F46\u65E0\u8BBA\u662F\u82F1\u56FD\u7684\u7269\u7686\u5907\u4E8E\u6211\u8FD8\u662F\u4E2D\u56FD\u7684\u7269\u6211\u7686\u5FD8\uFF0C\u90FD\u662F\u4EBA\u5BC4\u60C5\u4E8E\u5C71\u6C34\uFF0C\u5BFB\u6C42\u89E3\u8131\u7684\u4F53\u73B0\u3002\u9664\u5F00\u5173\u6CE8\u4EBA\u4E0E\u81EA\u7136\u5173\u7CFB\u5916\uFF0C\u6D6A\u6F2B\u4E3B\u4E49\u8FD8\u5F3A\u8C03\u4EBA\u7C7B\u81EA\u6211\u7684\u89D2\u8272\uFF0C\u4EBA\u7C7B\u4EE3\u66FF\u4E0A\u5E1D\u6210\u4E3A\u4E16\u754C\u7684\u4E2D\u5FC3\uFF0C\u5176\u4E2D\u7684\u4E00\u4E2A\u4F53\u73B0\u5C31\u662F\u6C11\u4E3B\u7CBE\u795E\u3002\u8B6C\u5982\u7F8E\u56FD\u8BD7\u4EBA\u60E0\u7279\u66FC\u3002\u63A5\u4E0B\u6765\uFF0C\u8BF7\u968F\u6211\u4EEC\u7A7F\u8D8A\u65F6\u7A7A\uFF0C\u8DDF\u60E0\u7279\u66FC\u4E00\u8D77\u5BFB\u627E\u81EA\u7531\u5973\u795E\u7684\u5F81\u7A0B\u5427\uFF01"
+  m_Text: "As romanticists who emphasize the relationship between humanity and nature,
+    William Wordsworth and Tao Yuanming are most celebrated for their poetry of nature.
+    Nature makes the whole world kin. \u201CNature knows, loves, suffers and dreams,
+    like a man, and together with the man.\u201D (Moore, 2010). Similarly, Walt Whitman
+    (1819-1892), an American romanticist\uFF0Casserts that nature is the extension
+    of the self, body and soul. Whitman\u2019s poetry made a literary revolution in
+    America, which can be seen from his book of Leaves of Grass in 1855. A free spirited
+    and passionate persona, who is boastful and democratic, emerges in his poetry.
+    His poetry also makes a huge impact on Chinese new poetry in the May Fourth Movement,
+    especially on Guo Moruo. Next, let\u2019s take an adventure with Whitman to find
+    the Statue of\_Liberty!\n|\u5A01\u5EC9\xB7\u534E\u5179\u534E\u65AF\u548C\u9676\u6E0A\u660E\u90FD\u662F\u6D6A\u6F2B\u4E3B\u4E49\u8005\uFF0C\u5173\u6CE8\u4EBA\u4E0E\u81EA\u7136\u7684\u5173\u7CFB,\u4EE5\u81EA\u7136\u8BD7\u800C\u95FB\u540D\u4E8E\u4E16\u3002\u81EA\u7136\u8BA9\u5168\u4E16\u754C\u7684\u4EBA\u6210\u4E3A\u540C\u80DE\u3002\u201C\u81EA\u7136\u50CF\u4EBA\u4E00\u6837\uFF0C\u6709\u611F\u77E5\u3001\u7231\u3001\u75DB\u82E6\u548C\u68A6\u60F3\uFF0C\u4E0E\u4EBA\u7C7B\u540C\u5728\u201D\uFF08\u83AB\u5C14\uFF0C2010\uFF09\u3002\u540C\u6837\uFF0C\u81EA\u7136\u5BF9\u4E8E\u7F8E\u56FD\u6D6A\u6F2B\u4E3B\u4E49\u8005\u6C83\u5C14\u7279\xB7\u60E0\u7279\u66FC\uFF081819-1892\uFF09\u6765\u8BF4\uFF0C\u662F\u81EA\u6211\uFF0C\u8EAB\u4F53\u548C\u7075\u9B42\u7684\u6269\u5C55\u30021855\u5E74\u60E0\u7279\u66FC\u51FA\u7248\u7684\u8BD7\u6B4C\u300A\u8349\u53F6\u96C6\u300B\u5728\u7F8E\u56FD\u5F15\u53D1\u4E86\u4E00\u573A\u6587\u5B66\u9769\u547D\u3002\u8BD7\u6B4C\u70ED\u60C5\u6D0B\u6EA2\u5730\u6B4C\u9882\u4E86\u4E00\u79CD\u8FFD\u6C42\u81EA\u7531\u3001\u6C11\u4E3B\u7684\u7CBE\u795E\u3002\u60E0\u7279\u66FC\u7684\u8BD7\u6B4C\u5728\u4E94\u56DB\u8FD0\u52A8\u65F6\u671F\u8FD8\u5F71\u54CD\u4E86\u4E2D\u56FD\u65B0\u8BD7\u7684\u521B\u4F5C\uFF0C\u7279\u522B\u662F\u8BD7\u4EBA\u90ED\u6CAB\u82E5\u3002\u63A5\u4E0B\u6765\uFF0C\u8BA9\u6211\u4EEC\u8DDF\u968F\u60E0\u7279\u66FC\u4E00\u8D77\u53BB\u5BFB\u627E\u81EA\u7531\u5973\u795E\u50CF\u5427\uFF01"
   m_Enable: 1
   m_Conetnt: {fileID: 0}
   m_ShowSpeed: 30

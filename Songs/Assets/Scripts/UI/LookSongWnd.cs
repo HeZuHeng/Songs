@@ -44,7 +44,7 @@ public class LookSongWnd : UIBase
         TaskData taskData = SongsDataMng.GetInstance().GetTaskData;
         if (taskData.Id == 202)
         {
-            img.gameObject.SetActive(true);
+            //img.gameObject.SetActive(true);
         }
         QuestionBankData question = SongsDataMng.GetInstance().GetQuestionBankData;
         if (taskData != null)

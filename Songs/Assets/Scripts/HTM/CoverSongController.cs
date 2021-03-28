@@ -33,18 +33,18 @@ public class CoverSongController : ChildController
         InputManager.GetInstance().AddClickEventListener(OnClickEvent);
 
         Vector3[] vector3s = new Vector3[5];
-        vector3s[0] = new Vector3(228, 61, 539);
-        vector3s[1] = new Vector3(400, 61, 431);
-        vector3s[2] = new Vector3(608, 61, 395);
-        vector3s[3] = new Vector3(784, 61, 208);
-        vector3s[4] = new Vector3(940, 61, 57);
+        vector3s[0] = new Vector3(228, 31.26f, 539);
+        vector3s[1] = new Vector3(400, 31.26f, 431);
+        vector3s[2] = new Vector3(608, 31.26f, 395);
+        vector3s[3] = new Vector3(784, 31.26f, 208);
+        vector3s[4] = new Vector3(940, 31.26f, 57);
         Tweener moveTw = chuang.Tran.DOLocalPath(vector3s, 300, PathType.CatmullRom, PathMode.Ignore).SetLookAt(0.0001f);
         moveTw.SetLoops(-1, LoopType.Restart);
         Vector3 offset = chuang.Tran.position - sceneAsset.Tran.position;
 
         CameraMng.mainCameraParent.position = CameraMng.MainCamera.transform.position;
         CameraMng.mainCameraParent.eulerAngles = CameraMng.MainCamera.transform.eulerAngles;
-        CameraMng.MainCamera.transform.localPosition = Vector3.zero;
+        CameraMng.MainCamera.transform.localPosition = new Vector3(0.404f,0,1.162f);
         CameraMng.MainCamera.transform.localEulerAngles = Vector3.zero;
 
         Vector3 coffset = chuang.Tran.position - CameraMng.mainCameraParent.position;
@@ -90,15 +90,15 @@ public class CoverSongController : ChildController
 
     void InitMoveCamera(OnStateEndDelegate onStateEnd)
     {
-        htm.Tran.localPosition = new Vector3(3.202f,-39.734f,-1.934f);
-        htm.Tran.localEulerAngles = Vector3.zero;
+        htm.Tran.localPosition = new Vector3(-1.285f, -8.794001f, 0.145f);
+        htm.Tran.localEulerAngles = new Vector3(0,91.51f,0);
 
         htm.Tran.gameObject.SetActive(true);
         gentle.Tran.gameObject.SetActive(true);
 
         Vector3[] vector3s = new Vector3[2];
-        vector3s[0] = new Vector3(2.3f, -39.734f, 1);
-        vector3s[1] = new Vector3(2.823f, -39.734f, -1.17f);
+        vector3s[0] = new Vector3(2.57f, -8.794001f, 2.358f);
+        vector3s[1] = new Vector3(0.234f, -8.794001f, 0.707f);
         Tweener moveTw = gentle.Tran.DOLocalPath(vector3s, 4, PathType.CatmullRom, PathMode.Ignore).SetLookAt(0);
         
         //moveTw.SetLoops(-1, LoopType.Restart);
@@ -114,6 +114,8 @@ public class CoverSongController : ChildController
 
             onStateEnd?.Invoke(GetState);
         };
+
+        Tween tween = CameraMng.MainCamera.transform.DOLocalRotate(-82 * Vector3.up, 7);
     }
     Tweener tweener;
     Tweener tweener1;

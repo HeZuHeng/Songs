@@ -63,7 +63,7 @@ public class FantasyWnd : UIBase
             scrollRect.content.GetChild(i).gameObject.SetActive(true);
         }
         Show();
-        tip2.text = "第一节";
+        tip2.text = "Stanza one";
         SceneController.TerrainController.SetDetailObjects(0.1f);
         SceneController.TerrainController.SetWater(false);
         SceneController.TerrainController.SetSky(0,1f);
@@ -113,7 +113,7 @@ public class FantasyWnd : UIBase
             bankData.onQuestionEnd.RemoveListener(NextFantasy);
             bankData.onQuestionEnd.AddListener(NextFantasy);
             UIMng.Instance.ActivationUI(UIType.AnswerWnd);
-            tip2.text = "第二节";
+            tip2.text = "Stanza two";
         }
 
         if (index == 2)
@@ -134,7 +134,7 @@ public class FantasyWnd : UIBase
             bankData.onQuestionEnd.RemoveListener(NextFantasy);
             bankData.onQuestionEnd.AddListener(NextFantasy);
             UIMng.Instance.ActivationUI(UIType.AnswerWnd);
-            tip2.text = "第三节";
+            tip2.text = "Stanza three";
         }
         if (index == 4)
         {

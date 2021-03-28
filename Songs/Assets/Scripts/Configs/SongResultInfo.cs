@@ -42,7 +42,7 @@ public class SongResultInfo {
         multipleChoices.Add(new AnswerResultData(3, "A、B", 0));
         multipleChoices.Add(new AnswerResultData(4, "A、B、C", 0));
         multipleChoices.Add(new AnswerResultData(5, "A、B、D", 0));
-        multipleChoices.Add(new AnswerResultData(5, "B、C", 0));
+        multipleChoices.Add(new AnswerResultData(6, "B、C", 0));
 
         AnswerResultData a2 = new AnswerResultData(1, "0", 0);
         a2.childs.Add(new AnswerChildResultData(1, "myself", 0));

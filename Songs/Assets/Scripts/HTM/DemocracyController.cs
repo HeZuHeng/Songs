@@ -32,10 +32,10 @@ public class DemocracyController : ChildController
         if (htm != null) htm.Tran.gameObject.SetActive(true);
 
         vector3s = new Vector3[4];
-        vector3s[0] = new Vector3(172, 62.2f, 699);
-        vector3s[1] = new Vector3(422, 62.2f, 487);
-        vector3s[2] = new Vector3(581, 62.2f, 408);
-        vector3s[3] = new Vector3(783, 62.2f, 366);
+        vector3s[0] = new Vector3(275, 31.26f, 592);
+        vector3s[1] = new Vector3(405, 31.26f, 530);
+        vector3s[2] = new Vector3(600, 31.26f, 408);
+        vector3s[3] = new Vector3(850, 31.26f, 217);
 
         offset = sceneAsset.Tran.position;
         sceneAsset.Tran.parent.position = chuang.Tran.position;

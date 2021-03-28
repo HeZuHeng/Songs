@@ -1,0 +1,508 @@
+fileFormatVersion: 2
+guid: 269727ce48b7b7e41ad65327e51d0366
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Charbany black09
+    100002: houmen
+    100004: Inst3D
+    100006: Inst3D 1
+    100008: Inst3D001
+    100010: Inst3D004
+    100012: Inst3D011
+    100014: Inst3D013
+    100016: Inst3D021
+    100018: Inst3D022
+    100020: Inst3D023
+    100022: Inst3D024
+    100024: lo_Prop_Cabinet_A_LOD0
+    100026: lo_Prop_Cabinet_B_LOD0
+    100028: lo_Prop_Lamp_E_LOD002
+    100030: lo_Prop_Sofa_A_LOD002
+    100032: lo_Prop_Vase_B_LOD1
+    100034: Object003
+    100036: Rectangle40
+    100038: RefRep.1454.1
+    100040: RefRep.1471.1
+    100042: RefRep.1522.1
+    100044: RefRep.1806.1
+    100046: Three
+    100048: Three002
+    100050: Three003
+    100052: whisky06
+    100054: "\u5899\u58C1"
+    100056: //RootNode
+    100058: "\u5927\u5385\u95E8"
+    100060: "\u5927\u6446\u4EF6"
+    100062: "\u5BF9\u8C61047"
+    100064: "\u5BF9\u8C61070"
+    100066: "\u5BF9\u8C61077"
+    100068: "\u5BF9\u8C61078"
+    100070: "\u5BF9\u8C61089"
+    100072: "\u5C0F\u6446\u4EF6"
+    100074: "\u5C4B\u9876"
+    100076: "\u6728\u623F1"
+    100078: "\u753B\u6846"
+    100080: "\u77F3\u58A9"
+    100082: "\u8239\u677F\u5927\u5385"
+    100084: "\u94A2\u7434"
+    100086: "\u95E8\u53E3\u5730\u6BEF"
+    100088: "\u95E8\u6846"
+    100090: "\u95E8\u7A97"
+    400000: Charbany black09
+    400002: houmen
+    400004: Inst3D
+    400006: Inst3D 1
+    400008: Inst3D001
+    400010: Inst3D004
+    400012: Inst3D011
+    400014: Inst3D013
+    400016: Inst3D021
+    400018: Inst3D022
+    400020: Inst3D023
+    400022: Inst3D024
+    400024: lo_Prop_Cabinet_A_LOD0
+    400026: lo_Prop_Cabinet_B_LOD0
+    400028: lo_Prop_Lamp_E_LOD002
+    400030: lo_Prop_Sofa_A_LOD002
+    400032: lo_Prop_Vase_B_LOD1
+    400034: Object003
+    400036: Rectangle40
+    400038: RefRep.1454.1
+    400040: RefRep.1471.1
+    400042: RefRep.1522.1
+    400044: RefRep.1806.1
+    400046: Three
+    400048: Three002
+    400050: Three003
+    400052: whisky06
+    400054: "\u5899\u58C1"
+    400056: //RootNode
+    400058: "\u5927\u5385\u95E8"
+    400060: "\u5927\u6446\u4EF6"
+    400062: "\u5BF9\u8C61047"
+    400064: "\u5BF9\u8C61070"
+    400066: "\u5BF9\u8C61077"
+    400068: "\u5BF9\u8C61078"
+    400070: "\u5BF9\u8C61089"
+    400072: "\u5C0F\u6446\u4EF6"
+    400074: "\u5C4B\u9876"
+    400076: "\u6728\u623F1"
+    400078: "\u753B\u6846"
+    400080: "\u77F3\u58A9"
+    400082: "\u8239\u677F\u5927\u5385"
+    400084: "\u94A2\u7434"
+    400086: "\u95E8\u53E3\u5730\u6BEF"
+    400088: "\u95E8\u6846"
+    400090: "\u95E8\u7A97"
+    2100000: 'Material #55'
+    2100002: 'Material #61'
+    2100004: 'Material #56'
+    2100006: 'Material #58'
+    2100008: lo_Prop_Vase_B_LOD1
+    2100010: one
+    2100012: Prop_Rug_A001
+    2100014: two
+    2100016: three
+    2100018: 12 - Default
+    2100020: lo_Prop_Cabinet_B_LOD0
+    2100022: Piano_default
+    2100024: lo_Prop_Sofa_A_LOD0
+    2100026: RefRep.1542
+    2100028: "RefRep.1951\u7A97\u6237\u7EB8"
+    2100030: "RefRep.1467\u95E8\u6846\u6728\u7EB9"
+    2100032: RefRep.1536
+    2100034: "RefRep.1809\u5185\u95E8"
+    2100036: "RefRep.1501\u5927\u7406\u77F3"
+    2100038: "RefRep.1459\u95E8\u6846"
+    2100040: "RefRep.1452\u6728\u67F1"
+    2100042: "RefRep.1471\u7EB9\u8DEF"
+    2100044: "RefRep.1522\u767D\u5899"
+    2100046: RefRep.1807
+    2100048: RefRep.1566
+    2100050: RefRep.1475
+    2100052: "RefRep.1798\u5F2F\u6881"
+    2100054: "RefRep.1702\u5C4B\u9876"
+    2100056: "RefRep.1690\u5C4B\u9876\u6728\u7EB9"
+    2100058: "RefRep.1445\u5927\u95E8"
+    2100060: "\u95E8\u628A"
+    2100062: lo_Prop_Chair_A_LOD0
+    2100064: 15 - Default
+    2100066: "\u6728\u623F"
+    2100068: "\u6D45\u6728\u7EB9"
+    2300000: Charbany black09
+    2300002: houmen
+    2300004: Inst3D
+    2300006: Inst3D 1
+    2300008: Inst3D001
+    2300010: Inst3D004
+    2300012: Inst3D011
+    2300014: Inst3D013
+    2300016: Inst3D021
+    2300018: Inst3D022
+    2300020: Inst3D023
+    2300022: Inst3D024
+    2300024: lo_Prop_Cabinet_A_LOD0
+    2300026: lo_Prop_Cabinet_B_LOD0
+    2300028: lo_Prop_Lamp_E_LOD002
+    2300030: lo_Prop_Sofa_A_LOD002
+    2300032: lo_Prop_Vase_B_LOD1
+    2300034: Object003
+    2300036: Rectangle40
+    2300038: RefRep.1454.1
+    2300040: RefRep.1471.1
+    2300042: RefRep.1522.1
+    2300044: RefRep.1806.1
+    2300046: whisky06
+    2300048: "\u5899\u58C1"
+    2300050: "\u5BF9\u8C61047"
+    2300052: "\u5BF9\u8C61070"
+    2300054: "\u5BF9\u8C61077"
+    2300056: "\u5BF9\u8C61078"
+    2300058: "\u5BF9\u8C61089"
+    2300060: "\u6728\u623F1"
+    2300062: "\u77F3\u58A9"
+    2300064: "\u8239\u677F\u5927\u5385"
+    2300066: "\u94A2\u7434"
+    2300068: "\u95E8\u53E3\u5730\u6BEF"
+    2300070: "\u95E8\u6846"
+    2300072: "\u95E8\u7A97"
+    3300000: Charbany black09
+    3300002: houmen
+    3300004: Inst3D
+    3300006: Inst3D 1
+    3300008: Inst3D001
+    3300010: Inst3D004
+    3300012: Inst3D011
+    3300014: Inst3D013
+    3300016: Inst3D021
+    3300018: Inst3D022
+    3300020: Inst3D023
+    3300022: Inst3D024
+    3300024: lo_Prop_Cabinet_A_LOD0
+    3300026: lo_Prop_Cabinet_B_LOD0
+    3300028: lo_Prop_Lamp_E_LOD002
+    3300030: lo_Prop_Sofa_A_LOD002
+    3300032: lo_Prop_Vase_B_LOD1
+    3300034: Object003
+    3300036: Rectangle40
+    3300038: RefRep.1454.1
+    3300040: RefRep.1471.1
+    3300042: RefRep.1522.1
+    3300044: RefRep.1806.1
+    3300046: whisky06
+    3300048: "\u5899\u58C1"
+    3300050: "\u5BF9\u8C61047"
+    3300052: "\u5BF9\u8C61070"
+    3300054: "\u5BF9\u8C61077"
+    3300056: "\u5BF9\u8C61078"
+    3300058: "\u5BF9\u8C61089"
+    3300060: "\u6728\u623F1"
+    3300062: "\u77F3\u58A9"
+    3300064: "\u8239\u677F\u5927\u5385"
+    3300066: "\u94A2\u7434"
+    3300068: "\u95E8\u53E3\u5730\u6BEF"
+    3300070: "\u95E8\u6846"
+    3300072: "\u95E8\u7A97"
+    4300000: Object003
+    4300002: lo_Prop_Lamp_E_LOD002
+    4300004: whisky06
+    4300006: Charbany black09
+    4300008: lo_Prop_Vase_B_LOD1
+    4300010: Inst3D
+    4300012: Inst3D
+    4300014: Inst3D021
+    4300016: Inst3D022
+    4300018: Inst3D023
+    4300020: Inst3D024
+    4300022: lo_Prop_Cabinet_A_LOD0
+    4300024: lo_Prop_Cabinet_B_LOD0
+    4300026: "\u94A2\u7434"
+    4300028: lo_Prop_Sofa_A_LOD002
+    4300030: "\u5BF9\u8C61078"
+    4300032: "\u5BF9\u8C61077"
+    4300034: "\u95E8\u7A97"
+    4300036: "\u77F3\u58A9"
+    4300038: houmen
+    4300040: "\u5899\u58C1"
+    4300042: "\u95E8\u6846"
+    4300044: RefRep.1454.1
+    4300046: RefRep.1471.1
+    4300048: RefRep.1522.1
+    4300050: RefRep.1806.1
+    4300052: "\u95E8\u53E3\u5730\u6BEF"
+    4300054: "\u5BF9\u8C61047"
+    4300056: "\u5BF9\u8C61070"
+    4300058: Inst3D011
+    4300060: Inst3D013
+    4300062: Inst3D001
+    4300064: Inst3D004
+    4300066: "\u5BF9\u8C61089"
+    4300068: Rectangle40
+    4300070: "\u6728\u623F1"
+    4300072: "\u8239\u677F\u5927\u5385"
+    20500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 12 - Default
+    second: {fileID: 2100000, guid: 80cb049d1941dc3468c4cd7f6bb70e31, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 15 - Default
+    second: {fileID: 2100000, guid: 9032495811ccf404c9b2c79f55bd80f9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #55'
+    second: {fileID: 2100000, guid: 304c28f75aafb7c488db8e4a30790f1e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #56'
+    second: {fileID: 2100000, guid: 5458622125b55964ba9954347ab08cb3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #58'
+    second: {fileID: 2100000, guid: 961d42c12b6909242b0c34560b51c726, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #61'
+    second: {fileID: 2100000, guid: 732ad545b4817da4ca90d9b64f9c7fe3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Piano_default
+    second: {fileID: 2100000, guid: 43890eea1a5a9be4ba1f56a7062dbc5b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Prop_Rug_A001
+    second: {fileID: 2100000, guid: aecc8f797aec8df4bbf5b8f9620c53b1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "RefRep.1445\u5927\u95E8"
+    second: {fileID: 2100000, guid: f13555c51cc52774f92b4c8bd75f9843, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "RefRep.1452\u6728\u67F1"
+    second: {fileID: 2100000, guid: c9aaa140d22df4e4db12cd859c14a081, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "RefRep.1459\u95E8\u6846"
+    second: {fileID: 2100000, guid: 0db3833c499997343b484f54f566285f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "RefRep.1467\u95E8\u6846\u6728\u7EB9"
+    second: {fileID: 2100000, guid: 68acd40375a292a4abddc0bf0a175e7c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "RefRep.1471\u7EB9\u8DEF"
+    second: {fileID: 2100000, guid: cbf83d17033e6cd44a3a6802c5d9f736, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RefRep.1475
+    second: {fileID: 2100000, guid: 7dceee431b929014fa4fb515c9f03374, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "RefRep.1501\u5927\u7406\u77F3"
+    second: {fileID: 2100000, guid: 1e16db16b3dd13b49901a4923a03d84d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "RefRep.1522\u767D\u5899"
+    second: {fileID: 2100000, guid: 77ff63056037c094a9c31659eff26d6b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RefRep.1536
+    second: {fileID: 2100000, guid: 9a563c614d8136a40a292d1cc8b0c7dd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RefRep.1542
+    second: {fileID: 2100000, guid: a89713ed15745954592e8ef35d87fba7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RefRep.1566
+    second: {fileID: 2100000, guid: 50199cff668e28646a4a985232769c9f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "RefRep.1690\u5C4B\u9876\u6728\u7EB9"
+    second: {fileID: 2100000, guid: 864c11faca6b1f84ea64881c8f57780d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "RefRep.1702\u5C4B\u9876"
+    second: {fileID: 2100000, guid: 192f604f2b10cad468a757be0b179a8d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "RefRep.1798\u5F2F\u6881"
+    second: {fileID: 2100000, guid: 21f8d36df80d0d04a8aa7b4e8379fc96, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RefRep.1807
+    second: {fileID: 2100000, guid: 6419e2100ba62c2499f57456ea0cbb5f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "RefRep.1809\u5185\u95E8"
+    second: {fileID: 2100000, guid: 961f6cd2e62f2f6469e50586f305668a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "RefRep.1951\u7A97\u6237\u7EB8"
+    second: {fileID: 2100000, guid: dbbef73a7ce397e498a37e287364c09d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lo_Prop_Cabinet_B_LOD0
+    second: {fileID: 2100000, guid: 80cb049d1941dc3468c4cd7f6bb70e31, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lo_Prop_Chair_A_LOD0
+    second: {fileID: 2100000, guid: 80cb049d1941dc3468c4cd7f6bb70e31, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lo_Prop_Sofa_A_LOD0
+    second: {fileID: 2100000, guid: 6a0a049eb735aec4ba4d3f2ac15ad526, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lo_Prop_Vase_B_LOD1
+    second: {fileID: 2100000, guid: 8b9ccd48521ac6a4bb6af52a29c6b32b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: one
+    second: {fileID: 2100000, guid: 5cc2c4dd6722fe94e9494fbce0b3a24d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: three
+    second: {fileID: 2100000, guid: 17f4041477443e647b6a1408e1009b13, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: two
+    second: {fileID: 2100000, guid: 76050b8098aa0ff45bd453b0befbaa22, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u6728\u623F"
+    second: {fileID: 2100000, guid: e29efe17bd8bf0c46b879f9d5624ab94, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u6D45\u6728\u7EB9"
+    second: {fileID: 2100000, guid: b8efb6cd4b29f5f47a2630944869f8fd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u95E8\u628A"
+    second: {fileID: 2100000, guid: ac279ef639f7834418ce51f48cc8a7f3, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages:
+    - 0.25
+    - 0.125
+    - 0.01
+    globalScale: 1
+    meshCompression: 3
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 0
+    importBlendShapes: 0
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 0
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

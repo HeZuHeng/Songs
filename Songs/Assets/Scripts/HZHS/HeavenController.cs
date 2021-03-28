@@ -58,7 +58,7 @@ public class HeavenController : ChildController
 
     void TymZouyi(OnStateChangeDelegate onStateChange)
     {
-        sceneAsset.Tran.position = new Vector3(sceneAsset.Tran.position.x, 34.9f, sceneAsset.Tran.position.z);
+        sceneAsset.Tran.position = new Vector3(sceneAsset.Tran.position.x, 35.93194f, sceneAsset.Tran.position.z);
         Tween tween = sceneAsset.Tran.DOMove(tym.Tran.position + tym.Tran.forward * 1, 2f);
         tween.onUpdate = delegate ()
         {

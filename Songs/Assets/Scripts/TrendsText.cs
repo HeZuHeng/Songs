@@ -40,7 +40,7 @@ public class TrendsText : MonoBehaviour
         m_Conetnt = this.GetComponent<Text>();
         rect = m_Conetnt.transform as RectTransform;
 
-        endYieldTime = 0.1f;
+        endYieldTime = 0.03f;
         SongsDataMng.GetInstance().orEnglishChange += OnEnglishChange;
     }
     private void OnEnable()

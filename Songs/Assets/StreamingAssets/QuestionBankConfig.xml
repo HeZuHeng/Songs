@@ -5,17 +5,17 @@
 	<类型>MultipleChoice</类型>
 	<题号>1</题号>
 	<子题号>1</子题号>
-	<分数>1</分数>
+	<分数>2</分数>
     <图标>hzhsqs</图标>
     <题头>Please choose the romantic features of the first stanza.（multiple choices）</题头>
     <阅读>I wandered lonely as a cloud \n That floats on high o’er vales and hills \n When all at once I saw a crowd,\n host, of golden daffodils; \n Besides the lake, beneath the trees, \n Fluttering and dancing in the breeze.</阅读>
     <解析>With a melancholy mood, the speaker makes a striking contrast between the lonely cloud and the vivid daffodils. Nature inspires poetry. The speaker humanizes the daffodils when he says they are engaging in a dance.
 	|说话者将自己比作一朵流云，用流云的孤寂反衬出水仙花的生机盎然。自然是诗歌的灵感源泉，当水仙花翩翩起舞时，说话者赋予自然以生命力。</解析>
-    <选择>浪漫主义色彩1: Subjectivism:The interest of the romantic poets is in the feelings,thoughts,and experiences of the poets themselves.</选择>
-	<选择>浪漫主义色彩2: Spontaneity:The role of instinct,intuition,and the feeling of “the heart”is stressed. </选择>
-	<选择>浪漫主义色彩3: Singularity:Romantic poets have a strong love for the remote,the supernatural,the mysterious,the splendid,the picturesque and the illogical.</选择>
-	<选择>浪漫主义色彩4: Worship of nature: The romantic poets are worshippers of nature, especially the sublime aspect of a natural scene.</选择>
-	<选择>浪漫主义色彩5: There is a dominating note of solitude and melancholy.</选择>
+    <选择>浪漫主义色彩1: Subjectivism(自我主义)</选择>
+	<选择>浪漫主义色彩2: Spontaneity(情感自然流露)</选择>
+	<选择>浪漫主义色彩3: Singularity(独特性)</选择>
+	<选择>浪漫主义色彩4: Worship of nature(崇尚自由)</选择>
+	<选择>浪漫主义色彩5: There is a dominating note of solitude and melancholy(孤独与忧郁)</选择>
     <答案>0</答案>
     <答案>4</答案>
     <答案解析></答案解析>
@@ -26,19 +26,17 @@
 	<类型>MultipleChoice</类型>
 	<题号>1</题号>
 	<子题号>2</子题号>
-	<分数>1</分数>
+	<分数>2</分数>
     <图标>hzhsqs</图标>
     <题头>Please choose the romantic features of the second stanza. （multiple choices）</题头>
     <阅读>Continuous as the stars that shine \n And twinkle on the Milky Way, \n They stretched in never-ending line \n Along the margin of a bay: \n Ten thousand saw I at a glance, \n Tossing their heads in sprightly dance.</阅读>
     <解析>In the heart of poet, daffodils are no longer just a plant. It has become a messenger of God and a spiritual embodiment. It is this kind of spirit that rejoices the original melancholy heart. Here “continuous”and “never-ending” may suggest that the flowers leave an everlasting impact on Wordsworth.
 	|在诗人的心中, 水仙已不再是单单一种植物, 它成了神的使者，一种精神的化身。正是这种精神令原来本低沉忧郁的心灵变得欢欣鼓舞。 在这里“continuous”和“never-ending”暗示水仙花给他留下了永恒的影响。</解析>
-    <选择>浪漫主义色彩1: Subjectivism:The interest of the romantic poets is in the feelings,thoughts,and experiences of the poets themselves.</选择>
-	<选择>浪漫主义色彩2: Spontaneity:The role of instinct,intuition,and the feeling of “the heart”is stressed. </选择>
-	<选择>浪漫主义色彩3: Singularity:Romantic poets have a strong love for the remote,the supernatural,the mysterious,the splendid,the picturesque and the illogical.</选择>
-	<选择>浪漫主义色彩4: Worship of nature: The romantic poets are worshippers of nature, especially the sublime aspect of a natural scene.</选择>
-	<选择>浪漫主义色彩5: There is a dominating note of solitude and melancholy.</选择>
+    <选择>浪漫主义色彩2: Spontaneity(情感自然流露)</选择>
+	<选择>浪漫主义色彩3: Singularity(独特性)</选择>
+	<选择>浪漫主义色彩4: Worship of nature(崇尚自由)</选择>
+    <答案>1</答案>
     <答案>2</答案>
-    <答案>3</答案>
     <答案解析></答案解析>
     <提示>浪漫主义色彩3, 4</提示>
   </QuestionBankDatas>
@@ -47,18 +45,16 @@
 	<类型>MultipleChoice</类型>
 	<题号>1</题号>
 	<子题号>3</子题号>
-	<分数>1</分数>
+	<分数>2</分数>
     <图标>hzhsqs</图标>
     <题头>Please choose the romantic feature of the third stanza.</题头>
     <阅读>The waves beside them danced; but they \n Outdid the sparking waves in glee: \n A poet could not but be gay, \n In such a jocund company! \n I gazed – and gazed – but little thought \n What wealth the show to me had brought.</阅读>
     <解析>The poet stares at the daffodils lingeringly, without yet realizing the complete extent of the positive effects of encountering them. Even when the poet calls for the original emotion of “returning to nature”, he does not forget the relative independence of himself and nature.
 	|诗人久久凝望，却想象不到这奇景赋予了他多少精神财富。即使诗人在深情地呼唤 “回归自然”的原始情感时,也没有忘记自我与自然的相对独立性。</解析>
-    <选择>浪漫主义色彩1: Subjectivism:The interest of the romantic poets is in the feelings,thoughts,and experiences of the poets themselves.</选择>
-	<选择>浪漫主义色彩2: Spontaneity:The role of instinct,intuition,and the feeling of “the heart”is stressed. </选择>
-	<选择>浪漫主义色彩3: Singularity:Romantic poets have a strong love for the remote,the supernatural,the mysterious,the splendid,the picturesque and the illogical.</选择>
-	<选择>浪漫主义色彩4: Worship of nature: The romantic poets are worshippers of nature, especially the sublime aspect of a natural scene.</选择>
-	<选择>浪漫主义色彩5: There is a dominating note of solitude and melancholy.</选择>
-    <答案>1</答案>
+    <选择>浪漫主义色彩2: Spontaneity(情感自然流露)</选择>
+	<选择>浪漫主义色彩3: Singularity(独特性)</选择>
+	<选择>浪漫主义色彩4: Worship of nature(崇尚自由)</选择>
+    <答案>0</答案>
     <答案解析></答案解析>
     <提示>浪漫主义色彩2</提示>
   </QuestionBankDatas>
@@ -133,7 +129,7 @@
     <ID>16</ID>
 	<类型>MultipleChoice</类型>
 	<题号>6</题号>
-	<分数>2</分数>
+	<分数>1</分数>
     <阅读>我是一条天狗呀！\n 我把月来吞了，\n 我把日来吞了，\n 我把一切的星球来吞了，\n 我把全宇宙来吞了。\n 我便是我了！\n 我是月的光，\n 我是日的光，\n 我是一切星球的光，\n 我是 X 光线的光，\n 我是全宇宙的 Energy 的总量！\n 我飞奔，\n 我狂叫，\n 我燃烧。\n 我如烈火一样地燃烧！\n 我如大海一样地狂叫！\n 我如电气一样地飞跑！\n 我飞跑，\n 我飞跑，\n 我剥我的皮，\n 我食我的肉，\n 我吸我的血，\n 我啮我的心肝，\n 我在我神经上飞跑，\n 我在我脊髓上飞跑，\n 我在我脑筋上飞跑。\n 我便是我呀！\n 我的我要爆了！</阅读>
     <题头>There are 39“I”in“Tian Gou”, what’s the connotation of“I”?
 	|在该诗中，“我”出现了39次，该词的内涵是什么呢？</题头>

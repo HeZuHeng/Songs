@@ -2353,6 +2353,7 @@ MonoBehaviour:
   videoName: shuixianhua.mp4
   startTime: 0
   next: {fileID: 0}
+  IsClose: 0
 --- !u!1 &3632771643333824424
 GameObject:
   m_ObjectHideFlags: 0
@@ -2798,6 +2799,7 @@ MonoBehaviour:
   videoName: juhua.mp4
   startTime: 0
   next: {fileID: 0}
+  IsClose: 0
 --- !u!1 &4306467392939285196
 GameObject:
   m_ObjectHideFlags: 0

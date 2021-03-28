@@ -449,7 +449,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: William Wordsworth
+  m_Text: 1.William Wordsworth
 --- !u!114 &386227837760977768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -904,7 +904,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Walt Whitman
+  m_Text: '3.Walt Whitman
 
 '
 --- !u!114 &8461627229494859144
@@ -2173,7 +2173,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\u90ED\u6CAB\u82E5"
+  m_Text: "4.\u90ED\u6CAB\u82E5"
 --- !u!114 &6449529575183579399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2542,7 +2542,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\u9676\u6E0A\u660E"
+  m_Text: "2.\u9676\u6E0A\u660E"
 --- !u!114 &172334598409376377
 MonoBehaviour:
   m_ObjectHideFlags: 0

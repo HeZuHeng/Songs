@@ -35,8 +35,8 @@ public class HZHSEndWnd : UIBase
 
     void DoMove()
     {
-        ExperienceUtil.Instance.DoMoveCamera(texture, new Vector3(1.08f, -1.75f, -4), 5f, delegate () {
-            ExperienceUtil.Instance.DoMoveCamera(texture, new Vector3(2.77f, 0.4f, -4), 5f, delegate () {
+        ExperienceUtil.Instance.DoMoveCamera(texture, new Vector3(1.08f, -1.75f, -4), 25f, delegate () {
+            ExperienceUtil.Instance.DoMoveCamera(texture, new Vector3(2.77f, 0.4f, -4), 25f, delegate () {
                 image.enabled = true;
             },false);
         });

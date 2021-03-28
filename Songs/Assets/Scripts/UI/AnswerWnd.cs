@@ -245,7 +245,7 @@ public class AnswerWnd : UIBase
                         }
                         else if (question.answerType == AnswerType.SingleChoice || question.answerType == AnswerType.MultipleChoice)
                         {
-                            ansStr = "," + ABCDEFG[t[i]];
+                            ansStr += "," + ABCDEFG[t[i]];
                         }
                     }
                 }

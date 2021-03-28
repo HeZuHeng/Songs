@@ -87,8 +87,8 @@ public class EqualityController : ChildController
 
     void InitMoveCamera(OnStateEndDelegate onStateEnd)
     {
-        Tweener moveTw = niao1.Tran.DOLocalMove(new Vector3(4, niao1.Tran.localPosition.y,-38), 2);
-        niao2.Tran.DOLocalMove(new Vector3(6, niao2.Tran.localPosition.y, -44), 2);
+        Tweener moveTw = niao1.Tran.DOLocalMove(new Vector3(-21.2f, niao1.Tran.localPosition.y,-4.3f), 2);
+        niao2.Tran.DOLocalMove(new Vector3(-19.2f, niao2.Tran.localPosition.y, -10.3f), 2);
         niao1.MAnimator.enabled = true;
         niao2.MAnimator.enabled = true;
         moveTw.onComplete += delegate ()
