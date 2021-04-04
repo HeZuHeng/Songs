@@ -144,6 +144,12 @@ public class MainDialogueWnd : UIBase
                 {
                     bool b = false;
                     bool.TryParse(strs[3], out b);
+                    int soundId = -1;
+                    if (!string.IsNullOrEmpty(taskData.sound))
+                    {
+                        int.TryParse(taskData.sound, out soundId);
+                        AudioManager.Instance.PlaySound(soundId);
+                    }
                     bool loop = sceneAsset.PlayAnimator(strs[4], b, speed, delegate (string aName)
                      {
                          if (aName.Equals(strs[4]) && string.IsNullOrEmpty(taskData.des))
@@ -154,6 +160,10 @@ public class MainDialogueWnd : UIBase
                          {
                              sceneAsset.PlayAnimator(strs[4], !b, speed, null);
                          }
+                         if (soundId >0)
+                         {
+                             AudioManager.Instance.ChangeSoundVolume(0);
+                         }
                      });
                     SceneController.GetInstance().AddPlayAnimator(sceneAsset);
                 }
@@ -161,6 +171,12 @@ public class MainDialogueWnd : UIBase
                 {
                     float f = 0;
                     float.TryParse(strs[3], out f);
+                    int soundId = -1;
+                    if (!string.IsNullOrEmpty(taskData.sound))
+                    {
+                        int.TryParse(taskData.sound, out soundId);
+                        AudioManager.Instance.PlaySound(soundId);
+                    }
                     bool loop = sceneAsset.PlayAnimator(strs[4], f, speed, delegate (string aName)
                     {
                         if (aName.Equals(strs[4]) && string.IsNullOrEmpty(taskData.des))
@@ -170,6 +186,10 @@ public class MainDialogueWnd : UIBase
                         if (strs.Length >= 6)
                         {
                             sceneAsset.PlayAnimator(strs[4], 1 - f, speed, null);
+                        }
+                        if (soundId > 0)
+                        {
+                            AudioManager.Instance.ChangeSoundVolume(0);
                         }
                     });
                     SceneController.GetInstance().AddPlayAnimator(sceneAsset);
@@ -368,8 +388,8 @@ public class MainDialogueWnd : UIBase
         if(taskData != null && taskData.type == TaskType.TaskChange)
         {
             SceneTaskData sceneTask = SongsDataMng.GetInstance().GetSceneTaskDataFromName(taskData.val);
-            if(sceneTask != null) SongsDataMng.GetInstance().SetSceneTaskData(sceneTask);
             UIMng.Instance.ActivationUI(UIType.SelectPlotWnd);
+            if (sceneTask != null) SongsDataMng.GetInstance().SetSceneTaskData(sceneTask);
             UIMng.Instance.ActivationUI(UIType.LoadingWnd);
         }
     }

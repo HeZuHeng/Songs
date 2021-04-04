@@ -1,10 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Runtime.InteropServices;
 
 [System.Serializable]
 public class SongResultInfo {
 
+#if UNITY_WEBGL && !UNITY_EDITOR
+    [DllImport("__Internal")]
+    public static extern void SendSongResult(string songResult);
+
+#else
+    public static void SendSongResult(string songResult) { }
+    //public static void InputEnd() { }
+#endif
 
     /// <summary>
     /// 单选题
@@ -26,6 +35,10 @@ public class SongResultInfo {
     /// 总结
     /// </summary>
     public string summary;
+    /// <summary>
+    /// 总分
+    /// </summary>
+    public string totalMinute;
 
     public SongResultInfo()
     {
@@ -143,6 +156,11 @@ public class SongResultInfo {
     public void FillSummary(string summary)
     {
         this.summary = summary;
+    }
+
+    public void SendLoaded(string jsonData)
+    {
+        SendSongResult(jsonData);
     }
 }
 

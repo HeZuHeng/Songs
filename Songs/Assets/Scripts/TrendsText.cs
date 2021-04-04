@@ -40,7 +40,7 @@ public class TrendsText : MonoBehaviour
         m_Conetnt = this.GetComponent<Text>();
         rect = m_Conetnt.transform as RectTransform;
 
-        endYieldTime = 0.03f;
+        endYieldTime = 0.3f;
         SongsDataMng.GetInstance().orEnglishChange += OnEnglishChange;
     }
     private void OnEnable()
@@ -173,7 +173,7 @@ public class TrendsText : MonoBehaviour
         {
             m_TextC = ecs[1];
         }
-        m_ShowSpeed = m_Text.Length / 2f;
+        m_ShowSpeed = m_Text.Length / 3f;
         string str = m_Text;//.Replace(" ", "\u3000");
         string LineHead = "";
         //设置段落的首行缩进的字符数

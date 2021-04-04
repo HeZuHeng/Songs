@@ -64,7 +64,7 @@ public class FantasyWnd : UIBase
         }
         Show();
         tip2.text = "Stanza one";
-        SceneController.TerrainController.SetDetailObjects(0.1f);
+        SceneController.TerrainController.SetDetailObjects(0.001f);
         SceneController.TerrainController.SetWater(false);
         SceneController.TerrainController.SetSky(0,1f);
         UIMng.Instance.ActivationUI(UIType.MemoryWnd);

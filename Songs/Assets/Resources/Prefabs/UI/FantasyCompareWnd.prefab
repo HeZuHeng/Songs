@@ -349,7 +349,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Please match the following two options with the former two pictures.
+  m_Text: Matching work
 --- !u!1 &868085606
 GameObject:
   m_ObjectHideFlags: 0
@@ -2100,8 +2100,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -78, y: 146}
-  m_SizeDelta: {x: 80, y: 30}
+  m_AnchoredPosition: {x: -78, y: 21}
+  m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6036461067491652321
 CanvasRenderer:
@@ -2133,7 +2133,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: d6c5349ada27ca54c8cd6f8151037162, type: 3}
-    m_FontSize: 36
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -2144,7 +2144,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\u62D6\u62FD\u9009\u9879\u5230\u610F\u5883\u56FE\u4E0A"
+  m_Text: "\u62D6\u62FD\u201C\u9009\u98791\u201D\uFF0C\u201C\u9009\u98792\u201D\n\u5230\u610F\u5883\u56FE\u4E0A"
 --- !u!1 &3503075771480849795
 GameObject:
   m_ObjectHideFlags: 0

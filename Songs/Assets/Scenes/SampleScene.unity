@@ -112,24 +112,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &1399889447 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8871211009831173541, guid: 5ddf7438a90002c4cad608063deab05c,
-    type: 3}
-  m_PrefabInstance: {fileID: 7362113166842073920}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1399889450
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1399889447}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49c74b8e33082db448c302b217a2333b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &7362113166842073920
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -196,41 +178,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8933262821770293691, guid: 5ddf7438a90002c4cad608063deab05c,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5742329944984979091, guid: 5ddf7438a90002c4cad608063deab05c,
-        type: 3}
-      propertyPath: m_ClearFlags
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5742329944984979091, guid: 5ddf7438a90002c4cad608063deab05c,
-        type: 3}
-      propertyPath: m_AllowDynamicResolution
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5742329944984979091, guid: 5ddf7438a90002c4cad608063deab05c,
-        type: 3}
-      propertyPath: m_AllowMSAA
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5742329944984979091, guid: 5ddf7438a90002c4cad608063deab05c,
-        type: 3}
-      propertyPath: m_HDR
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5742329944984979091, guid: 5ddf7438a90002c4cad608063deab05c,
-        type: 3}
-      propertyPath: m_OcclusionCulling
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2704383102431867570, guid: 5ddf7438a90002c4cad608063deab05c,
-        type: 3}
-      propertyPath: m_PixelPerfect
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ddf7438a90002c4cad608063deab05c, type: 3}

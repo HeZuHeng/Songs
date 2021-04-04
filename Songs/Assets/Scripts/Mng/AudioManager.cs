@@ -47,6 +47,7 @@ public class AudioManager : MonoBehaviour
         {
             { 1, "Sounds/btn" },
             { 2, "Sounds/zhoulu3" },
+            { 3, "Sounds/wuqu" },
             //{ 11, "AudioClip/Sound/Sound1"},
             //{ 12, "AudioClip/Sound/Sound2"},
             //{ 13, "AudioClip/Sound/Sound3"},
@@ -124,6 +125,7 @@ public class AudioManager : MonoBehaviour
             audioSource.clip = GetAudioClip(id);
             audioSource.clip.LoadAudioData();
             audioSource.Play();
+            audioSource.volume = volume;
 
             StartCoroutine(WaitPlayEnd(audioSource, action));
         }

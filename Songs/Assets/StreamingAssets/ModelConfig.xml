@@ -550,7 +550,7 @@
         <z>0</z>
       </eulerAngle>
     </ModelDatas>
-	<ModelDatas Id="101" 模型名="华兹华斯" 资源名="hzhs" >
+	<ModelDatas Id="101" 模型名="Wordsworth" 资源名="hzhs" >
 	  <position>
         <x>-0.679</x>
         <y>0</y>
@@ -736,7 +736,7 @@
     </ModelDatas>
   </SceneDatas>
   <SceneDatas 场景="华兹华斯书房意境" 场景资源名="华兹华斯书房" 摄像机 = "introductioncamera" 位置="introductioninitposition" 镜头="cutscene_introduction">
-    <ModelDatas Id="101" 模型名="华兹华斯" 资源名="hzhs" >
+    <ModelDatas Id="101" 模型名="Wordsworth" 资源名="hzhs" >
 	  <position>
         <x>-0.679</x>
         <y>0</y>
@@ -784,7 +784,7 @@
         <z>1</z>
       </scale>
     </ModelDatas>
-	<ModelDatas Id="102" 模型名="惠特曼" 模型路径="chuang_self" 资源名="htm" >
+	<ModelDatas Id="102" 模型名="Walt Whitman" 模型路径="chuang_self" 资源名="htm" >
 	  <position>
         <x>110</x>
         <y>22.466</y>
@@ -2471,7 +2471,7 @@
         <z>1</z>
       </scale>
     </ModelDatas>
-	<ModelDatas Id="102" 模型名="惠特曼" 模型路径="chuang_self" 资源名="htm" >
+	<ModelDatas Id="102" 模型名="Walt Whitman" 模型路径="chuang_self" 资源名="htm" >
 	  <position>
         <x>116.4171</x>
         <y>22.466</y>
@@ -3357,7 +3357,7 @@
         <z>1</z>
       </scale>
     </ModelDatas>
-	<ModelDatas Id="102" 模型名="惠特曼" 模型路径="chuang_self" 资源名="htm" >
+	<ModelDatas Id="102" 模型名="Walt Whitman" 模型路径="chuang_self" 资源名="htm" >
 	  <position>
         <x>125.1387</x>
         <y>22.493</y>
@@ -4379,7 +4379,7 @@
         <z>1</z>
       </scale>
     </ModelDatas>
-	<ModelDatas Id="102" 模型名="惠特曼" 模型路径="chuang_self" 资源名="htm" >
+	<ModelDatas Id="102" 模型名="Walt Whitman" 模型路径="chuang_self" 资源名="htm" >
 	  <position>
         <x>1307.57</x>
         <y>24.333</y>
@@ -5265,7 +5265,7 @@
         <z>1</z>
       </scale>
     </ModelDatas>
-	<ModelDatas Id="102" 模型名="惠特曼" 模型路径="chuang_self" 资源名="htm" >
+	<ModelDatas Id="102" 模型名="Walt Whitman" 模型路径="chuang_self" 资源名="htm" >
 	  <position>
         <x>137.57</x>
         <y>24.333</y>

@@ -81,7 +81,9 @@ public class SettingWnd : UIBase
 
     void OnTijiao()
     {
-        Debug.Log(JsonUtility.ToJson(MainPlayer.songResultInfo));
+        string json = JsonUtility.ToJson(MainPlayer.songResultInfo);
+        Debug.Log(json);
+        MainPlayer.songResultInfo.SendLoaded(json);
     }
 
     void HideHelp()
@@ -106,7 +108,7 @@ public class SettingWnd : UIBase
         }
         else
         {
-            UIMng.Instance.OpenUI(UIType.NONE);
+            UIMng.Instance.ConcealUI(UIType.SelectPlotWnd);
         }
     }
 
@@ -193,5 +195,6 @@ public class SettingWnd : UIBase
             summary.fontStyle = FontStyle.Normal;
 
         }
+        MainPlayer.songResultInfo.totalMinute = m.ToString();
     }
 }

@@ -12,21 +12,21 @@
 	<TaskDatas ID="101" 任务名="起航" 下一个="8" 类型="Talk" 	描述="Whitman is known as the poet of America for his view of democracy.
 	|惠特曼提倡民主精神，被称为美国民众诗人。"/>
 	<TaskDatas ID="8" 任务名="船出发" 下一个="9" 类型="StartState" 值 = "TalkCamera"/>
-    <TaskDatas ID="9" 任务名="点击前往The Image of Grass" 下一个="0" 类型="TaskChange" 值 = "2.The Image of Grass" 描述="点击右侧前往体验The Image of Grass场景"/>
+    <TaskDatas ID="9" 任务名="点击前往“The Image of Grass”场景" 下一个="0" 类型="TaskChange" 值 = "2.The Image of Grass" 描述="前往聚会大厅场景体验三副画"/>
   </SceneTasks>
   <SceneTasks 场景任务名="2.The Image of Grass" 图标="icon_cover_picture" 场景数据="草的意象数据">
     <TaskDatas ID="102" 任务名="聚会大厅自由漫游" 下一个="2" 类型="PersonMove" 值 = "end"/>
-    <TaskDatas ID="2" 任务名="点击废奴运动照片" 下一个="11"  类型="Click" 值 = "chuang_self/大厅/画框/Three002" 描述 = "Taking part in the abolitionist movement.
+    <TaskDatas ID="2" 任务名="点击“废奴运动”图片" 下一个="11"  类型="Click" 值 = "chuang_self/大厅/画框/Three002" 描述 = "Taking part in the abolitionist movement.
 	|参加废奴运动"/>
-    <TaskDatas ID="11" 任务名="解析废奴运动照片" 下一个="3"  类型="Talk" 描述 = "Before the Civil War, Whitman published “The Slave and the Slave Trade” in which he attacked the man-eating slavery, and encouraged young men to support the true political democracy.
+    <TaskDatas ID="11" 任务名="解析“废奴运动”图片" 下一个="3"  类型="Talk" 描述 = "Before the Civil War, Whitman published “The Slave and the Slave Trade” in which he attacked the man-eating slavery, and encouraged young men to support the true political democracy.
 	|惠特曼早在内战前就发表《奴隶以及奴隶买卖》，抨击美国吃人的奴隶制度, 并敦促年轻人为真正的政治民主而奋斗。"/>
-    <TaskDatas ID="3" 任务名="点击南北战争照片" 下一个="21"  类型="Click" 值 = "chuang_self/大厅/画框/Three003" 描述 = "American Civil War.
+    <TaskDatas ID="3" 任务名="点击“南北战争”图片" 下一个="21"  类型="Click" 值 = "chuang_self/大厅/画框/Three003" 描述 = "American Civil War.
 	|南北战争"/>
-    <TaskDatas ID="21" 任务名="解析南北战争照片" 下一个="1"  类型="Click" 值 = "chuang_self/大厅/画框/Three" 描述 = "And that all men ever born are also my brothers...and the women my sisters and lovers.                                         —“Song of Myself”
+    <TaskDatas ID="21" 任务名="解析“南北战争”图片" 下一个="1"  类型="Click" 值 = "chuang_self/大厅/画框/Three" 描述 = "And that all men ever born are also my brothers...and the women my sisters and lovers.                                         —“Song of Myself”
 	|所有出生的男子都是我的兄弟，所有的女人都是我的姐妹和爱人。—《自我之歌》"/>
-    <TaskDatas ID="1" 任务名="解析自我之歌照片" 下一个="104"  类型="Talk" 描述 = "“Song of Myself” (1855) is the longest and one of the best in Whitman’s canon.This poem is of rich connotation and magnificent prospect. By describing a harmonious picture of natural landscape with human being, Walt Whitman expressed the harmonious beauty of the modern civilization with primitive nature.
+    <TaskDatas ID="1" 任务名="解析“自我之歌”图片" 下一个="104"  类型="Talk" 描述 = "“Song of Myself” (1855) is the longest and one of the best in Whitman’s canon.This poem is of rich connotation and magnificent prospect. By describing a harmonious picture of natural landscape with human being, Walt Whitman expressed the harmonious beauty of the modern civilization with primitive nature.
 	|“自我之歌”（1855）是惠特曼最长、最好的诗歌之一，内涵丰富，前景广阔。沃尔特·惠特曼通过描述自然与人类和谐相处的场景，表达了淳朴自然与现代文明的和谐之美。"/>
-    <TaskDatas ID="104" 任务名="点击前往寻找草的意象" 下一个="0" 类型="TaskChange" 值 = "3.The Image of Self" 描述="点击右侧任务名前往The Image of Self场景"/>
+    <TaskDatas ID="104" 任务名="点击前往“The Image of Self”场景" 下一个="0" 类型="TaskChange" 值 = "3.The Image of Self" 描述="前往“The Image of Self”场景阅读《自我之歌》"/>
   </SceneTasks>
   <SceneTasks 场景任务名="3.The Image of Self" 图标="icon_cover_glassimage" 场景数据="寻找草的意象数据">
 	<!--TaskDatas ID="1" 任务名="船员对话" 下一个="2" 类型="PersonMove" 值 = "end"/-->
@@ -77,7 +77,7 @@
 	<TaskDatas ID="21" 任务名="阅读《自我之歌》第二节" 下一个="22"  类型="LookSong" 值 = "ziwozhige2.txt" 声音="sound_24"/>
 	<TaskDatas ID="22" 任务名="惠特曼的旁白" 下一个="23"  类型="Talk" 声音="sound_25" 描述 = "Whitman probably means that he, like everyone there, is born from the same soil. He calls for an authentic American culture to celebrate the common, everyday things. Here “nature” means the actual human nature as well as the physical nature.
 	|惠特曼可能想表达，他和所有美国人一样，生在同一块土地上。他呼吁建立一种真正的美国文化，重视普通人和日常事物。诗歌中的“nature”不仅指物质的本性，也指真实人的天性。" />
-	<TaskDatas ID="23" 任务名="点击前往《Song of Myself》场景" 下一个="0" 类型="TaskChange" 值 = "4.《Song of Myself》" 描述="点击右侧任务名前往《Song of Myself》鉴赏"/>
+	<TaskDatas ID="23" 任务名="点击前往“Song of Myself”场景" 下一个="0" 类型="TaskChange" 值 = "4.《Song of Myself》" 描述="前往“Song of Myself”场景鉴赏诗歌《自我之歌》"/>
   </SceneTasks>
   <SceneTasks 场景任务名="4.《Song of Myself》" 图标="icon_cover_songofmyself" 场景数据="自我之歌数据">
 	<TaskDatas ID="201" 任务名="美国地图" 下一个="1" 类型="OpenWnd" 值 = "HTMMapPathWnd"/>
@@ -124,7 +124,7 @@
 	<TaskDatas ID="23" 任务名="答题环节" 下一个="24" 类型="Talk" 描述="Would you like to review Captain Whitman’s poem?
 	|你愿意回顾一下船长惠特曼的诗歌吗？"/>
 	<TaskDatas ID="24" 任务名="阅读《自我之歌》" 下一个="25"  类型="LookSong" 值 = "htmsong.txt" 声音="sound_29"/>
-	<TaskDatas ID="25" 任务名="点击前往Equality场景" 下一个="0" 类型="TaskChange" 值 = "5.Equality" 描述="点击右侧任务名前往Equality场景"/>
+	<TaskDatas ID="25" 任务名="点击前往“Equality”场景" 下一个="0" 类型="TaskChange" 值 = "5.Equality" 描述="前往“Equality”场景体验诗人的平等"/>
   </SceneTasks>
   <SceneTasks 场景任务名="5.Equality" 图标="icon_cover_equity" 场景数据="体现诗人平等数据">
 	<TaskDatas ID="201" 任务名="美国地图" 下一个="1" 类型="OpenWnd" 值 = "HTMMapPathWnd"/>
@@ -154,7 +154,7 @@
 	|惠特曼坚信民主，认为民主的政府才会真正尊重个人。普通民众才是传递美国精神的真正载体，而不是行政部门、立法机构、教堂或法院。民主不分阶级、肤色和信仰。自由与普通民众是密不可分的。"/>
 	<TaskDatas ID="11" 任务名="盘白" 下一个="12" 类型="Talk" 值 = "102" 声音="sound_34" 描述="Here is the end of poetry appreciation！ I am proud of you!
 	|诗歌赏析结束了！你太棒了。"/>
-	<TaskDatas ID="12" 任务名="点击前往About Democracy场景" 下一个="0" 类型="TaskChange" 值 = "6.About Democracy" 描述="点击右侧任务名前往About Democracy场景"/>
+	<TaskDatas ID="12" 任务名="点击前往“About Democracy”场景" 下一个="0" 类型="TaskChange" 值 = "6.About Democracy" 描述="前往About Democracy场景体验中美民主思想比较"/>
   </SceneTasks>
   <SceneTasks 场景任务名="6.About Democracy" 图标="icon_cover_china_usa" 场景数据="中美民主思想比较数据">
 	<TaskDatas ID="201" 任务名="美国地图" 下一个="101" 类型="OpenWnd" 值 = "HTMMapPathWnd"/>

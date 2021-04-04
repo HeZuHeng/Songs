@@ -39,7 +39,7 @@ public class AnswerItemUI : MonoBehaviour
         float dy = Mathf.Cos(radian) * radius; // dy定义的是针对y轴的变量，也可以使用sin，找到一个适合的值就可以
         transform.localPosition = oldPos + new Vector3(dy / t, dy, 0);
 
-        if (showTip && Time.time - time > 3)
+        if (showTip && Time.time - time > 30)
         {
             time = Time.time;
             tip.enabled = !tip.enabled;

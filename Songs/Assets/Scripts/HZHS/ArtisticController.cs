@@ -64,8 +64,8 @@ public class ArtisticController : ChildController
         {
             y = Vector3.Angle(sceneAsset.Tran.forward, hzhs.Tran.forward) - 180;
         }
-        sceneAsset.Tran.localEulerAngles = new Vector3(0, 180+y, 0);
-        CameraMng.mainCameraParent.localEulerAngles = new Vector3(0, 180 + y, 0);
+        sceneAsset.Tran.localEulerAngles = new Vector3(0, -75, 0);
+        CameraMng.mainCameraParent.localEulerAngles = new Vector3(0, -75, 0);
         onStateEnd?.Invoke(GetState);
         
     }

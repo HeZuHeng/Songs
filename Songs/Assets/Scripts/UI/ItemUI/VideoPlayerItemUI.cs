@@ -21,6 +21,10 @@ public class VideoPlayerItemUI : MonoBehaviour
     private void OnEnable()
     {
         DoMove();
+        for (int i = 0; i < texts.Length; i++)
+        {
+            texts[i].enabled = false;
+        }
         index1 = 0;
         if (index1 < texts.Length) texts[index1].enabled = true;
     }

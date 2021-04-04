@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <style>
+        html,body,#app{
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-size: 18px;
+			width: 100%;
+			text-align:center;
+        }
+		#app{
+			padding: 40px;
+		}
+		
+		table,table tr th, table tr td { border:1px solid #000; }
+    </style>
+
+</head>
+<body>
+   <div id="app" >
+		<table id="tab" style="margin: 0 auto;width: 80%;border-collapse: collapse; border:1px solid #000;" v-if="jsonData">
+			<tr style="text-align: center;font-weight: bold;">
+				<td>实验名称</td>
+				<td colspan="4">英美经典诗歌与人类共同价值体验虚拟仿真实验教学项目(Virtual Simulation Experiment on Classic English Poetry and  Common Values of Humanity)</td>
+				<td>实验日期</td>
+				<td colspan="2"></td>
+			</tr>
+			<tr>
+				<td>院系</td>
+				<td></td>
+				<td>专业</td>
+				<td></td>
+				<td>班级</td>
+				<td colspan="3"></td>
+			</tr>
+			<tr>
+				<td>姓名</td>
+				<td></td>
+				<td>学号</td>
+				<td colspan="5"></td>
+			</tr>
+			<tr style="text-align: left;font-weight: bold;">
+				<td colspan="8">实验得分项细节（共100分）</td>
+			</tr>
+			<tr style="text-align: center;font-weight: bold;">
+				<td colspan="8">I. 华兹华斯实验部分（40%）</td>
+			</tr>
+			<tr style="text-align: center;font-weight: bold;">
+				<td>步骤</td>
+				<td style = "width: 25%">对应知识点</td>
+				<td style = "width: 20%">类型(总分)</td>
+				<td>题目选项</td>
+				<td>选项分数</td>
+				<td>学生答案</td>
+				<td>学生得分</td>
+				<td>题目序号</td>
+			</tr>
+			<tr>
+				<td>1.故居浏览，作者简介</td>
+				<td>/</td>
+				<td>过关（1’）</td>
+				<td>/</td>
+				<td>1</td>
+				<td>{{jsonData.operatings[0].mAnswer}}</td>
+				<td>{{jsonData.operatings[0].minute}}</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>2.欣赏和朗诵诗歌</td>
+				<td rowspan="21">知识点一：浪漫主义核心价值观</td>
+				<td>交互（3’）</td>
+				<td>/</td>
+				<td>3</td>
+				<td>{{jsonData.operatings[1].mAnswer}}</td>
+				<td>{{jsonData.operatings[1].minute}}</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td rowspan="20">3.还原前三节意象</td>
+				
+				<td rowspan="2">意象还原（2’）</td>
+				<td>水仙花</td>
+				<td>1</td>
+				<td>{{jsonData.operatings[2].childs[0].mAnswer}}</td>
+				<td rowspan="2">{{jsonData.operatings[2].childs[0].minute}}</td>
+				<td rowspan="2"></td>
+			</tr>
+			<tr>
+				<td>云</td>
+				<td>1</td>
+				<td>{{jsonData.operatings[2].childs[0].mAnswer}}</td>
+			</tr>
+			<tr>
+				<td rowspan="5">多选题（4’）</td>
+				<td>浪漫主义色彩1</td>
+				<td>2</td>
+				<td>{{jsonData.multipleChoices[0].childs[0].mAnswer}}</td>
+				<td rowspan="5">{{jsonData.multipleChoices[0].childs[0].minute}}</td>
+				<td rowspan="5"></td>
+			</tr>
+			<tr>
+				
+				<td>浪漫主义色彩2</td>
+				<td>0</td>
+				<td>{{jsonData.multipleChoices[0].childs[0].mAnswer}}</td>
+				
+			</tr>
+			<tr>
+				<td>浪漫主义色彩3</td>
+				<td>0</td>
+				<td>{{jsonData.multipleChoices[0].childs[0].mAnswer}}</td>
+				
+			</tr>
+			<tr>
+				<td>浪漫主义色彩4</td>
+				<td>0</td>
+				<td>{{jsonData.multipleChoices[0].childs[0].mAnswer}}</td>
+			</tr>
+			<tr>
+				<td>浪漫主义色彩5</td>
+				<td>0</td>
+				<td>{{jsonData.multipleChoices[0].childs[0].mAnswer}}</td>
+			</tr>
+			
+			<tr>
+				<td rowspan="2">意象还原（‘2’）</td>
+				<td>星星</td>
+				<td>1</td>
+				<td>{{jsonData.operatings[2].childs[1].mAnswer}}</td>
+				<td rowspan="2">{{jsonData.operatings[2].childs[1].minute}}</td>
+				<td rowspan="2"></td>
+			</tr>
+			
+			<tr>
+			
+				<td>银河</td>
+				<td>1</td>
+				<td>{{jsonData.operatings[2].childs[1].mAnswer}}</td>
+				
+			</tr>
+			
+			<tr>
+				<td rowspan="5">多选题（4’）</td>
+				<td>浪漫主义色彩1</td>
+				<td>2</td>
+				<td>{{jsonData.multipleChoices[0].childs[1].mAnswer}}</td>
+				<td rowspan="5">{{jsonData.multipleChoices[0].childs[1].minute}}</td>
+				<td rowspan="5"></td>
+			</tr>
+			<tr>
+				
+				<td>浪漫主义色彩2</td>
+				<td>0</td>
+				<td>{{jsonData.multipleChoices[0].childs[1].mAnswer}}</td>
+				
+			</tr>
+			<tr>
+				
+				<td>浪漫主义色彩3</td>
+				<td>0</td>
+				<td>{{jsonData.multipleChoices[0].childs[1].mAnswer}}</td>
+				
+			</tr>
+			<tr>
+				
+				<td>浪漫主义色彩4</td>
+				<td>0</td>
+				<td>{{jsonData.multipleChoices[0].childs[1].mAnswer}}</td>
+				
+			</tr>
+			<tr>
+				<td>浪漫主义色彩5</td>
+				<td>0</td>
+				<td>{{jsonData.multipleChoices[0].childs[1].mAnswer}}</td>
+			</tr>
+			
+			<tr>
+				<td>意象还原（1’）</td>
+				<td>水波</td>
+				<td>1</td>
+				<td>{{jsonData.operatings[2].childs[2].mAnswer}}</td>
+				<td >{{jsonData.operatings[2].childs[2].minute}}</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td rowspan="5">多选题（2’）</td>
+				<td>浪漫主义色彩1</td>
+				<td>2</td>
+				<td>{{jsonData.multipleChoices[0].childs[2].mAnswer}}</td>
+				<td rowspan="5">{{jsonData.multipleChoices[0].childs[2].minute}}</td>
+				<td rowspan="5"></td>
+			</tr>
+			<tr>
+				
+				<td>浪漫主义色彩2</td>
+				<td>0</td>
+				<td>{{jsonData.multipleChoices[0].childs[2].mAnswer}}</td>
+				
+			</tr>
+			<tr>
+				
+				<td>浪漫主义色彩3</td>
+				<td>0</td>
+				<td>{{jsonData.multipleChoices[0].childs[2].mAnswer}}</td>
+				
+			</tr>
+			<tr>
+				
+				<td>浪漫主义色彩4</td>
+				<td>0</td>
+				<td>{{jsonData.multipleChoices[0].childs[2].mAnswer}}</td>
+				
+			</tr>
+			<tr>
+				<td>浪漫主义色彩5</td>
+				<td>0</td>
+				<td>{{jsonData.multipleChoices[0].childs[2].mAnswer}}</td>
+			</tr>
+			
+			<tr>
+				<td rowspan="13">4.解锁第四节意境</td>
+				<td rowspan="13">知识点二：自然的救赎功能</td>
+				<td rowspan="4">多选题（2’）</td>
+				<td>A</td>
+				<td>1</td>
+				<td>{{jsonData.multipleChoices[1].mAnswer}}</td>
+				<td rowspan="4">{{jsonData.multipleChoices[1].minute}}</td>
+				<td rowspan="4"></td>
+			</tr>
+			
+			<tr>
+				
+				<td>B</td>
+				<td>1</td>
+				<td>{{jsonData.multipleChoices[1].mAnswer}}</td>
+				
+			</tr>
+			<tr>
+				
+				<td>C</td>
+				<td>1</td>
+				<td>{{jsonData.multipleChoices[1].mAnswer}}</td>
+				
+			</tr>
+			<tr>
+				
+				<td>D</td>
+				<td>1</td>
+				<td>{{jsonData.multipleChoices[1].mAnswer}}</td>
+				
+			</tr>
+			   
+			<tr>
+				<td rowspan="4">多选题（2’）</td>
+				<td>A</td>
+				<td>1</td>
+				<td>{{jsonData.multipleChoices[2].mAnswer}}</td>
+				<td rowspan="4">{{jsonData.multipleChoices[2].minute}}</td>
+				<td rowspan="4"></td>
+			</tr>  
+			<tr>
+
+				<td>B</td>
+				<td>1</td>
+				<td>{{jsonData.multipleChoices[2].mAnswer}}</td>
+
+			</tr>
+			<tr>
+
+				<td>C</td>
+				<td>1</td>
+				<td>{{jsonData.multipleChoices[2].mAnswer}}</td>
+
+			</tr>
+			<tr>
+
+				<td>D</td>
+				<td>1</td>
+				<td>{{jsonData.multipleChoices[2].mAnswer}}</td>
+
+			</tr>
+			
+			
+			<tr>
+				<td>诗歌赏析（2’）</td>
+				<td>/</td>
+				<td>2</td>
+				<td>{{jsonData.operatings[3].mAnswer}}</td>
+				<td>{{jsonData.operatings[3].minute}}</td>
+				<td ></td>
+			</tr>  
+			
+			
+			<tr>
+				<td rowspan="4">多选题（3’）</td>
+				<td>A</td>
+				<td>1</td>
+				<td>{{jsonData.multipleChoices[3].mAnswer}}</td>
+				<td rowspan="4">{{jsonData.multipleChoices[3].minute}}</td>
+				<td rowspan="4"></td>
+			</tr>  
+			<tr>
+			
+				<td>B</td>
+				<td>1</td>
+				<td>{{jsonData.multipleChoices[3].mAnswer}}</td>
+			
+			</tr>
+			<tr>
+			
+				<td>C</td>
+				<td>1</td>
+				<td>{{jsonData.multipleChoices[3].mAnswer}}</td>
+			
+			</tr>
+			<tr>
+			
+				<td>D</td>
+				<td>1</td>
+				<td>{{jsonData.multipleChoices[3].mAnswer}}</td>
+			
+			</tr>
+			
+			<tr>
+				<td rowspan="4">5.对比两幅意境图</td>
+				<td rowspan="12">知识点三：中国民主精神中人与自然关系比较</td>
+				<td >寻找菊花（1’）</td>
+				<td>/</td>
+				<td>1</td>
+				<td>{{jsonData.operatings[4].mAnswer}}</td>
+				<td>{{jsonData.operatings[4].minute}}</td>
+				<td></td>
+			</tr>
+			
+			<tr>
+				
+				<td >聆听诗歌（1’）</td>
+				<td>/</td>
+				<td>1</td>
+				<td>{{jsonData.operatings[5].mAnswer}}</td>
+				<td>{{jsonData.operatings[5].minute}}</td>
+				<td></td>
+			</tr>
+			<tr>
+				
+				<td rowspan="2">意境匹配（2’）</td>
+				<td>选项1</td>
+				<td>1</td>
+				<td>{{jsonData.operatings[6].mAnswer}}</td>
+				<td rowspan="2">{{jsonData.operatings[6].minute}}</td>
+
+				<td rowspan="2"></td>
+			</tr>
+			<tr>		
+				<td>选项2</td>
+				<td>1</td>
+				<td>{{jsonData.operatings[6].mAnswer}}</td>
+			</tr>
+			
+			<tr>
+				<td rowspan="2">6.对比两个意象</td>
+				<td >选择人物并命名（1’）</td>
+				<td>/</td>
+				<td>1</td>
+				<td>{{jsonData.operatings[7].mAnswer}}</td>
+				<td>{{jsonData.operatings[7].minute}}</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>聆听先贤对话（1’)</td>
+				<td>/</td>
+				<td>1</td>
+				<td>{{jsonData.operatings[8].mAnswer}}</td>
+				<td>{{jsonData.operatings[8].minute}}</td>
+				<td></td>
+			</tr>
+			
+			
+			<tr>
+				<td rowspan="6">7.对话先贤</td>
+				
+				<td rowspan="2">单选题（2’）</td>
+				<td>选项1</td>
+				<td>2</td>
+				<td>{{jsonData.singleChoices[0].mAnswer}}</td>
+				<td rowspan="2">{{jsonData.singleChoices[0].minute}}</td>
+				<td rowspan="2"></td>
+			</tr>
+			
+			<tr>
+				<td>选项1</td>
+				<td>0</td>
+				<td>{{jsonData.singleChoices[0].mAnswer}}</td>
+			</tr>
+			
+			<tr>
+				
+				<td rowspan="2">单选题（2’）</td>
+				<td>选项1</td>
+				<td>2</td>
+				<td>{{jsonData.singleChoices[1].mAnswer}}</td>
+				<td rowspan="2">{{jsonData.singleChoices[1].minute}}</td>
+				<td rowspan="2"></td>
+			</tr>
+			<tr>		
+				<td>选项1</td>
+				<td>0</td>
+				<td>{{jsonData.singleChoices[1].mAnswer}}</td>
+			</tr>
+			
+			<tr>
+				<td rowspan="2">单选题（2’）</td>
+				<td>选项1</td>
+				<td>2</td>
+				<td>{{jsonData.singleChoices[2].mAnswer}}</td>
+				<td rowspan="2">{{jsonData.singleChoices[2].minute}}</td>
+				<td rowspan="2"></td>
+			</tr>
+			<tr>		
+				<td>选项1</td>
+				<td>0</td>
+				<td>{{jsonData.singleChoices[2].mAnswer}}</td>
+			</tr>
+			
+			<tr style="text-align: center;font-weight: bold;">
+				<td colspan="8">II. 惠特曼部分实验报告（40%）</td>
+			</tr>
+			<tr style="text-align: center;font-weight: bold;">
+				<td>步骤</td>
+				<td>对应知识点</td>
+				<td>类型(总分)</td>
+				<td>题目选项</td>
+				<td>选项分数</td>
+				<td>学生答案</td>
+				<td>学生得分</td>
+				<td>题目序号</td>
+			</tr>
+			
+			<tr>
+				<td>8.身份转换</td>
+				<td rowspan="3">/</td>
+				<td>变为惠特曼助手（1’)</td>
+				<td>/</td>
+				<td>1</td>
+				<td>{{jsonData.operatings[9].mAnswer}}</td>
+				<td>{{jsonData.operatings[9].minute}}</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td rowspan="2">9.船只命名、选取船员</td>
+				
+				<td>船只命名（1’)</td>
+				<td>/</td>
+				<td>1</td>
+				<td>{{jsonData.operatings[10].mAnswer}}</td>
+				<td>{{jsonData.operatings[10].minute}}</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>船员选择（1’)</td>
+				<td>/</td>
+				<td>1</td>
+				<td>{{jsonData.operatings[11].mAnswer}}</td>
+				<td>{{jsonData.operatings[11].minute}}</td>
+				<td></td>
+			</tr>
+			
+			<tr>
+				<td>10.浏览大厅图片</td>
+				<td rowspan="5">知识点四：草的象征意义及其崇高性</td>
+				<td>交互（3’）</td>
+				<td>/</td>
+				<td>1</td>
+				<td>{{jsonData.operatings[12].mAnswer}}</td>
+				<td>{{jsonData.operatings[12].minute}}</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td rowspan="4">11.寻找“草”线索</td>
+				
+				<td>窗台青草（1’）</td>
+				<td>/</td>
+				<td>1</td>
+				<td>{{jsonData.operatings[13].mAnswer}}</td>
+				<td rowspan="4">{{jsonData.operatings[13].minute}}</td>
+				<td></td>
+			</tr>
+			<tr>
+				
+				<td>墙上一幅画（2’）</td>
+				<td>/</td>
+				<td>1</td>
+				<td>{{jsonData.operatings[13].mAnswer}}</td>
+
+				<td></td>
+			</tr>
+			<tr>
+				<td>《草》（2’）</td>
+				<td>/</td>
+				<td>1</td>
+				<td>{{jsonData.operatings[13].mAnswer}}</td>
+
+				<td></td>
+			</tr>
+			<tr>
+				<td>有关Free verse对话（2’）</td>
+				<td>/</td>
+				<td>1</td>
+				<td>{{jsonData.operatings[13].mAnswer}}</td>
+
+				<td></td>
+			</tr>
+			
+			
+			<tr>
+				<td rowspan="2">12.寻找关键词语</td>
+				<td rowspan="13">知识点五：超验主义，主体性的建构形式</td>
+				<td>寻找体现超验主义的词语（2’）</td>
+				<td>/</td>
+				<td>1</td>
+				<td>{{jsonData.operatings[14].mAnswer}}</td>
+				<td>{{jsonData.operatings[14].minute}}</td>
+				<td></td>
+			</tr>
+			
+			<tr>
+			
+				<td>聆听惠特曼的话（1’）</td>
+				<td>/</td>
+				<td>1</td>
+				<td>{{jsonData.operatings[15].mAnswer}}</td>
+				<td>{{jsonData.operatings[15].minute}}</td>
+				<td></td>
+			</tr>
+			
+			<tr>
+				<td rowspan="11">13.平息暴风雨</td>
+				<td rowspan="4">多选题（3’）</td>
+				<td>A</td>
+				<td>1</td>
+				<td>{{jsonData.multipleChoices[4].mAnswer}}</td>
+				<td rowspan="4">{{jsonData.multipleChoices[4].minute}}</td>
+				<td rowspan="4"></td>
+			</tr>
+			
+			<tr>
+				
+				<td>B</td>
+				<td>1</td>
+				<td>{{jsonData.multipleChoices[4].mAnswer}}</td>
+				
+			</tr>
+			<tr>
+				
+				<td>C</td>
+				<td>1</td>
+				<td>{{jsonData.multipleChoices[4].mAnswer}}</td>
+				
+			</tr>
+			<tr>
+				
+				<td>D</td>
+				<td>1</td>
+				<td>{{jsonData.multipleChoices[4].mAnswer}}</td>
+				
+			</tr>
+			
+			<tr>
+				
+				<td rowspan="5">多选题（5’)</td>
+				<td>①</td>
+				<td>1</td>
+				<td></td>
+				<td rowspan="5">{{jsonData.fillInTheBlanks[0].minute}}</td>
+				<td rowspan="5"></td>
+			</tr>
+			
+			<tr>
+				
+				<td>②</td>
+				<td>1</td>
+				<td></td>
+				
+			</tr>
+			<tr>
+				
+				<td>③</td>
+				<td>1</td>
+				<td></td>
+				
+			</tr>
+			<tr>
+				<td>④</td>
+				<td>1</td>
+				<td></td>
+				
+			</tr>
+			<tr>
+				<td>⑤</td>
+				<td>1</td>
+				<td></td>
+				
+			</tr>
+			<tr>
+				
+				<td>回顾诗歌（1’)</td>
+				<td>/</td>
+				<td>1</td>
+				<td>{{jsonData.operatings[16].mAnswer}}</td>
+				<td>{{jsonData.operatings[16].minute}}</td>
+				<td></td>
+			</tr>
+			<tr>
+				
+				<td>寻找鸟类（1’)</td>
+				<td>/</td>
+				<td>1</td>
+				<td>{{jsonData.operatings[17].mAnswer}}</td>
+				<td>{{jsonData.operatings[17].minute}}</td>
+				<td></td>
+			</tr>
+			
+			<tr>
+				<td rowspan="4">14.对话民众</td>
+				<td rowspan="17">知识点六：中西民主精神中人的属性比较</td>
+				<td>政治家和军人（1’）</td>
+				<td>/</td>
+				<td>1</td>
+				<td>{{jsonData.operatings[18].childs[0].mAnswer}}</td>
+				<td>{{jsonData.operatings[18].minute}}</td>
+				<td></td>
+			</tr>
+			<tr>
+				
+				<td>作家（1’）</td>
+				<td>/</td>
+				<td>1</td>
+				<td>{{jsonData.operatings[18].childs[1].mAnswer}}</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				
+				<td>女厨师和男仆（1’）</td>
+				<td>/</td>
+				<td>1</td>
+				<td>{{jsonData.operatings[18].childs[2].mAnswer}}</td>
+				<td></td>
+				<td></td>
+			</tr>
+			
+			
+			<tr>
+				<td>农夫和小孩（1’）</td>
+				<td>/</td>
+				<td>1</td>
+				<td>{{jsonData.operatings[18].childs[3].mAnswer}}</td>
+				<td></td>
+				<td></td>
+			</tr>
+			
+			<tr>
+				<td rowspan="13">15.迷雾闯关</td>
+				
+				<td>欣赏《天狗》（1’）</td>
+				<td>/</td>
+				<td>1</td>
+				<td>{{jsonData.operatings[19].mAnswer}}</td>
+				<td>{{jsonData.operatings[19].minute}}</td>
+				<td></td>
+			</tr>
+			<tr>
+				
+				<td rowspan="4">多选题（2’）</td>
+				<td>A</td>
+				<td>1</td>
+				<td>{{jsonData.multipleChoices[5].mAnswer}}</td>
+				<td rowspan="4">{{jsonData.multipleChoices[5].minute}}</td>
+
+				<td></td>
+			</tr>
+			<tr>
+				<td>B</td>
+				<td>1</td>
+				<td>{{jsonData.multipleChoices[5].mAnswer}}</td>
+				<td></td>
+
+			</tr>
+			<tr>
+				<td>C</td>
+				<td>1</td>
+				<td>{{jsonData.multipleChoices[5].mAnswer}}</td>
+				<td></td>
+
+			</tr>
+			<tr>
+				<td>D</td>
+				<td>1</td>
+				<td>{{jsonData.multipleChoices[5].mAnswer}}</td>
+				<td></td>
+
+			</tr>
+			
+			<tr>
+				
+				<td rowspan="2">单选题（1’）</td>
+				<td>democracy</td>
+				<td>1</td>
+				<td>{{jsonData.fillInTheBlanks[1].mAnswer}}</td>
+				<td rowspan="2">{{jsonData.fillInTheBlanks[1].minute}}</td>
+				<td rowspan="2"></td>
+			</tr>
+			<tr>
+				<td>monarchy</td>
+				<td>1</td>
+				<td>{{jsonData.fillInTheBlanks[1].mAnswer}}</td>
+			</tr>
+			<tr>
+				
+				<td>欣赏选段1（1’）</td>
+				<td>/</td>
+				<td>1</td>
+				<td>{{jsonData.operatings[20].mAnswer}}</td>
+				<td>{{jsonData.operatings[20].minute}}</td>
+				<td></td>
+			</tr>
+			
+			<tr>
+				
+				<td rowspan="2">单选题（2’）</td>
+				<td>the individual</td>
+				<td>1</td>
+				<td>{{jsonData.fillInTheBlanks[2].mAnswer}}</td>
+				<td rowspan="2">{{jsonData.fillInTheBlanks[2].minute}}</td>
+				<td rowspan="2"></td>
+			</tr>
+			<tr>
+				<td>the collective</td>
+				<td>1</td>
+				<td>{{jsonData.fillInTheBlanks[2].mAnswer}}</td>
+			</tr>
+			<tr>
+				
+				<td>欣赏选段2（1’）</td>
+				<td>/</td>
+				<td>1</td>
+				<td>{{jsonData.operatings[21].mAnswer}}</td>
+				<td>{{jsonData.operatings[21].minute}}</td>
+				<td></td>
+			</tr>
+			
+			<tr>
+				
+				<td rowspan="2">单选题（2’）</td>
+				<td>the individual</td>
+				<td>1</td>
+				<td>{{jsonData.fillInTheBlanks[3].mAnswer}}</td>
+				<td rowspan="2">{{jsonData.fillInTheBlanks[3].minute}}</td>
+				<td rowspan="2"></td>
+			</tr>
+			<tr>
+				<td>the collective</td>
+				<td>1</td>
+				<td>{{jsonData.fillInTheBlanks[3].mAnswer}}</td>
+			</tr>
+			<tr>
+				<td style="font-weight: bold;">以上分支总分</td>
+				<td colspan="8" style="text-align: left;">{{jsonData.totalMinute}}</td>
+			</tr>
+			
+			<tr>
+				<td colspan="8" style="text-align: center; font-weight: bold;">Ⅲ.总结（20%）</td>
+			</tr>
+			<tr>
+				<td>16.撰写心得报告</td>
+				<td>中西民主精神的异同</td>
+				<td>简答题（20’）</td>
+				<td>/</td>
+				<td>20</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td style="font-weight: bold;">报告</td>
+				<td colspan="8" style="text-align: left;">{{jsonData.summary}}</td>
+			</tr>
+			<tr>
+				<td style="font-weight: bold;">实验总得分</td>
+				<td colspan="8" style="text-align: left;"></td>
+			</tr>
+			<tr>
+				<td style="font-weight: bold;">教师评语</td>
+				<td colspan="8" style="text-align: left;"></td>
+			</tr>
+			<tr>
+				<td style="font-weight: bold;">教师签名</td>
+				<td colspan="2"></td>
+				<td style="font-weight: bold;">日期</td>
+				<td colspan="4"></td>
+			</tr>
+		</table>
+		
+		<div style="padding: 20px; text-align: center;">
+			<button id="download" type="button" style="weight:200px; font-size:20px; font-weight: bold;">下载</button>
+
+		</div>
+   </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/FileSaver.js"></script>
+<script type="text/javascript" src="js/jquery.wordexport.js"></script>
+
+<script>
+
+    var vm=new Vue({
+        el:"#app",
+        data:{
+            jsonData:""
+		},
+        methods:{},
+		created(){
+        	this.jsonData=JSON.parse(window.sessionStorage.getItem("tableData"))
+        	console.log(this.jsonData)
+        }
+
+    })
+
+
+$(function () {
+	$("#download").click(function (event) {
+		$("table tr th").css("border","1px solid #000")
+		$("table tr td").css("border","1px solid #000")
+		$("#app").wordExport('word文档');
+	});
+})
+
+
+</script>
+</html>

@@ -17,6 +17,9 @@ public class HeavenController : ChildController
         CameraMng.GetInstance().SetGodRoamsMove();
 
         sceneAsset = SceneMng.GetInstance().GetSceneAssetObject(1);
+        sceneAsset.Tran.parent.localEulerAngles = Vector3.zero;
+        sceneAsset.Tran.localEulerAngles = new Vector3(0, -65, 0);
+
         hzhs = SceneMng.GetInstance().GetSceneAssetObject(101);
         tym = SceneMng.GetInstance().GetSceneAssetObject(102);
 

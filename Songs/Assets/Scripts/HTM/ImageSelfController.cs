@@ -16,6 +16,7 @@ public class ImageSelfController : ChildController
     public override void Init()
     {
         base.Init();
+        lookSongNum.Clear();
         sceneAsset = SceneMng.GetInstance().GetSceneAssetObject(1);
         htm = SceneMng.GetInstance().GetSceneAssetObject(102);
         chuang = SceneMng.GetInstance().GetSceneAssetObject(103);
@@ -110,7 +111,7 @@ public class ImageSelfController : ChildController
             if (!lookSongNum.Contains(obj.name)) lookSongNum.Add(obj.name);
             int min = lookSongNum.Count * 2;
             if (obj.name.Equals("植物")) min --;
-            MainPlayer.songResultInfo.FillAnswer(14, string.Empty, lookSongNum.Count, AnswerType.Operating);
+            MainPlayer.songResultInfo.FillAnswer(14, string.Empty, min, AnswerType.Operating);
         }
     }
 }

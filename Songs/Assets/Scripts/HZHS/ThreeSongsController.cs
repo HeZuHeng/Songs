@@ -115,11 +115,11 @@ public class ThreeSongsController : ChildController
         //});
         //SceneController.GetInstance().AddPlayAnimator(sceneAsset);
         
-        SongsDataMng.GetInstance().SetNextTaskData(id);
-        if (!lookSongNum.Contains(id)) lookSongNum.Add(id);
+        //SongsDataMng.GetInstance().SetNextTaskData(id);
+        if (name.Equals(SongsDataMng.GetInstance().GetTaskData.val) && !lookSongNum.Contains(id)) lookSongNum.Add(id);
         MainPlayer.songResultInfo.FillAnswer(2, string.Empty, lookSongNum.Count, AnswerType.Operating);
-        UIMng.Instance.ConcealUI(UIType.MainDialogueWnd);
-        UIMng.Instance.ActivationUI(UIType.MainDialogueWnd);
+        //UIMng.Instance.ConcealUI(UIType.MainDialogueWnd);
+        //UIMng.Instance.ActivationUI(UIType.MainDialogueWnd);
 
     }
 

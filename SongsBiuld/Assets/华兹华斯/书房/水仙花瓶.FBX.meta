@@ -48,6 +48,8 @@ ModelImporter:
     4300010: Object021
     4300012: hua:pPlane018
     4300014: hua:pPlane019
+    7400000: Take 001
+    11100000: //RootNode
   externalObjects:
   - first:
       type: UnityEngine:Material

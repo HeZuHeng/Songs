@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | TestWebGL</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/3544178c924aac8c5129f2d974d60dd7.js"></script>
+
+    <style>
+      #my-table{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,.3);
+        z-index: 10;
+        display: none;
+      }
+      #my-table #table-content{
+        width: 1280px;
+        height: 730px;
+        background: #ffffff;
+        position: absolute;
+        top:calc(50% - 22px);
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      iframe{
+        width: 100%;
+        height: 100%;
+      }
+      #my-table img{
+        position: absolute;
+        top: calc(50% - 380px);
+        right: calc(50% - 600px);
+        width: 40px;
+        cursor: pointer;
+      }
+    </style>
+
+    <script>
+      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/30d1479ec7655270eb3aeaf135d5c5c9.json", {onProgress: UnityProgress});
+	  
+	  function SendSongData(data){
+		// console.log(data);
+		window.sessionStorage.setItem("tableData",data)
+          document.getElementById("my-table").style.display="block"
+          document.getElementById("table-content").innerHTML=`<iframe src="demo/index.html" frameborder="0"></iframe>`
+	  }
+	  
+	  function hideHtml() {
+        document.getElementById("my-table").style.display="none"
+        document.getElementById("table-content").innerHTML=``
+      }
+
+
+    </script>
+  </head>
+  <body>
+    <div class="webgl-content">
+      <div id="gameContainer" style="width: 1280px; height: 720px"></div>
+      <div class="footer">
+        <div class="webgl-logo"></div>
+        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+        <div class="title">TestWebGL</div>
+      </div>
+    </div>
+
+    <div id="my-table">
+      <div id="table-content"></div>
+      <img src="demo/images/close.png" alt="" onclick="hideHtml(this);">
+    </div>
+  </body>
+</html>

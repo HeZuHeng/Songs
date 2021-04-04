@@ -216,6 +216,7 @@ public class AnswerWnd : UIBase
                 scrollRect.content.GetChild(i).GetComponentInChildren<AnswerItemUI>().Show(question.answers != null && question.answers.Contains(i));
             }
         }
+        if (t.Count <= 0) return;
         string ansStr = string.Empty;
         int minute = 0;
 
@@ -251,24 +252,6 @@ public class AnswerWnd : UIBase
                 }
             }
         }
-
-        //if (minute == 0 && question.errorTip != null)
-        //{
-        //    num++;
-        //    if (num <= 1)
-        //    {
-        //        errorTip.text = "选择错误！请重新选择。";
-        //        StopCoroutine(Reset());
-        //        StartCoroutine(Reset());
-        //        SceneController.GetInstance().ToState(State.TalkCameraError, null);
-        //    }
-        //    else
-        //    {
-        //        errorTip.text = question.errorTip;
-        //    }
-        //    errorTip.enabled = true;
-        //    return;
-        //}
 
         if (question.answerChildId > 0)
         {
