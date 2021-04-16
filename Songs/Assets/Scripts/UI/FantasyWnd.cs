@@ -20,6 +20,13 @@ public class FantasyWnd : UIBase
         "In their gleeful fluttering and dancing, the daffodils outdo ___ of lake.|___远不如水仙跳舞跳得欢快、热烈。"
     };
 
+    static string[] SongTexts =
+    {
+        "I wandered lonely as a cloud \nThat floats on high o’er vales and hills \nWhen all at once I saw a crowd,\nhost, of golden daffodils; \nBesides the lake, beneath the trees, \nFluttering and dancing in the breeze.",
+        "Continuous as the stars that shine \nAnd twinkle on the Milky Way, \nThey stretched in never-ending line \nAlong the margin of a bay: \nTen thousand saw I at a glance, \nTossing their heads in sprightly dance.",
+        "The waves beside them danced; but they \n Outdid the sparking waves in glee: \nA poet could not but be gay, \nIn such a jocund company! \nI gazed – and gazed – but little thought \nWhat wealth the show to me had brought."
+    };
+
     static string[] Names =
     {
         "一朵云","成片且摇曳的水仙花","漫天闪烁的星星","银河","粼粼水波"
@@ -30,6 +37,8 @@ public class FantasyWnd : UIBase
     public ScrollRect scrollRect;
     public TrendsText tip;
     public Text tip2;
+    public Button btnTip;
+    public Text songText;
 
     public FantasyItemUI[] itemUIs;
 
@@ -45,7 +54,7 @@ public class FantasyWnd : UIBase
     protected override void Start()
     {
         base.Start();
-
+        btnTip.onClick.AddListener(OnClickBtnTip);
         for (int i = 0; i < itemUIs.Length; i++)
         {
             itemUIs[i].OnPointUp += OnPointUpIamge;
@@ -74,6 +83,23 @@ public class FantasyWnd : UIBase
     {
         base.OnDisable();
         UIMng.Instance.ConcealUI(UIType.MemoryWnd);
+    }
+
+    void OnClickBtnTip()
+    {
+        if(index < 1)
+        {
+            songText.text = SongTexts[0];
+        }
+        else if (index < 3)
+        {
+            songText.text = SongTexts[1];
+        }
+        else
+        {
+            songText.text = SongTexts[2];
+        }
+        songText.transform.parent.gameObject.SetActive(true);
     }
 
     void OnPointUpIamge(Image image)

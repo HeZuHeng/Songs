@@ -23,19 +23,19 @@ public class VideoPlayerItemUI : MonoBehaviour
         DoMove();
         for (int i = 0; i < texts.Length; i++)
         {
-            texts[i].enabled = false;
+            texts[i].gameObject.SetActive(false);
         }
         index1 = 0;
-        if (index1 < texts.Length) texts[index1].enabled = true;
+        if (index1 < texts.Length) texts[index1].gameObject.SetActive(true);
     }
 
 
     void ShowText()
     {
-        if (index1 < texts.Length) texts[index1].enabled = false;
+        if (index1 < texts.Length) texts[index1].gameObject.SetActive(false);
         index1++;
 
-        if (index1 < texts.Length) texts[index1].enabled = true;
+        if (index1 < texts.Length) texts[index1].gameObject.SetActive(true);
         if (index1 >= texts.Length - 1)
         {
             CancelInvoke("ShowText");
@@ -52,6 +52,7 @@ public class VideoPlayerItemUI : MonoBehaviour
         videoPlayer.prepareCompleted -= OnPrepareCompleted;
         videoPlayer.prepareCompleted += OnPrepareCompleted;
         //videoPlayer.enabled = true;
+        //Application.targetFrameRate = 30;
         videoPlayer.Play();
 
     }
@@ -70,6 +71,7 @@ public class VideoPlayerItemUI : MonoBehaviour
 
     void OnClose()
     {
-        if(!IsClose) gameObject.SetActive(false);
+        //Application.targetFrameRate = -1;
+        if (!IsClose) gameObject.SetActive(false);
     }
 }

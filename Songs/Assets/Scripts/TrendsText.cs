@@ -173,7 +173,7 @@ public class TrendsText : MonoBehaviour
         {
             m_TextC = ecs[1];
         }
-        m_ShowSpeed = m_Text.Length / 3f;
+        m_ShowSpeed = m_Text.Length / 2f;
         string str = m_Text;//.Replace(" ", "\u3000");
         string LineHead = "";
         //设置段落的首行缩进的字符数

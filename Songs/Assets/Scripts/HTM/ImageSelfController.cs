@@ -13,6 +13,10 @@ public class ImageSelfController : ChildController
     SceneAssetObject htm;
     SceneAssetObject chuang;
 
+    Vector3[] vector3s;
+    Tweener moveTw;
+    Vector3 initPos;
+
     public override void Init()
     {
         base.Init();
@@ -23,14 +27,14 @@ public class ImageSelfController : ChildController
         if (htm != null) htm.Tran.gameObject.SetActive(false);
         //sceneAsset.Tran.gameObject.AddComponent<TriggerEvent>().enterEvent.AddListener(EnterEvent);
         InputManager.GetInstance().AddClickEventListener(OnClickEvent);
-
-        Vector3[] vector3s = new Vector3[5];
+        initPos = chuang.Tran.position;
+        vector3s = new Vector3[5];
         vector3s[0] = new Vector3(228, 31.26f, 539);
         vector3s[1] = new Vector3(400, 31.26f, 431);
         vector3s[2] = new Vector3(608, 31.26f, 395);
         vector3s[3] = new Vector3(784, 31.26f, 208);
         vector3s[4] = new Vector3(940, 31.26f, 57);
-        Tweener moveTw = chuang.Tran.DOLocalPath(vector3s, 300, PathType.CatmullRom, PathMode.Ignore).SetLookAt(0.0001f);
+        moveTw = chuang.Tran.DOLocalPath(vector3s, 300, PathType.CatmullRom, PathMode.Ignore).SetLookAt(0.0001f);
         moveTw.SetLoops(-1, LoopType.Restart);
         Vector3 offset = chuang.Tran.position - sceneAsset.Tran.position;
         moveTw.onUpdate += delegate ()
@@ -48,9 +52,25 @@ public class ImageSelfController : ChildController
                 InitMoveCamera(onStateEnd);
                 break;
             case State.TalkCamera:
-                //TalkCamera(onStateEnd);
+                TalkCamera(onStateEnd);
+                break;
+            case State.TalkCameraOne:
+                NextCamera(onStateEnd);
                 break;
         }
+    }
+
+    void NextCamera(OnStateEndDelegate onStateEnd)
+    {
+        moveTw.Play();
+        onStateEnd?.Invoke(GetState);
+    }
+
+    void TalkCamera(OnStateEndDelegate onStateEnd)
+    {
+        chuang.Tran.position = initPos;
+        moveTw.Pause();
+        onStateEnd?.Invoke(GetState);
     }
 
     void InitMoveCamera(OnStateEndDelegate onStateEnd)
@@ -81,13 +101,13 @@ public class ImageSelfController : ChildController
             sceneAsset.Tran.LookAt(htm.Tran);
             CameraMng.MainCamera.transform.parent.eulerAngles = Vector3.zero;
             CameraMng.MainCamera.transform.eulerAngles = htm.Tran.eulerAngles + Vector3.right * 5;
-
+            htm.Tran.localEulerAngles = new Vector3(0,45,0);
             Vector3[] sikao = new Vector3[2];
             sikao[0] = new Vector3(0.574f, -8.794001f, 0.18f);
             sikao[1] = new Vector3(1.736f, -8.794001f, 0);
-            Tweener sikaoTw = htm.Tran.DOLocalPath(sikao, 3, PathType.Linear, PathMode.Ignore).SetLookAt(0.01f);
+            Tweener sikaoTw = htm.Tran.DOLocalPath(sikao, 6, PathType.Linear, PathMode.Ignore).SetLookAt(0.01f);
             sikaoTw.SetLoops(-1,LoopType.Yoyo);
-            htm.Tran.forward = htm.Tran.forward * -1;
+            //htm.Tran.forward = htm.Tran.forward * -1;
             sikaoTw.onStepComplete += delegate ()
             {
                 htm.Tran.forward = htm.Tran.forward * -1;
@@ -96,7 +116,7 @@ public class ImageSelfController : ChildController
             onStateEnd?.Invoke(GetState);
         };
 
-        Tween tween = htm.Tran.DOLocalRotate(-135 * Vector3.up, 12);
+        Tween tween = htm.Tran.DOLocalRotate(-135 * Vector3.up, 9);
         tween.onUpdate += delegate ()
         {
             CameraMng.MainCamera.transform.eulerAngles = htm.Tran.eulerAngles + Vector3.right * 5;

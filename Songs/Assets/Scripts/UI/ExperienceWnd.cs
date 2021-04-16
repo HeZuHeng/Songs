@@ -25,14 +25,18 @@ public class ExperienceWnd : UIBase
     {
         base.OnEnable();
         //trendsText.Play();
+        for (int i = 0; i < texts.Length; i++)
+        {
+            texts[i].gameObject.SetActive(false);
+        }
         index = 0;
         ExperienceUtil.Instance.SetTexture(textures[index]);
         //CancelInvoke("DoMove");
         //Invoke("DoMove", 1);
         DoMove();
         index1 = 0;
-        texts[index1].enabled = true;
-        
+        texts[index1].gameObject.SetActive(true);
+
     }
 
     protected override void OnDisable()
@@ -43,10 +47,10 @@ public class ExperienceWnd : UIBase
 
     void ShowText()
     {
-        texts[index1].enabled = false;
+        texts[index1].gameObject.SetActive(false);
         index1++;
 
-        texts[index1].enabled = true;
+        texts[index1].gameObject.SetActive(true);
         if (index1 >= texts.Length - 1)
         {
             CancelInvoke("ShowText");
@@ -63,6 +67,7 @@ public class ExperienceWnd : UIBase
         videoPlayer.prepareCompleted -= OnPrepareCompleted;
         videoPlayer.prepareCompleted += OnPrepareCompleted;
         //videoPlayer.enabled = true;
+        //Application.targetFrameRate = 30;
         videoPlayer.Play();
         //ExperienceUtil.Instance.DoMoveCamera(textures[index], new Vector3(1, 2, -4), 7.5f, delegate () {
         //    index++;
@@ -87,6 +92,7 @@ public class ExperienceWnd : UIBase
 
     public void OnClose()
     {
+        //Application.targetFrameRate = -1;
         UIMng.Instance.OpenUI(UIType.NONE);
         TaskData taskData = SongsDataMng.GetInstance().GetTaskData;
         if (taskData != null)
