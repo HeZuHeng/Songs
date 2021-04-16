@@ -2453,7 +2453,7 @@
       </scale>
     </ModelDatas>  
   </SceneDatas>
-  <SceneDatas 场景="寻找草的意象数据" 场景资源名="海岸" 摄像机 = "htm_camera_self" 位置="htm_initposition_self" 镜头="cutscene_enjoyflower_tym">
+  <SceneDatas 场景="寻找草的意象数据" 场景资源名="海岸" 摄像机 = "htm_camera_self" 位置="htm_initposition_self" 镜头="cutscene_set_sail">
     <ModelDatas Id="103" 模型名="chuang_self" 资源名="chuang_self" >
 	  <position>
         <x>124.86</x>

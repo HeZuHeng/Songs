@@ -279,7 +279,14 @@ public class MainDialogueWnd : UIBase
         int talking = !string.IsNullOrEmpty(taskData.des) ? 1 : 0;
 
         talkParent.gameObject.SetActive(talking == 1);
-        taskNameParent.gameObject.SetActive(talking == 0);
+        if (string.IsNullOrEmpty(taskData.name))
+        {
+            taskNameParent.gameObject.SetActive(false);
+        }
+        else
+        {
+            taskNameParent.gameObject.SetActive(talking == 0);
+        }
         if (talking == 1 && !string.IsNullOrEmpty(taskData.des))
         {
             ModelData modelData = SongsDataMng.GetInstance().GetModelData(talkId);
@@ -299,7 +306,14 @@ public class MainDialogueWnd : UIBase
             }
             else
             {
-                talkName.text = "系统提示";
+                if(taskData.type == TaskType.Talk && SceneController.ChildController != null && SceneController.ChildController.GetType() == typeof(ThreePictureController))
+                {
+                    talkName.text = "Analysis";
+                }
+                else
+                {
+                    talkName.text = "Indicator";
+                }
                 iconN = string.Empty;
             }
             if (!string.IsNullOrEmpty(iconN)) {

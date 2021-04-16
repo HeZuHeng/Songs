@@ -2,43 +2,43 @@
 <TasksConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <任务分支名>I .William Wordsworth</任务分支名>
   <SceneTasks 场景任务名="1.About Wordsworth" 图标="jieshao_cj" 场景数据="华兹华斯书房预览">
-	<TaskDatas ID="101" 任务名="来到故居" 下一个="102" 类型="Talk" 描述="Welcome to Wordsworth’s residence.|欢迎来到华兹华斯的故居"/>
-	<TaskDatas ID="102" 任务名="来到故居" 下一个="1" 类型="StartState" 值 = "InitMoveCamera"/>
-    <TaskDatas ID="1" 任务名="华兹华斯背景介绍" 下一个="2" 类型="OpenWnd" 值 = "HZHSWnd"/>
+	<TaskDatas ID="101" 任务名="" 下一个="102" 类型="Talk" 描述="Welcome to Wordsworth’s residence.|欢迎来到华兹华斯的故居"/>
+	<TaskDatas ID="102" 任务名="" 下一个="1" 类型="StartState" 值 = "InitMoveCamera"/>
+    <TaskDatas ID="1" 任务名="Introduction to William Wordsworth" 下一个="2" 类型="OpenWnd" 值 = "HZHSWnd"/>
     <TaskDatas ID="2" 任务名="进入书房" 下一个="3" 类型="StartState" 值 = "TalkCamera" />
 	<TaskDatas ID="3" 任务名="书房中自由漫游" 下一个="103" 类型="PersonMove" 值 = "end"/>
 	<TaskDatas ID="103" 任务名="进入书房" 下一个="104" 类型="Talk" 声音="sound_3" 描述="Wordsworth is renowned as a master of poetry about nature. Nature has moral values and its philosophical significance. For Wordsworth, nature is the embodiment of the “Divine Spirit”
 	|华兹华斯因他的自然诗歌而闻名于世。自然具有道德价值，蕴含哲学意义。对于华兹华斯来说，自然是“神灵”的化身"/>
 	<TaskDatas ID="104" 任务名="预览书房" 下一个="4" 类型="Talk" 声音="sound_4" 描述="As the leading figure of English romantic poetry, Wordsworth has not only started the modern poetry, but also has changed the course of English poetry by using ordinary language and by advocating “return to nature”.
 	|华兹华斯是英国浪漫主义的先驱。他不仅开创了现代诗歌的先河，而且还倡导“回归自然”的理念, 他运用平实、朴素的语言，改变了英国诗歌发展的方向。"/>
-	<TaskDatas ID="4" 任务名="点击前往“Three Books”场景" 下一个="0" 类型="TaskChange" 值 = "2.Three Books" 描述="前往体验华兹华斯书房阅读三本诗歌"/>
+	<TaskDatas ID="4" 任务名="Tap to “Three Books”" 下一个="0" 类型="TaskChange" 值 = "2.Three Books" 描述="Walk around and find 3 books of poetry"/>
   </SceneTasks>
  <SceneTasks 场景任务名="2.Three Books" 图标="sanbenshu_cj" 场景数据="华兹华斯书房三本诗歌">
     <!--TaskDatas ID="4" 任务名="发现三本诗集" 下一个="5" 类型="DOTween" 描述="跟随镜头预览书房中的选择三本诗集的线索"/-->
     <TaskDatas ID="1" 任务名="寻找发光物体点击阅读诗歌" 下一个="2" 类型="PersonMove" 值 = "end" />
-	<TaskDatas ID="2" 任务名="点击《My Heart Leaps Up》诗歌" 下一个="3"  类型="Click" 值 = "book_02" 描述 = "寻找并点击《My Heart Leaps Up》诗歌"/>
-	<TaskDatas ID="3" 任务名="阅读《My Heart Leaps Up》诗歌" 下一个="4" 类型="LookSong" 值 = "myheartleapsup.txt" 声音="sound_6"/>
+	<TaskDatas ID="2" 任务名="Read “My Heart Leaps Up”" 下一个="3"  类型="Click" 值 = "book_02" 描述 = "Read “My Heart Leaps Up”"/>
+	<TaskDatas ID="3" 任务名="Read “My Heart Leaps Up”" 下一个="4" 类型="LookSong" 值 = "myheartleapsup.txt" 声音="sound_6"/>
 	
-	<TaskDatas ID="4" 任务名="点击《The Solitary Reaper》诗歌" 下一个="5"  类型="Click" 值 = "book_03" 描述 = "寻找并点击《The Solitary Reaper》诗歌"/>
-    <TaskDatas ID="5" 任务名="阅读《The Solitary Reaper》诗歌" 下一个="6" 类型="LookSong" 值 = "thesolitaryreaper.txt" 声音="sound_5"/>
+	<TaskDatas ID="4" 任务名="Read “The Solitary Reaper”" 下一个="5"  类型="Click" 值 = "book_03" 描述 = "Read “The Solitary Reaper”"/>
+    <TaskDatas ID="5" 任务名="Read “The Solitary Reaper”" 下一个="6" 类型="LookSong" 值 = "thesolitaryreaper.txt" 声音="sound_5"/>
 	
 	<TaskDatas ID="6" 任务名="《I Wandered Lonely as a Cloud》" 下一个="7" 类型="Talk" 描述="In English literature, “I Wandered Lonely As a Cloud” is perhaps the most anthologized poem, which takes readers to the core of Wordsworth’s poetic beliefs."/>
-	<TaskDatas ID="7" 任务名="点击《I Wandered Lonely as a Cloud》诗歌" 下一个="8"  类型="Click" 值 = "book_01" 描述 = "寻找并点击《I Wandered Lonely as a Cloud》诗歌"/>
-	<TaskDatas ID="8" 任务名="阅读《I Wandered Lonely as a Cloud》" 下一个="9" 类型="LookSong" 值 = "iwanderedlonelyasacloud.txt" 声音="sound_7"/>
-	<TaskDatas ID="9" 任务名="穿越回到华兹华斯时代" 下一个="10" 类型="StartState" 值 = "InitMoveCamera"/>
-	<TaskDatas ID="10" 任务名="《我好似一朵孤独的流云》创作背景介绍" 下一个="11" 类型="OpenWnd" 值 = "ExperienceWnd"/>
+	<TaskDatas ID="7" 任务名="Read “I Wandered Lonely as a Cloud”" 下一个="8"  类型="Click" 值 = "book_01" 描述 = "Read “I Wandered Lonely as a Cloud”"/>
+	<TaskDatas ID="8" 任务名="Read “I Wandered Lonely as a Cloud”" 下一个="9" 类型="LookSong" 值 = "iwanderedlonelyasacloud.txt" 声音="sound_7"/>
+	<TaskDatas ID="9" 任务名="Back to Wordsworth’s Time" 下一个="10" 类型="StartState" 值 = "InitMoveCamera"/>
+	<TaskDatas ID="10" 任务名="Writing background" 下一个="11" 类型="OpenWnd" 值 = "ExperienceWnd"/>
 	<TaskDatas ID="11" 任务名="华兹华斯的烦恼" 下一个="12" 类型="Animator" 值 = "101|1|1|true|sit" />
 	<TaskDatas ID="12" 任务名="华兹华斯的烦恼" 下一个="13" 类型="Talk" 声音="sound_9" 描述 = "One day, when Wordsworth lay on a couch, the reminiscence of the revolution’s failure frustrated him. And he tried to recall some good old days but failed. In order to recall the happy scene of time, please help the poet to restore his memory first.
 	|一天，华兹华斯躺在躺椅上想到革命失败又沮丧起来，想回忆美好事物之时，脑海却一片空白。为了让诗人回忆起当时快乐的场景，首先请为他复原记忆内容。"/>
-	<TaskDatas ID="13" 任务名="点击前往“I Wandered Lonely as a Cloud”场景" 下一个="0" 类型="TaskChange" 值 = "3.I Wandered Lonely as a Cloud" 描述="前往体验《I Wandered Lonely as a Cloud》前三节诗歌意境"/>
+	<TaskDatas ID="13" 任务名="点击前往“I Wandered Lonely as a Cloud”场景" 下一个="0" 类型="TaskChange" 值 = "3.I Wandered Lonely as a Cloud" 描述="Next is “I Wondered Lonely as a Cloud”"/>
   </SceneTasks>
   <SceneTasks 场景任务名="3.I Wandered Lonely as a Cloud" 图标="hzhsyj_cj" 场景数据="华兹华斯赏花">
-	<TaskDatas ID="2" 任务名="帮助华兹华斯找回意境" 下一个="3" 类型="Talk" 描述 = "您需要根据诗的前三节内容及所给的提示来选择屏幕下方的意象，还原诗中所描绘的场景。"/>
-	<TaskDatas ID="3" 任务名="开始还原意境" 下一个="4" 类型="OpenWnd" 值 = "FantasyWnd" />
+	<TaskDatas ID="2" 任务名="帮助华兹华斯找回意境" 下一个="3" 类型="Talk" 描述 = "Restore the scenes of poetry by the following images"/>
+	<TaskDatas ID="3" 任务名="Restore the Scenes" 下一个="4" 类型="OpenWnd" 值 = "FantasyWnd" />
 	<TaskDatas ID="4" 任务名="帮助华兹华斯找回意境" 下一个="5" 类型="Talk" 声音="sound_10" 描述 = "In order to keep the permanent spiritual legacy, you are required to answer some questions to help the poet to re-experience the magical and special time whenever he feels upset or lonely.
 	|为了使诗人获得永久的精神财富，需要您回答几个问题。让诗人在任何沮丧之时都能够回忆起当时水仙花的画面，重获精神的救赎。"/>
-	<TaskDatas ID="5" 任务名="答题环节" 下一个="6" 类型="Question" 值 = "4" />
-	<TaskDatas ID="6" 任务名="答题环节" 下一个="7" 类型="Question" 值 = "5" />
+	<TaskDatas ID="5" 任务名="Question" 下一个="6" 类型="Question" 值 = "4" />
+	<TaskDatas ID="6" 任务名="Question" 下一个="7" 类型="Question" 值 = "5" />
     <TaskDatas ID="7" 任务名="点击前往“Back to the Reality”场景" 下一个="0" 类型="TaskChange" 值 = "4.Back to the Reality" 描述="前往体验《I Wandered Lonely as a Cloud》第四节诗歌"/>
   </SceneTasks>
   <SceneTasks 场景任务名="4.Back to the Reality" 图标="sxh_cj" 场景数据="华兹华斯书房意境">
@@ -46,27 +46,27 @@
     <TaskDatas ID="1" 任务名="来到华兹华斯时代书房" 下一个="2" 类型="StartState" 值 = "InitMoveCamera"/>
 	<TaskDatas ID="2" 任务名="请赏析第四节诗歌" 下一个="3" 类型="Talk" 描述 = "You have successfully activated the poet’s memory. Please appreciate the last stanza.
 	|您已成功激活诗人记忆，请赏析最后一节诗歌。"/>
-	<TaskDatas ID="3" 任务名="第四节诗歌" 下一个="4" 类型="LookSong" 值 = "iwanderedlonelyasacloud4.txt"/>
-	<TaskDatas ID="4" 任务名="华兹华斯的烦恼" 下一个="5" 类型="Animator" 值 = "101|1|1|true|sit" />
+	<TaskDatas ID="3" 任务名="Stanza 4" 下一个="4" 类型="LookSong" 值 = "iwanderedlonelyasacloud4.txt"/>
+	<TaskDatas ID="4" 任务名="" 下一个="5" 类型="Animator" 值 = "101|1|1|true|sit" />
 	<TaskDatas ID="5" 任务名="第四节诗歌解析" 下一个="7" 类型="LookSong" 值 = "iwanderedlonelyasacloud4_jiexie.txt"/>
-	<TaskDatas ID="7" 任务名="欣赏舞蹈" 下一个="101" 类型="Animator" 值 = "101|1|1|true|dance|end" 声音="3"/>
+	<TaskDatas ID="7" 任务名="Dance" 下一个="101" 类型="Animator" 值 = "101|1|1|true|dance|end" 声音="3"/>
 	<TaskDatas ID="101" 任务名="找到回故居的通道" 下一个="8" 类型="Talk" 描述 = "Please answer a question to find a way back to the reality.
 	|请完成弹出的相应问题，找到回故居的通道。"/>
-	<TaskDatas ID="8" 任务名="答题环节" 下一个="9" 类型="Question" 值 = "6"/>
-	<TaskDatas ID="9" 任务名="回到华兹华斯时代书房" 下一个="10" 类型="StartState" 值 = "TalkCamera"/>
+	<TaskDatas ID="8" 任务名="Question" 下一个="9" 类型="Question" 值 = "6"/>
+	<TaskDatas ID="9" 任务名="Back to the Reading-room" 下一个="10" 类型="StartState" 值 = "TalkCamera"/>
 	<TaskDatas ID="10" 任务名="找到书房中的菊花" 下一个="12" 类型="Talk" 描述 = "In ancient China，there is also a poet who loves nature very much , what kind of flower do Chinese intellectuals like? Let’s find it in this room!
 	|在古代中国，也有一个热爱大自然的诗人。中国文人喜欢什么样的花呢？一起来找找吧！"/>
-	<TaskDatas ID="12" 任务名="寻找并点击菊花" 下一个="13" 类型="Click" 值 = "ALL_Model/NewModelParent/菊花瓶"/>
-	<TaskDatas ID="13" 任务名="点击前往《饮酒》场景" 下一个="0" 类型="TaskChange" 值 = "5.《饮酒》" 描述="前往体验陶渊明《饮酒（其五）》"/>
+	<TaskDatas ID="12" 任务名="Seek the Chrysanthemum" 下一个="13" 类型="Click" 值 = "ALL_Model/NewModelParent/菊花瓶"/>
+	<TaskDatas ID="13" 任务名="Tap to《饮酒》（其五）" 下一个="0" 类型="TaskChange" 值 = "5.《饮酒》" 描述="前往体验陶渊明《饮酒（其五）》"/>
   </SceneTasks>
   <SceneTasks 场景任务名="5.《饮酒》" 图标="tymjh_cj" 场景数据="陶渊明赏花">
     <TaskDatas ID="1" 任务名="预览菊花场景" 下一个="2" 类型="DOTween" 值 = "end" />
-	<TaskDatas ID="2" 任务名="鉴赏陶渊明的诗《饮酒(其五)》" 下一个="4" 类型="LookSong" 值 = "yinjiuqi5.txt" 声音="sound_12"/>
+	<TaskDatas ID="2" 任务名="《饮酒》（其五）" 下一个="4" 类型="LookSong" 值 = "yinjiuqi5.txt" 声音="sound_12"/>
 	<TaskDatas ID="4" 任务名="菊花场景中自由漫游" 下一个="3" 类型="ThirdPerson" 值 = "end"/>
-    <TaskDatas ID="3" 任务名="意境比较" 下一个="5" 类型="OpenWnd" 值 = "FantasyCompareWnd"/>
-	<TaskDatas ID="5" 任务名="意境比较" 下一个="6" 类型="Talk" 描述="You have successfully obtained the opportunity to meet and communicate with Wordsworth and Tao Yuanming. Let’s talk with them.
+    <TaskDatas ID="3" 任务名="Images" 下一个="5" 类型="OpenWnd" 值 = "FantasyCompareWnd"/>
+	<TaskDatas ID="5" 任务名="Images" 下一个="6" 类型="Talk" 描述="You have successfully obtained the opportunity to meet and communicate with Wordsworth and Tao Yuanming. Let’s talk with them.
 	|您已成功获取与诗人见面交流的机会，让我们与诗人对话吧。"/>
-	<TaskDatas ID="6" 任务名="点击前往“Man and Nature”场景" 下一个="0" 类型="TaskChange" 值 = "6.Man and Nature" 描述="前往体验《Man and Nature》中英诗歌精神比较"/>
+	<TaskDatas ID="6" 任务名="Tap to “Man and Nature”" 下一个="0" 类型="TaskChange" 值 = "6.Man and Nature" 描述="Enter “Man and Nature”"/>
   </SceneTasks>
   <SceneTasks 场景任务名="6.Man and Nature" 图标="zywbij_cj" 场景数据="中英诗歌精神比较">
     <TaskDatas ID="1" 任务名="取名" 下一个="2" 类型="OpenWnd" 值 = "RenameWnd"/>

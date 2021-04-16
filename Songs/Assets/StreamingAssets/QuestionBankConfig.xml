@@ -8,7 +8,7 @@
 	<分数>2</分数>
     <图标>hzhsqs</图标>
     <题头>Please choose the romantic features of the first stanza.（multiple choices）</题头>
-    <阅读>I wandered lonely as a cloud \n That floats on high o’er vales and hills \n When all at once I saw a crowd,\n host, of golden daffodils; \n Besides the lake, beneath the trees, \n Fluttering and dancing in the breeze.</阅读>
+    <!--阅读>I wandered lonely as a cloud \n That floats on high o’er vales and hills \n When all at once I saw a crowd,\n host, of golden daffodils; \n Besides the lake, beneath the trees, \n Fluttering and dancing in the breeze.</阅读-->
     <解析>With a melancholy mood, the speaker makes a striking contrast between the lonely cloud and the vivid daffodils. Nature inspires poetry. The speaker humanizes the daffodils when he says they are engaging in a dance.
 	|说话者将自己比作一朵流云，用流云的孤寂反衬出水仙花的生机盎然。自然是诗歌的灵感源泉，当水仙花翩翩起舞时，说话者赋予自然以生命力。</解析>
     <选择>浪漫主义色彩1: Subjectivism(自我主义)</选择>
@@ -29,7 +29,7 @@
 	<分数>2</分数>
     <图标>hzhsqs</图标>
     <题头>Please choose the romantic features of the second stanza. （multiple choices）</题头>
-    <阅读>Continuous as the stars that shine \n And twinkle on the Milky Way, \n They stretched in never-ending line \n Along the margin of a bay: \n Ten thousand saw I at a glance, \n Tossing their heads in sprightly dance.</阅读>
+    <!--阅读>Continuous as the stars that shine \n And twinkle on the Milky Way, \n They stretched in never-ending line \n Along the margin of a bay: \n Ten thousand saw I at a glance, \n Tossing their heads in sprightly dance.</阅读-->
     <解析>In the heart of poet, daffodils are no longer just a plant. It has become a messenger of God and a spiritual embodiment. It is this kind of spirit that rejoices the original melancholy heart. Here “continuous”and “never-ending” may suggest that the flowers leave an everlasting impact on Wordsworth.
 	|在诗人的心中, 水仙已不再是单单一种植物, 它成了神的使者，一种精神的化身。正是这种精神令原来本低沉忧郁的心灵变得欢欣鼓舞。 在这里“continuous”和“never-ending”暗示水仙花给他留下了永恒的影响。</解析>
     <选择>浪漫主义色彩2: Spontaneity(情感自然流露)</选择>
@@ -48,7 +48,7 @@
 	<分数>2</分数>
     <图标>hzhsqs</图标>
     <题头>Please choose the romantic feature of the third stanza.</题头>
-    <阅读>The waves beside them danced; but they \n Outdid the sparking waves in glee: \n A poet could not but be gay, \n In such a jocund company! \n I gazed – and gazed – but little thought \n What wealth the show to me had brought.</阅读>
+    <!--阅读>The waves beside them danced; but they \n Outdid the sparking waves in glee: \n A poet could not but be gay, \n In such a jocund company! \n I gazed – and gazed – but little thought \n What wealth the show to me had brought.</阅读-->
     <解析>The poet stares at the daffodils lingeringly, without yet realizing the complete extent of the positive effects of encountering them. Even when the poet calls for the original emotion of “returning to nature”, he does not forget the relative independence of himself and nature.
 	|诗人久久凝望，却想象不到这奇景赋予了他多少精神财富。即使诗人在深情地呼唤 “回归自然”的原始情感时,也没有忘记自我与自然的相对独立性。</解析>
     <选择>浪漫主义色彩2: Spontaneity(情感自然流露)</选择>
@@ -190,7 +190,7 @@
 	<子题号>1</子题号>
 	<分数>1</分数>
     <图标></图标>
-    <题头>I celebrate _____, and sing myself, \n And what I assume you shall assume,</题头>
+    <题头>I celebrate _____, and sing myself, And what I assume you shall assume,</题头>
     <解析></解析>
     <选择>me</选择>
 	<选择>parents</选择>
@@ -207,7 +207,7 @@
 	<子题号>2</子题号>
 	<分数>1</分数>
     <图标></图标>
-    <题头>And what I assume you shall assume, \n For every atom belonging to___ as good belongs to ___. </题头>
+    <题头>And what I assume you shall assume, For every atom belonging to___ as good belongs to ___. </题头>
     <解析></解析>
     <选择>me</选择>
 	<选择>parents</选择>
@@ -226,7 +226,7 @@
 	<子题号>3</子题号>
 	<分数>1</分数>
     <图标></图标>
-    <题头>My tongue, every atom of my blood, form’d from this soil, \n this air，Born here of parents born here from ___the same, and their parents the same， </题头>
+    <题头>My tongue, every atom of my blood, form’d from this soil, this air，Born here of parents born here from ___the same, and their parents the same， </题头>
     <解析></解析>
     <选择>me</选择>
 	<选择>parents</选择>
@@ -287,6 +287,7 @@
 	<题号>4</题号>
 	<分数>2</分数>
     <图标></图标>
+    <阅读>我是月的光，\n 我是日的光，\n 我是一切星球的光，\n 我是 X 光线的光，\n 我是全宇宙的 Energy 的总量！</阅读>
     <题头>“Light”and “Energy” stand for a kind of collective power. Therefore, Guo Moruo emphasizes the role of _________(the individual/ the collective) in this poem.
 	|“光”与“能量”代表了一种集体的力量，因此，郭沫若在这首诗中更加强调_________(个人/集体)的力量</题头>
     <阅读></阅读>
