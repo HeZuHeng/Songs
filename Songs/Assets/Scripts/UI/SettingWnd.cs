@@ -27,6 +27,7 @@ public class SettingWnd : UIBase
     public Transform aParent;
     public Text minute;
     public Text summary;
+    public Text summaryMinute;
 
     public RectTransform musicCheck;
     public RectTransform chineseCheck;
@@ -82,8 +83,10 @@ public class SettingWnd : UIBase
     void OnTijiao()
     {
         string json = JsonUtility.ToJson(MainPlayer.songResultInfo);
-        Debug.Log(json);
-        MainPlayer.songResultInfo.SendLoaded(json);
+        //Debug.Log(json);
+        int total = 0;
+        int.TryParse(MainPlayer.songResultInfo.totalMinute,out total);
+        MainPlayer.songResultInfo.SendLoaded(json, total);
     }
 
     void HideHelp()
@@ -185,16 +188,17 @@ public class SettingWnd : UIBase
         minute.text = m.ToString();
         if (string.IsNullOrEmpty(MainPlayer.songResultInfo.summary))
         {
-            summary.text = "还没有总结，请完成惠特曼分支《About Democracy》填写总结。";
+            summary.text = "完成惠特曼分支《About Democracy》进行总结。";
             summary.fontStyle = FontStyle.BoldAndItalic;
-
         }
         else
         {
             summary.text = MainPlayer.songResultInfo.summary; 
             summary.fontStyle = FontStyle.Normal;
-
+            RectTransform rectTransform = summary.transform.parent as RectTransform;
+            rectTransform.sizeDelta = new Vector2(rectTransform.sizeDelta.x, summary.preferredHeight);
         }
-        MainPlayer.songResultInfo.totalMinute = m.ToString();
+        summaryMinute.text = MainPlayer.songResultInfo.summaryMinute.ToString();
+        MainPlayer.songResultInfo.totalMinute = (m + MainPlayer.songResultInfo.summaryMinute).ToString();
     }
 }

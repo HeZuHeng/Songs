@@ -328,7 +328,7 @@
 			
 			<tr>
 				<td rowspan="4">5.对比两幅意境图</td>
-				<td rowspan="12">知识点三：中国民主精神中人与自然关系比较</td>
+				<td rowspan="14">知识点三：中国民主精神中人与自然关系比较</td>
 				<td >寻找菊花（1’）</td>
 				<td>/</td>
 				<td>1</td>
@@ -351,19 +351,34 @@
 				<td rowspan="2">意境匹配（2’）</td>
 				<td>选项1</td>
 				<td>1</td>
-				<td>{{jsonData.operatings[6].mAnswer}}</td>
-				<td rowspan="2">{{jsonData.operatings[6].minute}}</td>
+				<td></td>
+				<td rowspan="2">{{jsonData.operatings[6].childs[0].minute}}</td>
 
 				<td rowspan="2"></td>
 			</tr>
 			<tr>		
 				<td>选项2</td>
 				<td>1</td>
-				<td>{{jsonData.operatings[6].mAnswer}}</td>
+				<td></td>
+			</tr>
+			<tr>		
+				<td rowspan="2">6.对比两个意象</td>
+				<td>点击水仙花意象（1’）</td>
+				<td>/</td>
+				<td>1</td>
+				<td></td>
+				<td>{{jsonData.operatings[6].childs[1].minute}}</td>
+			</tr>
+			<tr>		
+				<td>点击菊花意象（1’）</td>
+				<td>/</td>
+				<td>1</td>
+				<td></td>
+				<td>{{jsonData.operatings[6].childs[2].minute}}</td>
 			</tr>
 			
 			<tr>
-				<td rowspan="2">6.对比两个意象</td>
+				<td rowspan="8">7.对话先贤</td>
 				<td >选择人物并命名（1’）</td>
 				<td>/</td>
 				<td>1</td>
@@ -380,9 +395,8 @@
 				<td></td>
 			</tr>
 			
-			
 			<tr>
-				<td rowspan="6">7.对话先贤</td>
+				
 				
 				<td rowspan="2">单选题（2’）</td>
 				<td>选项1</td>
@@ -769,21 +783,16 @@
 				<td>{{jsonData.fillInTheBlanks[3].mAnswer}}</td>
 			</tr>
 			<tr>
-				<td style="font-weight: bold;">以上分支总分</td>
-				<td colspan="8" style="text-align: left;">{{jsonData.totalMinute}}</td>
-			</tr>
-			
-			<tr>
 				<td colspan="8" style="text-align: center; font-weight: bold;">Ⅲ.总结（20%）</td>
 			</tr>
 			<tr>
-				<td>16.撰写心得报告</td>
+				<td>16.实验总结</td>
 				<td>中西民主精神的异同</td>
-				<td>简答题（20’）</td>
+				<td>多选题（总结20’）</td>
 				<td>/</td>
 				<td>20</td>
 				<td></td>
-				<td></td>
+				<td>{{jsonData.summaryMinute}}</td>
 				<td></td>
 			</tr>
 			<tr>
@@ -791,8 +800,8 @@
 				<td colspan="8" style="text-align: left;">{{jsonData.summary}}</td>
 			</tr>
 			<tr>
-				<td style="font-weight: bold;">实验总得分</td>
-				<td colspan="8" style="text-align: left;"></td>
+				<td style="font-weight: bold;">总分</td>
+				<td colspan="8" style="text-align: left;">{{jsonData.totalMinute}}</td>
 			</tr>
 			<tr>
 				<td style="font-weight: bold;">教师评语</td>
@@ -827,7 +836,7 @@
         methods:{},
 		created(){
         	this.jsonData=JSON.parse(window.sessionStorage.getItem("tableData"))
-        	console.log(this.jsonData)
+        	//console.log(this.jsonData)
         }
 
     })

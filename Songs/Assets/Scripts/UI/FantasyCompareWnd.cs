@@ -110,7 +110,7 @@ public class FantasyCompareWnd : UIBase
                     UIType type = (UIType)System.Enum.Parse(typeof(UIType), taskData.val);
                     if (type == Type)
                     {
-                        MainPlayer.songResultInfo.FillAnswer(7, string.Empty, 2, AnswerType.Operating);
+                        MainPlayer.songResultInfo.FillAnswer(7, 1, string.Empty, 2, AnswerType.Operating);
                         taskData.TaskState = TaskState.End;
                     }
                 }
@@ -121,5 +121,15 @@ public class FantasyCompareWnd : UIBase
             tip.DOShakeRotation(2, new Vector3(10, 7, 0));
             tip.DOShakePosition(2, new Vector3(5, 6, 0));
         }
+    }
+
+    public void OnClickSuiXian()
+    {
+        MainPlayer.songResultInfo.FillAnswer(7,2, string.Empty, 1, AnswerType.Operating);
+    }
+
+    public void OnClickJuHua()
+    {
+        MainPlayer.songResultInfo.FillAnswer(7,3, string.Empty, 1, AnswerType.Operating);
     }
 }

@@ -74,14 +74,14 @@ public class AnswerWnd : UIBase
             //trendsText.m_CallBack.RemoveListener(OnReadDes);
             //trendsText.m_CallBack.AddListener(OnReadDes);
             btn3.gameObject.SetActive(true);
-            trendsTextHead.text = "诗歌阅读";
+            trendsTextHead.text = "Poem";
             trendsText.Play(question.des.Replace("\\n", "\n"));
             return;
         }
         if (!string.IsNullOrEmpty(question.startParsing))
         {
             startParent.gameObject.SetActive(true);
-            trendsTextHead.text = "诗歌解析";
+            trendsTextHead.text = "Analysis";
             //trendsText.m_CallBack.RemoveListener(OnStartParsing);
             //trendsText.m_CallBack.AddListener(OnStartParsing);
             btn3.gameObject.SetActive(true);
@@ -100,7 +100,7 @@ public class AnswerWnd : UIBase
         if (!string.IsNullOrEmpty(question.startParsing))
         {
             startParent.gameObject.SetActive(true);
-            trendsTextHead.text = "诗歌解析";
+            trendsTextHead.text = "Analysis";
             //trendsText.m_CallBack.RemoveListener(OnStartParsing);
             //trendsText.m_CallBack.AddListener(OnStartParsing);
             btn3.gameObject.SetActive(true);
@@ -137,7 +137,7 @@ public class AnswerWnd : UIBase
             //trendsText.m_CallBack.RemoveListener(OnEnd);
             //trendsText.m_CallBack.AddListener(OnEnd);
             btn3.gameObject.SetActive(true);
-            trendsTextHead.text = "答案解析";
+            trendsTextHead.text = "Analysis";
             trendsText.Play(question.endParsing.Replace("\\n", "\n"));
             return;
         }
@@ -287,7 +287,7 @@ public class AnswerWnd : UIBase
         startParent.gameObject.SetActive(true);
         btn3.gameObject.SetActive(true);
         num = 1;
-        trendsTextHead.text = "诗歌阅读";
+        trendsTextHead.text = "Poem";
         trendsText.Show(question.des.Replace("\\n", "\n"));
     }
 
@@ -298,7 +298,7 @@ public class AnswerWnd : UIBase
         startParent.gameObject.SetActive(true);
         btn3.gameObject.SetActive(true);
         num = 2;
-        trendsTextHead.text = "诗歌解析";
+        trendsTextHead.text = "Analysis";
         trendsText.Show(question.startParsing.Replace("\\n", "\n"));
     }
 

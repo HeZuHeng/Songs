@@ -51,6 +51,7 @@ public class MainDialogueWnd : UIBase
     {
         base.OnDisable();
 
+        StopAllCoroutines();
         InputManager.GetInstance().RemoveClickEventListener(OnClickEvent);
         if (taskData != null)
         {
@@ -68,12 +69,11 @@ public class MainDialogueWnd : UIBase
         }
         talkContent.gameObject.SetActive(false);
         talkContent.m_Enable = false;
-
-        
      }
 
     void Show()
     {
+        StopAllCoroutines();
         taskData = SongsDataMng.GetInstance().GetTaskData;
         if (taskData == null)
         {
@@ -95,6 +95,7 @@ public class MainDialogueWnd : UIBase
 
         string talkId = "0";
         taskName.text = taskData.name;
+        bool showTaskIcon = true;
         switch (taskData.type)
         {
             case TaskType.OpenWnd:
@@ -212,6 +213,7 @@ public class MainDialogueWnd : UIBase
                 SceneController.GetInstance().ToState(state, delegate (State end) {
                     if (state == end)
                     {
+                        showTaskIcon = false;
                         taskData.TaskState = TaskState.End;
                     }
                 });
@@ -276,6 +278,7 @@ public class MainDialogueWnd : UIBase
                 talkId = taskData.val;
                 break;
         }
+        if (!showTaskIcon) return;
         int talking = !string.IsNullOrEmpty(taskData.des) ? 1 : 0;
 
         talkParent.gameObject.SetActive(talking == 1);
@@ -301,7 +304,30 @@ public class MainDialogueWnd : UIBase
                     sceneAsset.PlayAnimator("talk", false, 1, null);
                     sceneAsset.PlayAnimator("talk", true, 1, null);
                 }
-                talkName.text = modelData.name;
+                if ("绅士".Equals(modelData.name))
+                {
+                    talkName.text = "Politician";
+                }
+                else if ("船员B".Equals(modelData.name))
+                {
+                    talkName.text = "Sailor B";
+                }
+                else if ("难民作家".Equals(modelData.name))
+                {
+                    talkName.text = "The Writer";
+                }
+                else if ("女厨师".Equals(modelData.name))
+                {
+                    talkName.text = "Female Chef";
+                }
+                else if ("农夫".Equals(modelData.name))
+                {
+                    talkName.text = "The farmer";
+                }
+                else
+                {
+                    talkName.text = modelData.name;
+                }
                 iconN = string.IsNullOrEmpty(modelData.icon) ? modelData.assetName : modelData.icon;
             }
             else
@@ -329,11 +355,11 @@ public class MainDialogueWnd : UIBase
                 talkIcon.enabled = false;
             }
 
-            Show(taskData.des, taskData.sound);
+            Show(taskData.des, taskData.sound, 0);
         }
     }
 
-    void Show(string content,string soundName)
+    void Show(string content,string soundName,float t)
     {
         if (string.IsNullOrEmpty(content)) return;
         content = string.Format(content, SongsDataMng.GetInstance().Player.name);
@@ -358,9 +384,17 @@ public class MainDialogueWnd : UIBase
         }
         else
         {
-            talkParent.gameObject.SetActive(false);
-            taskNameParent.gameObject.SetActive(true);
+            StartCoroutine(TalkEnd());
+            //talkParent.gameObject.SetActive(false);
+            //taskNameParent.gameObject.SetActive(true);
         }
+    }
+
+    IEnumerator TalkEnd()
+    {
+        yield return new WaitForSeconds(2);
+        talkParent.gameObject.SetActive(false);
+        taskNameParent.gameObject.SetActive(true);
     }
 
     void OnStateChange(TaskState taskState)

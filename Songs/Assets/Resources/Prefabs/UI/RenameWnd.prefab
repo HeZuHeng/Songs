@@ -78,7 +78,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u786E\u5B9A"
+  m_Text: Ok
 --- !u!1 &4033590916446278088
 GameObject:
   m_ObjectHideFlags: 0
@@ -541,8 +541,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -10}
-  m_SizeDelta: {x: -40, y: -60}
+  m_AnchoredPosition: {x: 0, y: 80}
+  m_SizeDelta: {x: -40, y: -240}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5539018092490957393
 CanvasRenderer:
@@ -574,19 +574,18 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: d6c5349ada27ca54c8cd6f8151037162, type: 3}
-    m_FontSize: 28
+    m_FontSize: 36
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 1
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Hi!What\u2019s your English name? Please write down. If no, please name
-    yourself here.\n\u5728\u5F39\u51FA\u7684\u6846\u5185\u586B\u5165\u81EA\u5DF1\u7684\u82F1\u6587\u540D,\u6CA1\u6709\u7684\u8BDD\uFF0C\u7ED9\u81EA\u5DF1\u53D6\u4E00\u4E2A\u82F1\u6587\u540D"
+  m_Text: Please enter your English Name
 --- !u!1 &5539018092559735754
 GameObject:
   m_ObjectHideFlags: 0
@@ -695,7 +694,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -160, y: 165}
+  m_AnchoredPosition: {x: -171, y: 170}
   m_SizeDelta: {x: 240, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5539018092576863809
@@ -728,7 +727,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: d6c5349ada27ca54c8cd6f8151037162, type: 3}
-    m_FontSize: 28
+    m_FontSize: 32
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -739,7 +738,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\u8BF7\u8F93\u5165\u82F1\u6587\u540D\u5B57\uFF1A"
+  m_Text: 'Input: '
 --- !u!1 &5539018092645100419
 GameObject:
   m_ObjectHideFlags: 0
@@ -915,7 +914,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5539018093011314259
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1051,7 +1050,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\u53D6\u540D"
+  m_Text: Name
 --- !u!1 &5539018093692126101
 GameObject:
   m_ObjectHideFlags: 0

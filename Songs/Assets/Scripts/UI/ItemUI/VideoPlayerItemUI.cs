@@ -13,20 +13,34 @@ public class VideoPlayerItemUI : MonoBehaviour
     public bool IsClose = false;
     int index1 = 0;
 
+    private void Awake()
+    {
+        for (int i = 0; i < texts.Length; i++)
+        {
+            texts[i].gameObject.SetActive(false);
+        }
+    }
+
     private void Start()
     {
         if(next != null) next.onClick.AddListener(OnClose);
+        
     }
 
     private void OnEnable()
     {
         DoMove();
+        
+        index1 = 0;
+        if (index1 < texts.Length) texts[index1].gameObject.SetActive(true);
+    }
+
+    private void OnDisable()
+    {
         for (int i = 0; i < texts.Length; i++)
         {
             texts[i].gameObject.SetActive(false);
         }
-        index1 = 0;
-        if (index1 < texts.Length) texts[index1].gameObject.SetActive(true);
     }
 
 

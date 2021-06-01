@@ -7,6 +7,14 @@ using UnityEngine.Networking;
 using UnityEngine.UI;
 public class QATalkWnd : UIBase
 {
+    [Header("选择题")]
+    public Toggle qA;
+    public Toggle qB;
+    public Toggle qC;
+    public Toggle qD;
+    public Button ok;
+
+    [Header("简答题")]
     public TrendsText songText;
     public TrendsText head;
     public Text tip;
@@ -22,13 +30,14 @@ public class QATalkWnd : UIBase
         base.Awake();
         Type = UIType.QATalkWnd;
         MutexInterface = true;
+        ok.onClick.AddListener(OnClickOk);
 
     }
     protected override void OnEnable()
     {
         base.OnEnable();
         rectTransform.gameObject.SetActive(false);
-        Show();
+        //Show();
     }
 
     protected override void OnDisable()
@@ -36,7 +45,7 @@ public class QATalkWnd : UIBase
         base.OnDisable();
         StopAllCoroutines();
     }
-
+    #region 简答题
     void Show()
     {
         QuestionBankData question = SongsDataMng.GetInstance().GetQuestionBankData;
@@ -156,4 +165,45 @@ public class QATalkWnd : UIBase
             }
         }
     }
+
+    #endregion
+
+    #region 选择题
+    void OnClickOk()
+    {
+        string text = "";
+        float min = 0;
+        if (qA.isOn)
+        {
+            text += qA.GetComponentInChildren<Text>().text;
+            //text += "                                                                                   ";
+            min += 7;
+        }
+        if (qB.isOn)
+        {
+            text += qB.GetComponentInChildren<Text>().text;
+            //text += "                                                                                   ";
+            min += 7;
+        }
+        if (qD.isOn)
+        {
+            text += qD.GetComponentInChildren<Text>().text;
+            //text += "                                                                                   ";
+            min += 6;
+        }
+        if (qC.isOn)
+        {
+            text += qC.GetComponentInChildren<Text>().text;
+            //text += "                                                                                   ";
+            min = 0;
+        }
+        MainPlayer.songResultInfo.FillSummary(text);
+        MainPlayer.songResultInfo.summaryMinute = min;
+        UIMng.Instance.OpenUI(UIType.NONE);
+
+        SceneAssetObject assetObject = SceneMng.GetInstance().GetSceneAssetObject(10054);
+        CameraMng.MainCamera.transform.LookAt(assetObject.Tran.position);
+    }
+
+    #endregion
 }

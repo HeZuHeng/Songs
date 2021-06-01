@@ -115,7 +115,7 @@ public class LeftDialogueWnd : UIBase
                     }
                     if ("yinjiuqi5.txt".Equals(SongsDataMng.GetInstance().GetSongFilePath))
                     {
-                        MainPlayer.songResultInfo.FillAnswer(6, string.Empty, 2, AnswerType.Operating);
+                        MainPlayer.songResultInfo.FillAnswer(6, string.Empty, 1, AnswerType.Operating);
                     }
                     if ("htmsong.txt".Equals(SongsDataMng.GetInstance().GetSongFilePath))
                     {

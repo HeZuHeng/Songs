@@ -24,6 +24,8 @@ public class SceneAssetObject : IAssetObject
 
     protected GameLoadTask LoadTask { get; set; }
 
+    protected TextNameItem TextName { get; set; }
+
     public SceneAssetObject(int targetId, string url)
     {
         TargetId = targetId;
@@ -151,6 +153,12 @@ public class SceneAssetObject : IAssetObject
             return MAnimator.GetCurrentAnimatorStateInfo(0).loop;
         }
         return false;
+    }
+
+    public void AddName()
+    {
+        TextName = Tran.gameObject.AddComponent<TextNameItem>();
+        TextName.AddName(Name, Col.bounds.center + Col.bounds.extents.y * Vector3.up, Tran);
     }
 
     public override void Destroy()

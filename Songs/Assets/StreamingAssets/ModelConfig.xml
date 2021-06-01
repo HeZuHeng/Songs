@@ -457,7 +457,7 @@
         <z>0</z>
       </eulerAngle>
     </ModelDatas>
-	<ModelDatas Id="102" 模型名="陶渊明" 资源名="tym" 图标 ="tym">
+	<ModelDatas Id="102" 模型名="Tao Yuanming" 资源名="tym" 图标 ="tym">
 	  <position>
         <x>426.41</x>
         <y>35.912</y>

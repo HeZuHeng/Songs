@@ -8,6 +8,7 @@ using AQUAS;
 using UnityEngine.Events;
 using Slate;
 using LaoZiCloudSDK.CameraHelper;
+using UnityEngine.PostProcessing;
 
 public class CameraMng
 {
@@ -60,6 +61,7 @@ public class CameraMng
             camera.tag = "MainCamera";
             MainCamera = camera;
             MainCamera.transform.SetParent(mainCameraParent);
+            //PostProcessingBehaviour post = MainCamera.GetComponent<PostProcessingBehaviour>();
             Twist = MainCamera.GetComponent<Twist>();
             if(Twist == null)
             {

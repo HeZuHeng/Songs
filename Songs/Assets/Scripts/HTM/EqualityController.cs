@@ -50,6 +50,11 @@ public class EqualityController : ChildController
 
         niao1 = SceneMng.GetInstance().GetSceneAssetObject(118);
         niao2 = SceneMng.GetInstance().GetSceneAssetObject(119);
+
+        zhengzhijia.AddName();
+        nm.AddName();
+        cs.AddName();
+        nf.AddName();
         //if (htm != null) htm.Tran.gameObject.SetActive(false);
     }
 

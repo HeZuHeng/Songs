@@ -9,9 +9,12 @@ public class SongResultInfo {
 #if UNITY_WEBGL && !UNITY_EDITOR
     [DllImport("__Internal")]
     public static extern void SendSongResult(string songResult);
+    [DllImport("__Internal")]
+    public static extern void UnityToHtmlData(string songResult);
 
 #else
     public static void SendSongResult(string songResult) { }
+    public static void UnityToHtmlData(string songResult){}
     //public static void InputEnd() { }
 #endif
 
@@ -35,6 +38,10 @@ public class SongResultInfo {
     /// 总结
     /// </summary>
     public string summary;
+    /// <summary>
+    /// 总结
+    /// </summary>
+    public float summaryMinute;
     /// <summary>
     /// 总分
     /// </summary>
@@ -98,6 +105,7 @@ public class SongResultInfo {
 
         o7.childs.Add(new AnswerChildResultData(1, 0));
         o7.childs.Add(new AnswerChildResultData(2, 0));
+        o7.childs.Add(new AnswerChildResultData(3, 0));
 
         o14.childs.Add(new AnswerChildResultData(1, 0));
         o14.childs.Add(new AnswerChildResultData(2, 0));
@@ -158,9 +166,25 @@ public class SongResultInfo {
         this.summary = summary;
     }
 
-    public void SendLoaded(string jsonData)
+    public void SendLoaded(string jsonData,int totalMin)
     {
         SendSongResult(jsonData);
+        if(totalMin >= 90)
+        {
+            UnityToHtmlData(totalMin + "_优秀");
+        }
+        if (totalMin >= 80 && totalMin < 90)
+        {
+            UnityToHtmlData(totalMin + "_良好");
+        }
+        if (totalMin >= 60 && totalMin < 80)
+        {
+            UnityToHtmlData(totalMin + "_及格");
+        }
+        if (totalMin < 60)
+        {
+            UnityToHtmlData(totalMin + "_不及格");
+        }
     }
 }
 

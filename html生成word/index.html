@@ -3,12 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | TestWebGL</title>
+    <title>湖南科技大学 | 英文诗歌仿真项目</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
-    <script src="TemplateData/UnityProgress.js"></script>
+     <script src="TemplateData/UnityProgress.js"></script>
     <script src="Build/3544178c924aac8c5129f2d974d60dd7.js"></script>
-
     <style>
       #my-table{
         position: fixed;
@@ -41,10 +40,11 @@
         cursor: pointer;
       }
     </style>
-
-    <script>
-      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/30d1479ec7655270eb3aeaf135d5c5c9.json", {onProgress: UnityProgress});
-	  
+	<script>
+      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/b1a3e2c7bb28c478d3acc721300410c2.json", {onProgress: UnityProgress});
+	  function UnityToHtmlData(data){ 
+		 console.log(data);
+	  } 
 	  function SendSongData(data){
 		// console.log(data);
 		window.sessionStorage.setItem("tableData",data)
@@ -55,10 +55,8 @@
 	  function hideHtml() {
         document.getElementById("my-table").style.display="none"
         document.getElementById("table-content").innerHTML=``
-      }
-
-
-    </script>
+      } 	
+	</script>
   </head>
   <body>
     <div class="webgl-content">
@@ -66,11 +64,10 @@
       <div class="footer">
         <div class="webgl-logo"></div>
         <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
-        <div class="title">TestWebGL</div>
+        <div class="title">英文诗歌仿真项目</div>
       </div>
     </div>
-
-    <div id="my-table">
+	<div id="my-table">
       <div id="table-content"></div>
       <img src="demo/images/close.png" alt="" onclick="hideHtml(this);">
     </div>

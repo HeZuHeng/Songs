@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 2859877461244204808}
   - component: {fileID: 2859877461245499178}
   - component: {fileID: 2859877461246498282}
-  - component: {fileID: 2632686932886056520}
   m_Layer: 0
   m_Name: Object200
   m_TagString: Untagged
@@ -78,18 +77,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &2632686932886056520
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2859877461244300072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96c944b2f0b5e564a93cb072474facd3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2859877461244300074
 GameObject:
   m_ObjectHideFlags: 0
@@ -99,7 +86,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2859877461244204810}
-  - component: {fileID: 851216577756205391}
   - component: {fileID: 1988619008383359508}
   m_Layer: 0
   m_Name: Book_03
@@ -124,21 +110,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &851216577756205391
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2859877461244300074}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7da66f6d5d94ac43af988e2490a59bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_hos:
-  - {fileID: 2632686932886056520}
-  - {fileID: 1522536393793259082}
 --- !u!65 &1988619008383359508
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -163,7 +134,6 @@ GameObject:
   - component: {fileID: 2859877461244204814}
   - component: {fileID: 2859877461245499176}
   - component: {fileID: 2859877461246498280}
-  - component: {fileID: 1522536393793259082}
   m_Layer: 0
   m_Name: "\u5BF9\u8C61254"
   m_TagString: Untagged
@@ -230,15 +200,3 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &1522536393793259082
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2859877461244300078}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96c944b2f0b5e564a93cb072474facd3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

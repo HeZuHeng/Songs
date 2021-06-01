@@ -1447,7 +1447,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u67E5\u770B\u8BD7\u6B4C\u89E3\u6790"
+  m_Text: Analysis of Stanza
 --- !u!1 &938752727396772295
 GameObject:
   m_ObjectHideFlags: 0
@@ -1919,7 +1919,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u67E5\u770B\u8BD7\u6B4C\u539F\u6587"
+  m_Text: Check the Poem
 --- !u!1 &2655078470864200614
 GameObject:
   m_ObjectHideFlags: 0
@@ -2242,7 +2242,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u786E\u5B9A"
+  m_Text: Ok
 --- !u!1 &3556886223435891173
 GameObject:
   m_ObjectHideFlags: 0
